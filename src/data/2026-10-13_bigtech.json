@@ -104,7 +104,9 @@
         "replies": 22,
         "quotes": 1,
         "bookmarks": 38,
-        "fetched_at": "2026-10-13T13:08:22Z"
+        "fetched_at": "2026-10-13T13:08:22Z",
+        "text": "后续：\n\n三台尊界V800被曝刹车踏板断裂，江淮汽车午盘跌停\n\n10月8日，懂车帝发布尊界V800刹车测试视频。相关争议发酵当天，江淮汽车（600418）午盘跌停，报24.72元，跌幅10.01%。\n尊界是华为与江淮联合打造的汽车品牌。",
+        "author_name": "李老师不是你老师"
        },
        {
         "platform": "X",
@@ -117,7 +119,9 @@
         "replies": 96,
         "quotes": 0,
         "bookmarks": 37,
-        "fetched_at": "2026-10-13T13:08:22Z"
+        "fetched_at": "2026-10-13T13:08:22Z",
+        "text": "华为今年真背运：\n\n懂车帝刚刚发布尊界V800测试视频。测试中，3辆尊界V800进行100公里时速到静止的连续紧急制动，结果三辆车分别在第2至第4次重刹时，均出现刹车踏板支架断裂，车辆随后失去脚刹制动能力，只能依靠P挡应急制动。\n\n相关话题迅速冲上热搜。当天，江淮汽车股价盘中直接跌停，报24.72元，跌幅10.01%。尊界V800由华为与江淮联合打造，江淮承担整车研发、底盘调校和生产制造。\n\n江淮汽车不服，随后回应称，目前正在关注此事；客服则表示，懂车帝的测试结果还需要进一步核实。",
+        "author_name": "王局拍案"
        },
        {
         "platform": "X",
@@ -130,7 +134,9 @@
         "replies": 0,
         "quotes": 0,
         "bookmarks": 0,
-        "fetched_at": "2026-10-13T13:08:22Z"
+        "fetched_at": "2026-10-13T13:08:22Z",
+        "text": "车企高管暗戳戳互撕又出名场面。懂车帝刚测出三台尊界V800紧急制动时刹车踏板支架断裂，这事还在风口浪尖上，比亚迪仰望的高管郑羽直接录了个短视频，手里拿着仰望的金属踏板出镜，说仰望执行的是2500N企标，还来了一句安全才是最大的豪华。结果视频刚发不久就被火速删了，估计是王传福不让公开拉踩同行的家规管住了手，但同行这波借势补刀的意图全网都看明白了。",
+        "author_name": "风女也要戴大帽"
        }
       ],
       "x_trend": {
@@ -377,7 +383,9 @@
         "replies": 190,
         "quotes": 6,
         "bookmarks": 114,
-        "fetched_at": "2026-10-13T13:08:22Z"
+        "fetched_at": "2026-10-13T13:08:22Z",
+        "text": "拼多多是唯一不做Ai的大厂，其他大厂都在高调AIIin Al，阿里有千间大模型，字节有豆包，腾讯有混元，百度有文心，京东、美团、网易也各有动作。\n只有拼多多，从未公开阐释AI战略，财报和电话会里对AI只字不提，也没有独立AI\n产品发布。这是为什么？\n难道黃峥没有看到AI是确定性的未来吗？",
+        "author_name": "Nora X"
        }
       ],
       "x_trend": {
@@ -603,7 +611,9 @@
         "replies": 0,
         "quotes": 0,
         "bookmarks": 1,
-        "fetched_at": "2026-10-13T13:08:22Z"
+        "fetched_at": "2026-10-13T13:08:22Z",
+        "text": "小米的职级天花板，被一个 31 岁的人摸到了。据投资界报道，小米对内发布晋升名单，大模型团队负责人罗福莉晋升至 22 级。\n\n从 2025 年 11 月官宣入职算起，摸到 22 级只用了 10 个月，被写成小米史上最快晋升纪录。小米职级共 13 到 22 十层，总监在 19 到 20 级，副总裁在 21 到 22 级；据公开信息，19 级员工的综合年薪已超 200 万元，22 级的薪酬只会更高。\n\n跟晋升一起公布的，还有 MiMo 团队发布并开源 Xiaomi MiMo-V2.6 系列，含 Pro 与 Flash 两个原生全模态模型。按团队口径，得益于 RL 算力扩展，MiMo-V2.6-Pro 在 Artificial Analysis 智能指数拿到 46 分，位列开源权重模型榜首，同等智能水平下价格只有海外模型的二十分之一到六十分之一；团队把这条路线视为探索 RSI（递归自我改进）的关键一步。罗福莉自己的说法是，这次工作背后的研究创新和工程挑战，超过了她曾部分参与的 DeepSeek R1。\n\n她的履历并不是天才叙事。1995 年生于四川宜宾，北师大本科、北大硕士，2019 年在 ACL 上发表 8 篇论文，其中 2 篇一作，因此被贴上「天才少女」，但她多次公开排斥这个标签，说它粉饰了科研里真正的努力和投入。硕士毕业后她以「阿里星」进入达摩院，做过多语言预训练模型 VECO，之后去幻方量化、DeepSeek 参与 V2 等模型，2025 年 11 月加入小米。据《证券时报》此前报道，雷军曾想用千万年薪挖她。\n\n她只是这轮抢人的一个样本。腾讯去年 12 月任命 27 岁的前 OpenAI 研究员姚顺雨为首席 AI 科学家；百度今年 7 月让 1997 年生的复旦博士孙天祥负责基础模型研发部；字节启动 Top Seed 计划，全球招募 30 名顶尖应届博士，据晚点报道，校招生年薪从 2024 年约 150 万元涨到 2025 年的 300 万到 500 万元，2026 年部分核心岗位开到 600 万元；月之暗面给未毕业的实习生发公司期权，MiniMax 直接喊出薪资期权上不封顶。\n\n上一代互联网比的是规模，这一代 AI 比的是密度。模型分再高也早晚被追上，能把一个 31 岁的人放到 22 级的位置上，才是这些公司真正押的注。\n\n信源：腾讯新闻「投资界」（2026-10-08）。",
+        "author_name": "码良"
        }
       ],
       "x_trend": {
@@ -806,7 +816,9 @@
         "replies": 9,
         "quotes": 1,
         "bookmarks": 18,
-        "fetched_at": "2026-10-13T13:08:22Z"
+        "fetched_at": "2026-10-13T13:08:22Z",
+        "text": "MOONSHOT AI EYES EARLY 2027 HONG KONG IPO AFTER VALUATION HITS $50B \n\nChinese AI startup Moonshot AI has completed its final private funding round at a valuation of about $50B and is preparing for a potential Hong Kong IPO in Q1 2027.\n\nThe company is considering raising as much as $5B and could begin early investor meetings as soon as this month.\n\nMoonshot’s ARR is currently around $1B and is expected to reach $2B by December, up from roughly $300M in June.\n\nThe company, known for its Kimi AI models, was valued at $31.5B in a previous funding round this summer.\n\nBank of America is serving as overall coordinator for the IPO alongside CICC, Deutsche Bank and Goldman Sachs. Moonshot has reportedly already filed confidentially for the listing.\n\nAlibaba, Tencent and 5Y Capital are among its existing backers.\n\nThe IPO timing could still change, with Moonshot also reportedly facing a Chinese regulatory data-security probe alongside DeepSeek.\n\nSource: Bloomberg",
+        "author_name": "Wall St Engine"
        },
        {
         "platform": "X",
@@ -819,7 +831,9 @@
         "replies": 0,
         "quotes": 0,
         "bookmarks": 0,
-        "fetched_at": "2026-10-13T13:08:22Z"
+        "fetched_at": "2026-10-13T13:08:22Z",
+        "text": "NEW: Executives at Chinese AI startup Moonshot are in talks to settle an ongoing legal dispute with shareholder Recurrent[dot]ai ahead of its planned Hong Kong IPO, according to Reuters.\n\nRecurrent and some investors accused Moonshot CEO Yang Zhilin and CTO Zhang Yutao of false representations and self-enrichment. They are seeking compensation equal to 10.5% of Moonshot's original shares — potentially worth more than $700 million based on a prior $30 billion valuation, the report said.",
+        "author_name": "The Latent"
        }
       ],
       "x_trend": {

@@ -99,6 +99,10 @@ h1{font-size:28px;line-height:1.35;margin:6px 0 10px}
 .summary{background:var(--card);border-left:4px solid var(--acc);padding:14px 18px;border-radius:0 10px 10px 0;font-size:16px}
 section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:18px}
 section h2{margin:0 0 10px;font-size:18px}.na{color:var(--mut);font-style:italic;margin:0}.note{font-size:12px;color:var(--mut);overflow-wrap:anywhere}
+.xbody{margin:8px 0;padding:8px 10px;border-left:3px solid var(--acc2);background:color-mix(in srgb,var(--acc2) 8%,transparent);border-radius:0 10px 10px 0}
+.xtext{white-space:pre-wrap;margin:4px 0}.xmiss{color:var(--warn);font-weight:800}
+.xmeta{font-size:12.5px}.heat-how{font-size:12.5px;color:var(--mut);border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin:8px 0}
+.heat-how b{color:var(--tx)}
 .chart{max-width:100%;height:auto}
 .tl{border-left:2px solid var(--line);padding-left:18px;margin-left:6px}.tli{position:relative;margin-bottom:10px}.tli:before{content:"";position:absolute;left:-25px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--acc)}
 .tli .d{font-weight:700;color:var(--acc);margin-right:8px;font-variant-numeric:tabular-nums}
@@ -111,6 +115,33 @@ section h2{margin:0 0 10px;font-size:18px}.na{color:var(--mut);font-style:italic
 ul{padding-left:20px;margin:6px 0}
 .kv{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}.kv div{border:1px solid var(--line);border-radius:8px;padding:8px 12px}
 '''
+def _load_cache():
+    p = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'x_cache.json')
+    if not os.path.exists(p):
+        return {}
+    try:
+        return json.load(open(p, encoding='utf-8')).get('posts') or {}
+    except Exception:
+        return {}
+XCACHE = _load_cache()
+_SID = re.compile(r'status/(\d+)')
+def snap(url):
+    m = _SID.search(str(url or ''))
+    return XCACHE.get(m.group(1), {}) if m else {}
+HEAT_NOTE = '''<div class="heat-how"><b>热度怎么算</b><p>首页热度榜的数字是 heat_log.csv 里 x_daily_post_count 的最近一个完整 UTC 日发帖量，从高到低取前 10，不是加权分。折线按日排列，partial 未完成日不参与排名。卡片「浏览」是该条链接浏览量的最大值；≥10 万为爆，≥1 万为热。下面这张图是本条事件自己的 X 检索式逐日发帖量，星号是不完整时段。</p></div>'''
+def x_quote(url, text, author, name, created, views, likes, reposts):
+    cached = snap(url)
+    body = text or cached.get('text') or ''
+    who = ' '.join(x for x in [name or cached.get('name') or '', author or cached.get('author') or ''] if x)
+    created = created or cached.get('created_at')
+    meta = f'<div class="xmeta"><b>{E(who or "X")}</b> ' + (f'<span class="note">{html_with_times(created)}</span> ' if created else '')
+    if views is not None: meta += f'<span class="note">浏览 {E(views)}</span> '
+    if likes is not None: meta += f'<span class="note">赞 {E(likes)}</span> '
+    if reposts is not None: meta += f'<span class="note">转 {E(reposts)}</span> '
+    meta += '</div>'
+    inner = f'<p class="xtext">{E(body)}</p>' if body else '<p class="xmiss">正文未缓存</p>'
+    link = f'<a class="xlink" href="{E(url)}" target="_blank" rel="noopener">原链接（站外）</a>' if url else ''
+    return f'<blockquote class="xbody">{meta}{inner}{link}</blockquote>'
 def render(it, ed, all_items, out_dir):
     d = it.get('detail') or {}
     title = d.get('title') or (it['company'] + '：' + it['text'][:30] + '…')
@@ -125,14 +156,19 @@ def render(it, ed, all_items, out_dir):
     # heat
     H = []
     for p in d.get('x_posts') or []:
-        H.append(f'<div class="post"><b>{link(p.get("url"), "X " + p.get("author", ""))}</b> <span class="note">发布 {html_with_times(p.get("created_at"))} · 数据抓取 {html_with_times(p.get("fetched_at"))}</span>{hbars(p)}</div>')
+        H.append(f'<div class="post">{x_quote(p.get("url"), p.get("text"), p.get("author"), p.get("author_name"), p.get("created_at"), p.get("views"), p.get("likes"), p.get("reposts"))}<span class="note">数据抓取 {html_with_times(p.get("fetched_at"))}</span>{hbars(p)}</div>')
     if not H:  # fall back to view counts listed on links
         lv = [l for l in it.get('links', []) if l.get('views')]
         if lv: H.append('<div class="note">简报收录时的浏览量：</div><ul>' + ''.join(f'<li>{link(l["url"], l["label"])} · 👁 {E(l["views"])}</li>' for l in lv) + '</ul>')
     tr = d.get('x_trend')
     if tr:
         anchor = parse_dt(tr.get('fetched_at'))
-        H.append(f'<h3 style="font-size:15px;margin:14px 0 4px">X 每日发帖量</h3><div class="note">检索式：{E(tr.get("query"))} · {html_with_times(tr.get("source"), anchor)} · 抓取 {html_with_times(tr.get("fetched_at"))} · {html_with_times(tr.get("note",""), anchor)}</div>' + bar_chart(tr.get('labels', []), tr.get('values', [])))
+        vals = tr.get('values') or []
+        delta = ''
+        if len(vals) >= 2:
+            dlt = vals[-1] - vals[-2]
+            delta = f'<p class="note">最近 {fmt(vals[-1])}，较前一点 {"+" if dlt>0 else ""}{fmt(dlt)}</p>'
+        H.append(f'<h3 style="font-size:15px;margin:14px 0 4px">X 每日发帖量</h3><div class="note">检索式：{E(tr.get("query"))} · {html_with_times(tr.get("source"), anchor)} · 抓取 {html_with_times(tr.get("fetched_at"))} · {html_with_times(tr.get("note",""), anchor)}</div>' + bar_chart(tr.get('labels', []), vals) + delta + HEAT_NOTE)
     wb = d.get('weibo')
     H.append('<h3 style="font-size:15px;margin:14px 0 4px">微博热搜</h3>' + (f'<p>{("排名：第 " + E(wb["rank"]) + " 位 · ") if wb.get("rank") else ""}{E(wb.get("text"))} {link(wb.get("url"), "来源↗")}</p>' if wb else NA))
     op = d.get('other_platforms') or []

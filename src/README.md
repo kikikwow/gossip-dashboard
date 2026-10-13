@@ -37,6 +37,12 @@
 ## 重点追踪匹配
 长期话题从 topics.md 括号内关键词 + 脚本内置别名（build_dashboard.py 中 `alias`）匹配条目的 company+text，属关键词匹配，可能有误匹配/漏匹配。
 
+## 热度
+热度榜数字 = `heat_log.csv` 里该话题 `x_daily_post_count`（X 检索式的完整 UTC 日发帖量）最近一条，从高到低前 10。没有日发帖量才退回该话题最后一条其他指标。`partial` 是采集截止前的未完成日，只出现在图上，不参与排名。卡片「浏览」是该条 `links[].views` 的最大值，不是榜上的日发帖量；≥10 万显示「爆」，≥1 万显示「热」。topics.md 的「热度」列是编辑备注。
+
+## X 正文缓存
+`python3 src/cache_x_posts.py` 读取 data 里已有的 status 链接，向 `api.fxtwitter.com` 抓公开快照，写入 `src/x_cache.json`，并给 `detail.x_posts` 补上可选字段 `text` / `author_name`（不改已有浏览数）。抓不到的项 `status=missing`，页面显示「正文未缓存」，不编正文。然后 `python3 src/build_dashboard.py` 会把缓存打进首页，并写出仓库根目录的 `index.html` 和 `events/`（Pages 用）以及 `src/dashboard/`。
+
 ## 时区
 看板顶栏和事件详情页可在「北京时间」（Asia/Shanghai，UTC+8）和「UTC」之间切换。首次打开默认北京时间，选择写入 localStorage `gossipTz`，刷新后保持。只改显示格式；数据文件里的时间仍是原来的 UTC / ISO。有钟点的时间会立刻重绘，不用整页刷新。只有日期、没有钟点的事件日期（如 `10-08`）保持原文。
 
@@ -44,8 +50,10 @@
 看板右上角下拉切换：🌙 暗色看板 `dark` / 📰 报刊杂志 `paper` / 📱 简约信息流 `feed` / 🔥 热榜数据 `hot`。保存在 localStorage `gossipTheme`；也可用 URL `index.html#theme=paper` 强制（截图用）。详情页同样读取该设置。
 截图：`for t in dark paper feed hot; do google-chrome --headless=new --no-sandbox --hide-scrollbars --window-size=1280,900 --screenshot=dashboard/theme_$t.png "file://$PWD/dashboard/index.html#theme=$t"; done`
 
-## 事件详情页
-每个条目都会生成 `dashboard/events/<id>.html`（卡片“查看事件详情 →”链接）。条目可写 `"id"`（仅 [A-Za-z0-9_.-]），否则自动为 `<文件名>-<栏目序号>-<条目序号>`——**追加新条目时建议显式写 id，避免顺序变化导致链接变化**。渲染代码：`detail_render.py`。
+## 事件详情
+首页卡片默认在当前页打开浮层（地址栏 `?e=<id>`），关闭后筛选和滚动位置还在。每个条目仍会生成 `events/<id>.html` 独立页，浮层里有链接。条目可写 `"id"`（仅 [A-Za-z0-9_.-]），否则自动为 `<文件名>-<栏目序号>-<条目序号>`——**追加新条目时建议显式写 id，避免顺序变化导致链接变化**。渲染代码：`detail_render.py`。
+
+卡片上的时间跨度：起 = 时间线、帖子或缓存里最早的钟点（没有钟点就用条目日期原文）；采 = 帖子指标 `fetched_at`、`enriched_at`、趋势 `fetched_at` 里最晚的。`x_cache.json` 的抓取时间不拿来覆盖采，除非这条没有任何更早的采集点。
 
 条目可选 `detail` 对象（任意字段缺失时页面显示“暂无数据”）：
 ```json
@@ -79,4 +87,4 @@ topic 用 topics.md 短期话题原名时，短期热点面板会显示折线。
 看板顶部固定「🚕 网约车」面板，顶栏另有「网约车」标签（与全部/大厂八卦/…并列）。匹配关键词：滴滴、DiDi、99、网约车、程维、柳青、花小猪、曹操出行、T3、高德打车及出海相关词。由每小时滴滴专项例程写入 `data/` 后重跑 `build_dashboard.py` 刷新；**无匹配条目时显示空态，禁止编造**。详见 `topics.md`「特色栏目」。
 
 ## 移动端 / 微信
-`≤430px` 媒体查询：粘性紧凑顶栏、全宽卡片、44px 级触控、顶栏标签横向滑动。含 Open Graph / Twitter Card 与 `og-share.png` 分享图，便于微信内打开与转发。
+视口 ≤820px 时整页换成另一套结构（`#mapp`），不是把桌面三栏压扁：底栏「动态 / 热榜 / 追踪」、竖向信息流、热榜左右滑、详情是铺满屏幕的层。桌面仍是顶栏筛选 + 三栏 + 居中浮层。更窄的 `≤430px` 规则只作用在桌面 DOM 上，窄屏时桌面 DOM 已隐藏。含 Open Graph / Twitter Card 与 `og-share.png` 分享图。
