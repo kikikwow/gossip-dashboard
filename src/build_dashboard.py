@@ -56,10 +56,10 @@ def main():
     eds = load_editions(); lt, st = load_topics(); heat = load_heat()
     # topic aliases for long-term keyword matching (only extend matching, never data)
     alias = {'字节': ['字节跳动', '字节', 'ByteDance', 'TikTok', '抖音', '豆包', '飞书', 'Seed'],
-             '滴滴': ['滴滴', 'DiDi', 'Didi', '99'], '大模型': ['大模型', 'DeepSeek', '月之暗面', 'Kimi', '智谱', 'MiniMax', '阶跃', '百川', '通义', '千问', '文心', '混元', 'MiMo', 'Moonshot', 'Qwen']}
+             '滴滴': ['滴滴', 'DiDi', 'Didi', 'DiDi Global', '99app', '99 App'], '大模型': ['大模型', 'DeepSeek', '月之暗面', 'Kimi', '智谱', 'MiniMax', '阶跃', '百川', '通义', '千问', '文心', '混元', 'MiMo', 'Moonshot', 'Qwen']}
     for t in lt:
         for k, v in alias.items():
-            if k in t['name']: t['keywords'] = sorted(set(t['keywords']) | set(v) - {'99'} | ({'99'} if k=='滴滴' else set()))
+            if k in t['name']: t['keywords'] = sorted(set(t['keywords']) | set(v))
     noise = ('业务', '八卦', '组织', '人事', '助理', '拉美', '巴西', '墨西哥', '澳洲', '香港')
     for t in lt:
         ks = set()

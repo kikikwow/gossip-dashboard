@@ -1,5 +1,18 @@
 <!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><script>try{var t=(location.hash.match(/theme=(\w+)/)||[])[1]||localStorage.getItem("gossipTheme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>大厂八卦追踪看板</title>
+<meta name="description" content="中国大厂八卦 · 美股中概&出海 · 滴滴网约车追踪。实锤/传闻标注，每小时更新。">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:title" content="🕵️ 中国大厂八卦追踪看板">
+<meta property="og:description" content="大厂八卦 · 美股中概&出海 · 滴滴网约车追踪。实锤/传闻标注，每小时更新。">
+<meta property="og:image" content="og-share.png">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="🕵️ 中国大厂八卦追踪看板">
+<meta name="twitter:description" content="大厂八卦 · 美股中概&出海 · 滴滴网约车追踪">
+<meta name="twitter:image" content="og-share.png">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="og-share.png">
 <style>
 :root{--bg:#0d1117;--bg2:#151b24;--card:#1a2130;--line:#283244;--tx:#e6edf3;--mut:#8b98ab;--acc:#ff6b4a;--acc2:#4f8cff;--ok:#22c55e;--warn:#f59e0b;--rumor:#a78bfa;--shadow:0 6px 24px rgba(0,0,0,.35)}
 
@@ -111,6 +124,58 @@ main.wrap{display:flex;flex-direction:column}main>*{order:5}
 [data-theme=feed] #h-hero,[data-theme=feed] #hero{order:1}[data-theme=feed] .grid3{order:3}[data-theme=feed] #h-cards,[data-theme=feed] #cards{order:2}
 [data-theme=paper] #h-hero,[data-theme=paper] #hero{order:1}[data-theme=paper] .grid3{order:2}[data-theme=paper] #h-cards,[data-theme=paper] #cards{order:3}
 #h-tl,#tl{order:9!important}
+
+/* ===== 网约车 featured panel ===== */
+.ride{margin:18px 0;background:linear-gradient(135deg,color-mix(in srgb,var(--acc2) 12%,var(--card)),var(--card));border:1px solid var(--line);border-radius:16px;padding:16px 18px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.ride:before{content:"";position:absolute;right:-20px;top:-20px;width:120px;height:120px;border-radius:50%;background:color-mix(in srgb,var(--acc2) 18%,transparent)}
+.ride h2{margin:0 0 8px;font-size:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.ride .sub{font-size:12.5px;color:var(--mut);margin-bottom:10px;line-height:1.5}
+.ride .items{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+.ride .empty-box{text-align:center;padding:22px 12px;color:var(--mut);border:1px dashed var(--line);border-radius:12px;background:color-mix(in srgb,var(--bg) 40%,transparent)}
+.ride .empty-box b{display:block;font-size:15px;color:var(--tx);margin-bottom:4px}
+.ride .pulse{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ok);margin-right:6px;animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+[data-theme=paper] .ride{border-radius:0;border:1px solid #211c14;background:var(--bg2);box-shadow:none}
+[data-theme=paper] .ride:before{display:none}
+[data-theme=feed] .ride{border-radius:14px}
+[data-theme=hot] .ride{border-color:#ffc9b0;background:linear-gradient(135deg,#fff0e8,#fff)}
+#h-ride,#ride{order:1}[data-theme=hot] #h-ride,[data-theme=hot] #ride{order:0}
+[data-theme=feed] #h-ride,[data-theme=feed] #ride{order:0}
+[data-theme=paper] #h-ride,[data-theme=paper] #ride{order:0}
+
+/* ===== Mobile / WeChat (≤430px) ===== */
+@media(max-width:430px){
+  body{font-size:15px;-webkit-text-size-adjust:100%}
+  .wrap{padding:0 12px;max-width:100%}
+  header{padding:10px 0 12px;position:sticky;top:0;z-index:20}
+  header .wrap{flex-direction:row;align-items:center;gap:8px;flex-wrap:nowrap}
+  h1{font-size:17px;letter-spacing:0}h1 small{display:none}
+  .meta{text-align:right;font-size:11px;line-height:1.4;flex-shrink:0}
+  .meta b{font-size:12px}.themesel,.btn{margin-top:4px;padding:8px 12px;min-height:40px;font-size:13px}
+  .bar{padding:8px 0;top:56px}
+  .tabs{gap:6px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{padding:10px 14px;min-height:40px;font-size:13.5px;white-space:nowrap;flex-shrink:0}
+  .filters{flex-direction:column;gap:8px}
+  select,input[type=search]{width:100%;min-height:44px;font-size:16px;padding:10px 12px;border-radius:10px}
+  .grid3{grid-template-columns:1fr;gap:12px;margin:12px 0}
+  .panel{padding:14px;border-radius:12px}
+  .ride{margin:12px 0;padding:14px;border-radius:12px}
+  .ride .items{grid-template-columns:1fr}
+  .hero{grid-template-columns:1fr;gap:10px}
+  .herocard{padding:16px;border-radius:12px}.herocard .big{font-size:64px}
+  .cards{grid-template-columns:1fr!important;gap:10px;column-count:1!important}
+  .card{padding:14px;border-radius:12px}
+  .more{display:inline-block;padding:10px 0;min-height:40px}
+  .pill,.badge,.src{font-size:12.5px;padding:3px 8px}
+  h2.sec{font-size:16px;margin:18px 0 10px}
+  [data-theme=paper] h1{font-size:22px;letter-spacing:2px}
+  [data-theme=paper] .cards{column-count:1}
+  [data-theme=hot] .card{grid-template-columns:36px 1fr;gap:8px}
+  [data-theme=hot] .card .heatbar{grid-column:2;grid-row:auto;margin-top:4px}
+  [data-theme=feed] .wrap{max-width:100%}
+  footer{padding:16px 0 32px;font-size:11.5px}
+}
 @media(max-width:980px){.grid3{grid-template-columns:1fr}.hero{grid-template-columns:1fr}[data-theme=paper] .cards{column-count:1}[data-theme=hot] .card{grid-template-columns:36px 1fr}[data-theme=hot] .card .heatbar{grid-column:2;grid-row:auto}}
 </style></head><body>
 <header><div class="wrap"><div><h1>🕵️ 中国大厂八卦追踪看板<small>CHINA BIG-TECH GOSSIP TRACKER</small></h1></div>
@@ -121,6 +186,9 @@ main.wrap{display:flex;flex-direction:column}main>*{order:5}
 <select id="fsrc"><option value="">全部信源</option></select>
 <input type="search" id="q" placeholder="🔍 搜索公司 / 内容 / 链接…"></div></div></div>
 <main class="wrap">
+<section class="ride" id="ride"><h2>🚕 网约车 <span class="note"><span class="pulse"></span>每小时专项追踪 · 滴滴 & DiDi 出海</span></h2>
+<div class="sub">覆盖：滴滴国内 · 巴西 99 · 埃及 · 墨西哥 · 拉美 · 澳洲 · 香港，以及相关竞品。关键词匹配条目；暂无数据时显示空态。</div>
+<div id="ridebody"></div></section>
 <div class="grid3"><section class="panel"><h2>🔥 热度榜</h2><div id="heat"></div></section>
 <section class="panel"><h2>🎯 重点追踪 <span class="note">长期话题 · 关键词匹配</span></h2><div id="focus"></div></section>
 <section class="panel"><h2>⚡ 短期热点 <span class="note">来自 topics.md</span></h2><div id="short"></div></section></div>
@@ -142,8 +210,10 @@ const latest=D.editions[0];
 $('#latest').textContent=latest?(latest.edition_date||latest.timestamp)+' · '+(TYPES[latest.type]||latest.type):'暂无数据';$('#built').textContent=D.built;
 let state={type:'',co:'',tag:'',src:'',q:''};
 // tabs
-const tabs=[['','全部'],['bigtech','大厂八卦'],['adr','美股中概&出海'],['alert','快讯'],['daily','每日总结']];
-$('#tabs').innerHTML=tabs.map(([k,n])=>`<button class="tab${k===''?' on':''}" data-t="${k}">${n}<span class="n">${ITEMS.filter(i=>!k||i._e.type===k).length}</span></button>`).join('');
+const RIDE_KW=['滴滴','didi','网约车','程维','柳青','顺风车','花小猪','曹操出行','t3出行','高德打车','巴西99','di di global','99app'];
+const isRide=it=>{const h=(it.company+' '+it.text+' '+(it._sec||'')+' '+(it.detail&&it.detail.title||'')).toLowerCase(); if(RIDE_KW.some(k=>h.includes(k.toLowerCase())))return true; if(/\b99\b/.test(h)&&(h.includes('巴西')||h.includes('brazil')||h.includes('出行')||h.includes('网约')))return true; return false};
+const tabs=[['','全部'],['ride','网约车'],['bigtech','大厂八卦'],['adr','美股中概&出海'],['alert','快讯'],['daily','每日总结']];
+$('#tabs').innerHTML=tabs.map(([k,n])=>{const c=k===''?ITEMS.length:k==='ride'?ITEMS.filter(isRide).length:ITEMS.filter(i=>i._e.type===k).length;return `<button class="tab${k===''?' on':''}" data-t="${k}">${n}<span class="n">${c}</span></button>`}).join('');
 $('#tabs').onclick=e=>{const b=e.target.closest('.tab');if(!b)return;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===b));state.type=b.dataset.t;render()};
 const cos=[...new Set(ITEMS.flatMap(i=>i.company.split(/\s*\/\s*/)))].sort((a,b)=>a.localeCompare(b,'zh'));
 $('#fco').innerHTML+=cos.map(c=>`<option>${esc(c)}</option>`).join('');
@@ -157,10 +227,11 @@ function card(it){const e=it._e;return `<article class="card" data-id="${esc(it.
 <span class="badge ${it.tag==='实锤'?'b-real':'b-rum'}">【${esc(it.tag)}】</span>${(it.source_types||[]).map(s=>`<span class="src">${esc(s)}</span>`).join('')}<span class="date">📅 ${esc(it.date)}</span></div>
 <div class="secn">${esc(TYPES[e.type]||e.type)} · ${esc(it._sec)}${it._views?` · 👁 最高 ${fmt(it._views)}`:''}</div><p>${hl(it.text)}</p>
 <a class="more" href="events/${encodeURIComponent(it.id)}.html">查看事件详情 →</a><div class="links">${(it.links||[]).map(l=>`<div>🔗 <a href="${esc(l.url)}" target="_blank" rel="noopener">${hl(l.label)}</a>${l.views?`<span class="vw">👁 ${esc(l.views)}</span>`:''}</div>`).join('')}</div></article>`}
-function match(it){const s=state;if(s.type&&it._e.type!==s.type)return false;if(s.tag&&it.tag!==s.tag)return false;
+function match(it){const s=state;if(s.type==='ride'){if(!isRide(it))return false;}else if(s.type&&it._e.type!==s.type)return false;if(s.tag&&it.tag!==s.tag)return false;
 if(s.co&&!it.company.split(/\s*\/\s*/).includes(s.co))return false;if(s.src&&!(it.source_types||[]).includes(s.src))return false;if(s.q&&!it._hay.includes(s.q))return false;return true}
 function render(){let L=ITEMS.filter(match);if(document.documentElement.dataset.theme==='hot')L=L.slice().sort((a,b)=>b._views-a._views);$('#cards').innerHTML=L.map(card).join('')||'<p class="empty">没有符合条件的条目。</p>';$('#cnt').textContent=`共 ${L.length} / ${ITEMS.length} 条`;renderHero()}
 function renderHero(){// top3 of latest edition of selected type (or latest bigtech/adr when 全部)
+ if(state.type==='ride'){const L=ITEMS.filter(isRide).slice(0,3);$('#herolbl').textContent=L.length?`网约车匹配 ${ITEMS.filter(isRide).length} 条`:'';$('#hero').innerHTML=L.length?L.map((it,i)=>{const grads=['linear-gradient(135deg,#ff6b4a,#c2185b)','linear-gradient(135deg,#7c3aed,#4f46e5)','linear-gradient(135deg,#0ea5e9,#0d9488)'];return `<div class="herocard" style="background:${grads[i]}"><div class="big">${i+1}</div><div class="co">${esc(it.company)}</div><div class="ed">📅 ${esc(it.date)}</div><p>${esc(it.text)}</p><a href="events/${encodeURIComponent(it.id)}.html"><b>事件详情 →</b></a></div>`}).join(''):'<p class="empty">暂无滴滴相关条目，每小时追踪中</p>';return}
  const eds=D.editions.filter(e=>!state.type||e.type===state.type);const e=eds[0];
  if(!e||!e.top3){$('#hero').innerHTML='<p class="empty">该分类暂无期次。</p>';$('#herolbl').textContent='';return}
  $('#herolbl').textContent=`来自 ${e.edition_date||e.timestamp} · ${TYPES[e.type]||e.type}`;
@@ -183,5 +254,11 @@ function shortPanel(){const H=D.heat||[];$('#short').innerHTML=D.shortterm.lengt
  return `<div class="hot"><b>${esc(t.name)}</b><div class="r">${esc(t.reason)}</div><div style="margin-top:3px"><span class="chip">加入 ${esc(t.added)}</span><span class="chip">热度：${esc(t.heat)}</span><span class="chip">${esc(t.status)}</span>${spark(ser)}</div></div>`}).join(''):'<p class="empty">topics.md 中暂无短期热点</p>'}
 function timeline(){$('#tl').innerHTML=D.editions.map(e=>{const n=e.sections.reduce((a,s)=>a+(s.items||[]).length,0);
  return `<div class="tl"><span class="badge ty" style="background:${TCOL[e.type]||'#888'};color:#fff">${esc(TYPES[e.type]||e.type)}</span> <b>${esc(e.title||'')}</b> <span class="note">· ${esc(e.timestamp)} · ${n} 条 · ${e.sections.length} 个栏目 · ${esc(e._file)}</span><div class="note">${esc(e.lede||'')}</div></div>`}).join('')||'<p class="empty">暂无期次</p>'}
-heatPanel();focusPanel();shortPanel();timeline();render();
+
+function ridePanel(){const L=ITEMS.filter(isRide);
+  if(!L.length){$('#ridebody').innerHTML=`<div class="empty-box"><b>暂无滴滴相关条目，每小时追踪中</b>覆盖国内滴滴与出海（巴西99 / 埃及 / 墨西哥 / 拉美 / 澳洲 / 香港）。有新进展会自动出现在此。</div>`;return}
+  $('#ridebody').innerHTML=`<div class="items">${L.slice(0,6).map(it=>card(it)).join('')}</div>`+(L.length>6?`<p class="note" style="margin-top:8px">共 ${L.length} 条 · <a href="#" id="ride-more">在「网约车」标签查看全部 →</a></p>`:'');
+  const m=$('#ride-more');if(m)m.onclick=e=>{e.preventDefault();const b=document.querySelector('.tab[data-t=ride]');if(b)b.click();window.scrollTo({top:document.querySelector('#cards').offsetTop-80,behavior:'smooth'})}}
+
+heatPanel();focusPanel();shortPanel();timeline();ridePanel();render();
 </script></body></html>
