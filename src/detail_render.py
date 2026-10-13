@@ -1,7 +1,48 @@
 # -*- coding: utf-8 -*-
 """Render dashboard/events/<id>.html for every item (used by build_dashboard.py)."""
-import html, json, os, re
+import html, json, os, re, datetime
 E = lambda s: html.escape(str(s if s is not None else ''), quote=True)
+_BJ = datetime.timezone(datetime.timedelta(hours=8))
+_ISO = re.compile(r'^(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2})(?::(\d{2}))?(?:\.\d+)?(Z|[+-]\d{2}:?\d{2})?$')
+_UTC_LABEL = re.compile(r'^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})(?::(\d{2}))?\s*UTC$', re.I)
+_CLOCK_UTC = re.compile(r'^(\d{1,2}):(\d{2})\s*UTC$', re.I)
+_INLINE_TS = re.compile(r'\d{4}-\d{2}-\d{2}[ T]\d{2}:\d{2}(?::\d{2})?\s*UTC|\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2}(?::\d{2})?(?:\.\d+)?(?:Z|[+-]\d{2}:?\d{2})|\d{1,2}:\d{2}\s*UTC', re.I)
+def parse_dt(s, anchor=None):
+    if s is None: return None
+    s = str(s).strip()
+    m = _ISO.match(s)
+    if m:
+        sec = m.group(6) or '00'
+        tz = m.group(7) or 'Z'
+        if tz == 'Z': tz = '+00:00'
+        elif re.fullmatch(r'[+-]\d{4}', tz): tz = tz[:3] + ':' + tz[3:]
+        return datetime.datetime.fromisoformat(f"{m.group(1)}-{m.group(2)}-{m.group(3)}T{m.group(4)}:{m.group(5)}:{sec}{tz}")
+    m = _UTC_LABEL.match(s)
+    if m:
+        sec = m.group(6) or '00'
+        return datetime.datetime.fromisoformat(f"{m.group(1)}-{m.group(2)}-{m.group(3)}T{m.group(4)}:{m.group(5)}:{sec}+00:00")
+    if anchor is not None:
+        m = _CLOCK_UTC.match(s)
+        if m:
+            return datetime.datetime(anchor.year, anchor.month, anchor.day, int(m.group(1)), int(m.group(2)), tzinfo=datetime.timezone.utc)
+    return None
+def time_tag(dt):
+    utc = dt.astimezone(datetime.timezone.utc)
+    iso = utc.strftime('%Y-%m-%dT%H:%M:%SZ')
+    label = utc.astimezone(_BJ).strftime('%Y-%m-%d %H:%M')
+    return f'<time datetime="{iso}">{label}</time>'
+def html_with_times(text, anchor=None):
+    """Escape text. Wrap UTC/ISO timestamps in <time datetime="…Z">; default label is Beijing."""
+    if text is None: return ''
+    text = str(text)
+    out, i = [], 0
+    for m in _INLINE_TS.finditer(text):
+        out.append(E(text[i:m.start()]))
+        dt = parse_dt(m.group(0), anchor)
+        out.append(time_tag(dt) if dt else E(m.group(0)))
+        i = m.end()
+    out.append(E(text[i:]))
+    return ''.join(out)
 NA = '<p class="na">暂无数据</p>'
 TYPES = {'bigtech': '大厂八卦', 'adr': '美股中概&出海', 'alert': '快讯', 'daily': '每日总结'}
 def fmt(n):
@@ -39,7 +80,17 @@ CSS = '''
 [data-theme=hot]{--bg:#fff7f3;--card:#fff;--line:#f3dfd6;--tx:#222;--mut:#8a8a8a;--acc:#ff4d1a;--acc2:#eb7350}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font-family:"Noto Sans CJK SC","Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;font-size:15px;line-height:1.75}
 a{color:var(--acc2)}.wrap{max-width:920px;margin:0 auto;padding:0 20px 50px}
-.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font-size:13px;color:var(--mut)}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding:14px 0;font-size:13px;color:var(--mut)}
+.topbar .crumb{margin-left:auto;text-align:right}
+.tz{display:inline-flex;flex-shrink:0;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card)}
+.tz button{background:transparent;color:var(--tx);border:0;font:inherit;padding:6px 12px;min-height:36px;cursor:pointer;line-height:1.3}
+.tz button.on{background:var(--acc);color:#fff;font-weight:700}
+time{font-variant-numeric:tabular-nums}
+@media(max-width:430px){
+ .wrap{padding:0 12px 40px}h1{font-size:22px}
+ .topbar{align-items:flex-start}.topbar .crumb{flex:1 1 100%;margin-left:0;text-align:left;font-size:12px}
+ .tz{order:3;width:100%}.tz button{flex:1;min-height:44px;font-size:15px}
+}
 h1{font-size:28px;line-height:1.35;margin:6px 0 10px}
 .meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
 .pill{background:var(--acc);color:#fff;border-radius:999px;padding:1px 12px;font-weight:700}
@@ -47,7 +98,8 @@ h1{font-size:28px;line-height:1.35;margin:6px 0 10px}
 .src{font-size:12px;color:var(--mut);border:1px solid var(--line);border-radius:6px;padding:0 6px}
 .summary{background:var(--card);border-left:4px solid var(--acc);padding:14px 18px;border-radius:0 10px 10px 0;font-size:16px}
 section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:18px}
-section h2{margin:0 0 10px;font-size:18px}.na{color:var(--mut);font-style:italic;margin:0}.note{font-size:12px;color:var(--mut)}
+section h2{margin:0 0 10px;font-size:18px}.na{color:var(--mut);font-style:italic;margin:0}.note{font-size:12px;color:var(--mut);overflow-wrap:anywhere}
+.chart{max-width:100%;height:auto}
 .tl{border-left:2px solid var(--line);padding-left:18px;margin-left:6px}.tli{position:relative;margin-bottom:10px}.tli:before{content:"";position:absolute;left:-25px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--acc)}
 .tli .d{font-weight:700;color:var(--acc);margin-right:8px;font-variant-numeric:tabular-nums}
 .post{border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:10px}
@@ -64,21 +116,23 @@ def render(it, ed, all_items, out_dir):
     title = d.get('title') or (it['company'] + '：' + it['text'][:30] + '…')
     tagc = 'b-real' if it.get('tag') == '实锤' else 'b-rum'
     P = []
-    P.append(f'<div class="topbar"><a href="../index.html">← 返回看板</a><span>{E(TYPES.get(ed.get("type"), ed.get("type")))} · {E(ed.get("edition_date") or ed.get("timestamp"))} · {E(it.get("section"))}</span></div>')
-    P.append(f'<h1>{E(title)}</h1><div class="meta"><span class="pill">{E(it["company"])}</span><span class="badge {tagc}">【{E(it.get("tag"))}】</span>' + ''.join(f'<span class="src">{E(s)}</span>' for s in it.get('source_types', [])) + f'<span class="note">📅 {E(it.get("date"))}</span>' + (f'<span class="note">· 深度资料整理于 {E(d.get("enriched_at"))}</span>' if d.get('enriched_at') else '') + '</div>')
+    P.append(f'<div class="topbar"><a href="../index.html">← 返回看板</a><div class="tz" id="tz" role="group" aria-label="显示时区"><button type="button" data-tz="cst" class="on" aria-pressed="true">北京时间</button><button type="button" data-tz="utc" aria-pressed="false">UTC</button></div><span class="crumb">{E(TYPES.get(ed.get("type"), ed.get("type")))} · {html_with_times(ed.get("edition_date") or ed.get("timestamp"))} · {E(it.get("section"))}</span></div>')
+    P.append(f'<h1>{E(title)}</h1><div class="meta"><span class="pill">{E(it["company"])}</span><span class="badge {tagc}">【{E(it.get("tag"))}】</span>' + ''.join(f'<span class="src">{E(s)}</span>' for s in it.get('source_types', [])) + f'<span class="note">📅 {html_with_times(it.get("date"))}</span>' + (f'<span class="note">· 深度资料整理于 {html_with_times(d.get("enriched_at"))}</span>' if d.get('enriched_at') else '') + '</div>')
     P.append(f'<div class="summary">{E(d.get("summary") or it["text"])}</div>')
     P.append('<section><h2>📖 事件经过</h2>' + (f'<p>{E(d["background"])}</p>' if d.get('background') else f'<p>{E(it["text"])}</p><p class="na">暂无更详细的事件经过</p>') + '</section>')
     tl = d.get('timeline') or []
-    P.append('<section><h2>🕒 进展时间线</h2>' + ('<div class="tl">' + ''.join(f'<div class="tli"><span class="d">{E(t.get("date"))}</span>{E(t.get("text"))} {link(t.get("url"), "↗")}</div>' for t in tl) + '</div>' if tl else NA) + '</section>')
+    P.append('<section><h2>🕒 进展时间线</h2>' + ('<div class="tl">' + ''.join(f'<div class="tli"><span class="d">{html_with_times(t.get("date"))}</span>{E(t.get("text"))} {link(t.get("url"), "↗")}</div>' for t in tl) + '</div>' if tl else NA) + '</section>')
     # heat
     H = []
     for p in d.get('x_posts') or []:
-        H.append(f'<div class="post"><b>{link(p.get("url"), "X " + p.get("author", ""))}</b> <span class="note">发布 {E(p.get("created_at"))} · 数据抓取 {E(p.get("fetched_at"))}</span>{hbars(p)}</div>')
+        H.append(f'<div class="post"><b>{link(p.get("url"), "X " + p.get("author", ""))}</b> <span class="note">发布 {html_with_times(p.get("created_at"))} · 数据抓取 {html_with_times(p.get("fetched_at"))}</span>{hbars(p)}</div>')
     if not H:  # fall back to view counts listed on links
         lv = [l for l in it.get('links', []) if l.get('views')]
         if lv: H.append('<div class="note">简报收录时的浏览量：</div><ul>' + ''.join(f'<li>{link(l["url"], l["label"])} · 👁 {E(l["views"])}</li>' for l in lv) + '</ul>')
     tr = d.get('x_trend')
-    if tr: H.append(f'<h3 style="font-size:15px;margin:14px 0 4px">X 每日发帖量</h3><div class="note">检索式：{E(tr.get("query"))} · {E(tr.get("source"))} · 抓取 {E(tr.get("fetched_at"))} · {E(tr.get("note",""))}</div>' + bar_chart(tr.get('labels', []), tr.get('values', [])))
+    if tr:
+        anchor = parse_dt(tr.get('fetched_at'))
+        H.append(f'<h3 style="font-size:15px;margin:14px 0 4px">X 每日发帖量</h3><div class="note">检索式：{E(tr.get("query"))} · {html_with_times(tr.get("source"), anchor)} · 抓取 {html_with_times(tr.get("fetched_at"))} · {html_with_times(tr.get("note",""), anchor)}</div>' + bar_chart(tr.get('labels', []), tr.get('values', [])))
     wb = d.get('weibo')
     H.append('<h3 style="font-size:15px;margin:14px 0 4px">微博热搜</h3>' + (f'<p>{("排名：第 " + E(wb["rank"]) + " 位 · ") if wb.get("rank") else ""}{E(wb.get("text"))} {link(wb.get("url"), "来源↗")}</p>' if wb else NA))
     op = d.get('other_platforms') or []
@@ -98,6 +152,7 @@ def render(it, ed, all_items, out_dir):
     srcs = [(l.get('label'), l.get('url'), l.get('views')) for l in it.get('links', [])] + [(x.get('label'), x.get('url'), None) for x in d.get('extra_sources', [])]
     P.append('<section><h2>📚 所有来源链接</h2>' + ('<ul>' + ''.join(f'<li>{link(u, l)}{(" · 👁 " + E(v)) if v else ""} <span class="note">{E(u)}</span></li>' for l, u, v in srcs) + '</ul>' if srcs else NA) + '</section>')
     P.append('<p class="note" style="margin-top:20px">本页仅展示数据文件中已有的信息；【传闻】为单方面说法，未经核实。缺失字段显示“暂无数据”。</p>')
+    tzjs = r'''<script>(function(){var KEY="gossipTz";function getTz(){try{var v=localStorage.getItem(KEY);if(v==="utc"||v==="cst")return v}catch(e){}return "cst"}function pad(n){return String(n).padStart(2,"0")}function fmt(iso,tz){var d=new Date(iso);if(isNaN(d))return null;var zone=tz==="utc"?"UTC":"Asia/Shanghai";try{var parts=new Intl.DateTimeFormat("en-CA",{timeZone:zone,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(d);var g=function(t){return parts.find(function(p){return p.type===t}).value};return g("year")+"-"+g("month")+"-"+g("day")+" "+g("hour")+":"+g("minute")+(tz==="utc"?" UTC":"")}catch(e){var x=tz==="utc"?d:new Date(d.getTime()+8*3600000);return x.getUTCFullYear()+"-"+pad(x.getUTCMonth()+1)+"-"+pad(x.getUTCDate())+" "+pad(x.getUTCHours())+":"+pad(x.getUTCMinutes())+(tz==="utc"?" UTC":"")}}function apply(){var tz=getTz();document.querySelectorAll("time[datetime]").forEach(function(el){var f=fmt(el.getAttribute("datetime"),tz);if(f)el.textContent=f});document.querySelectorAll("#tz [data-tz]").forEach(function(b){var on=b.getAttribute("data-tz")===tz;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false")})}var box=document.getElementById("tz");if(box)box.addEventListener("click",function(e){var b=e.target.closest("button[data-tz]");if(!b)return;try{localStorage.setItem(KEY,b.getAttribute("data-tz"))}catch(_){}apply()});apply()})();</script>'''
     doc = f'''<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{E(title)}</title>
-<script>try{{var t=(location.hash.match(/theme=(\\w+)/)||[])[1]||localStorage.getItem("gossipTheme");if(t)document.documentElement.dataset.theme=t}}catch(e){{}}</script><style>{CSS}</style></head><body><div class="wrap">{"".join(P)}</div></body></html>'''
+<script>try{{var t=(location.hash.match(/theme=(\\w+)/)||[])[1]||localStorage.getItem("gossipTheme");if(t)document.documentElement.dataset.theme=t}}catch(e){{}}</script><style>{CSS}</style></head><body><div class="wrap">{"".join(P)}</div>{tzjs}</body></html>'''
     open(os.path.join(out_dir, it['id'] + '.html'), 'w', encoding='utf-8').write(doc)

@@ -37,6 +37,9 @@
 ## 重点追踪匹配
 长期话题从 topics.md 括号内关键词 + 脚本内置别名（build_dashboard.py 中 `alias`）匹配条目的 company+text，属关键词匹配，可能有误匹配/漏匹配。
 
+## 时区
+看板顶栏和事件详情页可在「北京时间」（Asia/Shanghai，UTC+8）和「UTC」之间切换。首次打开默认北京时间，选择写入 localStorage `gossipTz`，刷新后保持。只改显示格式；数据文件里的时间仍是原来的 UTC / ISO。有钟点的时间会立刻重绘，不用整页刷新。只有日期、没有钟点的事件日期（如 `10-08`）保持原文。
+
 ## 主题（v2）
 看板右上角下拉切换：🌙 暗色看板 `dark` / 📰 报刊杂志 `paper` / 📱 简约信息流 `feed` / 🔥 热榜数据 `hot`。保存在 localStorage `gossipTheme`；也可用 URL `index.html#theme=paper` 强制（截图用）。详情页同样读取该设置。
 截图：`for t in dark paper feed hot; do google-chrome --headless=new --no-sandbox --hide-scrollbars --window-size=1280,900 --screenshot=dashboard/theme_$t.png "file://$PWD/dashboard/index.html#theme=$t"; done`

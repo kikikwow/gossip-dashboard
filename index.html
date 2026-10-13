@@ -117,6 +117,15 @@ mark{background:rgba(245,158,11,.35);color:inherit;border-radius:3px}
 .heatbar b{color:var(--acc);font-size:15px}.hotb{display:inline-block;background:#ff4d1a;color:#fff;font-size:11px;border-radius:4px;padding:0 4px;margin-left:4px}
 .themesel{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:999px;padding:4px 10px;font:inherit;margin-top:6px}
 .themesel option{color:#111}
+.barhead{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px}
+.barhead .tabs{flex:1;min-width:0;margin-bottom:0}
+.tz{display:inline-flex;flex-shrink:0;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--bg2)}
+.tz button{background:transparent;color:var(--tx);border:0;font:inherit;padding:6px 12px;cursor:pointer;line-height:1.3}
+.tz button.on{background:var(--acc);color:#fff;font-weight:700}
+[data-theme=paper] .tz{border-radius:0;border-color:#211c14;background:transparent}
+[data-theme=paper] .tz button.on{background:#211c14;color:#fbf6e9}
+[data-theme=feed] .tz{background:#fff;border-color:var(--line)}
+[data-theme=hot] .tz{background:#fff;border-color:#f3dfd6}
 .more{font-size:12.5px;font-weight:700;color:var(--acc)}.rich{font-size:11px;background:var(--acc);color:#fff;border-radius:4px;padding:0 5px}
 main.wrap{display:flex;flex-direction:column}main>*{order:5}
 .hotonly{display:none}[data-theme=hot] .hotonly{display:inline}[data-theme=hot] .nohot{display:none}
@@ -147,12 +156,16 @@ main.wrap{display:flex;flex-direction:column}main>*{order:5}
 @media(max-width:430px){
   body{font-size:15px;-webkit-text-size-adjust:100%}
   .wrap{padding:0 12px;max-width:100%}
-  header{padding:10px 0 12px;position:sticky;top:0;z-index:20}
+  .sticky-top{position:sticky;top:0;z-index:30}
+  header{padding:10px 0 12px;position:static}
   header .wrap{flex-direction:row;align-items:center;gap:8px;flex-wrap:nowrap}
   h1{font-size:17px;letter-spacing:0}h1 small{display:none}
   .meta{text-align:right;font-size:11px;line-height:1.4;flex-shrink:0}
   .meta b{font-size:12px}.themesel,.btn{margin-top:4px;padding:8px 12px;min-height:40px;font-size:13px}
-  .bar{padding:8px 0;top:56px}
+  .bar{padding:8px 0;position:static;top:auto}
+  .barhead{flex-direction:column;align-items:stretch;gap:6px}
+  .tz{order:-1;width:100%}
+  .tz button{flex:1;min-height:44px;font-size:15px}
   .tabs{gap:6px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;scrollbar-width:none}
   .tabs::-webkit-scrollbar{display:none}
   .tab{padding:10px 14px;min-height:40px;font-size:13.5px;white-space:nowrap;flex-shrink:0}
@@ -178,13 +191,13 @@ main.wrap{display:flex;flex-direction:column}main>*{order:5}
 }
 @media(max-width:980px){.grid3{grid-template-columns:1fr}.hero{grid-template-columns:1fr}[data-theme=paper] .cards{column-count:1}[data-theme=hot] .card{grid-template-columns:36px 1fr}[data-theme=hot] .card .heatbar{grid-column:2;grid-row:auto}}
 </style></head><body>
-<header><div class="wrap"><div><h1>🕵️ 中国大厂八卦追踪看板<small>CHINA BIG-TECH GOSSIP TRACKER</small></h1></div>
+<div class="sticky-top"><header><div class="wrap"><div><h1>🕵️ 中国大厂八卦追踪看板<small>CHINA BIG-TECH GOSSIP TRACKER</small></h1></div>
 <div class="meta">最新一期：<b id="latest"></b><br>看板生成：<span id="built"></span><br><select class="themesel" id="theme" aria-label="主题"><option value="dark">🌙 暗色看板</option><option value="paper">📰 报刊杂志</option><option value="feed">📱 简约信息流</option><option value="hot">🔥 热榜数据</option></select></div></div></header>
-<div class="bar"><div class="wrap"><div class="tabs" id="tabs"></div>
+<div class="bar"><div class="wrap"><div class="barhead"><div class="tabs" id="tabs"></div><div class="tz" id="tz" role="group" aria-label="显示时区"><button type="button" data-tz="cst" class="on" aria-pressed="true">北京时间</button><button type="button" data-tz="utc" aria-pressed="false">UTC</button></div></div>
 <div class="filters"><select id="fco"><option value="">全部公司</option></select>
 <select id="ftag"><option value="">实锤 + 传闻</option><option>实锤</option><option>传闻</option></select>
 <select id="fsrc"><option value="">全部信源</option></select>
-<input type="search" id="q" placeholder="🔍 搜索公司 / 内容 / 链接…"></div></div></div>
+<input type="search" id="q" placeholder="🔍 搜索公司 / 内容 / 链接…"></div></div></div></div>
 <main class="wrap">
 <section class="ride" id="ride"><h2>🚕 网约车 <span class="note"><span class="pulse"></span>每小时专项追踪 · 滴滴 & DiDi 出海</span></h2>
 <div class="sub">覆盖：滴滴国内 · 巴西 99 · 埃及 · 墨西哥 · 拉美 · 澳洲 · 香港，以及相关竞品。关键词匹配条目；暂无数据时显示空态。</div>
@@ -206,8 +219,23 @@ function pv(v){if(v==null)return 0;v=String(v).replace(/,/g,'');let m=v.match(/(
 function fmt(n){return n>=1e4?(n/1e4).toFixed(n>=1e5?1:2).replace(/\.?0+$/,'')+'万':n.toLocaleString()}
 // flatten
 const ITEMS=[];D.editions.forEach((e,ei)=>e.sections.forEach(s=>(s.items||[]).forEach(it=>{it._e=e;it._ei=ei;it._col=s.color||TCOL[e.type];it._sec=s.title;it._views=Math.max(0,...(it.links||[]).map(l=>pv(l.views)));it._hay=(it.company+' '+it.text+' '+(it.links||[]).map(l=>l.label).join(' ')).toLowerCase();ITEMS.push(it)})));
-const latest=D.editions[0];
-$('#latest').textContent=latest?(latest.edition_date||latest.timestamp)+' · '+(TYPES[latest.type]||latest.type):'暂无数据';$('#built').textContent=D.built;
+const TZKEY='gossipTz';
+function loadTz(){try{const v=localStorage.getItem(TZKEY);if(v==='utc'||v==='cst')return v}catch(e){}return 'cst'}
+let tzMode=loadTz();
+function pad2(n){return String(n).padStart(2,'0')}
+function parseTs(s){if(s==null)return null;const str=String(s).trim();
+ let m=str.match(/^(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2})(?::(\d{2}))?(?:\.\d+)?(Z|[+-]\d{2}:?\d{2})?$/);
+ if(m){let iso=`${m[1]}-${m[2]}-${m[3]}T${m[4]}:${m[5]}:${m[6]||'00'}`;const z=m[7];iso+=(!z||z==='Z')?'Z':z;const d=new Date(iso);return isNaN(d)?null:d}
+ m=str.match(/^(\d{4}-\d{2}-\d{2})[ T](\d{2}:\d{2})(?::(\d{2}))?\s*UTC$/i);
+ if(m){const d=new Date(`${m[1]}T${m[2]}:${m[3]||'00'}Z`);return isNaN(d)?null:d}
+ return null}
+function fmtTs(s){const d=parseTs(s);if(!d)return s==null?'':String(s);const zone=tzMode==='utc'?'UTC':'Asia/Shanghai';
+ try{const parts=new Intl.DateTimeFormat('en-CA',{timeZone:zone,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(d);const g=t=>parts.find(p=>p.type===t).value;return `${g('year')}-${g('month')}-${g('day')} ${g('hour')}:${g('minute')}`+(tzMode==='utc'?' UTC':'')}
+ catch(e){const x=tzMode==='utc'?d:new Date(d.getTime()+8*3600000);return `${x.getUTCFullYear()}-${pad2(x.getUTCMonth()+1)}-${pad2(x.getUTCDate())} ${pad2(x.getUTCHours())}:${pad2(x.getUTCMinutes())}`+(tzMode==='utc'?' UTC':'')}}
+function fmtHeatDay(s){const d=parseTs(s);if(d&&d.getUTCHours()===23&&d.getUTCMinutes()===59&&d.getUTCSeconds()===59)return d.getUTCFullYear()+'-'+pad2(d.getUTCMonth()+1)+'-'+pad2(d.getUTCDate());return fmtTs(s)}
+function paintTz(){document.querySelectorAll('#tz [data-tz]').forEach(b=>{const on=b.dataset.tz===tzMode;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on?'true':'false')})}
+function paintHeader(){const latest=D.editions[0];$('#latest').textContent=latest?fmtTs(latest.edition_date||latest.timestamp)+' · '+(TYPES[latest.type]||latest.type):'暂无数据';$('#built').textContent=fmtTs(D.built);paintTz()}
+paintHeader();
 let state={type:'',co:'',tag:'',src:'',q:''};
 // tabs
 const RIDE_KW=['滴滴','didi','网约车','程维','柳青','顺风车','花小猪','曹操出行','t3出行','高德打车','巴西99','di di global','99app'];
@@ -221,39 +249,40 @@ $('#fsrc').innerHTML+=[...new Set(ITEMS.flatMap(i=>i.source_types||[]))].map(c=>
 [['#fco','co'],['#ftag','tag'],['#fsrc','src']].forEach(([s,k])=>$(s).onchange=e=>{state[k]=e.target.value;render()});
 $('#q').oninput=e=>{state.q=e.target.value.trim().toLowerCase();render()};
 $('#theme').value=document.documentElement.dataset.theme;$('#theme').onchange=e=>{document.documentElement.dataset.theme=e.target.value;try{localStorage.setItem('gossipTheme',e.target.value)}catch(_){};render()};
+$('#tz').onclick=e=>{const b=e.target.closest('button[data-tz]');if(!b||b.dataset.tz===tzMode)return;tzMode=b.dataset.tz;try{localStorage.setItem(TZKEY,tzMode)}catch(_){}paintHeader();heatPanel();timeline();ridePanel();render()};
 function hl(t){t=esc(t);if(!state.q)return t;const q=esc(state.q).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return t.replace(new RegExp(q,'gi'),m=>`<mark>${m}</mark>`)}
 const MAXV=Math.max(1,...ITEMS.map(i=>i._views));
 function card(it){const e=it._e;return `<article class="card" data-id="${esc(it.id)}" style="--c:${it._col}"><div class="heatbar">${it._views?`<b>${fmt(it._views)}</b> 浏览${it._views>=1e5?'<span class="hotb">爆</span>':it._views>=1e4?'<span class="hotb" style="background:#ff8200">热</span>':''}<div class="hbar"><i style="width:${(Math.sqrt(it._views/MAXV)*100).toFixed(1)}%"></i></div>`:'<span>暂无浏览数据</span>'}</div><div class="top"><span class="pill">${hl(it.company)}</span>${it.detail?'<span class="rich">深度</span>':''}
-<span class="badge ${it.tag==='实锤'?'b-real':'b-rum'}">【${esc(it.tag)}】</span>${(it.source_types||[]).map(s=>`<span class="src">${esc(s)}</span>`).join('')}<span class="date">📅 ${esc(it.date)}</span></div>
+<span class="badge ${it.tag==='实锤'?'b-real':'b-rum'}">【${esc(it.tag)}】</span>${(it.source_types||[]).map(s=>`<span class="src">${esc(s)}</span>`).join('')}<span class="date">📅 ${esc(fmtTs(it.date))}</span></div>
 <div class="secn">${esc(TYPES[e.type]||e.type)} · ${esc(it._sec)}${it._views?` · 👁 最高 ${fmt(it._views)}`:''}</div><p>${hl(it.text)}</p>
 <a class="more" href="events/${encodeURIComponent(it.id)}.html">查看事件详情 →</a><div class="links">${(it.links||[]).map(l=>`<div>🔗 <a href="${esc(l.url)}" target="_blank" rel="noopener">${hl(l.label)}</a>${l.views?`<span class="vw">👁 ${esc(l.views)}</span>`:''}</div>`).join('')}</div></article>`}
 function match(it){const s=state;if(s.type==='ride'){if(!isRide(it))return false;}else if(s.type&&it._e.type!==s.type)return false;if(s.tag&&it.tag!==s.tag)return false;
 if(s.co&&!it.company.split(/\s*\/\s*/).includes(s.co))return false;if(s.src&&!(it.source_types||[]).includes(s.src))return false;if(s.q&&!it._hay.includes(s.q))return false;return true}
 function render(){let L=ITEMS.filter(match);if(document.documentElement.dataset.theme==='hot')L=L.slice().sort((a,b)=>b._views-a._views);$('#cards').innerHTML=L.map(card).join('')||'<p class="empty">没有符合条件的条目。</p>';$('#cnt').textContent=`共 ${L.length} / ${ITEMS.length} 条`;renderHero()}
 function renderHero(){// top3 of latest edition of selected type (or latest bigtech/adr when 全部)
- if(state.type==='ride'){const L=ITEMS.filter(isRide).slice(0,3);$('#herolbl').textContent=L.length?`网约车匹配 ${ITEMS.filter(isRide).length} 条`:'';$('#hero').innerHTML=L.length?L.map((it,i)=>{const grads=['linear-gradient(135deg,#ff6b4a,#c2185b)','linear-gradient(135deg,#7c3aed,#4f46e5)','linear-gradient(135deg,#0ea5e9,#0d9488)'];return `<div class="herocard" style="background:${grads[i]}"><div class="big">${i+1}</div><div class="co">${esc(it.company)}</div><div class="ed">📅 ${esc(it.date)}</div><p>${esc(it.text)}</p><a href="events/${encodeURIComponent(it.id)}.html"><b>事件详情 →</b></a></div>`}).join(''):'<p class="empty">暂无滴滴相关条目，每小时追踪中</p>';return}
+ if(state.type==='ride'){const L=ITEMS.filter(isRide).slice(0,3);$('#herolbl').textContent=L.length?`网约车匹配 ${ITEMS.filter(isRide).length} 条`:'';$('#hero').innerHTML=L.length?L.map((it,i)=>{const grads=['linear-gradient(135deg,#ff6b4a,#c2185b)','linear-gradient(135deg,#7c3aed,#4f46e5)','linear-gradient(135deg,#0ea5e9,#0d9488)'];return `<div class="herocard" style="background:${grads[i]}"><div class="big">${i+1}</div><div class="co">${esc(it.company)}</div><div class="ed">📅 ${esc(fmtTs(it.date))}</div><p>${esc(it.text)}</p><a href="events/${encodeURIComponent(it.id)}.html"><b>事件详情 →</b></a></div>`}).join(''):'<p class="empty">暂无滴滴相关条目，每小时追踪中</p>';return}
  const eds=D.editions.filter(e=>!state.type||e.type===state.type);const e=eds[0];
  if(!e||!e.top3){$('#hero').innerHTML='<p class="empty">该分类暂无期次。</p>';$('#herolbl').textContent='';return}
- $('#herolbl').textContent=`来自 ${e.edition_date||e.timestamp} · ${TYPES[e.type]||e.type}`;
+ $('#herolbl').textContent=`来自 ${fmtTs(e.edition_date||e.timestamp)} · ${TYPES[e.type]||e.type}`;
  const grads=['linear-gradient(135deg,#ff6b4a,#c2185b)','linear-gradient(135deg,#7c3aed,#4f46e5)','linear-gradient(135deg,#0ea5e9,#0d9488)'];
  $('#hero').innerHTML=e.top3.slice(0,3).map((t,i)=>{const s=e.sections.find(x=>x.title===t.section);const it=s&&s.items[t.index];if(!it)return'';
  return `<div class="herocard" style="background:${grads[i]}"><div class="big">${i+1}</div><div class="co">${esc(it.company)} <span class="badge" style="background:rgba(255,255,255,.22)">【${esc(it.tag)}】</span></div>
- <div class="ed">📅 ${esc(it.date)} · ${esc(it.section)}${it._views?` · 👁 ${fmt(it._views)}`:''}</div><p>${esc(it.text)}</p><a href="events/${encodeURIComponent(it.id)}.html"><b>事件详情 →</b></a> ${(it.links||[]).slice(0,2).map(l=>`<a href="${esc(l.url)}" target="_blank">🔗 ${esc(l.label)}</a>`).join(' &nbsp;')}</div>`}).join('')}
+ <div class="ed">📅 ${esc(fmtTs(it.date))} · ${esc(it.section)}${it._views?` · 👁 ${fmt(it._views)}`:''}</div><p>${esc(it.text)}</p><a href="events/${encodeURIComponent(it.id)}.html"><b>事件详情 →</b></a> ${(it.links||[]).slice(0,2).map(l=>`<a href="${esc(l.url)}" target="_blank">🔗 ${esc(l.label)}</a>`).join(' &nbsp;')}</div>`}).join('')}
 function spark(vals){if(vals.length<2)return'';const w=90,h=24,mx=Math.max(...vals),mn=Math.min(...vals);const pts=vals.map((v,i)=>`${(i/(vals.length-1)*w).toFixed(1)},${(h-2-(mx===mn?.5:(v-mn)/(mx-mn))*(h-4)).toFixed(1)}`).join(' ');
  return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><polyline points="${pts}" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linejoin="round"/></svg>`}
 function heatPanel(){const H=D.heat||[];
  if(H.length){const by={};H.forEach(r=>{const k=r.topic;(by[k]=by[k]||[]).push(r)});
   const rows=Object.entries(by).map(([t,rs])=>{rs.sort((a,b)=>a.timestamp_utc<b.timestamp_utc?-1:1);const last=rs[rs.length-1];
    const daily=rs.filter(r=>r.metric==='x_daily_post_count');const L2=daily.length?daily[daily.length-1]:last;const series=(daily.length?daily:rs.filter(r=>r.metric===last.metric)).map(r=>r.value);return{t,last:L2,series}}).sort((a,b)=>b.last.value-a.last.value).slice(0,10);
-  $('#heat').innerHTML=`<p class="note">来自 heat_log.csv（${H.length} 条记录），按各话题最近一个完整日的 X 发帖量排序，折线为逐日发帖量</p><ol class="rank">${rows.map((r,i)=>`<li><span class="no">${i+1}</span><span class="t" title="${esc(r.t)}">${esc(r.t)}<br><span class="note">${r.last.metric==='x_daily_post_count'?'X 日发帖量 · '+esc((r.last.timestamp_utc||'').slice(0,10)):esc(r.last.metric)}</span></span><span class="v">${spark(r.series)}<br>${fmt(r.last.value)}</span></li>`).join('')}</ol>`;return}
+  $('#heat').innerHTML=`<p class="note">来自 heat_log.csv（${H.length} 条记录），按各话题最近一个完整日的 X 发帖量排序，折线为逐日发帖量</p><ol class="rank">${rows.map((r,i)=>`<li><span class="no">${i+1}</span><span class="t" title="${esc(r.t)}">${esc(r.t)}<br><span class="note">${r.last.metric==='x_daily_post_count'?'X 日发帖量 · '+esc(fmtHeatDay(r.last.timestamp_utc)):esc(r.last.metric)}</span></span><span class="v">${spark(r.series)}<br>${fmt(r.last.value)}</span></li>`).join('')}</ol>`;return}
  const L=ITEMS.filter(i=>i._views>0).sort((a,b)=>b._views-a._views).slice(0,10);
  $('#heat').innerHTML=`<p class="note">⚠️ heat_log.csv 暂无数据，临时按条目中 X 帖子浏览量排序（暂无历史走势）</p><ol class="rank">${L.map((it,i)=>`<li><span class="no">${i+1}</span><span class="t" title="${esc(it.text)}"><b>${esc(it.company)}</b> · ${esc(it.text.slice(0,22))}…</span><span class="v">👁 ${fmt(it._views)}</span></li>`).join('')}</ol>`}
 function focusPanel(){$('#focus').innerHTML=D.longterm.map(t=>{const kws=t.keywords;const L=ITEMS.filter(it=>kws.some(k=>(it.company+' '+it.text).toLowerCase().includes(k.toLowerCase()))).slice(0,4);
  return `<div class="focus"><h3>${esc(t.name)} <span class="chip">${L.length} 条</span></h3><div class="kw">关键词：${esc(kws.slice(0,8).join(' / '))}</div>${L.length?`<ul>${L.map(it=>`<li><b>${esc(it.company)}</b> <span class="badge ${it.tag==='实锤'?'b-real':'b-rum'}">${esc(it.tag)}</span> ${esc(it.text.slice(0,40))}… <a href="${esc((it.links[0]||{}).url)}" target="_blank">↗</a></li>`).join('')}</ul>`:'<div class="empty">现有期次中暂无匹配条目</div>'}</div>`}).join('')}
 function shortPanel(){const H=D.heat||[];$('#short').innerHTML=D.shortterm.length?D.shortterm.map(t=>{const ser=H.filter(r=>r.topic===t.name&&r.metric==='x_daily_post_count').map(r=>r.value);
- return `<div class="hot"><b>${esc(t.name)}</b><div class="r">${esc(t.reason)}</div><div style="margin-top:3px"><span class="chip">加入 ${esc(t.added)}</span><span class="chip">热度：${esc(t.heat)}</span><span class="chip">${esc(t.status)}</span>${spark(ser)}</div></div>`}).join(''):'<p class="empty">topics.md 中暂无短期热点</p>'}
+ return `<div class="hot"><b>${esc(t.name)}</b><div class="r">${esc(t.reason)}</div><div style="margin-top:3px"><span class="chip">加入 ${esc(fmtTs(t.added))}</span><span class="chip">热度：${esc(t.heat)}</span><span class="chip">${esc(t.status)}</span>${spark(ser)}</div></div>`}).join(''):'<p class="empty">topics.md 中暂无短期热点</p>'}
 function timeline(){$('#tl').innerHTML=D.editions.map(e=>{const n=e.sections.reduce((a,s)=>a+(s.items||[]).length,0);
- return `<div class="tl"><span class="badge ty" style="background:${TCOL[e.type]||'#888'};color:#fff">${esc(TYPES[e.type]||e.type)}</span> <b>${esc(e.title||'')}</b> <span class="note">· ${esc(e.timestamp)} · ${n} 条 · ${e.sections.length} 个栏目 · ${esc(e._file)}</span><div class="note">${esc(e.lede||'')}</div></div>`}).join('')||'<p class="empty">暂无期次</p>'}
+ return `<div class="tl"><span class="badge ty" style="background:${TCOL[e.type]||'#888'};color:#fff">${esc(TYPES[e.type]||e.type)}</span> <b>${esc(e.title||'')}</b> <span class="note">· ${esc(fmtTs(e.timestamp))} · ${n} 条 · ${e.sections.length} 个栏目 · ${esc(e._file)}</span><div class="note">${esc(e.lede||'')}</div></div>`}).join('')||'<p class="empty">暂无期次</p>'}
 
 function ridePanel(){const L=ITEMS.filter(isRide);
   if(!L.length){$('#ridebody').innerHTML=`<div class="empty-box"><b>暂无滴滴相关条目，每小时追踪中</b>覆盖国内滴滴与出海（巴西99 / 埃及 / 墨西哥 / 拉美 / 澳洲 / 香港）。有新进展会自动出现在此。</div>`;return}
