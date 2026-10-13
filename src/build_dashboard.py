@@ -66,20 +66,26 @@ def main():
         for k in t['keywords']:
             ks |= set(k.split())
         t['keywords'] = sorted(k for k in ks if len(k) >= 2 and k != '99' and not any(n in k for n in noise))
-    payload = dict(editions=eds, longterm=lt, shortterm=st, heat=heat,
+    cache_path = os.path.join(BASE, 'x_cache.json')
+    x_cache = json.load(open(cache_path, encoding='utf-8')) if os.path.exists(cache_path) else {'posts': {}}
+    payload = dict(editions=eds, longterm=lt, shortterm=st, heat=heat, x_cache=x_cache,
                    built=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M UTC'))
     tpl = open(os.path.join(BASE, 'dashboard_template.html'), encoding='utf-8').read()
     js = json.dumps(payload, ensure_ascii=False).replace('</', '<\\/')
     os.makedirs(os.path.join(BASE, 'dashboard'), exist_ok=True)
+    page = tpl.replace('/*__DATA__*/null', js)
     out = os.path.join(BASE, 'dashboard', 'index.html')
-    open(out, 'w', encoding='utf-8').write(tpl.replace('/*__DATA__*/null', js))
+    open(out, 'w', encoding='utf-8').write(page)
+    root = os.path.dirname(BASE)
+    open(os.path.join(root, 'index.html'), 'w', encoding='utf-8').write(page)
     import detail_render, shutil
-    ev = os.path.join(BASE, 'dashboard', 'events'); shutil.rmtree(ev, ignore_errors=True); os.makedirs(ev)
     allit = []
     for e in eds:
         for sct in e['sections']:
             for it in sct.get('items', []): it['_file'] = e['_file']; it['_ed'] = e; allit.append(it)
-    for it in allit: detail_render.render(it, it['_ed'], allit, ev)
+    for dest in (os.path.join(BASE, 'dashboard', 'events'), os.path.join(root, 'events')):
+        shutil.rmtree(dest, ignore_errors=True); os.makedirs(dest)
+        for it in allit: detail_render.render(it, it['_ed'], allit, dest)
     for it in allit: it.pop('_ed', None); it.pop('_file', None)
     print('detail pages:', len(allit), '(enriched:', sum(1 for i in allit if i.get('detail')), ')')
     print('wrote', out, '| editions:', len(eds), '| heat rows:', len(heat))
