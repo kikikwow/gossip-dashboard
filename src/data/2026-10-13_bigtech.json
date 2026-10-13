@@ -1,0 +1,995 @@
+{
+ "type": "bigtech",
+ "title": "中国大厂八卦简报",
+ "timestamp": "2026-10-13",
+ "edition_date": "2026-10-13",
+ "lede": "样刊 · 覆盖 2026-10-03 ～ 10-13 · 信源：X 公开帖（主）+ 中文社媒 + 公开媒体",
+ "top3": [
+  {
+   "section": "🚗 公关翻车 & 车圈互撕",
+   "index": 0
+  },
+  {
+   "section": "🔥 吐槽热帖",
+   "index": 0
+  },
+  {
+   "section": "🚪 离职 · 晋升 · 宫斗",
+   "index": 3
+  }
+ ],
+ "sections": [
+  {
+   "title": "🚗 公关翻车 & 车圈互撕",
+   "color": "#e4572e",
+   "items": [
+    {
+     "company": "华为·尊界 / 江淮",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-08",
+     "section": "🚗 公关翻车 & 车圈互撕",
+     "text": "懂车帝实测3台尊界V800百公里连续急刹，第2–4次时刹车踏板支架全部断裂；江淮汽车当日午盘跌停，尊界官微当晚发说明称将为已交付用户免费升级，懂车帝主视频随后在多个平台无法查看。",
+     "links": [
+      {
+       "label": "X @whyyoutouzhele",
+       "url": "https://x.com/whyyoutouzhele/status/2108145378205770135",
+       "views": "14.7万"
+      },
+      {
+       "label": "X @wangjupaian",
+       "url": "https://x.com/wangjupaian/status/2108141617798693354",
+       "views": "11.6万"
+      },
+      {
+       "label": "极目新闻",
+       "url": "https://www.ctdsb.net/c1716_202610/2875535.html",
+       "views": null
+      }
+     ],
+     "id": "20261013-zunjie",
+     "detail": {
+      "title": "华为尊界V800刹车踏板支架断裂（“刹车门”）",
+      "summary": "懂车帝实测3台尊界V800在100km/h–0连续紧急制动中踏板支架相继断裂；江淮汽车当日跌停；尊界称属非标准极端工况，承诺免费升级并于10-13公布第三方检测结果。",
+      "background": "尊界是华为鸿蒙智行与江淮汽车合作品牌（华为负责智能技术与渠道，江淮负责整车制造），V800为最高售价101.6万元的豪华MPV，2026年8月上市、9月底开启规模交付（新京报）。10月8日懂车帝发布封闭场地测试：3台行驶里程极短的新车（其中1辆不超过3km）进行100km/h至0连续紧急制动，分别在第2–4次全力制动时踏板支架断裂，失去脚刹后只能靠P挡应急减速；第三台车断裂瞬间踏板受力读数为1612N（据赛迪网转述）。视频随后在多个国内平台无法查看（X 网友称B站不到24小时即删）。比亚迪仰望、岚图、广汽本田、猛士等高管随后发视频晒踏板、猛踩刹车，被视为“借势营销”。",
+      "timeline": [
+       {
+        "date": "2026-10-08",
+        "text": "懂车帝发布尊界V800连续紧急制动测试视频，3台车踏板支架均断裂。",
+        "url": "https://www.bjnews.com.cn/detail/1791716149168868.html"
+       },
+       {
+        "date": "2026-10-08",
+        "text": "江淮汽车（600418）午盘跌停，报24.72元，跌幅10.01%。",
+        "url": "https://x.com/whyyoutouzhele/status/2108145378205770135"
+       },
+       {
+        "date": "2026-10-08 晚",
+        "text": "尊界官方微博发布《关于尊界汽车制动踏板支架底座相关问题的情况说明》，承诺优化设计、为已交付用户提供免费升级。",
+        "url": "https://finance.sina.com.cn/tech/roll/2026-10-12/doc-iniuxmtt8580023.shtml"
+       },
+       {
+        "date": "2026-10-09",
+        "text": "新京报记者走访北京4家尊界门店，“免费升级”4家店4个说法。",
+        "url": "https://www.bjnews.com.cn/detail/1791716149168868.html"
+       },
+       {
+        "date": "2026-10-09～10",
+        "text": "仰望总经理助理郑羽发视频晒金属踏板，不到24小时被删；岚图、广汽本田、猛士高管跟进晒踏板。",
+        "url": "https://www.ctdsb.net/c1716_202610/2875535.html"
+       },
+       {
+        "date": "2026-10-11",
+        "text": "第三方检测机构对V800制动踏板检验；尊界客服称升级方案预计10月底确认、11月起升级，锁定期定金不退。",
+        "url": "https://www.bjnews.com.cn/detail/1791716149168868.html"
+       },
+       {
+        "date": "2026-10-13",
+        "text": "尊界公布《尊界V800制动踏板检测情况说明》：符合行标QC/T 788-2018（1500N），加严至3000N未出现裂纹和损坏。",
+        "url": "https://www.seccw.com/document/detail/id/51121.html"
+       }
+      ],
+      "x_posts": [
+       {
+        "platform": "X",
+        "url": "https://x.com/whyyoutouzhele/status/2108145378205770135",
+        "author": "@whyyoutouzhele",
+        "created_at": "2026-10-08T10:40Z",
+        "views": 147020,
+        "likes": 326,
+        "reposts": 13,
+        "replies": 22,
+        "quotes": 1,
+        "bookmarks": 38,
+        "fetched_at": "2026-10-13T13:08:22Z"
+       },
+       {
+        "platform": "X",
+        "url": "https://x.com/wangjupaian/status/2108141617798693354",
+        "author": "@wangjupaian",
+        "created_at": "2026-10-08T10:25Z",
+        "views": 115750,
+        "likes": 247,
+        "reposts": 8,
+        "replies": 96,
+        "quotes": 0,
+        "bookmarks": 37,
+        "fetched_at": "2026-10-13T13:08:22Z"
+       },
+       {
+        "platform": "X",
+        "url": "https://x.com/fengnv0/status/2109159373335605431",
+        "author": "@fengnv0",
+        "created_at": "2026-10-11T05:49Z",
+        "views": 101,
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "fetched_at": "2026-10-13T13:08:22Z"
+       }
+      ],
+      "x_trend": {
+       "query": "尊界 (刹车 OR 踏板)",
+       "granularity": "day",
+       "labels": [
+        "10-06*",
+        "10-07",
+        "10-08",
+        "10-09",
+        "10-10",
+        "10-11",
+        "10-12",
+        "10-13*"
+       ],
+       "values": [
+        0,
+        0,
+        5566,
+        5410,
+        2865,
+        1768,
+        934,
+        1424
+       ],
+       "fetched_at": "2026-10-13T13:08:30Z",
+       "source": "X get_posts_counts_recent",
+       "note": "* 为不完整时段（10-06 14:00 起；10-13 截至 13:08 UTC）"
+      },
+      "weibo": {
+       "rank": null,
+       "text": "多家媒体称话题“冲上热搜”，但未找到具体微博热搜排名数据。",
+       "url": "https://finance.sina.com.cn/tech/roll/2026-10-12/doc-iniuxmtt8580023.shtml"
+      },
+      "other_platforms": [
+       {
+        "platform": "股市",
+        "metric": "江淮汽车 10-08 跌幅",
+        "value": "-10.01%（跌停，24.72元）",
+        "url": "https://x.com/whyyoutouzhele/status/2108145378205770135"
+       }
+      ],
+      "comments": [
+       {
+        "text": "跌幅10%是A股的极限，不是江淮汽车的极限",
+        "author": "@Qxiao159",
+        "platform": "X",
+        "url": "https://x.com/Qxiao159/status/2108150663666643292",
+        "stance": "调侃"
+       },
+       {
+        "text": "“稳定如泰山”的尊界，刹车脚踏板先自己拜了山。",
+        "author": "@TENPHOENIX2018",
+        "platform": "X",
+        "url": "https://x.com/TENPHOENIX2018/status/2108179621971976521",
+        "stance": "调侃"
+       },
+       {
+        "text": "尊界由华为负责技术和渠道，江淮负责制造。华为没上市，二级市场的风险就全落在江淮身上，合作车企要为品牌方的口碑买单。",
+        "author": "@AndySniper11",
+        "platform": "X",
+        "url": "https://x.com/AndySniper11/status/2108229599356453146",
+        "stance": "质疑"
+       },
+       {
+        "text": "就跟做实验一样，如果不能在其他实验室，其他团队手中复刻，那么实验结果就没有价值。目前已有多人自行测试了，甚至开 120码测试，都没有踩断过。",
+        "author": "@jueshishi",
+        "platform": "X",
+        "url": "https://x.com/jueshishi/status/2108477810029539465",
+        "stance": "支持"
+       },
+       {
+        "text": "华为说自己没问题，那为什么要给客户免费更换免费升级？",
+        "author": "@FreeZN_FUCKCCP",
+        "platform": "X",
+        "url": "https://x.com/FreeZN_FUCKCCP/status/2108745235736228124",
+        "stance": "质疑"
+       },
+       {
+        "text": "踩断踏板要看做多少功吧，不是单纯看多大力，没错吧",
+        "author": "@meilinggan1",
+        "platform": "X",
+        "url": "https://x.com/meilinggan1/status/2108461914166849701",
+        "stance": "质疑"
+       }
+      ],
+      "stance_note": "典型评论取自两条主帖的回复（X search conversation_id，按相关度前25条），立场标签为对“尊界/华为”一方的态度：支持=为尊界辩护，质疑=质疑尊界/江淮，调侃=玩梗。已排除含侮辱性/仇恨言论的回复。",
+      "responses": [
+       {
+        "party": "尊界汽车（官方微博，10-08晚）",
+        "text": "“自首批车辆交付以来，在用户实际使用场景中，未发生制动踏板支架底座断裂故障……即便是非标准的极端测试工况，我们仍希望为用户提供更高的安全冗余：我们将进一步优化该部件设计，并为已交付用户提供免费升级选择。”",
+        "url": "https://feng.ifeng.com/c/8xBTbz467my"
+       },
+       {
+        "party": "尊界客服（10-11）",
+        "text": "升级方案预计10月底确认，11月起陆续升级；已提车用户可在任一服务中心预约登记，未发运车辆直接升级后交付；锁定期定金无法退款。",
+        "url": "https://www.bjnews.com.cn/detail/1791716149168868.html"
+       },
+       {
+        "party": "尊界汽车（10-13 检测情况说明）",
+        "text": "第三方检测：符合行标QC/T 788-2018（纵向力1500N，位移量<5mm），加严至3000N未出现裂纹和损坏；检测机构称仅对送检样品负责。",
+        "url": "https://www.seccw.com/document/detail/id/51121.html"
+       },
+       {
+        "party": "江淮汽车",
+        "text": "据同花顺转述，江淮已启动内部调查与复测。",
+        "url": "https://stock.10jqka.com.cn/20261012/c680604615.shtml"
+       }
+      ],
+      "related": [
+       "比亚迪·仰望",
+       "岚图 / 广汽本田 / 猛士"
+      ],
+      "extra_sources": [
+       {
+        "label": "新京报：尊界客服回应",
+        "url": "https://www.bjnews.com.cn/detail/1791716149168868.html"
+       },
+       {
+        "label": "新浪科技/TechWeb：升级时间表",
+        "url": "https://finance.sina.com.cn/tech/roll/2026-10-12/doc-iniuxmtt8580023.shtml"
+       },
+       {
+        "label": "凤凰网/第一财经：第三方检测",
+        "url": "https://feng.ifeng.com/c/8xBTbz467my"
+       },
+       {
+        "label": "赛迪网：检测结果与事件回溯",
+        "url": "https://www.seccw.com/document/detail/id/51121.html"
+       },
+       {
+        "label": "同花顺：升级方案",
+        "url": "https://stock.10jqka.com.cn/20261012/c680604615.shtml"
+       }
+      ],
+      "enriched_at": "2026-10-13T13:15Z"
+     }
+    },
+    {
+     "company": "比亚迪·仰望",
+     "tag": "实锤",
+     "source_types": [
+      "微博",
+      "媒体",
+      "X"
+     ],
+     "date": "10-09～10-10",
+     "section": "🚗 公关翻车 & 车圈互撕",
+     "text": "仰望总经理助理郑羽在微博拿金属刹车踏板出镜，称仰望执行2500N企标、“安全才是最大的豪华”，被指内涵尊界；不到24小时视频被删，业内猜测触碰王传福“不拉踩同行”红线（删帖原因官方未说明）。",
+     "links": [
+      {
+       "label": "cnBeta/电车界",
+       "url": "https://www.cnbeta.com.tw/articles/tech/1581482.htm",
+       "views": null
+      },
+      {
+       "label": "有驾",
+       "url": "https://www.yoojia.com/article/9916880595317533226.html",
+       "views": null
+      },
+      {
+       "label": "X @fengnv0",
+       "url": "https://x.com/fengnv0/status/2109159373335605431",
+       "views": "101"
+      }
+     ]
+    },
+    {
+     "company": "岚图 / 广汽本田 / 猛士",
+     "tag": "实锤",
+     "source_types": [
+      "媒体"
+     ],
+     "date": "10-10",
+     "section": "🚗 公关翻车 & 车圈互撕",
+     "text": "尊界事件后，岚图董事长卢放、广汽本田副总林志斌、猛士CEO万良渝等高管扎堆发视频晒自家踏板、猛踩刹车，车圈集体“借势营销”。",
+     "links": [
+      {
+       "label": "极目新闻",
+       "url": "https://www.ctdsb.net/c1716_202610/2875535.html",
+       "views": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🔥 吐槽热帖",
+   "color": "#f4a259",
+   "items": [
+    {
+     "company": "拼多多",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-07",
+     "section": "🔥 吐槽热帖",
+     "text": "“拼多多是唯一不做AI的大厂，黄峥没看到AI是确定性未来吗？”一帖在X被大量搬运，原帖浏览超40万；媒体分析则认为拼多多AI用在搜索/推荐/Temu运营，只是从不讲大模型故事。",
+     "links": [
+      {
+       "label": "X @NoraX2026",
+       "url": "https://x.com/NoraX2026/status/2107726990803607950",
+       "views": "40.1万"
+      },
+      {
+       "label": "腾讯新闻：拼多多不交AI的门票",
+       "url": "https://news.qq.com/rain/a/20260827A0BX1J00",
+       "views": null
+      }
+     ],
+     "id": "20261013-pdd",
+     "detail": {
+      "title": "“拼多多是唯一不做AI的大厂”争议",
+      "summary": "X 用户 @NoraX2026 发帖质疑拼多多从未公开阐释AI战略，原帖浏览超40万、回复190条；评论区与媒体分析多认为拼多多AI用于推荐/搜索/Temu运营，只是不讲大模型故事。",
+      "background": "原帖列举阿里千问、字节豆包、腾讯混元、百度文心等，称拼多多“财报和电话会里对AI只字不提，也没有独立AI产品发布”，并问“难道黄峥没有看到AI是确定性的未来吗？”。腾讯新闻、网易、钛媒体等分析认为拼多多拒绝打造通用大模型和AI入口叙事，AI主要用于推荐、比价、搜索、客服、广告和Temu运营等效率场景；黄峥公开观点偏重“分布式智能”。拼多多官方未就此帖回应（未找到）。",
+      "timeline": [
+       {
+        "date": "2026-08-27",
+        "text": "腾讯新闻刊发《拼多多不交AI的门票》。",
+        "url": "https://news.qq.com/rain/a/20260827A0BX1J00"
+       },
+       {
+        "date": "2026-10-07",
+        "text": "@NoraX2026 发帖“拼多多是唯一不做AI的大厂”，被大量搬运。",
+        "url": "https://x.com/NoraX2026/status/2107726990803607950"
+       },
+       {
+        "date": "2026-10-08",
+        "text": "评论区集中争论（回复多集中在10-08）。",
+        "url": "https://x.com/NoraX2026/status/2107726990803607950"
+       }
+      ],
+      "x_posts": [
+       {
+        "platform": "X",
+        "url": "https://x.com/NoraX2026/status/2107726990803607950",
+        "author": "@NoraX2026",
+        "created_at": "2026-10-07T06:57Z",
+        "views": 401458,
+        "likes": 399,
+        "reposts": 7,
+        "replies": 190,
+        "quotes": 6,
+        "bookmarks": 114,
+        "fetched_at": "2026-10-13T13:08:22Z"
+       }
+      ],
+      "x_trend": {
+       "query": "(拼多多 OR PDD) (AI OR 大模型)",
+       "granularity": "day",
+       "labels": [
+        "10-06*",
+        "10-07",
+        "10-08",
+        "10-09",
+        "10-10",
+        "10-11",
+        "10-12",
+        "10-13*"
+       ],
+       "values": [
+        14,
+        60,
+        132,
+        115,
+        77,
+        38,
+        89,
+        59
+       ],
+       "fetched_at": "2026-10-13T13:08:30Z",
+       "source": "X get_posts_counts_recent",
+       "note": "* 为不完整时段（10-06 14:00 起；10-13 截至 13:08 UTC）"
+      },
+      "weibo": null,
+      "comments": [
+       {
+        "text": "我猜测 PDD 内部估计 AI 用的如火如荼，只是他们觉得用户并不关心你是否使用 AI ，所以不强调？",
+        "author": "@wuzy_oye",
+        "platform": "X",
+        "url": "https://x.com/wuzy_oye/status/2108105258799157691",
+        "stance": "支持"
+       },
+       {
+        "text": "其实是有的，不过大部分精力都在推荐算法模型上。",
+        "author": "@lihngjing1",
+        "platform": "X",
+        "url": "https://x.com/lihngjing1/status/2108106152747950108",
+        "stance": "支持"
+       },
+       {
+        "text": "段永平的一句话:敢为天下后。一生受益",
+        "author": "@muyun9955",
+        "platform": "X",
+        "url": "https://x.com/muyun9955/status/2108096780676235485",
+        "stance": "支持"
+       },
+       {
+        "text": "PDD 的优势不在于创新和研发，而在于省钱和苟活，做低价和下沉市场。他们的文化就是这样子，不会在研发上花重金的。",
+        "author": "@a995b305d8df67f",
+        "platform": "X",
+        "url": "https://x.com/a995b305d8df67f/status/2108096324851929519",
+        "stance": "质疑"
+       },
+       {
+        "text": "做ai的大厂也没搞出什么名头啊，除了seedance以外，其他除了烧钱效果就一般般吧。",
+        "author": "@ysabelivogg",
+        "platform": "X",
+        "url": "https://x.com/ysabelivogg/status/2108111848331497546",
+        "stance": "调侃"
+       },
+       {
+        "text": "没什么啊，有的想做模型厂，有的拿来用就行。苹果这么大的公司，不也没做AI吗，不影响他卖货。",
+        "author": "@PassionYoungz",
+        "platform": "X",
+        "url": "https://x.com/PassionYoungz/status/2108097523554656676",
+        "stance": "支持"
+       }
+      ],
+      "stance_note": "评论取自原帖回复（相关度前25条）；立场为对拼多多一方的态度。",
+      "responses": [],
+      "related": [],
+      "extra_sources": [
+       {
+        "label": "网易：大厂都在高喊All in AI，为何拼多多只字不提",
+        "url": "https://www.163.com/dy/article/L4CCCH3405198R91.html"
+       },
+       {
+        "label": "钛媒体：拼多多的本分哲学",
+        "url": "https://www.tmtpost.com/7700969.html?rss=futu"
+       },
+       {
+        "label": "C114：拼多多应该有AI焦虑吗",
+        "url": "https://www.c114.net.cn/industry/88406.html"
+       }
+      ],
+      "enriched_at": "2026-10-13T13:15Z"
+     }
+    },
+    {
+     "company": "百度",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-08",
+     "section": "🔥 吐槽热帖",
+     "text": "有网友自称前合伙人是百度M3（≈阿里P9），爆料其“每天只想着捞钱、把内部资源变现”，称百度“从内部烂透了”——单方面个人说法，无法核实。",
+     "links": [
+      {
+       "label": "X @Kenshin06522381",
+       "url": "https://x.com/Kenshin06522381/status/2107991237320163516",
+       "views": "1.4万"
+      }
+     ]
+    },
+    {
+     "company": "大疆",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "小红书"
+     ],
+     "date": "10-07",
+     "section": "🔥 吐槽热帖",
+     "text": "用户吐槽5.6k买的大疆扫地机器人拖地发臭，在小红书发帖后“差点被喷死”，引发“小红书戾气比早期X还重”讨论。",
+     "links": [
+      {
+       "label": "X @xincctnnq",
+       "url": "https://x.com/xincctnnq/status/2107875073147510899",
+       "views": "1.2万"
+      }
+     ]
+    },
+    {
+     "company": "格力",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "小红书"
+     ],
+     "date": "10-03",
+     "section": "🔥 吐槽热帖",
+     "text": "网友称在小红书吐槽格力清洗费150元太贵，被客服要求删帖并“让师傅上门”，反被报警称敲诈——单方说法，格力未回应。",
+     "links": [
+      {
+       "label": "X @hudachong1",
+       "url": "https://x.com/hudachong1/status/2106320822444949760",
+       "views": "136"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🚪 离职 · 晋升 · 宫斗",
+   "color": "#2a9d8f",
+   "items": [
+    {
+     "company": "小米",
+     "tag": "实锤",
+     "source_types": [
+      "微博",
+      "媒体",
+      "X"
+     ],
+     "date": "9-28 / 10-05",
+     "section": "🚪 离职 · 晋升 · 宫斗",
+     "text": "晚点LatePost微博获悉：31岁大模型负责人罗福莉9月22日晋升22级（小米职级天花板），入职仅10个月，被称“小米史上最快晋升”；投资界称19级年薪已超200万。",
+     "links": [
+      {
+       "label": "晚点LatePost微博(新浪)",
+       "url": "https://www.sina.cn/news/detail/5348228021092776.html",
+       "views": null
+      },
+      {
+       "label": "投资界",
+       "url": "https://news.pedaily.cn/202610/569853.shtml",
+       "views": null
+      },
+      {
+       "label": "X @cxjwin",
+       "url": "https://x.com/cxjwin/status/2108716895209984474",
+       "views": "2,256"
+      }
+     ],
+     "id": "20261013-luofuli",
+     "detail": {
+      "title": "小米大模型负责人罗福莉10个月晋升22级",
+      "summary": "晚点LatePost：小米9月22日内部晋升名单中，31岁MiMo大模型团队负责人罗福莉晋升至22级（小米职级最高级别），从2025年11月官宣入职约10个月。",
+      "background": "同日小米发布并开源MiMo-V2.6-Pro/Flash，V2.6-Pro在Artificial Analysis综合智能指数取得46分，为当时榜上最高的开源权重模型。2026年7月小米将小爱同学技术拆为基础模型/云端/端侧，基础模型由罗福莉的MiMo团队提供。小米职级13–22级，总监19–20级、副总裁21–22级（投资界）。罗福莉曾任职DeepSeek，2024年底被曝雷军千万年薪挖角。小米官方未就晋升公开回应（未找到）。",
+      "timeline": [
+       {
+        "date": "2025-11",
+        "text": "罗福莉朋友圈宣布加入小米MiMo团队。",
+        "url": "https://finance.sina.com.cn/stock/relnews/hk/2026-10-05/doc-iniuekzz2740741.shtml"
+       },
+       {
+        "date": "2026-07",
+        "text": "小爱同学组织调整，基础模型由MiMo团队负责。",
+        "url": "https://tech.ifeng.com/c/8wnTKvTQtAH"
+       },
+       {
+        "date": "2026-09-22",
+        "text": "小米内部发布晋升名单，罗福莉晋升22级；同日发布MiMo-V2.6。",
+        "url": "https://www.sina.cn/news/detail/5348228021092776.html"
+       },
+       {
+        "date": "2026-09-28",
+        "text": "晚点LatePost 微博首发报道。",
+        "url": "https://www.sina.cn/news/detail/5348228021092776.html"
+       },
+       {
+        "date": "2026-10-05",
+        "text": "投资界《31岁罗福莉晋升，雷军重仓了她》引发二次传播。",
+        "url": "https://news.pedaily.cn/202610/569853.shtml"
+       }
+      ],
+      "x_posts": [
+       {
+        "platform": "X",
+        "url": "https://x.com/cxjwin/status/2108716895209984474",
+        "author": "@cxjwin",
+        "created_at": "2026-10-10T00:31Z",
+        "views": 2257,
+        "likes": 8,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 1,
+        "fetched_at": "2026-10-13T13:08:22Z"
+       }
+      ],
+      "x_trend": {
+       "query": "罗福莉",
+       "granularity": "day",
+       "labels": [
+        "10-06*",
+        "10-07",
+        "10-08",
+        "10-09",
+        "10-10",
+        "10-11",
+        "10-12",
+        "10-13*"
+       ],
+       "values": [
+        0,
+        10,
+        9,
+        15,
+        8,
+        9,
+        6,
+        1
+       ],
+       "fetched_at": "2026-10-13T13:08:30Z",
+       "source": "X get_posts_counts_recent",
+       "note": "* 为不完整时段（10-06 14:00 起；10-13 截至 13:08 UTC）"
+      },
+      "weibo": {
+       "rank": null,
+       "text": "晚点LatePost 以微博话题 #小米大模型负责人罗福莉晋升22级# 发布；未获取到热搜排名。",
+       "url": "https://www.sina.cn/news/detail/5348228021092776.html"
+      },
+      "comments": [
+       {
+        "text": "罗福莉是真有两把刷子的，雷军也是花了大价钱来留住AI人才",
+        "author": "@zuz84093219",
+        "platform": "X",
+        "url": "https://x.com/zuz84093219/status/2107178412003692626",
+        "stance": "支持"
+       },
+       {
+        "text": "31岁的罗福莉，入职小米10个月，直升22级——小米的职级天花板。 雷军重仓她，赌的不是运气，是\"天才少女\"这个词，终于有人配得上。",
+        "author": "@newcomelol",
+        "platform": "X",
+        "url": "https://x.com/newcomelol/status/2108162994446188780",
+        "stance": "支持"
+       },
+       {
+        "text": "卧槽 雷军把罗福莉当亲闺女养啊",
+        "author": "@li_ke_nan",
+        "platform": "X",
+        "url": "https://x.com/li_ke_nan/status/2107085001619832973",
+        "stance": "调侃"
+       },
+       {
+        "text": "这不是个人晋升，是组织信号。",
+        "author": "@himsam181337",
+        "platform": "X",
+        "url": "https://x.com/himsam181337/status/2107029981092253764",
+        "stance": "支持"
+       }
+      ],
+      "stance_note": "评论取自 X 搜索“罗福莉”（相关度）结果的原句；X 发帖量统计数值明显低于搜索结果可见量，可能存在计数口径差异，仅供参考。",
+      "responses": [],
+      "related": [
+       "小米"
+      ],
+      "extra_sources": [
+       {
+        "label": "凤凰网/IT之家",
+        "url": "https://tech.ifeng.com/c/8wnTKvTQtAH"
+       },
+       {
+        "label": "新浪财经：10个月升到小米最高职级",
+        "url": "https://finance.sina.com.cn/roll/2026-09-30/doc-initqkpm5717872.shtml"
+       }
+      ],
+      "enriched_at": "2026-10-13T13:15Z"
+     }
+    },
+    {
+     "company": "小米",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-03 / 10-10",
+     "section": "🚪 离职 · 晋升 · 宫斗",
+     "text": "X热帖调侃：小米中国区市场部总经理、13号创始员工、汽车智驾负责人离职后都去做“睡眠”产品；另一帖称在小米当高管最大压力是“雷军太能卷，高管换了一茬又一茬”。",
+     "links": [
+      {
+       "label": "X @buildnomadx",
+       "url": "https://x.com/buildnomadx/status/2106404243376837105",
+       "views": "331"
+      },
+      {
+       "label": "X @lixinbao_X",
+       "url": "https://x.com/lixinbao_X/status/2108736187414577582",
+       "views": "1,388"
+      }
+     ]
+    },
+    {
+     "company": "字节跳动",
+     "tag": "传闻",
+     "source_types": [
+      "媒体"
+     ],
+     "date": "10-09",
+     "section": "🚪 离职 · 晋升 · 宫斗",
+     "text": "TRAE原负责人石扬被曝国庆前离职，与前字节AI数据与安全负责人傅越联合创业，首轮投后估值约2亿美元；同日TraeWork与TraeCode合并。",
+     "links": [
+      {
+       "label": "智脑时代ZGEO",
+       "url": "https://zgeo.net/news/bytedance-trae-shiyang-ai-office-startup",
+       "views": null
+      }
+     ]
+    },
+    {
+     "company": "月之暗面",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "X"
+     ],
+     "date": "10-12",
+     "section": "🚪 离职 · 晋升 · 宫斗",
+     "text": "路透独家：循环智能(Recurrent.ai)指控杨植麟、张宇韬未经董事会授权创立月之暗面、转移存有LLM数据的服务器，索赔相当于初始股份10.5%（或超7亿美元）；双方正在IPO前谈和解。指控未经证实，杨植麟此前否认。",
+     "links": [
+      {
+       "label": "联合早报",
+       "url": "https://www.zaobao.com.sg/news/china/story20261012-9821333",
+       "views": null
+      },
+      {
+       "label": "IT之家",
+       "url": "https://www.ithome.com/1/011/731.htm",
+       "views": null
+      },
+      {
+       "label": "X @TheLatentCo",
+       "url": "https://x.com/TheLatentCo/status/2109548651102302642",
+       "views": "358"
+      }
+     ],
+     "id": "20261013-moonshot",
+     "detail": {
+      "title": "月之暗面赴港IPO前与老股东循环智能谈和解（索赔或超7亿美元）",
+      "summary": "路透10-12独家：月之暗面CEO杨植麟、CTO张宇韬正与循环智能（Recurrent.ai）及其部分投资人商谈和解，对方要求相当于月之暗面原始股份10.5%的补偿，按6月300亿美元估值或超7亿美元。",
+      "background": "杨植麟与张宇韬2016年共同创办循环智能，2023年创立月之暗面；两人仍是循环智能控股公司董事。循环智能律师3月11日致月之暗面投资人信函（路透看到）指控两人未经董事会授权创立月之暗面、向投资人作虚假陈述、以循环智能利益为代价获利，并称存有关键大模型数据的服务器于2023年4月被未经授权转移、部分数据2024年9月按张宇韬指示删除；路透无法独立核实。纠纷2024年起在香港仲裁。月之暗面成立时循环智能获9.5%原始股份。彭博10-06报道月之暗面完成估值约500亿美元的最后一轮私募，计划2027年Q1港股IPO，9月已秘密递表。知情人士称纠纷预计不会危及IPO，但可能引发治理、股权和披露问题。",
+      "timeline": [
+       {
+        "date": "2024-11",
+        "text": "杨植麟、张宇韬被循环智能投资人在香港国际仲裁中心提起仲裁；代理律师称案件缺乏法律与事实基础。",
+        "url": "https://www.ithome.com/1/011/731.htm"
+       },
+       {
+        "date": "2024-12",
+        "text": "杨植麟公开回应：重新创业前已获每一位董事签字同意和所有必要手续。",
+        "url": "https://www.ithome.com/1/011/731.htm"
+       },
+       {
+        "date": "2026-03-11",
+        "text": "循环智能律师致函月之暗面投资人，提出不当行为及服务器转移等指控。",
+        "url": "https://today.line.me/tw/v3/article/LXeZ29r"
+       },
+       {
+        "date": "2026-09",
+        "text": "月之暗面向港交所秘密提交IPO申请（路透）。",
+        "url": "https://metrohk.com.hk/%E7%A7%91%E6%8A%80/%E6%9C%88%E4%B9%8B%E6%9A%97%E9%9D%A2%E9%AB%98%E5%B1%A4%E8%88%87%E8%82%A1%E6%9D%B1%E5%95%86%E8%A8%8E%E5%92%8C%E8%A7%A3%E6%B6%89IPO-df7ba2"
+       },
+       {
+        "date": "2026-10-06",
+        "text": "彭博：完成估值约500亿美元最后一轮私募，瞄准2027年Q1香港IPO。",
+        "url": "https://x.com/wallstengine/status/2107317188583727298"
+       },
+       {
+        "date": "2026-10-12",
+        "text": "路透独家：高管与循环智能谈和解，索赔或超7亿美元；是否即将达成尚不清楚。",
+        "url": "https://news.cnyes.com/news/id/6628647"
+       },
+       {
+        "date": "2026-10-12",
+        "text": "X 帖称北京警方通报：编造“月之暗面高管被带走”谣言的两人被采取刑事强制措施（仅见于X转述，未核实原始通报）。",
+        "url": "https://x.com/greek2240/status/2109861318824263762"
+       }
+      ],
+      "x_posts": [
+       {
+        "platform": "X",
+        "url": "https://x.com/wallstengine/status/2107317188583727298",
+        "author": "@wallstengine",
+        "created_at": "2026-10-06T03:49Z",
+        "views": 27822,
+        "likes": 100,
+        "reposts": 18,
+        "replies": 9,
+        "quotes": 1,
+        "bookmarks": 18,
+        "fetched_at": "2026-10-13T13:08:22Z"
+       },
+       {
+        "platform": "X",
+        "url": "https://x.com/TheLatentCo/status/2109548651102302642",
+        "author": "@TheLatentCo",
+        "created_at": "2026-10-12T07:36Z",
+        "views": 358,
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "fetched_at": "2026-10-13T13:08:22Z"
+       }
+      ],
+      "x_trend": {
+       "query": "月之暗面 OR 循环智能 OR \"Moonshot AI\"",
+       "granularity": "day",
+       "labels": [
+        "10-06*",
+        "10-07",
+        "10-08",
+        "10-09",
+        "10-10",
+        "10-11",
+        "10-12",
+        "10-13*"
+       ],
+       "values": [
+        141,
+        267,
+        189,
+        166,
+        153,
+        114,
+        313,
+        303
+       ],
+       "fetched_at": "2026-10-13T13:08:30Z",
+       "source": "X get_posts_counts_recent",
+       "note": "* 为不完整时段（10-06 14:00 起；10-13 截至 13:08 UTC）"
+      },
+      "weibo": null,
+      "comments": [
+       {
+        "text": "😮😮这要的也太多了吧",
+        "author": "@haotianche21370",
+        "platform": "X",
+        "url": "https://x.com/haotianche21370/status/2109485477040652797",
+        "stance": "质疑"
+       },
+       {
+        "text": "月之暗面冲刺港股 IPO，先忙着给后院灭火。",
+        "author": "@SongyuKite",
+        "platform": "X",
+        "url": "https://x.com/SongyuKite/status/2109439671919120553",
+        "stance": "调侃"
+       },
+       {
+        "text": "被前东家索赔 7 个亿！正冲击香港上市的月之暗面（Moonshot），要花钱买平安？",
+        "author": "@idoubaody",
+        "platform": "X",
+        "url": "https://x.com/idoubaody/status/2109443723826180523",
+        "stance": "调侃"
+       }
+      ],
+      "stance_note": "评论取自 X 关键词搜索（相关度排序）结果中的原创帖开头原句；立场为对月之暗面一方的态度。",
+      "responses": [
+       {
+        "party": "月之暗面",
+        "text": "拒绝置评（路透）。",
+        "url": "https://metrohk.com.hk/%E7%A7%91%E6%8A%80/%E6%9C%88%E4%B9%8B%E6%9A%97%E9%9D%A2%E9%AB%98%E5%B1%A4%E8%88%87%E8%82%A1%E6%9D%B1%E5%95%86%E8%A8%8E%E5%92%8C%E8%A7%A3%E6%B6%89IPO-df7ba2"
+       },
+       {
+        "party": "杨植麟、张宇韬、循环智能",
+        "text": "未回应路透置评请求；杨植麟此前否认指控。",
+        "url": "https://metrohk.com.hk/%E7%A7%91%E6%8A%80/%E6%9C%88%E4%B9%8B%E6%9A%97%E9%9D%A2%E9%AB%98%E5%B1%A4%E8%88%87%E8%82%A1%E6%9D%B1%E5%95%86%E8%A8%8E%E5%92%8C%E8%A7%A3%E6%B6%89IPO-df7ba2"
+       },
+       {
+        "party": "MinterEllison 合伙人 David Morrison（代表杨、张及月之暗面，2024-11）",
+        "text": "案件“缺乏法律及事实基础”，将作出辩护。",
+        "url": "https://metrohk.com.hk/%E7%A7%91%E6%8A%80/%E6%9C%88%E4%B9%8B%E6%9A%97%E9%9D%A2%E9%AB%98%E5%B1%A4%E8%88%87%E8%82%A1%E6%9D%B1%E5%95%86%E8%A8%8E%E5%92%8C%E8%A7%A3%E6%B6%89IPO-df7ba2"
+       },
+       {
+        "party": "港交所、香港证监会",
+        "text": "拒绝置评；中国证监会和国家网信办未回复。",
+        "url": "https://www.ithome.com/1/011/731.htm"
+       }
+      ],
+      "related": [
+       "月之暗面"
+      ],
+      "extra_sources": [
+       {
+        "label": "鉅亨網：求償恐逾7億美元",
+        "url": "https://news.cnyes.com/news/id/6628647"
+       },
+       {
+        "label": "LINE Today/路透中英对照",
+        "url": "https://today.line.me/tw/v3/article/LXeZ29r"
+       },
+       {
+        "label": "动察 Beating",
+        "url": "https://beating.news/flash/371268"
+       },
+       {
+        "label": "新都市 METROHK",
+        "url": "https://metrohk.com.hk/%E7%A7%91%E6%8A%80/%E6%9C%88%E4%B9%8B%E6%9A%97%E9%9D%A2%E9%AB%98%E5%B1%A4%E8%88%87%E8%82%A1%E6%9D%B1%E5%95%86%E8%A8%8E%E5%92%8C%E8%A7%A3%E6%B6%89IPO-df7ba2"
+       }
+      ],
+      "enriched_at": "2026-10-13T13:15Z"
+     }
+    }
+   ]
+  },
+  {
+   "title": "💰 挖人 · 天价 · 融资",
+   "color": "#7b2cbf",
+   "items": [
+    {
+     "company": "DeepSeek",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-06～10-13",
+     "section": "💰 挖人 · 天价 · 融资",
+     "text": "彭博称DeepSeek新一轮至少800亿元、可能近1000亿元，腾讯、宁德时代领投；最新传闻宁德拟增资约100亿、吉利入局，投前估值约5000亿元。",
+     "links": [
+      {
+       "label": "X @ScarletKc",
+       "url": "https://x.com/ScarletKc/status/2107643319732039898",
+       "views": "7,781"
+      },
+      {
+       "label": "新浪科技",
+       "url": "https://finance.sina.cn/tech/2026-10-13/detail-iniuzuyr8229983.d.html",
+       "views": null
+      }
+     ]
+    },
+    {
+     "company": "字节/蚂蚁/智谱/Kimi",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-12",
+     "section": "💰 挖人 · 天价 · 融资",
+     "text": "FDE（前线部署工程师）成AI圈最贵人头：头部年包可达90万–109万元，猎聘数据供需比仅0.28，字节、蚂蚁、智谱、Kimi、华为云都在抢。",
+     "links": [
+      {
+       "label": "X @AaronChannel8",
+       "url": "https://x.com/AaronChannel8/status/2109573514605031931",
+       "views": "716"
+      },
+      {
+       "label": "虎嗅：月薪7万，招不到人？",
+       "url": "https://www.huxiu.com/article/4896800.html",
+       "views": null
+      }
+     ]
+    },
+    {
+     "company": "米哈游",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-12",
+     "section": "💰 挖人 · 天价 · 融资",
+     "text": "X小号称米哈游自研大模型完成备案，中文名“无用”、英文HoYoUseless，并做了大量防御性商标注册——仅单一低热度来源，待核实。",
+     "links": [
+      {
+       "label": "X @deepthought_dev",
+       "url": "https://x.com/deepthought_dev/status/2109621090796605897",
+       "views": "34"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,531 @@
+{
+ "type": "adr",
+ "title": "美股中概 & 出海简报",
+ "timestamp": "2026-10-13",
+ "edition_date": "2026-10-13",
+ "lede": "样刊 · 覆盖 2026-10-01 ～ 10-13 · 信源：X 公开帖（主）+ 中文社媒 + 公开媒体",
+ "top3": [
+  {
+   "section": "📉 股价大动",
+   "index": 0
+  },
+  {
+   "section": "🧸 消费出海",
+   "index": 0
+  },
+  {
+   "section": "🚀 IPO & 高管",
+   "index": 0
+  }
+ ],
+ "sections": [
+  {
+   "title": "📉 股价大动",
+   "color": "#1d4ed8",
+   "items": [
+    {
+     "company": "微牛 Webull",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-07",
+     "section": "📉 股价大动",
+     "text": "美国众议院对华特别委员会两党报告称Webull与中国存在“结构性关联”（62%员工在中国），并建议CFIUS审查；BULL盘中跌29%，收跌19.09%至5.89美元。微牛称报告不准确。",
+     "links": [
+      {
+       "label": "X @SimonLe99917871",
+       "url": "https://x.com/SimonLe99917871/status/2107964687493271839",
+       "views": "780"
+      },
+      {
+       "label": "CNBC",
+       "url": "https://www.cnbc.com/2026/10/07/webull-china-national-security-risk-congress.html",
+       "views": null
+      },
+      {
+       "label": "Motley Fool",
+       "url": "https://www.fool.com/coverage/stock-market-today/2026/10/07/stock-market-today-oct-7-webull-plunges-19-on-house-china-security-report/",
+       "views": null
+      }
+     ],
+     "id": "20261013-webull",
+     "detail": {
+      "title": "微牛 Webull 被美国众议院对华特别委员会点名“结构性关联”",
+      "summary": "众议院对华特委会两党报告《Free Trades, Hidden Ties》称Webull与中国存在结构性关联、构成国家安全风险；BULL当日盘中跌近20%；Webull两度发声明称报告不准确、流程不公。",
+      "background": "调查由主席 John Moolenaar 与首席民主党人 Ro Khanna 牵头，报告提出六项发现，称Webull做法使美国投资者数据暴露于中国监控风险、公司由与中国有关的高管控制、其中国子公司（湖南微步）获政府补贴等。2024年委员会已就Webull与富米科技、湖南微步的关系致信。Webull自称在18个市场运营、用户超2800万，全球总部位于佛罗里达州圣彼得堡。",
+      "timeline": [
+       {
+        "date": "2024",
+        "text": "Moolenaar 与 Krishnamoorthi 致信 Webull，质疑其与中国关联。",
+        "url": "https://democrats-selectcommitteeontheccp.house.gov/media/press-releases/examining-webulls-china-links-companys-china-links-raise-data-privacy-and"
+       },
+       {
+        "date": "2026-10-07",
+        "text": "委员会发布报告；Webull 发言人当日回应“报告存在重大不准确”。BULL 盘前跌近30%，收跌约19%。",
+        "url": "https://www.crowdfundinsider.com/2026/10/316431-webull-issues-statement-on-house-select-committee-on-china-claims/"
+       },
+       {
+        "date": "2026-10-08",
+        "text": "众议员 Mike Lawler 在X转发委员会警告。",
+        "url": "https://x.com/RepMikeLawler/status/2108177154118762797"
+       },
+       {
+        "date": "2026-10-09",
+        "text": "Webull 以6-K形式发布正式声明，批评报告流程（20个月未联系、发布前未给回应机会）。",
+        "url": "https://www.stocktitan.net/sec-filings/BULL/6-k-webull-corp-current-report-foreign-issuer-6d5c048f791c.html"
+       }
+      ],
+      "x_posts": [
+       {
+        "platform": "X",
+        "url": "https://x.com/SimonLe99917871/status/2107964687493271839",
+        "author": "@SimonLe99917871",
+        "created_at": "2026-10-07T22:42Z",
+        "views": 780,
+        "likes": 2,
+        "reposts": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "fetched_at": "2026-10-13T13:08:22Z"
+       }
+      ],
+      "x_trend": {
+       "query": "Webull OR 微牛",
+       "granularity": "day",
+       "labels": [
+        "10-06*",
+        "10-07",
+        "10-08",
+        "10-09",
+        "10-10",
+        "10-11",
+        "10-12",
+        "10-13*"
+       ],
+       "values": [
+        64,
+        1585,
+        1305,
+        432,
+        217,
+        138,
+        204,
+        87
+       ],
+       "fetched_at": "2026-10-13T13:08:30Z",
+       "source": "X get_posts_counts_recent",
+       "note": "* 为不完整时段（10-06 14:00 起；10-13 截至 13:08 UTC）"
+      },
+      "weibo": null,
+      "comments": [
+       {
+        "text": "Webull is great and RobinHood’s only real competition. Constantly innovating their apps. National security risk my ass.",
+        "author": "@originfibonacci",
+        "platform": "X",
+        "url": "https://x.com/originfibonacci/status/2107898304604373486",
+        "stance": "支持"
+       },
+       {
+        "text": "一份没有执法权的国会报告，把券商微牛（Webull）砸下去19%，这就不是新闻层面的事了。",
+        "author": "@_marketwatcher",
+        "platform": "X",
+        "url": "https://x.com/_marketwatcher/status/2107964755562655904",
+        "stance": "质疑"
+       },
+       {
+        "text": "一份国会报告，微牛盘中跌近20%。这又提醒了我们，为什么不能碰中概股。",
+        "author": "@laotangmeigu",
+        "platform": "X",
+        "url": "https://x.com/laotangmeigu/status/2107884279376335043",
+        "stance": "质疑"
+       },
+       {
+        "text": "Commission-free trades, but Congress thinks your data's headed to Beijing. Webull down -20% on a national security flag — suddenly that \"free\" account…",
+        "author": "@Iris97w",
+        "platform": "X",
+        "url": "https://x.com/Iris97w/status/2107854255952728346",
+        "stance": "调侃"
+       }
+      ],
+      "stance_note": "评论取自 X 关键词搜索（相关度）结果的原创帖开头原句（部分截断）；立场为对 Webull 一方的态度。",
+      "responses": [
+       {
+        "party": "Webull 发言人（10-07）",
+        "text": "“It is deeply disappointing that the Select Committee published a report containing significant inaccuracies and unsupported conclusions without ever seeking clarification from Webull…U.S. customer data is stored in the U.S.”",
+        "url": "https://www.crowdfundinsider.com/2026/10/316431-webull-issues-statement-on-house-select-committee-on-china-claims/"
+       },
+       {
+        "party": "Webull 6-K 声明（10-09）",
+        "text": "“The report draws sweeping conclusions about Webull from an incomplete record, and it gets important facts wrong… Webull was not given an opportunity to respond to the findings before publication.”",
+        "url": "https://www.pubt.io/view/9B75799E2D3A7D440FEFAD2585C3A1D473E412E0"
+       },
+       {
+        "party": "众议院对华特委会（民主党方新闻稿）",
+        "text": "报告称 Webull 未就其与中国的关联保持透明，做法使美国投资者数据暴露于中国监控风险。",
+        "url": "https://democrats-selectcommitteeontheccp.house.gov/media/press-releases/examining-webulls-china-links-companys-china-links-raise-data-privacy-and"
+       }
+      ],
+      "related": [
+       "富途 / 老虎"
+      ],
+      "extra_sources": [
+       {
+        "label": "CNBC",
+        "url": "https://www.cnbc.com/2026/10/07/webull-china-national-security-risk-congress.html"
+       },
+       {
+        "label": "Motley Fool",
+        "url": "https://www.fool.com/coverage/stock-market-today/2026/10/07/stock-market-today-oct-7-webull-plunges-19-on-house-china-security-report/"
+       }
+      ],
+      "enriched_at": "2026-10-13T13:15Z"
+     }
+    },
+    {
+     "company": "小米",
+     "tag": "实锤",
+     "source_types": [
+      "媒体"
+     ],
+     "date": "10-12",
+     "section": "📉 股价大动",
+     "text": "小米港股收跌5.55%、ADR跌超6%：存储芯片涨价推动手机涨价（“内存条像黄金一天一个价”），叠加资金净卖出、跌破20日线。",
+     "links": [
+      {
+       "label": "同花顺异动解读",
+       "url": "https://news.10jqka.com.cn/20261012/c11702796838.shtml",
+       "views": null
+      },
+      {
+       "label": "FX168",
+       "url": "https://www.fx168news.com/article/1101909",
+       "views": null
+      }
+     ]
+    },
+    {
+     "company": "霸王茶姬",
+     "tag": "实锤",
+     "source_types": [
+      "微博",
+      "媒体",
+      "X"
+     ],
+     "date": "10-12",
+     "section": "📉 股价大动",
+     "text": "代言人郑钦文夺冠，霸王茶姬全场“买一送一”把小程序挤崩、冲上热搜；当晚中概普跌中霸王茶姬美股逆势涨超6%。",
+     "links": [
+      {
+       "label": "IT之家",
+       "url": "https://www.ithome.com/1/011/830.htm",
+       "views": null
+      },
+      {
+       "label": "21经济网",
+       "url": "https://www.21jingji.com/article/20261012/herald/3d12adfd74538a387b842c6eb2d84144.html",
+       "views": null
+      },
+      {
+       "label": "X @zhuanyiyi",
+       "url": "https://x.com/zhuanyiyi/status/2109597042259501228",
+       "views": "41"
+      }
+     ]
+    },
+    {
+     "company": "蔚来 / 小鹏 / 拼多多",
+     "tag": "实锤",
+     "source_types": [
+      "媒体"
+     ],
+     "date": "10-12",
+     "section": "📉 股价大动",
+     "text": "周一金龙指数跌0.38%：蔚来收3.47美元(-3.07%)、小鹏9.66美元(-2.42%)，PDD、BABA各跌0.53%，AI硬件抛售拖累情绪。",
+     "links": [
+      {
+       "label": "FX168",
+       "url": "https://www.fx168news.com/article/1101909",
+       "views": null
+      },
+      {
+       "label": "NIO 日线",
+       "url": "https://exa.ai/library/markets/stock/NIO?date=2026-10-12&view=daily",
+       "views": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🧸 消费出海",
+   "color": "#db2777",
+   "items": [
+    {
+     "company": "泡泡玛特",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "雪球"
+     ],
+     "date": "10-13",
+     "section": "🧸 消费出海",
+     "text": "高盛追踪：泡泡玛特9月天猫+抖音销售同比-44%，美国信用卡数据Q3同比-58%；名创优品Q3大陆GMV +25–30%、美国9月+30%以上。雪球用户晒抖音GMV同比-55.7%。",
+     "links": [
+      {
+       "label": "观点网",
+       "url": "https://www.guandian.cn/article/20261013/612616.html",
+       "views": null
+      },
+      {
+       "label": "富途/阿斯达克",
+       "url": "https://news.futunn.com/post/1000964707/major-banks-goldman-sachs-pop-mart-09992-hk-sees-deeper",
+       "views": null
+      },
+      {
+       "label": "雪球帖",
+       "url": "https://www.xueqiu.com/7412475798/411867360",
+       "views": null
+      }
+     ],
+     "id": "20261013-popmart",
+     "detail": {
+      "title": "泡泡玛特9月线上销售大幅下滑",
+      "summary": "高盛：泡泡玛特9月线上销售同比跌44%；机构渠道数据显示抖音9月GMV同比-55.7%，1–9月累计约-1%；股价较历史高点337港元腰斩。",
+      "background": "2026年上半年THE MONSTERS（LABUBU）系列收入44.54亿元、同比下滑7.5%，首次同比下滑；管理层称2026年为“经营调整年”，大概率完不成年初20%增长目标（新浪财经9-15）。雪球帖汇总机构数据：去年LABUBU 3.0高基数、星星人农场系列主要在小程序放货，抖音数据承压；9月43家可比门店同店增长16%、增速回正。",
+      "timeline": [
+       {
+        "date": "2026-09-15",
+        "text": "新浪财经：中报后股价一度跌超8%，较高点缩水五成。",
+        "url": "https://finance.sina.com.cn/jjxw/2026-09-15/doc-inirwfqh3737615.shtml"
+       },
+       {
+        "date": "2026-10-13",
+        "text": "高盛报告：9月线上销售跌幅加深至-44%。",
+        "url": "https://www.guandian.cn/article/20261013/612616.html"
+       }
+      ],
+      "x_posts": [],
+      "x_trend": {
+       "query": "泡泡玛特 OR \"Pop Mart\"",
+       "granularity": "day",
+       "labels": [
+        "10-06*",
+        "10-07",
+        "10-08",
+        "10-09",
+        "10-10",
+        "10-11",
+        "10-12",
+        "10-13*"
+       ],
+       "values": [
+        122,
+        1947,
+        1381,
+        2064,
+        2004,
+        1391,
+        635,
+        467
+       ],
+       "fetched_at": "2026-10-13T13:08:30Z",
+       "source": "X get_posts_counts_recent",
+       "note": "* 为不完整时段（10-06 14:00 起；10-13 截至 13:08 UTC）"
+      },
+      "weibo": null,
+      "other_platforms": [
+       {
+        "platform": "雪球",
+        "metric": "讨论帖",
+        "value": "抖音9月GMV同比-55.7%",
+        "url": "https://www.xueqiu.com/7412475798/411867360"
+       }
+      ],
+      "comments": [
+       {
+        "text": "泡泡玛特，底部已经彻底形成！ 杀跌动能衰竭，筹码充分交换。 利空充分消化，基本面依旧能打。",
+        "author": "@jexsjg",
+        "platform": "X",
+        "url": "https://x.com/jexsjg/status/2109620512498593942",
+        "stance": "支持"
+       }
+      ],
+      "stance_note": "X 搜索结果中“泡泡玛特/Pop Mart”混入大量无关内容（LABUBU 粉圈、加密货币），仅保留1条直接相关评论；X 发帖量趋势查询也包含大量无关帖子，仅供参考。",
+      "responses": [],
+      "related": [],
+      "extra_sources": [
+       {
+        "label": "新浪财经：泡泡玛特的IP故事还能讲多久",
+        "url": "https://finance.sina.com.cn/jjxw/2026-09-15/doc-inirwfqh3737615.shtml"
+       }
+      ],
+      "enriched_at": "2026-10-13T13:15Z"
+     }
+    },
+    {
+     "company": "SHEIN",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-09",
+     "section": "🧸 消费出海",
+     "text": "X热帖复盘：SHEIN 2022年估值1000亿美元，9月1日港股上市估值仅265亿美元、首日无涨幅；上市后一个月跌38%，高盛作为稳价人在市场买入约4200万股（约2.2亿美元）。",
+     "links": [
+      {
+       "label": "X @AndrewBenson",
+       "url": "https://x.com/AndrewBenson/status/2108686824013251053",
+       "views": "4,210"
+      },
+      {
+       "label": "长桥：稳价期结束公告",
+       "url": "https://longbridge.com/en/news/300218651",
+       "views": null
+      }
+     ]
+    },
+    {
+     "company": "新茶饮出海",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-11",
+     "section": "🧸 消费出海",
+     "text": "X热帖称首尔年轻人排队5小时买中国奶茶，一个商圈150米内6家中国店——具体品牌与数据未经核实。",
+     "links": [
+      {
+       "label": "X @yuyimei2",
+       "url": "https://x.com/yuyimei2/status/2109182544860393610",
+       "views": "5,565"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🏛️ 监管 · 诉讼 · 制裁",
+   "color": "#0f766e",
+   "items": [
+    {
+     "company": "富途 / 老虎",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "X"
+     ],
+     "date": "10-01 / 10-05",
+     "section": "🏛️ 监管 · 诉讼 · 制裁",
+     "text": "5月监管处罚消息前的富途、老虎看跌期权“内幕交易”案大反转：城堡证券、海纳国际两家做市商拟撤诉，涉案账户从310个缩至47个，估算获利1.55亿美元。",
+     "links": [
+      {
+       "label": "财新",
+       "url": "https://wenews.caixin.com/2026-10-01/102490265.html",
+       "views": null
+      },
+      {
+       "label": "X @LaoYao_crypto",
+       "url": "https://x.com/LaoYao_crypto/status/2106940321808732346",
+       "views": "712"
+      }
+     ]
+    },
+    {
+     "company": "大疆",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-12",
+     "section": "🏛️ 监管 · 诉讼 · 制裁",
+     "text": "X帖称美国实体清单+FCC禁令后，DJI无人机仍经阿拉木图、迪拜及空壳分销商流入美国，“禁令变成了人人都付的关税”——观点性内容。",
+     "links": [
+      {
+       "label": "X @DroneZoneNews",
+       "url": "https://x.com/DroneZoneNews/status/2109562975421886607",
+       "views": "48"
+      }
+     ]
+    },
+    {
+     "company": "比亚迪",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-04 / 10-10",
+     "section": "🏛️ 监管 · 诉讼 · 制裁",
+     "text": "X数据帖：比亚迪8月国内零售同比-24.6%，靠出口撑总销量；印度/美国网友借“美国以安全为由禁DJI、对BYD征100%关税”互怼马斯克，相关帖浏览6,360。",
+     "links": [
+      {
+       "label": "X @shipping_nerdy",
+       "url": "https://x.com/shipping_nerdy/status/2106859176756646197",
+       "views": "353"
+      },
+      {
+       "label": "X @Stripedhunter41",
+       "url": "https://x.com/Stripedhunter41/status/2108854933491769387",
+       "views": "6,360"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🚀 IPO & 高管",
+   "color": "#b45309",
+   "items": [
+    {
+     "company": "月之暗面",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-06",
+     "section": "🚀 IPO & 高管",
+     "text": "彭博：Kimi母公司完成IPO前最后一轮私募，估值约500亿美元（6月为315亿），ARR从3亿涨到约10亿美元，最快2027年Q1港股上市、募资最高50亿美元；同时陷创始人股东纠纷（见A刊）。",
+     "links": [
+      {
+       "label": "X @wallstengine",
+       "url": "https://x.com/wallstengine/status/2107317188583727298",
+       "views": "2.8万"
+      },
+      {
+       "label": "IT之家",
+       "url": "https://www.ithome.com/1/011/731.htm",
+       "views": null
+      }
+     ]
+    },
+    {
+     "company": "传音控股",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-12 / 10-13",
+     "section": "🚀 IPO & 高管",
+     "text": "“非洲手机之王”传音H股定价35.30港元，落在区间下限（上限38.80），募资约30.6亿港元，10月15日港交所挂牌。",
+     "links": [
+      {
+       "label": "X @IPONewsroom_",
+       "url": "https://x.com/IPONewsroom_/status/2109773567604719797",
+       "views": "2,068"
+      },
+      {
+       "label": "观点网",
+       "url": "https://www.guandian.cn/article/20261013/612230.html",
+       "views": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
