@@ -341,3 +341,8 @@ timestamp_utc,topic,metric,value,source
 2026-10-14T07:18:40Z,滴滴 & 滴滴出海,x_post_count_task_broad_07Z_partial,303,"X same auxiliary, 07:00-07:15Z"
 2026-10-14T07:18:40Z,滴滴繁简价差,x_secondary_suyu2018block_impressions,279,https://x.com/suyu2018block/status/2110241692615888913
 2026-10-14T07:18:40Z,滴滴海外/金融,x_tier1_slot0_hits_kept_0610to0715Z,0,tier1×8+slot0×3; secondary price post not kept for alert
+2026-10-14T08:12:00Z,滴滴 & 滴滴出海,x_hourly_post_count_07Z,288,"X q=滴滴 OR 滴滴出行 OR ""DiDi Global"" OR ""Didi Chuxing""; 07:00-08:00Z"
+2026-10-14T08:12:00Z,滴滴 & 滴滴出海,x_post_count_08Z_partial_to0811,70,"X same comparable query, 08:00-08:11Z"
+2026-10-14T08:12:00Z,滴滴 & 滴滴出海,x_hourly_post_count_task_broad_07Z,1189,X q=(滴滴 OR DiDi OR 程维 OR 花小猪 OR 99app); auxiliary wide sample
+2026-10-14T08:12:00Z,滴滴 & 滴滴出海,x_post_count_task_broad_08Z_partial,217,"X same auxiliary, 08:00-08:11Z"
+2026-10-14T08:12:00Z,滴滴海外/APAC-Egypt,x_tier1_slot1_hits_kept_0710to0812Z,0,tier1×8+slot1×3; cn_gossip FP dropped; no alert material

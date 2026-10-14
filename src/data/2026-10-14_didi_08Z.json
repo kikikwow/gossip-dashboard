@@ -1,0 +1,134 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-14T08:12:00Z",
+ "fired_at_utc": "2026-10-14T08:08:53Z",
+ "scanned_at_utc": "2026-10-14T08:12:00Z",
+ "beijing_time": "2026-10-14 16:12 Asia/Shanghai",
+ "edition_date": "2026-10-14",
+ "window": {
+  "start_utc": "2026-10-14T07:10:00Z",
+  "end_utc": "2026-10-14T08:12:00Z",
+  "note": "自上轮 15:18（北京时间）以来；Tier2 slot1（日本/澳新/埃及）回看约 6 小时；Tier3 跳过（日间已跑）"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无新的可核验公司事实。Tier1 八查询仅 cn_gossip 命中1帖（AI模型榜单+article t.co，正文无滴滴实体，按 postfilter 丢弃）；cn_price/HK-TW/BR/MX/EN 均0帖，繁简价差本窗口无再命中。Slot1 日语/澳新/埃及三查询0帖。Web：内部信/裁员仍为2020旧闻；繁简仍为 Threads@onlyu0913/unwire/LIHKG 已报线索、无公司新回应；香港牌照为8月申请开放旧闻；Threads 无登录未命中繁简原帖；99Food Senacon 透明度与 CADE 排他条款均为更早料（03Z/05Z已记）；MX PROFECO/裁员为2020–2023旧闻；日本侧南城市合作、鸟取/岛根开通、DiDi Pay 等为 PR/9月末旧闻（05Z已覆盖资本增资主线，不重复报警）；澳/埃 Web 为经济贡献/合作 PR 与个例投诉，非本期公司八卦。RSS 新匹配5条均非滴滴。已覆盖的 JP 资本、MX Puebla、繁简主帖、99Food TJSP 不重复报警。",
+ "sections": [
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "公开媒体",
+      "RSS"
+     ],
+     "date": "10-14 16:12",
+     "text": "本期无新动态。扫描窗口 07:10Z–08:12Z（北京时间约 15:10–16:12）。Tier1 全量 + Tier2 slot1（日本/澳新/埃及）未见可发布的新公司八卦、监管裁决或人事/财务线索；繁简价差本窗口无新命中。",
+     "links": [],
+     "id": "20261014-didi-08Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "03Z": 134,
+   "04Z": 223,
+   "05Z": 278,
+   "06Z": 380,
+   "07Z": 288,
+   "08Z_partial_to0811": 70,
+   "query": "滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"",
+   "note": "07Z整点288（↓自06Z=380），名称撞词/噪音仍主导；非可核验公司事件；08Z前11分钟70"
+  },
+  "task_broad_sample": {
+   "00Z": 1141,
+   "01Z": 1245,
+   "02Z": 1251,
+   "03Z": 1369,
+   "04Z": 1418,
+   "05Z": 1498,
+   "06Z": 1609,
+   "07Z": 1189,
+   "08Z_partial": 217,
+   "query": "(滴滴 OR DiDi OR 程维 OR 花小猪 OR 99app)",
+   "note": "任务指定宽口径；07Z=1189 较06Z=1609回落；含大量 DiDi/99 撞词，仅作辅证"
+  },
+  "trad_simp_price_x": {
+   "posts_in_tier1_window": 0,
+   "note": "本窗口 cn_price 0帖；无二次扩散新命中"
+  },
+  "tier1_x_hits_kept": 0,
+  "slot1_x_hits_kept": 0,
+  "weibo_didi_on_list": "not_checked_this_run"
+ },
+ "candidates": [
+  {
+   "topic": "X cn_gossip @dragono64v AI模型榜单 article",
+   "verdict": "reject_false_positive_no_entity",
+   "why": "正文无滴滴实体，仅 article+t.co；impressions=123；postfilter 丢弃",
+   "url": "https://x.com/dragono64v/status/2110278215579381763"
+  },
+  {
+   "topic": "繁简价差 @0xTheo520 / Threads @onlyu0913 / unwire.hk / LIHKG",
+   "verdict": "already_alerted_05Z_no_new_facts",
+   "why": "本窗口 tier1 cn_price 0帖；Web 仍为旧线索复述，无新截图或公司回应"
+  },
+  {
+   "topic": "Web 内部信/裁员/组织调整",
+   "verdict": "stale_2020_org_reshuffle"
+  },
+  {
+   "topic": "Web 香港网约车牌照",
+   "verdict": "stale_2026-08_application_open"
+  },
+  {
+   "topic": "Web Threads 繁简价差",
+   "verdict": "no_login_miss_already_covered_via_unwire_lihkg"
+  },
+  {
+   "topic": "99Food Senacon 透明度 / CADE 排他",
+   "verdict": "stale_earlier_2026_already_noted",
+   "why": "非本窗口新裁决；03Z/05Z已记"
+  },
+  {
+   "topic": "Web DiDi México PROFECO/despidos",
+   "verdict": "stale_2020_2023"
+  },
+  {
+   "topic": "DiDiモビリティジャパン 南城市/鸟取岛根/DiDi Pay",
+   "verdict": "stale_pr_or_sep2026_no_realert",
+   "why": "PR/9月末开通；05Z已报资本增资主线，本期无新财务/监管事实"
+  },
+  {
+   "topic": "DiDi Egypt/Australia Web",
+   "verdict": "pr_or_individual_complaint_not_alert",
+   "why": "经济贡献/峰会合作 PR；无监管或公司人事新爆点"
+  },
+  {
+   "topic": "JP 资本 / MX Puebla / 繁简主帖 / 99Food TJSP",
+   "verdict": "already_covered_no_realert"
+  },
+  {
+   "topic": "RSS fetch_sources",
+   "verdict": "no_didi_matches",
+   "why": "2026-10-14T0810Z.json new items=5（雷峰网/Pandaily/TechNode×3，非滴滴）；滴滴相关匹配0"
+  }
+ ],
+ "sources_queried": [
+  "X tier1×8 + tier2 slot1×3 + counts×4 (可比热度+任务宽口径，含07Z整点补全)",
+  "WebSearch×8 (tier1×6 + slot1×2)",
+  "RSS fetch_sources (0 条滴滴相关新匹配)",
+  "Tier3 skipped (daytime already ran)"
+ ],
+ "x_calls_used": 15,
+ "web_searches": 8,
+ "tiers": "tier1 + tier2 slot1",
+ "slot": 1
+}
