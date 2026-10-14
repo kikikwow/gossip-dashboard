@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><script>try{var t=(location.hash.match(/theme=(\w+)/)||[])[1]||localStorage.getItem("gossipTheme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark" data-ui="new"><head><script>try{var t=(location.hash.match(/theme=(\w+)/)||[])[1]||localStorage.getItem("gossipTheme");if(t)document.documentElement.dataset.theme=t;var q=new URLSearchParams(location.search).get("ui");var ui=(q==="classic"||q==="new")?q:localStorage.getItem("gossipUi");if(ui==="classic"||ui==="new")document.documentElement.dataset.ui=ui}catch(e){}</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>大厂八卦追踪看板</title>
 <meta name="description" content="中国大厂八卦 · 美股中概&出海 · 滴滴网约车追踪。实锤/传闻标注，每小时更新。">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,viewport-fit=cover">
@@ -24,6 +24,7 @@ header{background:linear-gradient(135deg,#ff6b4a 0%,#c2185b 45%,#4f46e5 100%);co
 header .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
 h1{margin:0;font-size:28px;letter-spacing:1px}h1 small{display:block;font-size:12px;opacity:.8;letter-spacing:3px;font-weight:400}
 .meta{text-align:right;font-size:13px;opacity:.95}.meta b{font-size:15px}
+.ui-toggle{border:1px solid currentColor;background:transparent;color:inherit;border-radius:999px;padding:4px 12px;min-height:36px;font:inherit;font-weight:800;cursor:pointer}
 .btn{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:999px;padding:5px 12px;cursor:pointer;font:inherit;margin-top:6px}
 .bar{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 0}
 .tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
@@ -244,6 +245,7 @@ body.ov-open{position:fixed;width:100%;overflow:hidden}
   #desk{display:none!important}
   #mapp{display:flex;flex-direction:column;min-height:100dvh;background:var(--bg);color:var(--tx)}
   .mhead{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--line);padding:10px 12px 8px}
+  .mhead .mtop{display:flex;justify-content:space-between;align-items:center;gap:8px}
   .mhead h1{margin:0;font-size:18px}
   .mtools{display:flex;gap:8px;align-items:center;margin-top:8px}
   .mtools .tz{margin:0}
@@ -267,9 +269,110 @@ body.ov-open{position:fixed;width:100%;overflow:hidden}
   .overlay{align-items:stretch;padding:0}
   .overlay .modal{width:100%;height:100dvh;max-height:100dvh;border-radius:0;padding:12px 14px calc(18px + env(safe-area-inset-bottom))}
 }
+
+/* ===== 今日吃瓜报（新版）. Classic stays on #desk / #mapp. ===== */
+html[data-ui=new]{--bg:#ECE7DE;--bg2:#F3EEE4;--card:#F7F3EC;--line:#E4DFD6;--tx:#1F1D1A;--mut:#6E665A;--acc:#4A6FA5;--acc2:#3F5F8F;--ok:#3F6B4A;--warn:#C9824A;--rumor:#9A5A2B;--shadow:0 1px 2px rgba(60,45,30,.05)}
+html[data-ui=new] body{background:#ECE7DE;color:#1F1D1A}
+html[data-ui=new] #desk,html[data-ui=new] #mapp{display:none!important}
+html[data-ui=classic] #paper{display:none!important}
+#paper{display:block;min-height:100dvh;background:#ECE7DE;color:#1F1D1A;font-family:"Noto Sans CJK SC","Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+.pmast{background:#F3EEE4;border-bottom:3px double #1F1D1A;padding:10px 16px 8px}
+.pmast-in{max-width:1180px;margin:0 auto}
+.pmast-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.pmast h1{margin:0;flex:1;text-align:center;font-family:"Noto Serif CJK SC","Source Han Serif SC","Songti SC",serif;font-size:28px;font-weight:900;letter-spacing:6px;line-height:1.15}
+.pmast .tz{border-color:#D9D3C8;background:#F7F3EC}
+.pmast .tz button{color:#1F1D1A;min-height:36px}
+.pmast .tz button.on{background:#4A6FA5;color:#fff}
+.pml{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:#5E574C;border-top:1px solid #1F1D1A;margin-top:6px;padding-top:4px}
+.pinner{max-width:1180px;margin:0 auto;padding:12px 16px 28px}
+.ptools{display:flex;gap:8px;align-items:center;margin:0 0 10px;flex-wrap:wrap}
+.pfilters{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.pfilters button{flex:0 0 auto;min-height:36px;padding:6px 12px;border-radius:999px;border:1px solid #E4DFD6;background:#F7F3EC;color:#5E574C;font:inherit}
+.pfilters button.on{background:#4A6FA5;border-color:#4A6FA5;color:#fff}
+#pq{flex:1;min-width:140px;min-height:36px;border-radius:10px;border:1px solid #E4DFD6;background:#F7F3EC;color:#1F1D1A;padding:6px 10px;font:inherit}
+.pnav{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;background:#F3EEE4;border-top:1px solid #D9D3C8;padding-bottom:env(safe-area-inset-bottom)}
+.pnav button{flex:1;min-height:56px;border:0;background:transparent;color:#8A8274;font-family:"Noto Serif CJK SC","Source Han Serif SC",serif;font-weight:800;font-size:15px;cursor:pointer}
+.pnav button i{display:block;font-style:normal;font-family:"Noto Sans CJK SC","PingFang SC",sans-serif;font-size:10px;font-weight:400;margin-top:1px}
+.pnav button.on{color:#1F1D1A;box-shadow:inset 0 3px 0 #4A6FA5}
+.pnav button.on.o{box-shadow:inset 0 3px 0 #C9824A}
+#pbody{padding-bottom:76px}
+.pcard{background:#F7F3EC;border:1px solid #E4DFD6;border-radius:12px;box-shadow:0 1px 2px rgba(60,45,30,.05);padding:12px 14px;margin:0 0 10px;position:relative;overflow:hidden}
+.pcard.tk{box-shadow:inset 3px 0 0 #4A6FA5,0 1px 2px rgba(60,45,30,.05)}
+.pcard.nw{box-shadow:inset 3px 0 0 #C9824A,0 1px 2px rgba(60,45,30,.05)}
+.pcard.pin{background:#F3EEE4;border:1px dashed #4A6FA5;box-shadow:none}
+.pkick{font-size:11px;letter-spacing:1.5px;font-weight:800;color:#4A6FA5}
+.pkick.ap{color:#C9824A}
+.phero h2,.ptitle{font-family:"Noto Serif CJK SC","Source Han Serif SC","Songti SC",serif;font-weight:900;line-height:1.28;margin:4px 0}
+.phero h2{font-size:22px}
+.ptitle{font-size:17px}
+.psum{color:#4A453E;line-height:1.5;margin:0}
+.psum.one{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.pprog{font-size:13px;background:#EEF2F6;border-left:2px solid #C5D3E4;padding:5px 8px;margin-top:8px;border-radius:0 6px 6px 0;color:#3A352E}
+.pprog i{font-style:normal;color:#7A7368;margin-right:6px}
+.phr{display:flex;align-items:center;gap:8px;margin-top:8px}
+.pstamp{display:inline-block;border:2px solid #9E2B1F;color:#9E2B1F;font-family:"Noto Serif CJK SC","Source Han Serif SC",serif;font-weight:900;font-size:13px;padding:0 5px;border-radius:3px;transform:rotate(-6deg);line-height:1.35}
+.pstamp.q{border-color:#C9824A;color:#9A5A2B}
+.pstamp.g{border-color:#8E96A1;color:#5D6673}
+.pbadge{font-size:12px;font-weight:800;padding:1px 7px;border-radius:5px}
+.pbadge.re{background:#D5E0EE;color:#2F4A73}
+.pbadge.wen{background:#E7EDF4;color:#3F5F8F}
+.pnum{font-size:12px;font-weight:700;color:#3A352E;white-space:nowrap}
+.phb{flex:1;height:4px;background:#E6E1D8;border-radius:2px;min-width:24px}
+.phb i{display:block;height:100%;border-radius:2px;background:#4A6FA5}
+.phb.ap i{background:#C9824A}
+.pdot{width:7px;height:7px;border-radius:50%;background:#9E2B1F;display:inline-block;margin:0 4px 0 6px;vertical-align:middle}
+.pnt{font-size:12px;color:#9E2B1F;font-weight:600;font-family:"Noto Sans CJK SC","PingFang SC",sans-serif}
+.psm{margin-left:auto;font-family:"Noto Sans CJK SC","PingFang SC",sans-serif;font-size:11px;font-weight:400;color:#7A7368;white-space:nowrap}
+.pinl{font-size:11px;font-weight:800;color:#fff;background:#4A6FA5;border-radius:3px;padding:1px 6px;margin-right:6px}
+.prow-top{display:flex;align-items:baseline;gap:6px}
+.psec{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:12px;color:#6E665A;margin:8px 2px}
+.psec b{color:#9A5A2B}
+.psec button{border:0;background:none;color:#6E665A;font:inherit;cursor:pointer;padding:4px}
+.pwhy{font-size:12px;font-weight:800;color:#9A5A2B;background:#F3EBE3;border-radius:10px;padding:2px 8px}
+.porig{background:#F3EFE6;border:1px solid #E4DFD6;border-radius:8px;padding:6px 8px;margin-top:8px}
+.poh{display:flex;align-items:center;gap:6px;color:#7A7368;font-size:12px}
+.poh .plogo{width:16px;height:16px}
+#paper .oline.clamp{max-height:calc(1.45em * 2);line-height:1.45;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}
+#paper .xmore{color:#4A6FA5;min-height:44px}
+.pcard.nw .xmore{color:#9A5A2B}
+.pmtr{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:12px;color:#6E665A}
+.pacts{display:flex;gap:8px;margin-top:8px}
+.pacts button{flex:1;min-height:44px;border-radius:10px;border:1px solid #E4DFD6;background:#F7F3EC;color:#5A564E;font:inherit;font-size:15px;cursor:pointer}
+.pacts button.p{background:#4A6FA5;border-color:#4A6FA5;color:#fff;font-weight:800}
+.pfoot{text-align:center;font-size:11px;color:#8A8172;margin-top:6px}
+.phit{display:block;width:100%;text-align:left;background:none;border:0;color:inherit;font:inherit;padding:0;cursor:pointer}
+.ptl{border-left:2px solid #D5DEEA;margin:12px 0 0 6px;padding-left:14px}
+.pnode{position:relative;margin:0 0 14px}
+.pnode:before{content:"";position:absolute;left:-21px;top:4px;width:10px;height:10px;border-radius:50%;background:#F7F3EC;border:2px solid #C5D3E4}
+.pnode.f:before{background:#4A6FA5;border-color:#4A6FA5;box-shadow:0 0 0 4px #E7EDF4}
+.pnh{font-size:12px;color:#7A7368;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.pnn{font-family:"Noto Serif CJK SC","Source Han Serif SC",serif;font-size:15px;font-weight:800;margin:3px 0;line-height:1.4}
+.pnode.f .pnn{color:#34507E}
+html[data-ui=new] .overlay{align-items:flex-end;padding:0}
+html[data-ui=new] .overlay .backdrop{background:rgba(40,35,28,.4)}
+html[data-ui=new] .overlay .modal{width:min(760px,100%);max-height:min(88dvh,920px);margin-top:8dvh;border-radius:20px 20px 0 0;background:#F7F3EC;color:#1F1D1A;box-shadow:0 1px 2px rgba(60,45,30,.06)}
+html[data-ui=new] .xclose{background:#F3EEE4;border-color:#E4DFD6;color:#1F1D1A}
+@media(min-width:900px){
+  .pmast h1{font-size:40px;letter-spacing:10px}
+  .pnav{position:static;border-top:0;border-bottom:1px solid #D9D3C8;margin:-4px 0 12px}
+  #pbody{padding-bottom:12px}
+  .playout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(280px,.85fr);gap:18px;align-items:start}
+  .pevents{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .pevents .pcard.pin,.prail{grid-column:auto}
+  .phero{margin-bottom:10px}
+  .pleads{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+  .pleads .psec{grid-column:1 / -1}
+  .pheat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  html[data-ui=new] .overlay{align-items:center;padding:28px}
+  html[data-ui=new] .overlay .modal{border-radius:16px;margin-top:0}
+}
+@media(max-width:899px){
+  .prail-heat{display:none}
+  .pmast h1{font-size:26px;letter-spacing:4px}
+}
 </style></head><body>
 <div id="desk"><div class="sticky-top"><header><div class="wrap"><div><h1>🕵️ 中国大厂八卦追踪看板<small>CHINA BIG-TECH GOSSIP TRACKER</small></h1></div>
-<div class="meta">最新一期：<b id="latest"></b><br>看板生成：<span id="built"></span><br><select class="themesel" id="theme" aria-label="主题"><option value="dark">🌙 暗色看板</option><option value="paper">📰 报刊杂志</option><option value="feed">📱 简约信息流</option><option value="hot">🔥 热榜数据</option></select></div></div></header>
+<div class="meta">最新一期：<b id="latest"></b><br>看板生成：<span id="built"></span><br><button type="button" class="ui-toggle" data-ui-set="new">新版</button> <select class="themesel" id="theme" aria-label="主题"><option value="dark">🌙 暗色看板</option><option value="paper">📰 报刊杂志</option><option value="feed">📱 简约信息流</option><option value="hot">🔥 热榜数据</option></select></div></div></header>
 <div class="bar"><div class="wrap"><div class="barhead"><div class="tabs" id="tabs"></div><div class="tz" id="tz" role="group" aria-label="显示时区"><button type="button" data-tz="cst" class="on" aria-pressed="true">北京时间</button><button type="button" data-tz="utc" aria-pressed="false">UTC</button></div></div>
 <div class="filters"><select id="fco"><option value="">全部公司</option></select>
 <select id="ftag"><option value="">实锤 + 传闻</option><option>实锤</option><option>传闻</option></select>
@@ -289,11 +392,18 @@ body.ov-open{position:fixed;width:100%;overflow:hidden}
 <footer><div class="wrap">数据来源：data/*.json（每期简报结构化存档）、topics.md、heat_log.csv、x_cache.json。看板只展示文件里已有的内容。【传闻】是单方面说法。X 正文来自缓存，打不开原站时仍可阅读。</div></footer>
 </div>
 <div id="mapp">
-<header class="mhead"><h1>🕵️ 大厂八卦</h1><div class="note" id="mbuilt"></div>
+<header class="mhead"><div class="mtop"><h1>🕵️ 大厂八卦</h1><button type="button" class="ui-toggle" data-ui-set="new">新版</button></div><div class="note" id="mbuilt"></div>
 <div class="mtools"><input id="mq" type="search" placeholder="搜公司 / 内容" enterkeyhint="search"><div class="tz" role="group" aria-label="显示时区"><button type="button" data-tz="cst">北京时间</button><button type="button" data-tz="utc">UTC</button></div></div>
 <div class="mfilters" id="mfilters"></div></header>
 <main id="mbody"></main>
 <nav class="mtabs" id="mnav"><button type="button" data-tab="feed">动态</button><button type="button" data-tab="heat">热榜</button><button type="button" data-tab="track">追踪</button></nav>
+</div>
+<div id="paper">
+<header class="pmast"><div class="pmast-in"><div class="pmast-top"><button type="button" class="ui-toggle" data-ui-set="classic">经典版</button><h1>今日吃瓜报</h1><div class="tz" role="group" aria-label="显示时区"><button type="button" data-tz="cst">北京时间</button><button type="button" data-tz="utc">UTC</button></div></div>
+<div class="pml"><span id="pdate"></span><span id="pissue"></span></div></div></header>
+<div class="pinner"><div class="ptools"><div class="pfilters" id="pfilters"></div><input id="pq" type="search" placeholder="搜公司 / 内容" enterkeyhint="search"></div>
+<nav class="pnav" id="pnav"><button type="button" data-ptab="home">头版<i>追踪中</i></button><button type="button" data-ptab="leads" class="o">新瓜<i>未立案</i></button><button type="button" data-ptab="heat">热榜<i>热度排行</i></button></nav>
+<main id="pbody"></main></div>
 </div>
 <div id="overlay" class="overlay" hidden><div class="backdrop" data-close="1"></div><div class="modal" role="dialog" aria-modal="true" aria-labelledby="ovtitle" tabindex="-1"><button type="button" class="xclose" data-close="1">关闭</button><div id="ovbody"></div></div></div>
 <script>
