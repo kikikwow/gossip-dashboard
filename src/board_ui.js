@@ -107,11 +107,14 @@
     const stamps = H.map(r => r.timestamp_utc).filter(Boolean).sort();
     const asof = stamps.length ? fmtTs(stamps[stamps.length - 1]) : '未知';
     const dailyN = H.filter(r => r.metric === 'x_daily_post_count').length;
-    return `<div class="heat-how"><b>热度怎么算</b>
+    return `<div class="heat-how"><div class="heat-head"><b>热度怎么算</b><button type="button" class="xmore heat-toggle" aria-expanded="false">展开</button></div>
+<p class="heat-brief">热度榜按 heat_log 里该话题最近完整 UTC 日的 X 发帖量排序；卡片「浏览」是另一套链接浏览量。</p>
+<div class="heat-full">
 <p>热度榜不是加权综合分。榜上的数字是 heat_log.csv 里该话题指标 x_daily_post_count 的<strong>最近一个完整 UTC 日发帖量</strong>（按当时的 X 检索式统计当天帖子数），从高到低取前 10。这个话题如果没有日发帖量，才退回时间上最后一条其他指标。</p>
 <p>折线按时间排同一指标。图上有纵轴刻度、每个点的精确值，以及最后两个完整日的差额。名字里带 partial 的是采集截止前的未完成日，只补在图末尾，<strong>不参与排名</strong>。</p>
 <p>卡片上的「浏览」是另一套数：该条 links 浏览量的最大值（万/亿/k/M）。热榜皮肤按它排序；≥10 万标「爆」，≥1 万标「热」。条宽用相对最大值的平方根，避免头部把其余挤没。</p>
-<p>topics.md 里的「热度：待更新」是编辑备注，不是算出来的。这份快照有 ${H.length} 条热度记录（日发帖 ${dailyN} 条），最新时间 ${esc(asof)}。榜单不会每小时自己滚，要更新得重新采集、追加 csv，再跑构建。</p></div>`;
+<p>topics.md 里的「热度：待更新」是编辑备注，不是算出来的。这份快照有 ${H.length} 条热度记录（日发帖 ${dailyN} 条），最新时间 ${esc(asof)}。榜单不会每小时自己滚，要更新得重新采集、追加 csv，再跑构建。</p>
+</div></div>`;
   }
   function topicSeries(topic) {
     const H = D.heat || [];
@@ -364,6 +367,18 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
       mtab = 'feed';
       document.querySelectorAll('#tabs .tab').forEach(x => x.classList.toggle('on', x.dataset.t === state.type));
       render();
+      return;
+    }
+    const heatBtn = e.target.closest('.heat-toggle');
+    if (heatBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      const how = heatBtn.closest('.heat-how');
+      if (how) {
+        const open = how.classList.toggle('is-open');
+        heatBtn.textContent = open ? '收起' : '展开';
+        heatBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
       return;
     }
     const box = e.target.closest('.clampbox');
