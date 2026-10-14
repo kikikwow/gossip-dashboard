@@ -43,6 +43,18 @@
   function posts() {
     return (D.x_cache && D.x_cache.posts) || {};
   }
+  function didiName() {
+    return PostUI.trackerName(D.longterm);
+  }
+  function displayLabel(s) {
+    return PostUI.displayLabel(s, didiName());
+  }
+  function didiItems() {
+    return ITEMS.filter(matchesDidi).map(function (it) {
+      const e = it._e || {};
+      return Object.assign({}, it, { section: it._sec || it.section || '', edition_date: e.edition_date || e.timestamp || '', edition_ts: e.timestamp || '' });
+    });
+  }
   function itemOrig(it) {
     return PostUI.origBlock(PostUI.primaryOf(it, posts()), { clamp: true, formatTime: fmtTs });
   }
@@ -201,7 +213,7 @@
   function itemStory(it) {
     const d = it.detail || {};
     const parent = parentEvent(it);
-    const title = d.title || (parent ? parent.detail.title : headline(it));
+    const title = displayLabel(d.title || (parent ? parent.detail.title : headline(it)));
     const sum = d.summary || it.text || '';
     return { title: title, parent: parent, sum: sum, kicker: d.summary ? '摘要' : '条目摘要', fx: firstX(it) };
   }
@@ -219,9 +231,9 @@
   function card(it) {
     const e = it._e;
     const badge = it._views >= 1e5 ? '爆' : it._views >= 1e4 ? '热' : '';
-    return `<article class="card" data-id="${esc(it.id)}" style="--c:${it._col}"><div class="heatbar">${it._views ? `<b>${fmt(it._views)}</b> 浏览${badge ? `<span class="hotb">${badge}</span>` : ''}<div class="hbar"><i style="width:${(Math.sqrt(it._views / MAXV) * 100).toFixed(1)}%"></i></div>` : '<span>暂无浏览数据</span>'}</div><div class="top"><span class="pill">${hl(it.company)}</span>${it.detail ? '<span class="rich">深度</span>' : ''}
+    return `<article class="card" data-id="${esc(it.id)}" style="--c:${it._col}"><div class="heatbar">${it._views ? `<b>${fmt(it._views)}</b> 浏览${badge ? `<span class="hotb">${badge}</span>` : ''}<div class="hbar"><i style="width:${(Math.sqrt(it._views / MAXV) * 100).toFixed(1)}%"></i></div>` : '<span>暂无浏览数据</span>'}</div><div class="top"><span class="pill">${hl(displayLabel(it.company))}</span>${it.detail ? '<span class="rich">深度</span>' : ''}
 <span class="badge ${it.tag === '实锤' ? 'b-real' : 'b-rum'}">【${esc(it.tag)}】</span>${(it.source_types || []).map(s => `<span class="src">${esc(s)}</span>`).join('')}<span class="date spanline" title="${esc(SPAN_TIP)}">${esc(eventSpan(it))}</span></div>
-<div class="secn">${esc(TYPES[e.type] || e.type)} · ${esc(it._sec)} ${it._views ? `<span class="hbadge" title="浏览=该条链接里最高浏览量，不是热度榜的日发帖量。≥10万爆，≥1万热。">${fmt(it._views)} 浏览${badge ? ' ' + badge : ''}</span> <span class="note">按该条链接最高浏览量</span>` : '<span class="note">这条没有浏览量</span>'}</div>${storyBlock(it, true)}
+<div class="secn">${esc(TYPES[e.type] || e.type)} · ${esc(displayLabel(it._sec))} ${it._views ? `<span class="hbadge" title="浏览=该条链接里最高浏览量，不是热度榜的日发帖量。≥10万爆，≥1万热。">${fmt(it._views)} 浏览${badge ? ' ' + badge : ''}</span> <span class="note">按该条链接最高浏览量</span>` : '<span class="note">这条没有浏览量</span>'}</div>${storyBlock(it, true)}
 <button type="button" class="more open-ev" data-id="${esc(it.id)}">查看事件详情</button><div class="links">${linksHtml(it)}</div></article>`;
   }
   function renderHero() {
@@ -229,7 +241,7 @@
       const L = ITEMS.filter(isRide).slice(0, 3);
       $('#herolbl').textContent = L.length ? `网约车匹配 ${ITEMS.filter(isRide).length} 条` : '';
       const grads = ['linear-gradient(135deg,#ff6b4a,#c2185b)', 'linear-gradient(135deg,#7c3aed,#4f46e5)', 'linear-gradient(135deg,#0ea5e9,#0d9488)'];
-      $('#hero').innerHTML = L.length ? L.map((it, i) => `<div class="herocard" style="background:${grads[i]}"><div class="big">${i + 1}</div><div class="co">${esc(it.company)}</div><div class="ed spanline">${esc(eventSpan(it))}</div><p>${esc(it.text)}</p>${itemOrig(it)}<button type="button" class="more open-ev" data-id="${esc(it.id)}" style="color:#fff">事件详情</button></div>`).join('') : '<p class="empty">暂无滴滴相关条目，每小时追踪中</p>';
+      $('#hero').innerHTML = L.length ? L.map((it, i) => `<div class="herocard" style="background:${grads[i]}"><div class="big">${i + 1}</div><div class="co">${esc(displayLabel(it.company))}</div><div class="ed spanline">${esc(eventSpan(it))}</div><p>${esc(it.text)}</p>${itemOrig(it)}<button type="button" class="more open-ev" data-id="${esc(it.id)}" style="color:#fff">事件详情</button></div>`).join('') : '<p class="empty">暂无滴滴相关条目，每小时追踪中</p>';
       return;
     }
     const eds = D.editions.filter(e => !state.type || e.type === state.type);
@@ -241,7 +253,7 @@
       const s = e.sections.find(x => x.title === t.section);
       const it = s && s.items[t.index];
       if (!it) return '';
-      return `<div class="herocard" style="background:${grads[i]}"><div class="big">${i + 1}</div><div class="co">${esc(it.company)}</div><div class="ed spanline">${esc(eventSpan(it))}</div><p>${esc(it.text)}</p>${itemOrig(it)}<button type="button" class="more open-ev" data-id="${esc(it.id)}" style="color:#fff">事件详情</button></div>`;
+      return `<div class="herocard" style="background:${grads[i]}"><div class="big">${i + 1}</div><div class="co">${esc(displayLabel(it.company))}</div><div class="ed spanline">${esc(eventSpan(it))}</div><p>${esc(it.text)}</p>${itemOrig(it)}<button type="button" class="more open-ev" data-id="${esc(it.id)}" style="color:#fff">事件详情</button></div>`;
     }).join('');
   }
   function heatPanel() {
@@ -383,7 +395,7 @@
     return Math.max(4, Math.round(100 * rank.last.value / max));
   }
   function secLabel(it) {
-    return String(it._sec || '').replace(/[\u{1F300}-\u{1FAFF}\u2600-\u27BF]/gu, '').trim();
+    return displayLabel(String(it._sec || '').replace(/[\u{1F300}-\u{1FAFF}\u2600-\u27BF]/gu, '').trim());
   }
   function whyPill(it) {
     if (it._views) return '浏览 ' + fmt(it._views);
@@ -429,10 +441,37 @@
   }
   function pinCard() {
     if (!showPin()) return '';
-    const rides = ITEMS.filter(it => isRide(it) && match(it));
-    const top = rides.slice().sort((a, b) => (b._views || 0) - (a._views || 0))[0];
-    const sum = rides.length ? esc(top.company) + ' · ' + rides.length + ' 条' : '暂无新进展';
-    return '<article class="pcard pin"><div class="prow-top"><span class="pinl">置顶</span><b class="ptitle" style="font-size:16px;margin:0">滴滴 & 滴滴出海</b><span class="psm">每小时追踪中</span></div><p class="psum" style="margin-top:4px;color:#7A7368">' + sum + '</p>' + (top ? heatRow(top._views) : '') + '</article>';
+    const rows = ITEMS.filter(matchesDidi);
+    const top = rows.slice().sort((a, b) => (b._views || 0) - (a._views || 0))[0];
+    const tl = PostUI.didiTimeline(rows.map(function (it) {
+      const e = it._e || {};
+      return Object.assign({}, it, { section: it._sec || it.section || '', edition_date: e.edition_date || e.timestamp || '', edition_ts: e.timestamp || '' });
+    }));
+    const n = (tl.shown || []).length;
+    const sum = n ? esc(displayLabel(top.company)) + ' · ' + n + ' 条' : '暂无新进展';
+    return '<article class="pcard pin"><button type="button" class="phit open-ev" data-id="ride:didi"><div class="prow-top"><span class="pinl">置顶</span><b class="ptitle" style="font-size:16px;margin:0">' + esc(didiName()) + '</b><span class="psm">每小时追踪中</span></div><p class="psum" style="margin-top:4px;color:#7A7368">' + sum + '</p>' + (top ? heatRow(top._views) : '') + '</button></article>';
+  }
+  function didiNode(it, paper, first) {
+    const post = PostUI.primaryOf(it, posts());
+    const orig = PostUI.origBlock(post, { clamp: true, formatTime: fmtTs });
+    const co = displayLabel(it.company);
+    if (paper) return '<div class="pnode' + (first ? ' f' : '') + '"><div class="pnh">' + esc(it.date || '') + ' · ' + esc(co) + '</div><div class="pnn">' + esc(it.text || '') + '</div>' + orig + '</div>';
+    return '<div class="tl"><b>' + esc(it.date || '') + '</b> ' + esc(co) + '<div>' + esc(it.text || '') + '</div>' + orig + '</div>';
+  }
+  function didiGroup(title, list, paper) {
+    if (!list.length) return '';
+    const body = list.map((it, i) => didiNode(it, paper, i === 0)).join('');
+    if (paper) return '<h3 style="margin:16px 0 6px;font-size:16px">' + esc(title) + '</h3><div class="ptl">' + body + '</div>';
+    return '<section class="ov-sec"><h3>' + esc(title) + '</h3><p class="note">最新在上</p>' + body + '</section>';
+  }
+  function didiOverlay() {
+    const tl = PostUI.didiTimeline(didiItems());
+    const paper = document.documentElement.dataset.ui !== 'classic';
+    const n = (tl.foreign || []).length + (tl.rest || []).length;
+    const head = paper
+      ? '<div class="pkick">追踪 · 最新在上</div><h2 id="ovtitle" class="ptitle" style="font-size:22px">' + esc(didiName()) + '</h2><p class="psum">每小时追踪 · ' + n + ' 条线索' + ((tl.stubs || []).length ? ' · 另有 ' + tl.stubs.length + ' 条小时记录' : '') + '</p>'
+      : '<h2 id="ovtitle">' + esc(didiName()) + '</h2><p class="note">每小时追踪 · 最新在上 · ' + n + ' 条线索</p>';
+    return head + didiGroup('海外小语种线索', tl.foreign || [], paper) + didiGroup('其他线索', tl.rest || [], paper) + didiGroup('每小时记录', tl.stubs || [], paper);
   }
   function eventCard(g, hero) {
     const it = g.root;
@@ -530,7 +569,8 @@
     renderPaper();
     wireClamps(document);
     requestAnimationFrame(function () { wireClamps(document); });
-    if (openId) {
+    if (openId === 'ride:didi') $('#ovbody').innerHTML = didiOverlay();
+    else if (openId) {
       const it = ITEMS.find(x => x.id === openId);
       if (it) $('#ovbody').innerHTML = document.documentElement.dataset.ui === 'classic' ? detailHTML(it) : paperDetail(it);
     }
@@ -542,7 +582,7 @@
 
   function detailHTML(it) {
     const d = it.detail || {};
-    const title = (d.title) || (it.company + '：' + it.text.slice(0, 30));
+    const title = displayLabel((d.title) || (it.company + '：' + it.text.slice(0, 30)));
     const tl = d.timeline || [];
     const tr = d.x_trend;
     let trend = '';
@@ -555,7 +595,7 @@
     const ui = document.documentElement.dataset.ui === 'classic' ? 'classic' : 'new';
     return `<h2 id="ovtitle">${esc(title)}</h2>
 <div class="note spanline" title="${esc(SPAN_TIP)}">${esc(eventSpan(it))}</div>
-<div class="meta" style="margin:8px 0"><span class="pill">${esc(it.company)}</span> <span class="badge ${it.tag === '实锤' ? 'b-real' : 'b-rum'}">【${esc(it.tag)}】</span> ${heatRow(it._views)}</div>
+<div class="meta" style="margin:8px 0"><span class="pill">${esc(displayLabel(it.company))}</span> <span class="badge ${it.tag === '实锤' ? 'b-real' : 'b-rum'}">【${esc(it.tag)}】</span> ${heatRow(it._views)}</div>
 <p>${esc(d.summary || it.text)}</p>
 <section class="ov-sec"><h3>原文</h3>${allOrig(it)}</section>
 ${d.background ? `<section class="ov-sec"><h3>事件经过</h3><p>${esc(d.background)}</p></section>` : ''}
@@ -577,8 +617,9 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
     window.scrollTo(0, y);
   }
   function openEvent(id, fromPop) {
-    const it = ITEMS.find(x => x.id === id);
-    if (!it) return;
+    const synthetic = id === 'ride:didi';
+    const it = synthetic ? null : ITEMS.find(x => x.id === id);
+    if (!synthetic && !it) return;
     openId = id;
     if (!fromPop) {
       returnEl = document.activeElement;
@@ -589,7 +630,8 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
     } else if (!$('#overlay') || $('#overlay').hidden) {
       lockOpen();
     }
-    $('#ovbody').innerHTML = document.documentElement.dataset.ui === 'classic' ? detailHTML(it) : paperDetail(it);
+    $('#ovbody').innerHTML = synthetic ? didiOverlay() : (document.documentElement.dataset.ui === 'classic' ? detailHTML(it) : paperDetail(it));
+    wireClamps($('#ovbody'));
     const ov = $('#overlay');
     ov.hidden = false;
     const dlg = ov.querySelector('.modal');
@@ -614,7 +656,7 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
     const badge = it._views ? fmt(it._views) + (it._views >= 1e5 ? ' 爆' : it._views >= 1e4 ? ' 热' : '') : '无浏览';
     const s = itemStory(it);
     const prog = s.parent ? '<span class="prog">事件进展</span>' : '';
-    return `<article class="mcard" style="--c:${it._col}"><button type="button" class="mhit open-ev" data-id="${esc(it.id)}"><div class="mtop"><b>${esc(it.company)}</b><span class="hbadge" title="链接最高浏览量，不是热度榜日发帖量">${esc(badge)}</span></div><div class="mspan spanline">${esc(eventSpan(it))}</div>${prog}<h3 class="evtitle">${hl(s.title)}</h3></button><div class="kicker">${s.kicker}</div>${foldable('sum', hl(s.sum))}<div class="kicker">原文</div>${itemOrig(it)}<div class="links">${linksHtml(it)}</div></article>`;
+    return `<article class="mcard" style="--c:${it._col}"><button type="button" class="mhit open-ev" data-id="${esc(it.id)}"><div class="mtop"><b>${esc(displayLabel(it.company))}</b><span class="hbadge" title="链接最高浏览量，不是热度榜日发帖量">${esc(badge)}</span></div><div class="mspan spanline">${esc(eventSpan(it))}</div>${prog}<h3 class="evtitle">${hl(s.title)}</h3></button><div class="kicker">${s.kicker}</div>${foldable('sum', hl(s.sum))}<div class="kicker">原文</div>${itemOrig(it)}<div class="links">${linksHtml(it)}</div></article>`;
   }
   function mobileHeat() {
     const rows = rankRows();
@@ -749,6 +791,18 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
     render();
   });
 
+  function paintTrackerChrome() {
+    const slot = $('#didi-name');
+    if (slot) slot.textContent = didiName();
+    const sel = $('#fco');
+    if (sel && !sel.dataset.labeled) {
+      const cur = state.co || '';
+      const cos = [...new Set(ITEMS.flatMap(i => String(i.company || '').split(/\s*\/\s*/)).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'zh'));
+      sel.innerHTML = '<option value="">全部公司</option>' + cos.map(c => '<option value="' + esc(c) + '"' + (c === cur ? ' selected' : '') + '>' + esc(displayLabel(c)) + '</option>').join('');
+      sel.dataset.labeled = '1';
+    }
+  }
+  paintTrackerChrome();
   heatPanel();
   focusPanel();
   shortPanel();
