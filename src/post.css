@@ -1,0 +1,31 @@
+/* Shared original-post block, fold control, and heat badge. */
+.orig{margin:8px 0;padding:8px 10px;border-left:3px solid var(--acc2);background:color-mix(in srgb,var(--acc2) 8%,transparent);border-radius:0 10px 10px 0;overflow-wrap:anywhere}
+.orig .xtext{margin:4px 0;white-space:pre-wrap;line-height:1.45}
+.orig .clamp{overflow:hidden;max-height:calc(1.45em * 3);line-height:1.45;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3}
+.orig .clampbox.is-open .clamp{max-height:none;-webkit-line-clamp:unset;display:block}
+.orig .xmore{display:inline-flex;align-items:center;min-height:44px;padding:8px 4px;border:0;background:transparent;color:var(--acc);font:inherit;font-weight:800;cursor:pointer}
+.orig .xmore[hidden]{display:none!important}
+.orig .xmiss{color:var(--warn);font-weight:800;margin:4px 0}
+.orig .poh{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:12.5px}
+.orig .plogo{width:16px;height:16px;flex:0 0 auto;display:block}
+.orig a.ext{display:inline-flex;align-items:center;gap:4px}
+.orig-fold{display:none;margin-top:6px;padding-top:6px;border-top:1px dashed var(--line)}
+.clampbox.is-open .orig-fold{display:block}
+.langtag{font-size:11px;font-weight:800;letter-spacing:.04em;color:var(--mut)}
+html[data-ui=new] .orig{background:#F3EFE6;border:1px solid #E4DFD6;border-left:3px solid #4A6FA5;border-radius:8px;color:#1F1D1A}
+html[data-ui=new] .orig .clamp{-webkit-line-clamp:2;max-height:calc(1.45em * 2)}
+html[data-ui=new] .orig .xmore{color:#4A6FA5}
+html[data-ui=new] .orig .xmiss{color:#9A5A2B}
+html[data-ui=new] .langtag{color:#6E665A}
+.herocard .orig{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.4)}
+.herocard .orig .xmore,.herocard .orig .xmiss,.herocard .orig .langtag{color:#fff}
+.phr{display:flex;align-items:center;gap:8px;margin-top:8px}
+.pstamp{display:inline-block;border:2px solid #9E2B1F;color:#9E2B1F;font-family:"Noto Serif CJK SC","Source Han Serif SC",serif;font-weight:900;font-size:13px;padding:0 5px;border-radius:3px;transform:rotate(-6deg);line-height:1.35}
+.pbadge{font-size:12px;font-weight:800;padding:1px 7px;border-radius:5px}
+.pbadge.re{background:#D5E0EE;color:#2F4A73}
+.pbadge.wen{background:#E7EDF4;color:#3F5F8F}
+.pnum{font-size:12px;font-weight:700;color:#3A352E;white-space:nowrap}
+html[data-ui=classic] .pnum{color:inherit}
+.phb{flex:1;height:4px;background:#E6E1D8;border-radius:2px;min-width:24px}
+.phb i{display:block;height:100%;border-radius:2px;background:#4A6FA5}
+button.ptitle.phit{display:block;width:100%;text-align:left;background:none;border:0;color:inherit;padding:0;cursor:pointer;min-height:44px}

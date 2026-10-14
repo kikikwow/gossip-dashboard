@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="dark" data-ui="new"><head><script>try{var t=(location.hash.match(/theme=(\w+)/)||[])[1]||localStorage.getItem("gossipTheme");if(t)document.documentElement.dataset.theme=t;var q=new URLSearchParams(location.search).get("ui");var ui=(q==="classic"||q==="new")?q:localStorage.getItem("gossipUi");if(ui==="classic"||ui==="new")document.documentElement.dataset.ui=ui}catch(e){}</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark" data-ui="new"><head><script>try{var t=(location.hash.match(/theme=(\w+)/)||[])[1]||localStorage.getItem("gossipTheme");if(t)document.documentElement.dataset.theme=t;var q=new URLSearchParams(location.search).get("ui");var ui=(q==="classic"||q==="new")?q:localStorage.getItem("gossipUi");if(q==="classic"||q==="new"){try{localStorage.setItem("gossipUi",q)}catch(e){}}if(ui==="classic"||ui==="new")document.documentElement.dataset.ui=ui}catch(e){}</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>大厂八卦追踪看板</title>
 <meta name="description" content="中国大厂八卦 · 美股中概&出海 · 滴滴网约车追踪。实锤/传闻标注，每小时更新。">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,viewport-fit=cover">
@@ -370,7 +370,7 @@ html[data-ui=new] .xclose{background:#F3EEE4;border-color:#E4DFD6;color:#1F1D1A}
   .prail-heat{display:none}
   .pmast h1{font-size:26px;letter-spacing:4px}
 }
-</style></head><body>
+</style><link rel="stylesheet" href="src/post.css"></head><body>
 <div id="desk"><div class="sticky-top"><header><div class="wrap"><div><h1>🕵️ 中国大厂八卦追踪看板<small>CHINA BIG-TECH GOSSIP TRACKER</small></h1></div>
 <div class="meta">最新一期：<b id="latest"></b><br>看板生成：<span id="built"></span><br><button type="button" class="ui-toggle" data-ui-set="new">新版</button> <select class="themesel" id="theme" aria-label="主题"><option value="dark">🌙 暗色看板</option><option value="paper">📰 报刊杂志</option><option value="feed">📱 简约信息流</option><option value="hot">🔥 热榜数据</option></select></div></div></header>
 <div class="bar"><div class="wrap"><div class="barhead"><div class="tabs" id="tabs"></div><div class="tz" id="tz" role="group" aria-label="显示时区"><button type="button" data-tz="cst" class="on" aria-pressed="true">北京时间</button><button type="button" data-tz="utc" aria-pressed="false">UTC</button></div></div>
@@ -489,5 +489,6 @@ function ridePanel(){const L=ITEMS.filter(isRide);
 
 window.D=D;window.ITEMS=ITEMS;window.$=$;window.esc=esc;window.fmt=fmt;window.fmtTs=fmtTs;window.parseTs=parseTs;window.fmtHeatDay=fmtHeatDay;window.state=state;window.paintHeader=paintHeader;window.paintTz=paintTz;window.isRide=isRide;window.focusPanel=focusPanel;window.timeline=timeline;window.ridePanel=ridePanel;window.hl=hl;window.match=match;window.MAXV=MAXV;window.TYPES=TYPES;
 </script>
+<script src="src/post_ui.js"></script>
 <script src="src/board_ui.js"></script>
 </body></html>

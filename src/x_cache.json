@@ -1,7 +1,7 @@
 {
  "source": "https://api.fxtwitter.com/status/{id}",
  "fetched_at": "2026-10-13T16:02:14Z",
- "note": "静态缓存。正文只来自抓取结果；失败项 status=missing，页面显示「正文未缓存」。不覆盖 data JSON 里已有的浏览/点赞数字。",
+ "note": "静态缓存。正文只来自抓取结果；失败项 status=missing，页面显示「原文未缓存」。不覆盖 data JSON 里已有的浏览/点赞数字。",
  "posts": {
   "2106320822444949760": {
    "status": "ok",
