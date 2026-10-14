@@ -362,3 +362,8 @@ timestamp_utc,topic,metric,value,source
 2026-10-14T09:16:00Z,滴滴 & 滴滴出海,x_hourly_post_count_task_broad_08Z,1312,X q=(滴滴 OR DiDi OR 程维 OR 花小猪 OR 99app); auxiliary wide sample
 2026-10-14T09:16:00Z,滴滴 & 滴滴出海,x_post_count_task_broad_09Z_partial,316,"X same auxiliary, 09:00-09:15Z"
 2026-10-14T09:16:00Z,滴滴海外/China-units,x_tier1_slot2_hits_kept_0810to0916Z,0,tier1×8+slot2×3; cn_price secondary only; no alert material
+2026-10-14T10:16:00Z,滴滴 & 滴滴出海,x_hourly_post_count_broad_09Z,256,"X q=滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"; ↓ from 08Z=290"
+2026-10-14T10:16:00Z,滴滴 & 滴滴出海,x_post_count_broad_10Z_partial,49,"X same broad, 10:00-10:14Z"
+2026-10-14T10:16:00Z,滴滴 & 滴滴出海,x_hourly_post_count_task_broad_09Z,1506,X q=(滴滴 OR DiDi OR 程维 OR 花小猪 OR 99app); auxiliary wide sample ↑ from 08Z=1312
+2026-10-14T10:16:00Z,滴滴 & 滴滴出海,x_post_count_task_broad_10Z_partial,550,"X same auxiliary, 10:00-10:14Z"
+2026-10-14T10:16:00Z,滴滴出海/LatAm-finance,x_tier1_slot0_hits_kept_0910to1016Z,0,tier1×8+slot0×3; cn_price secondary only; no alert material
