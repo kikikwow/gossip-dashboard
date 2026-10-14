@@ -1,6 +1,6 @@
 {
  "source": "https://api.fxtwitter.com/status/{id}",
- "fetched_at": "2026-10-14T08:54:18Z",
+ "fetched_at": "2026-10-14T09:38:15Z",
  "note": "静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。",
  "posts": {
   "2106320822444949760": {
@@ -1457,6 +1457,36 @@
    "bookmarks": 0,
    "url": "https://x.com/dragono64v/status/2110278215579381763",
    "fetched_at": "2026-10-14T08:54:18Z"
+  },
+  "2110287234629071037": {
+   "status": "ok",
+   "text": "@0xTheo520 因为你用简体字要给你推广告啊😅你用繁体就判定你是国外用户，要给人家留下好印象，所以说就不推了😅（滴滴真他妈恶心，有人懂吗）",
+   "author": "@xiaobaix2",
+   "name": "xiaobai",
+   "created_at": "2026-10-14T08:30:58Z",
+   "views": 227,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/xiaobaix2/status/2110287234629071037",
+   "fetched_at": "2026-10-14T09:38:15Z"
+  },
+  "2110289680595886537": {
+   "status": "ok",
+   "text": "滴滴涉嫌国籍歧视！\n\n滴滴简体的价格🇨🇳 VS 滴滴繁体的价格🇹🇼",
+   "author": "@Furinanatw",
+   "name": "芙宁娜娜💙(2号）",
+   "created_at": "2026-10-14T08:40:41Z",
+   "views": 1250,
+   "likes": 5,
+   "reposts": 1,
+   "replies": 1,
+   "quotes": 0,
+   "bookmarks": 1,
+   "url": "https://x.com/Furinanatw/status/2110289680595886537",
+   "fetched_at": "2026-10-14T09:38:15Z"
   }
  }
 }

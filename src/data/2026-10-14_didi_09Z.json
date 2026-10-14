@@ -1,0 +1,140 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-14T09:16:00Z",
+ "fired_at_utc": "2026-10-14T09:13:00Z",
+ "scanned_at_utc": "2026-10-14T09:16:00Z",
+ "beijing_time": "2026-10-14 17:16 Asia/Shanghai",
+ "edition_date": "2026-10-14",
+ "window": {
+  "start_utc": "2026-10-14T08:10:00Z",
+  "end_utc": "2026-10-14T09:16:00Z",
+  "note": "自上轮 16:12（北京时间）以来；Tier2 slot2（中国其他业务线：自动驾驶/送货/小桔/青桔/代驾/顺风车/小鹏MONA/孙枢/付强）回看约 6 小时；Tier3 跳过（日间已跑）"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无新的可核验公司事实。Tier1 cn_price 命中2帖均为繁简价差二次扩散（@Furinanatw impressions=582、@xiaobaix2=184），主线已于05Z报警，无公司新回应或新证据；其余 tier1（cn_gossip/HK-TW/BR/MX/EN）均0帖。Slot2 三查询命中均为无实体/t.co-only article 或 po18 黑名单假阳性，按 postfilter 丢弃。Web：内部信/裁员仍为旧闻或2026-07反舞弊/5月会员调整；繁简仍为 unwire/LIHKG/Threads@onlyu0913 已报线索；香港牌照为8月申请开放旧闻；Threads 无登录未命中原帖；99Food TJ-SP/Keeta 排他为9月末旧裁决（已记）；MX PROFECO/裁员为2020–2023旧闻；自动驾驶融资/R2载客、送货金秋季、小桔充电更名、花小猪投诉/权益分为PR或慢性投诉，非本期新八卦。RSS 新匹配1条（Bloomberg Anthropic，非滴滴）。已覆盖的 JP 资本、MX Puebla、繁简主帖、99Food TJSP 不重复报警。",
+ "sections": [
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "公开媒体",
+      "RSS"
+     ],
+     "date": "10-14 17:16",
+     "text": "本期无新动态。扫描窗口 08:10Z–09:16Z（北京时间约 16:10–17:16）。Tier1 全量 + Tier2 slot2（中国其他业务线）未见可发布的新公司八卦、监管裁决或人事/财务线索；繁简价差仅见二次转发/评论，无新事实。",
+     "links": [],
+     "id": "20261014-didi-09Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "03Z": 134,
+   "04Z": 223,
+   "05Z": 278,
+   "06Z": 380,
+   "07Z": 288,
+   "08Z": 290,
+   "09Z_partial_to0915": 53,
+   "query": "滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"",
+   "note": "08Z整点290（≈持平自07Z=288）；名称撞词/噪音仍主导；非可核验公司事件；09Z前15分钟53"
+  },
+  "task_broad_sample": {
+   "00Z": 1141,
+   "01Z": 1245,
+   "02Z": 1251,
+   "03Z": 1369,
+   "04Z": 1418,
+   "05Z": 1498,
+   "06Z": 1609,
+   "07Z": 1189,
+   "08Z": 1312,
+   "09Z_partial": 316,
+   "query": "(滴滴 OR DiDi OR 程维 OR 花小猪 OR 99app)",
+   "note": "任务指定宽口径；08Z=1312 较07Z=1189略升；含大量 DiDi/99 撞词，仅作辅证"
+  },
+  "trad_simp_price_x": {
+   "posts_in_tier1_window": 2,
+   "kept_for_alert": 0,
+   "note": "cn_price 2帖二次扩散（Furinanatw 582 imp / xiaobaix2 184）；已报主线无新事实，不报警"
+  },
+  "tier1_x_hits_kept": 0,
+  "slot2_x_hits_kept": 0,
+  "weibo_didi_on_list": "not_checked_this_run"
+ },
+ "candidates": [
+  {
+   "topic": "X cn_price @Furinanatw 繁简价差二次扩散",
+   "verdict": "already_alerted_05Z_secondary_diffusion_no_new_facts",
+   "why": "impressions=582≥300；复述繁简价差截图叙事，无公司回应/新证据；主线05Z已报",
+   "url": "https://x.com/Furinanatw/status/2110289680595886537"
+  },
+  {
+   "topic": "X cn_price @xiaobaix2 回复@0xTheo520",
+   "verdict": "log_only_below_engagement",
+   "why": "impressions=184<300且replies=0；评论向二次扩散",
+   "url": "https://x.com/xiaobaix2/status/2110287234629071037"
+  },
+  {
+   "topic": "繁简价差 Threads@onlyu0913 / unwire / LIHKG",
+   "verdict": "already_alerted_05Z_no_new_facts",
+   "why": "Web 仍为旧线索复述；Threads 无登录未命中原帖"
+  },
+  {
+   "topic": "Web 内部信/裁员/组织调整",
+   "verdict": "stale_or_not_new_window",
+   "why": "搜到2026-07反舞弊通报、5月会员调整、更早裁员旧闻；非本窗口新事实"
+  },
+  {
+   "topic": "Web 香港网约车牌照",
+   "verdict": "stale_2026-08_application_open"
+  },
+  {
+   "topic": "99Food TJ-SP Keeta 排他条款",
+   "verdict": "stale_sep2026_already_noted",
+   "why": "9月末裁决；03Z/05Z已记；本期无 demissões/Procon/CEO 新料"
+  },
+  {
+   "topic": "Web DiDi México PROFECO/despidos",
+   "verdict": "stale_2020_2023"
+  },
+  {
+   "topic": "Slot2 X 自动驾驶/送货小桔青桔/MONA孙枢付强",
+   "verdict": "reject_false_positive_no_entity_or_blacklist",
+   "why": "命中均为无关 article/t.co、赌球广告或 po18 合集；无实体关键词"
+  },
+  {
+   "topic": "Web 自动驾驶融资/R2、送货金秋、小桔充电更名、花小猪投诉",
+   "verdict": "stale_pr_or_chronic_complaint_no_alert",
+   "why": "融资/载客/金秋季/充电更名为旧PR或运营活动；花小猪投诉为慢性存量，无本窗口新爆点"
+  },
+  {
+   "topic": "JP 资本 / MX Puebla / 繁简主帖 / 99Food TJSP",
+   "verdict": "already_covered_no_realert"
+  },
+  {
+   "topic": "RSS fetch_sources",
+   "verdict": "no_didi_matches",
+   "why": "2026-10-14T0915Z.json new items=1（Bloomberg Anthropic，非滴滴）"
+  }
+ ],
+ "sources_queried": [
+  "X tier1×8 + tier2 slot2×3 + counts×2 (可比热度+任务宽口径)",
+  "WebSearch×8 (tier1×6 + slot2×2)",
+  "RSS fetch_sources (0 条滴滴相关新匹配)",
+  "Tier3 skipped (daytime already ran)"
+ ],
+ "x_calls_used": 13,
+ "web_searches": 8,
+ "tiers": "tier1 + tier2 slot2",
+ "slot": 2
+}

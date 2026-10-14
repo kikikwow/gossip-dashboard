@@ -346,3 +346,19 @@ timestamp_utc,topic,metric,value,source
 2026-10-14T08:12:00Z,滴滴 & 滴滴出海,x_hourly_post_count_task_broad_07Z,1189,X q=(滴滴 OR DiDi OR 程维 OR 花小猪 OR 99app); auxiliary wide sample
 2026-10-14T08:12:00Z,滴滴 & 滴滴出海,x_post_count_task_broad_08Z_partial,217,"X same auxiliary, 08:00-08:11Z"
 2026-10-14T08:12:00Z,滴滴海外/APAC-Egypt,x_tier1_slot1_hits_kept_0710to0812Z,0,tier1×8+slot1×3; cn_gossip FP dropped; no alert material
+2026-10-14T08:55:00Z,月之暗面美银退出IPO,x_views_financialjuice,31282,https://x.com/financialjuice/status/2110230603933081991
+2026-10-14T08:55:00Z,月之暗面美银退出IPO,x_views_business,19907,https://x.com/business/status/2110235441802690623
+2026-10-14T08:55:00Z,月之暗面美银退出IPO,x_views_dmjk001,5678,https://x.com/dmjk001/status/2110232813186494762
+2026-10-14T08:55:00Z,月之暗面美银退出IPO,x_hourly_posts_06Z_07Z_08Zpartial,3/3/0,"X q=(月之暗面 OR ""Moonshot AI"") (美银 OR IPO OR BofA OR 循环智能 OR 仲裁); cooling from 05Z=6"
+2026-10-14T08:55:00Z,田柯宇融资争议,x_views__FORAB,151037,https://x.com/_FORAB/status/2110205955380330589 (was 96008 at 05:55Z)
+2026-10-14T08:55:00Z,田柯宇融资争议,x_hourly_posts_06Z_07Z_08Zpartial,6/5/9,X q=田柯宇
+2026-10-14T08:55:00Z,腾讯绿泡泡对战红果短剧,weibo_rank_heat,8/360883,https://soso.re/weibo (16:50 Beijing; was #1 1525537)
+2026-10-14T08:55:00Z,霸王茶姬买一送一余波,weibo_rank_heat,1/1542645,https://s.weibo.com/weibo?q=%E9%9C%B8%E7%8E%8B%E8%8C%B6%E5%A7%AC (16:50 Beijing; plus #30 霸王茶姬格局 197543)
+2026-10-14T08:55:00Z,霸王茶姬买一送一余波,x_hourly_posts_06Z_07Z_08Zpartial,43/49/45,X q=霸王茶姬 OR Chagee; flat
+2026-10-14T08:55:00Z,豆包SAEP放开第三方App,x_hourly_posts_06Z_07Z,5/6,X q=豆包 (SAEP OR 拒绝 OR 自动操作 OR 手机助手); top @0xLogicrw 1117 views
+2026-10-14T08:55:00Z,大厂广义八卦,x_hourly_posts_06Z_07Z_08Zpartial,8/4/4,X q=(腾讯 OR 阿里 OR 美团 OR 华为 OR 小米 OR 拼多多 OR 京东 OR 百度 OR 字节 OR 滴滴) (爆料 OR 裁员 OR 离职 OR 宫斗 OR 翻车 OR 互撕 OR 内部信 OR 做空 OR 暴跌)
+2026-10-14T09:16:00Z,滴滴 & 滴滴出海,x_hourly_post_count_broad_08Z,290,"X q=滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"; ≈flat vs 07Z=288"
+2026-10-14T09:16:00Z,滴滴 & 滴滴出海,x_post_count_broad_09Z_partial,53,"X same broad, 09:00-09:15Z"
+2026-10-14T09:16:00Z,滴滴 & 滴滴出海,x_hourly_post_count_task_broad_08Z,1312,X q=(滴滴 OR DiDi OR 程维 OR 花小猪 OR 99app); auxiliary wide sample
+2026-10-14T09:16:00Z,滴滴 & 滴滴出海,x_post_count_task_broad_09Z_partial,316,"X same auxiliary, 09:00-09:15Z"
+2026-10-14T09:16:00Z,滴滴海外/China-units,x_tier1_slot2_hits_kept_0810to0916Z,0,tier1×8+slot2×3; cn_price secondary only; no alert material
