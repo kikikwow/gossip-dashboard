@@ -4,6 +4,9 @@
   let openId = null;
   let returnEl = null;
   let mtab = 'feed';
+  let ptab = 'home';
+  const PROMO_KEY = 'gossipPromo';
+  const HIDE_KEY = 'gossipHide';
 
   function fmtMaybe(v) {
     if (v == null || v === '') return '';
@@ -324,6 +327,281 @@
     const blocks = (D.shortterm || []).map(t => `<div class="hot"><b>${esc(t.name)}</b><div class="r">${esc(t.reason)}</div><div class="note">编辑备注「热度：${esc(t.heat)}」不是公式结果 · ${esc(t.status)} · 加入 ${esc(fmtTs(t.added))}</div>${trendChart(topicSeries(t.name))}</div>`).join('');
     $('#short').innerHTML = heatExplain() + (blocks || '<p class="empty">topics.md 中暂无短期热点</p>');
   }
+  function loadIds(key) {
+    try {
+      const a = JSON.parse(localStorage.getItem(key) || '[]');
+      return new Set(Array.isArray(a) ? a : []);
+    } catch (e) { return new Set(); }
+  }
+  function saveIds(key, set) {
+    try { localStorage.setItem(key, JSON.stringify(Array.from(set))); } catch (e) {}
+  }
+  function explicitTrack(it) {
+    const d = it.detail || {};
+    return it.track === true || d.track === true || !!(it.event_id || d.event_id);
+  }
+  function rootOf(it) {
+    const d = it.detail || {};
+    const eid = it.event_id || d.event_id;
+    if (eid) {
+      const same = ITEMS.filter(x => (x.event_id || (x.detail || {}).event_id) === eid);
+      const titled = same.find(x => (x.detail || {}).title);
+      const hit = titled || same[0];
+      if (hit && hit !== it) return hit;
+    }
+    const p = parentEvent(it);
+    if (p && ((p.detail || {}).title || explicitTrack(p))) return p;
+    return null;
+  }
+  function groupViews(g) {
+    const vs = [g.root._views || 0].concat(g.members.map(m => m._views || 0));
+    return Math.max.apply(null, vs);
+  }
+  function clusters() {
+    const promo = loadIds(PROMO_KEY);
+    const hide = loadIds(HIDE_KEY);
+    const membersOf = new Map();
+    ITEMS.forEach(it => {
+      const r = rootOf(it);
+      if (!r) return;
+      if (!membersOf.has(r.id)) membersOf.set(r.id, []);
+      membersOf.get(r.id).push(it);
+    });
+    const events = [];
+    const seen = new Set();
+    ITEMS.forEach(it => {
+      if (rootOf(it)) return;
+      const tracked = !!((it.detail || {}).title) || explicitTrack(it) || promo.has(it.id);
+      if (!tracked || seen.has(it.id)) return;
+      seen.add(it.id);
+      events.push({ root: it, members: membersOf.get(it.id) || [] });
+    });
+    events.sort((a, b) => groupViews(b) - groupViews(a));
+    const leads = ITEMS.filter(it => {
+      if (rootOf(it)) return false;
+      if ((it.detail || {}).title || explicitTrack(it) || promo.has(it.id)) return false;
+      if (hide.has(it.id)) return false;
+      return match(it);
+    }).sort((a, b) => (b._views || 0) - (a._views || 0));
+    const shown = events.filter(g => match(g.root) || g.members.some(match));
+    return { events: shown, leads: leads };
+  }
+  function nodeTime(s) {
+    if (!s) return null;
+    const d = parseTs(s);
+    if (d) return d.getTime();
+    const m = String(s).match(/(\d{4})-(\d{2})-(\d{2})/);
+    if (m) return Date.UTC(+m[1], +m[2] - 1, +m[3], 12);
+    return null;
+  }
+  function editionLine() {
+    const e = (D.editions && D.editions[0]) || {};
+    const raw = String(e.edition_date || e.timestamp || '');
+    const m = raw.match(/(\d{4})-(\d{2})-(\d{2})/);
+    if (!m) return { date: '', issue: '' };
+    const dt = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]));
+    const weeks = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+    const start = Date.UTC(+m[1], 0, 0);
+    const day = Math.round((dt.getTime() - start) / 86400000);
+    const clock = fmtTs(D.built);
+    const hm = (clock.match(/(\d{2}:\d{2})/) || [])[1] || '';
+    return {
+      date: m[1] + '.' + m[2] + '.' + m[3] + ' ' + weeks[dt.getUTCDay()],
+      issue: (day > 0 ? '第' + day + '期 · ' : '') + '每小时加印' + (hm ? ' · ' + hm : '')
+    };
+  }
+  function latestProg(g) {
+    const tl = ((g.root.detail || {}).timeline || []).map((t, i) => ({ date: t.date, text: t.text, i: i }));
+    if (tl.length) {
+      tl.sort((a, b) => (nodeTime(b.date) || 0) - (nodeTime(a.date) || 0) || b.i - a.i);
+      return tl[0];
+    }
+    if (g.members.length) {
+      const m = g.members[g.members.length - 1];
+      return { date: m.date, text: m.text };
+    }
+    return null;
+  }
+  function isFresh(g) {
+    const times = [];
+    ((g.root.detail || {}).timeline || []).forEach(t => { const n = nodeTime(t.date); if (n) times.push(n); });
+    g.members.forEach(m => { const n = nodeTime(m.date); if (n) times.push(n); });
+    const built = parseTs(D.built);
+    if (!times.length || !built) return false;
+    const latest = Math.max.apply(null, times);
+    const gap = built.getTime() - latest;
+    return gap >= -3600000 && gap < 48 * 3600 * 1000;
+  }
+  function heatBits(views) {
+    if (!views) return null;
+    const word = views >= 1e5 ? '爆' : views >= 1e4 ? '热' : '温';
+    const cls = views >= 1e5 ? 'bao' : views >= 1e4 ? 're' : 'wen';
+    const pct = Math.max(8, Math.round(100 * Math.sqrt(views / MAXV)));
+    return { word: word, cls: cls, num: fmt(views) + '浏览', pct: pct };
+  }
+  function matchedRank(it) {
+    const title = ((it.detail || {}).title || '') + (it.company || '');
+    return rankRows().find(r => {
+      const brand = (String(r.t).match(/[\u4e00-\u9fff]{2,6}/) || [])[0];
+      return brand && title.indexOf(brand) >= 0;
+    }) || null;
+  }
+  function liftPct(it) {
+    if (it._views) return Math.max(4, Math.round(100 * it._views / MAXV));
+    const rank = matchedRank(it);
+    if (!rank || !rank.last || !rank.last.value) return null;
+    const rows = rankRows();
+    const max = Math.max.apply(null, rows.map(r => r.last.value).concat([1]));
+    return Math.max(4, Math.round(100 * rank.last.value / max));
+  }
+  function secLabel(it) {
+    return String(it._sec || '').replace(/[\u{1F300}-\u{1FAFF}\u2600-\u27BF]/gu, '').trim();
+  }
+  function whyPill(it) {
+    if (it._views) return '浏览 ' + fmt(it._views);
+    const src = it.source_types || [];
+    if (src.indexOf('媒体') >= 0) return '媒体报道';
+    if (src.length) return src[0];
+    return it.tag || '';
+  }
+  function stampOf(it) {
+    if (it.tag === '传闻') return '<span class="pstamp q">待核实</span>';
+    if (it.tag === '实锤' || (it.source_types || []).indexOf('媒体') >= 0) return '<span class="pstamp g">已见报</span>';
+    return '';
+  }
+  function heatRow(views) {
+    const h = heatBits(views);
+    if (!h) return '';
+    const mark = h.cls === 'bao' ? '<span class="pstamp">爆</span>' : '<span class="pbadge ' + (h.cls === 're' ? 're' : 'wen') + '">' + h.word + '</span>';
+    return '<div class="phr">' + mark + '<span class="pnum">' + esc(h.num) + '</span><div class="phb"><i style="width:' + h.pct + '%"></i></div></div>';
+  }
+  function freshMark(g) {
+    return isFresh(g) ? '<span class="pdot"></span><span class="pnt">有新进展</span>' : '';
+  }
+  function paperNodes(g) {
+    const nodes = [];
+    ((g.root.detail || {}).timeline || []).forEach((t, i) => nodes.push({ date: t.date || '', text: t.text || '', url: t.url || '', i: i }));
+    g.members.forEach((m, i) => {
+      const fx = firstX(m);
+      nodes.push({ date: m.date || '', text: m.text || '', url: (fx && fx.url) || ((m.links || [])[0] || {}).url || '', i: 100 + i });
+    });
+    nodes.sort((a, b) => (nodeTime(b.date) || 0) - (nodeTime(a.date) || 0) || b.i - a.i);
+    return nodes;
+  }
+  function nodeOrig(url) {
+    if (!url) return '';
+    const snap = xSnap(url) || {};
+    const text = snap.text || '';
+    if (!text) return '';
+    return '<div class="porig"><div class="poh">原文</div>' + foldable('oline', esc(text)) + '</div>';
+  }
+  function platBit(url) {
+    const p = platform(url);
+    if (!p) return '';
+    return (LOGOS[p] || '') + '<span>' + esc(PNAME[p] || '') + '</span>';
+  }
+  function showPin() {
+    return !state.type || state.type === 'ride';
+  }
+  function pinCard() {
+    if (!showPin()) return '';
+    const rides = ITEMS.filter(it => isRide(it) && match(it));
+    const top = rides.slice().sort((a, b) => (b._views || 0) - (a._views || 0))[0];
+    const sum = rides.length ? esc(top.company) + ' · ' + rides.length + ' 条' : '暂无新进展';
+    return '<article class="pcard pin"><div class="prow-top"><span class="pinl">置顶</span><b class="ptitle" style="font-size:16px;margin:0">滴滴 & 滴滴出海</b><span class="psm">每小时追踪中</span></div><p class="psum" style="margin-top:4px;color:#7A7368">' + sum + '</p>' + (top ? heatRow(top._views) : '') + '</article>';
+  }
+  function eventCard(g, hero) {
+    const it = g.root;
+    const s = itemStory(it);
+    const prog = latestProg(g);
+    const n = ((it.detail || {}).timeline || []).length;
+    const kick = hero ? '<div class="pkick">头瓜' + (n ? ' · 连载第' + n + '回' : '') + '</div>' : '';
+    const title = '<h2 class="' + (hero ? '' : 'ptitle') + '">' + hl(s.title) + freshMark(g) + (hero ? '' : '<span class="psm">' + esc(secLabel(it)) + '</span>') + '</h2>';
+    const head = hero ? title : '<div class="prow-top">' + title + '</div>';
+    const progHtml = prog && prog.text ? '<div class="pprog"><i>' + esc(prog.date || '') + '</i>' + esc(prog.text) + '</div>' : '';
+    return '<article class="pcard tk ' + (hero ? 'phero' : '') + '"><button type="button" class="phit open-ev" data-id="' + esc(it.id) + '">' + kick + head + '<p class="psum one">' + esc(s.sum) + '</p>' + progHtml + heatRow(groupViews(g)) + '</button></article>';
+  }
+  function leadCompact(it) {
+    const s = itemStory(it);
+    const pct = liftPct(it);
+    const bar = pct == null ? '' : '<div class="pmtr"><span class="pwhy">' + esc(whyPill(it)) + '</span><span>升版</span><div class="phb ap"><i style="width:' + pct + '%"></i></div><span>' + pct + '%</span></div>';
+    return '<article class="pcard nw"><button type="button" class="phit" data-ptab="leads"><div class="prow-top"><span class="ptitle" style="font-size:15px">' + hl(s.title) + '</span>' + stampOf(it) + '</div>' + bar + '</button></article>';
+  }
+  function leadCard(it) {
+    const s = itemStory(it);
+    const fx = s.fx;
+    const pct = liftPct(it);
+    const bar = pct == null ? '' : '<div class="pmtr"><span>升版进度</span><div class="phb ap"><i style="width:' + pct + '%"></i></div><b>' + pct + '%</b></div>';
+    let orig = '';
+    if (fx && (fx.text || (xSnap(fx.url) || {}).text)) {
+      const text = fx.text || xSnap(fx.url).text;
+      const p = platform(fx.url);
+      orig = '<div class="porig"><div class="poh">' + (p ? LOGOS[p] : '') + '<span>' + esc([fx.author, fx.author_name].filter(Boolean).join(' ') || (PNAME[p] || '原文')) + '</span></div>' + foldable('oline', esc(text)) + '</div>';
+    }
+    const why = whyPill(it);
+    return '<article class="pcard nw"><div style="display:flex;align-items:center;gap:8px">' + (why ? '<span class="pwhy">' + esc(why) + '</span>' : '') + '<span style="margin-left:auto">' + stampOf(it) + '</span></div><div class="ptitle">' + hl(s.title) + '</div><p class="psum">' + esc(s.sum) + '</p>' + orig + bar + '<div class="pacts"><button type="button" class="p" data-promo="' + esc(it.id) + '">顶上头版</button><button type="button" data-hide="' + esc(it.id) + '">压下不表</button></div></article>';
+  }
+  function paperHome(pack) {
+    const hero = pack.events[0];
+    const rest = pack.events.slice(1);
+    const leads = pack.leads.slice(0, 3);
+    const main = (hero ? eventCard(hero, true) : '') + pinCard() + '<div class="pevents">' + rest.map(g => eventCard(g, false)).join('') + '</div>';
+    const railLeads = '<div class="psec"><b>新瓜 · 尚未立案</b><button type="button" data-ptab="leads">全部 ' + pack.leads.length + ' 条 ›</button></div>' + (leads.length ? leads.map(leadCompact).join('') : '<p class="pfoot">没有待核的新瓜。</p>');
+    const ranks = rankRows().slice(0, 5);
+    const railHeat = '<div class="prail-heat"><div class="psec"><b style="color:#4A6FA5">热榜</b><button type="button" data-ptab="heat">全部 ›</button></div>' + (ranks.length ? ranks.map((r, i) => '<article class="pcard"><div class="prow-top"><b>' + (i + 1) + ' ' + esc(r.t) + '</b><span class="psm">' + fmt(r.last.value) + '</span></div><div class="note">' + (r.last.metric === 'x_daily_post_count' ? 'X 日发帖 · ' + esc(fmtHeatDay(r.last.timestamp_utc)) : esc(r.last.metric)) + '</div></article>').join('') : '') + '</div>';
+    return '<div class="playout"><div class="pmain">' + (main || '<p class="pfoot">这一栏没有正在追踪的事件。</p>') + '</div><aside class="prail">' + railLeads + railHeat + '</aside></div><p class="pfoot">头版事件来自已有标题、track / event_id，或你标过「顶上头版」。升版进度是相对本期最高浏览，不会自动顶版。</p>';
+  }
+  function paperLeads(pack) {
+    return '<div class="pleads"><div class="psec"><b>新瓜 · 尚未立案</b><span>升版进度按本期最高浏览估算，不会自动顶版</span></div>' + (pack.leads.length ? pack.leads.map(leadCard).join('') : '<p class="pfoot">新瓜都处理完了。</p>') + '</div>';
+  }
+  function paperHeat() {
+    const rows = rankRows();
+    const blocks = rows.map(r => '<article class="pcard"><b>' + esc(r.t) + '</b><div class="note">' + (r.last.metric === 'x_daily_post_count' ? 'X 日发帖量 · ' + esc(fmtHeatDay(r.last.timestamp_utc)) : esc(r.last.metric)) + (r.delta == null ? '' : ' · 较前一日 ' + (r.delta > 0 ? '+' : '') + fmt(r.delta)) + '</div><div class="phr"><span class="pnum">' + fmt(r.last.value) + '</span></div>' + trendChart(r.pts) + '</article>').join('');
+    const shorts = (D.shortterm || []).map(t => '<article class="pcard"><b>' + esc(t.name) + '</b><div class="note">' + esc(t.reason) + '</div><div class="note">编辑备注「热度：' + esc(t.heat) + '」不是公式结果</div>' + trendChart(topicSeries(t.name)) + '</article>').join('');
+    return heatExplain() + '<div class="psec"><b style="color:#4A6FA5">热度榜</b><span>heat_log 日发帖量</span></div><div class="pheat-grid">' + (blocks || '<p class="pfoot">没有热度序列</p>') + '</div><div class="psec"><b style="color:#4A6FA5">短期热点</b></div><div class="pheat-grid">' + (shorts || '') + '</div>';
+  }
+  function groupFor(id) {
+    const pack = clusters();
+    return pack.events.find(g => g.root.id === id || g.members.some(m => m.id === id)) || null;
+  }
+  function paperDetail(it) {
+    const g = groupFor(it.id) || { root: it, members: [] };
+    const root = g.root;
+    const s = itemStory(root);
+    const n = ((root.detail || {}).timeline || []).length;
+    const nodes = paperNodes(g);
+    const rank = matchedRank(root);
+    const delta = rank && rank.delta != null ? '<span class="pnum">较前一日 ' + (rank.delta > 0 ? '+' : '') + fmt(rank.delta) + '</span>' : '';
+    const list = nodes.length ? nodes.map((node, i) => '<div class="pnode' + (i === 0 ? ' f' : '') + '"><div class="pnh">' + esc(node.date || '') + (node.url ? ' · ' + platBit(node.url) : '') + '</div><div class="pnn">' + esc(node.text) + '</div>' + nodeOrig(node.url) + '</div>').join('') : '<p class="pfoot">这条还没有时间线。</p>';
+    return '<div class="pkick">专题' + (n ? ' · 连载第' + n + '回' : '') + ' · 最新在上</div><h2 id="ovtitle" class="ptitle" style="font-size:22px">' + esc(s.title) + '</h2><p class="psum">' + esc(s.sum) + '</p>' + heatRow(groupViews(g)) + delta + '<div class="ptl">' + list + '</div><p class="pfoot"><a href="events/' + encodeURIComponent(root.id) + '.html">独立页面</a></p>';
+  }
+  function renderPaper() {
+    const root = $('#paper');
+    if (!root || document.documentElement.dataset.ui === 'classic') return;
+    const line = editionLine();
+    const pd = $('#pdate');
+    const pi = $('#pissue');
+    if (pd) pd.textContent = line.date;
+    if (pi) pi.textContent = line.issue;
+    const filters = [['', '全部'], ['ride', '网约车'], ['bigtech', '大厂'], ['adr', '中概']];
+    const pf = $('#pfilters');
+    if (pf) pf.innerHTML = filters.map(([k, n]) => '<button type="button" data-t="' + k + '" class="' + (state.type === k ? 'on' : '') + '">' + n + '</button>').join('');
+    const pq = $('#pq');
+    if (pq && pq.value !== (state.q || '')) pq.value = state.q || '';
+    document.querySelectorAll('#pnav button').forEach(b => {
+      const on = b.dataset.ptab === ptab;
+      b.classList.toggle('on', on);
+    });
+    const body = $('#pbody');
+    if (!body) return;
+    const pack = clusters();
+    if (ptab === 'leads') body.innerHTML = paperLeads(pack);
+    else if (ptab === 'heat') body.innerHTML = paperHeat();
+    else body.innerHTML = paperHome(pack);
+    wireClamps(body);
+  }
+  window.paperDetail = paperDetail;
+
   function render() {
     let L = ITEMS.filter(match);
     if (document.documentElement.dataset.theme === 'hot') L = L.slice().sort((a, b) => b._views - a._views);
@@ -331,11 +609,12 @@
     $('#cnt').textContent = `共 ${L.length} / ${ITEMS.length} 条`;
     renderHero();
     renderMobile();
+    renderPaper();
     wireClamps(document);
     requestAnimationFrame(function () { wireClamps(document); });
     if (openId) {
       const it = ITEMS.find(x => x.id === openId);
-      if (it) $('#ovbody').innerHTML = detailHTML(it);
+      if (it) $('#ovbody').innerHTML = document.documentElement.dataset.ui === 'classic' ? detailHTML(it) : paperDetail(it);
     }
   }
   window.render = render;
@@ -392,7 +671,7 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
     } else if (!$('#overlay') || $('#overlay').hidden) {
       lockOpen();
     }
-    $('#ovbody').innerHTML = detailHTML(it);
+    $('#ovbody').innerHTML = document.documentElement.dataset.ui === 'classic' ? detailHTML(it) : paperDetail(it);
     const ov = $('#overlay');
     ov.hidden = false;
     const dlg = ov.querySelector('.modal');
@@ -452,7 +731,51 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
     wireClamps(body);
   }
 
+  function setUi(mode) {
+    if (mode !== 'classic' && mode !== 'new') return;
+    document.documentElement.dataset.ui = mode;
+    try { localStorage.setItem('gossipUi', mode); } catch (err) {}
+    const u = new URL(location.href);
+    u.searchParams.set('ui', mode);
+    history.replaceState(history.state, '', u.pathname + u.search + u.hash);
+    render();
+  }
   document.addEventListener('click', function (e) {
+    const uiBtn = e.target.closest('[data-ui-set]');
+    if (uiBtn) { setUi(uiBtn.getAttribute('data-ui-set')); return; }
+    const promo = e.target.closest('[data-promo]');
+    if (promo) {
+      const id = promo.getAttribute('data-promo');
+      const set = loadIds(PROMO_KEY); set.add(id); saveIds(PROMO_KEY, set);
+      const hide = loadIds(HIDE_KEY); hide.delete(id); saveIds(HIDE_KEY, hide);
+      ptab = 'home';
+      render();
+      return;
+    }
+    const hideBtn = e.target.closest('[data-hide]');
+    if (hideBtn) {
+      const id = hideBtn.getAttribute('data-hide');
+      const set = loadIds(HIDE_KEY); set.add(id); saveIds(HIDE_KEY, set);
+      const promoSet = loadIds(PROMO_KEY); promoSet.delete(id); saveIds(PROMO_KEY, promoSet);
+      render();
+      return;
+    }
+    const ptabBtn = e.target.closest('[data-ptab]');
+    if (ptabBtn && !e.target.closest('.open-ev')) {
+      ptab = ptabBtn.getAttribute('data-ptab') || 'home';
+      const body = $('#pbody');
+      if (body) body.scrollTop = 0;
+      window.scrollTo(0, 0);
+      renderPaper();
+      return;
+    }
+    const pf = e.target.closest('#pfilters button[data-t]');
+    if (pf) {
+      state.type = pf.dataset.t;
+      document.querySelectorAll('#tabs .tab').forEach(x => x.classList.toggle('on', x.dataset.t === state.type));
+      render();
+      return;
+    }
     const tz = e.target.closest('.tz button[data-tz]');
     if (tz) {
       if (tz.dataset.tz === tzMode) return;
@@ -514,6 +837,15 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
     const id = new URL(location.href).searchParams.get('e');
     if (id) openEvent(id, true);
     else hideOverlay();
+  });
+  const pq = $('#pq');
+  if (pq) pq.addEventListener('input', function () {
+    state.q = pq.value.trim().toLowerCase();
+    const q = $('#q');
+    if (q && q.value !== pq.value) q.value = pq.value;
+    const mq = $('#mq');
+    if (mq && mq.value !== pq.value) mq.value = pq.value;
+    render();
   });
   const mq = $('#mq');
   if (mq) mq.addEventListener('input', function () {
