@@ -56,24 +56,62 @@
     const bits = [name, author].filter(Boolean).join(' ');
     const meta = `<div class="xmeta"><b>${esc(bits || 'X')}</b>${created ? `<span class="note">${esc(fmtTs(created))}</span>` : ''}${views != null && views !== '' ? `<span class="note">浏览 ${esc(fmtMaybe(views))}</span>` : ''}${likes != null && likes !== '' ? `<span class="note">赞 ${esc(fmtMaybe(likes))}</span>` : ''}${reposts != null && reposts !== '' ? `<span class="note">转 ${esc(fmtMaybe(reposts))}</span>` : ''}</div>`;
     const body = text ? (clamp ? foldable('xtext', esc(text)) : `<p class="xtext">${esc(text)}</p>`) : `<p class="xmiss">正文未缓存</p>`;
-    return `<blockquote class="xbody">${meta}${body}<a class="xlink" href="${esc(url)}" target="_blank" rel="noopener">原链接（站外）</a></blockquote>`;
+    return `<blockquote class="xbody">${meta}${body}${extLink(url, '原链接（站外）')}</blockquote>`;
+  }
+  function foldLimit(cls) {
+    return cls === 'xtext' ? 72 : 40;
+  }
+  const LOGOS = {
+    x: '<svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>',
+    xhs: '<svg class="plogo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><rect width="16" height="16" rx="4" fill="#ff2442"/><text x="8" y="12" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="PingFang SC,Noto Sans SC,sans-serif">小</text></svg>',
+    weibo: '<svg class="plogo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#e6162d"/><ellipse cx="8" cy="8.4" rx="5" ry="3" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="10.1" cy="8.3" r="1.45" fill="#fff"/></svg>',
+    wx: '<svg class="plogo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><rect width="16" height="16" rx="4" fill="#07c160"/><circle cx="6.1" cy="7" r="3.1" fill="#fff"/><circle cx="10.3" cy="9.3" r="2.5" fill="#fff"/><circle cx="5.2" cy="6.7" r=".55" fill="#07c160"/><circle cx="7" cy="6.7" r=".55" fill="#07c160"/><circle cx="9.6" cy="9" r=".45" fill="#07c160"/><circle cx="11" cy="9" r=".45" fill="#07c160"/></svg>'
+  };
+  const PNAME = { x: 'X', xhs: '小红书', weibo: '微博', wx: '微信' };
+  function platform(url) {
+    let host = '';
+    try { host = new URL(String(url), 'https://local.invalid').hostname.toLowerCase().replace(/^www\./, ''); }
+    catch (e) { return ''; }
+    if (!host || host === 'local.invalid') return '';
+    if (host === 'x.com' || host === 'twitter.com' || host === 't.co' || host.endsWith('.x.com') || host.endsWith('.twitter.com')) return 'x';
+    if (host === 'xiaohongshu.com' || host.endsWith('.xiaohongshu.com') || host === 'xhslink.com' || host.endsWith('.xhslink.com')) return 'xhs';
+    if (host === 'weibo.com' || host.endsWith('.weibo.com') || host === 'weibo.cn' || host.endsWith('.weibo.cn')) return 'weibo';
+    if (host === 'weixin.qq.com' || host.endsWith('.weixin.qq.com') || host === 'wechat.com' || host.endsWith('.wechat.com')) return 'wx';
+    return '';
+  }
+  function extLink(url, labelHtml) {
+    const p = platform(url);
+    const cls = p ? 'ext ext-' + p : 'ext';
+    const tip = p ? ` title="${esc(PNAME[p])}"` : '';
+    return `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener"${tip}>${p ? LOGOS[p] : ''}<span>${labelHtml}</span></a>`;
+  }
+  function plainLen(html) {
+    return String(html || '').replace(/<[^>]+>/g, '').replace(/&(?:#\d+|#x[\da-f]+|[a-z]+);/gi, 'x').replace(/\s+/g, '').length;
   }
   function foldable(cls, html) {
-    return `<div class="clampbox"><p class="${cls} clamp">${html}</p><button type="button" class="xmore" hidden aria-expanded="false">展开</button></div>`;
+    const n = plainLen(html);
+    const limit = foldLimit(cls);
+    const long = n > limit;
+    return `<div class="clampbox" data-len="${n}" data-fold="${limit}"><p class="${cls} clamp">${html}</p><button type="button" class="xmore"${long ? '' : ' hidden'} aria-expanded="false">展开</button></div>`;
   }
   function wireClamps(root) {
     (root || document).querySelectorAll('.clampbox').forEach(box => {
       const el = box.querySelector('.clamp');
       const btn = box.querySelector('.xmore');
       if (!el || !btn) return;
-      if (box.offsetParent === null) return;
+      const force = (+box.getAttribute('data-len') || 0) > (+box.getAttribute('data-fold') || 80);
+      if (box.offsetParent === null) {
+        if (force) btn.hidden = false;
+        return;
+      }
       if (box.classList.contains('is-open')) {
         btn.hidden = false;
         btn.textContent = '收起';
         btn.setAttribute('aria-expanded', 'true');
         return;
       }
-      btn.hidden = el.scrollHeight <= el.clientHeight + 2;
+      const overflow = el.scrollHeight > el.clientHeight + 2;
+      btn.hidden = !(force || overflow);
       btn.textContent = '展开';
       btn.setAttribute('aria-expanded', 'false');
     });
@@ -174,14 +212,79 @@
     box.textContent = g.getAttribute('data-tip') || '';
   }
 
+  const TITLE_SPLIT = /大模型|负责人|结构性|委员会|众议院|特别|争议|断裂|支架|踏板|刹车|销售|下滑|线上|大幅|个月|晋升|点名|关联|美国|中国|对华|事件|公司|汽车|热搜|高管|离职|唯一|不做|赴港|和解|索赔/;
+  function nameTokens(title, company) {
+    const bag = [];
+    String(company || '').split(/[·/、|，,\s]+/).forEach(p => {
+      if (p.length >= 2 && p.length <= 12) bag.push(p);
+    });
+    const t = String(title || '');
+    (t.match(/[A-Za-z][A-Za-z0-9]{1,11}/g) || []).forEach(w => bag.push(w));
+    (t.match(/[“"「]([^”"」]{2,12})[”"」]/g) || []).forEach(q => bag.push(q.replace(/[“"「」”]/g, '')));
+    t.split(/[^\u4e00-\u9fff]+/).forEach(ch => {
+      if (!ch) return;
+      ch.split(TITLE_SPLIT).forEach(p => {
+        if (p.length >= 2 && p.length <= 8) bag.push(p);
+      });
+    });
+    return bag;
+  }
+  function parentEvent(it) {
+    if ((it.detail || {}).title) return null;
+    const idx = ITEMS.indexOf(it);
+    let parent = null;
+    for (let i = idx - 1; i >= 0; i--) {
+      const prev = ITEMS[i];
+      if (prev._e !== it._e || prev._sec !== it._sec) break;
+      if ((prev.detail || {}).title) { parent = prev; break; }
+    }
+    if (!parent) return null;
+    const co = String(it.company || '');
+    const text = String(it.text || '');
+    const hit = nameTokens(parent.detail.title, parent.company).some(tok => tok && co.indexOf(tok) < 0 && text.indexOf(tok) >= 0);
+    return hit ? parent : null;
+  }
+  function headline(it) {
+    const text = String(it.text || '').trim();
+    const colon = text.split(/[：:]/);
+    let body = text;
+    if (colon.length > 1) {
+      const h = colon[0].trim();
+      if (h.length >= 8 && h.length <= 42 && h.length < text.length) return h;
+      if (h.length < 8) body = colon.slice(1).join('：').trim() || text;
+    }
+    const clause = body.split(/[，。；]/)[0].trim();
+    if (clause.length >= 8 && clause.length <= 42 && clause.length < text.length) return clause;
+    const company = String(it.company || '').trim();
+    if (company && company.length < text.length) return company;
+    return text.slice(0, 18);
+  }
+  function itemStory(it) {
+    const d = it.detail || {};
+    const parent = parentEvent(it);
+    const title = d.title || (parent ? parent.detail.title : headline(it));
+    const sum = d.summary || it.text || '';
+    return { title: title, parent: parent, sum: sum, kicker: d.summary ? '摘要' : '条目摘要', fx: firstX(it) };
+  }
+  function storyBlock(it, withTitle) {
+    const s = itemStory(it);
+    const head = withTitle ? `${s.parent ? '<span class="prog">事件进展</span>' : ''}<h3 class="evtitle">${hl(s.title)}</h3>` : '';
+    const orig = s.fx ? `<div class="kicker">原文</div>${xBlock(s.fx.url, s.fx, true)}` : '';
+    return `${head}<div class="kicker">${s.kicker}</div>${foldable('sum', hl(s.sum))}${orig}`;
+  }
+  function linksHtml(it) {
+    return (it.links || []).map(l => {
+      const known = platform(l.url);
+      return `<div class="linkrow">${known ? '' : '🔗 '}${extLink(l.url, hl(l.label))}${l.views ? `<span class="vw">👁 ${esc(l.views)}</span>` : ''}</div>`;
+    }).join('');
+  }
   function card(it) {
     const e = it._e;
-    const fx = firstX(it);
     const badge = it._views >= 1e5 ? '爆' : it._views >= 1e4 ? '热' : '';
     return `<article class="card" data-id="${esc(it.id)}" style="--c:${it._col}"><div class="heatbar">${it._views ? `<b>${fmt(it._views)}</b> 浏览${badge ? `<span class="hotb">${badge}</span>` : ''}<div class="hbar"><i style="width:${(Math.sqrt(it._views / MAXV) * 100).toFixed(1)}%"></i></div>` : '<span>暂无浏览数据</span>'}</div><div class="top"><span class="pill">${hl(it.company)}</span>${it.detail ? '<span class="rich">深度</span>' : ''}
 <span class="badge ${it.tag === '实锤' ? 'b-real' : 'b-rum'}">【${esc(it.tag)}】</span>${(it.source_types || []).map(s => `<span class="src">${esc(s)}</span>`).join('')}<span class="date spanline" title="${esc(SPAN_TIP)}">${esc(eventSpan(it))}</span></div>
-<div class="secn">${esc(TYPES[e.type] || e.type)} · ${esc(it._sec)} ${it._views ? `<span class="hbadge" title="浏览=该条链接里最高浏览量，不是热度榜的日发帖量。≥10万爆，≥1万热。">${fmt(it._views)} 浏览${badge ? ' ' + badge : ''}</span> <span class="note">按该条链接最高浏览量</span>` : '<span class="note">这条没有浏览量</span>'}</div>${foldable('sum', hl(it.text))}
-${fx ? xBlock(fx.url, fx, true) : ''}<button type="button" class="more open-ev" data-id="${esc(it.id)}">查看事件详情</button><div class="links">${(it.links || []).map(l => `<div>🔗 <a href="${esc(l.url)}" target="_blank" rel="noopener">${hl(l.label)}</a>${l.views ? `<span class="vw">👁 ${esc(l.views)}</span>` : ''}</div>`).join('')}</div></article>`;
+<div class="secn">${esc(TYPES[e.type] || e.type)} · ${esc(it._sec)} ${it._views ? `<span class="hbadge" title="浏览=该条链接里最高浏览量，不是热度榜的日发帖量。≥10万爆，≥1万热。">${fmt(it._views)} 浏览${badge ? ' ' + badge : ''}</span> <span class="note">按该条链接最高浏览量</span>` : '<span class="note">这条没有浏览量</span>'}</div>${storyBlock(it, true)}
+<button type="button" class="more open-ev" data-id="${esc(it.id)}">查看事件详情</button><div class="links">${linksHtml(it)}</div></article>`;
   }
   function renderHero() {
     if (state.type === 'ride') {
@@ -229,6 +332,7 @@ ${fx ? xBlock(fx.url, fx, true) : ''}<button type="button" class="more open-ev" 
     renderHero();
     renderMobile();
     wireClamps(document);
+    requestAnimationFrame(function () { wireClamps(document); });
     if (openId) {
       const it = ITEMS.find(x => x.id === openId);
       if (it) $('#ovbody').innerHTML = detailHTML(it);
@@ -311,8 +415,10 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
 
   function mcard(it) {
     const badge = it._views ? fmt(it._views) + (it._views >= 1e5 ? ' 爆' : it._views >= 1e4 ? ' 热' : '') : '无浏览';
-    const fx = firstX(it);
-    return `<article class="mcard" style="--c:${it._col}"><button type="button" class="mhit open-ev" data-id="${esc(it.id)}"><div class="mtop"><b>${esc(it.company)}</b><span class="hbadge" title="链接最高浏览量，不是热度榜日发帖量">${esc(badge)}</span></div><div class="mspan spanline">${esc(eventSpan(it))}</div></button>${foldable('sum', esc(it.text))}${fx ? xBlock(fx.url, fx, true) : ''}</article>`;
+    const s = itemStory(it);
+    const prog = s.parent ? '<span class="prog">事件进展</span>' : '';
+    const orig = s.fx ? `<div class="kicker">原文</div>${xBlock(s.fx.url, s.fx, true)}` : '';
+    return `<article class="mcard" style="--c:${it._col}"><button type="button" class="mhit open-ev" data-id="${esc(it.id)}"><div class="mtop"><b>${esc(it.company)}</b><span class="hbadge" title="链接最高浏览量，不是热度榜日发帖量">${esc(badge)}</span></div><div class="mspan spanline">${esc(eventSpan(it))}</div>${prog}<h3 class="evtitle">${hl(s.title)}</h3></button><div class="kicker">${s.kicker}</div>${foldable('sum', hl(s.sum))}${orig}<div class="links">${linksHtml(it)}</div></article>`;
   }
   function mobileHeat() {
     const rows = rankRows();

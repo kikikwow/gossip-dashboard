@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """Render dashboard/events/<id>.html for every item (used by build_dashboard.py)."""
 import html, json, os, re, datetime
+from urllib.parse import urlparse
 E = lambda s: html.escape(str(s if s is not None else ''), quote=True)
 _BJ = datetime.timezone(datetime.timedelta(hours=8))
 _ISO = re.compile(r'^(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2})(?::(\d{2}))?(?:\.\d+)?(Z|[+-]\d{2}:?\d{2})?$')
@@ -49,8 +50,31 @@ def fmt(n):
     if n is None: return '—'
     n = float(n)
     return (f'{n/1e4:.1f}万' if n >= 1e4 else f'{int(n):,}')
+_LOGOS = {
+    'x': '<svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>',
+    'xhs': '<svg class="plogo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><rect width="16" height="16" rx="4" fill="#ff2442"/><text x="8" y="12" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="PingFang SC,Noto Sans SC,sans-serif">小</text></svg>',
+    'weibo': '<svg class="plogo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#e6162d"/><ellipse cx="8" cy="8.4" rx="5" ry="3" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="10.1" cy="8.3" r="1.45" fill="#fff"/></svg>',
+    'wx': '<svg class="plogo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><rect width="16" height="16" rx="4" fill="#07c160"/><circle cx="6.1" cy="7" r="3.1" fill="#fff"/><circle cx="10.3" cy="9.3" r="2.5" fill="#fff"/><circle cx="5.2" cy="6.7" r=".55" fill="#07c160"/><circle cx="7" cy="6.7" r=".55" fill="#07c160"/><circle cx="9.6" cy="9" r=".45" fill="#07c160"/><circle cx="11" cy="9" r=".45" fill="#07c160"/></svg>',
+}
+_PNAME = {'x': 'X', 'xhs': '小红书', 'weibo': '微博', 'wx': '微信'}
+def platform_of(url):
+    try:
+        host = (urlparse(str(url or '')).hostname or '').lower()
+    except Exception:
+        return ''
+    if host.startswith('www.'): host = host[4:]
+    if host in ('x.com', 'twitter.com', 't.co') or host.endswith('.x.com') or host.endswith('.twitter.com'): return 'x'
+    if host in ('xiaohongshu.com', 'xhslink.com') or host.endswith('.xiaohongshu.com') or host.endswith('.xhslink.com'): return 'xhs'
+    if host in ('weibo.com', 'weibo.cn') or host.endswith('.weibo.com') or host.endswith('.weibo.cn'): return 'weibo'
+    if host in ('weixin.qq.com', 'wechat.com') or host.endswith('.weixin.qq.com') or host.endswith('.wechat.com'): return 'wx'
+    return ''
 def link(url, label=None):
-    return f'<a href="{E(url)}" target="_blank" rel="noopener">{E(label or url)}</a>' if url else ''
+    if not url: return ''
+    p = platform_of(url)
+    logo = _LOGOS.get(p, '')
+    cls = f'ext ext-{p}' if p else 'ext'
+    tip = f' title="{E(_PNAME[p])}"' if p else ''
+    return f'<a class="{cls}" href="{E(url)}" target="_blank" rel="noopener"{tip}>{logo}<span>{E(label or url)}</span></a>'
 def bar_chart(labels, values, w=640, h=180):
     if not values: return ''
     mx = max(values) or 1; n = len(values); bw = (w - 40) / n
@@ -79,7 +103,7 @@ CSS = '''
 [data-theme=feed]{--bg:#f2f3f5;--card:#fff;--line:#e8eaee;--tx:#15181d;--mut:#7a818c;--acc:#fe2c55;--acc2:#1677ff}
 [data-theme=hot]{--bg:#fff7f3;--card:#fff;--line:#f3dfd6;--tx:#222;--mut:#8a8a8a;--acc:#ff4d1a;--acc2:#eb7350}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font-family:"Noto Sans CJK SC","Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;font-size:15px;line-height:1.75}
-a{color:var(--acc2)}.wrap{max-width:920px;margin:0 auto;padding:0 20px 50px}
+a{color:var(--acc2)}a.ext{display:inline-flex;align-items:center;gap:4px}.plogo{width:16px;height:16px;flex:none;display:block}.wrap{max-width:920px;margin:0 auto;padding:0 20px 50px}
 .topbar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding:14px 0;font-size:13px;color:var(--mut)}
 .topbar .crumb{margin-left:auto;text-align:right}
 .tz{display:inline-flex;flex-shrink:0;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card)}
@@ -142,8 +166,8 @@ def x_quote(url, text, author, name, created, views, likes, reposts):
     if reposts is not None: meta += f'<span class="note">转 {E(reposts)}</span> '
     meta += '</div>'
     inner = f'<p class="xtext">{E(body)}</p>' if body else '<p class="xmiss">正文未缓存</p>'
-    link = f'<a class="xlink" href="{E(url)}" target="_blank" rel="noopener">原链接（站外）</a>' if url else ''
-    return f'<blockquote class="xbody">{meta}{inner}{link}</blockquote>'
+    outbound = link(url, '原链接（站外）') if url else ''
+    return f'<blockquote class="xbody">{meta}{inner}{outbound}</blockquote>'
 def render(it, ed, all_items, out_dir):
     d = it.get('detail') or {}
     title = d.get('title') or (it['company'] + '：' + it['text'][:30] + '…')
