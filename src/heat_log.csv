@@ -73,3 +73,7 @@ timestamp_utc,topic,metric,value,source
 2026-10-11T23:59:59Z,小米罗福莉晋升,x_daily_post_count,9,X get_posts_counts_recent q=罗福莉 fetched 2026-10-13T13:08:30Z
 2026-10-12T23:59:59Z,小米罗福莉晋升,x_daily_post_count,6,X get_posts_counts_recent q=罗福莉 fetched 2026-10-13T13:08:30Z
 2026-10-13T13:08:30Z,小米罗福莉晋升,x_post_count_partial_2026-10-13,1,X get_posts_counts_recent (00:00–13:08Z) q=罗福莉
+2026-10-14T05:13:36Z,滴滴 & 滴滴出海,x_hourly_post_count_04Z,223,"X q=滴滴 OR 滴滴出行 OR ""DiDi Global"" OR ""Didi Chuxing""; jump vs 134 driven by spam (AI成人短剧 #滴滴代操) and 滴滴 reply slang"
+2026-10-14T05:13:36Z,滴滴 & 滴滴出海,x_post_count_05Z_partial_to0511,45,"X same broad query, 05:00-05:11Z"
+2026-10-14T05:13:36Z,滴滴繁简价差,x_posts_since_20261013T05Z,2,X q=滴滴 (繁体 OR 繁體 OR 简体 OR 簡體); top @Fourpqwq 577 views/9 replies; @0xTheo520 197 views/2 replies
+2026-10-14T05:13:36Z,滴滴海外市场,x_tier1_tier2slot1_hits_0400to0511Z,0,BR/MX/EN/JP/AU/EG X queries returned 0 posts

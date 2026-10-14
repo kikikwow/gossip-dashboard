@@ -1,0 +1,154 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-14T05:13:36Z",
+ "fired_at_utc": "2026-10-14T05:10:07.322Z",
+ "scanned_at_utc": "2026-10-14T05:13:36Z",
+ "beijing_time": "2026-10-14 13:20 Asia/Shanghai",
+ "edition_date": "2026-10-14",
+ "window": {
+  "start_utc": "2026-10-14T04:08:00Z",
+  "end_utc": "2026-10-14T05:13:36Z",
+  "note": "自上轮 12:10（北京时间）以来；Tier2 slot1（日本/澳新/埃及）回看约 6–26 小时，首次发现的本地语言线索一并收录"
+ },
+ "alert_sent": true,
+ "alert_worthy": true,
+ "reason": "首次发现两条海外本地语言线索：日本合资公司 DiDiモビリティジャパン 连亏+资不抵债后发无表决权股增资（日语，Compalyze 10-13）；墨西哥普埃布拉 Facebook 公开售卖 DiDi 司机账号（西语，Contigo Puebla 10-13）。另：繁体/简体价差话题在 X 中文圈继续二次扩散，滴滴仍未回应。",
+ "sections": [
+  {
+   "title": "🌏 海外小语种线索",
+   "color": "#0b7285",
+   "items": [
+    {
+     "company": "滴滴出海·日本",
+     "tag": "实锤",
+     "source_types": [
+      "公开媒体",
+      "日语",
+      "日本"
+     ],
+     "date": "10-13",
+     "country": "日本",
+     "lang": "日语",
+     "text": "【财报/资本】滴滴与软银各持 50% 表决权的日本合资公司 DiDiモビリティジャパン：已公开的 9 期决算公告全部亏损，累计净亏损约 167 亿日元；2025 年 3 月期起资不抵债（债务超过），2026 年 3 月期末缺口扩大到 27.9 亿日元；最近两期亏损连续翻倍（10.90 亿 → 21.68 亿日元）。2026-07-31 公司发行 16.38 万股无表决权 B 类普通股，资本金从 1 亿增至 41.95 亿日元（+40.95 亿），认购方是谁、现金还是债转股均未披露，公司官网和 PR TIMES 也未发布公告。另：大阪地裁及知财高裁已驳回针对其派车系统约 3.5 亿日元的专利索赔。注：该文为 Compalyze 基于决算公告、登记簿的数据分析（文章自述由 AI 撰写），数字来自官方公告。",
+     "translation_zh": "DiDi 移动日本（软银与滴滴各持一半表决权的合资公司）9 期决算公告全部为净亏损，累计约 167 亿日元。2025 年 3 月期陷入资不抵债，2026 年 7 月发行无表决权 B 类普通股，资本金增加 40.95 亿日元……2026 年 3 月期末资不抵债额扩大至 27.9 亿日元……2025 年 3 月期亏损 10.90 亿日元（约为前期 2.5 倍），2026 年 3 月期 21.68 亿日元（约翻倍），连续两期亏损扩大……B 类股由谁认购、是两位股东还是其中一方，登记和公开资料均未写明……截至 2026 年 10 月 13 日，公司公告和 PR TIMES 上均未见此次增资的发布。",
+     "original": "DiDiモビリティジャパン（ソフトバンクと滴滴が議決権を折半する合弁）は、決算公告9期すべてが純損失で累計は約167億円。2025年3月期に債務超過となり、2026年7月に議決権のないB種普通株式を発行して資本金を40.95億円増やした。…2026年3月期末にはその額（債務超過）が27.9億円に広がっている。…2025年3月期は10.90億円（前期の約2.5倍）、2026年3月期は21.68億円（同約2倍）と、2期続けて損失が広がった。…B種を誰が引き受けたのか、両株主なのか一方なのかは、登記にも公開資料にも書かれていない。…この増資についての発表は、2026年10月13日時点で同社のお知らせとPR TIMESには見当たらない。",
+     "links": [
+      {
+       "label": "Compalyze（日语）",
+       "url": "https://compalyze.co.jp/journal/didi-mobility-japan-capital"
+      }
+     ],
+     "id": "20261014-didi-05Z-jp-capital"
+    },
+    {
+     "company": "滴滴出海·墨西哥",
+     "tag": "传闻",
+     "source_types": [
+      "公开媒体",
+      "西班牙语",
+      "墨西哥"
+     ],
+     "date": "10-13",
+     "country": "墨西哥",
+     "lang": "西班牙语",
+     "text": "【安全/合规】墨西哥普埃布拉当地媒体报道：Facebook 上公开售卖 DiDi 在用司机账号，约 800 比索一个，卖家可把账号改成买家的姓名和照片，面向证件不全或被平台暂停的人，可能绕过无犯罪记录和身份核验。目前只有当地媒体单篇报道，未见滴滴或监管回应。",
+     "translation_zh": "在普埃布拉市发现有人通过 Facebook 出售 DiDi 平台的活跃司机账号。据流传的信息，这些账号卖给没有所需证件或被公司暂时停用的人……账号价格约 800 比索，以「DiDi 账号」等广告像普通商品一样公开出售。卖家称可交付已设置为买家姓名和照片、可直接使用的账号。",
+     "original": "Se ha detectado la venta de cuentas activas de conductores de la plataforma DiDi a través de Facebook en la ciudad de Puebla. Según la información difundida, estas cuentas se ofrecen a personas que no cuentan con la documentación requerida o que fueron dadas de baja temporalmente por la empresa. … El precio de las cuentas ronda los 800 pesos y se ofrecen abiertamente como cualquier otro producto, bajo anuncios como “Cuentas de DiDi”. Según las publicaciones señaladas, los vendedores ofrecen entregar cuentas configuradas con el nombre y la fotografía del comprador, listas para utilizarse.",
+     "links": [
+      {
+       "label": "Contigo Puebla（西语）",
+       "url": "https://contigopuebla.mx/2026/78162/ofrecen-cuentas-de-didi-sin-filtros-de-seguridad/"
+      }
+     ],
+     "id": "20261014-didi-05Z-mx-accounts"
+    }
+   ]
+  },
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴·价格歧视",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "LIHKG",
+      "Threads（未登录）"
+     ],
+     "date": "10-14 12:30",
+     "text": "【追踪】繁体版比简体版贵的话题（厦门→翔安机场 ¥112.6 对 ¥64.5）继续在 X 中文圈二次扩散：@0xTheo520 12:30 发帖「滴滴用繁体字和简体字价格区别居然这么大」（浏览约 197、回复 2）；更早 @Fourpqwq 10-13 21:52 帖浏览约 577、回复 9；LIHKG 有讨论串。两张截图时间和路线不同，且简体版多出「惊喜特价」，仍不能证明是界面语言导致；滴滴尚未针对此事回应（8 月曾整体否认大数据杀熟）。",
+     "links": [
+      {
+       "label": "X @0xTheo520",
+       "url": "https://x.com/0xTheo520/status/2110226592597254442"
+      },
+      {
+       "label": "X @Fourpqwq",
+       "url": "https://x.com/Fourpqwq/status/2110005702081024299"
+      },
+      {
+       "label": "LIHKG 讨论串",
+       "url": "https://lihkg.com/thread/4167818/page/1"
+      },
+      {
+       "label": "unwire.hk",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/"
+      }
+     ],
+     "id": "20261014-didi-05Z-price-trad-simp"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "03Z": 134,
+   "04Z": 223,
+   "05Z_partial_to0511": 45,
+   "note": "04Z 跳升主要来自成人短剧推广和「滴滴」回复黑话等噪音，非公司事件"
+  },
+  "trad_simp_price_x": {
+   "posts_since_10-13T05Z": 2,
+   "top_views": 577
+  },
+  "tier1_x_hits_in_window": 2,
+  "slot1_x_hits": 0,
+  "weibo_didi_on_list": "not_checked_this_run"
+ },
+ "candidates": [
+  {
+   "topic": "DiDi Food México 首份外卖趋势报告（披萨超越塔可）",
+   "verdict": "log_only_pr",
+   "url": "https://www.publimetro.com.mx/plus/2026/10/14/didi-food-presenta-primer-estudio-de-tendencias-gastronomicas-y-servicio-a-domicilio/"
+  },
+  {
+   "topic": "Tamaulipas 追讨 DiDi 4800 万比索",
+   "verdict": "already_covered_01Z"
+  },
+  {
+   "topic": "DiDiモビリティジャパン 南城市合作/旭川机场",
+   "verdict": "log_only_pr",
+   "url": "https://prtimes.jp/main/html/rd/p/000000133.000051938.html"
+  },
+  {
+   "topic": "99Food Senacon 处罚程序",
+   "verdict": "stale_2026-06"
+  },
+  {
+   "topic": "滴滴 内部信/裁员 WebSearch",
+   "verdict": "stale_old_articles"
+  },
+  {
+   "topic": "X 广义 滴滴 04Z 量能跳升",
+   "verdict": "reject_noise"
+  }
+ ],
+ "sources_queried": [
+  "X tier1×8 + slot1×3 + 繁简专查 + 广义抽样 + counts",
+  "WebSearch×6",
+  "RSS fetch_sources (1 条新匹配，与滴滴无关)"
+ ]
+}

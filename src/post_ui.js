@@ -192,16 +192,21 @@
     });
     var itemTr = item.translation_zh || d.translation_zh || '';
     var itemLang = item.lang || d.lang || '';
-    if (itemTr || itemLang) {
+    var itemOrig = String(item.original || d.original || '').trim();
+    if (itemTr || itemLang || itemOrig) {
       var host = null;
       for (var i = 0; i < out.length; i++) if (out[i].text) { host = out[i]; break; }
+      if (!host) {
+        for (var j = 0; j < out.length; j++) if (!out[j].text) { host = out[j]; break; }
+      }
       host = host || out[0];
       if (host) {
+        if (!host.text && itemOrig) host.text = itemOrig;
         if (!host.translation_zh && itemTr) host.translation_zh = itemTr;
         if (!host.lang && itemLang) host.lang = itemLang;
       }
     }
-    if (!out.length) out.push(mergeSnap({ translation_zh: itemTr, lang: itemLang }, posts));
+    if (!out.length) out.push(mergeSnap({ text: itemOrig, translation_zh: itemTr, lang: itemLang }, posts));
     return out;
   }
   function primaryOf(item, posts) {
