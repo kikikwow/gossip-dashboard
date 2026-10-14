@@ -1,0 +1,441 @@
+{
+ "type": "adr",
+ "title": "美股中概 & 出海简报",
+ "timestamp": "2026-10-14T05:44:09Z",
+ "edition_date": "2026-10-14",
+ "lede": "【补跑】09:00 北京时间档 · 实际运行于北京时间 2026-10-14 13:44 · 覆盖自上一档 2026-10-13T21:00Z（北京 05:00）至此刻 · 信源：X 公开检索 + 公开媒体/RSS；未推 GitHub；样刊/上一档已报条目只做跟进",
+ "top3": [
+  {
+   "section": "🏛️ 监管·诉讼·制裁",
+   "index": 0
+  },
+  {
+   "section": "🌏 海外小语种线索",
+   "index": 0
+  },
+  {
+   "section": "🏛️ 监管·诉讼·制裁",
+   "index": 1
+  }
+ ],
+ "sections": [
+  {
+   "title": "🎯 重点追踪",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "公开媒体",
+      "X",
+      "日语",
+      "西班牙语"
+     ],
+     "date": "10-13/14",
+     "text": "本期有新动态（详见「海外小语种线索」与下条）：①日本合资 DiDiモビリティジャパン 决算公告梳理——9 期全亏、累计净亏约 167 亿日元，资不抵债后以无表决权 B 类股增资；②墨西哥普埃布拉当地媒体称 Facebook 公开售卖 DiDi 司机账号（约 800 比索）；③繁体/简体价差话题继续二次扩散（@0xTheo520 浏览约 578；新帖 @suyu2018block 约 51），滴滴仍未就此回应。巴西 99 / 埃及 X 本地语检索窗口内无达到门槛的公司级线索。",
+     "links": [
+      {
+       "label": "Compalyze（日语）",
+       "url": "https://compalyze.co.jp/journal/didi-mobility-japan-capital",
+       "views": null
+      },
+      {
+       "label": "Contigo Puebla（西语）",
+       "url": "https://contigopuebla.mx/2026/78162/ofrecen-cuentas-de-didi-sin-filtros-de-seguridad/",
+       "views": null
+      },
+      {
+       "label": "X @0xTheo520",
+       "url": "https://x.com/0xTheo520/status/2110226592597254442",
+       "views": "578"
+      }
+     ],
+     "id": "20261014-adr-01Z-didi-focus"
+    },
+    {
+     "company": "字节 / TikTok",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-14",
+     "text": "本期无重大新动态。窗口内多为流量份额分析、A 股短剧情绪跟帖及旧闻二次传播（如海外短剧 App PineDrama 下载破亿，主发于 10-12 前后），未见可核验的 TikTok 监管/股权或字节人事爆点。",
+     "links": [],
+     "id": "20261014-adr-01Z-bytedance-none"
+    },
+    {
+     "company": "智谱 / 月之暗面 / 中国大模型",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-12/14",
+     "text": "Anthropic 反蒸馏点名续传：中文主帖 @AYi_AInotes 浏览升至约 35.6 万（上一档约 30.7 万），赞约 1294、转 165。X 相关发帖自 21Z 起约 274，近 3h 约 42→31→14 📉 继续回落；窗口内未见智谱/月之暗面逐条官方回应。DeepSeek「约 1000 亿融资」主报道落在 10-13 早间（窗口外），本档不重复展开。",
+     "links": [
+      {
+       "label": "Anthropic 官方",
+       "url": "https://www.anthropic.com/research/distillation-defenses",
+       "views": null
+      },
+      {
+       "label": "X @AYi_AInotes",
+       "url": "https://x.com/AYi_AInotes/status/2109816068462256394",
+       "views": "35.6万"
+      }
+     ],
+     "id": "20261014-adr-01Z-anthropic-follow"
+    }
+   ]
+  },
+  {
+   "title": "⚡ 短期热点追踪",
+   "color": "#ea580c",
+   "items": [
+    {
+     "company": "Temu密苏里州检察长起诉",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-13/14",
+     "text": "➡️/📉 高位回落但仍在美媒扩散：广义检索（lawsuit/Missouri/AG/privacy/CCP/Hanaway）21Z 以来约 574 帖，近 3h 约 30→25→21 📉；AG 官帖 @AGCHanaway 浏览约 6102（上一档约 2430）、赞 331、转 108。FOX4/FOX2 等地方台继续转述「恶意收集定位/麦克风/摄像头」指控。未见 Temu/拼多多官方逐条回应。",
+     "links": [
+      {
+       "label": "X @AGCHanaway",
+       "url": "https://x.com/AGCHanaway/status/2110096039394848819",
+       "views": "6102"
+      },
+      {
+       "label": "FOX4 KC",
+       "url": "https://fox4kc.com/news/missouri-attorney-general-sues-temu-claims-app-is-designed-to-hack-devices-steal-data/",
+       "views": null
+      },
+      {
+       "label": "STLPR",
+       "url": "https://www.stlpr.org/government-politics-issues/2026-10-13/missouri-sues-temu-says-shopping-app-can-access-phone-location-camera-and-microphone",
+       "views": null
+      }
+     ],
+     "id": "20261014-adr-01Z-temu-hot"
+    },
+    {
+     "company": "Anthropic点名智谱/月之暗面蒸馏",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-12/14",
+     "text": "📉 续降：21Z 以来约 274 帖，近 3h 42→31→14；主帖浏览约 35.6 万。无新官方进展，讨论多为 RT/复盘。",
+     "links": [
+      {
+       "label": "X @AYi_AInotes",
+       "url": "https://x.com/AYi_AInotes/status/2109816068462256394",
+       "views": "35.6万"
+      }
+     ],
+     "id": "20261014-adr-01Z-anthropic-hot"
+    },
+    {
+     "company": "华为尊界刹车门（车圈互撕）",
+     "tag": "实锤",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-13/14",
+     "text": "➡️ 偏持平：21Z 以来约 286 帖，近 3h 约 32→31→36；与美股中概/出海关联弱，本刊不展开。",
+     "links": [],
+     "id": "20261014-adr-01Z-zunjie-hot"
+    }
+   ]
+  },
+  {
+   "title": "🌏 海外小语种线索",
+   "color": "#0b7285",
+   "items": [
+    {
+     "company": "滴滴出海·日本",
+     "tag": "实锤",
+     "source_types": [
+      "公开媒体",
+      "日语",
+      "日本"
+     ],
+     "date": "10-13",
+     "country": "日本",
+     "lang": "日语",
+     "text": "【财报/资本】滴滴与软银各持 50% 表决权的日本合资公司 DiDiモビリティジャパン：已公开 9 期决算公告全部亏损，累计净亏损约 167 亿日元；2025 年 3 月期起资不抵债，2026 年 3 月期末缺口约 27.9 亿日元；近两期亏损连续扩大（10.90 亿→21.68 亿日元）。2026-07-31 发行无表决权 B 类普通股，资本金增至约 41.95 亿日元（+40.95 亿），认购方未披露。文章自述基于决算公告/登记簿并由 AI 撰写，数字来自官方公告。",
+     "translation_zh": "DiDi 移动日本（软银与滴滴各持一半表决权）9 期决算公告全部为净亏损，累计约 167 亿日元。2025 年 3 月期陷入资不抵债，2026 年 7 月发行无表决权 B 类普通股，资本金增加 40.95 亿日元……2026 年 3 月期末资不抵债额扩大至 27.9 亿日元……连续两期亏损扩大……B 类股由谁认购未写明……截至 2026-10-13 公司公告与 PR TIMES 未见此次增资发布。",
+     "original": "DiDiモビリティジャパン（ソフトバンクと滴滴が議決権を折半する合弁）は、決算公告9期すべてが純損失で累計は約167億円。2025年3月期に債務超過となり、2026年7月に議決権のないB種普通株式を発行して資本金を40.95億円増やした。…2026年3月期末にはその額（債務超過）が27.9億円に広がっている。…2期続けて損失が広がった。…B種を誰が引き受けたのかは書かれていない。",
+     "links": [
+      {
+       "label": "Compalyze（日语原文）",
+       "url": "https://compalyze.co.jp/journal/didi-mobility-japan-capital",
+       "views": null
+      }
+     ],
+     "id": "20261014-adr-01Z-didi-jp-capital"
+    },
+    {
+     "company": "滴滴出海·墨西哥",
+     "tag": "传闻",
+     "source_types": [
+      "公开媒体",
+      "西班牙语",
+      "墨西哥"
+     ],
+     "date": "10-13",
+     "country": "墨西哥",
+     "lang": "西班牙语",
+     "text": "【安全/合规】墨西哥普埃布拉当地媒体 Contigo Puebla：Facebook 上公开售卖 DiDi 在用司机账号，约 800 比索一个，卖家可改成买家姓名与照片，面向证件不全或被平台暂停者，或绕过无犯罪记录与身份核验。目前仅当地媒体单篇，未见滴滴或监管回应。",
+     "translation_zh": "在普埃布拉市发现有人通过 Facebook 出售 DiDi 平台活跃司机账号。这些账号卖给没有所需证件或被公司暂时停用的人……价格约 800 比索，以「DiDi 账号」等广告公开出售。卖家称可交付已设置为买家姓名和照片、可直接使用的账号。",
+     "original": "Se ha detectado la venta de cuentas activas de conductores de la plataforma DiDi a través de Facebook en la ciudad de Puebla. … El precio de las cuentas ronda los 800 pesos … los vendedores ofrecen entregar cuentas configuradas con el nombre y la fotografía del comprador, listas para utilizarse.",
+     "links": [
+      {
+       "label": "Contigo Puebla（西语原文）",
+       "url": "https://contigopuebla.mx/2026/78162/ofrecen-cuentas-de-didi-sin-filtros-de-seguridad/",
+       "views": null
+      }
+     ],
+     "id": "20261014-adr-01Z-didi-mx-accounts"
+    },
+    {
+     "company": "滴滴·顺风车体验（日语叙述）",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "日语"
+     ],
+     "date": "10-14",
+     "country": "中国（中山→深圳）",
+     "lang": "日语",
+     "text": "【体验吐槽】日语账号 @xiaolong761216 发帖：在中国用滴滴顺风车预约「独享（包车）」从中山回深圳，上车后发现车内已有其他乘客，与「独享」不符；质问司机后继续吐槽。浏览约 9479、赞 106、转 8。属单方乘客叙述，非公司回应。",
+     "translation_zh": "在中国的 DiDi 顺风车上又遇到离谱司机。从中山家到深圳，明明预约了「独享（包车）」，来接的车上却已经坐着别的乘客。独享到底是什么意思？上车后质问司机……",
+     "original": "中国のDiDi順風車（滴滴顺风车）で、久々にとんでもない運転手に当たった話。中山の自宅から深圳まで、当然ながら「独享（貸切）」で予約したんですよ。ところが迎えに来た車には、なぜかすでに別の乗客が乗っている。は？ 独享って何だっけ？😂 乗ってから運転手を問い詰めると、",
+     "links": [
+      {
+       "label": "X @xiaolong761216",
+       "url": "https://x.com/xiaolong761216/status/2110175588422156514",
+       "views": "9479"
+      }
+     ],
+     "id": "20261014-adr-01Z-didi-jp-hitch-complaint"
+    }
+   ]
+  },
+  {
+   "title": "🏛️ 监管·诉讼·制裁",
+   "color": "#b45309",
+   "items": [
+    {
+     "company": "茶百道",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "X"
+     ],
+     "date": "10-13/14",
+     "section": "🏛️ 监管·诉讼·制裁",
+     "text": "香港证监会 10-13 起指令港交所暂停茶百道（02555.HK）交易：指其 2024 年 IPO「可能曾被人为操纵」、营造股份需求假象；并对可疑集团发出限制通知，其中一组涉茶百道/拨康视云，限制相关经纪账户资产上限约 43.79 亿港元（证监会称同类案件历来最高）。部分募资或经未披露协议暗中回流主要承配人。澎湃等称上市首日破发超 26%、较发行价累跌近 77%。窗口内 X 讨论升温（@WallStTV 等复盘帖浏览约 845）。上一档未覆盖，本补跑档补录。",
+     "links": [
+      {
+       "label": "香港证监会 26PR168",
+       "url": "https://apps.sfc.hk/edistributionWeb/gateway/TC/news-and-announcements/news/doc?refNo=26PR168",
+       "views": null
+      },
+      {
+       "label": "澎湃",
+       "url": "https://www.thepaper.cn/newsDetail_forward_34243282",
+       "views": null
+      },
+      {
+       "label": "X @WallStTV",
+       "url": "https://x.com/WallStTV/status/2110185068132020571",
+       "views": "845"
+      }
+     ],
+     "id": "20261014-adr-01Z-chapanda-sfc",
+     "detail": {
+      "title": "香港证监会勒令茶百道停牌：怀疑 IPO 人为操纵",
+      "summary": "证监会暂停茶百道交易并限制可疑集团相关资产约 43.79 亿港元，指 IPO 需求或被人为营造。",
+      "background": "2026-10-13 香港证监会公告：对两个涉嫌欺诈集团采取行动，自当日上午 9 时起暂停茶百道（2555.HK）股份交易；指茶百道 2024 年 IPO 可能被人为操纵。第一可疑集团涉拨康视云与茶百道，向六家经纪行发出限制通知，资产上限 43.79 亿港元；第二集团涉天聚地合，上限 2.85 亿港元。证监会称部分 IPO 所得或经未披露协议回流承配人。茶百道 2024-04 上市，发行价 17.5 港元，首日大跌，截至 10-12 约 4.035 港元。",
+      "timeline": [
+       {
+        "date": "2024-04-23",
+        "text": "茶百道港股上市",
+        "url": "https://www.thepaper.cn/newsDetail_forward_34243282"
+       },
+       {
+        "date": "2026-10-13",
+        "text": "证监会指令停牌并限制可疑资产",
+        "url": "https://apps.sfc.hk/edistributionWeb/gateway/TC/news-and-announcements/news/doc?refNo=26PR168"
+       }
+      ],
+      "responses": [
+       {
+        "party": "香港证监会",
+        "text": "调查期间停牌以维护有秩序公平市场及投资者利益",
+        "url": "https://apps.sfc.hk/edistributionWeb/gateway/TC/news-and-announcements/news/doc?refNo=26PR168"
+       }
+      ],
+      "stance_note": "属监管调查阶段；茶百道公司逐条回应未在本窗口核验到权威链接。"
+     }
+    },
+    {
+     "company": "Temu / 拼多多",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-13/14",
+     "section": "🏛️ 监管·诉讼·制裁",
+     "text": "【跟进】密苏里州检察长起诉 Temu 事件进入美媒本地台扩散阶段：指控隐蔽收集高精度定位、麦克风/摄像头、应用列表等，并指定价/假货与 CCP 数据风险；建议删除 App。AG 官帖浏览约 6102。属上一档首发后的传播跟进，无新诉状要点变化。",
+     "links": [
+      {
+       "label": "X @AGCHanaway",
+       "url": "https://x.com/AGCHanaway/status/2110096039394848819",
+       "views": "6102"
+      },
+      {
+       "label": "EIN Presswire/AG",
+       "url": "https://www.einpresswire.com/article/949361922/missouri-attorney-general-hanaway-sues-temu-for-malicious-data-collection-and-deceiving-consumers",
+       "views": null
+      },
+      {
+       "label": "X @fox4kc",
+       "url": "https://x.com/fox4kc/status/2110116030068523070",
+       "views": "998"
+      }
+     ],
+     "id": "20261014-adr-01Z-temu-follow"
+    }
+   ]
+  },
+  {
+   "title": "📉 股价大动",
+   "color": "#1d4ed8",
+   "items": [
+    {
+     "company": "理想 / 蔚来 / 拼多多 / 文远知行",
+     "tag": "实锤",
+     "source_types": [
+      "媒体"
+     ],
+     "date": "10-13收盘",
+     "section": "📉 股价大动",
+     "text": "美股 10-13 收盘（北京 10-14 凌晨披露）：纳斯达克中国金龙指数涨 0.14%。理想汽车涨 3.07%、蔚来涨 2.59%（收 3.56 美元）、拼多多涨 1.29%、小鹏涨 0.93%、京东涨 0.22%、阿里巴巴涨 0.06%（收 110.85 美元）、富途涨 1.60%、微牛涨 0.16%、名创优品涨 1.95%；文远知行跌 5.44%、小马智行跌 2.61%、百度跌 0.66%、哔哩哔哩跌 1.38%。道指跌 0.35%、纳指跌 0.15%。数字来自东方财富/新浪援引收盘行情。",
+     "links": [
+      {
+       "label": "东方财富",
+       "url": "https://finance.eastmoney.com/a/202610143894553783.html",
+       "views": null
+      },
+      {
+       "label": "新浪财经",
+       "url": "https://finance.sina.com.cn/stock/usstock/c/2026-10-14/doc-inivcpis0484332.shtml",
+       "views": null
+      },
+      {
+       "label": "NIO 日线",
+       "url": "https://exa.ai/library/markets/stock/NIO?date=2026-10-14&view=daily",
+       "views": null
+      }
+     ],
+     "id": "20261014-adr-01Z-adr-closes"
+    },
+    {
+     "company": "霸王茶姬 CHAGEE",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "X"
+     ],
+     "date": "10-13",
+     "section": "📉 股价大动",
+     "text": "NASDAQ:CHA 10-13 收 12.52 美元，涨约 4.59%（前收 11.97）；中文财经账号亦称霸王茶姬涨超 4%。承接 10-12 郑钦文营销热潮后的情绪延续，非新财报驱动。",
+     "links": [
+      {
+       "label": "CHA 日线",
+       "url": "https://exa.ai/library/markets/stock/CHA?date=2026-10-13&view=daily",
+       "views": null
+      },
+      {
+       "label": "X @BVonavi",
+       "url": "https://x.com/BVonavi/status/2110178374887104909",
+       "views": "16"
+      }
+     ],
+     "id": "20261014-adr-01Z-chagee-close"
+    }
+   ]
+  },
+  {
+   "title": "🧸 消费出海",
+   "color": "#db2777",
+   "items": [
+    {
+     "company": "滴滴·价格歧视",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "LIHKG"
+     ],
+     "date": "10-14",
+     "section": "🧸 消费出海",
+     "text": "繁体版比简体版贵话题继续扩散：@0xTheo520「滴滴用繁体字和简体字价格区别居然这么大」浏览约 578；@suyu2018block 新帖约 51 浏览。截图路线/时间与「惊喜特价」差异仍在，不能单证界面语言导致；滴滴尚未针对此事回应。",
+     "links": [
+      {
+       "label": "X @0xTheo520",
+       "url": "https://x.com/0xTheo520/status/2110226592597254442",
+       "views": "578"
+      },
+      {
+       "label": "X @suyu2018block",
+       "url": "https://x.com/suyu2018block/status/2110241692615888913",
+       "views": "51"
+      },
+      {
+       "label": "unwire.hk",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/",
+       "views": null
+      }
+     ],
+     "id": "20261014-adr-01Z-didi-price-trad-simp"
+    }
+   ]
+  },
+  {
+   "title": "🚀 IPO & 高管",
+   "color": "#059669",
+   "items": [
+    {
+     "company": "传音控股",
+     "tag": "实锤",
+     "source_types": [
+      "媒体"
+     ],
+     "date": "10-14",
+     "section": "🚀 IPO & 高管",
+     "text": "【日程提醒】H 股定价 35.30 港元已于 10-13 公布（上一档已报）；按招股安排预期 10-14（今日）公布国际配售踊跃程度与港公开发售结果，10-15 挂牌。截至本补跑运行时（北京约 13:40）公开结果公告尚未见权威媒体全文；约 40% 募资拟投 AI 相关研发。继续跟踪晚间公告。",
+     "links": [
+      {
+       "label": "港交所发售价公告 PDF",
+       "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/1013/2026101300004_c.pdf",
+       "views": null
+      },
+      {
+       "label": "OFweek 储能",
+       "url": "https://chuneng.ofweek.com/news/2026-10/ART-180226-12000-30706932.html",
+       "views": null
+      }
+     ],
+     "id": "20261014-adr-01Z-transsion-await"
+    }
+   ]
+  }
+ ]
+}

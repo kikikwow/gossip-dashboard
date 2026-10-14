@@ -1,0 +1,462 @@
+{
+ "type": "bigtech",
+ "title": "中国大厂八卦简报",
+ "timestamp": "2026-10-14T05:42:12Z",
+ "edition_date": "2026-10-14",
+ "lede": "【补跑】09:00 北京时间档未跑，于 2026-10-14 13:42 北京时间补跑 · 覆盖 05:00–13:42 北京（2026-10-13T21:00Z→2026-10-14T05:42Z）· 信源：X 公开帖（主）+ 微博镜像/公开媒体 + 滴滴小时追踪已核验海外线索 + 小红书/微信读书快照",
+ "top3": [
+  {
+   "section": "🎬 短剧大战 · 流量互撕",
+   "index": 0
+  },
+  {
+   "section": "🔥 吐槽热帖",
+   "index": 0
+  },
+  {
+   "section": "🚕 滴滴 & 出海",
+   "index": 0
+  }
+ ],
+ "sections": [
+  {
+   "title": "🎬 短剧大战 · 流量互撕",
+   "color": "#e4572e",
+   "items": [
+    {
+     "id": "20261014-01Z-tencent-lvpaopao-hongguo",
+     "company": "腾讯 / 字节·红果",
+     "tag": "实锤",
+     "source_types": [
+      "微博",
+      "媒体",
+      "X"
+     ],
+     "date": "10-13～10-14",
+     "section": "🎬 短剧大战 · 流量互撕",
+     "text": "微信上线「绿泡泡短剧」免费小程序（主体腾讯），不做独立 App、长在微信内，主打免费+广告解锁、小窗悬浮、「朋友在看」社交推荐；对标字节红果（QuestMobile：截至 2026-07 日活约 1.68 亿，超腾讯视频/爱奇艺/优酷/芒果TV 四家长视频日活之和）。21 经济、京报网等称腾讯四年四次出手短剧，内容公司吐槽「红果一家独大」；微博热搜 10-14 13:34 北京镜像榜首「腾讯打算拿什么撬动红果近2亿日活」热度约 170 万。X 窗口内相关发帖偏少（「绿泡泡+短剧/红果」约 21 帖），热度主战场在微博。",
+     "links": [
+      {
+       "label": "微博热搜镜像 soso.re",
+       "url": "https://soso.re/weibo",
+       "views": "榜首·约170万"
+      },
+      {
+       "label": "21经济网",
+       "url": "https://www.21jingji.com/article/20261013/herald/9f65eaeb88b0838b77401c49c13829bf.html",
+       "views": null
+      },
+      {
+       "label": "京报网",
+       "url": "https://news.bjd.com.cn/2026/10/13/11993757.shtml",
+       "views": null
+      },
+      {
+       "label": "X @Salmonbro",
+       "url": "https://x.com/Salmonbro/status/2110199560438198453",
+       "views": "433"
+      },
+      {
+       "label": "X @KELMAND1",
+       "url": "https://x.com/KELMAND1/status/2110201012187467940",
+       "views": "3385"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🔥 吐槽热帖",
+   "color": "#e9c46a",
+   "items": [
+    {
+     "id": "20261014-01Z-tian-keyu-funding",
+     "company": "字节跳动 / 田柯宇",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "X",
+      "微博"
+     ],
+     "date": "10-14",
+     "section": "🔥 吐槽热帖",
+     "text": "曾因恶意篡改代码攻击字节内部模型训练被开除、民事判赔约 50 万元的前实习生田柯宇，创办世界模型方向 AI 实验室，获近 3000 万美元融资（五源、IDG 等）、投后估值约 2 亿美元；团队约 10 人、实验室暂未公开名称/产品，目标 2027 年发布完整模型。界面等报道称消息冲上微博热搜「田柯宇被字节开除后创业」；X @_FORAB 称「字节员工都快骂爆了」，主帖约 8.8 万浏览。田本人采访承认当年「以暴制暴」做法有问题。属资本与职场伦理争议，非公司新裁员爆料。",
+     "links": [
+      {
+       "label": "界面新闻",
+       "url": "https://www.jiemian.com/article/15176209.html",
+       "views": null
+      },
+      {
+       "label": "虎嗅",
+       "url": "https://www.huxiu.com/article/4895908.html",
+       "views": null
+      },
+      {
+       "label": "X @_FORAB",
+       "url": "https://x.com/_FORAB/status/2110205955380330589",
+       "views": "8.8万"
+      },
+      {
+       "label": "微博话题页",
+       "url": "https://weibo.com/a/hot/a88d351176cb9693_0.html?type=grab",
+       "views": null
+      }
+     ],
+     "detail": {
+      "title": "田柯宇融资近 3000 万美元，字节员工舆论反弹",
+      "summary": "前字节实习生田柯宇世界模型实验室融资近 3000 万美元、投后约 2 亿美元；曾因模型投毒被开除并判赔，微博热搜+X 八卦号高浏览。",
+      "background": "2024 年田柯宇在字节实习期间因资源分配不满注入破坏性代码干扰模型训练，字节起诉后法院判赔约 50 万元。离职后其 VAR 论文获 NeurIPS 2024 最佳论文。2026-10 媒体报道其创办约 10 人世界模型实验室，获五源、IDG 等近 3000 万美元融资、投后估值约 2 亿美元，计划输入约 1 亿小时视频、2027 年发布完整模型。社交平台争议焦点：顶尖研究者「二次创业」是否应被资本支持 vs 破坏协作信任的底线。",
+      "timeline": [
+       {
+        "date": "2024-06",
+        "text": "字节内部模型训练遭攻击代码干扰（后确认涉及田柯宇）",
+        "url": "https://www.jiemian.com/article/15176209.html"
+       },
+       {
+        "date": "2024～2025",
+        "text": "字节起诉；法院判赔约 50 万元口径见于媒体",
+        "url": "https://www.jiemian.com/article/15176209.html"
+       },
+       {
+        "date": "2026-10",
+        "text": "融资与估值报道传开，冲上微博热搜；@_FORAB 等转发",
+        "url": "https://x.com/_FORAB/status/2110205955380330589"
+       }
+      ],
+      "x_posts": [
+       {
+        "platform": "X",
+        "url": "https://x.com/_FORAB/status/2110205955380330589",
+        "author": "@_FORAB",
+        "created_at": "2026-10-14T03:08:00Z",
+        "views": 88079,
+        "likes": 201,
+        "reposts": 13,
+        "replies": 40,
+        "quotes": 0,
+        "bookmarks": 55,
+        "fetched_at": "2026-10-14T05:42:00Z"
+       }
+      ],
+      "x_trend": {
+       "query": "(田柯宇 OR \"Tian Keyu\")",
+       "granularity": "hour",
+       "labels": [
+        "21Z",
+        "22Z",
+        "23Z",
+        "00Z",
+        "01Z",
+        "02Z",
+        "03Z",
+        "04Z",
+        "05Z"
+       ],
+       "values": [
+        5,
+        1,
+        2,
+        3,
+        2,
+        4,
+        7,
+        15,
+        6
+       ],
+       "fetched_at": "2026-10-14T05:41:00Z",
+       "source": "X get_posts_counts_recent",
+       "note": "21Z–05:41Z total 45; 04Z spike with FORAB post"
+      },
+      "responses": [
+       {
+        "party": "田柯宇",
+        "text": "采访承认当年行为有严重问题，称属「以暴制暴」，若重来会更明智。",
+        "url": "https://www.jiemian.com/article/15176209.html"
+       },
+       {
+        "party": "字节跳动",
+        "text": "本窗口未见公司就本轮融资舆论的新官方回应。",
+        "url": null
+       }
+      ],
+      "stance_note": "融资数字来自媒体对彭博等报道的转述；员工「骂爆」为八卦号概括，非官方民调。"
+     }
+    }
+   ]
+  },
+  {
+   "title": "🚕 滴滴 & 出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "id": "20261014-01Z-didi-jp-capital",
+     "company": "滴滴出海·日本",
+     "tag": "实锤",
+     "source_types": [
+      "公开媒体",
+      "日语",
+      "日本"
+     ],
+     "date": "10-13",
+     "country": "日本",
+     "lang": "日语",
+     "section": "🚕 滴滴 & 出海",
+     "text": "【海外小语种·日本/日语】DiDiモビリティジャパン（软银与滴滴各持约 50% 表决权合资）：已公开 9 期决算公告全部净亏损，累计约 167 亿日元；2025 年 3 月期起资不抵债，2026 年 3 月期末缺口约 27.9 亿日元；近两期亏损约 10.90 亿→21.68 亿日元。2026-07-31 发行 16.38 万股无表决权 B 类普通股，资本金由 1 亿增至约 41.95 亿日元（+40.95 亿），认购方与现金/债转股未披露，官网与 PR TIMES 截至 10-13 未见增资公告。另：大阪地裁及知财高裁已驳回约 3.5 亿日元专利索赔。来源 Compalyze 基于决算公告/登记簿的数据分析（文自述含 AI 撰写），数字取自官方公告。",
+     "translation_zh": "DiDi 移动日本 9 期决算公告全部为净亏损，累计约 167 亿日元；2025 年 3 月期陷入资不抵债，2026 年 7 月发行无表决权 B 类普通股使资本金增加约 40.95 亿日元……2026 年 3 月期末资不抵债额扩大至约 27.9 亿日元……连续两期亏损扩大……B 类股由谁认购未在公开资料写明……截至 2026-10-13 公司公告与 PR TIMES 未见此次增资发布。",
+     "original": "DiDiモビリティジャパン（ソフトバンクと滴滴が議決権を折半する合弁）は、決算公告9期すべてが純損失で累計は約167億円。2025年3月期に債務超過となり、2026年7月に議決権のないB種普通株式を発行して資本金を40.95億円増やした。…2026年3月期末にはその額（債務超過）が27.9億円に広がっている。…B種を誰が引き受けたのかは、登記にも公開資料にも書かれていない。…この増資についての発表は、2026年10月13日時点で同社のお知らせとPR TIMESには見当たらない。",
+     "links": [
+      {
+       "label": "Compalyze（日语）",
+       "url": "https://compalyze.co.jp/journal/didi-mobility-japan-capital",
+       "views": null
+      }
+     ]
+    },
+    {
+     "id": "20261014-01Z-didi-mx-accounts",
+     "company": "滴滴出海·墨西哥",
+     "tag": "传闻",
+     "source_types": [
+      "公开媒体",
+      "西班牙语",
+      "墨西哥"
+     ],
+     "date": "10-13",
+     "country": "墨西哥",
+     "lang": "西班牙语",
+     "section": "🚕 滴滴 & 出海",
+     "text": "【海外小语种·墨西哥/西语】普埃布拉当地媒体 Contigo Puebla：Facebook 上公开售卖 DiDi 在用司机账号，约 800 比索/个，卖家称可改成买家姓名与照片，面向证件不全或被平台暂停者，可能绕过无犯罪记录与身份核验。目前仅当地媒体单篇，未见滴滴或监管回应。",
+     "translation_zh": "在普埃布拉市发现有人通过 Facebook 出售 DiDi 活跃司机账号……卖给没有所需证件或被暂时停用的人……价格约 800 比索，以「DiDi 账号」等广告公开出售。卖家称可交付已设置为买家姓名和照片、可直接使用的账号。",
+     "original": "Se ha detectado la venta de cuentas activas de conductores de la plataforma DiDi a través de Facebook en la ciudad de Puebla. … El precio de las cuentas ronda los 800 pesos … los vendedores ofrecen entregar cuentas configuradas con el nombre y la fotografía del comprador, listas para utilizarse.",
+     "links": [
+      {
+       "label": "Contigo Puebla（西语）",
+       "url": "https://contigopuebla.mx/2026/78162/ofrecen-cuentas-de-didi-sin-filtros-de-seguridad/",
+       "views": null
+      }
+     ]
+    },
+    {
+     "id": "20261014-01Z-didi-trad-simp-price",
+     "company": "滴滴·价格歧视",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "LIHKG",
+      "Threads（未登录）"
+     ],
+     "date": "10-13～10-14",
+     "section": "🚕 滴滴 & 出海",
+     "text": "【追踪】繁体版比简体版贵话题（厦门→翔安机场 ¥112.6 vs ¥64.5 口径）继续二次扩散：@0xTheo520（约 599 浏览）、@Fourpqwq（约 579 浏览）；LIHKG/unwire.hk 有讨论。两截图时间/路线不同，简体侧或含「惊喜特价」，仍不能证明界面语言单独致价差；滴滴本窗口未见针对回应（8 月曾整体否认大数据杀熟）。",
+     "links": [
+      {
+       "label": "X @0xTheo520",
+       "url": "https://x.com/0xTheo520/status/2110226592597254442",
+       "views": "599"
+      },
+      {
+       "label": "X @Fourpqwq",
+       "url": "https://x.com/Fourpqwq/status/2110005702081024299",
+       "views": "579"
+      },
+      {
+       "label": "LIHKG",
+       "url": "https://lihkg.com/thread/4167818/page/1",
+       "views": null
+      },
+      {
+       "label": "unwire.hk",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/",
+       "views": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🤖 大模型攻防 · 蒸馏续传",
+   "color": "#7b2cbf",
+   "items": [
+    {
+     "id": "20261014-01Z-anthropic-distill-follow",
+     "company": "智谱 / 月之暗面 / Anthropic",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-14",
+     "section": "🤖 大模型攻防 · 蒸馏续传",
+     "text": "Anthropic 10-12 点名智谱/月之暗面蒸馏线续传：窗口 21Z–05:42Z 相关发帖约 310，末数小时约 33→27→18（偏）📉；@AYi_AInotes 主帖浏览升至约 35.6 万。检索未见智谱/月之暗面逐条官方回应。另有低热帖称美银曾谈 Moonshot 港股 IPO overall coordinator 后未落 mandate（Bloomberg 熟人匿名口径）——单帖约数十浏览，【传闻】勿当成官宣。",
+     "links": [
+      {
+       "label": "Anthropic 官方博客",
+       "url": "https://www.anthropic.com/research/distillation-defenses",
+       "views": null
+      },
+      {
+       "label": "X @AYi_AInotes",
+       "url": "https://x.com/AYi_AInotes/status/2109816068462256394",
+       "views": "35.6万"
+      },
+      {
+       "label": "X @0x99DaDa（IPO 传闻）",
+       "url": "https://x.com/0x99DaDa/status/2110237772116287838",
+       "views": "53"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🏛️ 监管·诉讼",
+   "color": "#b45309",
+   "items": [
+    {
+     "id": "20261014-01Z-temu-missouri-follow",
+     "company": "Temu / 拼多多",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-13～10-14",
+     "section": "🏛️ 监管·诉讼",
+     "text": "密苏里州检察长起诉 Temu（数据收集/误导定价等）进入次日续传：广义相关发帖窗口约 565–573，末 3h 约 28→26→22 📉 自夜间峰值回落；AG 官帖浏览约 6102（早报 ADR 记约 2430）。本刊不重复展开诉状细节，见同日美股中概早报。",
+     "links": [
+      {
+       "label": "X @AGCHanaway",
+       "url": "https://x.com/AGCHanaway/status/2110096039394848819",
+       "views": "6102"
+      },
+      {
+       "label": "EIN Presswire/AG",
+       "url": "https://www.einpresswire.com/article/949361922/missouri-attorney-general-hanaway-sues-temu-for-malicious-data-collection-and-deceiving-consumers",
+       "views": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🚗 公关翻车 & 车圈互撕",
+   "color": "#e4572e",
+   "items": [
+    {
+     "id": "20261014-01Z-zunjie-follow",
+     "company": "华为·尊界 / 江淮",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-14",
+     "section": "🚗 公关翻车 & 车圈互撕",
+     "text": "尊界刹车门窗口内发帖约 380，多为第三方检测说明复盘、委托方扯皮传闻及旧测试视频再传，浏览多在千级以下；未见足以再告警的独立新爆点。短期列表本期移出（见短期热点栏）。",
+     "links": [
+      {
+       "label": "X @aboluowang（委托扯皮转述）",
+       "url": "https://x.com/aboluowang/status/2110134917736612099",
+       "views": "1981"
+      },
+      {
+       "label": "X @WallStTV",
+       "url": "https://x.com/WallStTV/status/2110133730019094747",
+       "views": "1479"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "💰 挖人·产品·其他",
+   "color": "#2a9d8f",
+   "items": [
+    {
+     "id": "20261014-01Z-bytedance-option-follow",
+     "company": "字节跳动",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-13～10-14",
+     "section": "💰 挖人·产品·其他",
+     "text": "10 月期权回购税前 241.35 美元/股、业务调整离职者可同价参与的口径继续有转发（如 @JonCaiCai），浏览仍低；未见官方公开确认，维持【传闻】。",
+     "links": [
+      {
+       "label": "X @JonCaiCai",
+       "url": "https://x.com/JonCaiCai/status/2110117373491761615",
+       "views": "30"
+      }
+     ]
+    },
+    {
+     "id": "20261014-01Z-tencent-workbuddy",
+     "company": "腾讯",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-14",
+     "section": "💰 挖人·产品·其他",
+     "text": "企业微信与 WorkBuddy 深度整合：WorkBuddy 进入企业通讯录，可拉群分配任务（@0xLogicrw 约 417 浏览）；雷峰网另报 WorkBuddy 企业版「可观测中心」公测。属产品发布，非八卦级爆料。",
+     "links": [
+      {
+       "label": "X @0xLogicrw",
+       "url": "https://x.com/0xLogicrw/status/2110219165181358529",
+       "views": "417"
+      },
+      {
+       "label": "雷峰网",
+       "url": "https://www.leiphone.com/category/industrynews/f1Qk7Zv1CTpAQhYX.html",
+       "views": null
+      }
+     ]
+    },
+    {
+     "id": "20261014-01Z-kimi-glm-rumor",
+     "company": "月之暗面 / 智谱 / 阿里",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-14",
+     "section": "💰 挖人·产品·其他",
+     "text": "低热帖称 Kimi K3.1 或 10 月中旬、智谱 GLM-5.5 / Vision 标识传闻、阿里下一代千问 4 动向——单帖约数百浏览，无官网/权威媒体背书，仅作线索。",
+     "links": [
+      {
+       "label": "X @kafkaup",
+       "url": "https://x.com/kafkaup/status/2110226608485216750",
+       "views": "784"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "focus": {
+  "滴滴 & 滴滴出海": "日本合资连亏+无表决权股增资（日语实锤数据分析）；墨西哥 Facebook 卖司机号（西语传闻）；繁简价差二次扩散待核实；微博无滴滴热搜",
+  "字节跳动": "田柯宇融资争议冲热搜；红果遭腾讯绿泡泡对攻上微博榜首；期权回购口径低热续传",
+  "中国大模型": "Anthropic 蒸馏线续降、被点名方仍无逐条回应；Kimi/GLM 版本号传闻低热；DeepSeek×Winverse 已在前刊覆盖"
+ },
+ "short_term_notes": [
+  "【新加入】腾讯绿泡泡对战红果短剧 📈 微博榜首约170万",
+  "【新加入】田柯宇融资争议 📈 @_FORAB约8.8万浏览+微博热搜",
+  "Temu密苏里 📉 末3h约28→26→22",
+  "Anthropic蒸馏 📉 窗口约310帖、末段回落；主帖约35.6万浏览",
+  "【已移出】华为尊界刹车门 —— 复盘续传无独立新爆点"
+ ],
+ "overseas_local_lang": [
+  {
+   "id": "20261014-01Z-didi-jp-capital",
+   "country": "日本",
+   "lang": "日语"
+  },
+  {
+   "id": "20261014-01Z-didi-mx-accounts",
+   "country": "墨西哥",
+   "lang": "西班牙语"
+  }
+ ]
+}

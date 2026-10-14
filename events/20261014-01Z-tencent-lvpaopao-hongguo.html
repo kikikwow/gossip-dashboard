@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark" data-ui="new"><head><script>try{var q=new URLSearchParams(location.search).get("ui");var ui=(q==="classic"||q==="new")?q:localStorage.getItem("gossipUi");if(ui!=="classic"&&ui!=="new")ui="new";if(q==="classic"||q==="new"){try{localStorage.setItem("gossipUi",q)}catch(e){}}document.documentElement.dataset.ui=ui;var t=(location.hash.match(/theme=(\w+)/)||[])[1]||localStorage.getItem("gossipTheme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>腾讯 / 字节·红果：微信上线「绿泡泡短剧」免费小程序（主体腾讯），不做独立 Ap…</title>
+<link rel="stylesheet" href="../src/post.css"><style>
+:root{--bg:#0d1117;--card:#1a2130;--line:#283244;--tx:#e6edf3;--mut:#8b98ab;--acc:#ff6b4a;--acc2:#4f8cff;--ok:#22c55e;--rumor:#a78bfa;--warn:#f59e0b}
+[data-theme=paper]{--bg:#f4ecd8;--card:#fbf6e9;--line:#cbbd9b;--tx:#211c14;--mut:#6d6250;--acc:#8b1e1e;--acc2:#7a3b0c;--ok:#2f6b2f;--rumor:#6b3fa0;--warn:#8b5a00}
+[data-theme=paper] body{font-family:"Noto Serif CJK SC","Source Han Serif SC",serif}
+[data-theme=feed]{--bg:#f2f3f5;--card:#fff;--line:#e8eaee;--tx:#15181d;--mut:#7a818c;--acc:#fe2c55;--acc2:#1677ff}
+[data-theme=hot]{--bg:#fff7f3;--card:#fff;--line:#f3dfd6;--tx:#222;--mut:#8a8a8a;--acc:#ff4d1a;--acc2:#eb7350}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font-family:"Noto Sans CJK SC","Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;font-size:15px;line-height:1.75}
+a{color:var(--acc2)}a.ext{display:inline-flex;align-items:center;gap:4px}.plogo{width:16px;height:16px;flex:none;display:block}.wrap{max-width:920px;margin:0 auto;padding:0 20px 50px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding:14px 0;font-size:13px;color:var(--mut)}
+.topbar .crumb{margin-left:auto;text-align:right}
+.tz{display:inline-flex;flex-shrink:0;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card)}
+.tz button{background:transparent;color:var(--tx);border:0;font:inherit;padding:6px 12px;min-height:36px;cursor:pointer;line-height:1.3}
+.tz button.on{background:var(--acc);color:#fff;font-weight:700}
+time{font-variant-numeric:tabular-nums}
+@media(max-width:430px){
+ .wrap{padding:0 12px 40px}h1{font-size:22px}
+ .topbar{align-items:flex-start}.topbar .crumb{flex:1 1 100%;margin-left:0;text-align:left;font-size:12px}
+ .tz{order:3;width:100%}.tz button{flex:1;min-height:44px;font-size:15px}
+}
+h1{font-size:28px;line-height:1.35;margin:6px 0 10px}
+.meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.pill{background:var(--acc);color:#fff;border-radius:999px;padding:1px 12px;font-weight:700}
+.badge{border-radius:6px;padding:0 7px;font-size:12.5px;font-weight:700}.b-real{color:var(--ok);border:1px solid var(--ok)}.b-rum{color:var(--rumor);border:1px solid var(--rumor)}
+.src{font-size:12px;color:var(--mut);border:1px solid var(--line);border-radius:6px;padding:0 6px}
+.summary{background:var(--card);border-left:4px solid var(--acc);padding:14px 18px;border-radius:0 10px 10px 0;font-size:16px}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:18px}
+section h2{margin:0 0 10px;font-size:18px}.na{color:var(--mut);font-style:italic;margin:0}.note{font-size:12px;color:var(--mut);overflow-wrap:anywhere}
+.xbody{margin:8px 0;padding:8px 10px;border-left:3px solid var(--acc2);background:color-mix(in srgb,var(--acc2) 8%,transparent);border-radius:0 10px 10px 0}
+.xtext{white-space:pre-wrap;margin:4px 0}.xmiss{color:var(--warn);font-weight:800}
+.xmeta{font-size:12.5px}.heat-how{font-size:12.5px;color:var(--mut);border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin:8px 0}
+.heat-how b{color:var(--tx)}.heat-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.heat-brief{margin:2px 0 0}.heat-full{display:none}.heat-how.is-open .heat-full{display:block}.heat-how.is-open .heat-brief{display:none}
+.heat-how .xmore{min-height:44px;border:0;background:transparent;color:var(--acc);font:inherit;font-weight:800;cursor:pointer}
+.chart{max-width:100%;height:auto}
+.tl{border-left:2px solid var(--line);padding-left:18px;margin-left:6px}.tli{position:relative;margin-bottom:10px}.tli:before{content:"";position:absolute;left:-25px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--acc)}
+.tli .d{font-weight:700;color:var(--acc);margin-right:8px;font-variant-numeric:tabular-nums}
+.post{border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:10px}
+.hb{display:grid;grid-template-columns:44px 1fr 70px;gap:8px;align-items:center;font-size:13px}.trk{height:10px;background:var(--line);border-radius:5px;overflow:hidden}.trk i{display:block;height:100%;background:var(--acc)}.hb b{text-align:right}
+.chart .tv{font-size:11px;fill:var(--tx)}.chart .tl{font-size:11px;fill:var(--mut)}
+.cmt{border-left:3px solid var(--line);padding:6px 12px;margin:10px 0}.cmt q{font-size:15px}.cmt .by{font-size:12.5px;color:var(--mut);margin-top:4px}
+.st{border-radius:4px;padding:0 6px;font-size:12px;color:#fff;margin-right:6px}.st-支持{background:#16a34a}.st-质疑{background:#dc2626}.st-调侃{background:#d97706}
+.resp{margin:10px 0}.resp b{display:block}
+ul{padding-left:20px;margin:6px 0}
+.kv{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}.kv div{border:1px solid var(--line);border-radius:8px;padding:8px 12px}
+.ui-toggle{min-height:44px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--tx);font:inherit;font-weight:700;cursor:pointer}
+html[data-ui=new]{--bg:#ECE7DE;--card:#F7F3EC;--line:#E4DFD6;--tx:#1F1D1A;--mut:#6E665A;--acc:#9E2B1F;--acc2:#4A6FA5;--ok:#3F6B4A;--warn:#C9824A;--rumor:#9A5A2B}
+html[data-ui=new] body{background:#ECE7DE;color:#1F1D1A;font-family:"Noto Serif CJK SC","Source Han Serif SC","Songti SC",serif}
+html[data-ui=new] h1,html[data-ui=new] h2{font-family:"Noto Serif CJK SC","Source Han Serif SC","Songti SC",serif;font-weight:900}
+html[data-ui=new] section{background:#F7F3EC;border-color:#E4DFD6;box-shadow:0 1px 2px rgba(60,45,30,.05)}
+html[data-ui=new] .summary{background:#F7F3EC;border-left-color:#9E2B1F}
+html[data-ui=new] .tz button.on{background:#4A6FA5;color:#fff}
+html[data-ui=new] .pill{background:#9E2B1F}
+html[data-ui=new] a{color:#4A6FA5}
+</style></head><body><div class="wrap"><div class="topbar"><a class="back" href="../index.html">← 返回看板</a><div class="tz" id="tz" role="group" aria-label="显示时区"><button type="button" data-tz="cst" class="on" aria-pressed="true">北京时间</button><button type="button" data-tz="utc" aria-pressed="false">UTC</button></div><button type="button" class="ui-toggle" data-ui-set="classic">经典版</button><span class="crumb">大厂八卦 · 2026-10-14 · 🎬 短剧大战 · 流量互撕</span></div><h1>腾讯 / 字节·红果：微信上线「绿泡泡短剧」免费小程序（主体腾讯），不做独立 Ap…</h1><div class="meta"><span class="pill">腾讯 / 字节·红果</span><span class="badge b-real">【实锤】</span><span class="src">微博</span><span class="src">媒体</span><span class="src">X</span><span class="note">📅 10-13～10-14</span><div class="phr" data-heat="1"><span class="pstamp">爆</span><span class="pnum">170万浏览</span><div class="phb"><i style="width:100%"></i></div></div></div><div class="summary">微信上线「绿泡泡短剧」免费小程序（主体腾讯），不做独立 App、长在微信内，主打免费+广告解锁、小窗悬浮、「朋友在看」社交推荐；对标字节红果（QuestMobile：截至 2026-07 日活约 1.68 亿，超腾讯视频/爱奇艺/优酷/芒果TV 四家长视频日活之和）。21 经济、京报网等称腾讯四年四次出手短剧，内容公司吐槽「红果一家独大」；微博热搜 10-14 13:34 北京镜像榜首「腾讯打算拿什么撬动红果近2亿日活」热度约 170 万。X 窗口内相关发帖偏少（「绿泡泡+短剧/红果」约 21 帖），热度主战场在微博。</div><section><h2>原文</h2><blockquote class="orig xbody" data-orig="1" data-len="0" data-fold="72" data-miss="1"><div class="poh xmeta"><b>微博热搜镜像 soso.re</b><span class="note">浏览 榜首·约170万</span></div><p class="xmiss">原文未缓存</p><a class="ext" href="https://soso.re/weibo" target="_blank" rel="noopener"><span>原链接</span></a></blockquote><blockquote class="orig xbody" data-orig="1" data-len="0" data-fold="72" data-miss="1"><div class="poh xmeta"><b>21经济网</b></div><p class="xmiss">原文未缓存</p><a class="ext" href="https://www.21jingji.com/article/20261013/herald/9f65eaeb88b0838b77401c49c13829bf.html" target="_blank" rel="noopener"><span>原链接</span></a></blockquote><blockquote class="orig xbody" data-orig="1" data-len="0" data-fold="72" data-miss="1"><div class="poh xmeta"><b>京报网</b></div><p class="xmiss">原文未缓存</p><a class="ext" href="https://news.bjd.com.cn/2026/10/13/11993757.shtml" target="_blank" rel="noopener"><span>原链接</span></a></blockquote><blockquote class="orig xbody" data-orig="1" data-len="103" data-fold="72"><div class="poh xmeta"><svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><b>鲑鱼哥 ｜Salmon Bro 🐟 @Salmonbro</b><time datetime="2026-10-14T02:42:35Z">2026-10-14 10:42</time><span class="note">浏览 433</span><span class="note">赞 8</span><span class="note">转 0</span></div><div class="clampbox" data-len="103" data-fold="72"><p class="xtext clamp">这次微信能超越吗
+
+微信悄悄上线绿泡泡短剧
+
+腾讯4年4次出手做短剧
+
+小时候看红果果绿泡泡，长大了还是红果果绿泡泡。”
+
+微信不做独立App，长在微信里
+
+微信我现在都基本不用了
+
+绿泡泡打算拿什么撬动红果短剧1.68亿的日活？</p><button type="button" class="xmore" aria-expanded="false">展开</button></div><a class="ext ext-x" href="https://x.com/Salmonbro/status/2110199560438198453" target="_blank" rel="noopener" title="X"><svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>原链接</span></a></blockquote><blockquote class="orig xbody" data-orig="1" data-len="642" data-fold="72"><div class="poh xmeta"><svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><b>Eason Mao☢ @KELMAND1</b><time datetime="2026-10-14T02:48:21Z">2026-10-14 10:48</time><span class="note">浏览 3385</span><span class="note">赞 17</span><span class="note">转 4</span></div><div class="clampbox" data-len="642" data-fold="72"><p class="xtext clamp">字节跳动凭借强大的算法分发与短视频内容生态，已在中国移动互联网形成显著的流量寡头地位。
+
+野村证券与行业数据显示，字节系产品的流量与时长优势已全面凸显： 
+
+1. 时长份额登顶：超越腾讯系
+
+时长占比突破四成：截至2026年8月，中国移动互联网整体流量进入存量竞争，字节系产品在中国 Top 50 App 中的时长份额达到 40.9%，而腾讯系降至 29.1%，双方差距扩大至 11.8 个百分点。
+
+抖音超越微信：抖音的用户总使用时长首次超越微信，成为中国第一大使用时长应用，彻底改变了过去十年以社交链为核心的流量入口格局。
+
+2. “国民级”应用矩阵与短剧新爆点
+
+五大日活破亿应用：字节旗下已形成今日头条、抖音、豆包、番茄小说以及现象级爆款红果短剧等五大日活破亿的产品。
+
+红果短剧凶猛增长：截至2026年7月，红果短剧日活攀升至 1.68亿，其日活规模据称已超过腾讯视频、爱奇艺、优酷、芒果TV四大长视频平台之和，用户人均单日停留时长高达125分钟。
+
+出海复制流量范式：字节将“免费观看+广告变现”的红果模式复制到海外（如推出独立短剧应用 PineDrama），在巴西、印尼等市场登顶应用商店总榜。 
+
+3. 从流量到全景商业化
+
+算法驱动的边界扩张：字节没有依靠传统搜索或社交关系链，而是通过强大的推荐算法将短视频嵌入人们的日常，并迅速向电商、本地生活、AI云服务（如豆包及AI助手生态）全面渗透。
+
+海外与总营收高歌猛进：随着 TikTok 及海外短剧矩阵的加速，字节全球商业化与AI投入持续扩大，巩固了其在全球数字广告与流量分发领域的寡头统治力。</p><button type="button" class="xmore" aria-expanded="false">展开</button></div><a class="ext ext-x" href="https://x.com/KELMAND1/status/2110201012187467940" target="_blank" rel="noopener" title="X"><svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>原链接</span></a></blockquote></section><section><h2>📖 事件经过</h2><p>微信上线「绿泡泡短剧」免费小程序（主体腾讯），不做独立 App、长在微信内，主打免费+广告解锁、小窗悬浮、「朋友在看」社交推荐；对标字节红果（QuestMobile：截至 2026-07 日活约 1.68 亿，超腾讯视频/爱奇艺/优酷/芒果TV 四家长视频日活之和）。21 经济、京报网等称腾讯四年四次出手短剧，内容公司吐槽「红果一家独大」；微博热搜 10-14 13:34 北京镜像榜首「腾讯打算拿什么撬动红果近2亿日活」热度约 170 万。X 窗口内相关发帖偏少（「绿泡泡+短剧/红果」约 21 帖），热度主战场在微博。</p><p class="na">暂无更详细的事件经过</p></section><section><h2>🕒 进展时间线</h2><p class="na">暂无数据</p></section><section><h2>📊 各平台热度</h2><div class="note">简报收录时的浏览量：</div><ul><li><a class="ext" href="https://soso.re/weibo" target="_blank" rel="noopener"><span>微博热搜镜像 soso.re</span></a> · 👁 榜首·约170万</li><li><a class="ext ext-x" href="https://x.com/Salmonbro/status/2110199560438198453" target="_blank" rel="noopener" title="X"><svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>X @Salmonbro</span></a> · 👁 433</li><li><a class="ext ext-x" href="https://x.com/KELMAND1/status/2110201012187467940" target="_blank" rel="noopener" title="X"><svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>X @KELMAND1</span></a> · 👁 3385</li></ul><h3 style="font-size:15px;margin:14px 0 4px">微博热搜</h3><p class="na">暂无数据</p><h3 style="font-size:15px;margin:14px 0 4px">其他平台</h3><p class="na">暂无数据</p></section><section><h2>💬 典型评论</h2><p class="na">暂无数据</p></section><section><h2>📢 各方回应</h2><p class="na">暂无数据</p></section><section><h2>🔗 相关事件</h2><p class="na">暂无数据</p></section><section><h2>📚 所有来源链接</h2><ul><li><a class="ext" href="https://soso.re/weibo" target="_blank" rel="noopener"><span>微博热搜镜像 soso.re</span></a> · 👁 榜首·约170万 <span class="note">https://soso.re/weibo</span></li><li><a class="ext" href="https://www.21jingji.com/article/20261013/herald/9f65eaeb88b0838b77401c49c13829bf.html" target="_blank" rel="noopener"><span>21经济网</span></a> <span class="note">https://www.21jingji.com/article/20261013/herald/9f65eaeb88b0838b77401c49c13829bf.html</span></li><li><a class="ext" href="https://news.bjd.com.cn/2026/10/13/11993757.shtml" target="_blank" rel="noopener"><span>京报网</span></a> <span class="note">https://news.bjd.com.cn/2026/10/13/11993757.shtml</span></li><li><a class="ext ext-x" href="https://x.com/Salmonbro/status/2110199560438198453" target="_blank" rel="noopener" title="X"><svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>X @Salmonbro</span></a> · 👁 433 <span class="note">https://x.com/Salmonbro/status/2110199560438198453</span></li><li><a class="ext ext-x" href="https://x.com/KELMAND1/status/2110201012187467940" target="_blank" rel="noopener" title="X"><svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>X @KELMAND1</span></a> · 👁 3385 <span class="note">https://x.com/KELMAND1/status/2110201012187467940</span></li></ul></section><p class="note" style="margin-top:20px">本页仅展示数据文件中已有的信息；【传闻】为单方面说法，未经核实。缺失字段显示“暂无数据”。</p></div><script src="../src/post_ui.js"></script><script>(function(){var KEY="gossipTz";function getTz(){try{var v=localStorage.getItem(KEY);if(v==="utc"||v==="cst")return v}catch(e){}return "cst"}function pad(n){return String(n).padStart(2,"0")}function fmt(iso,tz){var d=new Date(iso);if(isNaN(d))return null;var zone=tz==="utc"?"UTC":"Asia/Shanghai";try{var parts=new Intl.DateTimeFormat("en-CA",{timeZone:zone,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(d);var g=function(t){return parts.find(function(p){return p.type===t}).value};return g("year")+"-"+g("month")+"-"+g("day")+" "+g("hour")+":"+g("minute")+(tz==="utc"?" UTC":"")}catch(e){var x=tz==="utc"?d:new Date(d.getTime()+8*3600000);return x.getUTCFullYear()+"-"+pad(x.getUTCMonth()+1)+"-"+pad(x.getUTCDate())+" "+pad(x.getUTCHours())+":"+pad(x.getUTCMinutes())+(tz==="utc"?" UTC":"")}}function applyTz(){var tz=getTz();document.querySelectorAll("time[datetime]").forEach(function(el){var f=fmt(el.getAttribute("datetime"),tz);if(f)el.textContent=f});document.querySelectorAll("#tz [data-tz]").forEach(function(b){var on=b.getAttribute("data-tz")===tz;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false")})}function applyUi(){var ui=document.documentElement.dataset.ui==="classic"?"classic":"new";var btn=document.querySelector("[data-ui-set]");if(btn){var next=ui==="new"?"classic":"new";btn.setAttribute("data-ui-set",next);btn.textContent=ui==="new"?"经典版":"新版"}var back=document.querySelector("a.back");if(back)back.href="../index.html?ui="+ui}function setUi(mode){if(mode!=="classic"&&mode!=="new")return;document.documentElement.dataset.ui=mode;try{localStorage.setItem("gossipUi",mode)}catch(e){}var u=new URL(location.href);u.searchParams.set("ui",mode);history.replaceState(null,"",u.pathname+u.search+u.hash);applyUi()}document.addEventListener("click",function(e){var ui=e.target.closest&&e.target.closest("[data-ui-set]");if(ui){setUi(ui.getAttribute("data-ui-set"));return}var b=e.target.closest&&e.target.closest("#tz button[data-tz]");if(!b)return;try{localStorage.setItem(KEY,b.getAttribute("data-tz"))}catch(_){}applyTz()});if(window.PostUI){PostUI.bind(document);PostUI.wireClamps(document)}applyTz();applyUi()})();</script></body></html>

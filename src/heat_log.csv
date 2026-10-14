@@ -246,3 +246,69 @@ timestamp_utc,topic,metric,value,source
 2026-10-14T05:13:36Z,滴滴 & 滴滴出海,x_hourly_post_count_04Z,223,"X q=滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"; jump vs 134 driven by spam (AI成人短剧 #滴滴代操) and 滴滴 reply slang"
 2026-10-14T05:13:36Z,滴滴繁简价差,x_posts_since_20261013T05Z,2,"X q=滴滴 (繁体 OR 繁體 OR 简体 OR 簡體); top @Fourpqwq 577 views/9 replies; @0xTheo520 197 views/2 replies"
 2026-10-14T05:13:36Z,滴滴海外市场,x_tier1_tier2slot1_hits_0400to0511Z,0,"BR/MX/EN/JP/AU/EG X queries returned 0 posts"
+2026-10-14T05:42:12Z,腾讯绿泡泡对战红果短剧,weibo_hot_rank,1,soso.re/weibo updated 2026-10-14 13:34 Beijing; title 腾讯打算拿什么撬动红果近2亿日活
+2026-10-14T05:42:12Z,腾讯绿泡泡对战红果短剧,weibo_hot_score,1700426,soso.re/weibo
+2026-10-14T05:42:12Z,腾讯绿泡泡对战红果短剧,x_post_count_21Zto0542Z,21,"X q=绿泡泡 (短剧 OR 红果 OR 腾讯 OR 微信); hourly 0,0,3,0,1,3,2,5 +5Z partial7"
+2026-10-14T05:42:12Z,田柯宇融资争议,x_post_count_21Zto0541Z,45,X q=(田柯宇 OR "Tian Keyu"); hourly 5,1,2,3,2,4,7,15 +5Z partial6
+2026-10-14T05:42:12Z,田柯宇融资争议,x_post_views:@_FORAB,88079,https://x.com/_FORAB/status/2110205955380330589
+2026-10-14T05:42:12Z,田柯宇融资争议,x_post_likes:@_FORAB,201,https://x.com/_FORAB/status/2110205955380330589
+2026-10-14T05:42:12Z,田柯宇融资争议,x_post_reposts:@_FORAB,13,https://x.com/_FORAB/status/2110205955380330589
+2026-10-14T05:42:12Z,田柯宇融资争议,x_post_replies:@_FORAB,40,https://x.com/_FORAB/status/2110205955380330589
+2026-10-14T05:42:12Z,Temu密苏里州检察长起诉,x_post_count_21Zto0542Z,573,"X q=Temu (Missouri OR Hanaway OR lawsuit OR AG OR 起诉 OR 密苏里 OR CCP OR data); last3h ~28→26→22"
+2026-10-14T05:42:12Z,Temu密苏里州检察长起诉,x_post_views:@AGCHanaway,6102,https://x.com/AGCHanaway/status/2110096039394848819
+2026-10-14T05:42:12Z,Anthropic点名智谱/月之暗面蒸馏,x_post_count_21Zto0538Z,310,"X q=(Anthropic OR 智谱 OR Zhipu OR Moonshot OR 月之暗面) (蒸馏 OR distill OR Distillation); last hours ~33→27→18"
+2026-10-14T05:42:12Z,Anthropic点名智谱/月之暗面蒸馏,x_post_views:@AYi_AInotes,355974,https://x.com/AYi_AInotes/status/2109816068462256394
+2026-10-14T05:42:12Z,华为尊界刹车门（车圈互撕）,x_post_count_21Zto0539Z,380,"X q=(尊界 OR 华为尊界) (刹车 OR 制动 OR 踏板 OR 检测); removed from short-term this edition; mostly rehash"
+2026-10-14T05:42:12Z,滴滴 & 滴滴出海,x_trad_simp_top_views,599,https://x.com/0xTheo520/status/2110226592597254442
+2026-10-14T05:43:00Z,Temu密苏里州检察长起诉,x_hourly_post_count_23Z,73,X q=Temu (lawsuit OR Missouri OR sue OR sued OR AG OR privacy OR CCP)
+2026-10-14T05:43:00Z,Temu密苏里州检察长起诉,x_hourly_post_count_00Z,74,same query
+2026-10-14T05:43:00Z,Temu密苏里州检察长起诉,x_hourly_post_count_01Z,41,same query
+2026-10-14T05:43:00Z,Temu密苏里州检察长起诉,x_hourly_post_count_02Z,51,same query
+2026-10-14T05:43:00Z,Temu密苏里州检察长起诉,x_hourly_post_count_03Z,30,same query
+2026-10-14T05:43:00Z,Temu密苏里州检察长起诉,x_hourly_post_count_04Z,25,same query
+2026-10-14T05:43:00Z,Temu密苏里州检察长起诉,x_post_count_partial_05Z_to0539,20,same query
+2026-10-14T05:43:00Z,Temu密苏里州检察长起诉,x_post_count_23to0539Z_sum,314,same query; steady decline from 73/h
+2026-10-14T05:43:00Z,Anthropic点名智谱/月之暗面蒸馏,x_hourly_post_count_23Z,19,X q=(Anthropic OR Claude) (智谱 OR Zhipu OR Moonshot OR 月之暗面 OR distill OR 蒸馏)
+2026-10-14T05:43:00Z,Anthropic点名智谱/月之暗面蒸馏,x_hourly_post_count_00Z,45,same query
+2026-10-14T05:43:00Z,Anthropic点名智谱/月之暗面蒸馏,x_hourly_post_count_01Z,46,same query
+2026-10-14T05:43:00Z,Anthropic点名智谱/月之暗面蒸馏,x_hourly_post_count_02Z,44,same query
+2026-10-14T05:43:00Z,Anthropic点名智谱/月之暗面蒸馏,x_hourly_post_count_03Z,42,same query
+2026-10-14T05:43:00Z,Anthropic点名智谱/月之暗面蒸馏,x_hourly_post_count_04Z,31,same query
+2026-10-14T05:43:00Z,Anthropic点名智谱/月之暗面蒸馏,x_post_count_partial_05Z_to0539,14,same query
+2026-10-14T05:43:00Z,Anthropic点名智谱/月之暗面蒸馏,x_post_count_23to0539Z_sum,241,"same query; Beijing-daytime rehash, no response from Zhipu/Moonshot"
+2026-10-14T05:43:00Z,Anthropic点名智谱/月之暗面蒸馏,x_post_views:@AYi_AInotes,355998,https://x.com/AYi_AInotes/status/2109816068462256394
+2026-10-14T05:43:00Z,华为尊界刹车门（车圈互撕）,x_hourly_post_count_23Z,36,X q=(尊界 OR 华为) (刹车 OR 制动 OR 踏板)
+2026-10-14T05:43:00Z,华为尊界刹车门（车圈互撕）,x_hourly_post_count_00Z,53,same query
+2026-10-14T05:43:00Z,华为尊界刹车门（车圈互撕）,x_hourly_post_count_01Z,69,same query
+2026-10-14T05:43:00Z,华为尊界刹车门（车圈互撕）,x_hourly_post_count_02Z,51,same query
+2026-10-14T05:43:00Z,华为尊界刹车门（车圈互撕）,x_hourly_post_count_03Z,50,same query
+2026-10-14T05:43:00Z,华为尊界刹车门（车圈互撕）,x_hourly_post_count_04Z,50,same query
+2026-10-14T05:43:00Z,华为尊界刹车门（车圈互撕）,x_post_count_partial_05Z_to0539,43,same query
+2026-10-14T05:43:00Z,华为尊界刹车门（车圈互撕）,x_post_count_23to0539Z_sum,352,"same query; daytime rebound, S800踏板更换(10-13)+懂车帝黑稿邀约(10-12/13) rehash"
+2026-10-14T05:43:00Z,华为尊界刹车门（车圈互撕）,x_post_views:@cuichenghao,19232,https://x.com/cuichenghao/status/2110170623452291227 (00:47Z; 懂车帝5000元黑稿邀约爆料转述)
+2026-10-14T05:43:00Z,华为尊界刹车门（车圈互撕）,x_post_views:@faultbugs,5868,https://x.com/faultbugs/status/2110156012548481365 (23:49Z; S800也换踏板)
+2026-10-14T05:43:00Z,懂车帝黑稿邀约（尊界）,x_post_count_23to0540Z_sum,40,X q=懂车帝 (黑稿 OR 5000 OR 商单 OR 补刀 OR 黑华为 OR 邀约); hourly 0/8/11/6/4/7/4
+2026-10-14T05:43:00Z,字节裁员离职爆料,x_post_count_23to0539Z_sum,10,X q=(字节 OR ByteDance OR 抖音 OR TikTok OR 豆包) (裁员 OR 离职 OR 爆料 OR 宫斗 OR 内部信 OR layoff)
+2026-10-14T05:43:00Z,滴滴八卦关键词,x_post_count_23to0541Z_sum,63,X q=(滴滴 OR DiDi OR 程维 OR 柳青) (出海 OR 99 OR Brazil OR Mexico OR Egypt OR 裁员 OR 离职 OR 暴跌 OR layoff OR 繁体 OR 杀熟); hourly 3/4/15/19/9/9/4
+2026-10-14T05:43:00Z,中国大模型八卦关键词,x_post_count_23to0539Z_sum,149,X q=(DeepSeek OR 智谱 OR Zhipu OR 月之暗面 OR Moonshot OR Kimi OR MiniMax OR 通义 OR 文心) (裁员 OR 融资 OR 蒸馏 OR distill OR IPO OR 爆料 OR 暴跌)
+2026-10-14T05:43:00Z,月之暗面美银退出IPO承销,x_hourly_post_count_04Z,8,"X q=(Moonshot OR 月之暗面 OR Kimi) (BofA OR ""Bank of America"" OR 美银 OR 美国银行 OR IPO OR 承销)"
+2026-10-14T05:43:00Z,月之暗面美银退出IPO承销,x_post_count_partial_05Z_to0542,12,same query
+2026-10-14T05:43:00Z,月之暗面美银退出IPO承销,x_post_count_23to0542Z_sum,31,same query; hourly 0/4/4/2/1/8/12
+2026-10-14T05:43:00Z,月之暗面美银退出IPO承销,x_post_views:@financialjuice,24180,https://x.com/financialjuice/status/2110230603933081991 (04:45Z)
+2026-10-14T05:43:00Z,月之暗面美银退出IPO承销,x_post_views:@business,13673,https://x.com/business/status/2110235441802690623 (05:05Z)
+2026-10-14T05:43:00Z,月之暗面美银退出IPO承销,x_post_views:@dmjk001,2121,https://x.com/dmjk001/status/2110232813186494762 (04:54Z)
+2026-10-14T05:43:00Z,腾讯绿泡泡vs字节红果,weibo_hot_rank,1,soso.re/weibo updated 2026-10-14 13:34 Beijing #腾讯打算拿什么撬动红果近2亿日活#
+2026-10-14T05:43:00Z,腾讯绿泡泡vs字节红果,weibo_hot_score,1700426,soso.re/weibo updated 2026-10-14 13:34 Beijing
+2026-10-14T05:43:00Z,腾讯绿泡泡vs字节红果,x_post_count_23to0539Z_sum,560,X q=红果 OR 绿泡泡 OR 字节时代 OR 字节时间; hourly 36/56/81/111/88/104/84
+2026-10-14T05:43:00Z,腾讯绿泡泡vs字节红果,x_post_views:@abskoop,4376,https://x.com/abskoop/status/2110222881347215834
+2026-10-14T05:44:41Z,Temu密苏里州检察长起诉,x_post_count_since_20261013T21Z,574,"X get_posts_counts_recent q=Temu (lawsuit OR Missouri OR sue OR sued OR AG OR privacy OR CCP OR Hanaway); hourly 134,125,73,74,41,51,30,25,+21partial"
+2026-10-14T05:44:41Z,Temu密苏里州检察长起诉,x_post_count_last3h_approx,76,X same query last ~3h 30+25+21
+2026-10-14T05:44:41Z,Temu密苏里州检察长起诉,x_post_views:@AGCHanaway,6102,https://x.com/AGCHanaway/status/2110096039394848819
+2026-10-14T05:44:41Z,Temu密苏里州检察长起诉,x_post_likes:@AGCHanaway,331,https://x.com/AGCHanaway/status/2110096039394848819
+2026-10-14T05:44:41Z,Temu密苏里州检察长起诉,x_post_reposts:@AGCHanaway,108,https://x.com/AGCHanaway/status/2110096039394848819
+2026-10-14T05:44:41Z,Anthropic点名智谱/月之暗面蒸馏,x_post_count_since_20261013T21Z,274,X get_posts_counts_recent q=(Anthropic OR Claude) (智谱 OR Zhipu OR Moonshot OR 月之暗面 OR distill OR 蒸馏)
+2026-10-14T05:44:41Z,Anthropic点名智谱/月之暗面蒸馏,x_post_count_last3h_approx,87,X same query last ~3h 42+31+14
+2026-10-14T05:44:41Z,Anthropic点名智谱/月之暗面蒸馏,x_post_views:@AYi_AInotes,355974,https://x.com/AYi_AInotes/status/2109816068462256394
+2026-10-14T05:44:41Z,华为尊界刹车门（车圈互撕）,x_post_count_since_20261013T21Z,286,X get_posts_counts_recent q=尊界 (刹车 OR 制动 OR 江淮 OR 互撕)
+2026-10-14T05:44:41Z,华为尊界刹车门（车圈互撕）,x_post_count_last3h_approx,99,X same query last ~3h 32+31+36
+2026-10-14T05:44:41Z,茶百道证监会停牌,x_post_count_since_20261013T21Z,31,X get_posts_counts_recent q=茶百道 (停牌 OR 证监会 OR IPO OR 操纵)

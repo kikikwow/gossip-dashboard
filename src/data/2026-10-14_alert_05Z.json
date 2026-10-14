@@ -1,0 +1,267 @@
+{
+ "type": "alert",
+ "title": "大厂八卦热点快讯",
+ "routine": "大厂八卦热点快讯",
+ "timestamp": "2026-10-14T05:43:00Z",
+ "edition_date": "2026-10-14",
+ "makeup_for": [
+  "2026-10-14 07:54 北京时间",
+  "2026-10-14 10:54 北京时间"
+ ],
+ "lede": "补跑快讯（07:54、10:54 两期没跑），覆盖 07:02–13:43（北京时间）。信源：X 公开检索、微博热搜镜像、彭博/媒体。外语内容已译成中文，原文保留。",
+ "top3": [
+  {
+   "section": "⚡ 快讯",
+   "index": 0
+  },
+  {
+   "section": "⚡ 快讯",
+   "index": 1
+  }
+ ],
+ "sections": [
+  {
+   "title": "⚡ 快讯",
+   "color": "#e4572e",
+   "items": [
+    {
+     "id": "20261014-alert-05Z-moonshot-bofa-ipo",
+     "company": "月之暗面 / Kimi",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "彭博【付费】",
+      "X",
+      "英语"
+     ],
+     "lang": "英语",
+     "date": "10-14 12:18",
+     "text": "【IPO·美方审查】彭博 10-14 12:18（北京时间）报道：美国银行已退出月之暗面港股 IPO 的潜在承销团。此前美银曾洽谈担任整体协调人，但最终没有拿到正式委任；彭博把背景写为「月之暗面正面临美国审查」。美银和月之暗面均拒绝置评。此前报道称月之暗面最早 2027 年一季度在港上市，募资最多约 50 亿美元，保荐行为中金、德银、高盛。消息出来正好是 Anthropic 点名智谱和月之暗面蒸馏（10-12）之后两天，但彭博没有直接把两件事联系起来。热度：X 上 @financialjuice 快讯约 2.42 万浏览（12:46 发），@business 彭博官号约 1.37 万浏览（13:05 发），中文转述 @dmjk001 约 2121 浏览；相关发帖 04Z 8 条、05Z（到 13:42）12 条，还在上升。【实锤】指媒体报道属实；内容本身来自匿名知情人士。",
+     "translation_zh": "据知情人士透露，美国银行已不再位列参与月之暗面（Moonshot AI）IPO 的潜在投行名单，这家中国 AI 明星公司正面临美国方面的审查。知情人士称，美银此前曾洽谈担任这次香港 IPO 的整体协调人，因信息保密要求匿名；但谈判最终未形成正式委任。",
+     "original": "Bank of America Corp. is no longer part of the potential roster of banks working on Moonshot AI's initial public offering, according to people familiar with the matter, as the Chinese artificial intelligence darling faces scrutiny in the US. BofA had been in discussions for a role as an overall coordinator for the IPO in Hong Kong, the people said, asking not to be identified because the information is confidential. The talks didn't lead to a formal mandate in the end, the people said.",
+     "links": [
+      {
+       "label": "彭博 Bloomberg Law【付费】（英语）",
+       "url": "https://news.bloomberglaw.com/capital-markets/bofa-no-longer-in-talks-to-arrange-ipo-of-chinas-moonshot-ai",
+       "views": null
+      },
+      {
+       "label": "X @business（彭博官号，英语）",
+       "url": "https://x.com/business/status/2110235441802690623",
+       "views": "1.37万"
+      },
+      {
+       "label": "X @financialjuice（英语）",
+       "url": "https://x.com/financialjuice/status/2110230603933081991",
+       "views": "2.42万"
+      },
+      {
+       "label": "X @dmjk001（中文转述）",
+       "url": "https://x.com/dmjk001/status/2110232813186494762",
+       "views": "2121"
+      },
+      {
+       "label": "PANews（英语，免费转述）",
+       "url": "https://www.panews.io/articles/01a138c1-23ce-71dc-8c8b-12ea4f834c72",
+       "views": null
+      }
+     ],
+     "detail": {
+      "title": "彭博：美银退出月之暗面港股 IPO 承销洽谈",
+      "summary": "美银曾洽谈担任月之暗面香港 IPO 整体协调人，最终没有拿到委任，已不在潜在承销名单里；彭博称背景是月之暗面面临美国审查。",
+      "background": "据知情人士透露，美国银行已不再位列参与月之暗面（Moonshot AI）IPO 的潜在投行名单，这家中国 AI 明星公司正面临美国方面的审查。知情人士称，美银此前曾洽谈担任这次香港 IPO 的整体协调人，因信息保密要求匿名；但谈判最终未形成正式委任。\n\n【英语原文】Bank of America Corp. is no longer part of the potential roster of banks working on Moonshot AI's initial public offering, according to people familiar with the matter, as the Chinese artificial intelligence darling faces scrutiny in the US. BofA had been in discussions for a role as an overall coordinator for the IPO in Hong Kong, the people said, asking not to be identified because the information is confidential. The talks didn't lead to a formal mandate in the end, the people said.",
+      "enriched_at": "2026-10-14T05:43:00Z",
+      "timeline": [
+       {
+        "date": "2026-09-04",
+        "text": "彭博：月之暗面拟在港 IPO 募资最多 50 亿美元",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-04/moonshot-is-said-to-seek-up-to-5-billion-in-hk-ipo-this-year"
+       },
+       {
+        "date": "2026-10-06",
+        "text": "媒体：估值达 500 亿美元后，月之暗面瞄准 2027 年初上市",
+        "url": "https://www.business-standard.com/technology/tech-news/moonshot-eyes-early-2027-hong-kong-ipo-after-valuation-hits-50-billion-126100600918_1.html"
+       },
+       {
+        "date": "2026-10-12",
+        "text": "Anthropic 官方博客点名智谱、月之暗面蒸馏 Claude",
+        "url": "https://x.com/AYi_AInotes/status/2109816068462256394"
+       },
+       {
+        "date": "2026-10-14",
+        "text": "彭博：美银退出月之暗面 IPO 承销洽谈（04:18 UTC，北京时间 12:18）",
+        "url": "https://news.bloomberglaw.com/capital-markets/bofa-no-longer-in-talks-to-arrange-ipo-of-chinas-moonshot-ai"
+       }
+      ],
+      "x_posts": [
+       {
+        "platform": "X",
+        "url": "https://x.com/financialjuice/status/2110230603933081991",
+        "author": "@financialjuice",
+        "created_at": "2026-10-14T04:45:56Z",
+        "views": 24180,
+        "likes": 6,
+        "reposts": 0,
+        "replies": 2,
+        "quotes": 1,
+        "bookmarks": 0,
+        "fetched_at": "2026-10-14T05:42:00Z"
+       },
+       {
+        "platform": "X",
+        "url": "https://x.com/business/status/2110235441802690623",
+        "author": "@business",
+        "created_at": "2026-10-14T05:05:10Z",
+        "views": 13673,
+        "likes": 7,
+        "reposts": 1,
+        "replies": 8,
+        "quotes": 0,
+        "bookmarks": 1,
+        "fetched_at": "2026-10-14T05:42:00Z"
+       },
+       {
+        "platform": "X",
+        "url": "https://x.com/dmjk001/status/2110232813186494762",
+        "author": "@dmjk001",
+        "created_at": "2026-10-14T04:54:43Z",
+        "views": 2121,
+        "likes": 6,
+        "reposts": 1,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "fetched_at": "2026-10-14T05:42:00Z"
+       }
+      ],
+      "x_trend": {
+       "query": "(Moonshot OR 月之暗面 OR Kimi) (BofA OR \"Bank of America\" OR 美银 OR 美国银行 OR IPO OR 承销)",
+       "granularity": "hour",
+       "labels": [
+        "23Z",
+        "00Z",
+        "01Z",
+        "02Z",
+        "03Z",
+        "04Z",
+        "05Z(至05:42)"
+       ],
+       "values": [
+        0,
+        4,
+        4,
+        2,
+        1,
+        8,
+        12
+       ],
+       "fetched_at": "2026-10-14T05:42:01Z",
+       "source": "X get_posts_counts_recent",
+       "note": "04Z 起因彭博报道升温"
+      },
+      "weibo": null,
+      "responses": [
+       {
+        "party": "美银 / 月之暗面",
+        "text": "均拒绝置评（据彭博/PANews）",
+        "url": "https://www.panews.io/articles/01a138c1-23ce-71dc-8c8b-12ea4f834c72"
+       }
+      ],
+      "related": [
+       "智谱 / 月之暗面 / Anthropic"
+      ]
+     }
+    },
+    {
+     "id": "20261014-alert-05Z-tencent-hongguo-weibo1",
+     "company": "腾讯 / 字节跳动",
+     "tag": "实锤",
+     "source_types": [
+      "微博",
+      "媒体",
+      "X"
+     ],
+     "date": "10-14 13:34",
+     "text": "【微博热搜第 1】#腾讯打算拿什么撬动红果近2亿日活# 在 13:34 的微博热搜镜像里排第 1，热度约 170 万；07:00 那轮扫描时还不在榜上（当时只有「中国互联网进入字节时间」排第 26，约 6.3 万）。背景：腾讯以腾讯公司为主体在微信上线免费短剧小程序「绿泡泡短剧」（9 月底到 10 月初陆续曝光），接入视频号、微信搜索、QQ 浏览器入口，直接对标字节旗下的红果短剧。QuestMobile 数据：截至 2026 年 7 月，红果日活 1.68 亿（同比 +107%），超过腾讯视频、爱奇艺、优酷、芒果 TV 四家之和（约 1.55 亿）；话题里说的「近 2 亿」没有公开数据对应。21 世纪经济报道引述接近腾讯人士，称张小龙此前想保持微信生态的「纯粹性」。注意：绿泡泡本身不是今天的新闻，今天新出现的是这个话题冲上热搜第一。X 上相关讨论（红果/绿泡泡/字节时代）窗口内约 560 帖，单帖最高约 4376 浏览，热度主要在微博。",
+     "links": [
+      {
+       "label": "微博热搜镜像 soso.re（#1，170.0万）",
+       "url": "https://soso.re/weibo",
+       "views": null
+      },
+      {
+       "label": "21世纪经济报道：腾讯低调地向红果短剧开了一枪",
+       "url": "https://www.21jingji.com/article/20261013/herald/9f65eaeb88b0838b77401c49c13829bf.html",
+       "views": null
+      },
+      {
+       "label": "搜狐财经/新浪：腾讯上线绿泡泡短剧，微信亲战红果",
+       "url": "https://finance.sina.cn/2026-10-14/detail-inivcxxr7875516.d.html?pos=108&vt=4",
+       "views": null
+      },
+      {
+       "label": "X @abskoop",
+       "url": "https://x.com/abskoop/status/2110222881347215834",
+       "views": "4376"
+      }
+     ],
+     "detail": {
+      "title": "腾讯「绿泡泡短剧」对标字节红果，冲上微博热搜第一",
+      "summary": "微博话题 #腾讯打算拿什么撬动红果近2亿日活# 13:34 排第 1，约 170 万热度；绿泡泡是腾讯在微信里做的免费短剧小程序。",
+      "enriched_at": "2026-10-14T05:43:00Z",
+      "timeline": [
+       {
+        "date": "2026-09-30",
+        "text": "腾讯新闻：微信悄悄上线「绿泡泡」，腾讯入局免费短剧",
+        "url": "https://news.qq.com/rain/a/20260930A0699G00"
+       },
+       {
+        "date": "2026-10-13",
+        "text": "21世纪经济报道：腾讯，低调地向红果短剧开了一枪",
+        "url": "https://www.21jingji.com/article/20261013/herald/9f65eaeb88b0838b77401c49c13829bf.html"
+       },
+       {
+        "date": "2026-10-14",
+        "text": "微博热搜 #腾讯打算拿什么撬动红果近2亿日活# 第 1（13:34，约 170 万）",
+        "url": "https://soso.re/weibo"
+       }
+      ],
+      "x_trend": {
+       "query": "红果 OR 绿泡泡 OR 字节时代 OR 字节时间",
+       "granularity": "hour",
+       "labels": [
+        "23Z",
+        "00Z",
+        "01Z",
+        "02Z",
+        "03Z",
+        "04Z",
+        "05Z(至05:39)"
+       ],
+       "values": [
+        36,
+        56,
+        81,
+        111,
+        88,
+        104,
+        84
+       ],
+       "fetched_at": "2026-10-14T05:39:20Z",
+       "source": "X get_posts_counts_recent",
+       "note": "含大量泛泛讨论，比前一天同时段（13 日 00–05Z 约 35–105/小时）略高"
+      },
+      "weibo": {
+       "rank": 1,
+       "text": "#腾讯打算拿什么撬动红果近2亿日活#，热度 1700426（镜像 13:34 更新）",
+       "url": "https://soso.re/weibo"
+      },
+      "related": [
+       "字节跳动"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}
