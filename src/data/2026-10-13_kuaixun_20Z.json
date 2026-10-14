@@ -1,0 +1,176 @@
+{
+  "routine": "大厂八卦热点快讯",
+  "fired_at_utc": "2026-10-13T19:58:00Z",
+  "scanned_at_utc": "2026-10-13T20:00:00Z",
+  "beijing_time": "2026-10-14 03:58–04:00 CST",
+  "window": "approx 17:00–20:00Z (Beijing 01:00–04:00 Oct 14)",
+  "alert_sent": false,
+  "reason": "No item met HIGH bar. Anthropic/智谱/月之暗面蒸馏 continued RT chatter only (no major NEW development in-window; original AYi post already ~304k views from ~01:18Z). 尊界 cooling. No DiDi/ByteDance/layoff fast-break. Weibo: no new company-gossip hot entry; 字节时间 lingering #23 ~40k only.",
+  "heat": {
+    "尊界刹车": {
+      "query": "(尊界 OR 华为) (刹车 OR 制动 OR 踏板 OR 互撕)",
+      "hourly": {
+        "14Z": 97,
+        "15Z": 60,
+        "16Z": 49,
+        "17Z": 41,
+        "18Z": 42,
+        "19Z": 25
+      },
+      "last3h_17to20Z_sum": 108,
+      "prev_3h_at_17:12Z": 155,
+      "trend": "cooling"
+    },
+    "月之暗面IPO股东": {
+      "query": "(月之暗面 OR Moonshot OR Kimi) (IPO OR 股东 OR 纠纷 OR 融资)",
+      "hourly": {
+        "14Z": 3,
+        "15Z": 1,
+        "16Z": 8,
+        "17Z": 2,
+        "18Z": 2,
+        "19Z": 1
+      },
+      "last3h_17to20Z_sum": 5,
+      "prev_note": "~105/3h at earlier check (broader query)",
+      "trend": "flat_near_dead"
+    },
+    "Anthropic蒸馏智谱月之暗面": {
+      "query": "(Anthropic OR 智谱 OR Zhipu OR Moonshot OR 月之暗面) (蒸馏 OR distill OR Distillation)",
+      "hourly": {
+        "14Z": 98,
+        "15Z": 60,
+        "16Z": 47,
+        "17Z": 33,
+        "18Z": 73,
+        "19Z": 41
+      },
+      "last3h_17to20Z_sum": 147,
+      "prev_3h_at_17:12Z": 136,
+      "trend": "flat_slight_uptick_RTs",
+      "top_original": {
+        "author": "@AYi_AInotes",
+        "id": "2109816068462256394",
+        "created_at": "2026-10-13T01:18:43Z",
+        "views": 303790,
+        "likes": 1079,
+        "rts": 133,
+        "note": "broke earlier same day; window activity mostly RTs of this post"
+      },
+      "followup_in_window": {
+        "author": "@AYi_AInotes",
+        "id": "2110060594329944356",
+        "created_at": "2026-10-13T17:30:23Z",
+        "views": 2262,
+        "note": "NEW post but about Anthropic engineering/source-control blog, NOT distillation; low views"
+      }
+    },
+    "滴滴广义": {
+      "query_note": "broad DiDi query inflated by EN noise",
+      "hourly_broad": {
+        "14Z": 227,
+        "15Z": 351,
+        "16Z": 316,
+        "17Z": 221,
+        "18Z": 123,
+        "19Z": 110
+      },
+      "gossip_search_裁员离职爆料出海": 0,
+      "trend": "no_gossip_hits"
+    },
+    "字节裁员离职": {
+      "query": "(字节 OR ByteDance OR 抖音) (裁员 OR 离职 OR 内部信 OR 宫斗 OR 爆料)",
+      "last3h_sum": 5,
+      "top_in_window": "toilet-break culture RT ~7 RTs, not viral"
+    },
+    "大模型八卦关键词": {
+      "last3h_sum": 5,
+      "note": "DeepSeek IPO rumor posts low views (<100)"
+    }
+  },
+  "weibo": {
+    "official_s_weibo_com": "FAILED 500",
+    "mirror_soso_re_updated": "2026-10-14 03:29 Beijing",
+    "company_adjacent": [
+      {
+        "rank": 23,
+        "topic": "中国互联网进入字节时间",
+        "heat": 40572,
+        "note": "lingering, not new break"
+      },
+      {
+        "rank": 18,
+        "topic": "百果园2年亏掉了7个亿",
+        "heat": 46187,
+        "note": "retail, cooling from earlier peak"
+      },
+      {
+        "rank": 11,
+        "topic": "79岁老干妈陶华碧用AI一年赚54亿",
+        "heat": 64661,
+        "note": "not tracked tech gossip"
+      },
+      {
+        "rank": 20,
+        "topic": "手机不好卖了",
+        "heat": 41211
+      },
+      {
+        "rank": 25,
+        "topic": "苹果发布会",
+        "heat": 39988
+      },
+      {
+        "rank": 39,
+        "topic": "黄奇帆接受审查调查",
+        "heat": 35062,
+        "note": "political not company gossip"
+      }
+    ],
+    "尊界_on_list": false,
+    "月之暗面_on_list": false,
+    "滴滴_on_list": false
+  },
+  "maimai": {
+    "direct_fetch": "404 https://maimai.cn/article/topic?type=7",
+    "web_search": "no clear new layoff hot-rank for 字节/阿里/华为 in this night window"
+  },
+  "candidates_reviewed": [
+    {
+      "topic": "Anthropic点名智谱/月之暗面蒸馏",
+      "verdict": "skip_continued_chatter_no_major_new_dev",
+      "note": "still needs briefing coverage; do NOT 快讯"
+    },
+    {
+      "topic": "华为尊界刹车门",
+      "verdict": "skip_cooling_rehash_third_party_test",
+      "heat": "~108 posts/3h"
+    },
+    {
+      "topic": "月之暗面股东/IPO",
+      "verdict": "skip_near_dead",
+      "heat": "~5 posts/3h"
+    },
+    {
+      "topic": "滴滴",
+      "verdict": "skip_none"
+    },
+    {
+      "topic": "字节厕所文化爆料",
+      "verdict": "skip_low_heat"
+    },
+    {
+      "topic": "中国互联网进入字节时间",
+      "verdict": "skip_lingering_weibo_not_fast_rising"
+    },
+    {
+      "topic": "百果园亏损",
+      "verdict": "skip_not_tracked_major_tech"
+    }
+  ],
+  "topics_md_suggested": [
+    "- 华为尊界刹车门（车圈互撕） | 2026-10-13 | … | 2026-10-13T20:00Z 近3h 发帖约108（41→42→25/小时）📉 继续降温 | 追踪中",
+    "- 月之暗面股东纠纷 & IPO | 2026-10-13 | … | 2026-10-13T20:00Z 近3h 发帖约5 ➡️ 近乎沉寂 | 追踪中（可考虑下次移出若持续无进展）",
+    "- Anthropic点名智谱/月之暗面蒸馏 | 2026-10-14 | … | 2026-10-13T20:00Z 近3h 发帖约147（33→73→41）➡️ 持平偏RT；头部原帖 @AYi_AInotes ~30.4万浏览（01:18Z）；**尚未在简报中报道，下期须覆盖** | 追踪中"
+  ]
+}

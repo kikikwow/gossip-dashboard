@@ -1,0 +1,130 @@
+{
+  "routine": "大厂八卦热点快讯",
+  "fired_at_utc": "2026-10-13T23:00:27.833Z",
+  "scanned_at_utc": "2026-10-13T23:02:00Z",
+  "beijing_time": "2026-10-14 07:00–07:02 CST",
+  "window": "approx 20:00–23:10Z (Beijing 04:00–07:10 Oct 14)",
+  "alert_sent": false,
+  "reason": "No item met HIGH bar (tens of thousands of NEW X views in-window / new company-gossip Weibo hot / major NEW tracked development). Temu Missouri already morning+prior kuaixun; volume polluted by unrelated Temu-attorney political RT. Anthropic distill = continued RTs of 01:18Z post already in morning briefings. 尊界 22Z bump is third-party-test rehash with low per-post views. No DiDi/ByteDance/LLM fast-break. Weibo: 千问耳机开售 is product; 字节时间 lingering.",
+  "alert_worthy": false,
+  "heat_summary": {
+    "Temu": "391/3h plateau (inflated)",
+    "Anthropic蒸馏": "43/3h cooling",
+    "尊界": "69/3h mild 22Z bump",
+    "月之暗面IPO": "2/3h dead",
+    "字节": "3/3h",
+    "滴滴": "18/3h noise",
+    "LLM": "22/3h"
+  },
+  "weibo": {
+    "mirror": "https://soso.re/weibo",
+    "updated": "2026-10-14 06:45 Beijing",
+    "company_adjacent": [
+      {
+        "rank": 8,
+        "topic": "千问AI耳机开售",
+        "heat": 165014,
+        "note": "Alibaba Tongyi product launch, not gossip"
+      },
+      {
+        "rank": 9,
+        "topic": "79岁老干妈陶华碧用AI一年赚54亿",
+        "heat": 137777,
+        "note": "not tracked tech gossip"
+      },
+      {
+        "rank": 26,
+        "topic": "中国互联网进入字节时间",
+        "heat": 63030,
+        "note": "lingering vs #23~40k at 20Z"
+      },
+      {
+        "rank": 35,
+        "topic": "苹果发布会",
+        "heat": 51321
+      },
+      {
+        "rank": 37,
+        "topic": "黄奇帆接受审查调查",
+        "heat": 47465,
+        "note": "political not company gossip"
+      },
+      {
+        "rank": 45,
+        "topic": "手机不好卖了",
+        "heat": 44518
+      },
+      {
+        "rank": 47,
+        "topic": "百果园2年亏掉了7个亿",
+        "heat": 44506,
+        "note": "retail cooling"
+      },
+      {
+        "rank": 49,
+        "topic": "VISA进入中国市场",
+        "heat": 44490,
+        "note": "finance/market, not gossip"
+      }
+    ],
+    "尊界_on_list": false,
+    "月之暗面_on_list": false,
+    "滴滴_on_list": false,
+    "Temu_on_list": false
+  },
+  "maimai": {
+    "direct_fetch": "404 https://maimai.cn/article/topic?type=7",
+    "note": "public hot-rank page unreachable this window"
+  },
+  "candidates": [
+    {
+      "topic": "Temu / PDD",
+      "verdict": "skip",
+      "why": "Volume elevated but already in morning ADR + prior kuaixun; no major NEW lawsuit development; count polluted.",
+      "already_reported": true
+    },
+    {
+      "topic": "Anthropic / 智谱 / 月之暗面",
+      "verdict": "skip",
+      "why": "Continued chatter only; already covered in morning briefings.",
+      "already_reported": true
+    },
+    {
+      "topic": "华为 / 尊界",
+      "verdict": "skip",
+      "why": "22Z bump to 40/h but rehash of third-party test already noted as cooling; no tens-of-thousands viral new post.",
+      "already_reported": true
+    },
+    {
+      "topic": "月之暗面",
+      "verdict": "skip",
+      "why": "Near dead; no material new development.",
+      "already_reported": true
+    },
+    {
+      "topic": "字节跳动",
+      "verdict": "skip",
+      "why": "Low heat; prior kuaixun already skipped.",
+      "already_reported": true
+    },
+    {
+      "topic": "滴滴",
+      "verdict": "skip",
+      "why": "No matching gossip.",
+      "already_reported": false
+    },
+    {
+      "topic": "阿里 / 通义",
+      "verdict": "skip",
+      "why": "Product launch on Weibo hot, not gossip.",
+      "already_reported": false
+    },
+    {
+      "topic": "字节跳动",
+      "verdict": "skip",
+      "why": "Lingering Weibo entry.",
+      "already_reported": true
+    }
+  ],
+  "json_detail": "research/kuaixun_scan_2026-10-13T23Z.json"
+}

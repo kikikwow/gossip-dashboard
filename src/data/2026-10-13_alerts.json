@@ -1,0 +1,248 @@
+{
+  "date": "2026-10-13",
+  "alerts": [
+    {
+      "routine": "大厂八卦热点快讯",
+      "fired_at_utc": "2026-10-13T14:13:21.255Z",
+      "scanned_at_utc": "2026-10-13T14:15:06Z",
+      "window": "approx last 3h (~11:00–14:13Z)",
+      "alert_sent": false,
+      "reason": "No item met fast-break threshold (tens of thousands of X views / new company-gossip Weibo hot / major tracked development).",
+      "candidates_reviewed": [
+        {
+          "topic": "字节期权回购 $241.35",
+          "heat": "6 X posts 8–14Z; top views 145",
+          "verdict": "skip_low_heat"
+        },
+        {
+          "topic": "阶跃 STEPX Neo 发布",
+          "heat": "Weibo #45/#46 new ~15万; X 16 posts max~745 views",
+          "verdict": "skip_product_launch_not_gossip"
+        },
+        {
+          "topic": "尊界刹车门",
+          "heat": "~292 posts/3h steady",
+          "verdict": "skip_no_major_new_development"
+        },
+        {
+          "topic": "月之暗面",
+          "heat": "~105 posts/3h",
+          "verdict": "skip_no_major_new_development"
+        },
+        {
+          "topic": "拼多多不做AI",
+          "heat": "4 posts/3h",
+          "verdict": "skip_cooling"
+        },
+        {
+          "topic": "滴滴",
+          "heat": "no matching gossip posts in window",
+          "verdict": "skip_none"
+        }
+      ],
+      "weibo_top_company_adjacent": [
+        {
+          "rank": 1,
+          "topic": "79岁老干妈陶华碧用AI一年赚54亿",
+          "heat": 1575308
+        },
+        {
+          "rank": 2,
+          "topic": "百果园2年亏掉了7个亿",
+          "heat": 1539231
+        },
+        {
+          "rank": 45,
+          "topic": "STEPXNeo智能体手机发布",
+          "heat": 155230,
+          "tag": "新"
+        },
+        {
+          "rank": 46,
+          "topic": "阶跃押注智能体终端意味着什么",
+          "heat": 154745,
+          "tag": "新"
+        },
+        {
+          "rank": 48,
+          "topic": "国产大模型落地是什么水平",
+          "heat": 150892,
+          "tag": "新"
+        }
+      ]
+    },
+    {
+      "routine": "大厂八卦热点快讯",
+      "fired_at_utc": "2026-10-13T17:09:28Z",
+      "scanned_at_utc": "2026-10-13T17:12:00Z",
+      "window": "approx 14:13–17:10Z",
+      "alert_sent": false,
+      "reason": "Nothing new broke in-window. Anthropic distillation accusation vs 智谱/月之暗面 is unreported but broke ~00Z Oct 13 and is steady (~45 posts/h), deferred to 09:00 Beijing briefing. 黄奇帆被查 is political (spiked 10Z), not company gossip.",
+      "candidates_reviewed": [
+        {
+          "topic": "Anthropic点名智谱/月之暗面蒸馏",
+          "heat": "136 posts 14–17Z; 1020 since Oct12 12Z; top views 23.6k/17.9k",
+          "verdict": "defer_to_scheduled_briefing_not_in_window"
+        },
+        {
+          "topic": "黄奇帆被查",
+          "heat": "471/377/284 posts per hour 14–17Z, falling; top post 15.9万 views (10:20Z)",
+          "verdict": "skip_political_not_company"
+        },
+        {
+          "topic": "尊界刹车门",
+          "heat": "155 posts/3h, down from 292",
+          "verdict": "skip_cooling"
+        },
+        {
+          "topic": "滴滴",
+          "heat": "no gossip matches (only '滴滴滴' noise)",
+          "verdict": "skip_none"
+        },
+        {
+          "topic": "Weibo hot list",
+          "heat": "fetch failed (500 / no data)",
+          "verdict": "not_checked"
+        }
+      ]
+    },
+    {
+      "routine": "大厂八卦热点快讯",
+      "fired_at_utc": "2026-10-13T19:58:00Z",
+      "scanned_at_utc": "2026-10-13T20:00:00Z",
+      "window": "approx 17:00–20:00Z",
+      "alert_sent": false,
+      "reason": "No item met HIGH bar. Anthropic/智谱/月之暗面蒸馏 continued RT chatter only (no major NEW development in-window; original AYi post already ~304k views from ~01:18Z). 尊界 cooling. No DiDi/ByteDance/layoff fast-break. Weibo: no new company-gossip hot entry; 字节时间 lingering #23 ~40k only.",
+      "candidates_reviewed": [
+        {
+          "topic": "Anthropic点名智谱/月之暗面蒸馏",
+          "verdict": "skip_continued_chatter_no_major_new_dev",
+          "note": "still needs briefing coverage; do NOT 快讯"
+        },
+        {
+          "topic": "华为尊界刹车门",
+          "verdict": "skip_cooling_rehash_third_party_test",
+          "heat": "~108 posts/3h"
+        },
+        {
+          "topic": "月之暗面股东/IPO",
+          "verdict": "skip_near_dead",
+          "heat": "~5 posts/3h"
+        },
+        {
+          "topic": "滴滴",
+          "verdict": "skip_none"
+        },
+        {
+          "topic": "字节厕所文化爆料",
+          "verdict": "skip_low_heat"
+        },
+        {
+          "topic": "中国互联网进入字节时间",
+          "verdict": "skip_lingering_weibo_not_fast_rising"
+        },
+        {
+          "topic": "百果园亏损",
+          "verdict": "skip_not_tracked_major_tech"
+        }
+      ],
+      "weibo_status": "official 500; mirror soso.re OK 03:29 Beijing",
+      "weibo_top_company_adjacent": [
+        {
+          "rank": 23,
+          "topic": "中国互联网进入字节时间",
+          "heat": 40572,
+          "note": "lingering, not new break"
+        },
+        {
+          "rank": 18,
+          "topic": "百果园2年亏掉了7个亿",
+          "heat": 46187,
+          "note": "retail, cooling from earlier peak"
+        },
+        {
+          "rank": 11,
+          "topic": "79岁老干妈陶华碧用AI一年赚54亿",
+          "heat": 64661,
+          "note": "not tracked tech gossip"
+        },
+        {
+          "rank": 20,
+          "topic": "手机不好卖了",
+          "heat": 41211
+        },
+        {
+          "rank": 25,
+          "topic": "苹果发布会",
+          "heat": 39988
+        },
+        {
+          "rank": 39,
+          "topic": "黄奇帆接受审查调查",
+          "heat": 35062,
+          "note": "political not company gossip"
+        }
+      ],
+      "json_detail": "data/2026-10-13_kuaixun_20Z.json"
+    },
+    {
+      "routine": "大厂八卦热点快讯",
+      "fired_at_utc": "2026-10-13T23:00:27.833Z",
+      "scanned_at_utc": "2026-10-13T23:02:00Z",
+      "window": "approx 20:00–23:10Z (Beijing 04:00–07:10 Oct 14)",
+      "alert_sent": false,
+      "reason": "No item met HIGH bar (tens of thousands of NEW X views in-window / new company-gossip Weibo hot / major NEW tracked development). Temu Missouri already morning+prior kuaixun; volume polluted by unrelated Temu-attorney political RT. Anthropic distill = continued RTs of 01:18Z post already in morning briefings. 尊界 22Z bump is third-party-test rehash with low per-post views. No DiDi/ByteDance/LLM fast-break. Weibo: 千问耳机开售 is product; 字节时间 lingering.",
+      "candidates_reviewed": [
+        {
+          "topic": "Temu / PDD",
+          "verdict": "skip",
+          "why": "Volume elevated but already in morning ADR + prior kuaixun; no major NEW lawsuit development; count polluted.",
+          "already_reported": true
+        },
+        {
+          "topic": "Anthropic / 智谱 / 月之暗面",
+          "verdict": "skip",
+          "why": "Continued chatter only; already covered in morning briefings.",
+          "already_reported": true
+        },
+        {
+          "topic": "华为 / 尊界",
+          "verdict": "skip",
+          "why": "22Z bump to 40/h but rehash of third-party test already noted as cooling; no tens-of-thousands viral new post.",
+          "already_reported": true
+        },
+        {
+          "topic": "月之暗面",
+          "verdict": "skip",
+          "why": "Near dead; no material new development.",
+          "already_reported": true
+        },
+        {
+          "topic": "字节跳动",
+          "verdict": "skip",
+          "why": "Low heat; prior kuaixun already skipped.",
+          "already_reported": true
+        },
+        {
+          "topic": "滴滴",
+          "verdict": "skip",
+          "why": "No matching gossip.",
+          "already_reported": false
+        },
+        {
+          "topic": "阿里 / 通义",
+          "verdict": "skip",
+          "why": "Product launch on Weibo hot, not gossip.",
+          "already_reported": false
+        },
+        {
+          "topic": "字节跳动",
+          "verdict": "skip",
+          "why": "Lingering Weibo entry.",
+          "already_reported": true
+        }
+      ],
+      "json_detail": "research/kuaixun_scan_2026-10-13T23Z.json"
+    }
+  ]
+}

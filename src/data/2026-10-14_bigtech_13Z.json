@@ -1,0 +1,302 @@
+{
+ "type": "bigtech",
+ "title": "中国大厂八卦简报",
+ "timestamp": "2026-10-14T12:58:34Z",
+ "edition_date": "2026-10-14",
+ "lede": "晚报 · 窗口 2026-10-14T05:42Z→12:56Z（北京 13:42–20:56，接早报补跑结束点）· 信源：X 公开帖（主，约 13 次检索+5 次计数）+ 微博热搜镜像 + 公开媒体 + 滴滴小时追踪 + RSS/公众号（0 新）",
+ "top3": [
+  {
+   "section": "🚗 公关翻车 & 车圈互撕",
+   "index": 0
+  },
+  {
+   "section": "🤖 AI 生态互卡 · 大模型",
+   "index": 0
+  },
+  {
+   "section": "🔥 吐槽热帖",
+   "index": 0
+  }
+ ],
+ "focus": {
+  "滴滴 & 滴滴出海": "繁简价差被包装成「国籍歧视」，@Furinanatw 约1.5万浏览，各帖方向说法矛盾、待核实；滴滴无回应；墨西哥伊达尔戈议会表态（西语，低优先级）",
+  "字节跳动": "懂车帝vs尊界黑稿互撕（Top1）；豆包手机助手遭151款App拒绝（Top2）；Seed成立安全与对齐部门（内部邮件，补录）；绿泡泡vs红果微博回落至#5",
+  "中国大模型": "月之暗面美银线降温；「国产开源模型集体沉默」吐槽帖4.2万浏览；Kimi/DeepSeek也在豆包拒绝名单"
+ },
+ "short_term_notes": [
+  "【新加入】懂车帝被曝邀约黑尊界 ➡️ 约329帖/8h 高位持平",
+  "腾讯绿泡泡对战红果短剧 📉 微博#1→#5（578146）",
+  "月之暗面美银退出IPO 📉 15→4/h",
+  "田柯宇融资争议 📉 无新事实"
+ ],
+ "overseas_local_lang": [
+  {
+   "id": "20261014-13Z-didi-mx-hidalgo",
+   "country": "墨西哥",
+   "lang": "西班牙语"
+  }
+ ],
+ "sections": [
+  {
+   "title": "🚗 公关翻车 & 车圈互撕",
+   "color": "#e4572e",
+   "items": [
+    {
+     "id": "20261014-13Z-dongchedi-zunjie-heigao",
+     "company": "字节·懂车帝 / 华为·尊界 / 江淮",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "微博",
+      "媒体"
+     ],
+     "date": "10-12～10-14",
+     "text": "尊界刹车门的舆论战升级成懂车帝和尊界当面互撕。①多位汽车博主晒聊天截图，称有「那个你们知道的 APP」的中间人邀约借尊界 V800 刹车热度给江淮、华为「补刀」：抖音「水下」发布、10 月中下旬档期、单条 5000 元起、大号可加价、要求保留一年；有博主拒绝并曝光后，曝光视频在抖音/头条被下架。证据只有截图，无法证明对方就是懂车帝商务，截至 10-14 懂车帝未正式回应（凤凰网、网易、什么值得买）。②懂车帝汽车安全内容负责人东门健男（@懂车大柯基东门，本次测试人员之一）10-14 连发 4–5 条微博质疑尊界 10-13 公布的第三方检测：静态加载≠100km/h 动态制动、没检验章/样品照片/前后对比、要求随机抽量产车复测。③前员工支线：博主「北美花生」自称懂车帝前总编辑并暗示踏板门「没那么简单」，懂车帝先称查无此人、后改称其「夸大身份」并启动法律固证；对方晒工牌称职务是主编，要求「科技事儿儿」10-14 18:00 前道歉否则报警起诉。另有懂车帝「人力资源部整顿通知」截图被懂车帝辟谣为假。X「懂车帝+尊界/华为/黑稿/补刀」05Z–12:55Z 约 329 帖，每小时 24–52 高位持平。",
+     "links": [
+      {
+       "label": "凤凰网：网传懂车帝5000元邀博主补刀",
+       "url": "https://tech.ifeng.com/c/8xDEzAQT7do",
+       "views": null
+      },
+      {
+       "label": "凤凰网：懂车帝负责人连发微博质疑尊界检测",
+       "url": "https://finance.ifeng.com/c/8xDDLbALFpE",
+       "views": null
+      },
+      {
+       "label": "什么值得买：三种信息分清再信",
+       "url": "https://post.smzdm.com/p/arzr0n77/",
+       "views": null
+      },
+      {
+       "label": "新浪：北美花生回应主编非总编",
+       "url": "https://www.sina.cn/weibo/detail/5353590270200306.html",
+       "views": null
+      },
+      {
+       "label": "X @0427SMtieshou",
+       "url": "https://x.com/0427SMtieshou/status/2110264344324046901",
+       "views": "13510"
+      },
+      {
+       "label": "X @KELMAND1",
+       "url": "https://x.com/KELMAND1/status/2110277563801297234",
+       "views": "10223"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🤖 AI 生态互卡 · 大模型",
+   "color": "#7b2cbf",
+   "items": [
+    {
+     "id": "20261014-13Z-doubao-saep-151",
+     "company": "字节·豆包 / 腾讯 / 阿里 / 拼多多 / 美团 / 快手 / 小红书 / DeepSeek / 月之暗面",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "官方",
+      "X"
+     ],
+     "date": "10-14",
+     "text": "豆包手机助手的屏幕自动化操作声明协议（SAEP）30 天公示期 10-14 结束，开始逐步放开第三方 App 的「AI 代操作」。官方公布的拒绝名单共 151 款：腾讯系 65 款（微信、QQ、王者荣耀等）、阿里系 23 款（淘宝、支付宝、千问等），雷科技统计快手 14 款、美团 11 款，另有拼多多、小红书、工商银行，AI 同行 Kimi、DeepSeek、腾讯元宝、可灵也都没开放。规则是「默认同意、声明拒绝就不操作」，公示期后仍可随时拒绝。基本等于大厂集体给字节的手机 Agent 关门，豆包目前只能主要在字节系 App 里跑。X 讨论偏少（05Z–12:55Z 约 40 帖），热度主要在媒体。",
+     "links": [
+      {
+       "label": "每经网",
+       "url": "https://www.nbd.com.cn/articles/2026-10-14/4603904.html",
+       "views": null
+      },
+      {
+       "label": "华尔街见闻",
+       "url": "https://wallstreetcn.com/articles/3783610",
+       "views": null
+      },
+      {
+       "label": "雷科技",
+       "url": "https://www.leikeji.com/article/79965",
+       "views": null
+      },
+      {
+       "label": "豆包手机助手 SAEP 官方页",
+       "url": "https://o.doubao.com/developer",
+       "views": null
+      },
+      {
+       "label": "X @Gray99999999",
+       "url": "https://x.com/Gray99999999/status/2110320329738621267",
+       "views": "43"
+      }
+     ]
+    },
+    {
+     "id": "20261014-13Z-seed-alignment-dept",
+     "company": "字节跳动·Seed",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "内部邮件",
+      "X"
+     ],
+     "date": "10-13",
+     "text": "字节 Seed 发内部邮件，成立「Seed Model-Alignment & Preparedness」安全与对齐部门，由严林负责、直接汇报给 Seed 负责人吴永辉；原 Responsible AI 团队和部分 Chat 团队成员转入。方向是智能体安全和防范 CBRN（化学、生物、放射、核）等前沿风险，媒体称这是国内首个单独建制的安全对齐部门。前几期漏报，这期补上。",
+     "links": [
+      {
+       "label": "澎湃新闻",
+       "url": "https://www.thepaper.cn/newsDetail_forward_34241236",
+       "views": null
+      },
+      {
+       "label": "新京报（新浪）",
+       "url": "https://k.sina.cn/article_1644114654_61ff32de02002bids.html",
+       "views": null
+      },
+      {
+       "label": "X @xiaogaifun",
+       "url": "https://x.com/xiaogaifun/status/2110251061646958742",
+       "views": "602"
+      }
+     ]
+    },
+    {
+     "id": "20261014-13Z-cn-opensource-silent",
+     "company": "智谱 / 月之暗面 / DeepSeek / 阿里·通义",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-14",
+     "text": "X 热帖调侃「国内开源基础模型（GLM/Kimi/DeepSeek/Qwen）突然集体鸦雀无声」，怀疑 Anthropic、OpenAI 找到了防蒸馏的新办法，而 A 社、O 社新模型一直在发。属于观点帖，没有事实证据，但约 4.2 万浏览，是今晚大模型圈最热的吐槽。",
+     "links": [
+      {
+       "label": "X @MagicPower21M",
+       "url": "https://x.com/MagicPower21M/status/2110263418305511767",
+       "views": "42108"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🔥 吐槽热帖",
+   "color": "#e9c46a",
+   "items": [
+    {
+     "id": "20261014-13Z-byd-hefei-canteen",
+     "company": "比亚迪",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "网友视频"
+     ],
+     "date": "10-14",
+     "text": "网友发视频称，合肥比亚迪四期工厂为了不让员工到厂外吃饭，疑似把相关出入口封了，员工没法骑电动车自己进出，只能在厂区食堂吃。视频文案：「合肥比亚迪四期领导真有招，不在食堂吃饭？我把小门封了看你怎么去外面吃」。目前只有网友视频单一来源，比亚迪未回应，媒体没跟进。",
+     "links": [
+      {
+       "label": "X @whyyoutouzhele",
+       "url": "https://x.com/whyyoutouzhele/status/2110349904266801377",
+       "views": "4651"
+      }
+     ]
+    },
+    {
+     "id": "20261014-13Z-huawei-kids-watch",
+     "company": "华为",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "抖音"
+     ],
+     "date": "10-12～10-14",
+     "text": "抖音视频里孩子反复点华为儿童电话手表「按半天没反应」，爸爸、妈妈打来的电话都没接到；弹幕和评论调侃「玄武卡顿」。属于用户吐槽个例，华为未回应。",
+     "links": [
+      {
+       "label": "X @whyyoutouzhele",
+       "url": "https://x.com/whyyoutouzhele/status/2110344871299170436",
+       "views": "9881"
+      }
+     ]
+    },
+    {
+     "id": "20261014-13Z-pdd-invisible-staff",
+     "company": "拼多多",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-14",
+     "text": "X 上「为什么网上见不到拼多多员工」的讨论串：网友说拼多多离职的人也不爱提自己出身，评论区归因于加班强度大、对外发声管得严。纯网友讨论，没有新的内部爆料。",
+     "links": [
+      {
+       "label": "X @AFARUNM",
+       "url": "https://x.com/AFARUNM/status/2110274501405524254",
+       "views": "875"
+      },
+      {
+       "label": "X @lisp2002",
+       "url": "https://x.com/lisp2002/status/2110258048208171272",
+       "views": "931"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🚕 滴滴 & 出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "id": "20261014-13Z-didi-fanjian-follow",
+     "company": "滴滴",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-14",
+     "text": "繁简价差二次扩散被包装成「滴滴涉嫌国籍歧视」：@Furinanatw 简体 vs 繁体对比帖约 1.5 万浏览（09Z 时才 582）。但各帖说法不一致：最早 Threads/unwire 说繁体更贵（¥112.6 vs ¥64.5），@sam51824016070 却说简体比繁体贵 2 倍以上；截图时间和路线也不同，仍待核实。滴滴没有回应，微博热搜无滴滴条目。",
+     "links": [
+      {
+       "label": "X @Furinanatw",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537",
+       "views": "15447"
+      },
+      {
+       "label": "X @sam51824016070",
+       "url": "https://x.com/sam51824016070/status/2110325400098476330",
+       "views": "788"
+      },
+      {
+       "label": "unwire.hk（原始报道）",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/",
+       "views": null
+      }
+     ]
+    },
+    {
+     "id": "20261014-13Z-didi-mx-hidalgo",
+     "company": "滴滴出海·墨西哥",
+     "tag": "实锤",
+     "source_types": [
+      "公开媒体",
+      "西班牙语",
+      "墨西哥"
+     ],
+     "date": "10-13",
+     "country": "墨西哥",
+     "lang": "西班牙语",
+     "text": "【海外小语种·墨西哥/西班牙语】伊达尔戈州议会交通委员会主席 Juan Pablo Escalante 表示，州议会没收到 DiDi 或 Uber 的正式运营申请；州法修改之前，两家平台都不能在该州合法运营。起因是 Uber 在官网和 App 宣布进驻帕丘卡，州长 Julio Menchaca 已称其违法。DiDi 只是被一起点名，没有进驻动作或回应；当地出租车行业对此感到不安。优先级低。",
+     "translation_zh": "州议会交通委员会主席 Juan Pablo Escalante 表示，该立法机构尚未收到 DiDi 或 Uber 等数字出行平台在伊达尔戈运营的正式申请。他指出，需由议会修改法律才能允许这些平台在本州运营，这让出租车行业感到不安。「州长已经说过，Uber 在其网站和应用里发布的（进驻）公告完全违法。在法律改革之前，它们不能运营。」",
+     "original": "El presidente de la Comisión de Movilidad y Transportes del Congreso estatal, Juan Pablo Escalante, afirmó que dicho organismo legislativo no ha recibido una petición formal de plataformas de transporte digital, como DiDi o Uber, para operar en Hidalgo. Señaló que corresponde al Congreso modificar la legislación para permitir la operación de estas plataformas en la entidad; situación que ha generado incertidumbre en el gremio de los taxistas. “Ya lo mencionó el gobernador, que el anuncio que realizó Uber en su página de internet y en su aplicación es completamente ilegal. Mientras no se realice una reforma legal, no podrán operar”.",
+     "links": [
+      {
+       "label": "Síntesis（西语）",
+       "url": "https://sintesis.mx/2026/10/13/sin-reforma-legal-uber-y-didi-no-podran-operar-en-hidalgo-juan-pablo-escalante/",
+       "views": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

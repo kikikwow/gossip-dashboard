@@ -1,0 +1,143 @@
+{
+  "routine": "大厂八卦热点快讯",
+  "fired_at_utc": "2026-10-14T11:52:43Z",
+  "scanned_at_utc": "2026-10-14T11:55:00Z",
+  "beijing_time": "2026-10-14 19:52–19:55 CST",
+  "window": "2026-10-14T08:50Z–11:55Z (Beijing 16:50–19:55)",
+  "alert_sent": false,
+  "alert_worthy": false,
+  "reason": "No new breaking item. 绿泡泡 Weibo重回#1(1606822)且@_FORAB新帖23k/13.5k浏览，但是13:55已送达的同一故事余波（创作者激励10/16起算为增量细节，不够单独再警报）。月之暗面美银已警报且降温。田柯宇无新事实。Temu/Anthropic近乎沉寂，移出短期列表。霸王茶姬补发券为旧闻后续且X低传播。片仔癀换帅为钛媒体商业稿、未上热搜。广义八卦关键词无>1万浏览新爆帖。",
+  "weibo": {
+    "mirror": "https://soso.re/weibo",
+    "updated": "2026-10-14 19:49 Beijing",
+    "company_adjacent": [
+      {
+        "rank": 1,
+        "topic": "绿泡泡对标红果",
+        "heat": 1606822,
+        "note": "same story as earlier #1; already alerted 13:55"
+      },
+      {
+        "rank": 7,
+        "topic": "霸王茶姬格局",
+        "heat": 1379223,
+        "note": "old Oct12/13 story"
+      },
+      {
+        "rank": 27,
+        "topic": "霸王茶姬向用户补发买一送一券",
+        "heat": 269287,
+        "note": "follow-up; low X"
+      },
+      {
+        "rank": 49,
+        "topic": "小米18PM玄戒O3版本",
+        "heat": 125066,
+        "note": "product"
+      },
+      {
+        "rank": 52,
+        "topic": "霸王茶姬",
+        "heat": 115063
+      }
+    ]
+  },
+  "maimai": {
+    "direct_fetch": "404 https://maimai.cn/article/topic?type=7"
+  },
+  "x_heat": {
+    "绿泡泡": {
+      "hourly_08_09_10_11": [
+        8,
+        1,
+        15,
+        17
+      ],
+      "_FORAB_坐不住": 23038,
+      "_FORAB_红果果": 13539
+    },
+    "月之暗面美银": {
+      "hourly": [
+        4,
+        2,
+        4,
+        2
+      ],
+      "0xLogicrw": 814
+    },
+    "田柯宇": {
+      "hourly": [
+        9,
+        3,
+        5,
+        6
+      ]
+    },
+    "Temu": {
+      "hourly": [
+        0,
+        5,
+        2,
+        1
+      ]
+    },
+    "霸王茶姬": {
+      "hourly": [
+        12,
+        11,
+        9,
+        8
+      ]
+    },
+    "大厂广义八卦": {
+      "hourly": [
+        4,
+        9,
+        5,
+        5
+      ]
+    }
+  },
+  "feeds_new": [
+    "钛媒体 片仔癀五年四换帅，提价驱动失效，业绩失速"
+  ],
+  "short_term_updates": {
+    "removed": [
+      "Temu密苏里州检察长起诉",
+      "Anthropic点名智谱/月之暗面蒸馏"
+    ],
+    "kept": [
+      "月之暗面美银退出IPO",
+      "腾讯绿泡泡对战红果短剧",
+      "田柯宇融资争议"
+    ],
+    "added": []
+  },
+  "candidates": [
+    {
+      "topic": "绿泡泡 Weibo#1 + _FORAB 23k",
+      "verdict": "skip",
+      "why": "13:55已警报同一故事；激励细则为增量非新爆点"
+    },
+    {
+      "topic": "霸王茶姬补发买一送一券",
+      "verdict": "skip",
+      "why": "旧闻后续，X浏览个位数至几十"
+    },
+    {
+      "topic": "月之暗面美银",
+      "verdict": "skip",
+      "why": "已警报，降温"
+    },
+    {
+      "topic": "片仔癀换帅",
+      "verdict": "skip",
+      "why": "商业稿，未形成热搜/病毒传播"
+    },
+    {
+      "topic": "Temu/Anthropic",
+      "verdict": "remove_from_short_term",
+      "why": "连续两轮无新进展且发帖塌陷"
+    }
+  ]
+}

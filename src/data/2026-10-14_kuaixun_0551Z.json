@@ -1,0 +1,123 @@
+{
+  "routine": "大厂八卦热点快讯",
+  "fired_at_utc": "2026-10-14T05:51:00Z",
+  "scanned_at_utc": "2026-10-14T05:55:00Z",
+  "beijing_time": "2026-10-14 13:51–13:55 CST",
+  "window": "2026-10-14T02:51Z–2026-10-14T05:55Z (Beijing 10:51–13:55 Oct 14); fresh since makeup 05:43Z",
+  "alert_sent": true,
+  "alert_worthy": true,
+  "reason": "DELIVER prior undelivered ALERTs: Moonshot BofA IPO exit still spreading (views +~2k, 05Z posts 12→14) + 绿泡泡 still Weibo #1 (1.53M). No NEW alert-bar item since 05:43Z. Skip Temu/Anthropic/尊界/田柯宇 rehash.",
+  "prior_two_still_qualify": true,
+  "any_new_alert_items_since_0543Z": false,
+  "heat_summary": {
+    "月之暗面美银退出IPO": "34 posts 22Z–05:53Z (04Z 8, 05Z 14↑); financialjuice 24979(+799)/business 14577(+904)/dmjk001 2463(+342)",
+    "腾讯绿泡泡vs字节红果": "Weibo still #1 1,525,537 (was 1,700,426); X 24 posts (末段5→10)",
+    "田柯宇": "41 posts; @_FORAB 96008(+7929); hourly 15→7",
+    "Temu": "438 cooling 28→23→25",
+    "Anthropic蒸馏": "281 cooling 33→27→24",
+    "字节": "12",
+    "滴滴": "5",
+    "LLM": "53",
+    "广义八卦": "73 no viral>10k new"
+  },
+  "weibo": {
+    "mirror": "https://soso.re/weibo",
+    "updated": "2026-10-14 13:45 Beijing",
+    "company_adjacent": [
+      {
+        "rank": 1,
+        "topic": "腾讯打算拿什么撬动红果近2亿日活",
+        "heat": 1525537,
+        "note": "still #1; heat -10% vs 13:34"
+      },
+      {
+        "rank": 4,
+        "topic": "比亚迪大汉23.59万起上市",
+        "heat": 717141,
+        "note": "product launch, not gossip"
+      },
+      {
+        "rank": 7,
+        "topic": "成本8万AI影片能胜院线大制作",
+        "heat": 563898,
+        "note": "AI content, not company gossip"
+      },
+      {
+        "rank": 9,
+        "topic": "舒客广告跟8个男人接吻被罚50万",
+        "heat": 561929,
+        "note": "consumer brand"
+      },
+      {
+        "rank": 23,
+        "topic": "用孙颖莎的方式打开海尔智慧家电",
+        "heat": 279820,
+        "note": "ad"
+      }
+    ],
+    "绿泡泡_红果_on_list": true,
+    "月之暗面_on_list": false,
+    "滴滴_on_list": false,
+    "字节_on_list": false,
+    "田柯宇_on_list": false
+  },
+  "maimai": {
+    "direct_fetch": "404 https://maimai.cn/article/topic?type=7",
+    "note": "public hot-rank page unreachable"
+  },
+  "candidates": [
+    {
+      "topic": "月之暗面 / 美银退出港股IPO承销（彭博）",
+      "verdict": "ALERT",
+      "why": "Prior makeup alert_sent:false; views still climbing (+~2k across 3 posts in ~12min); 05Z posts 12→14; still major tracked 中国大模型 development. Recommend deliver NOW.",
+      "still_qualifies": true,
+      "already_reported_in_chat": false
+    },
+    {
+      "topic": "腾讯绿泡泡短剧 vs 字节红果（微博热搜#1）",
+      "verdict": "ALERT",
+      "why": "Still Weibo #1 at 1.53M (heat dipped from 1.70M but rank holds); X discussion continuing; alert_sent:false. Recommend deliver NOW with Moonshot.",
+      "still_qualifies": true,
+      "already_reported_in_chat": false
+    },
+    {
+      "topic": "田柯宇融资争议",
+      "verdict": "skip",
+      "why": "Views still rising on @_FORAB but hourly cooling; already in short-term tracking / prior briefing; no major new development this window."
+    },
+    {
+      "topic": "Anthropic蒸馏 / Temu密苏里 / 尊界",
+      "verdict": "skip",
+      "why": "Cooling rehash; no new spike."
+    },
+    {
+      "topic": "字节厕所盘问爆料 RT",
+      "verdict": "skip",
+      "why": "Original Oct-13 post (~81k views); RT only in this window; not new."
+    },
+    {
+      "topic": "滴滴",
+      "verdict": "skip",
+      "why": "Only 5 gossip-keyword posts; covered by hourly didi routine."
+    },
+    {
+      "topic": "比亚迪大汉上市（微博#4）",
+      "verdict": "skip",
+      "why": "Product launch, not big-tech gossip."
+    }
+  ],
+  "recommended_alert_text": "# 🚨 八卦快讯｜2026-10-14 05:55 UTC（北京 13:55）\n\n**月之暗面 / Kimi** 【实锤·媒体】【英语·已译】【付费·彭博】\n彭博报道：美国银行已退出月之暗面港股 IPO 的潜在承销洽谈；此前曾谈整体协调人，最终未获正式委任。背景写为「月之暗面正面临美国审查」，美银与月之暗面均拒置评。X 主帖持续涨粉：@financialjuice 约 2.50 万浏览（↑约 800）、@business 约 1.46 万（↑约 900）、中文转述 @dmjk001 约 2463；相关发帖 04Z→05Z 仍在升（8→14）。\n🔗 https://news.bloomberglaw.com/capital-markets/bofa-no-longer-in-talks-to-arrange-ipo-of-chinas-moonshot-ai\n🔗 https://x.com/financialjuice/status/2110230603933081991 （24979 views）\n🔗 https://x.com/business/status/2110235441802690623 （14577 views）\n🔗 https://x.com/dmjk001/status/2110232813186494762 （2463 views）\n<details><summary>原文（英语）</summary>\nBank of America Corp. is no longer part of the potential roster of banks working on Moonshot AI's initial public offering, according to people familiar with the matter, as the Chinese artificial intelligence darling faces scrutiny in the US.\n</details>\n\n**腾讯 / 字节跳动** 【实锤·微博热搜】【媒体】\n微博热搜仍第 1：#腾讯打算拿什么撬动红果近2亿日活#，热度约 152.6 万（13:45 镜像，较 13:34 的 170 万略降但位次未变）。背景是腾讯在微信上线免费短剧小程序「绿泡泡」对标字节红果；QuestMobile：红果 2026-07 日活 1.68 亿。绿泡泡上线本身非今日新事，今日新点是冲上热搜第一并仍在榜。\n🔗 https://soso.re/weibo （#1 · 1525537）\n🔗 https://www.21jingji.com/article/20261013/herald/9f65eaeb88b0838b77401c49c13829bf.html\n",
+  "heat_deltas_since_0543Z": {
+    "financialjuice_views": "+799 (24180→24979)",
+    "business_views": "+904 (13673→14577)",
+    "dmjk001_views": "+342 (2121→2463)",
+    "moonshot_05Z_posts": "12→14",
+    "weibo_lvpaopao_heat": "1700426→1525537 (−174889, still #1)",
+    "forab_views": "+7929 (88079→96008)",
+    "lvpaopao_x_05Z": "7→10"
+  },
+  "alert_file_prior": "data/2026-10-14_alert_05Z.json",
+  "json_detail": "research/kuaixun_scan_2026-10-14T0551Z.json",
+  "alert_sent_at_utc": "2026-10-14T05:55:50Z",
+  "delivered_via": "WakeParent from scheduled 13:54 run (makeup 05Z was prepared but alert_sent:false)"
+}

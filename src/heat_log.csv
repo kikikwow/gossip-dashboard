@@ -393,3 +393,15 @@ timestamp_utc,topic,metric,value,source
 2026-10-14T12:12:00Z,滴滴 & 滴滴出海,x_post_count_task_broad_12Z_partial,289,"X same auxiliary, 12:00-12:09Z"
 2026-10-14T12:12:00Z,滴滴国内其他业务,x_tier1_slot2_hits_kept_1110to1212Z,0,tier1×8+slot2×3; slot2 all t.co/article false positives; cn_price JP-language secondary only
 2026-10-14T12:12:00Z,滴滴繁简价差,x_sample_post,83,https://x.com/hima_tube_/status/2110329328101986741
+2026-10-14T12:56:00Z,懂车帝被曝邀约黑尊界,x_hourly_post_count_05to12Z_total,329,X counts q=懂车帝 (尊界 OR 华为 OR 黑稿 OR 补刀) 05Z-12:55Z hourly 48/38/45/46/52/42/24/34
+2026-10-14T12:56:00Z,懂车帝被曝邀约黑尊界,x_sample_post,13510,https://x.com/0427SMtieshou/status/2110264344324046901
+2026-10-14T12:56:00Z,懂车帝被曝邀约黑尊界,x_sample_post,10223,https://x.com/KELMAND1/status/2110277563801297234
+2026-10-14T12:56:00Z,腾讯绿泡泡对战红果短剧,weibo_hot_heat,578146,https://soso.re/weibo 20:50 Beijing #5 绿泡泡对标红果
+2026-10-14T12:56:00Z,腾讯绿泡泡对战红果短剧,x_hourly_post_count_05to12Z_total,87,X counts q=绿泡泡 (短剧 OR 红果 OR 腾讯 OR 微信) hourly 10/13/6/8/1/15/18/16
+2026-10-14T12:56:00Z,腾讯绿泡泡对战红果短剧,x_sample_post,327,https://x.com/chakmillion/status/2110337824729743573
+2026-10-14T12:56:00Z,月之暗面美银退出IPO,x_hourly_post_count_05to12Z_total,43,X counts q=(月之暗面 OR Moonshot OR Kimi) (美银 OR ... OR IPO) hourly 15/6/6/4/2/4/2/4
+2026-10-14T12:56:00Z,月之暗面美银退出IPO,x_sample_post,1329,https://x.com/0xLogicrw/status/2110318890463133717
+2026-10-14T12:56:00Z,田柯宇融资争议,x_hourly_post_count_05to12Z_total,45,X counts q=田柯宇 hourly 7/6/5/9/3/5/6/4
+2026-10-14T12:56:00Z,豆包手机助手151款拒绝,x_hourly_post_count_05to12Z_total,40,X counts q=豆包 (151 OR SAEP OR 拒绝接入 OR 拒绝) hourly 6/5/3/2/2/6/9/7
+2026-10-14T12:56:00Z,滴滴繁简价差,x_post_views:@Furinanatw,15447,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-14T12:56:00Z,滴滴繁简价差,x_sample_post,15447,https://x.com/Furinanatw/status/2110289680595886537

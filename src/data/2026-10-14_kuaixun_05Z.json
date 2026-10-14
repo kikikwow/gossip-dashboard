@@ -1,0 +1,137 @@
+{
+  "routine": "大厂八卦热点快讯",
+  "fired_at_utc": "2026-10-14T05:38:00Z",
+  "scanned_at_utc": "2026-10-14T05:43:00Z",
+  "beijing_time": "2026-10-14 13:38–13:45 CST",
+  "window": "2026-10-13T23:02Z–2026-10-14T05:43Z (Beijing 07:02–13:43 Oct 14)",
+  "makeup_for": [
+    "2026-10-14 07:54 北京时间",
+    "2026-10-14 10:54 北京时间"
+  ],
+  "alert_sent": true,
+  "reason": "ALERT: Bloomberg 04:18Z exclusive that BofA dropped out of Moonshot AI's HK IPO underwriter talks amid US scrutiny = major NEW development on tracked 中国大模型 topic, with ~38k new X views in <1h (@financialjuice 24.2k, @business 13.7k). Secondary (borderline): NEW Weibo #1 company topic #腾讯打算拿什么撬动红果近2亿日活# (1.70M), Tencent 绿泡泡 vs ByteDance 红果, not covered in earlier editions though underlying launch is ~2 weeks old. Skipped: 懂车帝5000元黑稿 claim (pre-window origin, 19.2k single post; defer to 21:00), 尊界/Anthropic/Temu rehash, DeepSeek funding already covered.",
+  "alert_worthy": true,
+  "heat_summary": {
+    "月之暗面美银退出IPO": "31 posts 23Z–05:42Z (04Z 8, 05Z 12 rising); @financialjuice 24,180 / @business 13,673 / @dmjk001 2,121 views",
+    "腾讯绿泡泡vs字节红果": "Weibo #1 1,700,426; X 560 posts (36→56→81→111→88→104→84), top 4,376 views",
+    "尊界": "352/6.6h daytime rebound (~50/h); @cuichenghao 19,232 (懂车帝黑稿)",
+    "懂车帝黑稿": "40 posts in window",
+    "Anthropic蒸馏": "241/6.6h (19→45→46→44→42→31→14); AYi 355,998 cumulative",
+    "Temu": "314/6.6h cooling (73→25/h)",
+    "字节": "10",
+    "滴滴": "63 noise",
+    "LLM": "149"
+  },
+  "weibo": {
+    "mirror": "https://soso.re/weibo",
+    "updated": "2026-10-14 13:34 Beijing",
+    "company_adjacent": [
+      {
+        "rank": 1,
+        "topic": "腾讯打算拿什么撬动红果近2亿日活",
+        "heat": 1700426,
+        "note": "NEW since 07:00 scan; Tencent 绿泡泡短剧 vs ByteDance 红果"
+      },
+      {
+        "rank": 9,
+        "topic": "成本8万AI影片能胜院线大制作",
+        "heat": 314737,
+        "note": "AI content, not company gossip"
+      },
+      {
+        "rank": 11,
+        "topic": "舒客广告跟8个男人接吻被罚50万",
+        "heat": 276826,
+        "note": "consumer brand, not tracked big tech"
+      },
+      {
+        "rank": 19,
+        "topic": "用孙颖莎的方式打开海尔智慧家电",
+        "heat": 272664,
+        "note": "ad/marketing"
+      }
+    ],
+    "字节时间_on_list": false,
+    "尊界_on_list": false,
+    "月之暗面_on_list": false,
+    "滴滴_on_list": false,
+    "Temu_on_list": false,
+    "懂车帝_on_list": false
+  },
+  "maimai": {
+    "direct_fetch": "404 https://maimai.cn/article/topic?type=7",
+    "note": "public hot-rank page unreachable this window"
+  },
+  "candidates": [
+    {
+      "topic": "月之暗面 / 美银退出港股IPO承销（彭博）",
+      "verdict": "ALERT",
+      "why": "彭博 04:18Z 新报道，窗口内首发；中国大模型长期话题的重大新进展（美方审查背景，与 Anthropic 蒸馏指控叠加）；X 快讯帖 @financialjuice 2.42万、@business 1.37万浏览，不到 1 小时合计约 3.8 万新增浏览，相关发帖还在升温。",
+      "already_reported": false
+    },
+    {
+      "topic": "腾讯绿泡泡短剧 vs 字节红果（微博热搜#1）",
+      "verdict": "ALERT（偏边缘）",
+      "why": "新上榜就是第 1，约 170 万，07:00 那轮不在榜；涉及腾讯和字节两家大厂。但绿泡泡上线本身是 9 月底到 10 月初的旧闻，今天新的只是热搜；X 热度低（单帖最高约 4376）。之前的简报只提过「字节时间」排约 25 名，没写过绿泡泡/红果。",
+      "already_reported": false
+    },
+    {
+      "topic": "懂车帝被曝 5000 元一条找博主「补刀」尊界（字节旗下懂车帝 / 华为·江淮）",
+      "verdict": "skip_for_alert → 建议进 21:00 简报",
+      "why": "之前各期都没覆盖，属于尊界刹车门的新支线【传闻】；但爆料是 10-12/13 发的，不是窗口内首发；X 单帖 @cuichenghao 约 1.92 万浏览，相关发帖窗口内约 40；懂车帝没回应；未见微博热搜。",
+      "already_reported": false
+    },
+    {
+      "topic": "华为尊界刹车门（S800 也纳入免费换踏板等）",
+      "verdict": "skip",
+      "why": "白天发帖回升到约 50/小时（窗口内 352），但 S800 换踏板（10-13 IT之家）、人民日报（10-11）、新疆发布（10-10）都早于窗口；@faultbugs 约 5868 浏览。",
+      "already_reported": "partial"
+    },
+    {
+      "topic": "Anthropic 点名智谱/月之暗面蒸馏",
+      "verdict": "skip",
+      "why": "北京白天复读回升（约 45/小时），被点名方仍没回应；主帖累计约 35.6 万浏览，基本是旧帖继续涨。",
+      "already_reported": true
+    },
+    {
+      "topic": "Temu 密苏里州被诉",
+      "verdict": "skip",
+      "why": "73→25/小时，持续降温，没有新的诉讼进展。",
+      "already_reported": true
+    },
+    {
+      "topic": "DeepSeek 1000 亿融资 / 领投 Winverse",
+      "verdict": "skip",
+      "why": "早报（bigtech_21Z）已覆盖；窗口内只是转述，单帖不到 300 浏览。",
+      "already_reported": true
+    },
+    {
+      "topic": "Kimi K3.1 / GLM 5.5 发布传闻",
+      "verdict": "skip",
+      "why": "型号泄露类传闻，单帖约 784 浏览。",
+      "already_reported": false
+    },
+    {
+      "topic": "字节跳动（裁员/离职/爆料）",
+      "verdict": "skip",
+      "why": "窗口内约 10 帖；TRAE 石扬离职 10-13 已报。",
+      "already_reported": true
+    },
+    {
+      "topic": "滴滴 & 滴滴出海",
+      "verdict": "skip",
+      "why": "每小时专项已覆盖到 05:11Z（日本合资公司、墨西哥卖号、繁简价差）；X 八卦角度约 63 帖，基本是噪音；微博无滴滴。",
+      "already_reported": true
+    },
+    {
+      "topic": "微博其他：舒客广告被罚50万、成本8万AI影片",
+      "verdict": "skip",
+      "why": "不是追踪中的大厂八卦。",
+      "already_reported": false
+    }
+  ],
+  "alert_file": "data/2026-10-14_alert_05Z.json",
+  "json_detail": "research/kuaixun_scan_2026-10-14T05Z.json",
+  "alert_sent_at_utc": "2026-10-14T05:55:50Z",
+  "delivered_via": "delivered by subsequent scheduled 0551Z run"
+}
