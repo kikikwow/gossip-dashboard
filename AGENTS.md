@@ -35,3 +35,6 @@
 
 ## 发布细节
 另见 [PUBLISH.md](PUBLISH.md)（若存在）。冲突时以本文件为准。
+
+## Cloud agent restrictions (user rule, 2026-10-14)
+Do NOT open a browser, take screenshots, record screens, review videos, or spawn computerUse/mediaReview/browser subagents. Use only git, shell and scripts; verify with curl/grep/check scripts. Visual acceptance is done outside Cursor by the bot.
