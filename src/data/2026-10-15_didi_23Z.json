@@ -1,0 +1,124 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-14T23:15:00Z",
+ "fired_at_utc": "2026-10-14T23:09:59Z",
+ "scanned_at_utc": "2026-10-14T23:15:00Z",
+ "beijing_time": "2026-10-15 07:15 Asia/Shanghai",
+ "edition_date": "2026-10-15",
+ "window": {
+  "start_utc": "2026-10-14T14:08:00Z",
+  "end_utc": "2026-10-14T23:15:00Z",
+  "note": "自上轮 22:08（北京时间）以来，覆盖夜间静默时段；Tier1 + Tier2 slot1（日本/澳新/埃及）；Tier3 跳过（07:xx 未到 08:00，留给 08:06 轮）"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "夜间窗口内无滴滴本体新的可核验八卦/人事/监管/财务事实。Tier1：cn_gossip 2 帖均无滴滴实体（丢弃）；cn_price 仅 @nicholasProton 回复帖（199 浏览）调侃营销号把特惠车与普通车对比说成「国籍歧视」，属评论；hk_tw 1 帖为 @mathgl 在深圳坐滴滴与司机闲聊台湾/大陆的见闻（6536 浏览），非公司新闻；BR×2/MX×2/EN 0 帖。繁简价差主帖 @Furinanatw 浏览一夜从 22146 涨到 69753（约 3 倍），回复 24，但仍无新证据、无媒体新报道，滴滴未专门回应（此前 8 月已公开否认大数据杀熟；unwire 指出两张截图相隔 5 分钟、路线不同，翔安机场尚未启用）。Slot1 三组 0 帖；Web 日本仅旭川空港/南城市旧闻，埃及/澳洲无新闻；墨西哥 Puebla 账号买卖、Hidalgo 均为已收录旧闻；99Food 仍为 TJSP/Cade 旧闻；香港牌照仍 10-30 截止。RSS 5 条新匹配均非滴滴；微博热搜镜像无滴滴。",
+ "sections": [
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "公开媒体",
+      "RSS",
+      "微博镜像"
+     ],
+     "date": "10-15 07:15",
+     "text": "本期滴滴本体无新动态。扫描窗口 14:08Z–23:15Z（北京时间 10-14 22:08 至 10-15 07:15，覆盖夜间）。Tier1 全量 + Tier2 slot1（日本/澳新/埃及）未见新的公司八卦、人事、监管或财务线索。繁简价差主帖 @Furinanatw 浏览一夜涨到 69753（上轮 22146，约 3 倍），仍是同一组截图，没有新证据，也没有新的媒体报道，滴滴未专门回应；截图时间与路线不同、翔安机场尚未启用，仍属待核实。",
+     "links": [
+      {
+       "label": "@Furinanatw 繁简价差主帖（69753 浏览）",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      },
+      {
+       "label": "unwire.hk 报道（繁中）",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/"
+      },
+      {
+       "label": "凤凰网：滴滴 8 月否认大数据杀熟",
+       "url": "https://tech.ifeng.com/c/8vxO0g8gk5L"
+      }
+     ],
+     "id": "20261015-didi-23Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "14Z": 237,
+   "15Z": 349,
+   "16Z": 231,
+   "17Z": 227,
+   "18Z": 125,
+   "19Z": 66,
+   "20Z": 125,
+   "21Z": 102,
+   "22Z": 91,
+   "23Z_partial_to2310": 11,
+   "query": "滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"",
+   "note": "夜间回落，撞词噪音主导"
+  },
+  "trad_simp_price_x": {
+   "posts_in_tier1_window": 1,
+   "kept_for_alert": 0,
+   "main_post_views": 69753,
+   "prev_views": 22146,
+   "main_post_replies": 24,
+   "note": "主帖夜间浏览约 3 倍，无新事实、无回应"
+  },
+  "tier1_x_hits_kept": 0,
+  "slot1_x_hits_kept": 0,
+  "weibo_didi_on_list": null
+ },
+ "candidates": [
+  {
+   "topic": "X cn_price @nicholasProton 回复帖",
+   "verdict": "log_only_below_engagement",
+   "why": "impressions=199，评论性质",
+   "url": "https://x.com/nicholasProton/status/2110380521905905791"
+  },
+  {
+   "topic": "X hk_tw @mathgl 深圳坐滴滴与司机闲聊",
+   "verdict": "log_only_not_news",
+   "why": "个人见闻，非滴滴公司新闻",
+   "url": "https://x.com/mathgl/status/2110405141006594284"
+  },
+  {
+   "topic": "X cn_gossip 微信群机器人/经济文章",
+   "verdict": "reject_no_entity",
+   "why": "正文无滴滴实体",
+   "url": "https://x.com/DavidHoNotes/status/2110373247841947987"
+  },
+  {
+   "topic": "Puebla 买卖 DiDi 司机账号",
+   "verdict": "already_covered",
+   "why": "10-14 05Z 等各期已收录",
+   "url": "https://contigopuebla.mx/2026/78162/ofrecen-cuentas-de-didi-sin-filtros-de-seguridad/"
+  }
+ ],
+ "sources_queried": [
+  "X tier1×8 + tier2 slot1×3 + counts×1 + post lookup×1",
+  "WebSearch×8 (tier1×6 + slot1×2)",
+  "RSS fetch_sources（5 条新匹配，非滴滴）",
+  "微博热搜镜像 soso.re/weibo（无滴滴）",
+  "Tier3 skipped (before 08:00)"
+ ],
+ "x_calls_used": 13,
+ "web_searches": 8,
+ "web_searches_used": 8,
+ "tiers": "tier1 + tier2 slot1",
+ "tiers_ran": [
+  "tier1",
+  "tier2_slot1"
+ ],
+ "slot": 1,
+ "push_needed": true,
+ "push_note": "New 23Z edition (10-15) with updated 繁简 heat (69753); push gossip-dashboard"
+}

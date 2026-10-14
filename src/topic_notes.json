@@ -292,6 +292,38 @@
     "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
    ],
    "recorded_at": "2026-10-14T14:20:00Z"
+  },
+  "合肥比亚迪封门逼食堂": {
+   "summary": "10 月 14 日网友发视频称，合肥比亚迪四期工厂疑似封闭了相关出入口，员工无法骑电动车出厂吃饭，只能在厂区食堂用餐。目前只有这一条网友视频来源，比亚迪未回应，也未见媒体跟进。",
+   "credibility": "传闻",
+   "event_time": "2026-10-14",
+   "sources": [
+    {
+     "label": "X @whyyoutouzhele 网友视频转发",
+     "url": "https://x.com/whyyoutouzhele/status/2110349904266801377"
+    }
+   ],
+   "recorded_at": "2026-10-14T15:50:00Z"
+  },
+  "豆包手机助手SAEP151款拒绝": {
+   "summary": "豆包手机助手的屏幕自动化操作声明协议（SAEP）30 天公示期在 10 月 14 日结束，官方公布有 151 款 App 声明拒绝 AI 代操作。其中腾讯系 65 款、阿里系 23 款，另有快手、美团、拼多多、小红书等。详细内容见看板事件「豆包 SAEP 151 款拒绝」。",
+   "credibility": "实锤",
+   "event_time": "2026-10-14",
+   "sources": [
+    {
+     "label": "每经网",
+     "url": "https://www.nbd.com.cn/articles/2026-10-14/4603904.html"
+    },
+    {
+     "label": "华尔街见闻",
+     "url": "https://wallstreetcn.com/articles/3783610"
+    },
+    {
+     "label": "X @_FORAB 代表帖（热度来源）",
+     "url": "https://x.com/_FORAB/status/2110362974947037321"
+    }
+   ],
+   "recorded_at": "2026-10-14T23:15:00Z"
   }
  }
 }

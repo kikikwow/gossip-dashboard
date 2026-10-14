@@ -420,3 +420,42 @@ timestamp_utc,topic,metric,value,source
 2026-10-14T14:08:00Z,滴滴,x_sample_post,22146,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-14T14:08:00Z,滴滴繁简价差,x_post_views:@Furinanatw,22146,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-14T14:08:00Z,滴滴繁简价差,x_sample_post,22146,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-14T14:55:00Z,懂车帝被曝邀约黑尊界,x_hourly_post_count_12_13_14Z,40|46|28,X q=懂车帝 (尊界 OR 华为 OR 黑稿 OR 补刀 OR 东门); keep
+2026-10-14T14:55:00Z,懂车帝被曝邀约黑尊界,x_sample_post,13613,https://x.com/KELMAND1/status/2110277563801297234
+2026-10-14T14:55:00Z,懂车帝被曝邀约黑尊界,x_sample_post,17206,https://x.com/0427SMtieshou/status/2110264344324046901
+2026-10-14T14:55:00Z,腾讯绿泡泡对战红果短剧,weibo_hot_heat,513464,https://soso.re/weibo 22:25 Beijing #5 绿泡泡对标红果; also #19 249554
+2026-10-14T14:55:00Z,腾讯绿泡泡对战红果短剧,x_hourly_post_count_12_13_14Z,19|28|19,X q=绿泡泡 (短剧 OR 红果 OR 腾讯 OR 微信); cooling_keep
+2026-10-14T14:55:00Z,腾讯绿泡泡对战红果短剧,x_sample_post,29152,https://x.com/_FORAB/status/2110320799358017882
+2026-10-14T14:55:00Z,月之暗面美银退出IPO,x_hourly_post_count_12_13_14Z,3|4|1,X cooling; last_chance before remove
+2026-10-14T14:55:00Z,田柯宇融资争议,x_hourly_post_count_12_13_14Z,4|3|3,X quiet; remove_short_term; https://x.com/lidangzzz/status/2110362146143875266 views=11147 commentary only
+2026-10-14T14:55:00Z,豆包手机助手SAEP151款拒绝,x_hourly_post_count_12_13_14Z,8|16|15,X q=豆包 (151 OR SAEP OR 拒绝接入 OR 拒绝 OR 智能体); add_short_term_no_alert
+2026-10-14T14:55:00Z,豆包手机助手SAEP151款拒绝,x_sample_post,41950,https://x.com/_FORAB/status/2110362974947037321
+2026-10-14T14:55:00Z,字节厕所文化爆料,x_sample_post_OLD,89118,https://x.com/weiyux2021/status/2109961583619416213; created_2026-10-13T10:56:57Z not_new_in_window
+2026-10-14T14:55:00Z,快讯扫描_无达标项,alert_sent,0,kuaixun_1455Z: alert_worthy=false; no new breaking
+2026-10-14T15:50:00Z,懂车帝被曝邀约黑尊界,x_hourly_post_count_13_14_15Z,46|51|32,X q=懂车帝 (尊界 OR 华为 OR 黑稿 OR 补刀 OR 东门); 09Z-15:50Z total 290 (52/43/26/40/46/51/32); 15Z partial 50min; daily_summary keep 📈
+2026-10-14T15:50:00Z,懂车帝被曝邀约黑尊界,x_sample_post,21274,https://x.com/0427SMtieshou/status/2110264344324046901
+2026-10-14T15:50:00Z,懂车帝被曝邀约黑尊界,x_sample_post,14923,https://x.com/KELMAND1/status/2110277563801297234
+2026-10-14T15:50:00Z,豆包手机助手SAEP151款拒绝,x_hourly_post_count_13_14_15Z,15|26|20,X q=豆包 (151 OR SAEP OR 拒绝接入 OR 拒绝 OR 智能体); 09Z-15:50Z total 90; 15Z partial; keep 📈
+2026-10-14T15:50:00Z,豆包手机助手SAEP151款拒绝,x_sample_post,98603,https://x.com/_FORAB/status/2110362974947037321
+2026-10-14T15:50:00Z,腾讯绿泡泡对战红果短剧,weibo_hot_heat,433201,https://soso.re/weibo 23:34 Beijing #6 绿泡泡对标红果
+2026-10-14T15:50:00Z,腾讯绿泡泡对战红果短剧,x_hourly_post_count_13_14_15Z,28|23|17,X q=绿泡泡 (短剧 OR 红果 OR 腾讯 OR 微信); 09Z-15:50Z total 121; cooling_keep 📉
+2026-10-14T15:50:00Z,腾讯绿泡泡对战红果短剧,x_sample_post,32428,https://x.com/_FORAB/status/2110320799358017882
+2026-10-14T15:50:00Z,月之暗面美银退出IPO,x_hourly_post_count_13_14_15Z,7|2|3,X q=(月之暗面 OR Moonshot OR Kimi) (美银 OR "Bank of America" OR IPO OR 上市); 09Z-15:50Z total 23; REMOVED from short-term (daily_summary)
+2026-10-14T15:50:00Z,月之暗面美银退出IPO,x_sample_post,27621,https://x.com/business/status/2110235441802690623
+2026-10-14T15:50:00Z,月之暗面美银退出IPO,x_sample_post,2474,https://x.com/0xLogicrw/status/2110318890463133717
+2026-10-14T15:50:00Z,滴滴,x_hourly_post_count_14_15Z,239|274,X q=滴滴 OR 滴滴出行 OR "DiDi Global" OR "Didi Chuxing"; 15Z partial 50min; broad/noisy
+2026-10-14T15:50:00Z,滴滴,x_sample_post,35856,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-14T15:50:00Z,滴滴繁简价差,x_post_views:@Furinanatw,35856,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-14T15:50:00Z,滴滴繁简价差,x_sample_post,35856,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-14T15:50:00Z,滴滴繁简价差,x_sample_post,1638,https://x.com/sam51824016070/status/2110325400098476330
+2026-10-14T15:50:00Z,田柯宇融资争议,x_hourly_post_count_13_14_15Z,3|5|3,X q=田柯宇; 09Z-15:50Z total 29; stays removed
+2026-10-14T15:50:00Z,田柯宇融资争议,x_sample_post,224393,https://x.com/_FORAB/status/2110205955380330589
+2026-10-14T15:50:00Z,合肥比亚迪封门逼食堂,x_hourly_post_count_13_14_15Z,5|4|2,"X q=比亚迪 (食堂 OR 封门 OR 小门 OR 合肥); single-source video; watch only, not short-term"
+2026-10-14T15:50:00Z,合肥比亚迪封门逼食堂,x_sample_post,28261,https://x.com/whyyoutouzhele/status/2110349904266801377
+2026-10-14T15:50:00Z,Anthropic点名智谱/月之暗面蒸馏,x_hourly_post_count_13_14_15Z,27|15|11,X q=Anthropic (蒸馏 OR 智谱 OR 月之暗面 OR distillation); 09Z-15:50Z total 140; cooled
+2026-10-14T15:50:00Z,Anthropic点名智谱/月之暗面蒸馏,x_sample_post,56025,https://x.com/MagicPower21M/status/2110263418305511767
+2026-10-14T15:50:00Z,Temu密苏里州检察长起诉,x_hourly_post_count_09to15Z_total,20,X q=Temu (Missouri OR 密苏里 OR lawsuit OR 起诉) 3/2/1/6/4/3/1; cooled
+2026-10-14T15:50:00Z,字节厕所文化爆料,x_sample_post_OLD,89323,https://x.com/weiyux2021/status/2109961583619416213; created 2026-10-13 stalled
+2026-10-14T23:15:00Z,滴滴繁简价差,x_post_views,69753,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-14T23:15:00Z,滴滴繁简价差,x_sample_post,69753,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-14T23:15:00Z,滴滴,x_hourly_post_count_14to22Z,237|349|231|227|125|66|125|102|91,X q=滴滴 OR 滴滴出行 OR "DiDi Global" OR "Didi Chuxing"; overnight cooling; noise-dominated

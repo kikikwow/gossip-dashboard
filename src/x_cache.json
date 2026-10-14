@@ -1,6 +1,6 @@
 {
  "source": "https://api.fxtwitter.com/status/{id}",
- "fetched_at": "2026-10-14T14:02:07Z",
+ "fetched_at": "2026-10-14T23:12:19Z",
  "note": "静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。",
  "posts": {
   "2106320822444949760": {
@@ -878,14 +878,14 @@
    "author": "@weiyux2021",
    "name": "动物园园长",
    "created_at": "2026-10-13T10:56:57Z",
-   "views": 80920,
+   "views": 89323,
    "likes": 182,
    "reposts": 9,
    "replies": 47,
    "quotes": 1,
    "bookmarks": 38,
    "url": "https://x.com/weiyux2021/status/2109961583619416213",
-   "fetched_at": "2026-10-14T05:42:32Z"
+   "fetched_at": "2026-10-14T15:50:00Z"
   },
   "2109969535378100723": {
    "status": "ok",
@@ -1182,14 +1182,14 @@
    "author": "@_FORAB",
    "name": "AB Kuai.Dong",
    "created_at": "2026-10-14T03:08:00Z",
-   "views": 92767,
+   "views": 224393,
    "likes": 210,
    "reposts": 13,
    "replies": 41,
    "quotes": 0,
    "bookmarks": 56,
    "url": "https://x.com/_FORAB/status/2110205955380330589",
-   "fetched_at": "2026-10-14T05:48:16Z"
+   "fetched_at": "2026-10-14T15:50:00Z"
   },
   "2110219165181358529": {
    "status": "ok",
@@ -1272,14 +1272,14 @@
    "author": "@business",
    "name": "Bloomberg",
    "created_at": "2026-10-14T05:05:10Z",
-   "views": 14148,
+   "views": 27621,
    "likes": 8,
    "reposts": 1,
    "replies": 8,
    "quotes": 0,
    "bookmarks": 1,
    "url": "https://x.com/business/status/2110235441802690623",
-   "fetched_at": "2026-10-14T05:48:16Z",
+   "fetched_at": "2026-10-14T15:50:00Z",
    "translation_zh": "知情人士称，美国银行已不再是月之暗面 IPO 潜在承销银行之一；这家中国人工智能明星公司正面临美国方面的审查。（附彭博报道链接）",
    "lang": "en"
   },
@@ -1499,14 +1499,14 @@
    "author": "@Furinanatw",
    "name": "芙宁娜娜💙(2号）",
    "created_at": "2026-10-14T08:40:41Z",
-   "views": 1250,
+   "views": 35856,
    "likes": 5,
    "reposts": 1,
    "replies": 1,
    "quotes": 0,
    "bookmarks": 1,
    "url": "https://x.com/Furinanatw/status/2110289680595886537",
-   "fetched_at": "2026-10-14T09:38:15Z"
+   "fetched_at": "2026-10-14T15:50:00Z"
   },
   "2110251061646958742": {
    "status": "ok",
@@ -1559,14 +1559,14 @@
    "author": "@MagicPower21M",
    "name": "MagicPower ⚡",
    "created_at": "2026-10-14T06:56:20Z",
-   "views": 45710,
+   "views": 56025,
    "likes": 135,
    "reposts": 3,
    "replies": 39,
    "quotes": 1,
    "bookmarks": 12,
    "url": "https://x.com/MagicPower21M/status/2110263418305511767",
-   "fetched_at": "2026-10-14T14:02:07Z"
+   "fetched_at": "2026-10-14T15:50:00Z"
   },
   "2110264344324046901": {
    "status": "ok",
@@ -1574,14 +1574,14 @@
    "author": "@0427SMtieshou",
    "name": "铁手（3卧槽版）",
    "created_at": "2026-10-14T07:00:01Z",
-   "views": 15437,
+   "views": 21274,
    "likes": 73,
    "reposts": 1,
    "replies": 22,
    "quotes": 2,
    "bookmarks": 2,
    "url": "https://x.com/0427SMtieshou/status/2110264344324046901",
-   "fetched_at": "2026-10-14T14:02:07Z"
+   "fetched_at": "2026-10-14T15:50:00Z"
   },
   "2110274501405524254": {
    "status": "ok",
@@ -1604,14 +1604,14 @@
    "author": "@KELMAND1",
    "name": "Eason Mao☢",
    "created_at": "2026-10-14T07:52:32Z",
-   "views": 12347,
+   "views": 14923,
    "likes": 139,
    "reposts": 17,
    "replies": 31,
    "quotes": 0,
    "bookmarks": 1,
    "url": "https://x.com/KELMAND1/status/2110277563801297234",
-   "fetched_at": "2026-10-14T14:02:07Z"
+   "fetched_at": "2026-10-14T15:50:00Z"
   },
   "2110301466640728265": {
    "status": "ok",
@@ -1664,14 +1664,14 @@
    "author": "@0xLogicrw",
    "name": "思维怪怪",
    "created_at": "2026-10-14T10:36:45Z",
-   "views": 1850,
+   "views": 2474,
    "likes": 3,
    "reposts": 1,
    "replies": 0,
    "quotes": 0,
    "bookmarks": 0,
    "url": "https://x.com/0xLogicrw/status/2110318890463133717",
-   "fetched_at": "2026-10-14T14:02:07Z"
+   "fetched_at": "2026-10-14T15:50:00Z"
   },
   "2110319029797916887": {
    "status": "ok",
@@ -1724,14 +1724,14 @@
    "author": "@_FORAB",
    "name": "AB Kuai.Dong",
    "created_at": "2026-10-14T10:44:21Z",
-   "views": 26446,
+   "views": 32428,
    "likes": 67,
    "reposts": 4,
    "replies": 24,
    "quotes": 0,
    "bookmarks": 8,
    "url": "https://x.com/_FORAB/status/2110320799358017882",
-   "fetched_at": "2026-10-14T14:02:07Z"
+   "fetched_at": "2026-10-14T15:50:00Z"
   },
   "2110325400098476330": {
    "status": "ok",
@@ -1739,14 +1739,14 @@
    "author": "@sam51824016070",
    "name": "YiFeng Su",
    "created_at": "2026-10-14T11:02:37Z",
-   "views": 1082,
+   "views": 1638,
    "likes": 7,
    "reposts": 2,
    "replies": 2,
    "quotes": 1,
    "bookmarks": 0,
    "url": "https://x.com/sam51824016070/status/2110325400098476330",
-   "fetched_at": "2026-10-14T14:02:07Z"
+   "fetched_at": "2026-10-14T15:50:00Z"
   },
   "2110329328101986741": {
    "status": "ok",
@@ -1814,14 +1814,14 @@
    "author": "@whyyoutouzhele",
    "name": "李老师不是你老师",
    "created_at": "2026-10-14T12:40:00Z",
-   "views": 15762,
+   "views": 28261,
    "likes": 69,
    "reposts": 8,
    "replies": 17,
    "quotes": 1,
    "bookmarks": 5,
    "url": "https://x.com/whyyoutouzhele/status/2110349904266801377",
-   "fetched_at": "2026-10-14T14:02:07Z"
+   "fetched_at": "2026-10-14T15:50:00Z"
   },
   "2110350499522449662": {
    "status": "ok",
@@ -1837,6 +1837,81 @@
    "bookmarks": 0,
    "url": "https://x.com/shaok45000/status/2110350499522449662",
    "fetched_at": "2026-10-14T14:02:07Z"
+  },
+  "2110362974947037321": {
+   "status": "ok",
+   "text": "好惨，前阵子字节的豆包手机助手，想学海外 Meta 的 Muse、马斯克的 Grok Bot，也搞一套可以帮用户，自动去淘宝下单，去美团点外卖的全套 AI 智能体玩法。\n\n于是它们出了个规则，公示 30 天，让各家 App 公司，自己声明允许还是拒绝，能被豆包 AI 代替用户自动操作。\n\n结果 30",
+   "author": "@_FORAB",
+   "name": "AB Kuai.Dong",
+   "created_at": "2026-10-14T13:31:56Z",
+   "views": 98603,
+   "likes": 266,
+   "reposts": 22,
+   "replies": 97,
+   "quotes": 22,
+   "bookmarks": 66,
+   "url": "https://x.com/_FORAB/status/2110362974947037321",
+   "fetched_at": "2026-10-14T15:50:00Z"
+  },
+  "2110362146143875266": {
+   "status": "ok",
+   "text": "我的观点是，\n\n投资人当然应该投田柯宇，比那些在大厂安安稳稳吃实习生和小赛道红利混五年十年的老油子强太多了，\n\n但是投资人不应该投世界模型，世界模型是个大骗局，这个问题我在youtube讲了10次以上，\n\n中国投资人最大的问题，就是总相信小天才小疯子能改变世界，就是他妈不愿意自己看技术， 稍微提升一点技术品味和判断力，对技术品味和赛道的人均判断力约等于一条边牧。",
+   "author": "@lidangzzz",
+   "name": "lidang 立党 （劝人卖房/学CS/买SP500/纳100/OpenAI/Anthrop第一人）",
+   "created_at": "2026-10-14T13:28:38Z",
+   "views": 30993,
+   "likes": 95,
+   "reposts": 8,
+   "replies": 15,
+   "quotes": 2,
+   "bookmarks": 21,
+   "url": "https://x.com/lidangzzz/status/2110362146143875266",
+   "fetched_at": "2026-10-14T23:12:19Z"
+  },
+  "2110373247841947987": {
+   "status": "ok",
+   "text": "随着经济走弱令就业市场萎缩，中国的年轻人正面对越来越少的机会和越来越激烈的竞争。\n原文链接：https://www.wsj.com/world/china-economy-gen-z-f9058941 https://x.com/i/article/2110371868561780736",
+   "author": "@DavidHoNotes",
+   "name": "何文蔚的笔记仓库",
+   "created_at": "2026-10-14T14:12:45Z",
+   "views": 371,
+   "likes": 0,
+   "reposts": 1,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/DavidHoNotes/status/2110373247841947987",
+   "fetched_at": "2026-10-14T23:12:19Z"
+  },
+  "2110380521905905791": {
+   "status": "ok",
+   "text": "@sam51824016070 好一个科技强国！滴滴的算法神乎其神，车费算得老百姓怀疑人生！\n\n更绝的是，左边特惠车，右边普通车，营销号直接算出了“国籍歧视”！\n\n滴滴靠算法赚钱，营销号靠煽动情绪赚流量！\n\n一个把价格玩成玄学，一个把截图玩成爱国主义！真是卧龙凤雏！",
+   "author": "@nicholasProton",
+   "name": "nicholas lim",
+   "created_at": "2026-10-14T14:41:40Z",
+   "views": 199,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/nicholasProton/status/2110380521905905791",
+   "fetched_at": "2026-10-14T23:12:19Z"
+  },
+  "2110405141006594284": {
+   "status": "ok",
+   "text": "在深圳坐滴滴 和老婆講起在高雄上錯uber的經歷\n\n司機插話\n\n\"是我們發達還是台灣發達\"\n\n老婆說 台灣政府預算有限 還經常被砍 非要比硬件投入 那是比不上深圳的 \n\n司機聽了很自豪 我們中國很有錢的\n\n老婆又來了一句\n\n\"不過個人很有錢 那些開uber的十來萬一個月不成問題 還是住獨棟\"",
+   "author": "@mathgl",
+   "name": "another level of indirection",
+   "created_at": "2026-10-14T16:19:29Z",
+   "views": 6596,
+   "likes": 44,
+   "reposts": 0,
+   "replies": 8,
+   "quotes": 0,
+   "bookmarks": 4,
+   "url": "https://x.com/mathgl/status/2110405141006594284",
+   "fetched_at": "2026-10-14T23:12:19Z"
   }
  }
 }

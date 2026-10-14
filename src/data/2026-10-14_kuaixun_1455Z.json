@@ -1,0 +1,152 @@
+{
+  "routine": "大厂八卦热点快讯",
+  "fired_at_utc": "2026-10-14T14:43:15.932Z",
+  "scanned_at_utc": "2026-10-14T14:55:00Z",
+  "beijing_time": "2026-10-14 22:43–22:55 CST",
+  "window": "2026-10-14T11:55Z–14:55Z (Beijing 19:55–22:55)",
+  "alert_sent": false,
+  "alert_worthy": false,
+  "reason": "No new breaking item. 懂车帝续热(40/46/28)但无官宣新回应；绿泡泡 Weibo #5+#19 为已警报余波；月之暗面继续降温；田柯宇移出短期。@_FORAB 豆包SAEP帖41950浏览=13Z晚报Top2同故事，补入短期追踪但不警报。字节厕所帖为10-13旧帖（89k浏览）非本窗新爆。微博#1入职截图社死无具名大厂；iPhoneDuo/G社(Getty)非大厂八卦警报。feeds 0 new。",
+  "weibo": {
+    "mirror": "https://soso.re/weibo",
+    "updated": "2026-10-14 22:25 Beijing",
+    "company_adjacent": [
+      {
+        "rank": 5,
+        "topic": "绿泡泡对标红果",
+        "heat": 513464,
+        "note": "same story; already alerted 13:55"
+      },
+      {
+        "rank": 19,
+        "topic": "绿泡泡短剧商业模式",
+        "heat": 249554,
+        "note": "same green-bubble story"
+      },
+      {
+        "rank": 24,
+        "topic": "iPhoneDuo早鸟包不退款",
+        "heat": 245583,
+        "note": "JD consumer; not gossip alert"
+      },
+      {
+        "rank": 27,
+        "topic": "G社宣布破产重组",
+        "heat": 243834,
+        "note": "Getty Images Ch.11; not CN bigtech"
+      }
+    ],
+    "non_company_top": [
+      {
+        "rank": 1,
+        "topic": "入职第一天因截图社死",
+        "heat": 2124628,
+        "note": "generic workplace viral; no named大厂"
+      }
+    ]
+  },
+  "maimai": {
+    "direct_fetch": "404 https://maimai.cn/article/topic?type=7"
+  },
+  "x_heat": {
+    "懂车帝": {
+      "hourly_12_13_14": [
+        40,
+        46,
+        28
+      ],
+      "KELMAND1": 13613,
+      "0427SMtieshou": 17206
+    },
+    "绿泡泡": {
+      "hourly_12_13_14": [
+        19,
+        28,
+        19
+      ],
+      "_FORAB_红果绿泡": 29152
+    },
+    "月之暗面美银": {
+      "hourly_12_13_14": [
+        3,
+        4,
+        1
+      ]
+    },
+    "田柯宇": {
+      "hourly_12_13_14": [
+        4,
+        3,
+        3
+      ],
+      "lidangzzz": 11147
+    },
+    "豆包SAEP": {
+      "hourly_12_13_14": [
+        8,
+        16,
+        15
+      ],
+      "_FORAB": 41950
+    },
+    "字节厕所": {
+      "note": "OLD post 2026-10-13T10:56:57Z",
+      "views": 89118,
+      "url": "https://x.com/weiyux2021/status/2109961583619416213"
+    },
+    "滴滴繁简": {
+      "hourly_12_13_14": [
+        2,
+        2,
+        1
+      ],
+      "note": "no DiDi response"
+    }
+  },
+  "feeds_new": [],
+  "short_term_updates": {
+    "removed": [
+      "田柯宇融资争议"
+    ],
+    "kept": [
+      "懂车帝被曝邀约黑尊界",
+      "腾讯绿泡泡对战红果短剧",
+      "月之暗面美银退出IPO"
+    ],
+    "added": [
+      "豆包手机助手SAEP151款拒绝"
+    ]
+  },
+  "candidates": [
+    {
+      "topic": "豆包 @_FORAB 42k",
+      "verdict": "skip_alert_add_short_term",
+      "why": "13Z晚报已写同一故事；热度够补入短期"
+    },
+    {
+      "topic": "懂车帝续热",
+      "verdict": "skip",
+      "why": "无重大新进展/官宣"
+    },
+    {
+      "topic": "绿泡泡 Weibo",
+      "verdict": "skip",
+      "why": "13:55已警报余波"
+    },
+    {
+      "topic": "厕所 89k",
+      "verdict": "skip",
+      "why": "Oct13旧帖"
+    },
+    {
+      "topic": "田柯宇",
+      "verdict": "remove_from_short_term",
+      "why": "无新融资事实"
+    },
+    {
+      "topic": "入职截图/iPhoneDuo/Getty",
+      "verdict": "skip",
+      "why": "非大厂八卦警报"
+    }
+  ]
+}
