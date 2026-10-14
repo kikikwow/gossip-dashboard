@@ -75,6 +75,8 @@ def main():
         if '滴滴' not in t['name']:
             continue
         t['keywords'] = sorted(set(t['keywords']) | {'滴滴', '滴滴出海', 'DiDi', 'Didi', '99app', '巴西99'})
+    import cache_x_posts
+    cache_x_posts.fill_missing()
     cache_path = os.path.join(BASE, 'x_cache.json')
     x_cache = json.load(open(cache_path, encoding='utf-8')) if os.path.exists(cache_path) else {'posts': {}}
     payload = dict(editions=eds, longterm=lt, shortterm=st, heat=heat, x_cache=x_cache,

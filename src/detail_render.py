@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """Render dashboard/events/<id>.html for every item (used by build_dashboard.py)."""
-import html, json, os, re, datetime
-from urllib.parse import urlparse
+import html, json, os, re, datetime, subprocess
 E = lambda s: html.escape(str(s if s is not None else ''), quote=True)
 _BJ = datetime.timezone(datetime.timedelta(hours=8))
 _ISO = re.compile(r'^(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2})(?::(\d{2}))?(?:\.\d+)?(Z|[+-]\d{2}:?\d{2})?$')
@@ -50,31 +49,44 @@ def fmt(n):
     if n is None: return '—'
     n = float(n)
     return (f'{n/1e4:.1f}万' if n >= 1e4 else f'{int(n):,}')
-_LOGOS = {
-    'x': '<svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>',
-    'xhs': '<svg class="plogo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><rect width="16" height="16" rx="4" fill="#ff2442"/><text x="8" y="12" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="PingFang SC,Noto Sans SC,sans-serif">小</text></svg>',
-    'weibo': '<svg class="plogo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#e6162d"/><ellipse cx="8" cy="8.4" rx="5" ry="3" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="10.1" cy="8.3" r="1.45" fill="#fff"/></svg>',
-    'wx': '<svg class="plogo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><rect width="16" height="16" rx="4" fill="#07c160"/><circle cx="6.1" cy="7" r="3.1" fill="#fff"/><circle cx="10.3" cy="9.3" r="2.5" fill="#fff"/><circle cx="5.2" cy="6.7" r=".55" fill="#07c160"/><circle cx="7" cy="6.7" r=".55" fill="#07c160"/><circle cx="9.6" cy="9" r=".45" fill="#07c160"/><circle cx="11" cy="9" r=".45" fill="#07c160"/></svg>',
-}
-_PNAME = {'x': 'X', 'xhs': '小红书', 'weibo': '微博', 'wx': '微信'}
-def platform_of(url):
-    try:
-        host = (urlparse(str(url or '')).hostname or '').lower()
-    except Exception:
-        return ''
-    if host.startswith('www.'): host = host[4:]
-    if host in ('x.com', 'twitter.com', 't.co') or host.endswith('.x.com') or host.endswith('.twitter.com'): return 'x'
-    if host in ('xiaohongshu.com', 'xhslink.com') or host.endswith('.xiaohongshu.com') or host.endswith('.xhslink.com'): return 'xhs'
-    if host in ('weibo.com', 'weibo.cn') or host.endswith('.weibo.com') or host.endswith('.weibo.cn'): return 'weibo'
-    if host in ('weixin.qq.com', 'wechat.com') or host.endswith('.weixin.qq.com') or host.endswith('.wechat.com'): return 'wx'
-    return ''
+_EXT = {}
+_BITS = {}
 def link(url, label=None):
     if not url: return ''
-    p = platform_of(url)
-    logo = _LOGOS.get(p, '')
-    cls = f'ext ext-{p}' if p else 'ext'
-    tip = f' title="{E(_PNAME[p])}"' if p else ''
-    return f'<a class="{cls}" href="{E(url)}" target="_blank" rel="noopener"{tip}>{logo}<span>{E(label or url)}</span></a>'
+    lab = label if label is not None else url
+    hit = _EXT.get(str(url) + '\n' + str(lab))
+    if hit: return hit
+    return f'<a class="ext" href="{E(url)}" target="_blank" rel="noopener"><span>{E(lab)}</span></a>'
+def _slim(it):
+    return {k: v for k, v in it.items() if not str(k).startswith('_')}
+def _pairs(items):
+    pairs = []
+    def add(url, label):
+        if url: pairs.append({'url': url, 'label': label if label is not None else url})
+    for it in items:
+        d = it.get('detail') or {}
+        for l in it.get('links') or []: add(l.get('url'), l.get('label'))
+        for x in d.get('extra_sources') or []: add(x.get('url'), x.get('label'))
+        for t in d.get('timeline') or []: add(t.get('url'), '↗')
+        for c in d.get('comments') or []: add(c.get('url'), '原文↗')
+        for r in d.get('responses') or []: add(r.get('url'), '来源↗')
+        add((d.get('weibo') or {}).get('url'), '来源↗')
+        for o in d.get('other_platforms') or []: add(o.get('url'), '↗')
+        for p in d.get('x_posts') or []: add(p.get('url'), '原链接（站外）')
+    return pairs
+def load_bits(all_items):
+    global _EXT, _BITS
+    if _BITS: return
+    payload = {'items': [_slim(it) for it in all_items], 'posts': XCACHE, 'pairs': _pairs(all_items)}
+    proc = subprocess.run(
+        ['node', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'post_ui.js'), 'renderBits'],
+        input=json.dumps(payload, ensure_ascii=False).encode('utf-8'),
+        capture_output=True)
+    if proc.returncode != 0:
+        raise SystemExit(proc.stderr.decode('utf-8', 'replace')[:2000] or 'post_ui renderBits failed')
+    pack = json.loads(proc.stdout.decode('utf-8'))
+    _EXT = pack.get('ext') or {}
+    _BITS = pack.get('byId') or {}
 def bar_chart(labels, values, w=640, h=180):
     if not values: return ''
     mx = max(values) or 1; n = len(values); bw = (w - 40) / n
@@ -140,6 +152,15 @@ section h2{margin:0 0 10px;font-size:18px}.na{color:var(--mut);font-style:italic
 .resp{margin:10px 0}.resp b{display:block}
 ul{padding-left:20px;margin:6px 0}
 .kv{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}.kv div{border:1px solid var(--line);border-radius:8px;padding:8px 12px}
+.ui-toggle{min-height:44px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--tx);font:inherit;font-weight:700;cursor:pointer}
+html[data-ui=new]{--bg:#ECE7DE;--card:#F7F3EC;--line:#E4DFD6;--tx:#1F1D1A;--mut:#6E665A;--acc:#9E2B1F;--acc2:#4A6FA5;--ok:#3F6B4A;--warn:#C9824A;--rumor:#9A5A2B}
+html[data-ui=new] body{background:#ECE7DE;color:#1F1D1A;font-family:"Noto Serif CJK SC","Source Han Serif SC","Songti SC",serif}
+html[data-ui=new] h1,html[data-ui=new] h2{font-family:"Noto Serif CJK SC","Source Han Serif SC","Songti SC",serif;font-weight:900}
+html[data-ui=new] section{background:#F7F3EC;border-color:#E4DFD6;box-shadow:0 1px 2px rgba(60,45,30,.05)}
+html[data-ui=new] .summary{background:#F7F3EC;border-left-color:#9E2B1F}
+html[data-ui=new] .tz button.on{background:#4A6FA5;color:#fff}
+html[data-ui=new] .pill{background:#9E2B1F}
+html[data-ui=new] a{color:#4A6FA5}
 '''
 def _load_cache():
     p = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'x_cache.json')
@@ -150,40 +171,35 @@ def _load_cache():
     except Exception:
         return {}
 XCACHE = _load_cache()
-_SID = re.compile(r'status/(\d+)')
-def snap(url):
-    m = _SID.search(str(url or ''))
-    return XCACHE.get(m.group(1), {}) if m else {}
 HEAT_NOTE = '''<div class="heat-how"><div class="heat-head"><b>热度怎么算</b><button type="button" class="xmore heat-toggle" aria-expanded="false">展开</button></div><p class="heat-brief">热度榜按 heat_log 里该话题最近完整 UTC 日的 X 发帖量排序；卡片「浏览」是另一套链接浏览量。</p><div class="heat-full"><p>首页热度榜的数字是 heat_log.csv 里 x_daily_post_count 的最近一个完整 UTC 日发帖量，从高到低取前 10，不是加权分。折线按日排列，partial 未完成日不参与排名。卡片「浏览」是该条链接浏览量的最大值；≥10 万为爆，≥1 万为热。下面这张图是本条事件自己的 X 检索式逐日发帖量，星号是不完整时段。</p></div></div>'''
-def x_quote(url, text, author, name, created, views, likes, reposts):
-    cached = snap(url)
-    body = text or cached.get('text') or ''
-    who = ' '.join(x for x in [name or cached.get('name') or '', author or cached.get('author') or ''] if x)
-    created = created or cached.get('created_at')
-    meta = f'<div class="xmeta"><b>{E(who or "X")}</b> ' + (f'<span class="note">{html_with_times(created)}</span> ' if created else '')
-    if views is not None: meta += f'<span class="note">浏览 {E(views)}</span> '
-    if likes is not None: meta += f'<span class="note">赞 {E(likes)}</span> '
-    if reposts is not None: meta += f'<span class="note">转 {E(reposts)}</span> '
-    meta += '</div>'
-    inner = f'<p class="xtext">{E(body)}</p>' if body else '<p class="xmiss">正文未缓存</p>'
-    outbound = link(url, '原链接（站外）') if url else ''
-    return f'<blockquote class="xbody">{meta}{inner}{outbound}</blockquote>'
+HEAD_JS = r'''<script>try{var q=new URLSearchParams(location.search).get("ui");var ui=(q==="classic"||q==="new")?q:localStorage.getItem("gossipUi");if(ui!=="classic"&&ui!=="new")ui="new";if(q==="classic"||q==="new"){try{localStorage.setItem("gossipUi",q)}catch(e){}}document.documentElement.dataset.ui=ui;var t=(location.hash.match(/theme=(\w+)/)||[])[1]||localStorage.getItem("gossipTheme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>'''
+FOOT_JS = r'''<script src="../src/post_ui.js"></script><script>(function(){var KEY="gossipTz";function getTz(){try{var v=localStorage.getItem(KEY);if(v==="utc"||v==="cst")return v}catch(e){}return "cst"}function pad(n){return String(n).padStart(2,"0")}function fmt(iso,tz){var d=new Date(iso);if(isNaN(d))return null;var zone=tz==="utc"?"UTC":"Asia/Shanghai";try{var parts=new Intl.DateTimeFormat("en-CA",{timeZone:zone,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(d);var g=function(t){return parts.find(function(p){return p.type===t}).value};return g("year")+"-"+g("month")+"-"+g("day")+" "+g("hour")+":"+g("minute")+(tz==="utc"?" UTC":"")}catch(e){var x=tz==="utc"?d:new Date(d.getTime()+8*3600000);return x.getUTCFullYear()+"-"+pad(x.getUTCMonth()+1)+"-"+pad(x.getUTCDate())+" "+pad(x.getUTCHours())+":"+pad(x.getUTCMinutes())+(tz==="utc"?" UTC":"")}}function applyTz(){var tz=getTz();document.querySelectorAll("time[datetime]").forEach(function(el){var f=fmt(el.getAttribute("datetime"),tz);if(f)el.textContent=f});document.querySelectorAll("#tz [data-tz]").forEach(function(b){var on=b.getAttribute("data-tz")===tz;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false")})}function applyUi(){var ui=document.documentElement.dataset.ui==="classic"?"classic":"new";var btn=document.querySelector("[data-ui-set]");if(btn){var next=ui==="new"?"classic":"new";btn.setAttribute("data-ui-set",next);btn.textContent=ui==="new"?"经典版":"新版"}var back=document.querySelector("a.back");if(back)back.href="../index.html?ui="+ui}function setUi(mode){if(mode!=="classic"&&mode!=="new")return;document.documentElement.dataset.ui=mode;try{localStorage.setItem("gossipUi",mode)}catch(e){}var u=new URL(location.href);u.searchParams.set("ui",mode);history.replaceState(null,"",u.pathname+u.search+u.hash);applyUi()}document.addEventListener("click",function(e){var ui=e.target.closest&&e.target.closest("[data-ui-set]");if(ui){setUi(ui.getAttribute("data-ui-set"));return}var b=e.target.closest&&e.target.closest("#tz button[data-tz]");if(!b)return;try{localStorage.setItem(KEY,b.getAttribute("data-tz"))}catch(_){}applyTz()});if(window.PostUI){PostUI.bind(document);PostUI.wireClamps(document)}applyTz();applyUi()})();</script>'''
 def render(it, ed, all_items, out_dir):
+    load_bits(all_items)
+    bits = _BITS.get(it['id']) or {'orig': '', 'heat': '', 'timeline': []}
     d = it.get('detail') or {}
     title = d.get('title') or (it['company'] + '：' + it['text'][:30] + '…')
     tagc = 'b-real' if it.get('tag') == '实锤' else 'b-rum'
     P = []
-    P.append(f'<div class="topbar"><a href="../index.html">← 返回看板</a><div class="tz" id="tz" role="group" aria-label="显示时区"><button type="button" data-tz="cst" class="on" aria-pressed="true">北京时间</button><button type="button" data-tz="utc" aria-pressed="false">UTC</button></div><span class="crumb">{E(TYPES.get(ed.get("type"), ed.get("type")))} · {html_with_times(ed.get("edition_date") or ed.get("timestamp"))} · {E(it.get("section"))}</span></div>')
-    P.append(f'<h1>{E(title)}</h1><div class="meta"><span class="pill">{E(it["company"])}</span><span class="badge {tagc}">【{E(it.get("tag"))}】</span>' + ''.join(f'<span class="src">{E(s)}</span>' for s in it.get('source_types', [])) + f'<span class="note">📅 {html_with_times(it.get("date"))}</span>' + (f'<span class="note">· 深度资料整理于 {html_with_times(d.get("enriched_at"))}</span>' if d.get('enriched_at') else '') + '</div>')
+    P.append(f'<div class="topbar"><a class="back" href="../index.html">← 返回看板</a><div class="tz" id="tz" role="group" aria-label="显示时区"><button type="button" data-tz="cst" class="on" aria-pressed="true">北京时间</button><button type="button" data-tz="utc" aria-pressed="false">UTC</button></div><button type="button" class="ui-toggle" data-ui-set="classic">经典版</button><span class="crumb">{E(TYPES.get(ed.get("type"), ed.get("type")))} · {html_with_times(ed.get("edition_date") or ed.get("timestamp"))} · {E(it.get("section"))}</span></div>')
+    P.append(f'<h1>{E(title)}</h1><div class="meta"><span class="pill">{E(it["company"])}</span><span class="badge {tagc}">【{E(it.get("tag"))}】</span>' + ''.join(f'<span class="src">{E(s)}</span>' for s in it.get('source_types', [])) + f'<span class="note">📅 {html_with_times(it.get("date"))}</span>' + (f'<span class="note">· 深度资料整理于 {html_with_times(d.get("enriched_at"))}</span>' if d.get('enriched_at') else '') + (bits.get('heat') or '') + '</div>')
     P.append(f'<div class="summary">{E(d.get("summary") or it["text"])}</div>')
+    P.append('<section><h2>原文</h2>' + (bits.get('orig') or '<p class="xmiss">原文未缓存</p>') + '</section>')
     P.append('<section><h2>📖 事件经过</h2>' + (f'<p>{E(d["background"])}</p>' if d.get('background') else f'<p>{E(it["text"])}</p><p class="na">暂无更详细的事件经过</p>') + '</section>')
-    tl = d.get('timeline') or []
-    P.append('<section><h2>🕒 进展时间线</h2>' + ('<div class="tl">' + ''.join(f'<div class="tli"><span class="d">{html_with_times(t.get("date"))}</span>{E(t.get("text"))} {link(t.get("url"), "↗")}</div>' for t in tl) + '</div>' if tl else NA) + '</section>')
-    # heat
+    tl = bits.get('timeline') or []
+    if tl:
+        rows = []
+        for t in tl:
+            extra = t.get('orig') or (link(t.get('url'), '↗') if t.get('url') else '')
+            rows.append(f'<div class="tli"><span class="d">{html_with_times(t.get("date"))}</span>{E(t.get("text"))} {extra}</div>')
+        tl_html = '<p class="note">最新在上</p><div class="tl">' + ''.join(rows) + '</div>'
+    else:
+        tl_html = NA
+    P.append('<section><h2>🕒 进展时间线</h2>' + tl_html + '</section>')
     H = []
     for p in d.get('x_posts') or []:
-        H.append(f'<div class="post">{x_quote(p.get("url"), p.get("text"), p.get("author"), p.get("author_name"), p.get("created_at"), p.get("views"), p.get("likes"), p.get("reposts"))}<span class="note">数据抓取 {html_with_times(p.get("fetched_at"))}</span>{hbars(p)}</div>')
-    if not H:  # fall back to view counts listed on links
+        H.append(f'<div class="post"><span class="note">数据抓取 {html_with_times(p.get("fetched_at"))}</span>{hbars(p)} {link(p.get("url"), "原链接（站外）")}</div>')
+    if not H:
         lv = [l for l in it.get('links', []) if l.get('views')]
         if lv: H.append('<div class="note">简报收录时的浏览量：</div><ul>' + ''.join(f'<li>{link(l["url"], l["label"])} · 👁 {E(l["views"])}</li>' for l in lv) + '</ul>')
     tr = d.get('x_trend')
@@ -214,7 +230,6 @@ def render(it, ed, all_items, out_dir):
     srcs = [(l.get('label'), l.get('url'), l.get('views')) for l in it.get('links', [])] + [(x.get('label'), x.get('url'), None) for x in d.get('extra_sources', [])]
     P.append('<section><h2>📚 所有来源链接</h2>' + ('<ul>' + ''.join(f'<li>{link(u, l)}{(" · 👁 " + E(v)) if v else ""} <span class="note">{E(u)}</span></li>' for l, u, v in srcs) + '</ul>' if srcs else NA) + '</section>')
     P.append('<p class="note" style="margin-top:20px">本页仅展示数据文件中已有的信息；【传闻】为单方面说法，未经核实。缺失字段显示“暂无数据”。</p>')
-    tzjs = r'''<script>(function(){var KEY="gossipTz";function getTz(){try{var v=localStorage.getItem(KEY);if(v==="utc"||v==="cst")return v}catch(e){}return "cst"}function pad(n){return String(n).padStart(2,"0")}function fmt(iso,tz){var d=new Date(iso);if(isNaN(d))return null;var zone=tz==="utc"?"UTC":"Asia/Shanghai";try{var parts=new Intl.DateTimeFormat("en-CA",{timeZone:zone,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(d);var g=function(t){return parts.find(function(p){return p.type===t}).value};return g("year")+"-"+g("month")+"-"+g("day")+" "+g("hour")+":"+g("minute")+(tz==="utc"?" UTC":"")}catch(e){var x=tz==="utc"?d:new Date(d.getTime()+8*3600000);return x.getUTCFullYear()+"-"+pad(x.getUTCMonth()+1)+"-"+pad(x.getUTCDate())+" "+pad(x.getUTCHours())+":"+pad(x.getUTCMinutes())+(tz==="utc"?" UTC":"")}}function apply(){var tz=getTz();document.querySelectorAll("time[datetime]").forEach(function(el){var f=fmt(el.getAttribute("datetime"),tz);if(f)el.textContent=f});document.querySelectorAll("#tz [data-tz]").forEach(function(b){var on=b.getAttribute("data-tz")===tz;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false")})}var box=document.getElementById("tz");if(box)box.addEventListener("click",function(e){var b=e.target.closest("button[data-tz]");if(!b)return;try{localStorage.setItem(KEY,b.getAttribute("data-tz"))}catch(_){}apply()});document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".heat-toggle");if(!b)return;var how=b.closest(".heat-how");if(!how)return;var o=how.classList.toggle("is-open");b.textContent=o?"收起":"展开";b.setAttribute("aria-expanded",o?"true":"false")});apply()})();</script>'''
-    doc = f'''<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{E(title)}</title>
-<script>try{{var t=(location.hash.match(/theme=(\\w+)/)||[])[1]||localStorage.getItem("gossipTheme");if(t)document.documentElement.dataset.theme=t}}catch(e){{}}</script><style>{CSS}</style></head><body><div class="wrap">{"".join(P)}</div>{tzjs}</body></html>'''
+    doc = f'''<!DOCTYPE html><html lang="zh-CN" data-theme="dark" data-ui="new"><head>{HEAD_JS}<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{E(title)}</title>
+<link rel="stylesheet" href="../src/post.css"><style>{CSS}</style></head><body><div class="wrap">{"".join(P)}</div>{FOOT_JS}</body></html>'''
     open(os.path.join(out_dir, it['id'] + '.html'), 'w', encoding='utf-8').write(doc)

@@ -41,7 +41,7 @@
 热度榜数字 = `heat_log.csv` 里该话题 `x_daily_post_count`（X 检索式的完整 UTC 日发帖量）最近一条，从高到低前 10。没有日发帖量才退回该话题最后一条其他指标。`partial` 是采集截止前的未完成日，只出现在图上，不参与排名。卡片「浏览」是该条 `links[].views` 的最大值，不是榜上的日发帖量；≥10 万显示「爆」，≥1 万显示「热」。topics.md 的「热度」列是编辑备注。
 
 ## X 正文缓存
-`python3 src/cache_x_posts.py` 读取 data 里已有的 status 链接，向 `api.fxtwitter.com` 抓公开快照，写入 `src/x_cache.json`，并给 `detail.x_posts` 补上可选字段 `text` / `author_name`（不改已有浏览数）。抓不到的项 `status=missing`，页面显示「正文未缓存」，不编正文。然后 `python3 src/build_dashboard.py` 会把缓存打进首页，并写出仓库根目录的 `index.html` 和 `events/`（Pages 用）以及 `src/dashboard/`。
+`python3 src/cache_x_posts.py` 读取 data 里已有的 status 链接，向 `api.fxtwitter.com` 抓公开快照，写入 `src/x_cache.json`，并给 `detail.x_posts` 补上可选字段 `text` / `author_name`（不改已有浏览数）。抓不到的项 `status=missing`，页面显示「原文未缓存」，不编正文。构建时会再补抓缓存里还没有正文的 status id。然后 `python3 src/build_dashboard.py` 会把缓存打进首页，并写出仓库根目录的 `index.html` 和 `events/`（Pages 用）以及 `src/dashboard/`。卡片和详情页的原文块、平台标志、展开和热度章来自 `src/post_ui.js`。非中文帖若数据里有 `translation_zh` / `lang`，先显示中文译文，原文在「展开」里。`python3 src/check_originals.py` 会在构建后检查每条都有原文块，长文有「展开」。
 
 ## 时区
 看板顶栏和事件详情页可在「北京时间」（Asia/Shanghai，UTC+8）和「UTC」之间切换。首次打开默认北京时间，选择写入 localStorage `gossipTz`，刷新后保持。只改显示格式；数据文件里的时间仍是原来的 UTC / ISO。有钟点的时间会立刻重绘，不用整页刷新。只有日期、没有钟点的事件日期（如 `10-08`）保持原文。

@@ -1,6 +1,8 @@
 /* UX layer: heat explanation, time spans, event overlay, X cache, mobile shell.
    Depends on globals from dashboard_template.html (D, ITEMS, $, esc, fmt, fmtTs, parseTs, fmtHeatDay, state, paintHeader, paintTz, TZKEY, tzMode, isRide, focusPanel, timeline, ridePanel, hl, match, MAXV, TYPES). */
 (function () {
+  if (!window.PostUI) throw new Error('post_ui.js missing');
+  PostUI.bind(document);
   let openId = null;
   let returnEl = null;
   let mtab = 'feed';
@@ -8,13 +10,6 @@
   const PROMO_KEY = 'gossipPromo';
   const HIDE_KEY = 'gossipHide';
 
-  function fmtMaybe(v) {
-    if (v == null || v === '') return '';
-    if (typeof v === 'number') return fmt(v);
-    const n = Number(String(v).replace(/,/g, ''));
-    if (Number.isFinite(n) && String(v).match(/^\d+(\.\d+)?$/)) return fmt(n);
-    return String(v);
-  }
   function xId(url) {
     const m = String(url || '').match(/status\/(\d+)/);
     return m ? m[1] : '';
@@ -45,79 +40,20 @@
     (d.comments || []).forEach(c => add(c.url, { text: c.text, author: c.author }));
     return out;
   }
-  function xBlock(url, extra, clamp) {
-    if (!xId(url)) return '';
-    const snap = xSnap(url) || {};
-    const ex = extra || {};
-    const text = ex.text || snap.text || '';
-    const author = ex.author || snap.author || '';
-    const name = ex.author_name || snap.name || '';
-    const created = ex.created_at || snap.created_at;
-    const views = ex.views != null ? ex.views : snap.views;
-    const likes = ex.likes != null ? ex.likes : snap.likes;
-    const reposts = ex.reposts != null ? ex.reposts : snap.reposts;
-    const bits = [name, author].filter(Boolean).join(' ');
-    const meta = `<div class="xmeta"><b>${esc(bits || 'X')}</b>${created ? `<span class="note">${esc(fmtTs(created))}</span>` : ''}${views != null && views !== '' ? `<span class="note">浏览 ${esc(fmtMaybe(views))}</span>` : ''}${likes != null && likes !== '' ? `<span class="note">赞 ${esc(fmtMaybe(likes))}</span>` : ''}${reposts != null && reposts !== '' ? `<span class="note">转 ${esc(fmtMaybe(reposts))}</span>` : ''}</div>`;
-    const body = text ? (clamp ? foldable('xtext', esc(text)) : `<p class="xtext">${esc(text)}</p>`) : `<p class="xmiss">正文未缓存</p>`;
-    return `<blockquote class="xbody">${meta}${body}${extLink(url, '原链接（站外）')}</blockquote>`;
+  function posts() {
+    return (D.x_cache && D.x_cache.posts) || {};
   }
-  function foldLimit(cls) {
-    return cls === 'xtext' ? 72 : 40;
+  function itemOrig(it) {
+    return PostUI.origBlock(PostUI.primaryOf(it, posts()), { clamp: true, formatTime: fmtTs });
   }
-  const LOGOS = {
-    x: '<svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>',
-    xhs: '<svg class="plogo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><rect width="16" height="16" rx="4" fill="#ff2442"/><text x="8" y="12" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="PingFang SC,Noto Sans SC,sans-serif">小</text></svg>',
-    weibo: '<svg class="plogo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#e6162d"/><ellipse cx="8" cy="8.4" rx="5" ry="3" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="10.1" cy="8.3" r="1.45" fill="#fff"/></svg>',
-    wx: '<svg class="plogo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><rect width="16" height="16" rx="4" fill="#07c160"/><circle cx="6.1" cy="7" r="3.1" fill="#fff"/><circle cx="10.3" cy="9.3" r="2.5" fill="#fff"/><circle cx="5.2" cy="6.7" r=".55" fill="#07c160"/><circle cx="7" cy="6.7" r=".55" fill="#07c160"/><circle cx="9.6" cy="9" r=".45" fill="#07c160"/><circle cx="11" cy="9" r=".45" fill="#07c160"/></svg>'
-  };
-  const PNAME = { x: 'X', xhs: '小红书', weibo: '微博', wx: '微信' };
-  function platform(url) {
-    let host = '';
-    try { host = new URL(String(url), 'https://local.invalid').hostname.toLowerCase().replace(/^www\./, ''); }
-    catch (e) { return ''; }
-    if (!host || host === 'local.invalid') return '';
-    if (host === 'x.com' || host === 'twitter.com' || host === 't.co' || host.endsWith('.x.com') || host.endsWith('.twitter.com')) return 'x';
-    if (host === 'xiaohongshu.com' || host.endsWith('.xiaohongshu.com') || host === 'xhslink.com' || host.endsWith('.xhslink.com')) return 'xhs';
-    if (host === 'weibo.com' || host.endsWith('.weibo.com') || host === 'weibo.cn' || host.endsWith('.weibo.cn')) return 'weibo';
-    if (host === 'weixin.qq.com' || host.endsWith('.weixin.qq.com') || host === 'wechat.com' || host.endsWith('.wechat.com')) return 'wx';
-    return '';
-  }
-  function extLink(url, labelHtml) {
-    const p = platform(url);
-    const cls = p ? 'ext ext-' + p : 'ext';
-    const tip = p ? ` title="${esc(PNAME[p])}"` : '';
-    return `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener"${tip}>${p ? LOGOS[p] : ''}<span>${labelHtml}</span></a>`;
-  }
-  function plainLen(html) {
-    return String(html || '').replace(/<[^>]+>/g, '').replace(/&(?:#\d+|#x[\da-f]+|[a-z]+);/gi, 'x').replace(/\s+/g, '').length;
+  function allOrig(it) {
+    return PostUI.sourcesOf(it, posts()).map(s => PostUI.origBlock(s, { clamp: true, formatTime: fmtTs })).join('');
   }
   function foldable(cls, html) {
-    const n = plainLen(html);
-    const limit = foldLimit(cls);
-    const long = n > limit;
-    return `<div class="clampbox" data-len="${n}" data-fold="${limit}"><p class="${cls} clamp">${html}</p><button type="button" class="xmore"${long ? '' : ' hidden'} aria-expanded="false">展开</button></div>`;
+    return PostUI.foldable(cls, html);
   }
   function wireClamps(root) {
-    (root || document).querySelectorAll('.clampbox').forEach(box => {
-      const el = box.querySelector('.clamp');
-      const btn = box.querySelector('.xmore');
-      if (!el || !btn) return;
-      const force = (+box.getAttribute('data-len') || 0) > (+box.getAttribute('data-fold') || 80);
-      if (box.offsetParent === null) {
-        if (force) btn.hidden = false;
-        return;
-      }
-      if (box.classList.contains('is-open')) {
-        btn.hidden = false;
-        btn.textContent = '收起';
-        btn.setAttribute('aria-expanded', 'true');
-        return;
-      }
-      const overflow = el.scrollHeight > el.clientHeight + 2;
-      btn.hidden = !(force || overflow);
-      btn.textContent = '展开';
-      btn.setAttribute('aria-expanded', 'false');
-    });
+    PostUI.wireClamps(root);
   }
   const SPAN_TIP = '起=已有信号里最早的钟点；没有钟点就用条目上的日期。采=内容采集或整理里最晚的钟点（帖子指标抓取、enriched_at、趋势抓取）。正文缓存的抓取时间只有在没有更早采集点时才顶上，否则用看板生成时间。';
   function eventSpan(it) {
@@ -272,13 +208,12 @@
   function storyBlock(it, withTitle) {
     const s = itemStory(it);
     const head = withTitle ? `${s.parent ? '<span class="prog">事件进展</span>' : ''}<h3 class="evtitle">${hl(s.title)}</h3>` : '';
-    const orig = s.fx ? `<div class="kicker">原文</div>${xBlock(s.fx.url, s.fx, true)}` : '';
-    return `${head}<div class="kicker">${s.kicker}</div>${foldable('sum', hl(s.sum))}${orig}`;
+    return `${head}<div class="kicker">${s.kicker}</div>${foldable('sum', hl(s.sum))}<div class="kicker">原文</div>${itemOrig(it)}`;
   }
   function linksHtml(it) {
     return (it.links || []).map(l => {
-      const known = platform(l.url);
-      return `<div class="linkrow">${known ? '' : '🔗 '}${extLink(l.url, hl(l.label))}${l.views ? `<span class="vw">👁 ${esc(l.views)}</span>` : ''}</div>`;
+      const known = PostUI.platform(l.url);
+      return `<div class="linkrow">${known ? '' : '🔗 '}${PostUI.extLink(l.url, hl(l.label), { html: true })}${l.views ? `<span class="vw">👁 ${esc(l.views)}</span>` : ''}</div>`;
     }).join('');
   }
   function card(it) {
@@ -294,7 +229,7 @@
       const L = ITEMS.filter(isRide).slice(0, 3);
       $('#herolbl').textContent = L.length ? `网约车匹配 ${ITEMS.filter(isRide).length} 条` : '';
       const grads = ['linear-gradient(135deg,#ff6b4a,#c2185b)', 'linear-gradient(135deg,#7c3aed,#4f46e5)', 'linear-gradient(135deg,#0ea5e9,#0d9488)'];
-      $('#hero').innerHTML = L.length ? L.map((it, i) => `<div class="herocard" style="background:${grads[i]}"><div class="big">${i + 1}</div><div class="co">${esc(it.company)}</div><div class="ed spanline">${esc(eventSpan(it))}</div><p>${esc(it.text)}</p><button type="button" class="more open-ev" data-id="${esc(it.id)}" style="color:#fff">事件详情</button></div>`).join('') : '<p class="empty">暂无滴滴相关条目，每小时追踪中</p>';
+      $('#hero').innerHTML = L.length ? L.map((it, i) => `<div class="herocard" style="background:${grads[i]}"><div class="big">${i + 1}</div><div class="co">${esc(it.company)}</div><div class="ed spanline">${esc(eventSpan(it))}</div><p>${esc(it.text)}</p>${itemOrig(it)}<button type="button" class="more open-ev" data-id="${esc(it.id)}" style="color:#fff">事件详情</button></div>`).join('') : '<p class="empty">暂无滴滴相关条目，每小时追踪中</p>';
       return;
     }
     const eds = D.editions.filter(e => !state.type || e.type === state.type);
@@ -306,7 +241,7 @@
       const s = e.sections.find(x => x.title === t.section);
       const it = s && s.items[t.index];
       if (!it) return '';
-      return `<div class="herocard" style="background:${grads[i]}"><div class="big">${i + 1}</div><div class="co">${esc(it.company)}</div><div class="ed spanline">${esc(eventSpan(it))}</div><p>${esc(it.text)}</p><button type="button" class="more open-ev" data-id="${esc(it.id)}" style="color:#fff">事件详情</button></div>`;
+      return `<div class="herocard" style="background:${grads[i]}"><div class="big">${i + 1}</div><div class="co">${esc(it.company)}</div><div class="ed spanline">${esc(eventSpan(it))}</div><p>${esc(it.text)}</p>${itemOrig(it)}<button type="button" class="more open-ev" data-id="${esc(it.id)}" style="color:#fff">事件详情</button></div>`;
     }).join('');
   }
   function heatPanel() {
@@ -432,13 +367,6 @@
     const gap = built.getTime() - latest;
     return gap >= -3600000 && gap < 48 * 3600 * 1000;
   }
-  function heatBits(views) {
-    if (!views) return null;
-    const word = views >= 1e5 ? '爆' : views >= 1e4 ? '热' : '温';
-    const cls = views >= 1e5 ? 'bao' : views >= 1e4 ? 're' : 'wen';
-    const pct = Math.max(8, Math.round(100 * Math.sqrt(views / MAXV)));
-    return { word: word, cls: cls, num: fmt(views) + '浏览', pct: pct };
-  }
   function matchedRank(it) {
     const title = ((it.detail || {}).title || '') + (it.company || '');
     return rankRows().find(r => {
@@ -470,10 +398,7 @@
     return '';
   }
   function heatRow(views) {
-    const h = heatBits(views);
-    if (!h) return '';
-    const mark = h.cls === 'bao' ? '<span class="pstamp">爆</span>' : '<span class="pbadge ' + (h.cls === 're' ? 're' : 'wen') + '">' + h.word + '</span>';
-    return '<div class="phr">' + mark + '<span class="pnum">' + esc(h.num) + '</span><div class="phb"><i style="width:' + h.pct + '%"></i></div></div>';
+    return PostUI.heatBadge(views, MAXV);
   }
   function freshMark(g) {
     return isFresh(g) ? '<span class="pdot"></span><span class="pnt">有新进展</span>' : '';
@@ -482,23 +407,22 @@
     const nodes = [];
     ((g.root.detail || {}).timeline || []).forEach((t, i) => nodes.push({ date: t.date || '', text: t.text || '', url: t.url || '', i: i }));
     g.members.forEach((m, i) => {
-      const fx = firstX(m);
-      nodes.push({ date: m.date || '', text: m.text || '', url: (fx && fx.url) || ((m.links || [])[0] || {}).url || '', i: 100 + i });
+      const post = PostUI.primaryOf(m, posts());
+      nodes.push({ date: m.date || '', text: m.text || '', url: post.url || '', post: post, i: 100 + i });
     });
-    nodes.sort((a, b) => (nodeTime(b.date) || 0) - (nodeTime(a.date) || 0) || b.i - a.i);
-    return nodes;
+    return PostUI.sortNewest(nodes);
   }
-  function nodeOrig(url) {
-    if (!url) return '';
-    const snap = xSnap(url) || {};
-    const text = snap.text || '';
-    if (!text) return '';
-    return '<div class="porig"><div class="poh">原文</div>' + foldable('oline', esc(text)) + '</div>';
+  function nodeOrig(node, root) {
+    if (node.post) return PostUI.origBlock(node.post, { clamp: true, formatTime: fmtTs });
+    if (!node.url) return '';
+    const known = new Set(PostUI.sourcesOf(root || {}, posts()).map(s => s.url).filter(Boolean));
+    if (known.has(node.url)) return '';
+    return PostUI.origBlock(PostUI.mergeSnap({ url: node.url }, posts()), { clamp: true, formatTime: fmtTs });
   }
   function platBit(url) {
-    const p = platform(url);
+    const p = PostUI.platform(url);
     if (!p) return '';
-    return (LOGOS[p] || '') + '<span>' + esc(PNAME[p] || '') + '</span>';
+    return (PostUI.LOGOS[p] || '') + '<span>' + esc({ x: 'X', xhs: '小红书', weibo: '微博', wx: '微信' }[p] || '') + '</span>';
   }
   function showPin() {
     return !state.type || state.type === 'ride';
@@ -519,27 +443,20 @@
     const title = '<h2 class="' + (hero ? '' : 'ptitle') + '">' + hl(s.title) + freshMark(g) + (hero ? '' : '<span class="psm">' + esc(secLabel(it)) + '</span>') + '</h2>';
     const head = hero ? title : '<div class="prow-top">' + title + '</div>';
     const progHtml = prog && prog.text ? '<div class="pprog"><i>' + esc(prog.date || '') + '</i>' + esc(prog.text) + '</div>' : '';
-    return '<article class="pcard tk ' + (hero ? 'phero' : '') + '"><button type="button" class="phit open-ev" data-id="' + esc(it.id) + '">' + kick + head + '<p class="psum one">' + esc(s.sum) + '</p>' + progHtml + heatRow(groupViews(g)) + '</button></article>';
+    return '<article class="pcard tk ' + (hero ? 'phero' : '') + '"><button type="button" class="phit open-ev" data-id="' + esc(it.id) + '">' + kick + head + '<p class="psum one">' + esc(s.sum) + '</p>' + progHtml + heatRow(groupViews(g)) + '</button>' + itemOrig(it) + '</article>';
   }
   function leadCompact(it) {
     const s = itemStory(it);
     const pct = liftPct(it);
     const bar = pct == null ? '' : '<div class="pmtr"><span class="pwhy">' + esc(whyPill(it)) + '</span><span>升版</span><div class="phb ap"><i style="width:' + pct + '%"></i></div><span>' + pct + '%</span></div>';
-    return '<article class="pcard nw"><button type="button" class="phit" data-ptab="leads"><div class="prow-top"><span class="ptitle" style="font-size:15px">' + hl(s.title) + '</span>' + stampOf(it) + '</div>' + bar + '</button></article>';
+    return '<article class="pcard nw"><button type="button" class="phit open-ev" data-id="' + esc(it.id) + '"><div class="prow-top"><span class="ptitle" style="font-size:15px">' + hl(s.title) + '</span>' + stampOf(it) + '</div><p class="psum one">' + esc(s.sum) + '</p>' + heatRow(it._views) + bar + '</button>' + itemOrig(it) + '</article>';
   }
   function leadCard(it) {
     const s = itemStory(it);
-    const fx = s.fx;
     const pct = liftPct(it);
     const bar = pct == null ? '' : '<div class="pmtr"><span>升版进度</span><div class="phb ap"><i style="width:' + pct + '%"></i></div><b>' + pct + '%</b></div>';
-    let orig = '';
-    if (fx && (fx.text || (xSnap(fx.url) || {}).text)) {
-      const text = fx.text || xSnap(fx.url).text;
-      const p = platform(fx.url);
-      orig = '<div class="porig"><div class="poh">' + (p ? LOGOS[p] : '') + '<span>' + esc([fx.author, fx.author_name].filter(Boolean).join(' ') || (PNAME[p] || '原文')) + '</span></div>' + foldable('oline', esc(text)) + '</div>';
-    }
     const why = whyPill(it);
-    return '<article class="pcard nw"><div style="display:flex;align-items:center;gap:8px">' + (why ? '<span class="pwhy">' + esc(why) + '</span>' : '') + '<span style="margin-left:auto">' + stampOf(it) + '</span></div><div class="ptitle">' + hl(s.title) + '</div><p class="psum">' + esc(s.sum) + '</p>' + orig + bar + '<div class="pacts"><button type="button" class="p" data-promo="' + esc(it.id) + '">顶上头版</button><button type="button" data-hide="' + esc(it.id) + '">压下不表</button></div></article>';
+    return '<article class="pcard nw"><div style="display:flex;align-items:center;gap:8px">' + (why ? '<span class="pwhy">' + esc(why) + '</span>' : '') + '<span style="margin-left:auto">' + stampOf(it) + '</span></div><button type="button" class="ptitle phit open-ev" data-id="' + esc(it.id) + '">' + hl(s.title) + '</button><p class="psum">' + esc(s.sum) + '</p>' + itemOrig(it) + heatRow(it._views) + bar + '<div class="pacts"><button type="button" class="p" data-promo="' + esc(it.id) + '">顶上头版</button><button type="button" data-hide="' + esc(it.id) + '">压下不表</button></div></article>';
   }
   function paperHome(pack) {
     const hero = pack.events[0];
@@ -572,8 +489,9 @@
     const nodes = paperNodes(g);
     const rank = matchedRank(root);
     const delta = rank && rank.delta != null ? '<span class="pnum">较前一日 ' + (rank.delta > 0 ? '+' : '') + fmt(rank.delta) + '</span>' : '';
-    const list = nodes.length ? nodes.map((node, i) => '<div class="pnode' + (i === 0 ? ' f' : '') + '"><div class="pnh">' + esc(node.date || '') + (node.url ? ' · ' + platBit(node.url) : '') + '</div><div class="pnn">' + esc(node.text) + '</div>' + nodeOrig(node.url) + '</div>').join('') : '<p class="pfoot">这条还没有时间线。</p>';
-    return '<div class="pkick">专题' + (n ? ' · 连载第' + n + '回' : '') + ' · 最新在上</div><h2 id="ovtitle" class="ptitle" style="font-size:22px">' + esc(s.title) + '</h2><p class="psum">' + esc(s.sum) + '</p>' + heatRow(groupViews(g)) + delta + '<div class="ptl">' + list + '</div><p class="pfoot"><a href="events/' + encodeURIComponent(root.id) + '.html">独立页面</a></p>';
+    const list = nodes.length ? nodes.map((node, i) => '<div class="pnode' + (i === 0 ? ' f' : '') + '"><div class="pnh">' + esc(node.date || '') + (node.url ? ' · ' + platBit(node.url) : '') + '</div><div class="pnn">' + esc(node.text) + '</div>' + nodeOrig(node, root) + '</div>').join('') : '<p class="pfoot">暂无进展时间线</p>';
+    const ui = document.documentElement.dataset.ui === 'classic' ? 'classic' : 'new';
+    return '<div class="pkick">专题' + (n ? ' · 连载第' + n + '回' : '') + ' · 最新在上</div><h2 id="ovtitle" class="ptitle" style="font-size:22px">' + esc(s.title) + '</h2><p class="psum">' + esc(s.sum) + '</p>' + heatRow(groupViews(g)) + delta + allOrig(root) + '<div class="ptl">' + list + '</div><p class="pfoot"><a href="events/' + encodeURIComponent(root.id) + '.html?ui=' + ui + '">独立页面</a></p>';
   }
   function renderPaper() {
     const root = $('#paper');
@@ -625,7 +543,6 @@
   function detailHTML(it) {
     const d = it.detail || {};
     const title = (d.title) || (it.company + '：' + it.text.slice(0, 30));
-    const xs = allX(it);
     const tl = d.timeline || [];
     const tr = d.x_trend;
     let trend = '';
@@ -633,18 +550,19 @@
       const pts = (tr.labels || []).map((lb, i) => ({ t: lb, v: +tr.values[i] || 0, partial: String(lb).indexOf('*') >= 0 }));
       trend = `<section class="ov-sec"><h3>X 每日发帖量</h3><p class="note">检索式 ${esc(tr.query || '')} · 抓取 ${esc(fmtTs(tr.fetched_at || ''))} · ${esc(tr.note || '')}</p>${trendChart(pts)}${heatExplain()}</section>`;
     }
-    const posts = xs.length ? xs.map(x => xBlock(x.url, x)).join('') : '<p class="xmiss">正文未缓存</p>';
-    const hasX = xs.length || (d.x_posts || []).length;
+    const sorted = PostUI.sortNewest(tl.map((t, i) => Object.assign({ i: i }, t)));
+    const known = new Set(PostUI.sourcesOf(it, posts()).map(s => s.url).filter(Boolean));
+    const ui = document.documentElement.dataset.ui === 'classic' ? 'classic' : 'new';
     return `<h2 id="ovtitle">${esc(title)}</h2>
 <div class="note spanline" title="${esc(SPAN_TIP)}">${esc(eventSpan(it))}</div>
-<div class="meta" style="margin:8px 0"><span class="pill">${esc(it.company)}</span> <span class="badge ${it.tag === '实锤' ? 'b-real' : 'b-rum'}">【${esc(it.tag)}】</span> ${it._views ? `<span class="hbadge" title="链接最高浏览量">${fmt(it._views)} 浏览</span> <span class="note">按该条链接最高浏览量</span>` : ''}</div>
+<div class="meta" style="margin:8px 0"><span class="pill">${esc(it.company)}</span> <span class="badge ${it.tag === '实锤' ? 'b-real' : 'b-rum'}">【${esc(it.tag)}】</span> ${heatRow(it._views)}</div>
 <p>${esc(d.summary || it.text)}</p>
+<section class="ov-sec"><h3>原文</h3>${allOrig(it)}</section>
 ${d.background ? `<section class="ov-sec"><h3>事件经过</h3><p>${esc(d.background)}</p></section>` : ''}
-<section class="ov-sec"><h3>时间线</h3>${tl.length ? tl.map(t => `<div class="tl"><b>${esc(fmtTs(t.date))}</b> ${esc(t.text || '')}</div>`).join('') : '<p class="empty">暂无时间线</p>'}</section>
-<section class="ov-sec"><h3>X 原文缓存</h3>${hasX ? posts : '<p class="empty">这条没有引用 X 帖。</p>'}</section>
+<section class="ov-sec"><h3>时间线</h3><p class="note">最新在上</p>${sorted.length ? sorted.map(t => `<div class="tl"><b>${esc(fmtTs(t.date))}</b> ${esc(t.text || '')}${t.url && !known.has(t.url) ? PostUI.origBlock(PostUI.mergeSnap({ url: t.url }, posts()), { clamp: true, formatTime: fmtTs }) : ''}</div>`).join('') : '<p class="empty">暂无进展时间线</p>'}</section>
 ${trend || `<section class="ov-sec"><h3>热度</h3>${heatExplain()}</section>`}
 ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d.responses.map(r => `<p><b>${esc(r.party || '')}</b> ${esc(r.text || '')}</p>`).join('')}</section>` : ''}
-<p class="note"><a href="events/${encodeURIComponent(it.id)}.html">独立页面</a> · 分享用当前链接即可，关闭后筛选和滚动还在。</p>`;
+<p class="note"><a href="events/${encodeURIComponent(it.id)}.html?ui=${ui}">独立页面</a> · 分享用当前链接即可，关闭后筛选和滚动还在。</p>`;
   }
   function lockOpen() {
     const y = window.scrollY || 0;
@@ -696,8 +614,7 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
     const badge = it._views ? fmt(it._views) + (it._views >= 1e5 ? ' 爆' : it._views >= 1e4 ? ' 热' : '') : '无浏览';
     const s = itemStory(it);
     const prog = s.parent ? '<span class="prog">事件进展</span>' : '';
-    const orig = s.fx ? `<div class="kicker">原文</div>${xBlock(s.fx.url, s.fx, true)}` : '';
-    return `<article class="mcard" style="--c:${it._col}"><button type="button" class="mhit open-ev" data-id="${esc(it.id)}"><div class="mtop"><b>${esc(it.company)}</b><span class="hbadge" title="链接最高浏览量，不是热度榜日发帖量">${esc(badge)}</span></div><div class="mspan spanline">${esc(eventSpan(it))}</div>${prog}<h3 class="evtitle">${hl(s.title)}</h3></button><div class="kicker">${s.kicker}</div>${foldable('sum', hl(s.sum))}${orig}<div class="links">${linksHtml(it)}</div></article>`;
+    return `<article class="mcard" style="--c:${it._col}"><button type="button" class="mhit open-ev" data-id="${esc(it.id)}"><div class="mtop"><b>${esc(it.company)}</b><span class="hbadge" title="链接最高浏览量，不是热度榜日发帖量">${esc(badge)}</span></div><div class="mspan spanline">${esc(eventSpan(it))}</div>${prog}<h3 class="evtitle">${hl(s.title)}</h3></button><div class="kicker">${s.kicker}</div>${foldable('sum', hl(s.sum))}<div class="kicker">原文</div>${itemOrig(it)}<div class="links">${linksHtml(it)}</div></article>`;
   }
   function mobileHeat() {
     const rows = rankRows();
@@ -797,30 +714,6 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
       document.querySelectorAll('#tabs .tab').forEach(x => x.classList.toggle('on', x.dataset.t === state.type));
       render();
       return;
-    }
-    const heatBtn = e.target.closest('.heat-toggle');
-    if (heatBtn) {
-      e.preventDefault();
-      e.stopPropagation();
-      const how = heatBtn.closest('.heat-how');
-      if (how) {
-        const open = how.classList.toggle('is-open');
-        heatBtn.textContent = open ? '收起' : '展开';
-        heatBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      }
-      return;
-    }
-    const box = e.target.closest('.clampbox');
-    if (box && !e.target.closest('a')) {
-      const btn = box.querySelector('.xmore');
-      if (btn && !btn.hidden) {
-        e.preventDefault();
-        e.stopPropagation();
-        const open = box.classList.toggle('is-open');
-        btn.textContent = open ? '收起' : '展开';
-        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        return;
-      }
     }
     const opener = e.target.closest('.open-ev');
     if (opener) { e.preventDefault(); openEvent(opener.dataset.id, false); return; }

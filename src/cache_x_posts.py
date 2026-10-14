@@ -11,7 +11,7 @@ Usage (from anywhere):
     python3 src/cache_x_posts.py
 
 Re-run before `build_dashboard.py` when you want fresher bodies. Failed fetches
-are stored with status "missing" and no invented text; the UI shows 「正文未缓存」.
+are stored with status "missing" and no invented text; the UI shows 「原文未缓存」.
 """
 import json, os, re, time, datetime, urllib.request, urllib.error
 BASE = os.path.dirname(os.path.abspath(__file__))
@@ -93,7 +93,7 @@ def main():
     doc = {
         'source': 'https://api.fxtwitter.com/status/{id}',
         'fetched_at': now,
-        'note': '静态缓存。正文只来自抓取结果；失败项 status=missing，页面显示「正文未缓存」。不覆盖 data JSON 里已有的浏览/点赞数字。',
+        'note': '静态缓存。正文只来自抓取结果；失败项 status=missing，页面显示「原文未缓存」。不覆盖 data JSON 里已有的浏览/点赞数字。',
         'posts': posts,
     }
     json.dump(doc, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
@@ -128,6 +128,51 @@ def main():
                 json.dump(data, f, ensure_ascii=False, indent=1)
                 f.write('\n')
     print('filled x_posts text', filled)
+
+def fill_missing():
+    """Fetch only status ids cited in data that are absent or have no text.
+
+    Existing ok entries are left untouched. A failed fetch is stored as
+    status=missing with no invented text.
+    """
+    found = {}
+    if not os.path.isdir(DATA):
+        return
+    for fn in sorted(os.listdir(DATA)):
+        if not fn.endswith('.json'):
+            continue
+        walk_urls(json.load(open(os.path.join(DATA, fn), encoding='utf-8')), found)
+    posts = {}
+    doc = {}
+    if os.path.exists(OUT):
+        try:
+            doc = json.load(open(OUT, encoding='utf-8'))
+            posts = doc.get('posts') or {}
+        except Exception:
+            posts = {}
+    missing = [sid for sid in sorted(found) if not (posts.get(sid) or {}).get('text')]
+    print('x cache', len(found), 'missing', len(missing))
+    if not missing:
+        return
+    now = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+    for i, sid in enumerate(missing, 1):
+        try:
+            snap = fetch(sid)
+        except Exception as e:
+            snap = {'status': 'missing', 'error': str(e)[:180]}
+        snap['fetched_at'] = now
+        snap.setdefault('url', found[sid])
+        posts[sid] = snap
+        print(f'fetch {i}/{len(missing)}', sid, snap.get('status'), (snap.get('text') or snap.get('error') or '')[:40].replace('\n', ' '))
+        time.sleep(0.2)
+    out = {
+        'source': doc.get('source') or 'https://api.fxtwitter.com/status/{id}',
+        'fetched_at': now,
+        'note': '静态缓存。正文只来自抓取结果；失败项 status=missing，页面显示「原文未缓存」。不覆盖 data JSON 里已有的浏览/点赞数字。',
+        'posts': posts,
+    }
+    json.dump(out, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    print('x cache updated', len(posts))
 
 if __name__ == '__main__':
     main()
