@@ -1,0 +1,121 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-13T23:12:00Z",
+ "fired_at_utc": "2026-10-13T23:11:00Z",
+ "scanned_at_utc": "2026-10-13T23:12:00Z",
+ "beijing_time": "2026-10-14 07:12 Asia/Shanghai",
+ "edition_date": "2026-10-14",
+ "window": {
+  "start_utc": "2026-10-13T22:06:00Z",
+  "end_utc": "2026-10-13T23:12:00Z",
+  "note": "first hourly DiDi fire ~last 1h before 07:11 Beijing"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无新的可核验滴滴/出海组织人事、监管、诉讼、财报或爆料。X 八卦角查询0帖；宽检索多为「滴滴我」色情/互关/点点滴滴/优惠券噪音；微博热搜无滴滴；公开媒体检索无本小时新稿（仅见更早日期旧闻）。与早报ADR/大厂刊「本期无新动态」一致。",
+ "sections": [
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "微博镜像",
+      "公开媒体"
+     ],
+     "date": "10-14 07:12",
+     "text": "本期无新动态。扫描窗口 22:06–23:12Z（北京时间约 06:06–07:12）。国内/巴西99/埃及/墨西哥/拉美/澳洲/香港等关键词未见可发布的公司八卦或新闻。",
+     "links": [],
+     "id": "20261014-didi-23Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "20Z": 98,
+   "21Z": 80,
+   "22Z": 66,
+   "23Z_partial": 8,
+   "note": "q=滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"; sample almost all name-collision / NSFW / promo"
+  },
+  "gossip_angle_cn": {
+   "20to23Z": 0,
+   "query": "(滴滴 OR 滴滴出行 OR 程维 OR 柳青) (裁员 OR 爆料 OR 人事 OR 出海 OR 监管 OR 诉讼 OR 财报 OR 股价 OR 离职)"
+  },
+  "brazil_99_didi": {
+   "20to23Z": 0,
+   "query": "(99app OR \"99 Brasil\" OR \"99 Brazil\" OR \"99 Food\") (DiDi OR Didi OR 滴滴)"
+  },
+  "weibo_didi_on_list": false
+ },
+ "candidates": [
+  {
+   "topic": "宽检索 滴滴 OR 滴滴出行",
+   "verdict": "reject_noise",
+   "why": "样本25帖：成人「滴滴我/滴滴代操」、点点滴滴励志、互关引流、王者滴滴、旅游 unrelated；非公司八卦。",
+   "sample_ids": [
+    "2110146423346090338",
+    "2110145070293008542",
+    "2110144008764973471"
+   ]
+  },
+  {
+   "topic": "@whyyoutouzhele 滴滴诱导开通小贷 RT",
+   "verdict": "reject_stale_low_heat",
+   "why": "窗口内仅为旧帖RT（「近日」口径），RT impression≈0；非本小时新爆点，亦非组织人事/出海/监管重大进展。",
+   "urls": [
+    "https://x.com/tiankong7788/status/2110143115180876089",
+    "https://x.com/GuanKe83053/status/2110141397936513345"
+   ]
+  },
+  {
+   "topic": "99 Food 优惠券 / 外卖投诉",
+   "verdict": "reject_promo_consumer",
+   "why": "巴西优惠码推广帖 + 用户配送抱怨；非公司人事/监管/财报八卦。",
+   "urls": [
+    "https://x.com/aeripromos/status/2110131029222760584",
+    "https://x.com/arohamobrenda/status/2110130813702443388"
+   ]
+  },
+  {
+   "topic": "IF CHINA tourism + DiDi keyword",
+   "verdict": "reject_collision",
+   "why": "中国旅游攻略伪阳性，与DiDi公司无关。",
+   "url": "https://x.com/if_china/status/2110136322384171274"
+  },
+  {
+   "topic": "程维/柳青/竞品花小猪曹操T3高德",
+   "verdict": "empty",
+   "why": "窗口内0结果"
+  },
+  {
+   "topic": "微博热搜 滴滴",
+   "verdict": "absent",
+   "why": "soso.re/weibo 2026-10-14 06:55 更新榜单无滴滴相关。",
+   "mirror": "https://soso.re/weibo"
+  },
+  {
+   "topic": "公开媒体 WebSearch",
+   "verdict": "stale_only",
+   "why": "检索到的出海/监管/反舞弊/裁员稿均为更早日期（如6–9月、10-06 99 AI agent），不在本小时窗口。"
+  }
+ ],
+ "weibo": {
+  "mirror": "https://soso.re/weibo",
+  "updated": "2026-10-14 06:55 Beijing",
+  "滴滴_on_list": false
+ },
+ "sources_queried": [
+  "x.search_posts_all",
+  "x.get_posts_counts_recent",
+  "x.search_news",
+  "WebSearch",
+  "WebFetch:soso.re/weibo"
+ ]
+}

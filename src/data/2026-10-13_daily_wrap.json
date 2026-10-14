@@ -1,0 +1,276 @@
+{
+ "type": "daily",
+ "title": "大厂八卦每日总结｜2026年10月13日",
+ "edition_date": "2026-10-13",
+ "timestamp": "2026-10-13T23:35:00Z",
+ "generated_at": "2026-10-13T23:35:00Z",
+ "beijing_note": "补跑总结；覆盖约 2026-10-13 07:00 → 2026-10-14 07:30 北京时间，含过夜至 10-14 清晨简报/快讯/滴滴小时追踪",
+ "window": {
+  "start_beijing": "2026-10-13 07:00",
+  "end_beijing": "2026-10-14 07:30"
+ },
+ "lede": "Anthropic蒸馏指控 + Temu密苏里州诉为双核；尊界继续降温；滴滴全日无新动态；四轮快讯均未达告警门槛。",
+ "sections_summary": {
+  "热度榜": [
+   {
+    "rank": 1,
+    "topic": "Anthropic点名智谱/月之暗面蒸馏",
+    "trend": "📉",
+    "heat": "day~1073 posts; 3h~43; AYi views~320057"
+   },
+   {
+    "rank": 2,
+    "topic": "Temu密苏里州检察长起诉",
+    "trend": "➡️",
+    "heat": "broad 3h~391 (inflated); Missouri-specific~12; AG views~4470"
+   },
+   {
+    "rank": 3,
+    "topic": "华为尊界刹车门",
+    "trend": "📉",
+    "heat": "3h~69 (14→15→40)"
+   },
+   {
+    "rank": 4,
+    "topic": "字节厕所吐槽",
+    "trend": "➡️",
+    "heat": "views~58569; gossip 3h~4"
+   },
+   {
+    "rank": 5,
+    "topic": "微博中国互联网进入字节时间",
+    "trend": "➡️",
+    "heat": "weibo #25 ~85677"
+   }
+  ],
+  "重点追踪": {
+   "滴滴 / 滴滴出海": "本期无新动态",
+   "字节跳动": "厕所吐槽~5.9万浏览；期权241.35传闻极低热；微博字节时间#25",
+   "中国大模型": "Anthropic蒸馏首日覆盖；DeepSeek×Winverse传闻；月之暗面IPO已移出短期"
+  },
+  "短期热点": [
+   {
+    "name": "Temu密苏里州检察长起诉",
+    "trend": "➡️",
+    "status": "追踪中"
+   },
+   {
+    "name": "Anthropic点名智谱/月之暗面蒸馏",
+    "trend": "📉",
+    "status": "追踪中"
+   },
+   {
+    "name": "华为尊界刹车门（车圈互撕）",
+    "trend": "📉",
+    "status": "追踪中"
+   }
+  ],
+  "今日要点": [
+   "Anthropic官方点名智谱/月之暗面蒸馏，中文主帖破30万浏览",
+   "密苏里州AG起诉Temu",
+   "尊界检测说明后质疑检测机构注销；话题整体降温",
+   "DeepSeek拟领投Winverse；字节厕所吐槽出圈",
+   "四轮快讯均未达HIGH告警门槛"
+  ],
+  "后续进展": [
+   "尊界第三方检测+注销质疑",
+   "Webull行情复盘",
+   "传音H股定价",
+   "廖洪涛入职福田实验室"
+  ],
+  "明日关注": [
+   "智谱/月之暗面回应",
+   "Temu回应",
+   "尊界升级时间表",
+   "滴滴空窗监控",
+   "微博字节时间是否退榜"
+  ]
+ },
+ "heat_snapshot": {
+  "measured_at_utc": "2026-10-13T23:35:00Z",
+  "Temu_broad_3h": 391,
+  "Temu_missouri_specific_3h": 12,
+  "Temu_AG_views": 4470,
+  "Anthropic_distill_3h": 43,
+  "Anthropic_distill_day": 1073,
+  "Anthropic_AYi_views": 320057,
+  "Zunjie_3h": 69,
+  "Moonshot_IPO_3h": 2,
+  "DiDi_gossip_3h": 18,
+  "DiDi_broad_20to2335Z": 288,
+  "ByteDance_gossip_3h": 4,
+  "LLM_gossip_3h": 26,
+  "weibo": {
+   "source": "https://soso.re/weibo",
+   "updated_beijing": "2026-10-14 07:23",
+   "字节时间_rank": 25,
+   "字节时间_heat": 85677,
+   "滴滴_on_list": false,
+   "Temu_on_list": false,
+   "尊界_on_list": false
+  }
+ },
+ "topics_added": [],
+ "topics_removed": [
+  "月之暗面股东纠纷 & IPO"
+ ],
+ "topics_kept": [
+  "Temu密苏里州检察长起诉",
+  "Anthropic点名智谱/月之暗面蒸馏",
+  "华为尊界刹车门（车圈互撕）"
+ ],
+ "alerts_day": {
+  "sent": 0,
+  "scans": 4,
+  "note": "all 快讯 scans returned no HIGH-bar alert"
+ },
+ "sources_ingested": [
+  "2026-10-13_bigtech.json",
+  "2026-10-13_adr.json",
+  "2026-10-13_alerts.json",
+  "2026-10-13_kuaixun_20Z.json",
+  "2026-10-13_kuaixun_23Z.json",
+  "2026-10-14_bigtech_21Z.json",
+  "2026-10-14_bigtech_digest.md",
+  "2026-10-14_adr_05Z.json",
+  "2026-10-14_didi_23Z.json",
+  "heat_log.csv",
+  "topics.md"
+ ],
+ "markdown_file": "2026-10-13_daily_wrap.md",
+ "sections": [
+  {
+   "title": "🔥 热度榜",
+   "color": "#dc2626",
+   "items": [
+    {
+     "company": "智谱 / 月之暗面 / Anthropic",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-12～10-13",
+     "text": "Anthropic 官方点名智谱/月之暗面蒸馏；全日约1073帖，近3h约43📉；@AYi_AInotes 约32.0万浏览。",
+     "links": [
+      {
+       "label": "Anthropic",
+       "url": "https://www.anthropic.com/research/distillation-defenses"
+      },
+      {
+       "label": "X @AYi_AInotes",
+       "url": "https://x.com/AYi_AInotes/status/2109816068462256394",
+       "views": "32.0万"
+      }
+     ],
+     "id": "20261013-wrap-anthropic"
+    },
+    {
+     "company": "Temu / 拼多多",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-13",
+     "text": "密苏里州检察长起诉 Temu；广义近3h约391➡️（含噪声），本诉专查约12；AG官帖约4470浏览。",
+     "links": [
+      {
+       "label": "X @AGCHanaway",
+       "url": "https://x.com/AGCHanaway/status/2110096039394848819",
+       "views": "4470"
+      },
+      {
+       "label": "EIN Presswire",
+       "url": "https://www.einpresswire.com/article/949361922/missouri-attorney-general-hanaway-sues-temu-for-malicious-data-collection-and-deceiving-consumers"
+      }
+     ],
+     "id": "20261013-wrap-temu"
+    },
+    {
+     "company": "华为·尊界 / 江淮",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-08～10-13",
+     "text": "尊界刹车门近3h约69📉；公布第三方检测后有「机构已注销」质疑。",
+     "links": [
+      {
+       "label": "X @whyyoutouzhele",
+       "url": "https://x.com/whyyoutouzhele/status/2108145378205770135",
+       "views": "14.7万"
+      },
+      {
+       "label": "赛迪网",
+       "url": "https://www.seccw.com/document/detail/id/51121.html"
+      }
+     ],
+     "id": "20261013-wrap-zunjie"
+    }
+   ]
+  },
+  {
+   "title": "🎯 重点追踪",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "微博镜像"
+     ],
+     "date": "10-13/14",
+     "text": "本期无新动态。八卦角0命中；微博热搜无滴滴。",
+     "links": [],
+     "id": "20261013-wrap-didi"
+    },
+    {
+     "company": "字节跳动",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "微博镜像"
+     ],
+     "date": "10-13",
+     "text": "厕所吐槽帖约5.9万浏览；期权241.35传闻极低热；微博「字节时间」约#25。",
+     "links": [
+      {
+       "label": "X @weiyux2021",
+       "url": "https://x.com/weiyux2021/status/2109961583619416213",
+       "views": "5.9万"
+      },
+      {
+       "label": "soso.re/weibo",
+       "url": "https://soso.re/weibo"
+      }
+     ],
+     "id": "20261013-wrap-bytedance"
+    },
+    {
+     "company": "中国大模型",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-12～10-13",
+     "text": "Anthropic蒸馏为首日主线；DeepSeek拟领投Winverse【传闻】；月之暗面IPO短线已移出。",
+     "links": [
+      {
+       "label": "Anthropic",
+       "url": "https://www.anthropic.com/research/distillation-defenses"
+      },
+      {
+       "label": "证券时报",
+       "url": "https://www.stcn.com/article/detail/4214135.html"
+      }
+     ],
+     "id": "20261013-wrap-llm"
+    }
+   ]
+  }
+ ]
+}

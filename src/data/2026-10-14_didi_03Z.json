@@ -1,0 +1,112 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-14T03:09:04Z",
+ "fired_at_utc": "2026-10-14T03:07:42.846Z",
+ "scanned_at_utc": "2026-10-14T03:09:04Z",
+ "beijing_time": "2026-10-14 11:09 Asia/Shanghai",
+ "edition_date": "2026-10-14",
+ "window": {
+  "start_utc": "2026-10-14T02:10:00Z",
+  "end_utc": "2026-10-14T03:10:00Z",
+  "note": "since previous hourly DiDi run (10:16 Beijing)"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无新的可核验滴滴/出海组织人事、监管、诉讼、财报或爆料。X 八卦角查询窗口内仅1帖且为香港旅游攻略误匹配（约200浏览），非公司八卦；程维/柳青/DIDIY 相关0帖；英文 DiDi Global 公司新闻角0帖；99Food/Keeta 葡语检索0帖。海外市场查询2帖：广交会攻略误匹配 + 墨西哥移民/Uber-DiDi司机评论（约3浏览，乘客/社会议论非公司新料）。中文宽检索多为黄推/「滴滴」私信喊话/顺风车乘客吐槽噪声。微博热搜10:47北京时间无滴滴。公开媒体均为旧闻转载（五部门约谈/80亿罚单、7月反舞弊通报、3月集体诉讼索赔、8月二季报、9/29 TJSP 99Food排他条款判决再发、脉脉2025旧帖、国庆出行预测旧稿标10-14）。",
+ "sections": [
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "微博镜像",
+      "公开媒体"
+     ],
+     "date": "10-14 11:09",
+     "text": "本期无新动态。扫描窗口 02:10Z–03:10Z（北京时间约 10:10–11:10）。国内/巴西99/埃及/墨西哥/拉美/澳洲/香港等关键词未见可发布的公司八卦或新闻。",
+     "links": [],
+     "id": "20261014-didi-03Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "00Z": 73,
+   "01Z": 123,
+   "02Z": 141,
+   "03Z_partial": 17,
+   "note": "q=滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"; mostly name-collision/noise; 02Z elevated vs prior hours, not gossip-backed"
+  },
+  "gossip_angle": {
+   "0210to0310Z": 1,
+   "00to03Z_hourly_counts": [
+    0,
+    1,
+    1,
+    0
+   ],
+   "note": "sole window hit = HK travel guide false positive"
+  },
+  "overseas_markets": {
+   "0210to0310Z": 2,
+   "hourly_counts_01to03Z": [
+    20,
+    32,
+    1
+   ],
+   "note": "consumer/immigration noise; no 99Food or corp litigation in window"
+  },
+  "weibo_didi_on_list": false
+ },
+ "candidates": [
+  {
+   "topic": "香港旅游攻略（八卦角误匹配）",
+   "verdict": "reject_noise",
+   "why": "likebookmark 香港吃住玩攻略帖误入八卦角查询（约200浏览）；无滴滴公司人事/监管/财报内容。",
+   "sample_ids": [
+    "2110201249182421426"
+   ],
+   "url": "https://x.com/likebookmark/status/2110201249182421426"
+  },
+  {
+   "topic": "墨西哥 Uber/DiDi 司机移民评论",
+   "verdict": "reject_noise",
+   "why": "西语回复称墨西哥 Uber 与 DiDi 司机多为移民、医院拥挤；约3浏览。属社会议论/乘客侧，非滴滴公司专属八卦。",
+   "sample_ids": [
+    "2110195618337468629"
+   ],
+   "url": "https://x.com/ArceliaAc/status/2110195618337468629"
+  },
+  {
+   "topic": "中文 滴滴 宽检索",
+   "verdict": "reject_noise",
+   "why": "黄推/「滴滴」私信喊话/顺风车乘客吐槽/「开滴滴」谋生比喻；非公司八卦。"
+  },
+  {
+   "topic": "WebSearch 中文/英葡西 10-14",
+   "verdict": "reject_stale_repost",
+   "why": "旧闻再发：80.26亿罚单、7月反舞弊移送公安、3月集体诉讼索赔截止、8月二季报；9/29 TJSP 99Food排他条款判决页面标10-14再刷但裁决日为9/29；脉脉UT/D9/HR帖为2025；国庆双节出行预测旧稿。"
+  },
+  {
+   "topic": "微博热搜 滴滴",
+   "verdict": "absent",
+   "why": "soso.re/weibo 10:47 北京时间榜单无滴滴/网约车。",
+   "mirror": "https://soso.re/weibo"
+  }
+ ],
+ "sources_queried": [
+  "x.search_posts_all",
+  "x.get_posts_counts_recent",
+  "x.search_news",
+  "WebSearch",
+  "WebFetch:soso.re/weibo",
+  "WebFetch:tribunauniao.com.br (99Food TJSP)"
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-14T00:12:00Z",
+ "fired_at_utc": "2026-10-14T00:10:59Z",
+ "scanned_at_utc": "2026-10-14T00:12:00Z",
+ "beijing_time": "2026-10-14 08:12 Asia/Shanghai",
+ "edition_date": "2026-10-14",
+ "window": {"start_utc": "2026-10-13T23:10:00Z", "end_utc": "2026-10-14T00:12:00Z", "note": "since previous hourly DiDi run (07:12 Beijing)"},
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无新的可核验滴滴/出海组织人事、监管、诉讼、财报或爆料。X 八卦角与海外市场查询均0帖；网约车宽检索只有出租车vs网约车社会学讨论、成人引流、办证广告等噪音；微博热搜无滴滴；公开媒体检索仅见内容农场转载旧闻（2022年网信办罚款、小蓝单车托管、滴滴租车）及10-02 99赞助巴西奥委会等非本小时稿。",
+ "sections": [
+  {"title": "🚕 滴滴 & 滴滴出海", "color": "#ff6600", "items": [
+   {"company": "滴滴 & 滴滴出海", "tag": "实锤", "source_types": ["X", "微博镜像", "公开媒体"], "date": "10-14 08:12",
+    "text": "本期无新动态。扫描窗口 23:10Z–00:12Z（北京时间约 07:10–08:12）。国内/巴西99/埃及/墨西哥/拉美/澳洲/香港等关键词未见可发布的公司八卦或新闻。",
+    "links": [], "id": "20261014-didi-00Z-none"}
+  ]}
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {"21Z": 80, "22Z": 66, "23Z": 77, "00Z_partial": 13, "note": "q=滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"; mostly name-collision/noise"},
+  "gossip_angle": {"2310to0012Z": 0},
+  "overseas_markets": {"2310to0012Z": 0},
+  "weibo_didi_on_list": false
+ },
+ "candidates": [
+  {"topic": "网约车 宽检索", "verdict": "reject_noise", "why": "出租车反网约车的社会学问答（含 @grok 回复）、成人引流、办证广告、城市交通科普；非滴滴公司八卦。", "sample_ids": ["2110149968006668432", "2110151345814561089", "2110152685613629860"]},
+  {"topic": "WebSearch 中文 滴滴 10-14", "verdict": "reject_stale_repost", "why": "内容农场把旧闻标成 2026-10-14：2022年网信办80.26亿罚款、小蓝单车托管、滴滴租车上线、国庆安全提醒；非新进展。"},
+  {"topic": "99 Brasil 赞助巴西奥委会", "verdict": "reject_stale", "why": "O Globo 稿日期 2026-10-02，非本小时窗口。", "url": "https://oglobo.globo.com/patrocinado/dino/noticia/2026/10/02/99-e-nova-patrocinadora-oficial-do-time-brasil-1.ghtml"},
+  {"topic": "微博热搜 滴滴", "verdict": "absent", "why": "soso.re/weibo 07:55 北京时间榜单无滴滴/网约车。", "mirror": "https://soso.re/weibo"}
+ ],
+ "sources_queried": ["x.search_posts_all", "x.get_posts_counts_recent", "x.search_news", "WebSearch", "WebFetch:soso.re/weibo"]
+}

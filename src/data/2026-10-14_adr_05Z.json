@@ -1,0 +1,439 @@
+{
+ "type": "adr",
+ "title": "美股中概 & 出海简报",
+ "timestamp": "2026-10-13T21:00:00Z",
+ "edition_date": "2026-10-14",
+ "lede": "早报 · 覆盖自上一档约 09:00 UTC（北京时间 17:00）至 21:00 UTC（北京时间 10-14 05:00）· 信源：X 公开帖（主）+ 公开媒体；样刊已报条目不重复",
+ "top3": [
+  {
+   "section": "🏛️ 监管·诉讼·制裁",
+   "index": 0
+  },
+  {
+   "section": "🏛️ 监管·诉讼·制裁",
+   "index": 1
+  },
+  {
+   "section": "🧸 消费出海",
+   "index": 0
+  }
+ ],
+ "sections": [
+  {
+   "title": "🎯 重点追踪",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-13/14",
+     "text": "本期无新动态。X 检索（滴滴/DiDi + 出海/99/巴西/墨西哥等）09–21Z 约 66 帖，多为噪音或无关「didi」外语帖，未见可核验的组织人事、海外业务或股价八卦。",
+     "links": [],
+     "id": "20261014-didi-none"
+    },
+    {
+     "company": "字节 / TikTok",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-13",
+     "text": "本期无重大新动态。窗口内多为跨境卖家营销向帖（如 TikTok Shop 西班牙增长叙事），缺少权威媒体或高浏览可核验爆点。",
+     "links": [],
+     "id": "20261014-tiktok-none"
+    },
+    {
+     "company": "智谱 / 月之暗面",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-12/13",
+     "text": "Anthropic 10-12 官方研究帖《Strengthening our defenses against distillation attacks》公开点名：智谱开发 GLM-5.3 时蒸馏美企模型网络攻防能力（含尝试 Claude Fable 5）；月之暗面 Kimi 被指将用户请求秘密转发至 Claude，其中一例 Anthropic 称怀疑与解放军相关的监控视频分析。称反蒸馏已将被提取推理数据砍约 90–99%、封禁数万账号。中文圈 @AYi_AInotes 解读帖约 30.7 万浏览。属 Anthropic 单方指控，对方回应需另核。",
+     "links": [
+      {
+       "label": "Anthropic 官方",
+       "url": "https://www.anthropic.com/research/distillation-defenses",
+       "views": null
+      },
+      {
+       "label": "X @AYi_AInotes",
+       "url": "https://x.com/AYi_AInotes/status/2109816068462256394",
+       "views": "30.7万"
+      },
+      {
+       "label": "X @NFT_Chen",
+       "url": "https://x.com/NFT_Chen/status/2109855557792444926",
+       "views": "2.4万"
+      }
+     ],
+     "id": "20261014-anthropic-distill"
+    }
+   ]
+  },
+  {
+   "title": "⚡ 短期热点追踪",
+   "color": "#ea580c",
+   "items": [
+    {
+     "company": "Temu密苏里州检察长起诉",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-13",
+     "section": "⚡ 短期热点追踪",
+     "text": "【本期新加入】密苏里州检察长起诉 Temu；X 相关发帖 12–21Z 约 278，末三小时 44→83→132 📈 急升。",
+     "links": [
+      {
+       "label": "X @AGCHanaway",
+       "url": "https://x.com/AGCHanaway/status/2110096039394848819",
+       "views": "2430"
+      }
+     ],
+     "id": "20261014-temu-hot"
+    },
+    {
+     "company": "Anthropic点名智谱/月之暗面蒸馏",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-12/13",
+     "text": "09–21Z 约 459 帖，尾段小时 18→11→10 📉 从日间峰值回落；主帖仍约 30.7 万浏览。本期简报首发覆盖。",
+     "links": [
+      {
+       "label": "X @AYi_AInotes",
+       "url": "https://x.com/AYi_AInotes/status/2109816068462256394",
+       "views": "30.7万"
+      }
+     ],
+     "id": "20261014-anthropic-hot"
+    },
+    {
+     "company": "华为尊界刹车门（车圈互撕）",
+     "tag": "实锤",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-13",
+     "text": "近 3h 约 82 帖（42→26→14）📉 继续降温；与美股中概/出海关联弱，本刊不展开。",
+     "links": [],
+     "id": "20261014-zunjie-hot"
+    },
+    {
+     "company": "月之暗面股东纠纷 & IPO",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-13",
+     "text": "➡️ 偏冷：窗口内无独立股东/IPO 新爆点，讨论并入 Anthropic 蒸馏线。",
+     "links": [],
+     "id": "20261014-moonshot-hot"
+    },
+    {
+     "company": "拼多多不做AI争议",
+     "tag": "实锤",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-13",
+     "text": "【已移出】热度持续低迷；Temu 州诉为独立新线，不并回本话题。",
+     "links": [],
+     "id": "20261014-pdd-ai-removed"
+    }
+   ]
+  },
+  {
+   "title": "🏛️ 监管·诉讼·制裁",
+   "color": "#b45309",
+   "items": [
+    {
+     "company": "智谱 / 月之暗面",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-12/13",
+     "section": "🏛️ 监管·诉讼·制裁",
+     "text": "Anthropic 官方反蒸馏博文点名智谱（GLM-5.3 网络能力蒸馏）与月之暗面（Kimi 转发用户请求至 Claude，含其指称的监控分析请求）；称提取量降 90–99%。中文解读帖爆量传播。",
+     "links": [
+      {
+       "label": "Anthropic",
+       "url": "https://www.anthropic.com/research/distillation-defenses",
+       "views": null
+      },
+      {
+       "label": "X @AYi_AInotes",
+       "url": "https://x.com/AYi_AInotes/status/2109816068462256394",
+       "views": "30.7万"
+      },
+      {
+       "label": "AI Affairs",
+       "url": "https://www.aiaffairs.com/technology/anthropic-claude-distillation-defences-reasoning-extraction/",
+       "views": null
+      }
+     ],
+     "id": "20261014-anthropic-zhipu-moonshot",
+     "detail": {
+      "title": "Anthropic 点名智谱、月之暗面蒸馏 Claude",
+      "summary": "Anthropic 发布反蒸馏防御进展，点名智谱与月之暗面，并称已将被提取推理数据削减约 90–99%。",
+      "background": "2026-10-12 Anthropic 发布官方研究博文，描述工业级蒸馏攻击（虚假账号网络抽取 Claude 思维链）及三层防御：preserved thinking、双阶段分类器、封号并对照拦截请求收费。文中举例智谱在 GLM-5.3 开发中蒸馏网络攻防能力；月之暗面 Kimi 被指向 Claude 秘密转发用户请求。中文 X 圈 10-13 大量转发，@AYi_AInotes 主帖浏览量超过 30 万。",
+      "timeline": [
+       {
+        "date": "2026-10-12",
+        "text": "Anthropic 发布 distillation-defenses 博文",
+        "url": "https://www.anthropic.com/research/distillation-defenses"
+       },
+       {
+        "date": "2026-10-13T01:18Z",
+        "text": "@AYi_AInotes 中文解读帖爆量",
+        "url": "https://x.com/AYi_AInotes/status/2109816068462256394"
+       }
+      ],
+      "x_posts": [
+       {
+        "platform": "X",
+        "url": "https://x.com/AYi_AInotes/status/2109816068462256394",
+        "author": "@AYi_AInotes",
+        "created_at": "2026-10-13T01:18Z",
+        "views": 307481,
+        "likes": 1095,
+        "reposts": 137,
+        "replies": 248,
+        "quotes": 22,
+        "bookmarks": 634,
+        "fetched_at": "2026-10-13T21:03Z"
+       }
+      ],
+      "x_trend": {
+       "query": "(Anthropic OR Claude) (智谱 OR Zhipu OR Moonshot OR 月之暗面 OR distill OR 蒸馏)",
+       "granularity": "hour",
+       "labels": [
+        "09",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+       ],
+       "values": [
+        61,
+        64,
+        52,
+        48,
+        51,
+        56,
+        32,
+        33,
+        23,
+        18,
+        11,
+        10
+       ],
+       "fetched_at": "2026-10-13T21:00Z",
+       "source": "X get_posts_counts_recent"
+      },
+      "responses": [
+       {
+        "party": "Anthropic",
+        "text": "官方指称智谱/月之暗面蒸馏并公布防御效果",
+        "url": "https://www.anthropic.com/research/distillation-defenses"
+       }
+      ],
+      "stance_note": "指控来自 Anthropic 单方；智谱/月之暗面正式回应未在本窗口核验到权威链接。"
+     }
+    },
+    {
+     "company": "Temu / 拼多多",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-13",
+     "section": "🏛️ 监管·诉讼·制裁",
+     "text": "密苏里州检察长 Catherine Hanaway 起诉 Temu：指控恶意收集 PII（精准定位、麦克风/摄像头、应用列表等）、误导定价与商品质量表述，并称母公司 PDD 在华运营使数据面临向当局提供风险；建议删除 App。寻求禁令与民事处罚。AG 官帖迅速传播，相关英文讨论小时级升温。",
+     "links": [
+      {
+       "label": "X @AGCHanaway",
+       "url": "https://x.com/AGCHanaway/status/2110096039394848819",
+       "views": "2430"
+      },
+      {
+       "label": "EIN Presswire/AG",
+       "url": "https://www.einpresswire.com/article/949361922/missouri-attorney-general-hanaway-sues-temu-for-malicious-data-collection-and-deceiving-consumers",
+       "views": null
+      },
+      {
+       "label": "First Alert 4",
+       "url": "https://www.firstalert4.com/2026/10/13/missouri-ag-sues-temu/",
+       "views": null
+      }
+     ],
+     "id": "20261014-temu-missouri",
+     "detail": {
+      "title": "密苏里州检察长起诉 Temu",
+      "summary": "Hanaway 指控 Temu 窃取用户数据、欺骗消费者，并可能将数据暴露给中国当局；呼吁删除 App。",
+      "background": "2026-10-13 密苏里州检察长办公室宣布起诉 Temu。新闻稿称多年调查发现 App 隐蔽收集高精度定位、麦克风、摄像头、已装应用列表等，并可在用户不知情下重配置以规避检测；部分代码与曾被 Google Play 下架的旧版恶意软件相关。并指零年龄验证、面向未成年人的玩法，以及未授权体育/品牌周边售卖。母公司 PDD Holdings 在华运营被引用为数据风险背景。",
+      "timeline": [
+       {
+        "date": "2026-04",
+        "text": "密苏里州 AG 办公室曾就 Temu 调查发布外部律师 RFP",
+        "url": "https://ago.mo.gov/wp-content/uploads/TEMU-RFP-FINAL-4.13.26.pdf"
+       },
+       {
+        "date": "2026-10-13",
+        "text": "正式宣布起诉；AG 发 X 帖",
+        "url": "https://x.com/AGCHanaway/status/2110096039394848819"
+       }
+      ],
+      "x_posts": [
+       {
+        "platform": "X",
+        "url": "https://x.com/AGCHanaway/status/2110096039394848819",
+        "author": "@AGCHanaway",
+        "created_at": "2026-10-13T19:51Z",
+        "views": 2430,
+        "likes": 64,
+        "reposts": 19,
+        "replies": 4,
+        "quotes": 1,
+        "bookmarks": 2,
+        "fetched_at": "2026-10-13T21:03Z"
+       }
+      ],
+      "x_trend": {
+       "query": "Temu (lawsuit OR Missouri OR sue OR sued OR AG OR privacy OR CCP)",
+       "granularity": "hour",
+       "labels": [
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+       ],
+       "values": [
+        0,
+        3,
+        1,
+        0,
+        1,
+        14,
+        44,
+        83,
+        132
+       ],
+       "fetched_at": "2026-10-13T21:00Z",
+       "source": "X get_posts_counts_recent"
+      },
+      "responses": [
+       {
+        "party": "Missouri AG Hanaway",
+        "text": "建议密苏里居民删除 Temu；将寻求禁令与民事救济",
+        "url": "https://www.einpresswire.com/article/949361922/missouri-attorney-general-hanaway-sues-temu-for-malicious-data-collection-and-deceiving-consumers"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "🧸 消费出海",
+   "color": "#db2777",
+   "items": [
+    {
+     "company": "霸王茶姬",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-12/13",
+     "section": "🧸 消费出海",
+     "text": "郑钦文夺冠「买一送一」热潮后，X 热帖吐槽一线员工摇杯量暴增却不加薪：「代入员工绝望，代入顾客好香」。原帖浏览约 65.7 万，窗口内仍在转发。属网民吐槽，非公司官方回应。",
+     "links": [
+      {
+       "label": "X @berrybun_04",
+       "url": "https://x.com/berrybun_04/status/2109488684022354337",
+       "views": "65.7万"
+      }
+     ],
+     "id": "20261014-chagee-staff"
+    }
+   ]
+  },
+  {
+   "title": "📉 股价大动",
+   "color": "#1d4ed8",
+   "items": [
+    {
+     "company": "微牛 Webull",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-13",
+     "section": "📉 股价大动",
+     "text": "国会报告冲击余波：中文财经账号复盘称 BULL 单周重挫近 20%、近一个月累计跌近 40%（相对报告前高点）。属对 10-07 事件的行情跟踪，无新监管文件。",
+     "links": [
+      {
+       "label": "X @LeverageETFsZH",
+       "url": "https://x.com/LeverageETFsZH/status/2110080190932238748",
+       "views": "75"
+      }
+     ],
+     "id": "20261014-webull-follow"
+    }
+   ]
+  },
+  {
+   "title": "🚀 IPO & 高管",
+   "color": "#059669",
+   "items": [
+    {
+     "company": "传音控股",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "X"
+     ],
+     "date": "10-13",
+     "section": "🚀 IPO & 高管",
+     "text": "港交所发售价公告确认：H 股定价 35.30 港元（区间下限），全球发售约 8664.83 万股，募资约 30.6 亿港元；预计 10-15 日开买卖，10-14 公布国际配售踊跃程度与港公开发售结果。约 40% 募资拟投向 AI 相关研发。",
+     "links": [
+      {
+       "label": "港交所发售价公告 PDF",
+       "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/1013/2026101300004_c.pdf",
+       "views": null
+      },
+      {
+       "label": "凤凰财经",
+       "url": "https://finance.ifeng.com/c/8xBx701tUgM",
+       "views": null
+      }
+     ],
+     "id": "20261014-transsion-price"
+    }
+   ]
+  }
+ ]
+}

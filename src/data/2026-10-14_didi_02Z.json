@@ -1,0 +1,96 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-14T02:16:26Z",
+ "fired_at_utc": "2026-10-14T02:14:56.850Z",
+ "scanned_at_utc": "2026-10-14T02:16:26Z",
+ "beijing_time": "2026-10-14 10:16 Asia/Shanghai",
+ "edition_date": "2026-10-14",
+ "window": {
+  "start_utc": "2026-10-14T01:10:00Z",
+  "end_utc": "2026-10-14T02:10:00Z",
+  "note": "since previous hourly DiDi run (09:16 Beijing)"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无新的可核验滴滴/出海组织人事、监管、诉讼、财报或爆料。X 八卦角查询0帖（含近数小时计数均为0）；程维/柳青/DIDIY 相关0帖。海外市场查询9帖均为乘客吐槽/叫车建议及1条墨西哥La Prensa OEM平台劳工改革通稿（Uber/Rappi/DiDi并列，约82浏览，非滴滴公司专属新料；墨平台劳工改革为既有政策延续）。中文宽检索多为黄推/生活场景噪声。微博热搜09:51北京时间无滴滴。公开媒体检索均为旧闻转载（五部门约谈、80亿罚单、2022裁员、8月报、99Food/99Compras旧扩张稿）。",
+ "sections": [
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "微博镜像",
+      "公开媒体"
+     ],
+     "date": "10-14 10:16",
+     "text": "本期无新动态。扫描窗口 01:10Z–02:10Z（北京时间约 09:10–10:10）。国内/巴西99/埃及/墨西哥/拉美/澳洲/香港等关键词未见可发布的公司八卦或新闻。",
+     "links": [],
+     "id": "20261014-didi-02Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "23Z": 77,
+   "00Z": 73,
+   "01Z": 124,
+   "02Z_partial": 33,
+   "note": "q=滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"; mostly name-collision/noise; 01Z spike not gossip-backed"
+  },
+  "gossip_angle": {
+   "0110to0210Z": 0,
+   "23to02Z_hourly_counts": [
+    0,
+    0,
+    0
+   ]
+  },
+  "overseas_markets": {
+   "0110to0210Z": 9,
+   "note": "consumer noise + 1 low-view La Prensa OEM platform labor blurb"
+  },
+  "weibo_didi_on_list": false
+ },
+ "candidates": [
+  {
+   "topic": "La Prensa OEM 平台劳工",
+   "verdict": "reject_not_didi_specific",
+   "why": "墨西哥媒体通稿称 Uber/Rappi/DiDi 等平台配送员要求结束「合伙人」身份、要最低劳工保障；约82浏览。属墨既有平台劳工改革政策延续报道，非滴滴公司专属八卦/人事/财报新料。",
+   "sample_ids": [
+    "2110188847724200194"
+   ],
+   "url": "https://x.com/laprensaoem/status/2110188847724200194"
+  },
+  {
+   "topic": "中文 滴滴 宽检索",
+   "verdict": "reject_noise",
+   "why": "开滴滴谋生比喻、黄推、信用卡返利场景；非公司八卦。"
+  },
+  {
+   "topic": "WebSearch 中文/英葡西 10-14",
+   "verdict": "reject_stale_repost",
+   "why": "内容农场标10-14的旧闻：五部门约谈、80.26亿罚单、2022裁员；正刊为8月二季报；99Food/99Compras为3–6月扩张稿；Mototáxi圣保罗旧稿。"
+  },
+  {
+   "topic": "微博热搜 滴滴",
+   "verdict": "absent",
+   "why": "soso.re/weibo 09:51 北京时间榜单无滴滴/网约车。",
+   "mirror": "https://soso.re/weibo"
+  }
+ ],
+ "sources_queried": [
+  "x.search_posts_all",
+  "x.get_posts_counts_recent",
+  "x.search_news",
+  "WebSearch",
+  "WebFetch:soso.re/weibo",
+  "WebFetch:laprensa.mx"
+ ]
+}

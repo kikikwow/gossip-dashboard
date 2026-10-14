@@ -1,0 +1,86 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-14T04:09:45Z",
+ "fired_at_utc": "2026-10-14T04:07:24.181Z",
+ "scanned_at_utc": "2026-10-14T04:09:45Z",
+ "beijing_time": "2026-10-14 12:10 Asia/Shanghai",
+ "edition_date": "2026-10-14",
+ "window": {
+  "start_utc": "2026-10-14T03:10:00Z",
+  "end_utc": "2026-10-14T04:08:00Z",
+  "note": "since previous hourly DiDi run (11:09 Beijing)"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无新的可核验滴滴/出海组织人事、监管、诉讼、财报或爆料。X 八卦角3帖均为误匹配（加密DePIN推广、哈密瓜文章、GitHub资源帖）；海外角4帖为消费者闲聊（秘鲁/墨西哥 DiDi Food 寿司、巴西 99food 优惠、政治回复、阿语名字撞词）；网约车中文检索为乘客吐槽/段子/灵活就业议论。媒体RSS本轮仅1条新匹配（腾讯WorkBuddy），与滴滴无关。微博热搜镜像无滴滴。WebSearch 结果均为内容农场旧闻重标10-14日期（滴滴租车上线、国庆安全提醒、小蓝单车托管、收购99控股权、99Food进里约2025旧闻、双节出行预测）。",
+ "sections": [
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "微博镜像",
+      "公开媒体"
+     ],
+     "date": "10-14 12:10",
+     "text": "本期无新动态。扫描窗口 03:10Z–04:08Z（北京时间约 11:10–12:08）。国内/巴西99/埃及/墨西哥/拉美/澳洲/香港等关键词未见可发布的公司八卦或新闻。",
+     "links": [],
+     "id": "20261014-didi-04Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "01Z": 123,
+   "02Z": 141,
+   "03Z": 134,
+   "04Z_partial": 22,
+   "note": "mostly name-collision/noise; flat vs prior hour"
+  },
+  "gossip_angle": {
+   "0310to0408Z": 3,
+   "note": "all false positives"
+  },
+  "overseas_markets": {
+   "0310to0408Z": 4,
+   "note": "consumer chatter only"
+  },
+  "weibo_didi_on_list": false
+ },
+ "candidates": [
+  {
+   "topic": "X 八卦角",
+   "verdict": "reject_noise",
+   "why": "加密DePIN推广/哈密瓜长文/GitHub资源帖误匹配",
+   "url": "https://x.com/vivimoneya/status/2110218804185923654"
+  },
+  {
+   "topic": "海外 99food / DiDi Food 消费者帖",
+   "verdict": "reject_noise",
+   "why": "优惠/点餐闲聊，浏览≤17",
+   "url": "https://x.com/jandrekairo/status/2110206744802566389"
+  },
+  {
+   "topic": "中文 网约车 检索",
+   "verdict": "reject_noise",
+   "why": "乘客吐槽/段子/公积金新规泛议论，非滴滴公司八卦"
+  },
+  {
+   "topic": "WebSearch 中/英/葡",
+   "verdict": "reject_stale_repost",
+   "why": "内容农场旧闻重标10-14；99Food进里约为2025-10-14旧闻"
+  },
+  {
+   "topic": "微博热搜 滴滴",
+   "verdict": "absent",
+   "why": "soso.re/weibo 无滴滴相关词条"
+  }
+ ]
+}

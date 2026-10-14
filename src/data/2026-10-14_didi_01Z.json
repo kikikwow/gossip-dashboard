@@ -1,0 +1,107 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-14T01:16:45Z",
+ "fired_at_utc": "2026-10-14T01:15:43.287Z",
+ "scanned_at_utc": "2026-10-14T01:16:45Z",
+ "beijing_time": "2026-10-14 09:16 Asia/Shanghai",
+ "edition_date": "2026-10-14",
+ "window": {
+  "start_utc": "2026-10-14T00:10:00Z",
+  "end_utc": "2026-10-14T01:15:00Z",
+  "note": "since previous hourly DiDi run (08:12 Beijing)"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无新的可核验滴滴/出海组织人事、监管、诉讼、财报或爆料。X 八卦角查询0帖；海外市场查询2帖均为美国新墨西哥州政客名「Didi」误匹配；网约车相关仅见萝卜快跑/无人驾驶失业讨论（非滴滴公司八卦）。微博热搜09:05北京时间无滴滴。公开媒体检索均为内容农场转载旧闻（租车上线、国庆安全、小蓝单车托管、五部门约谈旧稿）及非本小时稿（墨西哥塔毛利帕斯州DiDi税费纠纷10-11、99Premier Recife 10-06、Valor 99地铁票试点8月）。",
+ "sections": [
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "微博镜像",
+      "公开媒体"
+     ],
+     "date": "10-14 09:15",
+     "text": "本期无新动态。扫描窗口 00:10Z–01:15Z（北京时间约 08:10–09:15）。国内/巴西99/埃及/墨西哥/拉美/澳洲/香港等关键词未见可发布的公司八卦或新闻。",
+     "links": [],
+     "id": "20261014-didi-01Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "22Z": 66,
+   "23Z": 77,
+   "00Z": 73,
+   "01Z_partial": 23,
+   "note": "q=滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"; mostly name-collision/noise"
+  },
+  "gossip_angle": {
+   "0010to0115Z": 0
+  },
+  "overseas_markets": {
+   "0010to0115Z": 2,
+   "note": "name-collision only (US politician)"
+  },
+  "weibo_didi_on_list": false
+ },
+ "candidates": [
+  {
+   "topic": "X overseas DiDi/99",
+   "verdict": "reject_name_collision",
+   "why": "两帖谈美国新墨西哥州竞选人物 Didi，与 DiDi Global 无关。",
+   "sample_ids": [
+    "2110174167211606379",
+    "2110168787261821294"
+   ]
+  },
+  {
+   "topic": "网约车 宽检索",
+   "verdict": "reject_noise",
+   "why": "萝卜快跑 vs Waymo 无人驾驶失业讨论；DeepSeek 长文误入；非滴滴公司八卦。",
+   "sample_ids": [
+    "2110166948780642555",
+    "2110161555476402642"
+   ]
+  },
+  {
+   "topic": "WebSearch 中文 滴滴 10-14",
+   "verdict": "reject_stale_repost",
+   "why": "内容农场把旧闻标成 2026-10-14：租车上线、国庆安全提醒、小蓝单车托管、双节预测、五部门约谈（IT之家旧稿）。"
+  },
+  {
+   "topic": "DiDi Tamaulipas 48mdp 欠税",
+   "verdict": "reject_stale",
+   "why": "El Mañana 更新 2026-10-11，非本小时窗口。",
+   "url": "https://www.elmanana.com/tamaulipas/cdvictoria/empresa-morosa-didi-acumula-deuda-con-el-estado/6195353"
+  },
+  {
+   "topic": "99Premier Recife",
+   "verdict": "reject_stale",
+   "why": "JC 稿日期 2026-10-06，非本小时。",
+   "url": "https://jc.uol.com.br/colunas/mobilidade/2026/10/06/99-lanca-categoria-premium-de-corridas-em-recife.html"
+  },
+  {
+   "topic": "微博热搜 滴滴",
+   "verdict": "absent",
+   "why": "soso.re/weibo 09:05 北京时间榜单无滴滴/网约车。",
+   "mirror": "https://soso.re/weibo"
+  }
+ ],
+ "sources_queried": [
+  "x.search_posts_all",
+  "x.get_posts_counts_recent",
+  "x.search_news",
+  "WebSearch",
+  "WebFetch:soso.re/weibo",
+  "WebFetch:elmanana.com"
+ ]
+}

@@ -1,0 +1,319 @@
+{
+ "type": "bigtech",
+ "title": "中国大厂八卦简报",
+ "timestamp": "2026-10-13T21:00:00Z",
+ "edition_date": "2026-10-14",
+ "lede": "晚报 · 窗口 2026-10-13T09:00Z→21:00Z（另含同日早间尚未进简报的 Anthropic 蒸馏指控）· 信源：X 公开帖（主）+ 微博镜像/公开媒体",
+ "top3": [
+  {
+   "section": "🤖 大模型攻防 · 蒸馏指控",
+   "index": 0
+  },
+  {
+   "section": "💰 挖人·天价·融资",
+   "index": 0
+  },
+  {
+   "section": "🔥 吐槽热帖",
+   "index": 0
+  }
+ ],
+ "sections": [
+  {
+   "title": "🤖 大模型攻防 · 蒸馏指控",
+   "color": "#7b2cbf",
+   "items": [
+    {
+     "id": "20261014-anthropic-distill",
+     "company": "智谱 / 月之暗面 / Anthropic",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-12～10-13",
+     "section": "🤖 大模型攻防 · 蒸馏指控",
+     "text": "Anthropic 于 10-12 发布官方研究博客《Strengthening our defenses against distillation attacks》，称新防蒸馏措施使被提取的推理数据量下降约 90%–99%，并点名智谱在开发 GLM-5.3 期间蒸馏美国领先模型网络能力、曾试 Claude Fable 后改打旧版；另称月之暗面 Kimi 相关请求被秘密转发至 Claude，其中一例疑似与解放军相关的监控分析。中文圈由 @AYi_AInotes 主帖引爆（约 30.7 万浏览），截至检索智谱/月之暗面未见逐条回应蒸馏指控。",
+     "links": [
+      {
+       "label": "Anthropic 官方博客",
+       "url": "https://www.anthropic.com/research/distillation-defenses",
+       "views": null
+      },
+      {
+       "label": "X @AYi_AInotes",
+       "url": "https://x.com/AYi_AInotes/status/2109816068462256394",
+       "views": "30.7万"
+      },
+      {
+       "label": "X @NFT_Chen",
+       "url": "https://x.com/NFT_Chen/status/2109855557792444926",
+       "views": "2.4万"
+      },
+      {
+       "label": "阿视亚经济转述",
+       "url": "https://www.asiae.co.kr/cn/article/2026101316201789614",
+       "views": null
+      }
+     ],
+     "detail": {
+      "title": "Anthropic 官方点名智谱 / 月之暗面蒸馏攻击",
+      "summary": "Anthropic 披露工业级蒸馏攻防：锁死推理上下文、生物武器级分类器、拦截请求扣费封号；点名智谱 GLM-5.3 与月之暗面 Kimi；X 中文主帖约 30.7 万浏览。",
+      "background": "Anthropic 称蒸馏攻击常靠欺诈账号网络提取 Claude 受保护思维链；完整推理转录训练 SWE-bench Verified 可达 80.4%，仅摘要版 71.8%。公司称已封禁数万相关账号，并主动放弃数万亿 token 付费流量。对智谱：称其在 GLM-5.3 开发中蒸馏美国领先模型网络能力，试 Claude Fable 5 被防护削弱后改打旧版 Claude 与另一家实验室模型。对月之暗面：称 Kimi 相关请求曾被秘密转发至 Claude，并举一例其「相信」与解放军相关的 CCTV 分析请求。以上均为 Anthropic 单方主张；截至 10-13 晚间公开检索，智谱与月之暗面未就本轮蒸馏指控逐条回应。",
+      "timeline": [
+       {
+        "date": "2026-10-12",
+        "text": "Anthropic 发布防蒸馏博客，给出 90%–99% 数据下降口径并点名智谱、月之暗面相关案例。",
+        "url": "https://www.anthropic.com/research/distillation-defenses"
+       },
+       {
+        "date": "2026-10-13 01:18Z",
+        "text": "@AYi_AInotes 发中文长帖解读，浏览量后续冲至约 30.7 万。",
+        "url": "https://x.com/AYi_AInotes/status/2109816068462256394"
+       },
+       {
+        "date": "2026-10-13 03:55Z",
+        "text": "@NFT_Chen 发帖拆解智谱/月之暗面指控要点，约 2.4 万浏览。",
+        "url": "https://x.com/NFT_Chen/status/2109855557792444926"
+       }
+      ],
+      "x_posts": [
+       {
+        "platform": "X",
+        "url": "https://x.com/AYi_AInotes/status/2109816068462256394",
+        "author": "@AYi_AInotes",
+        "created_at": "2026-10-13T01:18:43Z",
+        "views": 307447,
+        "likes": 1095,
+        "reposts": 137,
+        "replies": 248,
+        "quotes": 22,
+        "bookmarks": 633,
+        "fetched_at": "2026-10-13T21:01:00Z"
+       },
+       {
+        "platform": "X",
+        "url": "https://x.com/AYi_AInotes/status/2109816071872278698",
+        "author": "@AYi_AInotes",
+        "created_at": "2026-10-13T01:18:44Z",
+        "views": 18936,
+        "likes": 24,
+        "reposts": 3,
+        "replies": 2,
+        "quotes": 0,
+        "bookmarks": 8,
+        "fetched_at": "2026-10-13T21:01:00Z"
+       },
+       {
+        "platform": "X",
+        "url": "https://x.com/NFT_Chen/status/2109855557792444926",
+        "author": "@NFT_Chen",
+        "created_at": "2026-10-13T03:55:38Z",
+        "views": 24286,
+        "likes": 49,
+        "reposts": 8,
+        "replies": 31,
+        "quotes": 1,
+        "bookmarks": 16,
+        "fetched_at": "2026-10-13T21:02:00Z"
+       }
+      ],
+      "x_trend": {
+       "query": "(Anthropic OR 智谱 OR Zhipu OR Moonshot OR 月之暗面) (蒸馏 OR distill OR Distillation)",
+       "granularity": "hour",
+       "labels": [
+        "09Z",
+        "10Z",
+        "11Z",
+        "12Z",
+        "13Z",
+        "14Z",
+        "15Z",
+        "16Z",
+        "17Z",
+        "18Z",
+        "19Z",
+        "20Z"
+       ],
+       "values": [
+        101,
+        102,
+        75,
+        96,
+        90,
+        98,
+        60,
+        47,
+        33,
+        68,
+        40,
+        47
+       ],
+       "fetched_at": "2026-10-13T21:01:00Z",
+       "source": "X get_posts_counts_recent",
+       "note": "09:00–21:00Z total 857"
+      },
+      "weibo": null,
+      "responses": [
+       {
+        "party": "Anthropic",
+        "text": "官方博客给出防蒸馏措施与 90%–99% 数据下降口径，并点名智谱、月之暗面相关案例。",
+        "url": "https://www.anthropic.com/research/distillation-defenses"
+       },
+       {
+        "party": "智谱 / 月之暗面",
+        "text": "截至本报检索，未见对本轮蒸馏指控的逐条官方回应。",
+        "url": null
+       }
+      ],
+      "extra_sources": [
+       {
+        "label": "阿视亚经济",
+        "url": "https://www.asiae.co.kr/cn/article/2026101316201789614"
+       },
+       {
+        "label": "AIHOT 摘要",
+        "url": "https://aihot.news/items/lwchujhujmc1tdor61dn39irl"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "💰 挖人·天价·融资",
+   "color": "#2a9d8f",
+   "items": [
+    {
+     "id": "20261014-deepseek-winverse",
+     "company": "DeepSeek / 腾讯人才 / 美团龙珠",
+     "tag": "传闻",
+     "source_types": [
+      "媒体",
+      "X"
+     ],
+     "date": "10-12～10-13",
+     "section": "💰 挖人·天价·融资",
+     "text": "彭博及证券时报等报道：DeepSeek 拟领投前腾讯混元多模态/具身负责人胡瀚创办的 Winverse AI 种子轮，金额数千万美元、投后估值约 4 亿美元；美团龙珠等已承诺跟投，交易尚未最终敲定。胡瀚等未回应置评。另有媒体称 DeepSeek 本轮自身融资目标从约 500 亿抬至约 1000 亿人民币（投前估值约 5000 亿口径），公司方面对部分数字未正式确认。",
+     "links": [
+      {
+       "label": "证券时报",
+       "url": "https://www.stcn.com/article/detail/4214135.html",
+       "views": null
+      },
+      {
+       "label": "21 经济网",
+       "url": "https://www.21jingji.com/article/20261013/herald/2904a5d4ecc3d1ca6f53023f8428e012.html",
+       "views": null
+      },
+      {
+       "label": "X @PANewsCN",
+       "url": "https://x.com/PANewsCN/status/2109976868392956196",
+       "views": "2191"
+      }
+     ]
+    },
+    {
+     "id": "20261014-bytedance-option",
+     "company": "字节跳动",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-13",
+     "section": "💰 挖人·天价·融资",
+     "text": "X 有帖称字节下午发全员信，10 月期权回购税前回购价 241.35 美元/股，业务调整类被裁员工也可同价参与、自愿。单帖浏览极低（约十几），未见官方确认，仅作线索记录。",
+     "links": [
+      {
+       "label": "X @by2487647676998",
+       "url": "https://x.com/by2487647676998/status/2109937231721038096",
+       "views": "17"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🔥 吐槽热帖",
+   "color": "#e9c46a",
+   "items": [
+    {
+     "id": "20261014-bytedance-toilet",
+     "company": "字节跳动",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-13",
+     "section": "🔥 吐槽热帖",
+     "text": "X 搬运帖称字节员工离开工位上厕所，回来被直属领导当众质问「上厕所需要 40 分钟吗？」；当事人称实际只离开十几分钟，觉得生理需求被当众盘问伤自尊。原帖浏览约 5.4 万，属职场吐槽级传播，无公司回应。",
+     "links": [
+      {
+       "label": "X @weiyux2021",
+       "url": "https://x.com/weiyux2021/status/2109961583619416213",
+       "views": "5.4万"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🚗 公关翻车 & 车圈互撕",
+   "color": "#e4572e",
+   "items": [
+    {
+     "id": "20261014-zunjie-lab-cancel",
+     "company": "华为·尊界 / 江淮",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-13",
+     "section": "🚗 公关翻车 & 车圈互撕",
+     "text": "尊界 10-13 公布制动踏板第三方检测说明后，X 网友 @JimmyShequ 称查询发现为其提供检测服务的公司实际已注销，质疑注销状态下报告公信力；帖文约千次浏览。整体话题继续降温（09–21Z 约 810 帖，末小时仅 14）。样刊已详报刹车门主线，本期仅记新质疑点。",
+     "links": [
+      {
+       "label": "X @JimmyShequ",
+       "url": "https://x.com/JimmyShequ/status/2109969535378100723",
+       "views": "1011"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🚪 离职 · 晋升 · 宫斗",
+   "color": "#264653",
+   "items": [
+    {
+     "id": "20261014-tencent-liao",
+     "company": "腾讯 / 优必选",
+     "tag": "实锤",
+     "source_types": [
+      "媒体"
+     ],
+     "date": "10-12～10-13",
+     "section": "🚪 离职 · 晋升 · 宫斗",
+     "text": "媒体监测称前优必选联席 CTO 廖洪涛已入职腾讯合作共建的福田实验室（具身智能广东省实验室），任具身智能方向负责人，团队已启动招聘。属人事动向，非宫斗级爆料。",
+     "links": [
+      {
+       "label": "Morketing 每日监测",
+       "url": "https://www.morketing.com/detail/28864",
+       "views": null
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "focus": {
+  "滴滴 & 滴滴出海": "本期无新动态（窗口内无裁员/离职/出海人事类八卦命中）",
+  "字节跳动": "厕所时长当众质问吐槽帖约 5.4 万浏览；期权回购 241.35 美元/股传闻浏览极低待证实；微博镜像「中国互联网进入字节时间」仍在榜约第 25（热度约 2.7 万）",
+  "中国大模型": "Anthropic 蒸馏指控为首发覆盖；DeepSeek 拟领投 Winverse；月之暗面股东/IPO 短线近乎沉寂已移出短期列表"
+ },
+ "short_term_notes": [
+  "尊界刹车门 📉 继续降温",
+  "Anthropic蒸馏 ➡️ 持平（本期首次进简报）",
+  "已移出：月之暗面股东纠纷 & IPO；拼多多「不做 AI」争议"
+ ]
+}
