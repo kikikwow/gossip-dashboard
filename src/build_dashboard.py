@@ -79,7 +79,9 @@ def main():
     cache_x_posts.fill_missing()
     cache_path = os.path.join(BASE, 'x_cache.json')
     x_cache = json.load(open(cache_path, encoding='utf-8')) if os.path.exists(cache_path) else {'posts': {}}
-    payload = dict(editions=eds, longterm=lt, shortterm=st, heat=heat, x_cache=x_cache,
+    notes_path = os.path.join(BASE, 'topic_notes.json')
+    notes = json.load(open(notes_path, encoding='utf-8')).get('notes', {}) if os.path.exists(notes_path) else {}
+    payload = dict(editions=eds, longterm=lt, shortterm=st, heat=heat, x_cache=x_cache, notes=notes,
                    built=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M UTC'))
     tpl = open(os.path.join(BASE, 'dashboard_template.html'), encoding='utf-8').read()
     js = json.dumps(payload, ensure_ascii=False).replace('</', '<\\/')
@@ -100,4 +102,10 @@ def main():
     for it in allit: it.pop('_ed', None); it.pop('_file', None)
     print('detail pages:', len(allit), '(enriched:', sum(1 for i in allit if i.get('detail')), ')')
     print('wrote', out, '| editions:', len(eds), '| heat rows:', len(heat))
-if __name__ == '__main__': main()
+if __name__ == '__main__':
+    main()
+    # 强制内容校验（规则见 CONTENT_RULES.md）。失败即非 0 退出，不得推送。
+    import subprocess, sys
+    r = subprocess.run([sys.executable, os.path.join(BASE, 'check_content.py')])
+    if r.returncode:
+        sys.exit(r.returncode)

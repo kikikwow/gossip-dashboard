@@ -740,6 +740,8 @@
     const about = PostUI.heatAbout(samples) || reason;
     const sampleHtml = samples.map(p => PostUI.origBlock(p, { clamp: true, formatTime: fmtTs })).join('');
     const ui = document.documentElement.dataset.ui === 'classic' ? 'classic' : 'new';
+    const note = !id ? names.map(n => (D.notes || {})[n]).find(Boolean) : null;
+    const noteHtml = note ? '<div class="pnote topic-note" data-topic-note="1"><h3>这是什么事</h3><p class="psum">' + esc(note.summary) + '</p><p class="note">可信度：<b>' + esc(note.credibility || '待核实') + '</b>' + (note.event_time ? ' · 事件时间 ' + esc(note.event_time) : '') + ' · 录入 ' + esc(fmtTs(note.recorded_at) || note.recorded_at || '') + '</p>' + ((note.sources || []).length ? '<ul>' + note.sources.map(s => '<li><a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.label || s.url) + '</a></li>').join('') + '</ul>' : '') + ((note.pending || []).map(x => '<p class="note">' + esc(x) + '</p>').join('')) + '</div>' : '';
     const page = id ? '<p class="pfoot"><a href="events/' + encodeURIComponent(id) + '.html?ui=' + ui + '">独立页面</a></p>' : '<p class="note">现有期次里没有单独的事件页。上面只显示 heat_log 里写了 status 链接、并且已经缓存的帖。</p>';
     const head = paper
       ? '<div class="pkick">热榜 · 最新在上</div><h2 id="ovtitle" class="ptitle" style="font-size:22px">' + esc(displayLabel(topic)) + '</h2><p class="psum heat-about"><b>这是在说什么</b> ' + esc(about) + '</p><p class="note">' + esc(summary) + '</p>'
@@ -748,7 +750,7 @@
     const chart = chartPts.length ? trendChart(chartPts) : (row ? trendChart(row.pts) : '');
     const seriesName = row && row.last && row.last.metric === 'x_daily_post_count' ? '日发帖' : '记录';
     const empty = '<p class="xmiss" data-heat-empty="1">' + esc(reason) + '</p><p class="note">之后的每小时任务要在 heat_log.csv 另起一行：metric 填 x_sample_post，source 填 https://x.com/账号/status/数字。</p>';
-    return head + '<h3>代表帖</h3>' + (sampleHtml || empty) + chart + '<h3>' + seriesName + '</h3>' + (nodes || '<p class="note">没有日发帖序列</p>') + page;
+    return head + noteHtml + '<h3>代表帖</h3>' + (sampleHtml || empty) + chart + '<h3>' + seriesName + '</h3>' + (nodes || '<p class="note">没有日发帖序列</p>') + page;
   }
   function paperHome(pack) {
     const hero = pack.events.find(g => eventHours(g) <= PostUI.FRONT_FRESH_H) || null;
