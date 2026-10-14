@@ -109,7 +109,7 @@ mark{background:rgba(245,158,11,.35);color:inherit;border-radius:3px}
 [data-theme=hot] .card:before{content:counter(rk);grid-row:span 4;font-size:22px;font-weight:900;color:#bbb;text-align:center;font-style:italic}
 [data-theme=hot] .card:nth-child(1):before{color:#fe2d46}[data-theme=hot] .card:nth-child(2):before{color:#f60}[data-theme=hot] .card:nth-child(3):before{color:#faa90e}
 [data-theme=hot] .card>*{grid-column:2}[data-theme=hot] .card .heatbar{display:block;grid-column:3;grid-row:1 / span 3}
-[data-theme=hot] .card .links{display:none}[data-theme=hot] .card p{font-size:13px;color:#555;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+[data-theme=hot] .card .links{display:none}[data-theme=hot] .card .sum{font-size:13px;color:#555}
 [data-theme=hot] .pill{background:none;color:var(--tx);padding:0;font-size:15px}
 [data-theme=hot] .herocard{border-radius:8px}
 .heatbar{display:none;font-size:12px;color:var(--mut);align-self:center}
@@ -165,8 +165,13 @@ main.wrap{display:flex;flex-direction:column}main>*{order:5}
 .tdelta{font-size:13px;font-weight:700;margin-top:4px}
 .ttip{font-size:12.5px;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 8px;margin-top:4px}
 .xbody{margin:8px 0;padding:8px 10px;border-left:3px solid var(--acc2);background:color-mix(in srgb,var(--acc2) 8%,transparent);border-radius:0 10px 10px 0}
-.xtext{margin:4px 0;white-space:pre-wrap}
-.card .xtext,.mcard .xtext{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.xtext{margin:4px 0;white-space:pre-wrap;line-height:1.45}
+.clamp{overflow:hidden}
+.card .xtext.clamp,.mcard .xtext.clamp{max-height:calc(1.45em * 3)}
+.mcard .sum.clamp,[data-theme=hot] .card .sum.clamp{max-height:calc(1.45em * 2)}
+.clampbox.is-open .clamp{max-height:none}
+.xmore{display:inline-flex;align-items:center;min-height:44px;padding:4px 2px;border:0;background:transparent;color:var(--acc);font:inherit;font-weight:800;cursor:pointer}
+.xmore[hidden]{display:none!important}
 .xmiss{color:var(--warn);font-weight:800;margin:4px 0}
 .xmeta{font-size:12.5px;display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
 .xlink{font-size:12px}
@@ -238,7 +243,7 @@ body.ov-open{position:fixed;width:100%;overflow:hidden}
   .mhit{display:block;width:100%;text-align:left;background:none;border:0;color:inherit;font:inherit;padding:0;cursor:pointer}
   .mtop{display:flex;justify-content:space-between;gap:8px;align-items:center}
   .mspan{font-size:12.5px;color:var(--mut);margin-top:4px}
-  .mcard .sum{margin:6px 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:15px;line-height:1.45}
+  .mcard .sum{margin:6px 0 0;font-size:15px;line-height:1.45}
   .mtabs{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:6px;background:var(--card);border-top:1px solid var(--line);padding:6px 8px calc(6px + env(safe-area-inset-bottom))}
   .mtabs button{flex:1;min-height:48px;border:0;border-radius:12px;background:transparent;color:var(--mut);font:inherit;font-weight:800}
   .mtabs button.on{background:var(--acc);color:#fff}

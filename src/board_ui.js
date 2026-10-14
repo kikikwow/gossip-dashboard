@@ -55,8 +55,28 @@
     const reposts = ex.reposts != null ? ex.reposts : snap.reposts;
     const bits = [name, author].filter(Boolean).join(' ');
     const meta = `<div class="xmeta"><b>${esc(bits || 'X')}</b>${created ? `<span class="note">${esc(fmtTs(created))}</span>` : ''}${views != null && views !== '' ? `<span class="note">浏览 ${esc(fmtMaybe(views))}</span>` : ''}${likes != null && likes !== '' ? `<span class="note">赞 ${esc(fmtMaybe(likes))}</span>` : ''}${reposts != null && reposts !== '' ? `<span class="note">转 ${esc(fmtMaybe(reposts))}</span>` : ''}</div>`;
-    const body = text ? `<p class="xtext">${esc(text)}</p>` : `<p class="xmiss">正文未缓存</p>`;
+    const body = text ? (clamp ? foldable('xtext', esc(text)) : `<p class="xtext">${esc(text)}</p>`) : `<p class="xmiss">正文未缓存</p>`;
     return `<blockquote class="xbody">${meta}${body}<a class="xlink" href="${esc(url)}" target="_blank" rel="noopener">原链接（站外）</a></blockquote>`;
+  }
+  function foldable(cls, html) {
+    return `<div class="clampbox"><p class="${cls} clamp">${html}</p><button type="button" class="xmore" hidden aria-expanded="false">展开</button></div>`;
+  }
+  function wireClamps(root) {
+    (root || document).querySelectorAll('.clampbox').forEach(box => {
+      const el = box.querySelector('.clamp');
+      const btn = box.querySelector('.xmore');
+      if (!el || !btn) return;
+      if (box.offsetParent === null) return;
+      if (box.classList.contains('is-open')) {
+        btn.hidden = false;
+        btn.textContent = '收起';
+        btn.setAttribute('aria-expanded', 'true');
+        return;
+      }
+      btn.hidden = el.scrollHeight <= el.clientHeight + 2;
+      btn.textContent = '展开';
+      btn.setAttribute('aria-expanded', 'false');
+    });
   }
   const SPAN_TIP = '起=已有信号里最早的钟点；没有钟点就用条目上的日期。采=内容采集或整理里最晚的钟点（帖子指标抓取、enriched_at、趋势抓取）。正文缓存的抓取时间只有在没有更早采集点时才顶上，否则用看板生成时间。';
   function eventSpan(it) {
@@ -157,7 +177,7 @@
     const badge = it._views >= 1e5 ? '爆' : it._views >= 1e4 ? '热' : '';
     return `<article class="card" data-id="${esc(it.id)}" style="--c:${it._col}"><div class="heatbar">${it._views ? `<b>${fmt(it._views)}</b> 浏览${badge ? `<span class="hotb">${badge}</span>` : ''}<div class="hbar"><i style="width:${(Math.sqrt(it._views / MAXV) * 100).toFixed(1)}%"></i></div>` : '<span>暂无浏览数据</span>'}</div><div class="top"><span class="pill">${hl(it.company)}</span>${it.detail ? '<span class="rich">深度</span>' : ''}
 <span class="badge ${it.tag === '实锤' ? 'b-real' : 'b-rum'}">【${esc(it.tag)}】</span>${(it.source_types || []).map(s => `<span class="src">${esc(s)}</span>`).join('')}<span class="date spanline" title="${esc(SPAN_TIP)}">${esc(eventSpan(it))}</span></div>
-<div class="secn">${esc(TYPES[e.type] || e.type)} · ${esc(it._sec)} ${it._views ? `<span class="hbadge" title="浏览=该条链接里最高浏览量，不是热度榜的日发帖量。≥10万爆，≥1万热。">${fmt(it._views)} 浏览${badge ? ' ' + badge : ''}</span> <span class="note">按该条链接最高浏览量</span>` : '<span class="note">这条没有浏览量</span>'}</div><p>${hl(it.text)}</p>
+<div class="secn">${esc(TYPES[e.type] || e.type)} · ${esc(it._sec)} ${it._views ? `<span class="hbadge" title="浏览=该条链接里最高浏览量，不是热度榜的日发帖量。≥10万爆，≥1万热。">${fmt(it._views)} 浏览${badge ? ' ' + badge : ''}</span> <span class="note">按该条链接最高浏览量</span>` : '<span class="note">这条没有浏览量</span>'}</div>${foldable('sum', hl(it.text))}
 ${fx ? xBlock(fx.url, fx, true) : ''}<button type="button" class="more open-ev" data-id="${esc(it.id)}">查看事件详情</button><div class="links">${(it.links || []).map(l => `<div>🔗 <a href="${esc(l.url)}" target="_blank" rel="noopener">${hl(l.label)}</a>${l.views ? `<span class="vw">👁 ${esc(l.views)}</span>` : ''}</div>`).join('')}</div></article>`;
   }
   function renderHero() {
@@ -205,6 +225,7 @@ ${fx ? xBlock(fx.url, fx, true) : ''}<button type="button" class="more open-ev" 
     $('#cnt').textContent = `共 ${L.length} / ${ITEMS.length} 条`;
     renderHero();
     renderMobile();
+    wireClamps(document);
     if (openId) {
       const it = ITEMS.find(x => x.id === openId);
       if (it) $('#ovbody').innerHTML = detailHTML(it);
@@ -288,7 +309,7 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
   function mcard(it) {
     const badge = it._views ? fmt(it._views) + (it._views >= 1e5 ? ' 爆' : it._views >= 1e4 ? ' 热' : '') : '无浏览';
     const fx = firstX(it);
-    return `<article class="mcard" style="--c:${it._col}"><button type="button" class="mhit open-ev" data-id="${esc(it.id)}"><div class="mtop"><b>${esc(it.company)}</b><span class="hbadge" title="链接最高浏览量，不是热度榜日发帖量">${esc(badge)}</span></div><div class="mspan spanline">${esc(eventSpan(it))}</div><p class="sum">${esc(it.text)}</p></button>${fx ? xBlock(fx.url, fx, true) : ''}</article>`;
+    return `<article class="mcard" style="--c:${it._col}"><button type="button" class="mhit open-ev" data-id="${esc(it.id)}"><div class="mtop"><b>${esc(it.company)}</b><span class="hbadge" title="链接最高浏览量，不是热度榜日发帖量">${esc(badge)}</span></div><div class="mspan spanline">${esc(eventSpan(it))}</div></button>${foldable('sum', esc(it.text))}${fx ? xBlock(fx.url, fx, true) : ''}</article>`;
   }
   function mobileHeat() {
     const rows = rankRows();
@@ -319,6 +340,7 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
       const L = ITEMS.filter(match);
       body.innerHTML = L.map(mcard).join('') || '<p class="empty">没有符合条件的条目。</p>';
     }
+    wireClamps(body);
   }
 
   document.addEventListener('click', function (e) {
@@ -343,6 +365,18 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
       document.querySelectorAll('#tabs .tab').forEach(x => x.classList.toggle('on', x.dataset.t === state.type));
       render();
       return;
+    }
+    const box = e.target.closest('.clampbox');
+    if (box && !e.target.closest('a')) {
+      const btn = box.querySelector('.xmore');
+      if (btn && !btn.hidden) {
+        e.preventDefault();
+        e.stopPropagation();
+        const open = box.classList.toggle('is-open');
+        btn.textContent = open ? '收起' : '展开';
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        return;
+      }
     }
     const opener = e.target.closest('.open-ev');
     if (opener) { e.preventDefault(); openEvent(opener.dataset.id, false); return; }
@@ -375,6 +409,8 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
   timeline();
   ridePanel();
   render();
+  window.addEventListener('resize', function () { wireClamps(document); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { wireClamps(document); });
   const deep = new URL(location.href).searchParams.get('e');
   if (deep) openEvent(deep, true);
 })();
