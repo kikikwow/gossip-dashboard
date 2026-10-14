@@ -1,13 +1,23 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>智谱 / 月之暗面 / 中国大模型：Anthropic 反蒸馏点名续传：中文主帖 @AYi_AI…</title>
-<script>try{var t=(location.hash.match(/theme=(\w+)/)||[])[1]||localStorage.getItem("gossipTheme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script><style>
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark" data-ui="new"><head><script>try{var q=new URLSearchParams(location.search).get("ui");var ui=(q==="classic"||q==="new")?q:localStorage.getItem("gossipUi");if(ui!=="classic"&&ui!=="new")ui="new";if(q==="classic"||q==="new"){try{localStorage.setItem("gossipUi",q)}catch(e){}}document.documentElement.dataset.ui=ui;var t=(location.hash.match(/theme=(\w+)/)||[])[1]||localStorage.getItem("gossipTheme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>智谱 / 月之暗面 / 中国大模型：Anthropic 反蒸馏点名续传：中文主帖 @AYi_AI…</title>
+<link rel="stylesheet" href="../src/post.css"><style>
 :root{--bg:#0d1117;--card:#1a2130;--line:#283244;--tx:#e6edf3;--mut:#8b98ab;--acc:#ff6b4a;--acc2:#4f8cff;--ok:#22c55e;--rumor:#a78bfa;--warn:#f59e0b}
 [data-theme=paper]{--bg:#f4ecd8;--card:#fbf6e9;--line:#cbbd9b;--tx:#211c14;--mut:#6d6250;--acc:#8b1e1e;--acc2:#7a3b0c;--ok:#2f6b2f;--rumor:#6b3fa0;--warn:#8b5a00}
 [data-theme=paper] body{font-family:"Noto Serif CJK SC","Source Han Serif SC",serif}
 [data-theme=feed]{--bg:#f2f3f5;--card:#fff;--line:#e8eaee;--tx:#15181d;--mut:#7a818c;--acc:#fe2c55;--acc2:#1677ff}
 [data-theme=hot]{--bg:#fff7f3;--card:#fff;--line:#f3dfd6;--tx:#222;--mut:#8a8a8a;--acc:#ff4d1a;--acc2:#eb7350}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font-family:"Noto Sans CJK SC","Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;font-size:15px;line-height:1.75}
-a{color:var(--acc2)}.wrap{max-width:920px;margin:0 auto;padding:0 20px 50px}
-.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font-size:13px;color:var(--mut)}
+a{color:var(--acc2)}a.ext{display:inline-flex;align-items:center;gap:4px}.plogo{width:16px;height:16px;flex:none;display:block}.wrap{max-width:920px;margin:0 auto;padding:0 20px 50px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding:14px 0;font-size:13px;color:var(--mut)}
+.topbar .crumb{margin-left:auto;text-align:right}
+.tz{display:inline-flex;flex-shrink:0;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card)}
+.tz button{background:transparent;color:var(--tx);border:0;font:inherit;padding:6px 12px;min-height:36px;cursor:pointer;line-height:1.3}
+.tz button.on{background:var(--acc);color:#fff;font-weight:700}
+time{font-variant-numeric:tabular-nums}
+@media(max-width:430px){
+ .wrap{padding:0 12px 40px}h1{font-size:22px}
+ .topbar{align-items:flex-start}.topbar .crumb{flex:1 1 100%;margin-left:0;text-align:left;font-size:12px}
+ .tz{order:3;width:100%}.tz button{flex:1;min-height:44px;font-size:15px}
+}
 h1{font-size:28px;line-height:1.35;margin:6px 0 10px}
 .meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
 .pill{background:var(--acc);color:#fff;border-radius:999px;padding:1px 12px;font-weight:700}
@@ -15,7 +25,14 @@ h1{font-size:28px;line-height:1.35;margin:6px 0 10px}
 .src{font-size:12px;color:var(--mut);border:1px solid var(--line);border-radius:6px;padding:0 6px}
 .summary{background:var(--card);border-left:4px solid var(--acc);padding:14px 18px;border-radius:0 10px 10px 0;font-size:16px}
 section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:18px}
-section h2{margin:0 0 10px;font-size:18px}.na{color:var(--mut);font-style:italic;margin:0}.note{font-size:12px;color:var(--mut)}
+section h2{margin:0 0 10px;font-size:18px}.na{color:var(--mut);font-style:italic;margin:0}.note{font-size:12px;color:var(--mut);overflow-wrap:anywhere}
+.xbody{margin:8px 0;padding:8px 10px;border-left:3px solid var(--acc2);background:color-mix(in srgb,var(--acc2) 8%,transparent);border-radius:0 10px 10px 0}
+.xtext{white-space:pre-wrap;margin:4px 0}.xmiss{color:var(--warn);font-weight:800}
+.xmeta{font-size:12.5px}.heat-how{font-size:12.5px;color:var(--mut);border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin:8px 0}
+.heat-how b{color:var(--tx)}.heat-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.heat-brief{margin:2px 0 0}.heat-full{display:none}.heat-how.is-open .heat-full{display:block}.heat-how.is-open .heat-brief{display:none}
+.heat-how .xmore{min-height:44px;border:0;background:transparent;color:var(--acc);font:inherit;font-weight:800;cursor:pointer}
+.chart{max-width:100%;height:auto}
 .tl{border-left:2px solid var(--line);padding-left:18px;margin-left:6px}.tli{position:relative;margin-bottom:10px}.tli:before{content:"";position:absolute;left:-25px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--acc)}
 .tli .d{font-weight:700;color:var(--acc);margin-right:8px;font-variant-numeric:tabular-nums}
 .post{border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:10px}
@@ -26,4 +43,39 @@ section h2{margin:0 0 10px;font-size:18px}.na{color:var(--mut);font-style:italic
 .resp{margin:10px 0}.resp b{display:block}
 ul{padding-left:20px;margin:6px 0}
 .kv{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}.kv div{border:1px solid var(--line);border-radius:8px;padding:8px 12px}
-</style></head><body><div class="wrap"><div class="topbar"><a href="../index.html">← 返回看板</a><span>美股中概&amp;出海 · 2026-10-14 · 🎯 重点追踪</span></div><h1>智谱 / 月之暗面 / 中国大模型：Anthropic 反蒸馏点名续传：中文主帖 @AYi_AI…</h1><div class="meta"><span class="pill">智谱 / 月之暗面 / 中国大模型</span><span class="badge b-real">【实锤】</span><span class="src">X</span><span class="src">媒体</span><span class="note">📅 10-12/14</span></div><div class="summary">Anthropic 反蒸馏点名续传：中文主帖 @AYi_AInotes 浏览升至约 35.6 万（上一档约 30.7 万），赞约 1294、转 165。X 相关发帖自 21Z 起约 274，近 3h 约 42→31→14 📉 继续回落；窗口内未见智谱/月之暗面逐条官方回应。DeepSeek「约 1000 亿融资」主报道落在 10-13 早间（窗口外），本档不重复展开。</div><section><h2>📖 事件经过</h2><p>Anthropic 反蒸馏点名续传：中文主帖 @AYi_AInotes 浏览升至约 35.6 万（上一档约 30.7 万），赞约 1294、转 165。X 相关发帖自 21Z 起约 274，近 3h 约 42→31→14 📉 继续回落；窗口内未见智谱/月之暗面逐条官方回应。DeepSeek「约 1000 亿融资」主报道落在 10-13 早间（窗口外），本档不重复展开。</p><p class="na">暂无更详细的事件经过</p></section><section><h2>🕒 进展时间线</h2><p class="na">暂无数据</p></section><section><h2>📊 各平台热度</h2><div class="note">简报收录时的浏览量：</div><ul><li><a href="https://x.com/AYi_AInotes/status/2109816068462256394" target="_blank" rel="noopener">X @AYi_AInotes</a> · 👁 35.6万</li></ul><h3 style="font-size:15px;margin:14px 0 4px">微博热搜</h3><p class="na">暂无数据</p><h3 style="font-size:15px;margin:14px 0 4px">其他平台</h3><p class="na">暂无数据</p></section><section><h2>💬 典型评论</h2><p class="na">暂无数据</p></section><section><h2>📢 各方回应</h2><p class="na">暂无数据</p></section><section><h2>🔗 相关事件</h2><ul><li><a href="20261014-adr-01Z-didi-focus.html">滴滴 &amp; 滴滴出海</a>：本期有新动态（详见「海外小语种线索」与下条）：①日本合资 DiDiモビリティジャパン 决算公告梳理—…</li><li><a href="20261014-adr-01Z-bytedance-none.html">字节 / TikTok</a>：本期无重大新动态。窗口内多为流量份额分析、A 股短剧情绪跟帖及旧闻二次传播（如海外短剧 App Pi…</li></ul></section><section><h2>📚 所有来源链接</h2><ul><li><a href="https://www.anthropic.com/research/distillation-defenses" target="_blank" rel="noopener">Anthropic 官方</a> <span class="note">https://www.anthropic.com/research/distillation-defenses</span></li><li><a href="https://x.com/AYi_AInotes/status/2109816068462256394" target="_blank" rel="noopener">X @AYi_AInotes</a> · 👁 35.6万 <span class="note">https://x.com/AYi_AInotes/status/2109816068462256394</span></li></ul></section><p class="note" style="margin-top:20px">本页仅展示数据文件中已有的信息；【传闻】为单方面说法，未经核实。缺失字段显示“暂无数据”。</p></div></body></html>
+.ui-toggle{min-height:44px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--tx);font:inherit;font-weight:700;cursor:pointer}
+html[data-ui=new]{--bg:#ECE7DE;--card:#F7F3EC;--line:#E4DFD6;--tx:#1F1D1A;--mut:#6E665A;--acc:#9E2B1F;--acc2:#4A6FA5;--ok:#3F6B4A;--warn:#C9824A;--rumor:#9A5A2B}
+html[data-ui=new] body{background:#ECE7DE;color:#1F1D1A;font-family:"Noto Serif CJK SC","Source Han Serif SC","Songti SC",serif}
+html[data-ui=new] h1,html[data-ui=new] h2{font-family:"Noto Serif CJK SC","Source Han Serif SC","Songti SC",serif;font-weight:900}
+html[data-ui=new] section{background:#F7F3EC;border-color:#E4DFD6;box-shadow:0 1px 2px rgba(60,45,30,.05)}
+html[data-ui=new] .summary{background:#F7F3EC;border-left-color:#9E2B1F}
+html[data-ui=new] .tz button.on{background:#4A6FA5;color:#fff}
+html[data-ui=new] .pill{background:#9E2B1F}
+html[data-ui=new] a{color:#4A6FA5}
+</style></head><body><div class="wrap"><div class="topbar"><a class="back" href="../index.html">← 返回看板</a><div class="tz" id="tz" role="group" aria-label="显示时区"><button type="button" data-tz="cst" class="on" aria-pressed="true">北京时间</button><button type="button" data-tz="utc" aria-pressed="false">UTC</button></div><button type="button" class="ui-toggle" data-ui-set="classic">经典版</button><span class="crumb">美股中概&amp;出海 · 2026-10-14 · 🎯 重点追踪</span></div><h1>智谱 / 月之暗面 / 中国大模型：Anthropic 反蒸馏点名续传：中文主帖 @AYi_AI…</h1><div class="meta"><span class="pill">智谱 / 月之暗面 / 中国大模型</span><span class="badge b-real">【实锤】</span><span class="src">X</span><span class="src">媒体</span><span class="note">📅 10-12/14</span><div class="phr" data-heat="1"><span class="pstamp">爆</span><span class="pnum">35.6万浏览</span><div class="phb"><i style="width:46%"></i></div></div></div><div class="summary">Anthropic 反蒸馏点名续传：中文主帖 @AYi_AInotes 浏览升至约 35.6 万（上一档约 30.7 万），赞约 1294、转 165。X 相关发帖自 21Z 起约 274，近 3h 约 42→31→14 📉 继续回落；窗口内未见智谱/月之暗面逐条官方回应。DeepSeek「约 1000 亿融资」主报道落在 10-13 早间（窗口外），本档不重复展开。</div><section><h2>原文</h2><blockquote class="orig xbody" data-orig="1" data-len="0" data-fold="72" data-miss="1"><div class="poh xmeta"><b>Anthropic 官方</b></div><p class="xmiss">原文未缓存</p><a class="ext" href="https://www.anthropic.com/research/distillation-defenses" target="_blank" rel="noopener"><span>原链接</span></a></blockquote><blockquote class="orig xbody" data-orig="1" data-len="658" data-fold="72"><div class="poh xmeta"><svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><b>AYi @AYi_AInotes</b><time datetime="2026-10-13T01:18:43Z">2026-10-13 09:18</time><span class="note">浏览 35.6万</span><span class="note">赞 1294</span><span class="note">转 165</span></div><div class="clampbox" data-len="658" data-fold="72"><p class="xtext clamp">Anthropic 这篇官方檄文可以说是彻底撕破脸了，
+直接公开点名智谱和月之暗面，把大模型圈工业级偷思维链的黑产老底全掀了。
+
+A社刚发了今年火药味最浓的一篇官方研究，
+直接公开点名智谱和月之暗面，把大模型行业暗流涌动的工业级蒸馏偷家产业链掀到了台面上。
+
+很多人一直在好奇，为什么海外大厂砸几十亿美金苦练的顶级推理能力，一些团队只要花几分之一的时间和成本就能迅速追平。
+
+Anthropic 这次拿出的数据极其吓人，
+他们发现有大量黑产和机构控制着几十万个虚假账号，
+通过代理网络疯狂给 Claude 发送数百万次请求，
+核心目标根本不是偷答案，而是偷 Claude 在输出前的完整思维链。
+
+数据表明，拿完整的推理思考过程去训小模型，
+代码评测能直接冲到 80.4%，而只拿精简答案去训只有 71.8%，这十个点的差距就是大模型最值钱的核心资产。
+
+为了防住这种工业级抽血，Anthropic 这次直接上了三套极其绝情的硬手段：
+
+一是锁死推理上下文，新 API 账号彻底禁止篡改对话历史，把思维链只留给本机构；
+二是把防蒸馏的安全分类器直接拉到了防生物武器的同等级别，误伤率低于千分之一； 
+三是把被拦截的恶意请求照样扣费，并在几小时内封掉了几万个洗白账号。
+
+这一套组合拳打下来，官方统计直接把被偷走的数据量砍掉了 90% 到 99%，为此 Anthropic 宁可主动拒掉数万亿 Token 的真金白银收入。
+
+说白了，以前大模型赛道表面拼的是参数和跑分，暗地里拼的是谁能更隐蔽地把前沿大模型当免费老师来抽血，
+
+当思维链的输血管道被巨头彻底焊死，真正拼底层原生内功的淘汰赛也许才刚刚开始啊～～</p><button type="button" class="xmore" aria-expanded="false">展开</button></div><a class="ext ext-x" href="https://x.com/AYi_AInotes/status/2109816068462256394" target="_blank" rel="noopener" title="X"><svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>原链接</span></a></blockquote></section><section><h2>📖 事件经过</h2><p>Anthropic 反蒸馏点名续传：中文主帖 @AYi_AInotes 浏览升至约 35.6 万（上一档约 30.7 万），赞约 1294、转 165。X 相关发帖自 21Z 起约 274，近 3h 约 42→31→14 📉 继续回落；窗口内未见智谱/月之暗面逐条官方回应。DeepSeek「约 1000 亿融资」主报道落在 10-13 早间（窗口外），本档不重复展开。</p><p class="na">暂无更详细的事件经过</p></section><section><h2>🕒 进展时间线</h2><p class="na">暂无数据</p></section><section><h2>📊 各平台热度</h2><div class="note">简报收录时的浏览量：</div><ul><li><a class="ext ext-x" href="https://x.com/AYi_AInotes/status/2109816068462256394" target="_blank" rel="noopener" title="X"><svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>X @AYi_AInotes</span></a> · 👁 35.6万</li></ul><h3 style="font-size:15px;margin:14px 0 4px">微博热搜</h3><p class="na">暂无数据</p><h3 style="font-size:15px;margin:14px 0 4px">其他平台</h3><p class="na">暂无数据</p></section><section><h2>💬 典型评论</h2><p class="na">暂无数据</p></section><section><h2>📢 各方回应</h2><p class="na">暂无数据</p></section><section><h2>🔗 相关事件</h2><ul><li><a href="20261014-adr-01Z-didi-focus.html">滴滴 &amp; 滴滴出海</a>：本期有新动态（详见「海外小语种线索」与下条）：①日本合资 DiDiモビリティジャパン 决算公告梳理—…</li><li><a href="20261014-adr-01Z-bytedance-none.html">字节 / TikTok</a>：本期无重大新动态。窗口内多为流量份额分析、A 股短剧情绪跟帖及旧闻二次传播（如海外短剧 App Pi…</li></ul></section><section><h2>📚 所有来源链接</h2><ul><li><a class="ext" href="https://www.anthropic.com/research/distillation-defenses" target="_blank" rel="noopener"><span>Anthropic 官方</span></a> <span class="note">https://www.anthropic.com/research/distillation-defenses</span></li><li><a class="ext ext-x" href="https://x.com/AYi_AInotes/status/2109816068462256394" target="_blank" rel="noopener" title="X"><svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>X @AYi_AInotes</span></a> · 👁 35.6万 <span class="note">https://x.com/AYi_AInotes/status/2109816068462256394</span></li></ul></section><p class="note" style="margin-top:20px">本页仅展示数据文件中已有的信息；【传闻】为单方面说法，未经核实。缺失字段显示“暂无数据”。</p></div><script src="../src/post_ui.js"></script><script>(function(){var KEY="gossipTz";function getTz(){try{var v=localStorage.getItem(KEY);if(v==="utc"||v==="cst")return v}catch(e){}return "cst"}function pad(n){return String(n).padStart(2,"0")}function fmt(iso,tz){var d=new Date(iso);if(isNaN(d))return null;var zone=tz==="utc"?"UTC":"Asia/Shanghai";try{var parts=new Intl.DateTimeFormat("en-CA",{timeZone:zone,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(d);var g=function(t){return parts.find(function(p){return p.type===t}).value};return g("year")+"-"+g("month")+"-"+g("day")+" "+g("hour")+":"+g("minute")+(tz==="utc"?" UTC":"")}catch(e){var x=tz==="utc"?d:new Date(d.getTime()+8*3600000);return x.getUTCFullYear()+"-"+pad(x.getUTCMonth()+1)+"-"+pad(x.getUTCDate())+" "+pad(x.getUTCHours())+":"+pad(x.getUTCMinutes())+(tz==="utc"?" UTC":"")}}function applyTz(){var tz=getTz();document.querySelectorAll("time[datetime]").forEach(function(el){var f=fmt(el.getAttribute("datetime"),tz);if(f)el.textContent=f});document.querySelectorAll("#tz [data-tz]").forEach(function(b){var on=b.getAttribute("data-tz")===tz;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false")})}function applyUi(){var ui=document.documentElement.dataset.ui==="classic"?"classic":"new";var btn=document.querySelector("[data-ui-set]");if(btn){var next=ui==="new"?"classic":"new";btn.setAttribute("data-ui-set",next);btn.textContent=ui==="new"?"经典版":"新版"}var back=document.querySelector("a.back");if(back)back.href="../index.html?ui="+ui}function setUi(mode){if(mode!=="classic"&&mode!=="new")return;document.documentElement.dataset.ui=mode;try{localStorage.setItem("gossipUi",mode)}catch(e){}var u=new URL(location.href);u.searchParams.set("ui",mode);history.replaceState(null,"",u.pathname+u.search+u.hash);applyUi()}document.addEventListener("click",function(e){var ui=e.target.closest&&e.target.closest("[data-ui-set]");if(ui){setUi(ui.getAttribute("data-ui-set"));return}var b=e.target.closest&&e.target.closest("#tz button[data-tz]");if(!b)return;try{localStorage.setItem(KEY,b.getAttribute("data-tz"))}catch(_){}applyTz()});if(window.PostUI){PostUI.bind(document);PostUI.wireClamps(document)}applyTz();applyUi()})();</script></body></html>

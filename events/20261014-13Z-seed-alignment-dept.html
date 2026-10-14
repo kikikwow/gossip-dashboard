@@ -1,13 +1,23 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>字节跳动·Seed：字节 Seed 发内部邮件，成立「Seed Model-Al…</title>
-<script>try{var t=(location.hash.match(/theme=(\w+)/)||[])[1]||localStorage.getItem("gossipTheme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script><style>
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark" data-ui="new"><head><script>try{var q=new URLSearchParams(location.search).get("ui");var ui=(q==="classic"||q==="new")?q:localStorage.getItem("gossipUi");if(ui!=="classic"&&ui!=="new")ui="new";if(q==="classic"||q==="new"){try{localStorage.setItem("gossipUi",q)}catch(e){}}document.documentElement.dataset.ui=ui;var t=(location.hash.match(/theme=(\w+)/)||[])[1]||localStorage.getItem("gossipTheme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>字节跳动·Seed：字节 Seed 发内部邮件，成立「Seed Model-Al…</title>
+<link rel="stylesheet" href="../src/post.css"><style>
 :root{--bg:#0d1117;--card:#1a2130;--line:#283244;--tx:#e6edf3;--mut:#8b98ab;--acc:#ff6b4a;--acc2:#4f8cff;--ok:#22c55e;--rumor:#a78bfa;--warn:#f59e0b}
 [data-theme=paper]{--bg:#f4ecd8;--card:#fbf6e9;--line:#cbbd9b;--tx:#211c14;--mut:#6d6250;--acc:#8b1e1e;--acc2:#7a3b0c;--ok:#2f6b2f;--rumor:#6b3fa0;--warn:#8b5a00}
 [data-theme=paper] body{font-family:"Noto Serif CJK SC","Source Han Serif SC",serif}
 [data-theme=feed]{--bg:#f2f3f5;--card:#fff;--line:#e8eaee;--tx:#15181d;--mut:#7a818c;--acc:#fe2c55;--acc2:#1677ff}
 [data-theme=hot]{--bg:#fff7f3;--card:#fff;--line:#f3dfd6;--tx:#222;--mut:#8a8a8a;--acc:#ff4d1a;--acc2:#eb7350}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font-family:"Noto Sans CJK SC","Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;font-size:15px;line-height:1.75}
-a{color:var(--acc2)}.wrap{max-width:920px;margin:0 auto;padding:0 20px 50px}
-.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font-size:13px;color:var(--mut)}
+a{color:var(--acc2)}a.ext{display:inline-flex;align-items:center;gap:4px}.plogo{width:16px;height:16px;flex:none;display:block}.wrap{max-width:920px;margin:0 auto;padding:0 20px 50px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding:14px 0;font-size:13px;color:var(--mut)}
+.topbar .crumb{margin-left:auto;text-align:right}
+.tz{display:inline-flex;flex-shrink:0;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card)}
+.tz button{background:transparent;color:var(--tx);border:0;font:inherit;padding:6px 12px;min-height:36px;cursor:pointer;line-height:1.3}
+.tz button.on{background:var(--acc);color:#fff;font-weight:700}
+time{font-variant-numeric:tabular-nums}
+@media(max-width:430px){
+ .wrap{padding:0 12px 40px}h1{font-size:22px}
+ .topbar{align-items:flex-start}.topbar .crumb{flex:1 1 100%;margin-left:0;text-align:left;font-size:12px}
+ .tz{order:3;width:100%}.tz button{flex:1;min-height:44px;font-size:15px}
+}
 h1{font-size:28px;line-height:1.35;margin:6px 0 10px}
 .meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
 .pill{background:var(--acc);color:#fff;border-radius:999px;padding:1px 12px;font-weight:700}
@@ -15,7 +25,14 @@ h1{font-size:28px;line-height:1.35;margin:6px 0 10px}
 .src{font-size:12px;color:var(--mut);border:1px solid var(--line);border-radius:6px;padding:0 6px}
 .summary{background:var(--card);border-left:4px solid var(--acc);padding:14px 18px;border-radius:0 10px 10px 0;font-size:16px}
 section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:18px}
-section h2{margin:0 0 10px;font-size:18px}.na{color:var(--mut);font-style:italic;margin:0}.note{font-size:12px;color:var(--mut)}
+section h2{margin:0 0 10px;font-size:18px}.na{color:var(--mut);font-style:italic;margin:0}.note{font-size:12px;color:var(--mut);overflow-wrap:anywhere}
+.xbody{margin:8px 0;padding:8px 10px;border-left:3px solid var(--acc2);background:color-mix(in srgb,var(--acc2) 8%,transparent);border-radius:0 10px 10px 0}
+.xtext{white-space:pre-wrap;margin:4px 0}.xmiss{color:var(--warn);font-weight:800}
+.xmeta{font-size:12.5px}.heat-how{font-size:12.5px;color:var(--mut);border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin:8px 0}
+.heat-how b{color:var(--tx)}.heat-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.heat-brief{margin:2px 0 0}.heat-full{display:none}.heat-how.is-open .heat-full{display:block}.heat-how.is-open .heat-brief{display:none}
+.heat-how .xmore{min-height:44px;border:0;background:transparent;color:var(--acc);font:inherit;font-weight:800;cursor:pointer}
+.chart{max-width:100%;height:auto}
 .tl{border-left:2px solid var(--line);padding-left:18px;margin-left:6px}.tli{position:relative;margin-bottom:10px}.tli:before{content:"";position:absolute;left:-25px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--acc)}
 .tli .d{font-weight:700;color:var(--acc);margin-right:8px;font-variant-numeric:tabular-nums}
 .post{border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:10px}
@@ -26,4 +43,103 @@ section h2{margin:0 0 10px;font-size:18px}.na{color:var(--mut);font-style:italic
 .resp{margin:10px 0}.resp b{display:block}
 ul{padding-left:20px;margin:6px 0}
 .kv{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}.kv div{border:1px solid var(--line);border-radius:8px;padding:8px 12px}
-</style></head><body><div class="wrap"><div class="topbar"><a href="../index.html">← 返回看板</a><span>大厂八卦 · 2026-10-14 · 🤖 AI 生态互卡 · 大模型</span></div><h1>字节跳动·Seed：字节 Seed 发内部邮件，成立「Seed Model-Al…</h1><div class="meta"><span class="pill">字节跳动·Seed</span><span class="badge b-real">【实锤】</span><span class="src">媒体</span><span class="src">内部邮件</span><span class="src">X</span><span class="note">📅 10-13</span></div><div class="summary">字节 Seed 发内部邮件，成立「Seed Model-Alignment &amp; Preparedness」安全与对齐部门，由严林负责、直接汇报给 Seed 负责人吴永辉；原 Responsible AI 团队和部分 Chat 团队成员转入。方向是智能体安全和防范 CBRN（化学、生物、放射、核）等前沿风险，媒体称这是国内首个单独建制的安全对齐部门。前几期漏报，这期补上。</div><section><h2>📖 事件经过</h2><p>字节 Seed 发内部邮件，成立「Seed Model-Alignment &amp; Preparedness」安全与对齐部门，由严林负责、直接汇报给 Seed 负责人吴永辉；原 Responsible AI 团队和部分 Chat 团队成员转入。方向是智能体安全和防范 CBRN（化学、生物、放射、核）等前沿风险，媒体称这是国内首个单独建制的安全对齐部门。前几期漏报，这期补上。</p><p class="na">暂无更详细的事件经过</p></section><section><h2>🕒 进展时间线</h2><p class="na">暂无数据</p></section><section><h2>📊 各平台热度</h2><div class="note">简报收录时的浏览量：</div><ul><li><a href="https://x.com/xiaogaifun/status/2110251061646958742" target="_blank" rel="noopener">X @xiaogaifun</a> · 👁 602</li></ul><h3 style="font-size:15px;margin:14px 0 4px">微博热搜</h3><p class="na">暂无数据</p><h3 style="font-size:15px;margin:14px 0 4px">其他平台</h3><p class="na">暂无数据</p></section><section><h2>💬 典型评论</h2><p class="na">暂无数据</p></section><section><h2>📢 各方回应</h2><p class="na">暂无数据</p></section><section><h2>🔗 相关事件</h2><ul><li><a href="20261014-13Z-doubao-saep-151.html">字节·豆包 / 腾讯 / 阿里 / 拼多多 / 美团 / 快手 / 小红书 / DeepSeek / 月之暗面</a>：豆包手机助手的屏幕自动化操作声明协议（SAEP）30 天公示期 10-14 结束，开始逐步放开第三方…</li><li><a href="20261014-13Z-cn-opensource-silent.html">智谱 / 月之暗面 / DeepSeek / 阿里·通义</a>：X 热帖调侃「国内开源基础模型（GLM/Kimi/DeepSeek/Qwen）突然集体鸦雀无声」，怀…</li></ul></section><section><h2>📚 所有来源链接</h2><ul><li><a href="https://www.thepaper.cn/newsDetail_forward_34241236" target="_blank" rel="noopener">澎湃新闻</a> <span class="note">https://www.thepaper.cn/newsDetail_forward_34241236</span></li><li><a href="https://k.sina.cn/article_1644114654_61ff32de02002bids.html" target="_blank" rel="noopener">新京报（新浪）</a> <span class="note">https://k.sina.cn/article_1644114654_61ff32de02002bids.html</span></li><li><a href="https://x.com/xiaogaifun/status/2110251061646958742" target="_blank" rel="noopener">X @xiaogaifun</a> · 👁 602 <span class="note">https://x.com/xiaogaifun/status/2110251061646958742</span></li></ul></section><p class="note" style="margin-top:20px">本页仅展示数据文件中已有的信息；【传闻】为单方面说法，未经核实。缺失字段显示“暂无数据”。</p></div></body></html>
+.ui-toggle{min-height:44px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--tx);font:inherit;font-weight:700;cursor:pointer}
+html[data-ui=new]{--bg:#ECE7DE;--card:#F7F3EC;--line:#E4DFD6;--tx:#1F1D1A;--mut:#6E665A;--acc:#9E2B1F;--acc2:#4A6FA5;--ok:#3F6B4A;--warn:#C9824A;--rumor:#9A5A2B}
+html[data-ui=new] body{background:#ECE7DE;color:#1F1D1A;font-family:"Noto Serif CJK SC","Source Han Serif SC","Songti SC",serif}
+html[data-ui=new] h1,html[data-ui=new] h2{font-family:"Noto Serif CJK SC","Source Han Serif SC","Songti SC",serif;font-weight:900}
+html[data-ui=new] section{background:#F7F3EC;border-color:#E4DFD6;box-shadow:0 1px 2px rgba(60,45,30,.05)}
+html[data-ui=new] .summary{background:#F7F3EC;border-left-color:#9E2B1F}
+html[data-ui=new] .tz button.on{background:#4A6FA5;color:#fff}
+html[data-ui=new] .pill{background:#9E2B1F}
+html[data-ui=new] a{color:#4A6FA5}
+</style></head><body><div class="wrap"><div class="topbar"><a class="back" href="../index.html">← 返回看板</a><div class="tz" id="tz" role="group" aria-label="显示时区"><button type="button" data-tz="cst" class="on" aria-pressed="true">北京时间</button><button type="button" data-tz="utc" aria-pressed="false">UTC</button></div><button type="button" class="ui-toggle" data-ui-set="classic">经典版</button><span class="crumb">大厂八卦 · 2026-10-14 · 🤖 AI 生态互卡 · 大模型</span></div><h1>字节跳动·Seed：字节 Seed 发内部邮件，成立「Seed Model-Al…</h1><div class="meta"><span class="pill">字节跳动·Seed</span><span class="badge b-real">【实锤】</span><span class="src">媒体</span><span class="src">内部邮件</span><span class="src">X</span><span class="note">📅 10-13</span><div class="phr" data-heat="1"><span class="pbadge wen">温</span><span class="pnum">602浏览</span><div class="phb"><i style="width:8%"></i></div></div></div><div class="summary">字节 Seed 发内部邮件，成立「Seed Model-Alignment &amp; Preparedness」安全与对齐部门，由严林负责、直接汇报给 Seed 负责人吴永辉；原 Responsible AI 团队和部分 Chat 团队成员转入。方向是智能体安全和防范 CBRN（化学、生物、放射、核）等前沿风险，媒体称这是国内首个单独建制的安全对齐部门。前几期漏报，这期补上。</div><section><h2>原文</h2><blockquote class="orig xbody" data-orig="1" data-len="0" data-fold="72" data-miss="1"><div class="poh xmeta"><b>澎湃新闻</b></div><p class="xmiss">原文未缓存</p><a class="ext" href="https://www.thepaper.cn/newsDetail_forward_34241236" target="_blank" rel="noopener"><span>原链接</span></a></blockquote><blockquote class="orig xbody" data-orig="1" data-len="0" data-fold="72" data-miss="1"><div class="poh xmeta"><b>新京报（新浪）</b></div><p class="xmiss">原文未缓存</p><a class="ext" href="https://k.sina.cn/article_1644114654_61ff32de02002bids.html" target="_blank" rel="noopener"><span>原链接</span></a></blockquote><blockquote class="orig xbody" data-orig="1" data-len="2451" data-fold="72"><div class="poh xmeta"><svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><b>小盖 @xiaogaifun</b><time datetime="2026-10-14T06:07:14Z">2026-10-14 14:07</time><span class="note">浏览 602</span><span class="note">赞 1</span><span class="note">转 1</span></div><div class="clampbox" data-len="2451" data-fold="72"><p class="xtext clamp">我天，字节 Seed 真是带了个好头。昨天，他们宣布成立独立的安全与对齐部门，我没记错的话，这是国内第一个单独建制的安全与对齐部门。
+
+我发现很多人可能还没有意识到这事的重要性。
+
+之前我在 X 上看到有人调侃，说中国的 AI 研究员聚在一起讨论技术，根本不聊 AI 安全。而硅谷的研究员，动不动就因为公司不够重视 AI 安全而辞职。
+
+虽然这个说法有点夸张，但确实形成了挺鲜明的对比。
+
+恰好就在前几天，10 月 9 日，路透社还发表了一篇报道，吐槽中国头部模型公司公开披露安全评测结果的比例非常低。
+
+这份研究统计了阿里、字节、腾讯、DeepSeek 等九家中国头部模型公司，从 2021 年到今年 9 月中旬发布的 857 次模型。其中只有 3.6% 的模型发布，能够找到对应的公开安全评测结果。
+
+当然，这不代表这些公司私下没有进行安全测试。但至少从公开的信息来看，国内目前还很少有公司像 OpenAI、Anthropic 这样的硅谷一线实验室，系统地披露模型的前沿危险能力评测。
+
+我们都知道，OpenAI 和 Anthropic 一直非常重视 AI 安全。
+
+上个月 Salesforce 的 Dreamforce 大会上，黄仁勋、Sam Altman，还有 Anthropic 的创始人 Dario Amodei，都分享了各自对 AI 发展的判断。我当时就注意到，他们几乎都在讨论 AI 安全。
+
+特别是 Sam 和 Dario 这俩死对头，也在 AI 安全这事上心照不宣。
+
+为什么？
+
+因为过去这段时间，模型能力确实又上了一个台阶，而且开始出现一些让人细思极恐的事情。
+
+比如前段时间，OpenAI 公开了一份调查报告。今年 7 月，他们在内部进行网络安全评测时，发现一些 AI Agent 竟然自己找到了系统漏洞，突破原本的沙箱隔离限制，甚至入侵了 Hugging Face 的部分系统。
+
+整个过程中，人类并没有要求它们攻击 Hugging Face。
+
+Anthropic 也遇到了类似的问题。
+
+上周 Anthropic 还公布了一份报告，披露 Claude 在一些内部使用和评测场景中，出现了未经授权的行为。
+
+比如为了完成科学分析任务，Claude 自己寻找并利用网站漏洞，在服务器上执行命令。还有一次，它原本应该填写模拟表格，结果跑到真实网站提交了表格。
+
+这些事情，研究人员都没有要求它去做。
+
+你想想，过去我们讨论模型能力，更多关注的是它能不能完成长程任务，能不能独立推理、编写代码，或者自主解决复杂问题。这些能力当然都很重要，因为它们可以极大地提高生产力。
+
+但现在问题来了。当 AI 越来越聪明，能够自己寻找解决问题的办法时，它也可能为了完成任务，做出一些人类根本没有授权的事情。
+
+甚至可能影响其他人和其他系统的安全。这就很可怕了。
+
+前段时间，我也和几个朋友交流过这件事情。国内大模型和硅谷顶尖闭源模型之间的能力差距确实正在缩小。尤其是最近一年，国产模型的进步大家应该都有目共睹。
+
+但模型能力越来越接近，安全与对齐相关的研究差距却还是非常明显。所以这次字节 Seed 单独成立安全与对齐部门，确实是开一个好头。
+
+可能很多人一听对齐这个词，会觉得不就是让模型听人类的话吗？这事有那么难吗？
+
+我跟大家讲，这事真的非常难。
+
+而且你可能想象不到，在 OpenAI、Anthropic 这样的公司里，做这项研究的都是些什么人。
+
+比如 Ilya Sutskever，OpenAI 的元老，前首席科学家。2023 年，OpenAI 专门成立了一个叫 Superalignment 的研究团队，研究怎么控制未来可能比人类更聪明的 AI。
+
+这个团队的一号位就是 Ilya。Anthropic 也一样。负责这事的人都是公司里非常厉害的研究员。
+
+因为安全与对齐研究涉及的问题，比我们想象的复杂得多。
+
+我简单解释一下。
+
+首先，最基础的一项工作，就是研究怎么把 AI 训练得更加安全。比如怎么让 AI 理解人类的真实意图，知道哪些事情可以自己决定，哪些事情必须获得授权，以及遇到复杂情况的时候应该怎么判断。
+
+Anthropic 就有一个非常著名的研究，叫 Constitutional AI，也就是宪法 AI。
+
+他们专门给 Claude 制定了一套宪法。这份文件详细解释了 Claude 应该遵循什么样的价值观、行为原则，以及当用户的要求和安全原则发生冲突时，应该如何处理。
+
+整体的逻辑是希望通过训练，让这些原则真正影响模型的行为，使它遇到陌生情况时，也能做出符合人类意图和安全要求的判断。
+
+这其实就已经深入到了模型的后训练和强化学习过程。
+
+但问题还没有这么简单。
+
+因为随着模型越来越聪明，它可能会为了完成任务，想办法绕过某些规则。甚至在一些专门设计的实验中，模型还可能表现出欺骗评测系统、隐藏不符合要求的行为倾向等问题。
+
+这就更麻烦了。你不光要研究怎么训练模型，还要研究怎么发现这些问题。
+
+比如，一个模型在测试的时候表现得非常正常，到了真实环境里却出现了危险行为，该怎么办？如果模型执行的任务已经复杂到人类都很难完整检查，又该怎么监督它？
+
+这些都是安全与对齐团队需要研究的问题。
+
+所以，安全与对齐听起来好像是一个比较边缘的研究方向，但实际上，它和模型最核心的能力研究有着非常紧密的联系。这也是为什么 OpenAI 和 Anthropic 愿意让最优秀的一批科学家长期投入这件事情。
+
+回过头来看字节 Seed。这次新成立的部门，叫 Alignment &amp; Preparedness，由严林负责，直接向 Seed 负责人吴永辉汇报。
+
+也就是说，字节现在把前沿模型安全与对齐研究单独建制，并且直接和模型的核心研发联系起来。这和 OpenAI、Anthropic 这些一线实验室的研究方向，已经有了非常清晰的对应关系。
+
+这次 Seed 还启动了 Safety &amp; Alignment 全球人才招聘计划，准备招募十位顶尖研究员。而且会提供充足的算力支持，让研究人员能够直接基于前沿模型开展研究。
+
+说实话，我还挺佩服字节这次的投入和决心。
+
+过去很多年，我们在一些基础技术领域一直处于追赶的位置。大家往往更关心怎么尽快缩小能力差距，但安全的问题和模型能力一样重要。就像当年发展工业一样，我们不可能说为了工业，然后牺牲环境安全，要不然这个代价就太大了。</p><button type="button" class="xmore" aria-expanded="false">展开</button></div><a class="ext ext-x" href="https://x.com/xiaogaifun/status/2110251061646958742" target="_blank" rel="noopener" title="X"><svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>原链接</span></a></blockquote></section><section><h2>📖 事件经过</h2><p>字节 Seed 发内部邮件，成立「Seed Model-Alignment &amp; Preparedness」安全与对齐部门，由严林负责、直接汇报给 Seed 负责人吴永辉；原 Responsible AI 团队和部分 Chat 团队成员转入。方向是智能体安全和防范 CBRN（化学、生物、放射、核）等前沿风险，媒体称这是国内首个单独建制的安全对齐部门。前几期漏报，这期补上。</p><p class="na">暂无更详细的事件经过</p></section><section><h2>🕒 进展时间线</h2><p class="na">暂无数据</p></section><section><h2>📊 各平台热度</h2><div class="note">简报收录时的浏览量：</div><ul><li><a class="ext ext-x" href="https://x.com/xiaogaifun/status/2110251061646958742" target="_blank" rel="noopener" title="X"><svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>X @xiaogaifun</span></a> · 👁 602</li></ul><h3 style="font-size:15px;margin:14px 0 4px">微博热搜</h3><p class="na">暂无数据</p><h3 style="font-size:15px;margin:14px 0 4px">其他平台</h3><p class="na">暂无数据</p></section><section><h2>💬 典型评论</h2><p class="na">暂无数据</p></section><section><h2>📢 各方回应</h2><p class="na">暂无数据</p></section><section><h2>🔗 相关事件</h2><ul><li><a href="20261014-13Z-doubao-saep-151.html">字节·豆包 / 腾讯 / 阿里 / 拼多多 / 美团 / 快手 / 小红书 / DeepSeek / 月之暗面</a>：豆包手机助手的屏幕自动化操作声明协议（SAEP）30 天公示期 10-14 结束，开始逐步放开第三方…</li><li><a href="20261014-13Z-cn-opensource-silent.html">智谱 / 月之暗面 / DeepSeek / 阿里·通义</a>：X 热帖调侃「国内开源基础模型（GLM/Kimi/DeepSeek/Qwen）突然集体鸦雀无声」，怀…</li></ul></section><section><h2>📚 所有来源链接</h2><ul><li><a class="ext" href="https://www.thepaper.cn/newsDetail_forward_34241236" target="_blank" rel="noopener"><span>澎湃新闻</span></a> <span class="note">https://www.thepaper.cn/newsDetail_forward_34241236</span></li><li><a class="ext" href="https://k.sina.cn/article_1644114654_61ff32de02002bids.html" target="_blank" rel="noopener"><span>新京报（新浪）</span></a> <span class="note">https://k.sina.cn/article_1644114654_61ff32de02002bids.html</span></li><li><a class="ext ext-x" href="https://x.com/xiaogaifun/status/2110251061646958742" target="_blank" rel="noopener" title="X"><svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>X @xiaogaifun</span></a> · 👁 602 <span class="note">https://x.com/xiaogaifun/status/2110251061646958742</span></li></ul></section><p class="note" style="margin-top:20px">本页仅展示数据文件中已有的信息；【传闻】为单方面说法，未经核实。缺失字段显示“暂无数据”。</p></div><script src="../src/post_ui.js"></script><script>(function(){var KEY="gossipTz";function getTz(){try{var v=localStorage.getItem(KEY);if(v==="utc"||v==="cst")return v}catch(e){}return "cst"}function pad(n){return String(n).padStart(2,"0")}function fmt(iso,tz){var d=new Date(iso);if(isNaN(d))return null;var zone=tz==="utc"?"UTC":"Asia/Shanghai";try{var parts=new Intl.DateTimeFormat("en-CA",{timeZone:zone,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(d);var g=function(t){return parts.find(function(p){return p.type===t}).value};return g("year")+"-"+g("month")+"-"+g("day")+" "+g("hour")+":"+g("minute")+(tz==="utc"?" UTC":"")}catch(e){var x=tz==="utc"?d:new Date(d.getTime()+8*3600000);return x.getUTCFullYear()+"-"+pad(x.getUTCMonth()+1)+"-"+pad(x.getUTCDate())+" "+pad(x.getUTCHours())+":"+pad(x.getUTCMinutes())+(tz==="utc"?" UTC":"")}}function applyTz(){var tz=getTz();document.querySelectorAll("time[datetime]").forEach(function(el){var f=fmt(el.getAttribute("datetime"),tz);if(f)el.textContent=f});document.querySelectorAll("#tz [data-tz]").forEach(function(b){var on=b.getAttribute("data-tz")===tz;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on?"true":"false")})}function applyUi(){var ui=document.documentElement.dataset.ui==="classic"?"classic":"new";var btn=document.querySelector("[data-ui-set]");if(btn){var next=ui==="new"?"classic":"new";btn.setAttribute("data-ui-set",next);btn.textContent=ui==="new"?"经典版":"新版"}var back=document.querySelector("a.back");if(back)back.href="../index.html?ui="+ui}function setUi(mode){if(mode!=="classic"&&mode!=="new")return;document.documentElement.dataset.ui=mode;try{localStorage.setItem("gossipUi",mode)}catch(e){}var u=new URL(location.href);u.searchParams.set("ui",mode);history.replaceState(null,"",u.pathname+u.search+u.hash);applyUi()}document.addEventListener("click",function(e){var ui=e.target.closest&&e.target.closest("[data-ui-set]");if(ui){setUi(ui.getAttribute("data-ui-set"));return}var b=e.target.closest&&e.target.closest("#tz button[data-tz]");if(!b)return;try{localStorage.setItem(KEY,b.getAttribute("data-tz"))}catch(_){}applyTz()});if(window.PostUI){PostUI.bind(document);PostUI.wireClamps(document)}applyTz();applyUi()})();</script></body></html>
