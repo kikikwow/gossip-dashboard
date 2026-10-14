@@ -41,7 +41,7 @@
 热度榜数字 = `heat_log.csv` 里该话题 `x_daily_post_count`（X 检索式的完整 UTC 日发帖量）最近一条，从高到低前 10。没有日发帖量才退回该话题最后一条其他指标。`partial` 是采集截止前的未完成日，只出现在图上，不参与排名。卡片「浏览」是该条 `links[].views` 的最大值，不是榜上的日发帖量；≥10 万显示「爆」，≥1 万显示「热」。topics.md 的「热度」列是编辑备注。
 
 ## X 正文缓存
-`python3 src/cache_x_posts.py` 读取 data 里已有的 status 链接，向 `api.fxtwitter.com` 抓公开快照，写入 `src/x_cache.json`，并给 `detail.x_posts` 补上可选字段 `text` / `author_name`（不改已有浏览数）。抓不到的项 `status=missing`，页面显示「原文未缓存」，不编正文。构建时会再补抓缓存里还没有正文的 status id。然后 `python3 src/build_dashboard.py` 会把缓存打进首页，并写出仓库根目录的 `index.html` 和 `events/`（Pages 用）以及 `src/dashboard/`。卡片和详情页的原文块、平台标志、展开和热度章来自 `src/post_ui.js`。非中文帖若数据里有 `translation_zh` / `lang`，先显示中文译文，原文在「展开」里。`python3 src/check_originals.py` 会在构建后检查每条都有原文块，长文有「展开」。
+`python3 src/cache_x_posts.py` 收集 `src/data/*.json` 里出现的 status 链接，以及 `src/heat_log.csv` 的 `source` 列里的 status 链接，向 `api.fxtwitter.com` 抓公开快照，写入 `src/x_cache.json` 的 `posts[<status id>]`（`author`、`created_at`、`text`、`views` / `likes` / `reposts`、`url`）。并给 `detail.x_posts` 补上可选字段 `text` / `author_name`（不改已有浏览数）。网络失败记 `status=missing`，页面显示「原文未缓存」，下次构建重试。接口明确删帖或空正文记 `status=unavailable`，页面显示「原文不可用」。两种情况都不编正文。构建时 `build_dashboard.py` 会先跑 `fill_missing()`，再把缓存打进首页，并写出仓库根目录的 `index.html` 和 `events/`（Pages 用）以及 `src/dashboard/`。卡片、热榜弹层和详情页的原文块、平台标志、展开和热度章来自 `src/post_ui.js`。非中文帖若数据里有 `translation_zh` / `lang`，先显示中文译文，原文在「展开」里。热榜弹层先写一行「这是在说什么」，这句话只从已缓存正文里摘，然后按最新、浏览高的顺序列代表帖。`python3 src/check_originals.py` 会在构建后检查每条都有原文块，长文有「展开」，每个被引用的 status id 都有缓存或 `unavailable`，并且每个热榜弹层要么有帖，要么有明确的空原因。
 
 ## 时区
 看板顶栏和事件详情页可在「北京时间」（Asia/Shanghai，UTC+8）和「UTC」之间切换。首次打开默认北京时间，选择写入 localStorage `gossipTz`，刷新后保持。只改显示格式；数据文件里的时间仍是原来的 UTC / ISO。有钟点的时间会立刻重绘，不用整页刷新。只有日期、没有钟点的事件日期（如 `10-08`）保持原文。
@@ -75,10 +75,15 @@
 规则：评论必须是真实原文+链接；指标必须来自工具结果并写 fetched_at；没有就留空，不要编。
 
 ## heat_log.csv 约定（v2）
-- `x_daily_post_count`：timestamp 用当日 `YYYY-MM-DDT23:59:59Z`，value 为该 UTC 日发帖量 → 热度榜按最近一日排序、画折线。
-- `x_post_<views|likes|reposts|replies>:@handle`：单帖指标，source 为帖子链接。
+文件就是 `src/heat_log.csv`。每小时 / 简报任务如果写在追踪仓库，路径是 `/workspace/gossip-tracking/heat_log.csv`，列相同，同步进本仓库后再构建。
+
+- `x_daily_post_count`：timestamp 用当日 `YYYY-MM-DDT23:59:59Z`，value 为该 UTC 日发帖量 → 热度榜按最近一日排序、画折线。这一行的 `source` 通常是检索式，**不是**帖子 id。
+- `x_sample_post`：**代表帖，热榜弹层靠它出原文。** `value` 填该帖浏览量，没有就填 `0`。`source` 必须是完整链接 `https://x.com/<handle>/status/<id>`。同一个话题可以追加多行。构建会按这个链接抓进 `src/x_cache.json`。
+- `x_post_<views|likes|reposts|replies>:@handle` 和 `x_top_post_views:@handle`：单帖指标。`source` 里只要有 status 链接，同样会当作代表帖缓存并显示。
 - `x_post_count_partial_<date>`：当日未完结的部分计数。
-topic 用 topics.md 短期话题原名时，短期热点面板会显示折线。
+- `weibo_hot_rank` / `weibo_hot_score`：微博热搜。`source` 不是 X status 时，热榜弹层不会编微博正文，只写明「没有代表帖」。
+
+只追加日发帖量、不追加 `x_sample_post`（或其它带 status 链接的行）时，热榜弹层没有原文，并会写出这个原因。topic 用 topics.md 短期话题原名时，短期热点面板会显示折线。
 
 ## research/
 `research/` 保存 2026-10-13 深度调研的原始 X 工具结果与 `enrich_details.py`（把 detail 写入 data/ 并追加 heat_log；**勿重复运行**，否则 heat_log 会重复追加）。

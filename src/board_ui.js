@@ -107,25 +107,10 @@
 </div></div>`;
   }
   function topicSeries(topic) {
-    const H = D.heat || [];
-    const daily = H.filter(r => r.topic === topic && r.metric === 'x_daily_post_count').slice().sort((a, b) => a.timestamp_utc < b.timestamp_utc ? -1 : 1);
-    const partial = H.filter(r => r.topic === topic && String(r.metric).indexOf('partial') >= 0).slice().sort((a, b) => a.timestamp_utc < b.timestamp_utc ? -1 : 1);
-    const pts = daily.map(r => ({ t: r.timestamp_utc, v: +r.value, partial: false }));
-    partial.forEach(r => pts.push({ t: r.timestamp_utc, v: +r.value, partial: true }));
-    return pts;
+    return PostUI.topicSeries(topic, D.heat);
   }
   function topicGroups() {
-    const H = D.heat || [];
-    if (!H.length) return [];
-    const by = {};
-    H.forEach(r => { (by[r.topic] = by[r.topic] || []).push(r); });
-    return Object.keys(by).map(t => {
-      const rs = by[t].slice().sort((a, b) => a.timestamp_utc < b.timestamp_utc ? -1 : 1);
-      const daily = rs.filter(r => r.metric === 'x_daily_post_count');
-      const last = daily.length ? daily[daily.length - 1] : rs[rs.length - 1];
-      const prev = daily.length >= 2 ? daily[daily.length - 2] : null;
-      return { t: t, last: last, delta: prev ? last.value - prev.value : null, pts: topicSeries(t) };
-    });
+    return PostUI.topicGroups(D.heat);
   }
   function heatCands() {
     return ITEMS.map(it => {
@@ -140,42 +125,45 @@
     });
   }
   function heatKey(topic) {
-    const id = PostUI.matchTopic(topic, heatCands());
-    if (id) return 'ev:' + id;
-    return 'tp:' + String(topic || '').replace(/\s+/g, '').replace(/[“”"']/g, '').toLowerCase();
-  }
-  function preferHeat(a, b) {
-    const ad = a.last && a.last.metric === 'x_daily_post_count';
-    const bd = b.last && b.last.metric === 'x_daily_post_count';
-    if (ad !== bd) return ad ? a : b;
-    return (b.last && b.last.value || 0) > (a.last && a.last.value || 0) ? b : a;
+    return PostUI.heatKeyOf(topic, heatCands());
   }
   function dedupeHeat(rows) {
-    const by = new Map();
-    (rows || []).forEach(r => {
-      const key = heatKey(r.t);
-      const prev = by.get(key);
-      if (!prev) { by.set(key, r); return; }
-      const keep = preferHeat(prev, r);
-      const drop = keep === prev ? r : prev;
-      keep.also = (keep.also || prev.also || []).concat(drop.t);
-      by.set(key, keep);
-    });
-    return Array.from(by.values()).sort((a, b) => (b.last.value || 0) - (a.last.value || 0));
+    return PostUI.dedupeHeatRows(rows, heatCands());
   }
   function rankRows() {
-    return dedupeHeat(topicGroups()).slice(0, 10);
+    return PostUI.rankHeat(D.heat, heatCands());
   }
   function shortList() {
-    const seen = new Set(rankRows().map(r => heatKey(r.t)));
+    return PostUI.shortHeat(D.heat, heatCands(), D.shortterm);
+  }
+  function overlayPosts(it) {
+    const seen = {};
     const out = [];
-    (D.shortterm || []).forEach(t => {
-      const key = heatKey(t.name);
-      if (seen.has(key)) return;
-      seen.add(key);
-      out.push(t);
+    function add(p) {
+      if (!p) return;
+      const id = xId(p.url);
+      const key = id || p.url || ('t:' + String(p.text || '').slice(0, 40));
+      if (!key || seen[key]) return;
+      if (!p.url && !String(p.text || '').trim() && !p.translation_zh && p.status !== 'unavailable') return;
+      seen[key] = 1;
+      out.push(p);
+    }
+    PostUI.sourcesOf(it, posts()).forEach(add);
+    const names = {};
+    (D.heat || []).forEach(r => { names[r.topic] = 1; });
+    Object.keys(names).forEach(topic => {
+      if (PostUI.matchTopic(topic, heatCands()) !== it.id) return;
+      PostUI.heatSamples(topic, D.heat, posts(), ITEMS).forEach(add);
     });
-    return out;
+    return PostUI.orderPosts(out);
+  }
+  function aboutHtml(list) {
+    const line = PostUI.heatAbout(list);
+    if (!line) return '';
+    return '<p class="psum heat-about"><b>这是在说什么</b> ' + esc(line) + '</p>';
+  }
+  function postsHtml(list) {
+    return (list || []).map(p => PostUI.origBlock(p, { clamp: true, formatTime: fmtTs })).join('');
   }
   function axisLabel(p) {
     if (!parseTs(p.t)) return String(p.t || '').replace('*', '');
@@ -723,10 +711,6 @@
     const row = rankRows().find(r => r.t === topic) || dedupeHeat(topicGroups()).find(r => r.t === topic || (r.also || []).indexOf(topic) >= 0);
     const short = (D.shortterm || []).find(t => t.name === topic);
     const id = PostUI.matchTopic(topic, heatCands());
-    const related = ITEMS.filter(it => {
-      const d = it.detail || {};
-      return PostUI.matchTopic(topic, [{ id: it.id, title: d.title || '', company: it.company || '', blob: it.text || '', rich: !!(d.title || (d.timeline && d.timeline.length)) }]) === it.id;
-    });
     const paper = document.documentElement.dataset.ui !== 'classic';
     const summary = row
       ? (row.last.metric === 'x_daily_post_count'
@@ -740,16 +724,31 @@
     pts.sort((a, b) => String(b.t).localeCompare(String(a.t)));
     const kind = row && row.last && row.last.metric === 'x_daily_post_count' ? 'X 日发帖' : (row && row.last ? row.last.metric : '记录');
     const nodes = pts.map(p => '<div class="' + (paper ? 'pnode' : 'tl') + '"><b>' + esc(fmtHeatDay(p.t)) + (p.partial ? ' 未完结' : '') + '</b> ' + esc(kind) + ' ' + fmt(p.v) + '</div>').join('');
-    const orig = related.slice(0, 5).map(it => '<div class="' + (paper ? 'pnode' : 'tl') + '"><div>' + esc(it.date || '') + ' · ' + esc(displayLabel(it.company)) + '</div><div>' + esc(it.text || '') + '</div>' + itemOrig(it) + '</div>').join('');
+    const names = [topic].concat((row && row.also) || []);
+    const seenPost = {};
+    let samples = [];
+    names.forEach(name => {
+      PostUI.heatSamples(name, D.heat, posts(), ITEMS).forEach(p => {
+        const pid = xId(p.url);
+        if (!pid || seenPost[pid]) return;
+        seenPost[pid] = 1;
+        samples.push(p);
+      });
+    });
+    samples = PostUI.orderPosts(samples);
+    const reason = PostUI.heatEmptyReason(topic, samples, D.heat);
+    const about = PostUI.heatAbout(samples) || reason;
+    const sampleHtml = samples.map(p => PostUI.origBlock(p, { clamp: true, formatTime: fmtTs })).join('');
     const ui = document.documentElement.dataset.ui === 'classic' ? 'classic' : 'new';
-    const page = id ? '<p class="pfoot"><a href="events/' + encodeURIComponent(id) + '.html?ui=' + ui + '">独立页面</a></p>' : '<p class="note">现有期次里没有单独的事件页，这里只列出 heat_log 和能对上的条目。</p>';
+    const page = id ? '<p class="pfoot"><a href="events/' + encodeURIComponent(id) + '.html?ui=' + ui + '">独立页面</a></p>' : '<p class="note">现有期次里没有单独的事件页。上面只显示 heat_log 里写了 status 链接、并且已经缓存的帖。</p>';
     const head = paper
-      ? '<div class="pkick">热榜 · 最新在上</div><h2 id="ovtitle" class="ptitle" style="font-size:22px">' + esc(topic) + '</h2><p class="psum">' + esc(summary) + '</p>'
-      : '<h2 id="ovtitle">' + esc(topic) + '</h2><p>' + esc(summary) + '</p>';
+      ? '<div class="pkick">热榜 · 最新在上</div><h2 id="ovtitle" class="ptitle" style="font-size:22px">' + esc(displayLabel(topic)) + '</h2><p class="psum heat-about"><b>这是在说什么</b> ' + esc(about) + '</p><p class="note">' + esc(summary) + '</p>'
+      : '<h2 id="ovtitle">' + esc(displayLabel(topic)) + '</h2><p class="heat-about"><b>这是在说什么</b> ' + esc(about) + '</p><p class="note">' + esc(summary) + '</p>';
     const chartPts = pts.slice().sort((a, b) => String(a.t).localeCompare(String(b.t)));
     const chart = chartPts.length ? trendChart(chartPts) : (row ? trendChart(row.pts) : '');
     const seriesName = row && row.last && row.last.metric === 'x_daily_post_count' ? '日发帖' : '记录';
-    return head + chart + '<h3>' + seriesName + '</h3>' + (nodes || '<p class="note">没有日发帖序列</p>') + '<h3>原文</h3>' + (orig || '<p class="xmiss">原文未缓存</p><p class="note">没有对上带原文的条目。</p>') + page;
+    const empty = '<p class="xmiss" data-heat-empty="1">' + esc(reason) + '</p><p class="note">之后的每小时任务要在 heat_log.csv 另起一行：metric 填 x_sample_post，source 填 https://x.com/账号/status/数字。</p>';
+    return head + '<h3>代表帖</h3>' + (sampleHtml || empty) + chart + '<h3>' + seriesName + '</h3>' + (nodes || '<p class="note">没有日发帖序列</p>') + page;
   }
   function paperHome(pack) {
     const hero = pack.events.find(g => eventHours(g) <= PostUI.FRONT_FRESH_H) || null;
@@ -784,7 +783,8 @@
     const delta = rank && rank.delta != null ? '<span class="pnum">较前一日 ' + (rank.delta > 0 ? '+' : '') + fmt(rank.delta) + '</span>' : '';
     const list = nodes.length ? nodes.map((node, i) => '<div class="pnode' + (i === 0 ? ' f' : '') + '"><div class="pnh">' + esc(node.date || '') + (node.url ? ' · ' + platBit(node.url) : '') + '</div><div class="pnn">' + esc(node.text) + '</div>' + nodeOrig(node, root) + '</div>').join('') : '<p class="pfoot">暂无进展时间线</p>';
     const ui = document.documentElement.dataset.ui === 'classic' ? 'classic' : 'new';
-    return '<div class="pkick">专题' + (n ? ' · 连载第' + n + '回' : '') + ' · 最新在上</div><h2 id="ovtitle" class="ptitle" style="font-size:22px">' + esc(s.title) + '</h2><p class="psum">' + esc(s.sum) + '</p>' + heatRow(groupViews(g)) + delta + allOrig(root) + '<div class="ptl">' + list + '</div><p class="pfoot"><a href="events/' + encodeURIComponent(root.id) + '.html?ui=' + ui + '">独立页面</a></p>';
+    const cached = overlayPosts(root);
+    return '<div class="pkick">专题' + (n ? ' · 连载第' + n + '回' : '') + ' · 最新在上</div><h2 id="ovtitle" class="ptitle" style="font-size:22px">' + esc(s.title) + '</h2>' + aboutHtml(cached) + postsHtml(cached) + '<p class="psum">' + esc(s.sum) + '</p>' + heatRow(groupViews(g)) + delta + '<div class="ptl">' + list + '</div><p class="pfoot"><a href="events/' + encodeURIComponent(root.id) + '.html?ui=' + ui + '">独立页面</a></p>';
   }
   function renderPaper() {
     const root = $('#paper');
@@ -848,11 +848,13 @@
     const sorted = PostUI.sortNewest(tl.map((t, i) => Object.assign({ i: i }, t)));
     const known = new Set(PostUI.sourcesOf(it, posts()).map(s => s.url).filter(Boolean));
     const ui = document.documentElement.dataset.ui === 'classic' ? 'classic' : 'new';
+    const cached = overlayPosts(it);
     return `<h2 id="ovtitle">${esc(title)}</h2>
+${aboutHtml(cached)}
 <div class="note spanline" title="${esc(SPAN_TIP)}">${esc(eventSpan(it))}</div>
 <div class="meta" style="margin:8px 0"><span class="pill">${esc(displayLabel(it.company))}</span> <span class="badge ${it.tag === '实锤' ? 'b-real' : 'b-rum'}">【${esc(it.tag)}】</span> ${heatRow(it._views)}</div>
+<section class="ov-sec"><h3>代表帖</h3>${postsHtml(cached)}</section>
 <p>${esc(d.summary || it.text)}</p>
-<section class="ov-sec"><h3>原文</h3>${allOrig(it)}</section>
 ${d.background ? `<section class="ov-sec"><h3>事件经过</h3><p>${esc(d.background)}</p></section>` : ''}
 <section class="ov-sec"><h3>时间线</h3><p class="note">最新在上</p>${sorted.length ? sorted.map(t => `<div class="tl"><b>${esc(fmtTs(t.date))}</b> ${esc(t.text || '')}${t.url && !known.has(t.url) ? PostUI.origBlock(PostUI.mergeSnap({ url: t.url }, posts()), { clamp: true, formatTime: fmtTs }) : ''}</div>`).join('') : '<p class="empty">暂无进展时间线</p>'}</section>
 ${trend || `<section class="ov-sec"><h3>热度</h3>${heatExplain()}</section>`}

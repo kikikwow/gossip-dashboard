@@ -2,35 +2,68 @@
 # -*- coding: utf-8 -*-
 """Cache X/Twitter post text for static GitHub Pages.
 
-Reads status URLs already cited in data/*.json, fetches a public snapshot from
-api.fxtwitter.com, and writes src/x_cache.json. Also fills optional `text` and
-`author_name` on existing detail.x_posts objects when those fields are absent.
-Does not overwrite views/likes/reposts already stored in the JSON.
+Collects every status id cited in data/*.json or in heat_log.csv `source`,
+fetches a public snapshot from api.fxtwitter.com, and writes src/x_cache.json.
+Also fills optional `text` and `author_name` on existing detail.x_posts objects
+when those fields are absent. Does not overwrite views/likes/reposts already
+stored in the JSON, and does not invent post text.
+
+A deleted or empty post is stored as status "unavailable" (UI: 「原文不可用」).
+A network failure is status "missing" and is retried on the next build
+(UI: 「原文未缓存」 until a snapshot exists).
 
 Usage (from anywhere):
     python3 src/cache_x_posts.py
-
-Re-run before `build_dashboard.py` when you want fresher bodies. Failed fetches
-are stored with status "missing" and no invented text; the UI shows 「原文未缓存」.
 """
-import json, os, re, time, datetime, urllib.request, urllib.error
+import csv, json, os, re, time, datetime, urllib.request, urllib.error
 BASE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(BASE, 'data')
 OUT = os.path.join(BASE, 'x_cache.json')
-STATUS = re.compile(r'(?:https?://)?(?:www\.)?(?:x|twitter)\.com/([^/]+)/status/(\d+)', re.I)
+HEAT = os.path.join(BASE, 'heat_log.csv')
+STATUS = re.compile(r'(?:https?://)?(?:www\.)?(?:x|twitter)\.com/([A-Za-z0-9_]+)/status/(\d+)', re.I)
+NOTE = '静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。'
+
+def add_status(found, text):
+    if not isinstance(text, str):
+        return
+    for m in STATUS.finditer(text):
+        found[m.group(2)] = f'https://x.com/{m.group(1)}/status/{m.group(2)}'
 
 def walk_urls(o, found):
     if isinstance(o, dict):
-        u = o.get('url')
-        if isinstance(u, str):
-            m = STATUS.search(u)
-            if m:
-                found[m.group(2)] = f'https://x.com/{m.group(1)}/status/{m.group(2)}'
         for v in o.values():
             walk_urls(v, found)
     elif isinstance(o, list):
         for v in o:
             walk_urls(v, found)
+    elif isinstance(o, str):
+        add_status(found, o)
+
+def collect_ids():
+    """Status ids the dashboard is responsible for caching.
+
+    data JSON: any string that contains an X/Twitter status URL.
+    heat_log.csv: the `source` cell. Count rows do not carry a post id;
+    representative posts are rows whose source is the status URL
+    (metric x_sample_post, or the existing x_post_views:@handle).
+    """
+    found = {}
+    files = []
+    if os.path.isdir(DATA):
+        for fn in sorted(os.listdir(DATA)):
+            if not fn.endswith('.json'):
+                continue
+            path = os.path.join(DATA, fn)
+            files.append(path)
+            try:
+                walk_urls(json.load(open(path, encoding='utf-8')), found)
+            except Exception:
+                continue
+    if os.path.exists(HEAT):
+        with open(HEAT, encoding='utf-8') as f:
+            for row in csv.DictReader(f):
+                add_status(found, row.get('source') or '')
+    return found, files
 
 def iso_from_fx(s):
     if not s:
@@ -44,14 +77,19 @@ def iso_from_fx(s):
 def fetch(sid):
     url = f'https://api.fxtwitter.com/status/{sid}'
     req = urllib.request.Request(url, headers={'User-Agent': 'gossip-dashboard-cache/1.0', 'Accept': 'application/json'})
-    with urllib.request.urlopen(req, timeout=25) as r:
-        payload = json.load(r)
+    try:
+        with urllib.request.urlopen(req, timeout=25) as r:
+            payload = json.load(r)
+    except urllib.error.HTTPError as e:
+        if e.code in (404, 410, 451):
+            return {'status': 'unavailable', 'error': f'HTTP {e.code}'}
+        raise
     tw = (payload or {}).get('tweet') or {}
     text = (tw.get('text') or '').strip()
     author = tw.get('author') or {}
     handle = author.get('screen_name') or ''
-    if not text:
-        return {'status': 'missing', 'error': 'empty text'}
+    if not tw or not text:
+        return {'status': 'unavailable', 'error': 'empty text' if tw else 'no tweet'}
     return {
         'status': 'ok',
         'text': text,
@@ -67,15 +105,15 @@ def fetch(sid):
         'url': tw.get('url') or f'https://x.com/i/status/{sid}',
     }
 
+def cache_ready(snap):
+    if not snap:
+        return False
+    if snap.get('status') == 'unavailable':
+        return True
+    return bool(str(snap.get('text') or '').strip())
+
 def main():
-    found = {}
-    files = []
-    for fn in sorted(os.listdir(DATA)):
-        if not fn.endswith('.json'):
-            continue
-        path = os.path.join(DATA, fn)
-        files.append(path)
-        walk_urls(json.load(open(path, encoding='utf-8')), found)
+    found, files = collect_ids()
     now = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
     posts = {}
     ids = sorted(found)
@@ -93,7 +131,7 @@ def main():
     doc = {
         'source': 'https://api.fxtwitter.com/status/{id}',
         'fetched_at': now,
-        'note': '静态缓存。正文只来自抓取结果；失败项 status=missing，页面显示「原文未缓存」。不覆盖 data JSON 里已有的浏览/点赞数字。',
+        'note': NOTE,
         'posts': posts,
     }
     json.dump(doc, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
@@ -130,18 +168,12 @@ def main():
     print('filled x_posts text', filled)
 
 def fill_missing():
-    """Fetch only status ids cited in data that are absent or have no text.
+    """Fetch status ids cited in data JSON or heat_log.csv that have no text.
 
-    Existing ok entries are left untouched. A failed fetch is stored as
-    status=missing with no invented text.
+    Existing ok entries are left untouched. status=unavailable is terminal.
+    A network failure is stored as status=missing with no invented text.
     """
-    found = {}
-    if not os.path.isdir(DATA):
-        return
-    for fn in sorted(os.listdir(DATA)):
-        if not fn.endswith('.json'):
-            continue
-        walk_urls(json.load(open(os.path.join(DATA, fn), encoding='utf-8')), found)
+    found, _files = collect_ids()
     posts = {}
     doc = {}
     if os.path.exists(OUT):
@@ -150,7 +182,7 @@ def fill_missing():
             posts = doc.get('posts') or {}
         except Exception:
             posts = {}
-    missing = [sid for sid in sorted(found) if not (posts.get(sid) or {}).get('text')]
+    missing = [sid for sid in sorted(found) if not cache_ready(posts.get(sid))]
     print('x cache', len(found), 'missing', len(missing))
     if not missing:
         return
@@ -168,7 +200,7 @@ def fill_missing():
     out = {
         'source': doc.get('source') or 'https://api.fxtwitter.com/status/{id}',
         'fetched_at': now,
-        'note': '静态缓存。正文只来自抓取结果；失败项 status=missing，页面显示「原文未缓存」。不覆盖 data JSON 里已有的浏览/点赞数字。',
+        'note': NOTE,
         'posts': posts,
     }
     json.dump(out, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
