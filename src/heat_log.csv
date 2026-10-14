@@ -312,3 +312,9 @@ timestamp_utc,topic,metric,value,source
 2026-10-14T05:44:41Z,华为尊界刹车门（车圈互撕）,x_post_count_since_20261013T21Z,286,X get_posts_counts_recent q=尊界 (刹车 OR 制动 OR 江淮 OR 互撕)
 2026-10-14T05:44:41Z,华为尊界刹车门（车圈互撕）,x_post_count_last3h_approx,99,X same query last ~3h 32+31+36
 2026-10-14T05:44:41Z,茶百道证监会停牌,x_post_count_since_20261013T21Z,31,X get_posts_counts_recent q=茶百道 (停牌 OR 证监会 OR IPO OR 操纵)
+2026-10-14T06:14:30Z,滴滴 & 滴滴出海,x_hourly_post_count_05Z,278,"X q=滴滴 OR 滴滴出行 OR ""DiDi Global"" OR ""Didi Chuxing""; noise-heavy; up from 223"
+2026-10-14T06:14:30Z,滴滴 & 滴滴出海,x_post_count_06Z_partial_to0613,57,"X same comparable query, 06:00-06:13Z"
+2026-10-14T06:14:30Z,滴滴 & 滴滴出海,x_hourly_post_count_task_broad_05Z,1498,X q=(滴滴 OR DiDi OR 程维 OR 花小猪 OR 99app); auxiliary wide sample
+2026-10-14T06:14:30Z,滴滴繁简价差,x_top_views_0xTheo520,3442,https://x.com/0xTheo520/status/2110226592597254442
+2026-10-14T06:14:30Z,滴滴繁简价差,x_new_secondary_suyu2018block_impressions,142,https://x.com/suyu2018block/status/2110241692615888913
+2026-10-14T06:14:30Z,滴滴海外/事业部,x_tier1_slot2_hits_kept_0510to0614Z,0,tier1×8+slot2×3; secondary price posts not kept for alert

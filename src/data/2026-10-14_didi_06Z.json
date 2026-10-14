@@ -1,0 +1,144 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-14T06:14:30Z",
+ "fired_at_utc": "2026-10-14T06:11:27Z",
+ "scanned_at_utc": "2026-10-14T06:14:30Z",
+ "beijing_time": "2026-10-14 14:14 Asia/Shanghai",
+ "edition_date": "2026-10-14",
+ "window": {
+  "start_utc": "2026-10-14T05:10:00Z",
+  "end_utc": "2026-10-14T06:14:30Z",
+  "note": "自上轮 13:20（北京时间）以来；Tier2 slot2（中国其他事业部：自动驾驶/货运充电/青桔顺风车/高管）回看约 6 小时；Tier3 跳过（日间已跑）"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无新的可核验公司事实。繁体/简体价差仅二次扩散：@0xTheo520（05Z已报）浏览升至约3442/回复3，无新截图或公司回应；新帖@suyu2018block 浏览142/回复1低于发报门槛。HK/TW 检索1帖为「點點滴滴」政治隐喻误匹配。Tier1 BR/MX/EN 与巴西投诉查询均0帖。Slot2 自动驾驶/货运/高管检索几乎全为 t.co 文章噪讯、欧冠推广或成人短剧黑名单；仅1条无人驾驶出租车舆论猜测（浏览3）。Web：内部信/裁员为7月反舞弊旧闻；香港网约车牌照为5月立法讨论旧闻；Threads 无登录检索未命中繁简价差原帖；99Food–Keeta 排他条款为9/29 TJSP 裁决再刷（03Z已记）；MX PROFECO/裁员无10月新料；自动驾驶/送货/花小猪多为PR或个例投诉。RSS 新匹配0条与滴滴相关。已覆盖的 JP 资本、MX Puebla 账号、繁简主帖不重复报警。",
+ "sections": [
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "公开媒体",
+      "RSS"
+     ],
+     "date": "10-14 14:14",
+     "text": "本期无新动态。扫描窗口 05:10Z–06:14Z（北京时间约 13:10–14:14）。Tier1 全量 + Tier2 slot2（中国其他事业部）未见可发布的新公司八卦、监管裁决或财报线索；繁简价差仅二次扩散、未达新事实标准。",
+     "links": [],
+     "id": "20261014-didi-06Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "03Z": 134,
+   "04Z": 223,
+   "05Z": 278,
+   "06Z_partial_to0613": 57,
+   "query": "滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"",
+   "note": "05Z 整点升至278，延续名称撞词/成人短剧/黑话噪音；非可核验公司事件"
+  },
+  "task_broad_sample": {
+   "00Z": 1141,
+   "01Z": 1245,
+   "02Z": 1251,
+   "03Z": 1369,
+   "04Z": 1418,
+   "05Z": 1498,
+   "06Z_partial": 322,
+   "query": "(滴滴 OR DiDi OR 程维 OR 花小猪 OR 99app)",
+   "note": "任务指定宽口径；量级远高于可比热度查询，含大量 DiDi/99 撞词，仅作辅证"
+  },
+  "trad_simp_price_x": {
+   "posts_in_window_0400Z": 2,
+   "top_views": 3442,
+   "top_url": "https://x.com/0xTheo520/status/2110226592597254442",
+   "note": "05Z已报帖浏览197→3442；新二次扩散帖142浏览未达门槛"
+  },
+  "tier1_x_hits_kept": 0,
+  "slot2_x_hits_kept": 0,
+  "weibo_didi_on_list": "not_checked_this_run"
+ },
+ "candidates": [
+  {
+   "topic": "繁简价差 @0xTheo520 二次扩散浏览上升",
+   "verdict": "already_alerted_05Z_no_new_facts",
+   "why": "同帖浏览约3442/回复3，无新证据或公司回应",
+   "url": "https://x.com/0xTheo520/status/2110226592597254442"
+  },
+  {
+   "topic": "繁简价差 @suyu2018block 新二次扩散",
+   "verdict": "log_only_below_engagement",
+   "why": "浏览142/回复1，低于 impressions≥300 或 replies≥3",
+   "url": "https://x.com/suyu2018block/status/2110241692615888913"
+  },
+  {
+   "topic": "HK/TW X @tw_fjt 「點點滴滴」",
+   "verdict": "reject_false_positive",
+   "why": "政治隐喻，非滴滴公司"
+  },
+  {
+   "topic": "Slot2 自动驾驶舆论 @zzclove",
+   "verdict": "log_only_opinion_low_engagement",
+   "why": "无人驾驶干趴驾校猜测，浏览3，非公司新闻",
+   "url": "https://x.com/zzclove/status/2110252335146696827"
+  },
+  {
+   "topic": "Slot2 X 检索噪讯",
+   "verdict": "reject_noise",
+   "why": "t.co-only 文章、欧冠推广、成人短剧/po18 黑名单、无实体关键词"
+  },
+  {
+   "topic": "99Food TJSP vs Keeta 排他条款",
+   "verdict": "already_noted_03Z_stale_2026-09-29",
+   "why": "裁决日9/29，非本窗口新料"
+  },
+  {
+   "topic": "Web 内部信/裁员/反舞弊",
+   "verdict": "stale_2026-07"
+  },
+  {
+   "topic": "Web 香港网约车牌照",
+   "verdict": "stale_2026-05_legislative"
+  },
+  {
+   "topic": "Web Threads 繁简价差",
+   "verdict": "no_login_miss_already_covered_via_unwire_lihkg"
+  },
+  {
+   "topic": "Web DiDi México PROFECO/despidos",
+   "verdict": "stale_or_generic_consumer_warning"
+  },
+  {
+   "topic": "Web 自动驾驶/送货/花小猪青桔",
+   "verdict": "log_only_pr_or_individual_complaints",
+   "why": "融资/R2载客/金秋送货季等为旧PR或个例投诉，无本窗口新事实"
+  },
+  {
+   "topic": "JP 资本 / MX Puebla 账号 / 繁简主帖",
+   "verdict": "already_covered_05Z_no_realert"
+  },
+  {
+   "topic": "RSS fetch_sources",
+   "verdict": "no_didi_matches",
+   "why": "new matching items: 0"
+  }
+ ],
+ "sources_queried": [
+  "X tier1×8 + tier2 slot2×3 + counts×2 (可比热度 + 任务宽口径)",
+  "WebSearch×8 (tier1×6 + slot2×2)",
+  "RSS fetch_sources (0 条滴滴相关新匹配)",
+  "Tier3 skipped (daytime already ran)"
+ ],
+ "x_calls_used": 13,
+ "web_searches": 8,
+ "tiers": "tier1 + tier2 slot2",
+ "slot": 2
+}
