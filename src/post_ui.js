@@ -9,6 +9,7 @@
   var FOLD_X = 72;
   var FOLD_SUM = 40;
   var MISS = '原文未缓存';
+  var UNAVAIL = '原文不可用';
   var LOGOS = {
     x: '<svg class="plogo" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>',
     xhs: '<svg class="plogo" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><rect width="16" height="16" rx="4" fill="#ff2442"/><text x="8" y="12" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="PingFang SC,Noto Sans SC,sans-serif">小</text></svg>',
@@ -186,7 +187,8 @@
       translation_zh: src.translation_zh || snap.translation_zh || '',
       lang: src.lang || snap.lang || '',
       country: src.country || snap.country || '',
-      label: src.label || ''
+      label: src.label || '',
+      status: src.status || snap.status || ''
     };
   }
   function sourcesOf(item, posts) {
@@ -275,8 +277,9 @@
     head += noteSpan('转', post.reposts);
     var body;
     var miss = !text && !(showTr && tr);
+    var gone = miss && post.status === 'unavailable';
     if (miss) {
-      body = '<p class="xmiss">' + MISS + '</p>';
+      body = '<p class="xmiss">' + (gone ? UNAVAIL : MISS) + '</p>';
     } else if (showTr) {
       body = '<div class="clampbox" data-len="' + len + '" data-fold="' + fold + '" data-tr="1"><div class="clamp"><p class="xtext tr">' + esc(tr) + '</p></div><div class="orig-fold"><div class="langtag">原文 · ' + esc(place || langLabel(post.lang)) + '</div><p class="xtext">' + esc(text) + '</p></div><button type="button" class="xmore" aria-expanded="false">展开</button></div>';
     } else if (!clamp) {
@@ -285,7 +288,7 @@
       body = (place && (foreign || post.country) ? '<div class="langtag">原文 · ' + esc(place) + '</div>' : '') + '<div class="clampbox" data-len="' + len + '" data-fold="' + fold + '"><p class="xtext clamp">' + esc(text) + '</p><button type="button" class="xmore"' + (long ? '' : ' hidden') + ' aria-expanded="false">展开</button></div>';
     }
     var link = url ? extLink(url, '原链接') : '';
-    return '<blockquote class="orig xbody" data-orig="1" data-len="' + len + '" data-fold="' + fold + '"' + (miss ? ' data-miss="1"' : '') + '><div class="poh xmeta">' + head + '</div>' + body + link + '</blockquote>';
+    return '<blockquote class="orig xbody" data-orig="1" data-len="' + len + '" data-fold="' + fold + '"' + (gone ? ' data-unavail="1"' : (miss ? ' data-miss="1"' : '')) + '><div class="poh xmeta">' + head + '</div>' + body + link + '</blockquote>';
   }
   function timeKey(s) {
     var str = String(s || '');
@@ -602,10 +605,226 @@
     }, true);
   }
 
+  function viewNum(v) {
+    var n = parseViews(v);
+    return n == null || !isFinite(n) ? 0 : n;
+  }
+  function orderPosts(list) {
+    return (list || []).slice().sort(function (a, b) {
+      var ta = timeKey(a.created_at) || 0;
+      var tb = timeKey(b.created_at) || 0;
+      if (tb !== ta) return tb - ta;
+      return viewNum(b.views) - viewNum(a.views);
+    });
+  }
+  function statusUrls(text) {
+    var out = [];
+    var re = /https?:\/\/(?:www\.)?(?:x|twitter)\.com\/[A-Za-z0-9_]+\/status\/\d+/ig;
+    var m;
+    var s = String(text || '');
+    while ((m = re.exec(s))) out.push(m[0]);
+    return out;
+  }
+  function normTopic(s) {
+    return String(s || '').replace(/\s+/g, '').replace(/[“”"']/g, '').toLowerCase();
+  }
+  function oneLine(text) {
+    var s = String(text || '').replace(/\s+/g, ' ').trim();
+    if (!s) return '';
+    var parts = s.split(/([。！？!?])/);
+    var out = '';
+    for (var i = 0; i < parts.length; i += 2) {
+      out += (parts[i] || '') + (parts[i + 1] || '');
+      if (out.replace(/\s/g, '').length >= 18) break;
+    }
+    out = out.trim();
+    if (out.length > 90) out = out.slice(0, 90) + '…';
+    return out;
+  }
+  function heatSamples(topic, heatRows, posts, items) {
+    var key = normTopic(topic);
+    var seen = {};
+    var list = [];
+    (heatRows || []).forEach(function (r) {
+      if (normTopic(r.topic) !== key) return;
+      var metric = String(r.metric || '');
+      var rowViews = (/^x_sample_post$/.test(metric) || /views/i.test(metric)) ? r.value : null;
+      statusUrls(r.source).forEach(function (url) {
+        var id = xId(url);
+        if (!id || seen[id]) return;
+        var snap = (posts && posts[id]) || {};
+        var merged = mergeSnap({
+          url: snap.url || url,
+          text: snap.text || '',
+          author: snap.author || '',
+          created_at: snap.created_at || '',
+          views: snap.views != null && snap.views !== '' ? snap.views : rowViews,
+          likes: snap.likes,
+          reposts: snap.reposts,
+          status: snap.status || ''
+        }, posts);
+        if (snap.text) merged.text = snap.text;
+        if (snap.name && !merged.author_name) merged.author_name = snap.name;
+        merged.status = snap.status || merged.status || '';
+        seen[id] = merged;
+        list.push(merged);
+      });
+    });
+    var meta = {};
+    (items || []).forEach(function (it) {
+      sourcesOf(it, posts).forEach(function (s) {
+        var id = xId(s.url);
+        if (id) meta[id] = s;
+      });
+    });
+    list.forEach(function (p) {
+      var s = meta[xId(p.url)];
+      if (!s) return;
+      if (!p.translation_zh && s.translation_zh) p.translation_zh = s.translation_zh;
+      if (!p.lang && s.lang) p.lang = s.lang;
+      if (!p.country && s.country) p.country = s.country;
+    });
+    return orderPosts(list);
+  }
+  function heatAbout(samples) {
+    var line = '';
+    (samples || []).forEach(function (p) {
+      if (line || !p || p.status === 'unavailable') return;
+      var src = (needsTranslation(p) && p.translation_zh) ? p.translation_zh : p.text;
+      line = oneLine(src);
+    });
+    return line;
+  }
+  function heatEmptyReason(topic, samples, heatRows) {
+    var usable = (samples || []).some(function (p) {
+      return String((p && p.text) || '').trim() || String((p && p.translation_zh) || '').trim() || (p && p.status === 'unavailable');
+    });
+    if (usable) return '';
+    var rows = (heatRows || []).filter(function (r) { return normTopic(r.topic) === normTopic(topic); });
+    var metrics = {};
+    rows.forEach(function (r) { metrics[String(r.metric || '')] = 1; });
+    var keys = Object.keys(metrics);
+    var weibo = keys.some(function (k) { return k.indexOf('weibo') >= 0; });
+    var hasX = keys.some(function (k) { return k.indexOf('x_') === 0; });
+    if (!rows.length) return '没有代表帖。heat_log 里没有这个话题的记录，不能编原文。';
+    if (weibo && !hasX) return '没有代表帖。heat_log 只记了微博热搜名次或分数，source 不是 X status 链接，所以没有可缓存的原文。';
+    return '没有代表帖。heat_log 只记了发帖量或计数，source 里没有 X status 链接。';
+  }
+  function topicSeriesOf(topic, heat) {
+    var H = heat || [];
+    var daily = H.filter(function (r) { return r.topic === topic && r.metric === 'x_daily_post_count'; }).slice().sort(function (a, b) { return a.timestamp_utc < b.timestamp_utc ? -1 : 1; });
+    var partial = H.filter(function (r) { return r.topic === topic && String(r.metric).indexOf('partial') >= 0; }).slice().sort(function (a, b) { return a.timestamp_utc < b.timestamp_utc ? -1 : 1; });
+    var pts = daily.map(function (r) { return { t: r.timestamp_utc, v: +r.value, partial: false }; });
+    partial.forEach(function (r) { pts.push({ t: r.timestamp_utc, v: +r.value, partial: true }); });
+    return pts;
+  }
+  function topicGroupsOf(heat) {
+    var H = heat || [];
+    if (!H.length) return [];
+    var by = {};
+    H.forEach(function (r) { (by[r.topic] = by[r.topic] || []).push(r); });
+    return Object.keys(by).map(function (t) {
+      var rs = by[t].slice().sort(function (a, b) { return a.timestamp_utc < b.timestamp_utc ? -1 : 1; });
+      var daily = rs.filter(function (r) { return r.metric === 'x_daily_post_count'; });
+      var last = daily.length ? daily[daily.length - 1] : rs[rs.length - 1];
+      var prev = daily.length >= 2 ? daily[daily.length - 2] : null;
+      return { t: t, last: last, delta: prev ? last.value - prev.value : null, pts: topicSeriesOf(t, H) };
+    });
+  }
+  function heatKeyOf(topic, cands) {
+    var id = matchTopic(topic, cands || []);
+    if (id) return 'ev:' + id;
+    return 'tp:' + normTopic(topic);
+  }
+  function preferHeatRow(a, b) {
+    var ad = a.last && a.last.metric === 'x_daily_post_count';
+    var bd = b.last && b.last.metric === 'x_daily_post_count';
+    if (ad !== bd) return ad ? a : b;
+    return (b.last && b.last.value || 0) > (a.last && a.last.value || 0) ? b : a;
+  }
+  function dedupeHeatRows(rows, cands) {
+    var by = {};
+    var order = [];
+    (rows || []).forEach(function (r) {
+      var key = heatKeyOf(r.t, cands);
+      var prev = by[key];
+      if (!prev) { by[key] = r; order.push(key); return; }
+      var keep = preferHeatRow(prev, r);
+      var drop = keep === prev ? r : prev;
+      keep.also = (keep.also || prev.also || []).concat([drop.t]);
+      by[key] = keep;
+    });
+    return order.map(function (k) { return by[k]; }).sort(function (a, b) { return (b.last.value || 0) - (a.last.value || 0); });
+  }
+  function rankHeat(heat, cands) {
+    return dedupeHeatRows(topicGroupsOf(heat), cands).slice(0, 10);
+  }
+  function shortHeat(heat, cands, shortterm) {
+    var seen = {};
+    rankHeat(heat, cands).forEach(function (r) { seen[heatKeyOf(r.t, cands)] = 1; });
+    var out = [];
+    (shortterm || []).forEach(function (t) {
+      var key = heatKeyOf(t.name, cands);
+      if (seen[key]) return;
+      seen[key] = 1;
+      out.push(t);
+    });
+    return out;
+  }
+  function auditHeat(input) {
+    input = input || {};
+    var heat = input.heat || [];
+    var cands = input.cands || [];
+    var posts = input.posts || {};
+    var items = input.items || [];
+    var byId = {};
+    items.forEach(function (it) { if (it && it.id) byId[it.id] = it; });
+    var topics = rankHeat(heat, cands).map(function (r) { return { topic: r.t, also: r.also || [] }; });
+    shortHeat(heat, cands, input.shortterm || []).forEach(function (t) { topics.push({ topic: t.name, also: [] }); });
+    var fails = [];
+    var reports = [];
+    topics.forEach(function (row) {
+      var seen = {};
+      var samples = [];
+      [row.topic].concat(row.also || []).forEach(function (name) {
+        heatSamples(name, heat, posts, items).forEach(function (p) {
+          var id = xId(p.url);
+          if (!id || seen[id]) return;
+          seen[id] = 1;
+          samples.push(p);
+        });
+      });
+      var eventId = matchTopic(row.topic, cands);
+      var it = eventId && byId[eventId];
+      if (it && isStatusStub(it)) it = null;
+      if (it) {
+        sourcesOf(it, posts).forEach(function (s) {
+          var id = xId(s.url) || s.url;
+          if (!id || seen[id]) return;
+          seen[id] = 1;
+          samples.push(s);
+        });
+      } else if (/滴滴|didi|99app/i.test(String(row.topic || ''))) {
+        reports.push({ topic: row.topic, n: 1, reason: '', about: '', kind: 'didi' });
+        return;
+      }
+      samples = orderPosts(samples);
+      var usable = samples.filter(function (p) {
+        return String(p.text || '').trim() || String(p.translation_zh || '').trim() || p.status === 'unavailable';
+      });
+      var reason = heatEmptyReason(row.topic, usable, heat);
+      var about = heatAbout(usable);
+      reports.push({ topic: row.topic, n: usable.length, reason: reason, about: about });
+      if (!usable.length && !reason) fails.push('热榜 popup has no posts and no reason: ' + row.topic);
+    });
+    return { fails: fails, reports: reports };
+  }
+
   return {
     FOLD_X: FOLD_X,
     FOLD_SUM: FOLD_SUM,
     MISS: MISS,
+    UNAVAIL: UNAVAIL,
     LOGOS: LOGOS,
     esc: esc,
     plainLen: plainLen,
@@ -635,7 +854,18 @@
     displayLabel: displayLabel,
     placeTag: placeTag,
     didiTimeline: didiTimeline,
-    itemSortDate: itemSortDate
+    itemSortDate: itemSortDate,
+    orderPosts: orderPosts,
+    heatSamples: heatSamples,
+    heatAbout: heatAbout,
+    heatEmptyReason: heatEmptyReason,
+    topicSeries: topicSeriesOf,
+    topicGroups: topicGroupsOf,
+    heatKeyOf: heatKeyOf,
+    dedupeHeatRows: dedupeHeatRows,
+    rankHeat: rankHeat,
+    shortHeat: shortHeat,
+    auditHeat: auditHeat
   };
 });
 

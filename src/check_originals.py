@@ -47,6 +47,16 @@ process.stdin.on('end', () => {
   if (!VISIBLE(trHtml)) fails.push('translated long post missing 展开');
   const miss = UI.origBlock({url:'https://news.example.com/a', text:''}, {clamp:true});
   if (!miss.includes('原文未缓存') || !miss.includes('https://news.example.com/a') || !miss.includes('data-miss="1"')) fails.push('missing cache should say 原文未缓存 and keep the link');
+  const gone = UI.origBlock({url:'https://x.com/a/status/8', text:'', status:'unavailable'}, {clamp:true});
+  if (gone.indexOf('原文不可用') < 0 || gone.indexOf('原文未缓存') >= 0 || !gone.includes('data-unavail="1"')) fails.push('deleted post should say 原文不可用');
+  const about = UI.heatAbout([{text:'字节跳动一员工发帖爆料：自己上厕所离开工位，回来后被当众质问。', created_at:'2026-10-13T10:56:57Z', status:'ok'}]);
+  if (about.indexOf('上厕所') < 0) fails.push('这是在说什么 should quote the cached post');
+  const emptyReason = UI.heatEmptyReason('千问AI耳机开售', [], [{topic:'千问AI耳机开售', metric:'weibo_hot_score', value:1, source:'soso.re/weibo'}]);
+  if (!emptyReason || emptyReason.indexOf('没有代表帖') < 0) fails.push('weibo-only heat topic needs an explicit empty reason');
+  const samples = UI.heatSamples('字节厕所文化爆料', [
+    {topic:'字节厕所文化爆料', metric:'x_post_views:@weiyux2021', value:58569, source:'https://x.com/weiyux2021/status/2109961583619416213', timestamp_utc:'2026-10-13T23:35:00Z'}
+  ], {'2109961583619416213': {status:'ok', text:'字节员工上厕所被质问', author:'@weiyux2021', created_at:'2026-10-13T10:56:57Z', views:80920, url:'https://x.com/weiyux2021/status/2109961583619416213'}});
+  if (samples.length !== 1 || samples[0].text.indexOf('上厕所') < 0 || !samples[0].author) fails.push('heat sample should use the cached post');
   const shortZh = UI.origBlock({url:'https://x.com/a/status/1', text:'短', lang:'zh'}, {clamp:true});
   if (!shortZh.includes('hidden') || shortZh.includes('原文未缓存')) fails.push('short Chinese post should keep a hidden 展开 and not say 原文未缓存');
   const item = {id:'t', company:'C', text:'editorial blurb that must not replace the post', lang:'ja', translation_zh:'日文帖的中文译文，长度足够单独成句。', links:[{url:'https://x.com/a/status/3', label:'X'}]};
@@ -127,7 +137,9 @@ process.stdin.on('end', () => {
       textLen: UI.plainLen(s.text || ''),
       trLen: UI.plainLen(s.translation_zh || ''),
       url: s.url || '',
-      miss: !String(s.text || '').trim() && !(s.translation_zh && s.lang && !/^zh/i.test(s.lang))
+      status: s.status || '',
+      unavailable: s.status === 'unavailable',
+      miss: !String(s.text || '').trim() && !(s.translation_zh && s.lang && !/^zh/i.test(s.lang)) && s.status !== 'unavailable'
     }));
   });
   process.stdout.write(JSON.stringify({fails, report}));
@@ -183,6 +195,15 @@ def main():
         fail(errors, 'heat list does not dedupe by event id')
     if 'function mergeByUrl' not in board:
         fail(errors, 'front page does not merge events that share a source')
+    heat_fn = re.search(r'function heatOverlay\b', board)
+    heat_chunk = board[heat_fn.start():heat_fn.start() + 4500] if heat_fn else ''
+    for needle in ('这是在说什么', 'heatSamples', 'heatAbout', 'heatEmptyReason', 'origBlock', 'data-heat-empty'):
+        if needle not in heat_chunk:
+            fail(errors, 'heat popup is missing ' + needle)
+    if 'x_sample_post' not in open(os.path.join(SRC, 'common.md'), encoding='utf-8').read():
+        fail(errors, 'common.md does not tell hourly jobs to write x_sample_post')
+    if 'x_sample_post' not in open(os.path.join(SRC, 'README.md'), encoding='utf-8').read():
+        fail(errors, 'README does not document x_sample_post')
     home = re.search(r'function paperHome\b', board)
     home_chunk = board[home.start():home.start() + 1400] if home else ''
     pin_at = home_chunk.find('pinCard()')
@@ -201,7 +222,7 @@ def main():
             fail(errors, 'board missing ' + name)
             continue
         chunk = board[m.start():m.start() + 2200]
-        if 'itemOrig' not in chunk and 'allOrig' not in chunk:
+        if 'itemOrig' not in chunk and 'allOrig' not in chunk and 'postsHtml' not in chunk and 'origBlock' not in chunk:
             fail(errors, name + ' does not render the shared original block')
     index = open(os.path.join(ROOT, 'index.html'), encoding='utf-8').read()
     if 'src/post_ui.js' not in index or index.find('src/post_ui.js') > index.find('src/board_ui.js'):
@@ -217,6 +238,18 @@ def main():
             items.extend(sct.get('items') or [])
     cache_path = os.path.join(SRC, 'x_cache.json')
     posts = json.load(open(cache_path, encoding='utf-8')).get('posts') or {}
+    import cache_x_posts
+    referenced, _files = cache_x_posts.collect_ids()
+    for sid, url in sorted(referenced.items()):
+        snap = posts.get(sid)
+        if not snap:
+            fail(errors, 'referenced X id has no cache entry: ' + sid + ' ' + url)
+            continue
+        if str(snap.get('text') or '').strip():
+            continue
+        if snap.get('status') == 'unavailable':
+            continue
+        fail(errors, 'referenced X id lacks cached text: ' + sid + ' status=' + str(snap.get('status')))
     slim = []
     didi_ids = []
     for e in eds:
@@ -265,6 +298,26 @@ def main():
         'Temu密苏里州检察长起诉': '20261014-temu-missouri',
         'Anthropic点名智谱/月之暗面蒸馏': ['20261014-anthropic-distill', '20261014-anthropic-zhipu-moonshot'],
     }
+    _lt, st = build_dashboard.load_topics()
+    heat_rows = build_dashboard.load_heat()
+    audit_proc = subprocess.run(
+        ['node', os.path.join(SRC, 'post_ui.js'), 'auditHeat'],
+        input=json.dumps({'heat': heat_rows, 'cands': cands, 'posts': posts, 'items': slim, 'shortterm': st}, ensure_ascii=False).encode('utf-8'),
+        cwd=ROOT, capture_output=True)
+    if audit_proc.returncode != 0:
+        fail(errors, 'heat audit failed: ' + audit_proc.stderr.decode('utf-8', 'replace')[:500])
+    else:
+        audit = json.loads(audit_proc.stdout.decode('utf-8'))
+        for msg in audit.get('fails') or []:
+            fail(errors, msg)
+        shown = [r for r in (audit.get('reports') or []) if r.get('topic') in ('千问AI耳机开售', '字节厕所文化爆料', '中国互联网进入字节时间')]
+        for r in shown:
+            if not r.get('n') and not r.get('reason'):
+                fail(errors, 'named heat popup is empty: ' + r.get('topic', ''))
+            if r.get('topic') == '字节厕所文化爆料' and not r.get('n'):
+                fail(errors, '字节厕所 popup has no cached post')
+            if r.get('topic') == '字节厕所文化爆料' and '厕所' not in (r.get('about') or ''):
+                fail(errors, '字节厕所 这是在说什么 is not from the cached post')
     audited = node_report(slim, posts, didi_ids, heat_topics, cands, expect)
     for msg in audited.get('fails') or []:
         fail(errors, 'module: ' + msg)
@@ -315,6 +368,9 @@ def main():
                 if src.get('textLen', 0) > FOLD or src.get('trLen', 0) > FOLD:
                     if not any(VISIBLE_EXPAND.search(b) for b in hit):
                         fail(errors, it['id'] + ' long text has no 展开')
+            elif src.get('unavailable'):
+                if '原文不可用' not in page:
+                    fail(errors, it['id'] + ' deleted post does not say 原文不可用')
             elif src.get('miss'):
                 if '原文未缓存' not in page:
                     fail(errors, it['id'] + ' has no cached text but does not say 原文未缓存')

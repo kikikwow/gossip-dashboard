@@ -1,7 +1,7 @@
 {
  "source": "https://api.fxtwitter.com/status/{id}",
- "fetched_at": "2026-10-14T06:16:48Z",
- "note": "静态缓存。正文只来自抓取结果；失败项 status=missing，页面显示「原文未缓存」。不覆盖 data JSON 里已有的浏览/点赞数字。",
+ "fetched_at": "2026-10-14T08:54:18Z",
+ "note": "静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。",
  "posts": {
   "2106320822444949760": {
    "status": "ok",
@@ -1307,6 +1307,156 @@
    "bookmarks": 0,
    "url": "https://x.com/zzclove/status/2110252335146696827",
    "fetched_at": "2026-10-14T06:16:48Z"
+  },
+  "2109861113152069711": {
+   "status": "ok",
+   "text": "Anthropic 这场蒸馏攻防战，其实很多人还没意识到这件事背后最残酷的行业分水岭，Anthropic 宁可少赚几万亿 Token 也要焊死思维链后门，这绝不是简单的安全公关，我理解更像是一场对蒸馏追赶者的降维阻击战，\n\n上午很热闹，大家都在看大厂撕破脸的点名热闹，但我更在意的是，当思维链抽血通道被巨头彻底封死之后，整个 AI 生态接下来会发生什么，\n\n过去两年行业里心照不宣的秘密，就是海外前沿大厂在前面拿几十亿美金去赌未知的架构路径，后面大量团队靠工业级蒸馏低成本复刻 90% 的能力，把顶级推理打成白菜价。\n\n但现在这趟免费便车被巨头彻底掀翻了，\n\nAnthropic 宁可拒掉数万亿 Token 的真金白银，也要把防蒸馏拉到生物武器级别，这绝不仅是一次安全防御，而是一场极其精密的商业护城河保卫战。\n\n这意味着接下来三个极其现实的连锁反应：\n\n一是纯靠套壳蒸馏、没有底层原生预训练能力的团队，接下来会被光速打回原形，\n\n 二是开源小模型追赶旗舰能力的迭代节奏大概率会明显失速，低成本抽血红利期正在加速关闭，\n\n三是行业真正的分水岭，不再是看谁跑分能刷到 90%，而是看脱离了现成思维链之后，你还有没有能力从零探索下一代未知架构。\n\n说白了偷家式创新的黄金时代已经彻底终结了，\n\n当师傅把门窗全部焊死，接下来的牌桌上，拼的全是硬碰硬的真内功。",
+   "author": "@AYi_AInotes",
+   "name": "AYi",
+   "created_at": "2026-10-13T04:17:43Z",
+   "views": 26339,
+   "likes": 141,
+   "reposts": 13,
+   "replies": 44,
+   "quotes": 3,
+   "bookmarks": 44,
+   "url": "https://x.com/AYi_AInotes/status/2109861113152069711",
+   "fetched_at": "2026-10-14T08:54:18Z"
+  },
+  "2110001903945847063": {
+   "status": "ok",
+   "text": "今天下午，字节发布全员信，将开启新一轮期权回购，回购价格为税前每股回购价格为241.35美刀，与9月初流传出的价格相同。\n\n此外，（1）近期因业务调整离开的同学，回购不打折；（2）入职授予的总包类期权需要5年左右完成100%归属；（3）绩效优秀授予的期权大约3-4年可以完成100%\n以下是部分全员信内容:\n\n为了满足部分同学的现金需求，提供额外的流动性，2026年10月字节跳动期权回购已启动。参与此次回购的人员也包含离职员工。其中，近期因业务调整而离开的同学，每股回购价格与在职员工相同。大家可以结合自己的实际需求，合理规划投资和消费，自愿参加。\n\n回购额度\n\n•每一笔授予的期权，按以下规则计算可回购额度。每笔的可回购额度加总后，减去历史已回购股数，得到最大可申请回购股数，达到1股即可申请回购：\n可回购额度计算规则：\n\n•总包类/其他类 \n如入职授予，总包调整增发，到期增发等 每个批次归属后，可申请回购该批次已归属股数的50% 之后每满1年，该批次可申请回购比例增加10%\n•绩效类 \n如在绩效评估中，部分绩效突出的同学会获得“绩效期权” 2026年1月1日之前的授予，每个批次归属后，可申请回购该批次已归属股数的100%。 2026年1月1日及之后的授予，每个批次归属后，可申请回购该批次已归属股数的55%，之后每满1年，该批次可申请回购比例增加15%\n•奖金类 \n在绩效评估中，以期权形式发放的奖金（如期权形式奖金，期权形式奖金-额外增发） 每笔授予的首个归属日后满1年，可申请回购该笔授予已归属股数的50 每笔授予的首个归属日后满2年，可申请回购该笔授予已归属股数的100% 若首个归属日非4月1日（如5月1日），则按当年4月1日来计算已归属年限",
+   "author": "@Noe1017_Monad",
+   "name": "Noe1017",
+   "created_at": "2026-10-13T13:37:10Z",
+   "views": 6616,
+   "likes": 4,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 2,
+   "url": "https://x.com/Noe1017_Monad/status/2110001903945847063",
+   "fetched_at": "2026-10-14T08:54:18Z"
+  },
+  "2110062335683412166": {
+   "status": "ok",
+   "text": "\"America First\" Goes to China: A Temu Attorney Is Now Running Trump's Far-Right Propaganda Machine\n\nIn a plot twist too aggressively absurd even for low-budget political satire, the authoritarian regime's brand-new \"Minister of Propaganda\" and bargain-bin legal crusader, Katie Zacharia — affectionately dubbed the \"Temu Attorney\" — casually informed the White House Press Corps that she earned her law degree in China.\n\nHow Zacharia managed to pass a Chinese bar exam is one of the universe's greatest unsolved mysteries, but the punchline is even better: she doesn't hold a license to practice law in a single, solitary U.S. state. Nothing screams \"America First\" quite like importing your unlicensed legal advice straight from an overseas online discount marketplace.",
+   "author": "@maddenifico",
+   "name": "Bill Madden",
+   "created_at": "2026-10-13T17:37:18Z",
+   "views": 56797,
+   "likes": 2970,
+   "reposts": 960,
+   "replies": 116,
+   "quotes": 50,
+   "bookmarks": 96,
+   "url": "https://x.com/maddenifico/status/2110062335683412166",
+   "fetched_at": "2026-10-14T08:54:18Z"
+  },
+  "2110130813702443388": {
+   "status": "ok",
+   "text": "a 99 food morreu cedo! só na semana passada foram 2 pedidos n entregues… um o entregador nem buscou no estabelecimento e o outro ele buscou (era menos de 10 minutos da minha casa) e ele não entregou",
+   "author": "@arohamobrenda",
+   "name": "bren do minhyuk ❥",
+   "created_at": "2026-10-13T22:09:24Z",
+   "views": 46,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/arohamobrenda/status/2110130813702443388",
+   "fetched_at": "2026-10-14T08:54:18Z"
+  },
+  "2110131029222760584": {
+   "status": "ok",
+   "text": "✨️ CUPOM 99FOOD / 99 FOOD ✨️\n\n－ R$40 OFF acima de R$50\n－ válido para todas as contas que ainda não tenha usado o cupom (crie uma nova caso ja tenha usado)\n\n🏷 FOOD-JMR2XU\n🔗 https://d.99app.com/NY1Zt5I?share_media=Twitter",
+   "author": "@aeripromos",
+   "name": "Aeri Promos 🩷✨️",
+   "created_at": "2026-10-13T22:10:16Z",
+   "views": 650,
+   "likes": 4,
+   "reposts": 3,
+   "replies": 1,
+   "quotes": 0,
+   "bookmarks": 1,
+   "url": "https://x.com/aeripromos/status/2110131029222760584",
+   "fetched_at": "2026-10-14T08:54:18Z"
+  },
+  "2110141397936513345": {
+   "status": "ok",
+   "text": "近日，一位微博大V博主发文表示，自己在使用滴滴打车时被平台诱导开通了小额贷款，直到一个月后才发现。\n开通贷款时没有明显提示，付款页面还被设置为禁止截屏，而取消相关服务时却需要提供身份证号和手机号。",
+   "author": "@whyyoutouzhele",
+   "name": "李老师不是你老师",
+   "created_at": "2026-10-13T19:00:00Z",
+   "views": 56016,
+   "likes": 295,
+   "reposts": 23,
+   "replies": 23,
+   "quotes": 1,
+   "bookmarks": 31,
+   "url": "https://x.com/whyyoutouzhele/status/2110083146981007375",
+   "fetched_at": "2026-10-14T08:54:18Z"
+  },
+  "2110143115180876089": {
+   "status": "ok",
+   "text": "近日，一位微博大V博主发文表示，自己在使用滴滴打车时被平台诱导开通了小额贷款，直到一个月后才发现。\n开通贷款时没有明显提示，付款页面还被设置为禁止截屏，而取消相关服务时却需要提供身份证号和手机号。",
+   "author": "@whyyoutouzhele",
+   "name": "李老师不是你老师",
+   "created_at": "2026-10-13T19:00:00Z",
+   "views": 56016,
+   "likes": 295,
+   "reposts": 23,
+   "replies": 23,
+   "quotes": 1,
+   "bookmarks": 31,
+   "url": "https://x.com/whyyoutouzhele/status/2110083146981007375",
+   "fetched_at": "2026-10-14T08:54:18Z"
+  },
+  "2110156012548481365": {
+   "status": "ok",
+   "text": "国内一个流量车评人，也收到通知了，尊界S800也要换刹车踏板。不是，咱不说好的“免费升级”V800的刹车踏板么？咋还扩大“优惠”范围了呢？？？",
+   "author": "@faultbugs",
+   "name": "faultbugs",
+   "created_at": "2026-10-13T23:49:32Z",
+   "views": 6613,
+   "likes": 60,
+   "reposts": 0,
+   "replies": 8,
+   "quotes": 1,
+   "bookmarks": 3,
+   "url": "https://x.com/faultbugs/status/2110156012548481365",
+   "fetched_at": "2026-10-14T08:54:18Z"
+  },
+  "2110170623452291227": {
+   "status": "ok",
+   "text": "真是一计未成，再生一计。\n\n昨天，内地有诸多汽车博主爆料称，收到5000元一条的商单邀约，目的是黑华为的车。\n\n有博主在口播视频里直指是懂车帝策划了黑华为的活动。粉丝一时义愤填膺，恨不得把懂车帝撕成两半，并纷纷艾特法制官微。\n\n多少有点脑子的人，都不会相信这是懂车帝的商单，你要去干坏事，你会留下名字吗？头脑简单四肢发达的家伙才会相信。\n\n对于这种东西，只有一种可能，贼喊捉贼，来显得自己无辜。可事实已经是明摆着的，根本不用谁来黑，以后抓好质量关，口自会慢慢回升。\n\n这一波又一波的业余公关，只会不断增加自己的劣迹。",
+   "author": "@cuichenghao",
+   "name": "作家崔成浩",
+   "created_at": "2026-10-14T00:47:36Z",
+   "views": 26341,
+   "likes": 223,
+   "reposts": 18,
+   "replies": 40,
+   "quotes": 0,
+   "bookmarks": 15,
+   "url": "https://x.com/cuichenghao/status/2110170623452291227",
+   "fetched_at": "2026-10-14T08:54:18Z"
+  },
+  "2110278215579381763": {
+   "status": "ok",
+   "text": "模型榜单不断洗牌，真正的转折却值得反复回看。从 Transformer 到 DeepSeek-R1，再到 Claude，回顾 2017—2026 年的七个代表性模型：它们如何改变 AI 的训练方法、使用方式，以及人类探索未知的路径 https://x.com/i/article/2110224165592825857",
+   "author": "@dragono64v",
+   "name": "dragon",
+   "created_at": "2026-10-14T07:55:08Z",
+   "views": 403,
+   "likes": 5,
+   "reposts": 1,
+   "replies": 2,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/dragono64v/status/2110278215579381763",
+   "fetched_at": "2026-10-14T08:54:18Z"
   }
  }
 }
