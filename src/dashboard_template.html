@@ -153,8 +153,14 @@ main.wrap{display:flex;flex-direction:column}main>*{order:5}
 [data-theme=paper] #h-ride,[data-theme=paper] #ride{order:0}
 
 .heat-how{font-size:12.5px;line-height:1.55;color:var(--mut);background:color-mix(in srgb,var(--acc) 7%,transparent);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:0 0 12px}
-.heat-how b{color:var(--tx);display:block;margin-bottom:4px}
+.heat-how b{color:var(--tx)}
 .heat-how p{margin:6px 0}
+.heat-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.heat-head .xmore{min-height:44px;flex:0 0 auto}
+.heat-brief{margin:2px 0 0}
+.heat-full{display:none}
+.heat-how.is-open .heat-full{display:block}
+.heat-how.is-open .heat-brief{display:none}
 .spanline{font-variant-numeric:tabular-nums}
 .hbadge{font-weight:800;color:var(--warn);white-space:nowrap}
 .delta.up{color:var(--ok)}.delta.down{color:var(--acc)}
