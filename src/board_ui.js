@@ -501,7 +501,7 @@
     const hero = pack.events[0];
     const rest = pack.events.slice(1);
     const leads = pack.leads.slice(0, 3);
-    const main = (hero ? eventCard(hero, true) : '') + pinCard() + '<div class="pevents">' + rest.map(g => eventCard(g, false)).join('') + '</div>';
+    const main = pinCard() + (hero ? eventCard(hero, true) : '') + '<div class="pevents">' + rest.map(g => eventCard(g, false)).join('') + '</div>';
     const railLeads = '<div class="psec"><b>新瓜 · 尚未立案</b><button type="button" data-ptab="leads">全部 ' + pack.leads.length + ' 条 ›</button></div>' + (leads.length ? leads.map(leadCompact).join('') : '<p class="pfoot">没有待核的新瓜。</p>');
     const ranks = rankRows().slice(0, 5);
     const railHeat = '<div class="prail-heat"><div class="psec"><b style="color:#4A6FA5">热榜</b><button type="button" data-ptab="heat">全部 ›</button></div>' + (ranks.length ? ranks.map((r, i) => '<article class="pcard"><div class="prow-top"><b>' + (i + 1) + ' ' + esc(r.t) + '</b><span class="psm">' + fmt(r.last.value) + '</span></div><div class="note">' + (r.last.metric === 'x_daily_post_count' ? 'X 日发帖 · ' + esc(fmtHeatDay(r.last.timestamp_utc)) : esc(r.last.metric)) + '</div></article>').join('') : '') + '</div>';

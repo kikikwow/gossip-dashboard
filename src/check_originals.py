@@ -153,6 +153,12 @@ def main():
         fail(errors, 'tracker overlay is missing the open id or the foreign-language group')
     if 'didiTimeline' not in board:
         fail(errors, 'tracker overlay does not build a timeline')
+    home = re.search(r'function paperHome\b', board)
+    home_chunk = board[home.start():home.start() + 900] if home else ''
+    pin_at = home_chunk.find('pinCard()')
+    hero_at = home_chunk.find('eventCard(hero')
+    if pin_at < 0 or hero_at < 0 or pin_at > hero_at:
+        fail(errors, 'homepage must place the pinned 滴滴 card above the lead')
     focus = re.search(r'function focusPanel\b', tpl)
     focus_chunk = tpl[focus.start():focus.start() + 1600] if focus else ''
     if 'open-ev' not in focus_chunk or 'ride:didi' not in focus_chunk:
