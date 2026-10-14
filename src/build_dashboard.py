@@ -61,42 +61,25 @@ def main():
         for k, v in alias.items():
             if k in t['name']: t['keywords'] = sorted(set(t['keywords']) | set(v))
     noise = ('业务', '八卦', '组织', '人事', '助理', '拉美', '巴西', '墨西哥', '澳洲', '香港')
-    # Exact tokens only. Substring noise used to delete useful phrases such as 巴西99.
-    generic = {'app', 'global', '99', '国内', '埃及', '墨西哥', '拉美', '巴西', '澳洲', '香港',
-               '八卦', '人事', '组织', '业务', '助理', '相关', '出海', '组织人事', '香港等全部海外业务'}
     for t in lt:
         ks = set()
         for k in t['keywords']:
-            ks |= set(re.split(r'[\s+/、，,]+', k))
-        t['keywords'] = sorted(k for k in ks if len(k) >= 2 and k.casefold() not in generic and not any(n in k and k != '巴西99' for n in noise))
-    # 滴滴出海的国别词不能单独当关键词，否则「国内」会把无关条目吸进重点追踪。
-    # 网约车筛选读的就是这里的关键词，再加竞品词；两边必须命中同一批滴滴条目。
-    for t in lt:
-        if '滴滴' not in t['name']:
-            continue
-        t['keywords'] = sorted(set(t['keywords']) | {'滴滴', '滴滴出海', 'DiDi', 'Didi', '99app', '巴西99'})
-    import cache_x_posts
-    cache_x_posts.fill_missing()
-    cache_path = os.path.join(BASE, 'x_cache.json')
-    x_cache = json.load(open(cache_path, encoding='utf-8')) if os.path.exists(cache_path) else {'posts': {}}
-    payload = dict(editions=eds, longterm=lt, shortterm=st, heat=heat, x_cache=x_cache,
+            ks |= set(k.split())
+        t['keywords'] = sorted(k for k in ks if len(k) >= 2 and k != '99' and not any(n in k for n in noise))
+    payload = dict(editions=eds, longterm=lt, shortterm=st, heat=heat,
                    built=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M UTC'))
     tpl = open(os.path.join(BASE, 'dashboard_template.html'), encoding='utf-8').read()
     js = json.dumps(payload, ensure_ascii=False).replace('</', '<\\/')
     os.makedirs(os.path.join(BASE, 'dashboard'), exist_ok=True)
-    page = tpl.replace('/*__DATA__*/null', js)
     out = os.path.join(BASE, 'dashboard', 'index.html')
-    open(out, 'w', encoding='utf-8').write(page)
-    root = os.path.dirname(BASE)
-    open(os.path.join(root, 'index.html'), 'w', encoding='utf-8').write(page)
+    open(out, 'w', encoding='utf-8').write(tpl.replace('/*__DATA__*/null', js))
     import detail_render, shutil
+    ev = os.path.join(BASE, 'dashboard', 'events'); shutil.rmtree(ev, ignore_errors=True); os.makedirs(ev)
     allit = []
     for e in eds:
         for sct in e['sections']:
             for it in sct.get('items', []): it['_file'] = e['_file']; it['_ed'] = e; allit.append(it)
-    for dest in (os.path.join(BASE, 'dashboard', 'events'), os.path.join(root, 'events')):
-        shutil.rmtree(dest, ignore_errors=True); os.makedirs(dest)
-        for it in allit: detail_render.render(it, it['_ed'], allit, dest)
+    for it in allit: detail_render.render(it, it['_ed'], allit, ev)
     for it in allit: it.pop('_ed', None); it.pop('_file', None)
     print('detail pages:', len(allit), '(enriched:', sum(1 for i in allit if i.get('detail')), ')')
     print('wrote', out, '| editions:', len(eds), '| heat rows:', len(heat))

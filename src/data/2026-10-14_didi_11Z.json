@@ -1,0 +1,168 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-14T11:16:00Z",
+ "fired_at_utc": "2026-10-14T11:12:48Z",
+ "scanned_at_utc": "2026-10-14T11:16:00Z",
+ "beijing_time": "2026-10-14 19:16 Asia/Shanghai",
+ "edition_date": "2026-10-14",
+ "window": {
+  "start_utc": "2026-10-14T10:10:00Z",
+  "end_utc": "2026-10-14T11:16:00Z",
+  "note": "自上轮 18:16（北京时间）以来；Tier2 slot1（日本/澳新/埃及）回看约 6 小时；Tier3 跳过（日间已跑）"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无新的可核验公司事实。Tier1 cn_price 命中3帖：@sam51824016070 繁简价差二次扩散 impressions=132（低于发报门槛且无公司回应/新证据，主线05Z已报）；@wdnmdnmslm(111) 低于门槛；@qfhsj2 Tesla/Robotaxi 帖正文无滴滴实体按 postfilter 丢弃。cn_gossip 1帖仅 t.co article（海外手机卡）丢弃。HK-TW/BR/MX/EN 与 Slot1 日语/澳新/埃及三查询均0帖。Web：内部信/裁员仍为旧闻；繁简仍为 unwire/LIHKG/Threads@onlyu0913；香港牌照为8月申请开放旧闻；Threads 无登录未命中原帖；99Food Senacon/CADE 为更早料；MX PROFECO/裁员为2020–2023旧闻；日本侧南城市合作、鸟取/岛根开通、DiDi Pay 等为 PR/9月末旧闻（05Z/08Z已覆盖）；澳/埃 Web 为经济贡献/合作 PR 与个例投诉，非本期公司八卦。RSS 新匹配0条。已覆盖的 JP 资本、MX Puebla、繁简主帖、99Food TJSP 不重复报警。",
+ "sections": [
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "公开媒体",
+      "RSS"
+     ],
+     "date": "10-14 19:16",
+     "text": "本期无新动态。扫描窗口 10:10Z–11:16Z（北京时间约 18:10–19:16）。Tier1 全量 + Tier2 slot1（日本/澳新/埃及）未见可发布的新公司八卦、监管裁决或人事/财务线索；繁简价差仅见低互动二次转发（无新事实）。",
+     "links": [],
+     "id": "20261014-didi-11Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "03Z": 133,
+   "04Z": 221,
+   "05Z": 277,
+   "06Z": 379,
+   "07Z": 286,
+   "08Z": 290,
+   "09Z": 256,
+   "10Z": 254,
+   "11Z_partial_to1115": 71,
+   "query": "滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"",
+   "note": "10Z整点254（≈flat vs 09Z=256）；名称撞词/噪音仍主导；非可核验公司事件；11Z前15分钟71"
+  },
+  "task_broad_sample": {
+   "00Z": 1141,
+   "01Z": 1245,
+   "02Z": 1249,
+   "03Z": 1367,
+   "04Z": 1414,
+   "05Z": 1497,
+   "06Z": 1605,
+   "07Z": 1186,
+   "08Z": 1312,
+   "09Z": 1506,
+   "10Z": 1685,
+   "11Z_partial": 391,
+   "query": "(滴滴 OR DiDi OR 程维 OR 花小猪 OR 99app)",
+   "note": "任务指定宽口径；10Z=1685 较09Z=1506升；含大量 DiDi/99 撞词，仅作辅证"
+  },
+  "trad_simp_price_x": {
+   "posts_in_tier1_window": 2,
+   "kept_for_alert": 0,
+   "note": "cn_price 有效实体帖2（sam51824016070 132 imp / wdnmdnmslm 111）；另1帖无实体丢弃；已报主线无新事实，不报警"
+  },
+  "tier1_x_hits_kept": 0,
+  "slot1_x_hits_kept": 0,
+  "weibo_didi_on_list": "not_checked_this_run"
+ },
+ "candidates": [
+  {
+   "topic": "X cn_price @sam51824016070 繁简价差二次扩散",
+   "verdict": "already_alerted_05Z_secondary_diffusion_below_engagement",
+   "why": "impressions=132<300且replies=0；复述繁简价差/国籍歧视叙事，无公司回应/新证据；主线05Z已报",
+   "url": "https://x.com/sam51824016070/status/2110325400098476330"
+  },
+  {
+   "topic": "X cn_price @wdnmdnmslm 回复@0xTheo520",
+   "verdict": "log_only_below_engagement",
+   "why": "impressions=111<300且replies=0；评论向二次扩散（10Z已记，热度仍低）",
+   "url": "https://x.com/wdnmdnmslm/status/2110305941229023507"
+  },
+  {
+   "topic": "X cn_price @qfhsj2 Tesla/FSD/Robotaxi",
+   "verdict": "reject_no_entity_in_text",
+   "why": "正文无滴滴/花小猪实体；疑似 iPhone/article 假阳性",
+   "url": "https://x.com/qfhsj2/status/2110301466640728265"
+  },
+  {
+   "topic": "X cn_gossip @xmglab t.co-only article",
+   "verdict": "reject_tco_only_no_entity",
+   "why": "正文仅 t.co；article 标题为海外手机卡无关",
+   "url": "https://x.com/xmglab/status/2110312903131922804"
+  },
+  {
+   "topic": "繁简价差 Threads@onlyu0913 / unwire / LIHKG",
+   "verdict": "already_alerted_05Z_no_new_facts",
+   "why": "Web 仍为旧线索复述；Threads 无登录未命中原帖"
+  },
+  {
+   "topic": "Web 内部信/裁员/组织调整",
+   "verdict": "stale_or_not_new_window",
+   "why": "搜到2020–2023裁员/架构旧闻；非本窗口新事实"
+  },
+  {
+   "topic": "Web 香港网约车牌照",
+   "verdict": "stale_2026-08_application_open"
+  },
+  {
+   "topic": "99Food Senacon / CADE",
+   "verdict": "stale_already_noted_03Z_05Z_07Z",
+   "why": "Senacon透明度、CADE排他复审均为更早料；本期无 demissões/Procon/CEO 新料"
+  },
+  {
+   "topic": "Web DiDi México PROFECO/despidos",
+   "verdict": "stale_2020_2023"
+  },
+  {
+   "topic": "Slot1 X JP/AU-NZ/EG",
+   "verdict": "zero_hits",
+   "why": "日语配车/苦情、澳新投诉/ACCC、埃及投诉三查询均0帖"
+  },
+  {
+   "topic": "Web DiDiモビリティジャパン 南城市/鸟取岛根/DiDi Pay",
+   "verdict": "stale_already_noted_05Z_08Z",
+   "why": "南城市合作、鸟取/岛根开通、DiDi Pay 等为 PR/9月末旧闻；资本增资主线05Z已报"
+  },
+  {
+   "topic": "Web DiDi Australia / Egypt",
+   "verdict": "stale_or_pr_not_alert",
+   "why": "埃及经济贡献/合作 PR 与个例投诉；非本期公司八卦"
+  },
+  {
+   "topic": "JP 资本 / MX Puebla / 繁简主帖 / 99Food TJSP",
+   "verdict": "already_covered_no_realert"
+  },
+  {
+   "topic": "RSS fetch_sources",
+   "verdict": "no_didi_matches",
+   "why": "2026-10-14T1115Z.json new matching items=0"
+  }
+ ],
+ "sources_queried": [
+  "X tier1×8 + tier2 slot1×3 + counts×4 (可比热度+任务宽口径+11Z partial)",
+  "WebSearch×8 (tier1×6 + slot1×2)",
+  "RSS fetch_sources (0 条滴滴相关新匹配)",
+  "Tier3 skipped (daytime already ran)"
+ ],
+ "x_calls_used": 15,
+ "web_searches": 8,
+ "web_searches_used": 8,
+ "tiers": "tier1 + tier2 slot1",
+ "tiers_ran": [
+  "tier1",
+  "tier2_slot1"
+ ],
+ "slot": 1,
+ "push_needed": true,
+ "push_note": "New edition 11Z ingested into dashboard data; parent should cloud-push gossip-dashboard if build changes index.html"
+}
