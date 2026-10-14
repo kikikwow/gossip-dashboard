@@ -300,6 +300,12 @@ html[data-ui=classic] #paper{display:none!important}
 .pcard.tk{box-shadow:inset 3px 0 0 #4A6FA5,0 1px 2px rgba(60,45,30,.05)}
 .pcard.nw{box-shadow:inset 3px 0 0 #C9824A,0 1px 2px rgba(60,45,30,.05)}
 .pcard.pin{background:#F3EEE4;border:1px dashed #4A6FA5;box-shadow:none}
+.pcard.pin .phit{min-height:44px;cursor:pointer}
+.heat-hit{display:block;width:100%;min-height:44px;text-align:left;background:none;border:0;color:inherit;font:inherit;padding:0;cursor:pointer}
+.rank li.rankrow{display:block}
+.rankrow .heat-hit{display:flex;align-items:center;gap:8px;width:100%}
+.focus h3 .open-ev{color:inherit;font-size:14px;min-height:44px}
+.focus li .focus-hit{display:block;width:100%;min-height:44px;text-align:left}
 .pkick{font-size:11px;letter-spacing:1.5px;font-weight:800;color:#4A6FA5}
 .pkick.ap{color:#C9824A}
 .phero h2,.ptitle{font-family:"Noto Serif CJK SC","Source Han Serif SC","Songti SC",serif;font-weight:900;line-height:1.28;margin:4px 0}
@@ -379,7 +385,7 @@ html[data-ui=new] .xclose{background:#F3EEE4;border-color:#E4DFD6;color:#1F1D1A}
 <select id="fsrc"><option value="">全部信源</option></select>
 <input type="search" id="q" placeholder="🔍 搜索公司 / 内容 / 链接…"></div></div></div></div>
 <main class="wrap">
-<section class="ride" id="ride"><h2>🚕 网约车 <span class="note"><span class="pulse"></span>每小时专项追踪 · 滴滴 & DiDi 出海</span></h2>
+<section class="ride" id="ride"><h2>🚕 网约车 <span class="note"><span class="pulse"></span>每小时专项追踪 · <span id="didi-name">滴滴</span></span></h2>
 <div class="sub">覆盖：滴滴国内 · 巴西 99 · 埃及 · 墨西哥 · 拉美 · 澳洲 · 香港，以及相关竞品。关键词匹配条目；暂无数据时显示空态。</div>
 <div id="ridebody"></div></section>
 <div class="grid3"><section class="panel"><h2>🔥 热度榜</h2><div id="heat"></div></section>
@@ -450,10 +456,11 @@ $('#q').oninput=e=>{state.q=e.target.value.trim().toLowerCase();const mq=$('#mq'
 $('#theme').value=document.documentElement.dataset.theme;$('#theme').onchange=e=>{document.documentElement.dataset.theme=e.target.value;try{localStorage.setItem('gossipTheme',e.target.value)}catch(_){};window.render()};
 function hl(t){t=esc(t);if(!state.q)return t;const q=esc(state.q).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return t.replace(new RegExp(q,'gi'),m=>`<mark>${m}</mark>`)}
 const MAXV=Math.max(1,...ITEMS.map(i=>i._views));
-function card(it){const e=it._e;return `<article class="card" data-id="${esc(it.id)}" style="--c:${it._col}"><div class="heatbar">${it._views?`<b>${fmt(it._views)}</b> 浏览${it._views>=1e5?'<span class="hotb">爆</span>':it._views>=1e4?'<span class="hotb" style="background:#ff8200">热</span>':''}<div class="hbar"><i style="width:${(Math.sqrt(it._views/MAXV)*100).toFixed(1)}%"></i></div>`:'<span>暂无浏览数据</span>'}</div><div class="top"><span class="pill">${hl(it.company)}</span>${it.detail?'<span class="rich">深度</span>':''}
+function labelOf(s){return (window.PostUI&&PostUI.displayLabel)?PostUI.displayLabel(s,PostUI.trackerName(D.longterm)):s}
+function card(it){const e=it._e;return `<article class="card" data-id="${esc(it.id)}" style="--c:${it._col}"><div class="heatbar">${it._views?`<b>${fmt(it._views)}</b> 浏览${it._views>=1e5?'<span class="hotb">爆</span>':it._views>=1e4?'<span class="hotb" style="background:#ff8200">热</span>':''}<div class="hbar"><i style="width:${(Math.sqrt(it._views/MAXV)*100).toFixed(1)}%"></i></div>`:'<span>暂无浏览数据</span>'}</div><div class="top"><span class="pill">${hl(labelOf(it.company))}</span>${it.detail?'<span class="rich">深度</span>':''}
 <span class="badge ${it.tag==='实锤'?'b-real':'b-rum'}">【${esc(it.tag)}】</span>${(it.source_types||[]).map(s=>`<span class="src">${esc(s)}</span>`).join('')}<span class="date">📅 ${esc(fmtTs(it.date))}</span></div>
-<div class="secn">${esc(TYPES[e.type]||e.type)} · ${esc(it._sec)}${it._views?` · 👁 最高 ${fmt(it._views)}`:''}</div><p>${hl(it.text)}</p>
-<a class="more" href="events/${encodeURIComponent(it.id)}.html">查看事件详情 →</a><div class="links">${(it.links||[]).map(l=>`<div>🔗 <a href="${esc(l.url)}" target="_blank" rel="noopener">${hl(l.label)}</a>${l.views?`<span class="vw">👁 ${esc(l.views)}</span>`:''}</div>`).join('')}</div></article>`}
+<div class="secn">${esc(TYPES[e.type]||e.type)} · ${esc(labelOf(it._sec))}${it._views?` · 👁 最高 ${fmt(it._views)}`:''}</div><p>${hl(it.text)}</p>
+<button type="button" class="more open-ev" data-id="${esc(it.id)}">查看事件详情</button><div class="links">${(it.links||[]).map(l=>`<div>🔗 <a href="${esc(l.url)}" target="_blank" rel="noopener">${hl(l.label)}</a>${l.views?`<span class="vw">👁 ${esc(l.views)}</span>`:''}</div>`).join('')}</div></article>`}
 function match(it){const s=state;if(s.type==='ride'){if(!isRide(it))return false;}else if(s.type&&it._e.type!==s.type)return false;if(s.tag&&it.tag!==s.tag)return false;
 if(s.co&&!it.company.split(/\s*\/\s*/).includes(s.co))return false;if(s.src&&!(it.source_types||[]).includes(s.src))return false;if(s.q&&!it._hay.includes(s.q))return false;return true}
 function render(){let L=ITEMS.filter(match);if(document.documentElement.dataset.theme==='hot')L=L.slice().sort((a,b)=>b._views-a._views);$('#cards').innerHTML=L.map(card).join('')||'<p class="empty">没有符合条件的条目。</p>';$('#cnt').textContent=`共 ${L.length} / ${ITEMS.length} 条`;renderHero()}
@@ -475,8 +482,9 @@ function heatPanel(){const H=D.heat||[];
   $('#heat').innerHTML=`<p class="note">来自 heat_log.csv（${H.length} 条记录），按各话题最近一个完整日的 X 发帖量排序，折线为逐日发帖量</p><ol class="rank">${rows.map((r,i)=>`<li><span class="no">${i+1}</span><span class="t" title="${esc(r.t)}">${esc(r.t)}<br><span class="note">${r.last.metric==='x_daily_post_count'?'X 日发帖量 · '+esc(fmtHeatDay(r.last.timestamp_utc)):esc(r.last.metric)}</span></span><span class="v">${spark(r.series)}<br>${fmt(r.last.value)}</span></li>`).join('')}</ol>`;return}
  const L=ITEMS.filter(i=>i._views>0).sort((a,b)=>b._views-a._views).slice(0,10);
  $('#heat').innerHTML=`<p class="note">⚠️ heat_log.csv 暂无数据，临时按条目中 X 帖子浏览量排序（暂无历史走势）</p><ol class="rank">${L.map((it,i)=>`<li><span class="no">${i+1}</span><span class="t" title="${esc(it.text)}"><b>${esc(it.company)}</b> · ${esc(it.text.slice(0,22))}…</span><span class="v">👁 ${fmt(it._views)}</span></li>`).join('')}</ol>`}
-function focusPanel(){$('#focus').innerHTML=D.longterm.map(t=>{const kws=t.keywords;const L=ITEMS.filter(it=>{if((t.name||'').indexOf('滴滴')>=0)return matchesDidi(it);const h=(it.company+' '+it.text).toLowerCase();return kws.some(k=>h.includes(String(k).toLowerCase()))}).slice(0,4);
- return `<div class="focus"><h3>${esc(t.name)} <span class="chip">${L.length} 条</span></h3><div class="kw">关键词：${esc(kws.slice(0,8).join(' / '))}</div>${L.length?`<ul>${L.map(it=>`<li><b>${esc(it.company)}</b> <span class="badge ${it.tag==='实锤'?'b-real':'b-rum'}">${esc(it.tag)}</span> ${esc(it.text.slice(0,40))}… <a href="${esc((it.links[0]||{}).url)}" target="_blank">↗</a></li>`).join('')}</ul>`:'<div class="empty">现有期次中暂无匹配条目</div>'}</div>`}).join('')}
+function focusPanel(){const labelOf=s=>(window.PostUI&&PostUI.displayLabel)?PostUI.displayLabel(s,PostUI.trackerName(D.longterm)):s;$('#focus').innerHTML=D.longterm.map(t=>{const kws=t.keywords;const all=ITEMS.filter(it=>{if((t.name||'').indexOf('滴滴')>=0)return matchesDidi(it);const h=(it.company+' '+it.text).toLowerCase();return kws.some(k=>h.includes(String(k).toLowerCase()))});const L=all.slice(0,4);const didi=(t.name||'').indexOf('滴滴')>=0;
+ const head=didi?`<h3><button type="button" class="open-ev" data-id="ride:didi">${esc(t.name)} <span class="chip">${all.length} 条</span></button></h3>`:`<h3>${esc(t.name)} <span class="chip">${all.length} 条</span></h3>`;
+ return `<div class="focus">${head}<div class="kw">关键词：${esc(kws.slice(0,8).join(' / '))}</div>${L.length?`<ul>${L.map(it=>`<li><button type="button" class="open-ev focus-hit" data-id="${esc(it.id)}"><b>${esc(labelOf(it.company))}</b> <span class="badge ${it.tag==='实锤'?'b-real':'b-rum'}">${esc(it.tag)}</span> ${esc(it.text.slice(0,40))}…</button> <a href="${esc((it.links[0]||{}).url)}" target="_blank">↗</a></li>`).join('')}</ul>`:'<div class="empty">现有期次中暂无匹配条目</div>'}</div>`}).join('')}
 function shortPanel(){const H=D.heat||[];$('#short').innerHTML=D.shortterm.length?D.shortterm.map(t=>{const ser=H.filter(r=>r.topic===t.name&&r.metric==='x_daily_post_count').map(r=>r.value);
  return `<div class="hot"><b>${esc(t.name)}</b><div class="r">${esc(t.reason)}</div><div style="margin-top:3px"><span class="chip">加入 ${esc(fmtTs(t.added))}</span><span class="chip">热度：${esc(t.heat)}</span><span class="chip">${esc(t.status)}</span>${spark(ser)}</div></div>`}).join(''):'<p class="empty">topics.md 中暂无短期热点</p>'}
 function timeline(){$('#tl').innerHTML=D.editions.map(e=>{const n=e.sections.reduce((a,s)=>a+(s.items||[]).length,0);

@@ -45,6 +45,29 @@ def html_with_times(text, anchor=None):
     return ''.join(out)
 NA = '<p class="na">暂无数据</p>'
 TYPES = {'bigtech': '大厂八卦', 'adr': '美股中概&出海', 'alert': '快讯', 'daily': '每日总结'}
+_TRACKER_ALIASES = ('滴滴 & 滴滴出海', '滴滴 & 出海', '滴滴 & DiDi 出海')
+_TRACKER_NAME = None
+def tracker_name():
+    global _TRACKER_NAME
+    if _TRACKER_NAME: return _TRACKER_NAME
+    import build_dashboard
+    name = '滴滴'
+    for t in build_dashboard.load_topics()[0]:
+        if '滴滴' in (t.get('name') or ''):
+            name = t['name']; break
+    _TRACKER_NAME = name
+    return name
+def display_label(text, name=None):
+    raw = '' if text is None else str(text)
+    trimmed = raw.strip()
+    if not trimmed: return raw
+    core = re.sub(r'^[^\u4e00-\u9fffA-Za-z0-9]+', '', trimmed)
+    lead = trimmed[:len(trimmed) - len(core)]
+    label = name or tracker_name()
+    for alias in _TRACKER_ALIASES:
+        if core == alias or core.startswith(alias):
+            return lead + label + core[len(alias):]
+    return raw
 def fmt(n):
     if n is None: return '—'
     n = float(n)
@@ -178,11 +201,14 @@ def render(it, ed, all_items, out_dir):
     load_bits(all_items)
     bits = _BITS.get(it['id']) or {'orig': '', 'heat': '', 'timeline': []}
     d = it.get('detail') or {}
-    title = d.get('title') or (it['company'] + '：' + it['text'][:30] + '…')
+    name = tracker_name()
+    company = display_label(it.get('company'), name)
+    section = display_label(it.get('section'), name)
+    title = display_label(d.get('title'), name) if d.get('title') else (company + '：' + it['text'][:30] + '…')
     tagc = 'b-real' if it.get('tag') == '实锤' else 'b-rum'
     P = []
-    P.append(f'<div class="topbar"><a class="back" href="../index.html">← 返回看板</a><div class="tz" id="tz" role="group" aria-label="显示时区"><button type="button" data-tz="cst" class="on" aria-pressed="true">北京时间</button><button type="button" data-tz="utc" aria-pressed="false">UTC</button></div><button type="button" class="ui-toggle" data-ui-set="classic">经典版</button><span class="crumb">{E(TYPES.get(ed.get("type"), ed.get("type")))} · {html_with_times(ed.get("edition_date") or ed.get("timestamp"))} · {E(it.get("section"))}</span></div>')
-    P.append(f'<h1>{E(title)}</h1><div class="meta"><span class="pill">{E(it["company"])}</span><span class="badge {tagc}">【{E(it.get("tag"))}】</span>' + ''.join(f'<span class="src">{E(s)}</span>' for s in it.get('source_types', [])) + f'<span class="note">📅 {html_with_times(it.get("date"))}</span>' + (f'<span class="note">· 深度资料整理于 {html_with_times(d.get("enriched_at"))}</span>' if d.get('enriched_at') else '') + (bits.get('heat') or '') + '</div>')
+    P.append(f'<div class="topbar"><a class="back" href="../index.html">← 返回看板</a><div class="tz" id="tz" role="group" aria-label="显示时区"><button type="button" data-tz="cst" class="on" aria-pressed="true">北京时间</button><button type="button" data-tz="utc" aria-pressed="false">UTC</button></div><button type="button" class="ui-toggle" data-ui-set="classic">经典版</button><span class="crumb">{E(TYPES.get(ed.get("type"), ed.get("type")))} · {html_with_times(ed.get("edition_date") or ed.get("timestamp"))} · {E(section)}</span></div>')
+    P.append(f'<h1>{E(title)}</h1><div class="meta"><span class="pill">{E(company)}</span><span class="badge {tagc}">【{E(it.get("tag"))}】</span>' + ''.join(f'<span class="src">{E(s)}</span>' for s in it.get('source_types', [])) + f'<span class="note">📅 {html_with_times(it.get("date"))}</span>' + (f'<span class="note">· 深度资料整理于 {html_with_times(d.get("enriched_at"))}</span>' if d.get('enriched_at') else '') + (bits.get('heat') or '') + '</div>')
     P.append(f'<div class="summary">{E(d.get("summary") or it["text"])}</div>')
     P.append('<section><h2>原文</h2>' + (bits.get('orig') or '<p class="xmiss">原文未缓存</p>') + '</section>')
     P.append('<section><h2>📖 事件经过</h2>' + (f'<p>{E(d["background"])}</p>' if d.get('background') else f'<p>{E(it["text"])}</p><p class="na">暂无更详细的事件经过</p>') + '</section>')
@@ -226,7 +252,7 @@ def render(it, ed, all_items, out_dir):
             if o is not it and o['company'] == name and o['id'] not in [x['id'] for x in rel]: rel.append(o)
     for o in all_items:  # same section neighbours if nothing explicit
         if not d.get('related') and o is not it and o.get('section') == it.get('section') and o.get('_file') == it.get('_file'): rel.append(o)
-    P.append('<section><h2>🔗 相关事件</h2>' + ('<ul>' + ''.join(f'<li><a href="{E(o["id"])}.html">{E(o["company"])}</a>：{E(o["text"][:50])}…</li>' for o in rel[:6]) + '</ul>' if rel else NA) + '</section>')
+    P.append('<section><h2>🔗 相关事件</h2>' + ('<ul>' + ''.join(f'<li><a href="{E(o["id"])}.html">{E(display_label(o["company"], name))}</a>：{E(o["text"][:50])}…</li>' for o in rel[:6]) + '</ul>' if rel else NA) + '</section>')
     srcs = [(l.get('label'), l.get('url'), l.get('views')) for l in it.get('links', [])] + [(x.get('label'), x.get('url'), None) for x in d.get('extra_sources', [])]
     P.append('<section><h2>📚 所有来源链接</h2>' + ('<ul>' + ''.join(f'<li>{link(u, l)}{(" · 👁 " + E(v)) if v else ""} <span class="note">{E(u)}</span></li>' for l, u, v in srcs) + '</ul>' if srcs else NA) + '</section>')
     P.append('<p class="note" style="margin-top:20px">本页仅展示数据文件中已有的信息；【传闻】为单方面说法，未经核实。缺失字段显示“暂无数据”。</p>')

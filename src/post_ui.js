@@ -64,6 +64,34 @@
     if (!k) return '外文';
     return LANG[k] || LANG[k.split('-')[0]] || k;
   }
+  var TRACKER_ALIASES = ['滴滴 & 滴滴出海', '滴滴 & 出海', '滴滴 & DiDi 出海'];
+  function trackerName(longterm) {
+    var list = longterm || [];
+    for (var i = 0; i < list.length; i++) {
+      var n = String(list[i].name || '');
+      if (n.indexOf('滴滴') >= 0) return n;
+    }
+    return '滴滴';
+  }
+  function displayLabel(text, name) {
+    var raw = String(text == null ? '' : text);
+    var trimmed = raw.trim();
+    if (!trimmed) return raw;
+    var core = trimmed.replace(/^[^\u4e00-\u9fffA-Za-z0-9]+/, '');
+    var lead = trimmed.slice(0, trimmed.length - core.length);
+    var label = name || '滴滴';
+    for (var i = 0; i < TRACKER_ALIASES.length; i++) {
+      var alias = TRACKER_ALIASES[i];
+      if (core === alias || core.indexOf(alias) === 0) return lead + label + core.slice(alias.length);
+    }
+    return raw;
+  }
+  function placeTag(post) {
+    var bits = [];
+    if (post && post.country) bits.push(String(post.country));
+    if (post && post.lang) bits.push(langLabel(post.lang));
+    return bits.join(' · ');
+  }
   function isZh(lang) {
     return /^zh\b/i.test(String(lang || ''));
   }
@@ -157,6 +185,7 @@
       reposts: src.reposts != null && src.reposts !== '' ? src.reposts : snap.reposts,
       translation_zh: src.translation_zh || snap.translation_zh || '',
       lang: src.lang || snap.lang || '',
+      country: src.country || snap.country || '',
       label: src.label || ''
     };
   }
@@ -176,6 +205,7 @@
         if (!prev.text && merged.text) prev.text = merged.text;
         if (!prev.translation_zh && merged.translation_zh) prev.translation_zh = merged.translation_zh;
         if (!prev.lang && merged.lang) prev.lang = merged.lang;
+        if (!prev.country && merged.country) prev.country = merged.country;
         if (!prev.author && merged.author) prev.author = merged.author;
         if (!prev.author_name && merged.author_name) prev.author_name = merged.author_name;
         return;
@@ -185,15 +215,16 @@
     }
     (d.x_posts || []).forEach(function (p) { add(p); });
     (item.links || []).forEach(function (l) {
-      add({ url: l.url, views: l.views, author: l.label, label: l.label, text: l.text, translation_zh: l.translation_zh, lang: l.lang, created_at: l.created_at });
+      add({ url: l.url, views: l.views, author: l.label, label: l.label, text: l.text, translation_zh: l.translation_zh, lang: l.lang, country: l.country, created_at: l.created_at });
     });
     (d.comments || []).forEach(function (c) {
       add({ url: c.url, text: c.text, author: c.author, translation_zh: c.translation_zh, lang: c.lang });
     });
     var itemTr = item.translation_zh || d.translation_zh || '';
     var itemLang = item.lang || d.lang || '';
+    var itemCountry = item.country || d.country || '';
     var itemOrig = String(item.original || d.original || '').trim();
-    if (itemTr || itemLang || itemOrig) {
+    if (itemTr || itemLang || itemOrig || itemCountry) {
       var host = null;
       for (var i = 0; i < out.length; i++) if (out[i].text) { host = out[i]; break; }
       if (!host) {
@@ -201,12 +232,14 @@
       }
       host = host || out[0];
       if (host) {
-        if (!host.text && itemOrig) host.text = itemOrig;
+        var editorial = String(item.text || '').trim();
+        if (itemOrig && (!host.text || host.text === editorial)) host.text = itemOrig;
         if (!host.translation_zh && itemTr) host.translation_zh = itemTr;
         if (!host.lang && itemLang) host.lang = itemLang;
+        if (!host.country && itemCountry) host.country = itemCountry;
       }
     }
-    if (!out.length) out.push(mergeSnap({ text: itemOrig, translation_zh: itemTr, lang: itemLang }, posts));
+    if (!out.length) out.push(mergeSnap({ text: itemOrig, translation_zh: itemTr, lang: itemLang, country: itemCountry }, posts));
     return out;
   }
   function primaryOf(item, posts) {
@@ -227,14 +260,15 @@
     var tr = String(post.translation_zh || '');
     var showTr = needsTranslation(post);
     var foreign = post.lang && !isZh(post.lang);
+    var place = placeTag(post);
     var len = Math.max(plainLen(showTr ? tr : text), plainLen(text), plainLen(tr));
     var fold = FOLD_X;
     var long = len > fold;
     var p = platform(url);
     var who = [post.author_name, post.author].filter(Boolean).join(' ');
     var head = (p ? LOGOS[p] : '') + '<b>' + esc(who || (PNAME[p] || '原文')) + '</b>';
-    if (showTr) head += '<span class="langtag">' + esc(langLabel(post.lang)) + ' · 译文</span>';
-    else if (foreign) head += '<span class="langtag">' + esc(langLabel(post.lang)) + '</span>';
+    if (showTr) head += '<span class="langtag">' + esc(place || langLabel(post.lang)) + ' · 译文</span>';
+    else if (place && (foreign || post.country)) head += '<span class="langtag">' + esc(place) + '</span>';
     head += timeHtml(post.created_at, opt);
     head += noteSpan('浏览', post.views);
     head += noteSpan('赞', post.likes);
@@ -244,19 +278,19 @@
     if (miss) {
       body = '<p class="xmiss">' + MISS + '</p>';
     } else if (showTr) {
-      body = '<div class="clampbox" data-len="' + len + '" data-fold="' + fold + '" data-tr="1"><div class="clamp"><p class="xtext tr">' + esc(tr) + '</p></div><div class="orig-fold"><div class="langtag">原文 · ' + esc(langLabel(post.lang)) + '</div><p class="xtext">' + esc(text) + '</p></div><button type="button" class="xmore" aria-expanded="false">展开</button></div>';
+      body = '<div class="clampbox" data-len="' + len + '" data-fold="' + fold + '" data-tr="1"><div class="clamp"><p class="xtext tr">' + esc(tr) + '</p></div><div class="orig-fold"><div class="langtag">原文 · ' + esc(place || langLabel(post.lang)) + '</div><p class="xtext">' + esc(text) + '</p></div><button type="button" class="xmore" aria-expanded="false">展开</button></div>';
     } else if (!clamp) {
-      body = (foreign ? '<div class="langtag">原文 · ' + esc(langLabel(post.lang)) + '</div>' : '') + '<p class="xtext">' + esc(text) + '</p>';
+      body = (place && (foreign || post.country) ? '<div class="langtag">原文 · ' + esc(place) + '</div>' : '') + '<p class="xtext">' + esc(text) + '</p>';
     } else {
-      body = (foreign ? '<div class="langtag">原文 · ' + esc(langLabel(post.lang)) + '</div>' : '') + '<div class="clampbox" data-len="' + len + '" data-fold="' + fold + '"><p class="xtext clamp">' + esc(text) + '</p><button type="button" class="xmore"' + (long ? '' : ' hidden') + ' aria-expanded="false">展开</button></div>';
+      body = (place && (foreign || post.country) ? '<div class="langtag">原文 · ' + esc(place) + '</div>' : '') + '<div class="clampbox" data-len="' + len + '" data-fold="' + fold + '"><p class="xtext clamp">' + esc(text) + '</p><button type="button" class="xmore"' + (long ? '' : ' hidden') + ' aria-expanded="false">展开</button></div>';
     }
     var link = url ? extLink(url, '原链接') : '';
     return '<blockquote class="orig xbody" data-orig="1" data-len="' + len + '" data-fold="' + fold + '"' + (miss ? ' data-miss="1"' : '') + '><div class="poh xmeta">' + head + '</div>' + body + link + '</blockquote>';
   }
   function timeKey(s) {
     var str = String(s || '');
-    var m = str.match(/(\d{4})-(\d{2})-(\d{2})/);
-    if (m) return Date.UTC(+m[1], +m[2] - 1, +m[3], 12);
+    var m = str.match(/(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{2}):(\d{2}))?/);
+    if (m) return Date.UTC(+m[1], +m[2] - 1, +m[3], m[4] != null ? +m[4] : 12, +(m[5] || 0));
     m = str.match(/(\d{4})-(\d{2})(?!\d)/);
     if (m) return Date.UTC(+m[1], +m[2] - 1, 1, 12);
     m = str.match(/(\d{4})/);
@@ -276,6 +310,194 @@
       if (tb != null && ta == null) return 1;
       return b._i - a._i;
     });
+  }
+  function urlsOf(it) {
+    return ((it && it.links) || []).map(function (l) {
+      return String(l.url || '').replace(/\/+$/, '').toLowerCase();
+    }).filter(Boolean);
+  }
+  function itemSortDate(it) {
+    it = it || {};
+    var yearMatch = String(it.edition_date || it.edition_ts || '2026').match(/\d{4}/);
+    var year = yearMatch ? yearMatch[0] : '2026';
+    var d = String(it.date || '').trim();
+    var m = d.match(/^(\d{1,2})-(\d{1,2})(?:\/(\d{1,2}))?(?:[ T](\d{1,2}):(\d{2}))?/);
+    if (m && !/^\d{4}/.test(d)) {
+      var mo = ('0' + m[1]).slice(-2);
+      var day = ('0' + (m[3] || m[2])).slice(-2);
+      if (m[4] != null) return year + '-' + mo + '-' + day + 'T' + ('0' + m[4]).slice(-2) + ':' + m[5] + ':00Z';
+      return year + '-' + mo + '-' + day;
+    }
+    if (timeKey(d)) return d;
+    return String(it.edition_ts || it.edition_date || d || '');
+  }
+  function isZhLang(lang) {
+    var s = String(lang || '');
+    if (!s) return false;
+    if (/^zh/i.test(s)) return true;
+    return s.indexOf('中文') >= 0 || s.indexOf('简体') >= 0 || s.indexOf('繁体') >= 0;
+  }
+  function isForeignLead(it) {
+    var sec = String((it && (it.section || it._sec)) || '');
+    if (sec.indexOf('海外小语种') >= 0) return true;
+    var lang = String((it && it.lang) || ((it && it.detail) || {}).lang || '');
+    return !!lang && !isZhLang(lang);
+  }
+  function isStatusStub(it) {
+    var t = String((it && it.text) || '').trim();
+    return t.indexOf('本期无新动态') === 0 || t.indexOf('本期无重大新动态') === 0 || t.indexOf('本期有新动态') === 0;
+  }
+  function richness(it) {
+    var n = 0;
+    if (String((it && it.original) || '').trim()) n += 8;
+    if (String((it && it.translation_zh) || '').trim()) n += 4;
+    n += Math.min(3, ((it && it.links) || []).length);
+    n += Math.min(3, String((it && it.text) || '').length / 120);
+    if (String((it && it.id) || '').indexOf('-didi-') >= 0) n += 0.5;
+    return n;
+  }
+  function didiTimeline(items) {
+    var list = items || [];
+    var stubsIn = [];
+    var stories = [];
+    list.forEach(function (it) {
+      if (isStatusStub(it)) stubsIn.push(it);
+      else stories.push(it);
+    });
+    var parent = stories.map(function (_, i) { return i; });
+    function find(i) {
+      while (parent[i] !== i) { parent[i] = parent[parent[i]]; i = parent[i]; }
+      return i;
+    }
+    function unite(a, b) {
+      a = find(a); b = find(b);
+      if (a !== b) parent[b] = a;
+    }
+    var byKey = {};
+    stories.forEach(function (it, i) {
+      var urls = urlsOf(it);
+      var keys = urls.length ? urls : ['t:' + String(it.company || '') + '|' + String(it.text || '').replace(/\s+/g, '').slice(0, 48)];
+      keys.forEach(function (k) {
+        if (byKey[k] != null) unite(i, byKey[k]);
+        else byKey[k] = i;
+      });
+    });
+    var buckets = {};
+    stories.forEach(function (it, i) {
+      var r = find(i);
+      (buckets[r] = buckets[r] || []).push(it);
+    });
+    var winners = [];
+    var covered = [];
+    stubsIn.forEach(function (it) { if (it.id) covered.push(it.id); });
+    Object.keys(buckets).forEach(function (k) {
+      var group = buckets[k];
+      var best = group[0];
+      var bestScore = richness(best);
+      group.forEach(function (it) {
+        if (it.id) covered.push(it.id);
+        var score = richness(it);
+        if (score > bestScore) { best = it; bestScore = score; }
+      });
+      winners.push(best);
+    });
+    function pack(arr) {
+      return sortNewest(arr.map(function (it, i) {
+        return { date: itemSortDate(it), i: i, item: it };
+      })).map(function (n) { return n.item; });
+    }
+    var foreign = [], rest = [], stubs = stubsIn.slice();
+    winners.forEach(function (it) {
+      if (isForeignLead(it)) foreign.push(it);
+      else rest.push(it);
+    });
+    foreign = pack(foreign);
+    rest = pack(rest);
+    stubs = pack(stubs);
+    return { foreign: foreign, rest: rest, stubs: stubs, shown: foreign.concat(rest, stubs), coveredIds: covered };
+  }
+  function frontScore(views, hours, delta) {
+    var h = Math.max(0, Number(hours) || 0);
+    var score = (Number(views) || 0) * Math.pow(0.5, h / 36);
+    if (delta != null && delta !== '' && isFinite(+delta)) {
+      if (+delta > 0 && h <= 48) score *= 1.25;
+      if (+delta <= 0 && h > 48) score *= 0.5;
+    }
+    return score;
+  }
+  var TOPIC_STOP = { '争议': 1, '事件': 1, '公司': 1, '相关': 1, '热点': 1, '大厂': 1 };
+  function topicParts(topic) {
+    var raw = String(topic || '');
+    var strong = [];
+    var weak = [];
+    var seen = {};
+    function add(list, s) {
+      s = String(s || '').trim();
+      if (s.length < 2 || seen[s] || TOPIC_STOP[s]) return;
+      seen[s] = 1;
+      list.push(s);
+    }
+    raw.split(/[\s（）()\[\]【】、,，/|&+""“”'’·.：:—\-]+/).forEach(function (part) {
+      var runs = part.match(/[\u4e00-\u9fff]{2,}/g) || [];
+      runs.forEach(function (run) {
+        if (run.length === 2) add(strong, run);
+        if (run.length >= 3) add(strong, run);
+        var n, i;
+        for (n = 3; n <= 4; n++) {
+          for (i = 0; i + n <= run.length; i++) add(strong, run.slice(i, i + n));
+        }
+        if (run.length >= 4) {
+          for (i = 0; i + 2 <= run.length; i++) add(weak, run.slice(i, i + 2));
+        }
+      });
+      (part.match(/[A-Za-z][A-Za-z0-9]{2,}/g) || []).forEach(function (w) { if (w.length >= 3) add(strong, w); });
+    });
+    return { strong: strong, weak: weak };
+  }
+  function topicScore(parts, title, company, body) {
+    var head = 0;
+    var bodyN = 0;
+    var titleHit = 0;
+    (parts.strong || []).forEach(function (p) {
+      var k = p.toLowerCase();
+      var inTitle = title.indexOf(k) >= 0;
+      var inCo = company.indexOf(k) >= 0;
+      var w = p.length >= 4 ? p.length * 6 : (p.length === 3 ? p.length * 4 : 3);
+      if (inTitle) { head += w; titleHit += p.length; }
+      else if (inCo) head += Math.max(1, Math.floor(w / 2));
+      else if (p.length >= 4 && body.indexOf(k) >= 0) bodyN += p.length;
+    });
+    (parts.weak || []).forEach(function (p) {
+      if (title.indexOf(p.toLowerCase()) >= 0) titleHit += 1;
+    });
+    return { n: head > 0 ? head + bodyN : 0, titleHit: titleHit };
+  }
+  function matchTopic(topic, candidates) {
+    var parts = topicParts(topic);
+    if (!parts.strong.length) return '';
+    var bestRich = null;
+    var bestAny = null;
+    function take(slot, c, s) {
+      if (!s.n) return slot;
+      if (!slot || s.n > slot.n || (s.n === slot.n && s.titleHit > slot.titleHit)) {
+        return { id: c.id || '', n: s.n, titleHit: s.titleHit };
+      }
+      return slot;
+    }
+    (candidates || []).forEach(function (c) {
+      if (!c) return;
+      var body = String(c.blob || c.text || '').toLowerCase();
+      var title = String(c.title || '').toLowerCase();
+      var company = String(c.company || '').toLowerCase();
+      if (!title && !company) title = body;
+      var s = topicScore(parts, title, company, body);
+      var rich = c.rich !== false;
+      if (rich) bestRich = take(bestRich, c, s);
+      bestAny = take(bestAny, c, s);
+    });
+    if (bestRich && bestRich.n > 0) return bestRich.id;
+    if (bestAny && bestAny.n > 0) return bestAny.id;
+    return '';
   }
   function viewsOf(item) {
     var m = 0;
@@ -404,7 +626,16 @@
     renderBits: renderBits,
     wireClamps: wireClamps,
     bind: bind,
-    langLabel: langLabel
+    langLabel: langLabel,
+    FRONT_HALF_H: 36,
+    FRONT_FRESH_H: 48,
+    frontScore: frontScore,
+    matchTopic: matchTopic,
+    trackerName: trackerName,
+    displayLabel: displayLabel,
+    placeTag: placeTag,
+    didiTimeline: didiTimeline,
+    itemSortDate: itemSortDate
   };
 });
 
