@@ -61,11 +61,20 @@ def main():
         for k, v in alias.items():
             if k in t['name']: t['keywords'] = sorted(set(t['keywords']) | set(v))
     noise = ('业务', '八卦', '组织', '人事', '助理', '拉美', '巴西', '墨西哥', '澳洲', '香港')
+    # Exact tokens only. Substring noise used to delete useful phrases such as 巴西99.
+    generic = {'app', 'global', '99', '国内', '埃及', '墨西哥', '拉美', '巴西', '澳洲', '香港',
+               '八卦', '人事', '组织', '业务', '助理', '相关', '出海', '组织人事', '香港等全部海外业务'}
     for t in lt:
         ks = set()
         for k in t['keywords']:
-            ks |= set(k.split())
-        t['keywords'] = sorted(k for k in ks if len(k) >= 2 and k != '99' and not any(n in k for n in noise))
+            ks |= set(re.split(r'[\s+/、，,]+', k))
+        t['keywords'] = sorted(k for k in ks if len(k) >= 2 and k.casefold() not in generic and not any(n in k and k != '巴西99' for n in noise))
+    # 滴滴出海的国别词不能单独当关键词，否则「国内」会把无关条目吸进重点追踪。
+    # 网约车筛选读的就是这里的关键词，再加竞品词；两边必须命中同一批滴滴条目。
+    for t in lt:
+        if '滴滴' not in t['name']:
+            continue
+        t['keywords'] = sorted(set(t['keywords']) | {'滴滴', '滴滴出海', 'DiDi', 'Didi', '99app', '巴西99'})
     cache_path = os.path.join(BASE, 'x_cache.json')
     x_cache = json.load(open(cache_path, encoding='utf-8')) if os.path.exists(cache_path) else {'posts': {}}
     payload = dict(editions=eds, longterm=lt, shortterm=st, heat=heat, x_cache=x_cache,
