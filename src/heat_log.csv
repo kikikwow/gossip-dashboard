@@ -411,3 +411,7 @@ timestamp_utc,topic,metric,value,source
 2026-10-14T13:10:00Z,传音控股港股IPO,grey_market_futu,34.56,https://www.etnet.com.hk/www/tc/stocks/ipo-info.php?code=02636
 2026-10-14T13:10:00Z,滴滴繁简价差,x_sample_post,16024,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-14T13:10:00Z,霸王茶姬补发券,x_sample_post,110,https://x.com/Luckyou00100/status/2110319846009475166
+2026-10-14T13:16:00Z,滴滴,x_hourly_post_count_12Z,267,X counts q=滴滴 OR 滴滴出行 OR "DiDi Global" OR "Didi Chuxing"
+2026-10-14T13:16:00Z,滴滴,x_sample_post,16803,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-14T13:16:00Z,滴滴繁简价差,x_post_views:@Furinanatw,16803,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-14T13:16:00Z,滴滴繁简价差,x_sample_post,16803,https://x.com/Furinanatw/status/2110289680595886537

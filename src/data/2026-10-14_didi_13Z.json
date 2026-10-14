@@ -1,0 +1,136 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-14T13:16:00Z",
+ "fired_at_utc": "2026-10-14T13:10:02Z",
+ "scanned_at_utc": "2026-10-14T13:16:00Z",
+ "beijing_time": "2026-10-14 21:16 Asia/Shanghai",
+ "edition_date": "2026-10-14",
+ "window": {
+  "start_utc": "2026-10-14T12:05:00Z",
+  "end_utc": "2026-10-14T13:16:00Z",
+  "note": "自上轮 20:12（北京时间）以来；Tier2 slot0（拉美其他国家+金融）回看约 6 小时；Tier3 跳过（日间已跑）"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无滴滴本体新的可核验八卦/人事/监管/财务事实。Tier1：cn_price 仅 @shaok45000 一条复述繁简价差（impressions=12，低于门槛，无新证据）；cn_gossip 1帖为阿里云 Agent 手册无关内容（无滴滴实体，丢弃）；其余6组（hk_tw/BR×2/MX×2/EN）0帖。主帖 @Furinanatw 浏览 16803（较 13:10Z 16024 小涨，增速放缓）。Slot0 三组（南美/中美加勒比/金融）0帖。Web：内部信/裁员仍为旧闻；繁简仍为 unwire/LIHKG，滴滴未专门回应；香港牌照仍为 10-30 截止的旧信息；Threads 未见新原帖；99Food 仍为 9 月 TJSP 判决旧闻+10-05 进驻瓜拉普阿瓦（扩张通稿）；墨西哥 Tamaulipas 欠款/Hidalgo/Puebla 已在此前各期收录；智利 Las Condes 泥石流应急措施已收。新发现哥伦比亚国会统一监管网约车法案（西语，10-13）——行业性立法，DiDi 与 Uber、InDrive 一并点名，作为低优先级海外小语种线索入看板，不单独报警。微博热搜无滴滴相关词。RSS 新匹配0条。",
+ "sections": [
+  {
+   "title": "🌏 海外小语种线索",
+   "color": "#0b7",
+   "items": [
+    {
+     "company": "滴滴出海·哥伦比亚",
+     "tag": "实锤",
+     "source_types": [
+      "公开媒体",
+      "西班牙语",
+      "哥伦比亚"
+     ],
+     "date": "10-13",
+     "country": "哥伦比亚",
+     "lang": "西班牙语",
+     "text": "【监管·低优先级】哥伦比亚国会正在推进一项「Por allá sí voy」（“那边我也去”）法案，要给 Uber、DiDi、InDrive 等网约车平台和出租车行业建立统一监管框架：平台须在哥伦比亚设立法人、在当地纳税、登记车辆和司机，购买乘客责任险，并按服务时长为司机缴社保；出租车则可按供需在特定时段浮动定价。法案刚进入委员会辩论阶段，出租车行业表示反对。属于行业性立法，DiDi 只是被一并点名，未见其回应。",
+     "translation_zh": "哥伦比亚国会正在推进一项立法倡议，旨在为 Uber、Didi、InDrive 等乘客运输科技平台建立统一的监管框架，并重组全国出租车公共服务的运营条件。法案为通过数字应用运营的车辆和司机设定了一系列技术、财务和安全条件，主要条款包括：平台所属公司须在哥伦比亚设立法人实体、在本国纳税，并保持其网络内车辆和司机的最新登记。法案还要求购买非合同民事责任险，在每段行程中保障用户。在劳动制度方面，文本提出司机按通过应用提供的工时和服务比例缴纳社会保障。该法案开始在立法机构相关委员会进行辩论。",
+     "original": "En el Congreso de la República de Colombia avanza el trámite de una iniciativa legislativa orientada a crear un marco normativo unificado para el funcionamiento de las plataformas tecnológicas de transporte de pasajeros —tales como Uber, Didi e InDrive— y a reestructurar las condiciones operativas del servicio público de taxis en el país. El proyecto de ley establece un conjunto de condiciones técnicas, financieras y de seguridad para los vehículos y conductores que operan mediante aplicaciones digitales. Entre sus disposiciones principales, exige que las empresas propietarias de las plataformas constituyan personería jurídica en Colombia, paguen impuestos en el territorio nacional y mantengan un registro actualizado de los vehículos y conductores vinculados a su red. Asimismo, la propuesta legislativa contempla la obligación de adquirir pólizas de seguro de responsabilidad civil extracontractual para amparar a los usuarios durante cada trayecto realizado. En cuanto al régimen laboral, el texto plantea mecanismos para la cotización de los conductores al sistema de seguridad social, fijando aportes proporcionales a las horas y servicios prestados a través de las aplicaciones móviles. [...] El articulado inicia sus debates en las comisiones correspondientes del Poder Legislativo.",
+     "links": [
+      {
+       "label": "Open Medios（西语）",
+       "url": "https://www.openmedios.com/noticias-de-colombia/por-alla-si-voy-el-proyecto-que-busca-regular-uber-didi-y-el-servicio-de-taxis-en-colombia/"
+      }
+     ],
+     "id": "20261014-didi-13Z-co-ley"
+    }
+   ]
+  },
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "公开媒体",
+      "RSS",
+      "微博热搜"
+     ],
+     "date": "10-14 21:16",
+     "text": "本期滴滴本体无新动态。扫描窗口 12:05Z–13:16Z（北京时间约 20:05–21:16）。Tier1 全量 + Tier2 slot0（拉美其他国家+金融）未见新的公司八卦、人事、监管或财务线索；繁简价差只有一条低互动复述，主帖 @Furinanatw 浏览 16803、增速放缓，滴滴仍未专门回应。",
+     "links": [
+      {
+       "label": "@Furinanatw 繁简价差主帖（16803 浏览）",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      }
+     ],
+     "id": "20261014-didi-13Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "10Z": 252,
+   "11Z": 284,
+   "12Z": 267,
+   "13Z_partial_to1310": 52,
+   "query": "滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"",
+   "note": "12Z=267 小降；撞词噪音主导"
+  },
+  "trad_simp_price_x": {
+   "posts_in_tier1_window": 1,
+   "kept_for_alert": 0,
+   "main_post_views": 16803,
+   "note": "@shaok45000 复述 12 imp"
+  },
+  "tier1_x_hits_kept": 0,
+  "slot0_x_hits_kept": 0,
+  "weibo_didi_on_list": false
+ },
+ "candidates": [
+  {
+   "topic": "X cn_price @shaok45000 复述繁简价差",
+   "verdict": "log_only_below_engagement",
+   "why": "impressions=12",
+   "url": "https://x.com/shaok45000/status/2110350499522449662"
+  },
+  {
+   "topic": "X cn_gossip 阿里云 Agent 手册",
+   "verdict": "reject_no_entity",
+   "why": "正文无滴滴实体",
+   "url": "https://x.com/niemingxing2023/status/2110348397245034976"
+  },
+  {
+   "topic": "哥伦比亚统一监管网约车法案",
+   "verdict": "dashboard_low_priority_no_alert",
+   "why": "行业性立法，DiDi 被一并点名",
+   "url": "https://www.openmedios.com/noticias-de-colombia/por-alla-si-voy-el-proyecto-que-busca-regular-uber-didi-y-el-servicio-de-taxis-en-colombia/"
+  },
+  {
+   "topic": "99Food 进驻 Guarapuava",
+   "verdict": "log_only_routine_expansion_pr",
+   "why": "10-05 扩张通稿",
+   "url": "https://paranacentral.com.br/com-menores-taxas-99food-chega-a-guarapuava-e-oferece-uma-nova-forma-de-pedir-comida"
+  }
+ ],
+ "sources_queried": [
+  "X tier1×8 + tier2 slot0×3 + counts×1 + post lookup×1",
+  "WebSearch×8 (tier1×6 + slot0×2) + WebFetch×1",
+  "RSS fetch_sources (0 条新匹配)",
+  "微博热搜镜像（无滴滴词）",
+  "Tier3 skipped (daytime already ran)"
+ ],
+ "x_calls_used": 13,
+ "web_searches": 8,
+ "web_searches_used": 8,
+ "tiers": "tier1 + tier2 slot0",
+ "tiers_ran": [
+  "tier1",
+  "tier2_slot0"
+ ],
+ "slot": 0,
+ "push_needed": true,
+ "push_note": "New 13Z edition with one low-priority CO overseas clue; push gossip-dashboard"
+}
