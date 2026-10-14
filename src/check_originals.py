@@ -30,7 +30,7 @@ def fail(errors, msg):
 def orig_blocks(page):
     return ORIG_BLOCK.findall(page)
 
-def node_report(items, posts, didi_ids):
+def node_report(items, posts, didi_ids, heat_topics, cands, expect):
     code = r'''
 const UI = require('./src/post_ui.js');
 let raw = '';
@@ -94,6 +94,25 @@ process.stdin.on('end', () => {
   });
   const expectForeign = liveItems.some(it => (it.section || '').indexOf('海外小语种') >= 0 || (it.lang && !/^zh/i.test(it.lang) && it.lang.indexOf('中文') < 0 && it.lang.indexOf('简体') < 0 && it.lang.indexOf('繁体') < 0));
   if (expectForeign && !live.foreign.length) fails.push('foreign didi items missing from 海外小语种线索');
+  const stale = UI.frontScore(401000, 134, 51);
+  const fresh = UI.frontScore(307000, 26, null);
+  if (!(fresh > stale)) fails.push('fresh lower-view story should outrank a stale peak');
+  if (134 <= UI.FRONT_FRESH_H || 26 > UI.FRONT_FRESH_H) fails.push('48h fresh window is wrong');
+  const expect = input.expect || {};
+  Object.keys(expect).forEach(topic => {
+    const id = UI.matchTopic(topic, input.cands || []);
+    const ok = expect[topic];
+    const hit = Array.isArray(ok) ? ok.indexOf(id) >= 0 : id === ok;
+    if (!hit) fails.push('heat topic landed on ' + (id || 'nothing') + ' for ' + topic);
+  });
+  const greenA = UI.matchTopic('腾讯绿泡泡对战红果短剧', input.cands || []);
+  const greenB = UI.matchTopic('腾讯绿泡泡vs字节红果', input.cands || []);
+  if (!greenA || greenA !== greenB) fails.push('green-bubble heat titles should share one event id');
+  (input.heatTopics || []).forEach(topic => {
+    if (expect[topic]) return;
+    const id = UI.matchTopic(topic, input.cands || []);
+    if (!id) fails.push('heat topic has no landing item: ' + topic);
+  });
   const liveText = live.shown.map(it => (it.text || '') + (it.company || '')).join('\n');
   ['普埃布拉', '繁体', '顺风车'].forEach(needle => {
     const present = liveItems.some(it => ((it.text || '') + (it.company || '')).indexOf(needle) >= 0);
@@ -119,7 +138,7 @@ process.stdin.on('end', () => {
 '''
     # VISIBLE is used before its function declaration; function declarations are hoisted in the callback? 
     # The callback is an arrow? It's a function() so function VISIBLE inside it is hoisted. Good.
-    proc = subprocess.run(['node', '-e', code], input=json.dumps({'items': items, 'posts': posts, 'didiFileIds': didi_ids}, ensure_ascii=False).encode('utf-8'), cwd=ROOT, capture_output=True)
+    proc = subprocess.run(['node', '-e', code], input=json.dumps({'items': items, 'posts': posts, 'didiFileIds': didi_ids, 'heatTopics': heat_topics, 'cands': cands, 'expect': expect}, ensure_ascii=False).encode('utf-8'), cwd=ROOT, capture_output=True)
     if proc.returncode != 0:
         raise SystemExit(proc.stderr.decode('utf-8', 'replace')[:2000] or 'node audit failed')
     return json.loads(proc.stdout.decode('utf-8'))
@@ -153,8 +172,19 @@ def main():
         fail(errors, 'tracker overlay is missing the open id or the foreign-language group')
     if 'didiTimeline' not in board:
         fail(errors, 'tracker overlay does not build a timeline')
+    for name in ('paperHeat', 'mobileHeat', 'heatPanel', 'shortPanel'):
+        m = re.search(r'function %s\b' % name, board)
+        chunk = board[m.start():m.start() + 1600] if m else ''
+        if 'open-ev' not in chunk or 'heatOpenId' not in chunk:
+            fail(errors, name + ' heat row does not open a detail')
+    if 'FRONT_FRESH_H' not in board or 'frontScore' not in board:
+        fail(errors, 'front page sort is missing the recency score')
+    if 'function dedupeHeat' not in board or 'function heatKey' not in board or 'function shortList' not in board:
+        fail(errors, 'heat list does not dedupe by event id')
+    if 'function mergeByUrl' not in board:
+        fail(errors, 'front page does not merge events that share a source')
     home = re.search(r'function paperHome\b', board)
-    home_chunk = board[home.start():home.start() + 900] if home else ''
+    home_chunk = board[home.start():home.start() + 1400] if home else ''
     pin_at = home_chunk.find('pinCard()')
     hero_at = home_chunk.find('eventCard(hero')
     if pin_at < 0 or hero_at < 0 or pin_at > hero_at:
@@ -202,7 +232,40 @@ def main():
                 slim.append(row)
                 if from_didi:
                     didi_ids.append(it['id'])
-    audited = node_report(slim, posts, didi_ids)
+    heat_topics = []
+    cands = []
+    for e in eds:
+        for sct in e.get('sections') or []:
+            for it in sct.get('items') or []:
+                d = it.get('detail') or {}
+                cands.append({
+                    'id': it['id'],
+                    'title': d.get('title') or '',
+                    'company': it.get('company') or '',
+                    'blob': (it.get('company') or '') + ' ' + (d.get('title') or '') + ' ' + (it.get('text') or ''),
+                    'rich': bool(d.get('title') or d.get('timeline')),
+                })
+    import csv as _csv
+    with open(os.path.join(SRC, 'heat_log.csv'), encoding='utf-8') as hf:
+        for r in _csv.DictReader(hf):
+            if r.get('metric') == 'x_daily_post_count' and r.get('topic') not in heat_topics:
+                heat_topics.append(r['topic'])
+    expect = {
+        '华为尊界刹车门（车圈互撕）': '20261013-zunjie',
+        '月之暗面股东纠纷 & IPO': '20261013-moonshot',
+        '月之暗面股东纠纷&IPO': '20261013-moonshot',
+        '月之暗面美银退出IPO承销': '20261014-alert-05Z-moonshot-bofa-ipo',
+        '拼多多"不做 AI"争议': '20261013-pdd',
+        '微牛被国会点名': '20261013-webull',
+        '泡泡玛特销售下滑': '20261013-popmart',
+        '小米罗福莉晋升': '20261013-luofuli',
+        '腾讯绿泡泡对战红果短剧': '20261014-alert-05Z-tencent-hongguo-weibo1',
+        '腾讯绿泡泡vs字节红果': '20261014-alert-05Z-tencent-hongguo-weibo1',
+        '田柯宇融资争议': '20261014-01Z-tian-keyu-funding',
+        'Temu密苏里州检察长起诉': '20261014-temu-missouri',
+        'Anthropic点名智谱/月之暗面蒸馏': ['20261014-anthropic-distill', '20261014-anthropic-zhipu-moonshot'],
+    }
+    audited = node_report(slim, posts, didi_ids, heat_topics, cands, expect)
     for msg in audited.get('fails') or []:
         fail(errors, 'module: ' + msg)
     report = audited.get('report') or {}

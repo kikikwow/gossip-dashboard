@@ -101,7 +101,8 @@
 <div class="heat-full">
 <p>热度榜不是加权综合分。榜上的数字是 heat_log.csv 里该话题指标 x_daily_post_count 的<strong>最近一个完整 UTC 日发帖量</strong>（按当时的 X 检索式统计当天帖子数），从高到低取前 10。这个话题如果没有日发帖量，才退回时间上最后一条其他指标。</p>
 <p>折线按时间排同一指标。图上有纵轴刻度、每个点的精确值，以及最后两个完整日的差额。名字里带 partial 的是采集截止前的未完成日，只补在图末尾，<strong>不参与排名</strong>。</p>
-<p>卡片上的「浏览」是另一套数：该条 links 浏览量的最大值（万/亿/k/M）。热榜皮肤按它排序；≥10 万标「爆」，≥1 万标「热」。条宽用相对最大值的平方根，避免头部把其余挤没。</p>
+<p>卡片上的「浏览」是另一套数：该条 links 浏览量的最大值（万/亿/k/M）。热榜皮肤按它排序；≥10 万标「爆」，≥1 万标「热」。条宽用相对最大值的平方根，避免头部把其余挤没。这个数字没有时间衰减。</p>
+<p>头版头条另算：浏览量乘 36 小时半衰期，从最后一条进展算到最近一期的时间。超过 48 小时不能占头条。日发帖量持平或下降、并且已经超过 48 小时的，再乘 0.5。近 48 小时里日发帖量在升的，乘 1.25。</p>
 <p>topics.md 里的「热度：待更新」是编辑备注，不是算出来的。这份快照有 ${H.length} 条热度记录（日发帖 ${dailyN} 条），最新时间 ${esc(asof)}。榜单不会每小时自己滚，要更新得重新采集、追加 csv，再跑构建。</p>
 </div></div>`;
   }
@@ -113,7 +114,7 @@
     partial.forEach(r => pts.push({ t: r.timestamp_utc, v: +r.value, partial: true }));
     return pts;
   }
-  function rankRows() {
+  function topicGroups() {
     const H = D.heat || [];
     if (!H.length) return [];
     const by = {};
@@ -124,7 +125,57 @@
       const last = daily.length ? daily[daily.length - 1] : rs[rs.length - 1];
       const prev = daily.length >= 2 ? daily[daily.length - 2] : null;
       return { t: t, last: last, delta: prev ? last.value - prev.value : null, pts: topicSeries(t) };
-    }).sort((a, b) => b.last.value - a.last.value).slice(0, 10);
+    });
+  }
+  function heatCands() {
+    return ITEMS.map(it => {
+      const d = it.detail || {};
+      return {
+        id: it.id,
+        title: d.title || '',
+        company: it.company || '',
+        blob: (it.company || '') + ' ' + (d.title || '') + ' ' + (it.text || ''),
+        rich: !!(d.title || (d.timeline && d.timeline.length))
+      };
+    });
+  }
+  function heatKey(topic) {
+    const id = PostUI.matchTopic(topic, heatCands());
+    if (id) return 'ev:' + id;
+    return 'tp:' + String(topic || '').replace(/\s+/g, '').replace(/[“”"']/g, '').toLowerCase();
+  }
+  function preferHeat(a, b) {
+    const ad = a.last && a.last.metric === 'x_daily_post_count';
+    const bd = b.last && b.last.metric === 'x_daily_post_count';
+    if (ad !== bd) return ad ? a : b;
+    return (b.last && b.last.value || 0) > (a.last && a.last.value || 0) ? b : a;
+  }
+  function dedupeHeat(rows) {
+    const by = new Map();
+    (rows || []).forEach(r => {
+      const key = heatKey(r.t);
+      const prev = by.get(key);
+      if (!prev) { by.set(key, r); return; }
+      const keep = preferHeat(prev, r);
+      const drop = keep === prev ? r : prev;
+      keep.also = (keep.also || prev.also || []).concat(drop.t);
+      by.set(key, keep);
+    });
+    return Array.from(by.values()).sort((a, b) => (b.last.value || 0) - (a.last.value || 0));
+  }
+  function rankRows() {
+    return dedupeHeat(topicGroups()).slice(0, 10);
+  }
+  function shortList() {
+    const seen = new Set(rankRows().map(r => heatKey(r.t)));
+    const out = [];
+    (D.shortterm || []).forEach(t => {
+      const key = heatKey(t.name);
+      if (seen.has(key)) return;
+      seen.add(key);
+      out.push(t);
+    });
+    return out;
   }
   function axisLabel(p) {
     if (!parseTs(p.t)) return String(p.t || '').replace('*', '');
@@ -262,16 +313,16 @@
       const ol = rows.map((r, i) => {
         const d = r.delta;
         const ds = d == null ? '' : `<span class="delta ${d > 0 ? 'up' : d < 0 ? 'down' : ''}">${d > 0 ? '+' : ''}${fmt(d)} 较前一日</span>`;
-        return `<li class="rankrow"><span class="no">${i + 1}</span><div class="t"><b>${esc(r.t)}</b><div class="note">${r.last.metric === 'x_daily_post_count' ? 'X 日发帖量 · ' + esc(fmtHeatDay(r.last.timestamp_utc)) : esc(r.last.metric)} ${ds}</div>${trendChart(r.pts)}</div><span class="v">${fmt(r.last.value)}</span></li>`;
+        return `<li class="rankrow"><button type="button" class="open-ev heat-hit" data-id="${esc(heatOpenId(r.t))}"><span class="no">${i + 1}</span><div class="t"><b>${esc(displayLabel(r.t))}</b><div class="note">${r.last.metric === 'x_daily_post_count' ? 'X 日发帖量 · ' + esc(fmtHeatDay(r.last.timestamp_utc)) : esc(r.last.metric)} ${ds}</div></div><span class="v">${fmt(r.last.value)}</span></button>${trendChart(r.pts)}</li>`;
       }).join('');
       $('#heat').innerHTML = heatExplain() + `<ol class="rank">${ol}</ol>`;
       return;
     }
     const L = ITEMS.filter(i => i._views > 0).sort((a, b) => b._views - a._views).slice(0, 10);
-    $('#heat').innerHTML = heatExplain() + `<p class="note">heat_log.csv 暂无数据，下面临时按条目链接最高浏览量排，没有日序列。</p><ol class="rank">${L.map((it, i) => `<li><span class="no">${i + 1}</span><span class="t"><b>${esc(it.company)}</b> · ${esc(it.text.slice(0, 22))}…</span><span class="v">👁 ${fmt(it._views)}</span></li>`).join('')}</ol>`;
+    $('#heat').innerHTML = heatExplain() + `<p class="note">heat_log.csv 暂无数据，下面临时按条目链接最高浏览量排，没有日序列。</p><ol class="rank">${L.map((it, i) => `<li class="rankrow"><button type="button" class="open-ev heat-hit" data-id="${esc(it.id)}"><span class="no">${i + 1}</span><span class="t"><b>${esc(displayLabel(it.company))}</b> · ${esc(it.text.slice(0, 22))}…</span><span class="v">👁 ${fmt(it._views)}</span></button></li>`).join('')}</ol>`;
   }
   function shortPanel() {
-    const blocks = (D.shortterm || []).map(t => `<div class="hot"><b>${esc(t.name)}</b><div class="r">${esc(t.reason)}</div><div class="note">编辑备注「热度：${esc(t.heat)}」不是公式结果 · ${esc(t.status)} · 加入 ${esc(fmtTs(t.added))}</div>${trendChart(topicSeries(t.name))}</div>`).join('');
+    const blocks = shortList().map(t => `<div class="hot"><button type="button" class="open-ev heat-hit" data-id="${esc(heatOpenId(t.name))}"><b>${esc(displayLabel(t.name))}</b><div class="r">${esc(t.reason)}</div><div class="note">编辑备注「热度：${esc(t.heat)}」不是公式结果 · ${esc(t.status)} · 加入 ${esc(fmtTs(t.added))}</div></button>${trendChart(topicSeries(t.name))}</div>`).join('');
     $('#short').innerHTML = heatExplain() + (blocks || '<p class="empty">topics.md 中暂无短期热点</p>');
   }
   function loadIds(key) {
@@ -287,6 +338,43 @@
     const d = it.detail || {};
     return it.track === true || d.track === true || !!(it.event_id || d.event_id);
   }
+  function normUrl(u) {
+    const raw = String(u || '').trim();
+    if (!raw) return '';
+    try {
+      const x = new URL(raw);
+      const path = x.pathname.replace(/\/+$/, '');
+      if (path.split('/').filter(Boolean).length < 2) return '';
+      return (x.host + path).toLowerCase();
+    } catch (e) {
+      return '';
+    }
+  }
+  function itemUrls(it) {
+    const out = [];
+    const seen = new Set();
+    (it.links || []).forEach(l => {
+      const n = normUrl(l && l.url);
+      if (!n || seen.has(n)) return;
+      seen.add(n);
+      out.push(n);
+    });
+    return out;
+  }
+  function titledByUrl() {
+    const map = new Map();
+    ITEMS.forEach(it => {
+      if (!((it.detail || {}).title)) return;
+      itemUrls(it).forEach(u => {
+        const cur = map.get(u);
+        if (!cur) { map.set(u, it); return; }
+        const an = ((it.detail || {}).timeline || []).length;
+        const bn = ((cur.detail || {}).timeline || []).length;
+        if (an > bn || (an === bn && (it._views || 0) > (cur._views || 0))) map.set(u, it);
+      });
+    });
+    return map;
+  }
   function rootOf(it) {
     const d = it.detail || {};
     const eid = it.event_id || d.event_id;
@@ -296,6 +384,18 @@
       const hit = titled || same[0];
       if (hit && hit !== it) return hit;
     }
+    if (d.title || explicitTrack(it)) return null;
+    const byUrl = titledByUrl();
+    const linked = itemUrls(it).map(u => byUrl.get(u)).find(hit => hit && hit !== it);
+    if (linked) return linked;
+    const company = String(it.company || '').trim();
+    if (company.length >= 4) {
+      const id = PostUI.matchTopic(company, heatCands());
+      if (id && id !== it.id) {
+        const hit = ITEMS.find(x => x.id === id && (x.detail || {}).title);
+        if (hit) return hit;
+      }
+    }
     const p = parentEvent(it);
     if (p && ((p.detail || {}).title || explicitTrack(p))) return p;
     return null;
@@ -303,6 +403,62 @@
   function groupViews(g) {
     const vs = [g.root._views || 0].concat(g.members.map(m => m._views || 0));
     return Math.max.apply(null, vs);
+  }
+  function asOfMs() {
+    let best = parseTs(D.built);
+    (D.editions || []).forEach(e => {
+      const t = parseTs(e.timestamp) || parseTs(e.edition_date);
+      if (t && (!best || t > best)) best = t;
+    });
+    return best ? best.getTime() : Date.now();
+  }
+  function stampMs(s, editionDate) {
+    if (!s) return null;
+    const direct = parseTs(s);
+    if (direct) return direct.getTime();
+    const str = String(s).trim();
+    let m = str.match(/(\d{4})-(\d{2})-(\d{2})/);
+    if (m) return Date.parse(m[1] + '-' + m[2] + '-' + m[3] + 'T15:59:00Z');
+    m = str.match(/(\d{4})-(\d{2})(?!\d)/);
+    if (m) return Date.parse(m[1] + '-' + m[2] + '-01T15:59:00Z');
+    const year = String(editionDate || '').match(/\d{4}/);
+    const y = year ? year[0] : '';
+    m = str.match(/^(\d{1,2})-(\d{1,2})(?:\/(\d{1,2}))?(?:[ T](\d{1,2}):(\d{2}))?/);
+    if (m && y) {
+      const mo = ('0' + m[1]).slice(-2);
+      const dd = ('0' + (m[3] || m[2])).slice(-2);
+      if (m[4] != null) return Date.parse(y + '-' + mo + '-' + dd + 'T' + ('0' + m[4]).slice(-2) + ':' + m[5] + ':00+08:00');
+      return Date.parse(y + '-' + mo + '-' + dd + 'T15:59:00Z');
+    }
+    return null;
+  }
+  function progressMs(g) {
+    const times = [];
+    function take(it) {
+      if (!it) return;
+      const ed = (it._e && (it._e.edition_date || it._e.timestamp)) || '';
+      const d = it.detail || {};
+      [it.date].concat((d.timeline || []).map(t => t.date), (d.x_posts || []).map(p => p.created_at)).forEach(s => {
+        const ms = stampMs(s, ed);
+        if (ms) times.push(ms);
+      });
+    }
+    take(g.root);
+    (g.members || []).forEach(take);
+    if (!times.length) return null;
+    return Math.max.apply(null, times);
+  }
+  function eventHours(g) {
+    const p = progressMs(g);
+    if (p == null) return 24 * 30;
+    return Math.max(0, (asOfMs() - p) / 3600000);
+  }
+  function eventDelta(g) {
+    const rank = matchedRank(g.root);
+    return rank ? rank.delta : null;
+  }
+  function eventScore(g) {
+    return PostUI.frontScore(groupViews(g), eventHours(g), eventDelta(g));
   }
   function clusters() {
     const promo = loadIds(PROMO_KEY);
@@ -323,15 +479,70 @@
       seen.add(it.id);
       events.push({ root: it, members: membersOf.get(it.id) || [] });
     });
-    events.sort((a, b) => groupViews(b) - groupViews(a));
-    const leads = ITEMS.filter(it => {
+    const merged = mergeByUrl(events);
+    merged.sort((a, b) => eventScore(b) - eventScore(a) || groupViews(b) - groupViews(a));
+    const leads = dedupeLeads(ITEMS.filter(it => {
       if (rootOf(it)) return false;
       if ((it.detail || {}).title || explicitTrack(it) || promo.has(it.id)) return false;
       if (hide.has(it.id)) return false;
+      const text = String(it.text || '').trim();
+      if (text.indexOf('本期无新动态') === 0 || text.indexOf('本期无重大新动态') === 0 || text.indexOf('本期有新动态') === 0) return false;
       return match(it);
-    }).sort((a, b) => (b._views || 0) - (a._views || 0));
-    const shown = events.filter(g => match(g.root) || g.members.some(match));
+    }).sort((a, b) => (b._views || 0) - (a._views || 0)));
+    const shown = merged.filter(g => match(g.root) || g.members.some(match));
     return { events: shown, leads: leads };
+  }
+  function mergeByUrl(events) {
+    const parent = events.map((_, i) => i);
+    function find(i) {
+      while (parent[i] !== i) { parent[i] = parent[parent[i]]; i = parent[i]; }
+      return i;
+    }
+    const byUrl = new Map();
+    events.forEach((g, i) => {
+      itemUrls(g.root).forEach(u => {
+        if (!byUrl.has(u)) byUrl.set(u, i);
+        else parent[find(i)] = find(byUrl.get(u));
+      });
+    });
+    const groups = new Map();
+    events.forEach((g, i) => {
+      const r = find(i);
+      if (!groups.has(r)) groups.set(r, []);
+      groups.get(r).push(g);
+    });
+    const out = [];
+    groups.forEach(gs => {
+      gs.sort((a, b) => eventScore(b) - eventScore(a) || groupViews(b) - groupViews(a) || ((b.root.detail || {}).timeline || []).length - ((a.root.detail || {}).timeline || []).length);
+      const win = gs[0];
+      const seen = new Set([win.root.id]);
+      const members = (win.members || []).slice();
+      gs.slice(1).forEach(g => {
+        members.push(g.root);
+        (g.members || []).forEach(m => members.push(m));
+      });
+      win.members = members.filter(m => {
+        if (!m || seen.has(m.id)) return false;
+        seen.add(m.id);
+        return true;
+      });
+      out.push(win);
+    });
+    return out;
+  }
+  function dedupeLeads(rows) {
+    const seenId = new Set();
+    const seenUrl = new Set();
+    const out = [];
+    rows.forEach(it => {
+      if (seenId.has(it.id)) return;
+      const urls = itemUrls(it);
+      if (urls.some(u => seenUrl.has(u))) return;
+      seenId.add(it.id);
+      urls.forEach(u => seenUrl.add(u));
+      out.push(it);
+    });
+    return out;
   }
   function nodeTime(s) {
     if (!s) return null;
@@ -455,8 +666,10 @@
     const post = PostUI.primaryOf(it, posts());
     const orig = PostUI.origBlock(post, { clamp: true, formatTime: fmtTs });
     const co = displayLabel(it.company);
-    if (paper) return '<div class="pnode' + (first ? ' f' : '') + '"><div class="pnh">' + esc(it.date || '') + ' · ' + esc(co) + '</div><div class="pnn">' + esc(it.text || '') + '</div>' + orig + '</div>';
-    return '<div class="tl"><b>' + esc(it.date || '') + '</b> ' + esc(co) + '<div>' + esc(it.text || '') + '</div>' + orig + '</div>';
+    const place = PostUI.placeTag(post) || PostUI.placeTag(it);
+    const where = place ? ' · ' + esc(place) : '';
+    if (paper) return '<div class="pnode' + (first ? ' f' : '') + '"><div class="pnh">' + esc(it.date || '') + ' · ' + esc(co) + where + '</div><div class="pnn">' + esc(it.text || '') + '</div>' + orig + '</div>';
+    return '<div class="tl"><b>' + esc(it.date || '') + '</b> ' + esc(co) + where + '<div>' + esc(it.text || '') + '</div>' + orig + '</div>';
   }
   function didiGroup(title, list, paper) {
     if (!list.length) return '';
@@ -497,24 +710,65 @@
     const why = whyPill(it);
     return '<article class="pcard nw"><div style="display:flex;align-items:center;gap:8px">' + (why ? '<span class="pwhy">' + esc(why) + '</span>' : '') + '<span style="margin-left:auto">' + stampOf(it) + '</span></div><button type="button" class="ptitle phit open-ev" data-id="' + esc(it.id) + '">' + hl(s.title) + '</button><p class="psum">' + esc(s.sum) + '</p>' + itemOrig(it) + heatRow(it._views) + bar + '<div class="pacts"><button type="button" class="p" data-promo="' + esc(it.id) + '">顶上头版</button><button type="button" data-hide="' + esc(it.id) + '">压下不表</button></div></article>';
   }
+  function heatOpenId(topic) {
+    const id = PostUI.matchTopic(topic, heatCands());
+    const it = id && ITEMS.find(x => x.id === id);
+    const text = String((it && it.text) || '').trim();
+    const stub = text.indexOf('本期无新动态') === 0 || text.indexOf('本期无重大新动态') === 0 || text.indexOf('本期有新动态') === 0;
+    if (it && !stub) return id;
+    if (/滴滴|didi|99app/i.test(String(topic || ''))) return 'ride:didi';
+    return 'heat:' + topic;
+  }
+  function heatOverlay(topic) {
+    const row = rankRows().find(r => r.t === topic) || dedupeHeat(topicGroups()).find(r => r.t === topic || (r.also || []).indexOf(topic) >= 0);
+    const short = (D.shortterm || []).find(t => t.name === topic);
+    const id = PostUI.matchTopic(topic, heatCands());
+    const related = ITEMS.filter(it => {
+      const d = it.detail || {};
+      return PostUI.matchTopic(topic, [{ id: it.id, title: d.title || '', company: it.company || '', blob: it.text || '', rich: !!(d.title || (d.timeline && d.timeline.length)) }]) === it.id;
+    });
+    const paper = document.documentElement.dataset.ui !== 'classic';
+    const summary = row
+      ? (row.last.metric === 'x_daily_post_count'
+        ? 'heat_log 最近完整日发帖 ' + fmt(row.last.value) + (row.delta == null ? '' : '，较前一日 ' + (row.delta > 0 ? '+' : '') + fmt(row.delta)) + '。这个数字是日发帖量，不是卡片浏览。'
+        : '这条没有单独的日发帖量，榜上用的是 ' + row.last.metric + ' ' + fmt(row.last.value) + '。')
+      : ((short && short.reason) || 'topics.md 里有这个话题，heat_log 没有单独的日发帖序列。');
+    let pts = row && row.pts && row.pts.length ? row.pts.slice() : [];
+    if (!pts.length && row && row.last) {
+      pts = (D.heat || []).filter(r => r.topic === topic && r.metric === row.last.metric).map(r => ({ t: r.timestamp_utc, v: +r.value, partial: String(r.metric).indexOf('partial') >= 0 }));
+    }
+    pts.sort((a, b) => String(b.t).localeCompare(String(a.t)));
+    const kind = row && row.last && row.last.metric === 'x_daily_post_count' ? 'X 日发帖' : (row && row.last ? row.last.metric : '记录');
+    const nodes = pts.map(p => '<div class="' + (paper ? 'pnode' : 'tl') + '"><b>' + esc(fmtHeatDay(p.t)) + (p.partial ? ' 未完结' : '') + '</b> ' + esc(kind) + ' ' + fmt(p.v) + '</div>').join('');
+    const orig = related.slice(0, 5).map(it => '<div class="' + (paper ? 'pnode' : 'tl') + '"><div>' + esc(it.date || '') + ' · ' + esc(displayLabel(it.company)) + '</div><div>' + esc(it.text || '') + '</div>' + itemOrig(it) + '</div>').join('');
+    const ui = document.documentElement.dataset.ui === 'classic' ? 'classic' : 'new';
+    const page = id ? '<p class="pfoot"><a href="events/' + encodeURIComponent(id) + '.html?ui=' + ui + '">独立页面</a></p>' : '<p class="note">现有期次里没有单独的事件页，这里只列出 heat_log 和能对上的条目。</p>';
+    const head = paper
+      ? '<div class="pkick">热榜 · 最新在上</div><h2 id="ovtitle" class="ptitle" style="font-size:22px">' + esc(topic) + '</h2><p class="psum">' + esc(summary) + '</p>'
+      : '<h2 id="ovtitle">' + esc(topic) + '</h2><p>' + esc(summary) + '</p>';
+    const chartPts = pts.slice().sort((a, b) => String(a.t).localeCompare(String(b.t)));
+    const chart = chartPts.length ? trendChart(chartPts) : (row ? trendChart(row.pts) : '');
+    const seriesName = row && row.last && row.last.metric === 'x_daily_post_count' ? '日发帖' : '记录';
+    return head + chart + '<h3>' + seriesName + '</h3>' + (nodes || '<p class="note">没有日发帖序列</p>') + '<h3>原文</h3>' + (orig || '<p class="xmiss">原文未缓存</p><p class="note">没有对上带原文的条目。</p>') + page;
+  }
   function paperHome(pack) {
-    const hero = pack.events[0];
-    const rest = pack.events.slice(1);
+    const hero = pack.events.find(g => eventHours(g) <= PostUI.FRONT_FRESH_H) || null;
+    const rest = pack.events.filter(g => g !== hero);
     const leads = pack.leads.slice(0, 3);
     const main = pinCard() + (hero ? eventCard(hero, true) : '') + '<div class="pevents">' + rest.map(g => eventCard(g, false)).join('') + '</div>';
     const railLeads = '<div class="psec"><b>新瓜 · 尚未立案</b><button type="button" data-ptab="leads">全部 ' + pack.leads.length + ' 条 ›</button></div>' + (leads.length ? leads.map(leadCompact).join('') : '<p class="pfoot">没有待核的新瓜。</p>');
     const ranks = rankRows().slice(0, 5);
-    const railHeat = '<div class="prail-heat"><div class="psec"><b style="color:#4A6FA5">热榜</b><button type="button" data-ptab="heat">全部 ›</button></div>' + (ranks.length ? ranks.map((r, i) => '<article class="pcard"><div class="prow-top"><b>' + (i + 1) + ' ' + esc(r.t) + '</b><span class="psm">' + fmt(r.last.value) + '</span></div><div class="note">' + (r.last.metric === 'x_daily_post_count' ? 'X 日发帖 · ' + esc(fmtHeatDay(r.last.timestamp_utc)) : esc(r.last.metric)) + '</div></article>').join('') : '') + '</div>';
-    return '<div class="playout"><div class="pmain">' + (main || '<p class="pfoot">这一栏没有正在追踪的事件。</p>') + '</div><aside class="prail">' + railLeads + railHeat + '</aside></div><p class="pfoot">头版事件来自已有标题、track / event_id，或你标过「顶上头版」。升版进度是相对本期最高浏览，不会自动顶版。</p>';
+    const railHeat = '<div class="prail-heat"><div class="psec"><b style="color:#4A6FA5">热榜</b><button type="button" data-ptab="heat">全部 ›</button></div>' + (ranks.length ? ranks.map((r, i) => '<article class="pcard"><button type="button" class="phit open-ev heat-hit" data-id="' + esc(heatOpenId(r.t)) + '"><div class="prow-top"><b>' + (i + 1) + ' ' + esc(displayLabel(r.t)) + '</b><span class="psm">' + fmt(r.last.value) + '</span></div><div class="note">' + (r.last.metric === 'x_daily_post_count' ? 'X 日发帖 · ' + esc(fmtHeatDay(r.last.timestamp_utc)) : esc(r.last.metric)) + '</div></button></article>').join('') : '') + '</div>';
+    return '<div class="playout"><div class="pmain">' + (main || '<p class="pfoot">这一栏没有正在追踪的事件。</p>') + '</div><aside class="prail">' + railLeads + railHeat + '</aside></div><p class="pfoot">置顶是滴滴追踪。头瓜只留给最后进展在 48 小时内、衰减后仍最高的事件。头版事件来自已有标题、track / event_id，或你标过「顶上头版」。</p>';
   }
   function paperLeads(pack) {
     return '<div class="pleads"><div class="psec"><b>新瓜 · 尚未立案</b><span>升版进度按本期最高浏览估算，不会自动顶版</span></div>' + (pack.leads.length ? pack.leads.map(leadCard).join('') : '<p class="pfoot">新瓜都处理完了。</p>') + '</div>';
   }
   function paperHeat() {
     const rows = rankRows();
-    const blocks = rows.map(r => '<article class="pcard"><b>' + esc(r.t) + '</b><div class="note">' + (r.last.metric === 'x_daily_post_count' ? 'X 日发帖量 · ' + esc(fmtHeatDay(r.last.timestamp_utc)) : esc(r.last.metric)) + (r.delta == null ? '' : ' · 较前一日 ' + (r.delta > 0 ? '+' : '') + fmt(r.delta)) + '</div><div class="phr"><span class="pnum">' + fmt(r.last.value) + '</span></div>' + trendChart(r.pts) + '</article>').join('');
-    const shorts = (D.shortterm || []).map(t => '<article class="pcard"><b>' + esc(t.name) + '</b><div class="note">' + esc(t.reason) + '</div><div class="note">编辑备注「热度：' + esc(t.heat) + '」不是公式结果</div>' + trendChart(topicSeries(t.name)) + '</article>').join('');
-    return heatExplain() + '<div class="psec"><b style="color:#4A6FA5">热度榜</b><span>heat_log 日发帖量</span></div><div class="pheat-grid">' + (blocks || '<p class="pfoot">没有热度序列</p>') + '</div><div class="psec"><b style="color:#4A6FA5">短期热点</b></div><div class="pheat-grid">' + (shorts || '') + '</div>';
+    const blocks = rows.map(r => '<article class="pcard"><button type="button" class="phit open-ev heat-hit" data-id="' + esc(heatOpenId(r.t)) + '"><b>' + esc(displayLabel(r.t)) + '</b><div class="note">' + (r.last.metric === 'x_daily_post_count' ? 'X 日发帖量 · ' + esc(fmtHeatDay(r.last.timestamp_utc)) : esc(r.last.metric)) + (r.delta == null ? '' : ' · 较前一日 ' + (r.delta > 0 ? '+' : '') + fmt(r.delta)) + '</div><div class="phr"><span class="pnum">' + fmt(r.last.value) + '</span></div></button>' + trendChart(r.pts) + '</article>').join('');
+    const shorts = shortList().map(t => '<article class="pcard"><button type="button" class="phit open-ev heat-hit" data-id="' + esc(heatOpenId(t.name)) + '"><b>' + esc(displayLabel(t.name)) + '</b><div class="note">' + esc(t.reason) + '</div><div class="note">编辑备注「热度：' + esc(t.heat) + '」不是公式结果</div></button>' + trendChart(topicSeries(t.name)) + '</article>').join('');
+    return heatExplain() + '<div class="psec"><b style="color:#4A6FA5">热度榜</b><span>同一事件只保留一行</span></div><div class="pheat-grid">' + (blocks || '<p class="pfoot">没有热度序列</p>') + '</div>' + (shorts ? '<div class="psec"><b style="color:#4A6FA5">短期热点</b><span>已并入热度榜的不再重复</span></div><div class="pheat-grid">' + shorts + '</div>' : '');
   }
   function groupFor(id) {
     const pack = clusters();
@@ -570,6 +824,7 @@
     wireClamps(document);
     requestAnimationFrame(function () { wireClamps(document); });
     if (openId === 'ride:didi') $('#ovbody').innerHTML = didiOverlay();
+    else if (openId && String(openId).indexOf('heat:') === 0) $('#ovbody').innerHTML = heatOverlay(String(openId).slice(5));
     else if (openId) {
       const it = ITEMS.find(x => x.id === openId);
       if (it) $('#ovbody').innerHTML = document.documentElement.dataset.ui === 'classic' ? detailHTML(it) : paperDetail(it);
@@ -617,7 +872,8 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
     window.scrollTo(0, y);
   }
   function openEvent(id, fromPop) {
-    const synthetic = id === 'ride:didi';
+    const heatTopic = String(id || '').indexOf('heat:') === 0 ? String(id).slice(5) : '';
+    const synthetic = id === 'ride:didi' || !!heatTopic;
     const it = synthetic ? null : ITEMS.find(x => x.id === id);
     if (!synthetic && !it) return;
     openId = id;
@@ -630,7 +886,7 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
     } else if (!$('#overlay') || $('#overlay').hidden) {
       lockOpen();
     }
-    $('#ovbody').innerHTML = synthetic ? didiOverlay() : (document.documentElement.dataset.ui === 'classic' ? detailHTML(it) : paperDetail(it));
+    $('#ovbody').innerHTML = heatTopic ? heatOverlay(heatTopic) : (id === 'ride:didi' ? didiOverlay() : (document.documentElement.dataset.ui === 'classic' ? detailHTML(it) : paperDetail(it)));
     wireClamps($('#ovbody'));
     const ov = $('#overlay');
     ov.hidden = false;
@@ -660,9 +916,9 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
   }
   function mobileHeat() {
     const rows = rankRows();
-    const slides = rows.map((r, i) => `<section class="mslide"><div class="note">第 ${i + 1} 名 · 点圆点看精确值</div><h3>${esc(r.t)}</h3><div class="bigv">${fmt(r.last.value)}</div><div class="note">${r.delta == null ? '' : (r.delta > 0 ? '+' : '') + fmt(r.delta) + ' 较前一日'}</div>${trendChart(r.pts)}</section>`).join('');
-    const shorts = (D.shortterm || []).map(t => `<section class="mslide"><h3>${esc(t.name)}</h3><div class="note">${esc(t.reason)}</div>${trendChart(topicSeries(t.name))}</section>`).join('');
-    return heatExplain() + `<h2 class="sec">热度榜 · 左右滑</h2><div class="mswipe">${slides || '<p class="empty">没有热度序列</p>'}</div><h2 class="sec">短期热点</h2><div class="mswipe">${shorts}</div>`;
+    const slides = rows.map((r, i) => `<section class="mslide"><button type="button" class="open-ev heat-hit" data-id="${esc(heatOpenId(r.t))}"><div class="note">第 ${i + 1} 名</div><h3>${esc(displayLabel(r.t))}</h3><div class="bigv">${fmt(r.last.value)}</div><div class="note">${r.delta == null ? '' : (r.delta > 0 ? '+' : '') + fmt(r.delta) + ' 较前一日'}</div></button>${trendChart(r.pts)}</section>`).join('');
+    const shorts = shortList().map(t => `<section class="mslide"><button type="button" class="open-ev heat-hit" data-id="${esc(heatOpenId(t.name))}"><h3>${esc(displayLabel(t.name))}</h3><div class="note">${esc(t.reason)}</div></button>${trendChart(topicSeries(t.name))}</section>`).join('');
+    return heatExplain() + `<h2 class="sec">热度榜 · 左右滑</h2><div class="mswipe">${slides || '<p class="empty">没有热度序列</p>'}</div>` + (shorts ? `<h2 class="sec">短期热点</h2><div class="mswipe">${shorts}</div>` : '');
   }
   function mobileTrack() {
     const L = ITEMS.filter(isRide);

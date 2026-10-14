@@ -416,6 +416,89 @@
     stubs = pack(stubs);
     return { foreign: foreign, rest: rest, stubs: stubs, shown: foreign.concat(rest, stubs), coveredIds: covered };
   }
+  function frontScore(views, hours, delta) {
+    var h = Math.max(0, Number(hours) || 0);
+    var score = (Number(views) || 0) * Math.pow(0.5, h / 36);
+    if (delta != null && delta !== '' && isFinite(+delta)) {
+      if (+delta > 0 && h <= 48) score *= 1.25;
+      if (+delta <= 0 && h > 48) score *= 0.5;
+    }
+    return score;
+  }
+  var TOPIC_STOP = { '争议': 1, '事件': 1, '公司': 1, '相关': 1, '热点': 1, '大厂': 1 };
+  function topicParts(topic) {
+    var raw = String(topic || '');
+    var strong = [];
+    var weak = [];
+    var seen = {};
+    function add(list, s) {
+      s = String(s || '').trim();
+      if (s.length < 2 || seen[s] || TOPIC_STOP[s]) return;
+      seen[s] = 1;
+      list.push(s);
+    }
+    raw.split(/[\s（）()\[\]【】、,，/|&+""“”'’·.：:—\-]+/).forEach(function (part) {
+      var runs = part.match(/[\u4e00-\u9fff]{2,}/g) || [];
+      runs.forEach(function (run) {
+        if (run.length === 2) add(strong, run);
+        if (run.length >= 3) add(strong, run);
+        var n, i;
+        for (n = 3; n <= 4; n++) {
+          for (i = 0; i + n <= run.length; i++) add(strong, run.slice(i, i + n));
+        }
+        if (run.length >= 4) {
+          for (i = 0; i + 2 <= run.length; i++) add(weak, run.slice(i, i + 2));
+        }
+      });
+      (part.match(/[A-Za-z][A-Za-z0-9]{2,}/g) || []).forEach(function (w) { if (w.length >= 3) add(strong, w); });
+    });
+    return { strong: strong, weak: weak };
+  }
+  function topicScore(parts, title, company, body) {
+    var head = 0;
+    var bodyN = 0;
+    var titleHit = 0;
+    (parts.strong || []).forEach(function (p) {
+      var k = p.toLowerCase();
+      var inTitle = title.indexOf(k) >= 0;
+      var inCo = company.indexOf(k) >= 0;
+      var w = p.length >= 4 ? p.length * 6 : (p.length === 3 ? p.length * 4 : 3);
+      if (inTitle) { head += w; titleHit += p.length; }
+      else if (inCo) head += Math.max(1, Math.floor(w / 2));
+      else if (p.length >= 4 && body.indexOf(k) >= 0) bodyN += p.length;
+    });
+    (parts.weak || []).forEach(function (p) {
+      if (title.indexOf(p.toLowerCase()) >= 0) titleHit += 1;
+    });
+    return { n: head > 0 ? head + bodyN : 0, titleHit: titleHit };
+  }
+  function matchTopic(topic, candidates) {
+    var parts = topicParts(topic);
+    if (!parts.strong.length) return '';
+    var bestRich = null;
+    var bestAny = null;
+    function take(slot, c, s) {
+      if (!s.n) return slot;
+      if (!slot || s.n > slot.n || (s.n === slot.n && s.titleHit > slot.titleHit)) {
+        return { id: c.id || '', n: s.n, titleHit: s.titleHit };
+      }
+      return slot;
+    }
+    (candidates || []).forEach(function (c) {
+      if (!c) return;
+      var body = String(c.blob || c.text || '').toLowerCase();
+      var title = String(c.title || '').toLowerCase();
+      var company = String(c.company || '').toLowerCase();
+      if (!title && !company) title = body;
+      var s = topicScore(parts, title, company, body);
+      var rich = c.rich !== false;
+      if (rich) bestRich = take(bestRich, c, s);
+      bestAny = take(bestAny, c, s);
+    });
+    if (bestRich && bestRich.n > 0) return bestRich.id;
+    if (bestAny && bestAny.n > 0) return bestAny.id;
+    return '';
+  }
   function viewsOf(item) {
     var m = 0;
     ((item && item.links) || []).forEach(function (l) { m = Math.max(m, parseViews(l.views)); });
@@ -544,6 +627,10 @@
     wireClamps: wireClamps,
     bind: bind,
     langLabel: langLabel,
+    FRONT_HALF_H: 36,
+    FRONT_FRESH_H: 48,
+    frontScore: frontScore,
+    matchTopic: matchTopic,
     trackerName: trackerName,
     displayLabel: displayLabel,
     placeTag: placeTag,
