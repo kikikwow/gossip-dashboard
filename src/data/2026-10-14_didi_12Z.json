@@ -1,0 +1,138 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-14T12:12:00Z",
+ "fired_at_utc": "2026-10-14T12:07:53Z",
+ "scanned_at_utc": "2026-10-14T12:12:00Z",
+ "beijing_time": "2026-10-14 20:12 Asia/Shanghai",
+ "edition_date": "2026-10-14",
+ "window": {
+  "start_utc": "2026-10-14T11:10:00Z",
+  "end_utc": "2026-10-14T12:12:00Z",
+  "note": "自上轮 19:16（北京时间）以来；Tier2 slot2（国内其他业务）回看约 6 小时；Tier3 跳过（日间已跑）"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无滴滴本体新的可核验八卦/人事/监管/财务事实。Tier1：cn_price 仅 @hima_tube_ 日语引用转述繁简价差（impressions=83，低于门槛，主线05Z已报，无新证据/无滴滴回应）；其余7组（cn_gossip/hk_tw/BR×2/MX×2/EN）0帖。Slot2 三组：自动驾驶组10帖、其他业务组8帖全为 t.co/article 假阳性（正文无实体）按 postfilter 丢弃；MONA/高管组0帖。Web：内部信/裁员仍为7月反舞弊通报等旧闻；繁简仍为 unwire/LIHKG，滴滴未专门回应；香港牌照仍为8月开放申请、10-30截止的旧信息；Threads 未见新原帖；99Food 仍为9月TJSP/6月Senacon旧闻；花小猪投诉为个例消费保。新发现墨西哥伊达尔戈州议员表态（西语，10-13）——实为 Uber 擅自宣布进驻引发的地方监管表态，DiDi 仅被一并点名、未提交申请，作为低优先级海外小语种线索入看板，不单独报警。RSS 新匹配0条。",
+ "sections": [
+  {
+   "title": "🌏 海外小语种线索",
+   "color": "#0b7",
+   "items": [
+    {
+     "company": "滴滴出海·墨西哥",
+     "tag": "实锤",
+     "source_types": [
+      "公开媒体",
+      "西班牙语",
+      "墨西哥"
+     ],
+     "date": "10-13",
+     "country": "墨西哥",
+     "lang": "西班牙语",
+     "text": "【监管·低优先级】墨西哥伊达尔戈州（首府帕丘卡）议会交通委员会主席 Juan Pablo Escalante 10-13 表示：州议会没有收到 DiDi 或 Uber 的正式运营申请，在州法修改之前两家平台都不能在该州合法运营。起因是 Uber 此前在官网和 App 宣布进驻帕丘卡，州长 Julio Menchaca 已称其违法（10-06 起多家当地媒体报道）。DiDi 只是被一并点名，未见其有进驻动作或回应；出租车行业对此感到不安。",
+     "translation_zh": "州议会通信与交通委员会主席胡安·巴勃罗·埃斯卡兰特表示，该立法机构尚未收到 DiDi 或 Uber 等数字出行平台在伊达尔戈州运营的正式申请。他指出，是否修法允许这些平台在本州运营应由州议会决定；此事已在出租车行业引发不安。“州长已经说过，Uber 在其网站和 App 上发布的（进驻）公告完全违法。在完成法律改革之前，它们不能运营。”",
+     "original": "El presidente de la Comisión de Comunicaciones y Transportes del Congreso estatal, Juan Pablo Escalante, afirmó que dicho organismo legislativo no ha recibido una petición formal de plataformas de transporte digital, como DiDi o Uber, para operar en Hidalgo. Señaló que corresponde al Congreso modificar la legislación para permitir la operación de estas plataformas en la entidad; situación que ha generado incertidumbre en el gremio de los taxistas. “Ya lo mencionó el gobernador, que el anuncio que realizó Uber en su página de internet y en su aplicación es completamente ilegal. Mientras no se realice una reforma legal, no podrán operar”.",
+     "links": [
+      {
+       "label": "Síntesis（西语）",
+       "url": "https://sintesis.mx/2026/10/13/sin-reforma-legal-uber-y-didi-no-podran-operar-en-hidalgo-juan-pablo-escalante/"
+      },
+      {
+       "label": "La Silla Rota（西语，州长表态）",
+       "url": "https://lasillarota.com/hidalgo/estado/2026/10/6/la-ley-en-hidalgo-impide-actualmente-la-llegada-de-uber-menchaca-531769.html"
+      }
+     ],
+     "id": "20261014-didi-12Z-mx-hidalgo"
+    }
+   ]
+  },
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "公开媒体",
+      "RSS"
+     ],
+     "date": "10-14 20:12",
+     "text": "本期滴滴本体无新动态。扫描窗口 11:10Z–12:12Z（北京时间约 19:10–20:12）。Tier1 全量 + Tier2 slot2（自动驾驶/送货/小桔/青桔/代驾/顺风车/花小猪高管）未见新的公司八卦、人事、监管或财务线索；繁简价差只有一条低互动日语转述（无新事实）。",
+     "links": [],
+     "id": "20261014-didi-12Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "10Z": 254,
+   "11Z": 287,
+   "12Z_partial_to1209": 50,
+   "query": "滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"",
+   "note": "11Z=287 小升；撞词噪音主导，非可核验事件"
+  },
+  "task_broad_sample": {
+   "10Z": 1685,
+   "11Z": 1516,
+   "12Z_partial": 289,
+   "query": "(滴滴 OR DiDi OR 程维 OR 花小猪 OR 99app)",
+   "note": "11Z 回落；仅作辅证"
+  },
+  "trad_simp_price_x": {
+   "posts_in_tier1_window": 1,
+   "kept_for_alert": 0,
+   "note": "@hima_tube_ 日语引用 @sam51824016070，83 imp；已报主线无新事实"
+  },
+  "tier1_x_hits_kept": 0,
+  "slot2_x_hits_kept": 0,
+  "weibo_didi_on_list": "not_checked_this_run"
+ },
+ "candidates": [
+  {
+   "topic": "X cn_price @hima_tube_ 日语转述繁简价差",
+   "verdict": "log_only_below_engagement",
+   "why": "impressions=83<300，replies=0；复述已报主线",
+   "url": "https://x.com/hima_tube_/status/2110329328101986741"
+  },
+  {
+   "topic": "墨西哥伊达尔戈州：无修法 Uber/DiDi 不能运营",
+   "verdict": "dashboard_low_priority_no_alert",
+   "why": "Uber 主导的地方监管表态（10-06起），DiDi 仅被一并点名、无申请无回应",
+   "url": "https://sintesis.mx/2026/10/13/sin-reforma-legal-uber-y-didi-no-podran-operar-en-hidalgo-juan-pablo-escalante/"
+  },
+  {
+   "topic": "slot2 X 自动驾驶/其他业务组",
+   "verdict": "reject_tco_only_no_entity",
+   "why": "18帖均为 t.co/article 或无滴滴实体",
+   "url": ""
+  },
+  {
+   "topic": "Web 花小猪投诉（消费保）",
+   "verdict": "log_only_individual_complaints",
+   "why": "个例投诉，非新公司事件",
+   "url": "https://www.xfb365.com/tousu/102426239"
+  }
+ ],
+ "sources_queried": [
+  "X tier1×8 + tier2 slot2×3 + counts×2",
+  "WebSearch×9 (tier1×6 + slot2×2 + Hidalgo 核实×1) + WebFetch×1",
+  "RSS fetch_sources (0 条滴滴相关新匹配)",
+  "Tier3 skipped (daytime already ran)"
+ ],
+ "x_calls_used": 13,
+ "web_searches": 9,
+ "web_searches_used": 9,
+ "tiers": "tier1 + tier2 slot2",
+ "tiers_ran": [
+  "tier1",
+  "tier2_slot2"
+ ],
+ "slot": 2,
+ "push_needed": true,
+ "push_note": "New 12Z edition with one low-priority MX overseas clue; push gossip-dashboard"
+}

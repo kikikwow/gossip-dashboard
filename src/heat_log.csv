@@ -374,3 +374,22 @@ timestamp_utc,topic,metric,value,source
 2026-10-14T11:16:00Z,滴滴海外/APAC-Egypt,x_tier1_slot1_hits_kept_1010to1116Z,0,tier1×8+slot1×3; cn_price secondary only; no alert material
 2026-10-14T11:16:00Z,滴滴繁简价差,x_sample_post,132,https://x.com/sam51824016070/status/2110325400098476330
 2026-10-14T11:16:00Z,滴滴繁简价差,x_sample_post,111,https://x.com/wdnmdnmslm/status/2110305941229023507
+2026-10-14T11:55:00Z,腾讯绿泡泡对战红果短剧,weibo_rank,1,https://soso.re/weibo #绿泡泡对标红果 heat=1606822 @19:49 CST
+2026-10-14T11:55:00Z,腾讯绿泡泡对战红果短剧,weibo_heat,1606822,soso.re/weibo 绿泡泡对标红果
+2026-10-14T11:55:00Z,腾讯绿泡泡对战红果短剧,x_hourly_post_count_08_11Z,8|1|15|17,X q=绿泡泡 (短剧 OR 红果 OR 腾讯 OR 微信); total_window≈41
+2026-10-14T11:55:00Z,腾讯绿泡泡对战红果短剧,x_sample_post,23038,https://x.com/_FORAB/status/2110319029797916887
+2026-10-14T11:55:00Z,腾讯绿泡泡对战红果短剧,x_sample_post,13539,https://x.com/_FORAB/status/2110320799358017882
+2026-10-14T11:55:00Z,月之暗面美银退出IPO,x_hourly_post_count_08_11Z,4|2|4|2,X q=(月之暗面 OR Moonshot OR Kimi) (美银 OR Bank of America OR IPO OR 承销); total=12
+2026-10-14T11:55:00Z,月之暗面美银退出IPO,x_sample_post,814,https://x.com/0xLogicrw/status/2110318890463133717
+2026-10-14T11:55:00Z,田柯宇融资争议,x_hourly_post_count_08_11Z,9|3|5|6,X q=田柯宇; total=23
+2026-10-14T11:55:00Z,Temu密苏里州检察长起诉,x_hourly_post_count_08_11Z,0|5|2|1,X q=Temu (Missouri OR Hanaway OR lawsuit OR 起诉 OR 检察长); total=8; demote
+2026-10-14T11:55:00Z,Anthropic点名智谱/月之暗面蒸馏,x_hourly_note,cooling_old_RTs,mostly RTs of older @AYi_AInotes; demote
+2026-10-14T11:55:00Z,霸王茶姬,weibo_rank,7,霸王茶姬格局 heat=1379223; also #27补发券 #52
+2026-10-14T11:55:00Z,霸王茶姬,x_hourly_post_count_08_11Z,12|11|9|8,X q=霸王茶姬; total=40; old story
+2026-10-14T11:55:00Z,大厂广义八卦关键词,x_hourly_post_count_08_11Z,4|9|5|5,X bigtech+(爆料|离职|裁员|宫斗|翻车|互撕|内部信|做空|暴跌); total=23; no viral new
+2026-10-14T12:12:00Z,滴滴 & 滴滴出海,x_hourly_post_count_broad_11Z,287,"X q=滴滴 OR 滴滴出行 OR ""DiDi Global"" OR ""Didi Chuxing""; ↑ vs 10Z=254, noise-dominated"
+2026-10-14T12:12:00Z,滴滴 & 滴滴出海,x_post_count_broad_12Z_partial,50,"X same broad, 12:00-12:09Z"
+2026-10-14T12:12:00Z,滴滴 & 滴滴出海,x_hourly_post_count_task_broad_11Z,1516,X q=(滴滴 OR DiDi OR 程维 OR 花小猪 OR 99app); auxiliary ↓ from 10Z=1685
+2026-10-14T12:12:00Z,滴滴 & 滴滴出海,x_post_count_task_broad_12Z_partial,289,"X same auxiliary, 12:00-12:09Z"
+2026-10-14T12:12:00Z,滴滴国内其他业务,x_tier1_slot2_hits_kept_1110to1212Z,0,tier1×8+slot2×3; slot2 all t.co/article false positives; cn_price JP-language secondary only
+2026-10-14T12:12:00Z,滴滴繁简价差,x_sample_post,83,https://x.com/hima_tube_/status/2110329328101986741
