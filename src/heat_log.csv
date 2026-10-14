@@ -416,3 +416,7 @@ timestamp_utc,topic,metric,value,source
 2026-10-14T13:16:00Z,滴滴繁简价差,x_post_views:@Furinanatw,16803,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-14T13:16:00Z,滴滴繁简价差,x_sample_post,16803,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-14T14:00:00Z,字节厕所文化爆料,x_sample_post,89000,https://x.com/weiyux2021/status/2109961583619416213
+2026-10-14T14:08:00Z,滴滴,x_hourly_post_count_13Z,279,X counts q=滴滴 OR 滴滴出行 OR "DiDi Global" OR "Didi Chuxing"
+2026-10-14T14:08:00Z,滴滴,x_sample_post,22146,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-14T14:08:00Z,滴滴繁简价差,x_post_views:@Furinanatw,22146,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-14T14:08:00Z,滴滴繁简价差,x_sample_post,22146,https://x.com/Furinanatw/status/2110289680595886537

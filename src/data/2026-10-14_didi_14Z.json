@@ -1,0 +1,145 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-14T14:08:00Z",
+ "fired_at_utc": "2026-10-14T14:06:19Z",
+ "scanned_at_utc": "2026-10-14T14:08:00Z",
+ "beijing_time": "2026-10-14 22:08 Asia/Shanghai",
+ "edition_date": "2026-10-14",
+ "window": {
+  "start_utc": "2026-10-14T13:16:00Z",
+  "end_utc": "2026-10-14T14:08:00Z",
+  "note": "自上轮 21:16（北京时间）以来；X Tier1 回看 2 小时去重；Tier2 slot1（日本/澳新/埃及）回看约 6 小时；Tier3 跳过（日间已跑）"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无滴滴本体新的可核验八卦/人事/监管/财务事实。Tier1：cn_price 仍只有 @shaok45000 低互动复述（impressions=21）；cn_gossip 1帖为阿里云 Agent 手册（无滴滴实体，丢弃）；hk_tw/BR×2/MX×2/EN 0帖。繁简主帖 @Furinanatw 浏览 22146（13:16Z 为 16803，约50分钟 +5343，持续扩散），回复13、引用0，滴滴仍未专门回应（unwire 指出两张截图相隔5分钟、路线不同，且翔安机场尚未启用，属待核实）。Slot1 三组（日本/澳新/埃及）0帖；Web：日本南城市连携、旭川空港乘车点已在此前各期收录；埃及/澳洲无新闻。新发现墨西哥众议院 10-13 晚总体通过 2027 年所得税法（LISR），对 Uber/DiDi/Rappi 等平台司机与骑手总收入 2.1% 固定预扣——行业性税改，DiDi 被一并点名，作为低优先级海外小语种线索入看板，不单独报警。99Food 仍为 TJSP/Senacon 旧闻；香港牌照仍 10-30 截止旧信息；RSS 新匹配 1 条为美团医美榜（非滴滴）。",
+ "sections": [
+  {
+   "title": "🌏 海外小语种线索",
+   "color": "#0b7",
+   "items": [
+    {
+     "company": "滴滴出海·墨西哥",
+     "tag": "实锤",
+     "source_types": [
+      "公开媒体",
+      "西班牙语",
+      "墨西哥"
+     ],
+     "date": "10-13",
+     "country": "墨西哥",
+     "lang": "西班牙语",
+     "text": "【税务·低优先级】墨西哥众议院 10 月 13 日晚以 349 票赞成、118 票反对总体通过 2027 年《所得税法》（LISR），收紧对 Uber、DiDi、Rappi、Mercado Libre 等平台的征税：司机和外卖骑手总收入按 2.1% 固定预扣所得税；不提供纳税人登记号（RFC）的司机/骑手，由平台直接按 20% 所得税 + 全额增值税（16%）惩罚性预扣。逐条审议 10-14 继续。属行业性税改，DiDi 只是被一并点名，未见其回应。",
+     "translation_zh": "同时，对 Uber、DiDi、Rappi、Mercado Libre 等服务类应用的征税机制也将收紧：对司机和外卖骑手的总收入设定 2.1% 的固定所得税（ISR）预扣率；通过电商获利的自然人和法人适用 2.5% 预扣率；Airbnb 等住宿服务维持 4% 固定预扣；未提供联邦纳税人登记号（RFC）的骑手、司机或商户将适用惩罚性税率，直接由平台执行——预扣 20% 所得税和 100% 增值税（16%）。[……] 总体通过后，全会宣布休会，周三继续逐条审议。",
+     "original": "De igual forma se endurecen los mecanismos de recaudación en aplicaciones de servicio como Uber, DiDi, Rappi, Mercado Libre, entre otros. Se establece una tasa fija de retención de 2.1% de ISR sobre los ingresos brutos de los conductores y repartidores; se fija una tasa de retención del 2.5% de ISR tanto para personas físicas como morales que obtienen ganancias mediante el e-commerce; se mantiene una retención fija del 4% de ISR en servicios de hospedaje como Airbnb y similares; así como una tasa de castigo para los repartidores, choferes o comercios que no proporcionen su Registro Federal de Contribuyentes (RFC), la cual se aplicará directamente a la plataforma, con una retención punitiva del 20% de ISR y el 100% del IVA (16%). [...] Tras la aprobación en lo general, se decretó un receso para continuar este miércoles con la discusión en lo particular.",
+     "links": [
+      {
+       "label": "El Universal（西语，10-13 22:55 墨西哥时间）",
+       "url": "https://www.eluniversal.com.mx/nacion/diputados-aprueban-en-lo-general-ley-del-isr-2027-fijan-nuevas-retenciones-para-uber-didi-y-rappi/"
+      }
+     ],
+     "id": "20261014-didi-14Z-mx-isr"
+    }
+   ]
+  },
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "公开媒体",
+      "RSS"
+     ],
+     "date": "10-14 22:08",
+     "text": "本期滴滴本体无新动态。扫描窗口 13:16Z–14:08Z（北京时间约 21:16–22:08）。Tier1 全量 + Tier2 slot1（日本/澳新/埃及）未见新的公司八卦、人事、监管或财务线索。繁简价差主帖 @Furinanatw 浏览升至 22146（一小时内 +5000 多），仍在扩散但没有新证据，滴滴未专门回应；截图时间与路线不同，仍属待核实。",
+     "links": [
+      {
+       "label": "@Furinanatw 繁简价差主帖（22146 浏览）",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      },
+      {
+       "label": "unwire.hk 报道（繁中）",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/"
+      }
+     ],
+     "id": "20261014-didi-14Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "11Z": 284,
+   "12Z": 266,
+   "13Z": 279,
+   "14Z_partial_to1407": 47,
+   "query": "滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"",
+   "note": "13Z=279 持平；撞词噪音主导"
+  },
+  "trad_simp_price_x": {
+   "posts_in_tier1_window": 1,
+   "kept_for_alert": 0,
+   "main_post_views": 22146,
+   "prev_views": 16803,
+   "note": "主帖持续扩散，无新事实"
+  },
+  "tier1_x_hits_kept": 0,
+  "slot1_x_hits_kept": 0,
+  "weibo_didi_on_list": null
+ },
+ "candidates": [
+  {
+   "topic": "X cn_price @shaok45000 复述繁简价差",
+   "verdict": "log_only_below_engagement",
+   "why": "impressions=21",
+   "url": "https://x.com/shaok45000/status/2110350499522449662"
+  },
+  {
+   "topic": "X cn_gossip 阿里云 Agent 手册",
+   "verdict": "reject_no_entity",
+   "why": "正文无滴滴实体",
+   "url": "https://x.com/niemingxing2023/status/2110348397245034976"
+  },
+  {
+   "topic": "墨西哥 2027 ISR 法平台预扣",
+   "verdict": "dashboard_low_priority_no_alert",
+   "why": "行业性税改，DiDi 被一并点名",
+   "url": "https://www.eluniversal.com.mx/nacion/diputados-aprueban-en-lo-general-ley-del-isr-2027-fijan-nuevas-retenciones-para-uber-didi-y-rappi/"
+  },
+  {
+   "topic": "Nuevo Laredo DiDi 司机闯停车标志撞车",
+   "verdict": "log_only_minor_local",
+   "why": "无人受伤的地方交通事故",
+   "url": "https://liderweb.mx/provoca-conductor-de-didi-choque-por-ignorar-senal-de-alto/"
+  },
+  {
+   "topic": "DiDi 南城市/DMOなんじょう 连携",
+   "verdict": "already_covered",
+   "why": "此前各期已收录",
+   "url": "https://prtimes.jp/main/html/rd/p/000000133.000051938.html"
+  }
+ ],
+ "sources_queried": [
+  "X tier1×8 + tier2 slot1×3 + counts×1 + post lookup×1",
+  "WebSearch×8 (tier1×6 + slot1×2) + WebFetch×1",
+  "RSS fetch_sources (1 条新匹配，非滴滴)",
+  "Tier3 skipped (daytime already ran)"
+ ],
+ "x_calls_used": 13,
+ "web_searches": 8,
+ "web_searches_used": 8,
+ "tiers": "tier1 + tier2 slot1",
+ "tiers_ran": [
+  "tier1",
+  "tier2_slot1"
+ ],
+ "slot": 1,
+ "push_needed": true,
+ "push_note": "New 14Z edition with one low-priority MX overseas clue + updated 繁简 heat; push gossip-dashboard"
+}
