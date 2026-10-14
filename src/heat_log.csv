@@ -405,3 +405,9 @@ timestamp_utc,topic,metric,value,source
 2026-10-14T12:56:00Z,豆包手机助手151款拒绝,x_hourly_post_count_05to12Z_total,40,X counts q=豆包 (151 OR SAEP OR 拒绝接入 OR 拒绝) hourly 6/5/3/2/2/6/9/7
 2026-10-14T12:56:00Z,滴滴繁简价差,x_post_views:@Furinanatw,15447,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-14T12:56:00Z,滴滴繁简价差,x_sample_post,15447,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-14T13:10:00Z,月之暗面美银退出IPO,x_hourly_05to13Z,47,X counts 8/14/5/5/4/2/4/2/3
+2026-10-14T13:10:00Z,月之暗面美银退出IPO,x_sample_post,25444,https://x.com/business/status/2110235441802690623
+2026-10-14T13:10:00Z,月之暗面美银退出IPO,x_sample_post,1391,https://x.com/0xLogicrw/status/2110318890463133717
+2026-10-14T13:10:00Z,传音控股港股IPO,grey_market_futu,34.56,https://www.etnet.com.hk/www/tc/stocks/ipo-info.php?code=02636
+2026-10-14T13:10:00Z,滴滴繁简价差,x_sample_post,16024,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-14T13:10:00Z,霸王茶姬补发券,x_sample_post,110,https://x.com/Luckyou00100/status/2110319846009475166

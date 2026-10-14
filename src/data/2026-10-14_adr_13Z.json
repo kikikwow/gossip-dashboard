@@ -1,0 +1,321 @@
+{
+ "type": "adr",
+ "title": "美股中概 & 出海简报",
+ "timestamp": "2026-10-14T13:10:00Z",
+ "edition_date": "2026-10-14",
+ "slot": "21Z",
+ "beijing_time": "2026-10-14 21:05 Asia/Shanghai",
+ "lede": "晚报 · 覆盖自上一档补跑 2026-10-14T05:44Z（北京 13:44）至此刻 · 信源：X 公开检索 + 公开媒体/RSS；与大厂八卦晚报分开送达",
+ "window": {
+  "start_utc": "2026-10-14T05:44:00Z",
+  "end_utc": "2026-10-14T13:10:00Z"
+ },
+ "alert_worthy": false,
+ "push_needed": true,
+ "top3": [
+  {
+   "section": "🚀 IPO & 高管",
+   "index": 1
+  },
+  {
+   "section": "🚀 IPO & 高管",
+   "index": 0
+  },
+  {
+   "section": "🧸 消费出海",
+   "index": 0
+  }
+ ],
+ "sections": [
+  {
+   "title": "🎯 重点追踪",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "公开媒体",
+      "西班牙语"
+     ],
+     "date": "10-14",
+     "text": "繁简价差二次扩散：@Furinanatw「国籍歧视」对比帖约 1.6 万浏览；墨西哥伊达尔戈州低优先级监管表态（DiDi 被一并点名）。滴滴未回应价差；巴西99/埃及/日本合资无新公司级线索。",
+     "links": [
+      {
+       "label": "X @Furinanatw",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537",
+       "views": "16024"
+      },
+      {
+       "label": "Síntesis（西语）",
+       "url": "https://sintesis.mx/2026/10/13/sin-reforma-legal-uber-y-didi-no-podran-operar-en-hidalgo-juan-pablo-escalante/",
+       "views": null
+      }
+     ],
+     "id": "20261014-adr-13Z-didi"
+    },
+    {
+     "company": "字节 / TikTok",
+     "tag": "实锤",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-14",
+     "text": "本期无重大可核验新动态。",
+     "links": [],
+     "id": "20261014-adr-13Z-bytedance-none"
+    },
+    {
+     "company": "智谱 / 月之暗面 / 中国大模型",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "媒体",
+      "彭博"
+     ],
+     "date": "10-14",
+     "text": "美银退出月之暗面港股 IPO 潜在承销洽谈（彭博知情人士）；高盛仍为唯一美资保荐行。相关 X 热度回落。Anthropic 蒸馏点名续传降温，不重复展开。",
+     "links": [
+      {
+       "label": "X @business",
+       "url": "https://x.com/business/status/2110235441802690623",
+       "views": "25444"
+      },
+      {
+       "label": "X @0xLogicrw",
+       "url": "https://x.com/0xLogicrw/status/2110318890463133717",
+       "views": "1391"
+      }
+     ],
+     "id": "20261014-adr-13Z-moonshot"
+    }
+   ]
+  },
+  {
+   "title": "⚡ 短期热点追踪",
+   "color": "#ea580c",
+   "items": [
+    {
+     "company": "月之暗面美银退出IPO",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-14",
+     "text": "📉 05–13Z 小时发帖约 8/14/5/5/4/2/4/2/3；@business 25444 浏览。快讯已警报。",
+     "links": [
+      {
+       "label": "X @business",
+       "url": "https://x.com/business/status/2110235441802690623",
+       "views": "25444"
+      }
+     ],
+     "id": "20261014-adr-13Z-hot-moonshot"
+    }
+   ]
+  },
+  {
+   "title": "🌏 海外小语种线索",
+   "color": "#0b7",
+   "items": [
+    {
+     "company": "滴滴出海·墨西哥",
+     "tag": "实锤",
+     "source_types": [
+      "公开媒体",
+      "西班牙语",
+      "墨西哥"
+     ],
+     "date": "10-13",
+     "country": "墨西哥",
+     "lang": "西班牙语",
+     "text": "伊达尔戈州议会交通委员会主席称州法修改前 DiDi/Uber 不可合法运营；主因 Uber 擅自宣布进驻，DiDi 被一并点名。",
+     "translation_zh": "州议会通信与交通委员会主席表示尚未收到 DiDi 或 Uber 的正式运营申请；州长已称 Uber 的进驻公告违法，修法前不得运营。",
+     "original": "El presidente de la Comisión de Comunicaciones y Transportes del Congreso estatal, Juan Pablo Escalante, afirmó que dicho organismo legislativo no ha recibido una petición formal de plataformas de transporte digital, como DiDi o Uber, para operar en Hidalgo.",
+     "links": [
+      {
+       "label": "Síntesis",
+       "url": "https://sintesis.mx/2026/10/13/sin-reforma-legal-uber-y-didi-no-podran-operar-en-hidalgo-juan-pablo-escalante/"
+      },
+      {
+       "label": "La Silla Rota",
+       "url": "https://lasillarota.com/hidalgo/estado/2026/10/6/la-ley-en-hidalgo-impide-actualmente-la-llegada-de-uber-menchaca-531769.html"
+      }
+     ],
+     "id": "20261014-adr-13Z-mx-hidalgo"
+    }
+   ]
+  },
+  {
+   "title": "🏛️ 监管 · 诉讼 · 制裁",
+   "color": "#dc2626",
+   "items": [
+    {
+     "company": "月之暗面",
+     "tag": "传闻",
+     "source_types": [
+      "媒体",
+      "X",
+      "彭博"
+     ],
+     "date": "10-14",
+     "text": "美银退出港股 IPO 潜在承销洽谈（见 Top 1）。",
+     "links": [
+      {
+       "label": "火星财经转彭博",
+       "url": "https://news.marsbit.co/flash/20261014130505207829.html"
+      }
+     ],
+     "id": "20261014-adr-13Z-moonshot-reg"
+    },
+    {
+     "company": "茶百道",
+     "tag": "实锤",
+     "source_types": [
+      "媒体"
+     ],
+     "date": "10-14",
+     "text": "新华等续报证监会停牌调查；无新裁决。",
+     "links": [
+      {
+       "label": "新华网",
+       "url": "http://www.news.cn/finance/20261014/b183f3cf68b046a3898af16f0acc13e2/c.html"
+      }
+     ],
+     "id": "20261014-adr-13Z-chabaidao"
+    }
+   ]
+  },
+  {
+   "title": "📉 股价大动",
+   "color": "#2563eb",
+   "items": [
+    {
+     "company": "理想 / 蔚来 / 拼多多 / 文远知行",
+     "tag": "实锤",
+     "source_types": [
+      "媒体"
+     ],
+     "date": "10-13 收盘",
+     "text": "金龙 +0.14%；理想 +3.07%、蔚来 +2.59%、PDD +1.29%；文远 −5.44%。10-14 美东收盘下一档再补。",
+     "links": [
+      {
+       "label": "新浪财经",
+       "url": "https://finance.sina.com.cn/stock/usstock/c/2026-10-14/doc-inivcpis0484332.shtml"
+      }
+     ],
+     "id": "20261014-adr-13Z-stocks"
+    },
+    {
+     "company": "传音控股暗盘",
+     "tag": "实锤",
+     "source_types": [
+      "媒体"
+     ],
+     "date": "10-14",
+     "text": "暗盘约 34.56–34.78，较 35.30 定价约 −1.5%～−2.1%。",
+     "links": [
+      {
+       "label": "etnet",
+       "url": "https://www.etnet.com.hk/www/tc/stocks/ipo-info.php?code=02636"
+      }
+     ],
+     "id": "20261014-adr-13Z-transsion-grey"
+    }
+   ]
+  },
+  {
+   "title": "🧸 消费出海",
+   "color": "#db2777",
+   "items": [
+    {
+     "company": "霸王茶姬 CHA",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "X",
+      "微博"
+     ],
+     "date": "10-14",
+     "text": "向部分用户补发全品类买一送一券；微博热搜余波；10-13 收盘 +4.59%。",
+     "links": [
+      {
+       "label": "21经济网",
+       "url": "https://www.21jingji.com/article/20261014/herald/3f513db9825bac87a4f2fad452c77a66.html"
+      },
+      {
+       "label": "X @Luckyou00100",
+       "url": "https://x.com/Luckyou00100/status/2110319846009475166",
+       "views": "110"
+      }
+     ],
+     "id": "20261014-adr-13Z-chagee"
+    },
+    {
+     "company": "滴滴·繁简价差",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-14",
+     "text": "@Furinanatw 对比帖约 1.6 万浏览。",
+     "links": [
+      {
+       "label": "X @Furinanatw",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537",
+       "views": "16024"
+      }
+     ],
+     "id": "20261014-adr-13Z-didi-price"
+    }
+   ]
+  },
+  {
+   "title": "🚀 IPO & 高管",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "company": "传音控股",
+     "tag": "实锤",
+     "source_types": [
+      "媒体"
+     ],
+     "date": "10-14",
+     "text": "配发结果：港公开发售 4.46 倍、国际 2.55 倍，净筹约 29.68 亿港元；暗盘弱于定价；10-15 挂牌。",
+     "links": [
+      {
+       "label": "富途配发结果",
+       "url": "https://news.futunn.com/post/1001127522/transsion-holdings-02636-hong-kong-public-offering-oversubscribed-4-46"
+      },
+      {
+       "label": "etnet暗盘",
+       "url": "https://www.etnet.com.hk/www/tc/stocks/ipo-info.php?code=02636"
+      }
+     ],
+     "id": "20261014-adr-13Z-transsion"
+    },
+    {
+     "company": "月之暗面",
+     "tag": "传闻",
+     "source_types": [
+      "媒体",
+      "X",
+      "彭博"
+     ],
+     "date": "10-14",
+     "text": "美银退出潜在承销；高盛+中金+德银保荐。",
+     "links": [
+      {
+       "label": "X @business",
+       "url": "https://x.com/business/status/2110235441802690623",
+       "views": "25444"
+      }
+     ],
+     "id": "20261014-adr-13Z-moonshot-ipo"
+    }
+   ]
+  }
+ ]
+}
