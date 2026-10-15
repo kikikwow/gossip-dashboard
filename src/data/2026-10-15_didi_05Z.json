@@ -1,0 +1,132 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每两小时）",
+ "routine": "滴滴重点追踪（每两小时）",
+ "timestamp": "2026-10-15T05:32:00Z",
+ "fired_at_utc": "2026-10-15T05:28:46Z",
+ "scanned_at_utc": "2026-10-15T05:32:00Z",
+ "beijing_time": "2026-10-15 13:32 Asia/Shanghai",
+ "edition_date": "2026-10-15",
+ "window": {
+  "start_utc": "2026-10-15T03:15:00Z",
+  "end_utc": "2026-10-15T05:32:00Z",
+  "note": "自上轮 03:30Z（北京时间 11:30）以来约 2 小时；Tier1 + Tier2 slot1（日本/澳新/埃及）；Tier3 跳过（当日已在 00Z 跑过）"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无滴滴本体新的可核验八卦/人事/监管/诉讼/财报/公司回应。Tier1 八组 X（start 03:15Z）全部 0 帖；slot1 三组 X（日本/澳新/埃及，start 6h）全部 0 帖。繁简主帖 @Furinanatw 浏览 116015→142761（+26746），回复 40→51；新增回复以谩骂和质疑为主（“一个有券一个没券”“应该是支付货币的缘故”），无新证据、无媒体升级、滴滴未专门回应。Web：国内裁员/繁简/港牌照均为旧闻；BR 99Food 新城市上线、Zesto 发布及 TJ-SP/Cade 旧闻；MX 杜兰戈 DiDi 司机遭绑架勒索后脱身（10-14 Excelsior，个案治安新闻）、普埃布拉 Facebook 售卖 DiDi 司机账号（10-13）为窗口前已出现的本地新闻；JP 南城市合作（10-13）、旭川空港（10-01）为常规发布；AU/EG 无 10 月新闻。RSS 新匹配 0；微博热搜镜像无滴滴/花小猪/程维/网约车/打车。",
+ "sections": [
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "公开媒体",
+      "RSS",
+      "微博镜像"
+     ],
+     "date": "10-15 13:32",
+     "text": "本期滴滴本体无新动态。扫描窗口 03:15Z–05:32Z（北京时间 10-15 11:15 至 13:32）。Tier1 全量 + Tier2 slot1（日本、澳新、埃及）未见新的公司八卦、人事、监管、诉讼或财务线索。繁简价差主帖 @Furinanatw 浏览续涨至 142761（上轮 116015，约 +2.7 万），回复 51，新增回复以谩骂和质疑为主（如认为是优惠券或支付币种不同造成），仍是同一组截图，没有新证据或新媒体报道，滴滴未专门回应；截图时间与路线不同、翔安机场尚未启用，仍属待核实。海外小语种线索：本期无新增窗口内帖子；墨西哥本地媒体近两日有 DiDi 司机在杜兰戈遭绑架勒索后脱身（西语，Excelsior 10-14）和普埃布拉有人在 Facebook 售卖 DiDi 司机账号（西语，Contigo Puebla 10-13）两则个案报道，属地方治安/平台审核个案，不报警。日本 DiDi 与冲绳南城市合作（10-13）为常规发布。",
+     "links": [
+      {
+       "label": "@Furinanatw 繁简价差主帖（142761 浏览）",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      },
+      {
+       "label": "unwire.hk 报道（繁中）",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/"
+      },
+      {
+       "label": "Excelsior：杜兰戈 DiDi 司机遭绑架勒索后脱身（西语）",
+       "url": "https://www.excelsior.com.mx/nacional/audaz-huida-durango-chofer-didi-burla-secuestradores-y-evita-extorsion"
+      },
+      {
+       "label": "Contigo Puebla：Facebook 售卖 DiDi 司机账号（西语）",
+       "url": "https://contigopuebla.mx/2026/78162/ofrecen-cuentas-de-didi-sin-filtros-de-seguridad/"
+      }
+     ],
+     "original": {
+      "lang": "es",
+      "text": "¡Audaz huida en Durango! Chofer de DiDi burla a secuestradores y evita extorsión (Excelsior, 14-10-2026) / Ofrecen cuentas de DiDi sin filtros de seguridad (Contigo Puebla, 13-10-2026)",
+      "translation": "杜兰戈：DiDi 司机机智脱身，躲过绑匪勒索（Excelsior，2026-10-14）／有人兜售未经安全审核的 DiDi 账号（Contigo Puebla，2026-10-13）"
+     },
+     "id": "20261015-didi-05Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "03Z": 169,
+   "04Z": 189,
+   "05Z_partial_to0529": 117,
+   "query": "滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"",
+   "note": "每小时 169/189，抽样仍以撞词噪音为主"
+  },
+  "trad_simp_price_x": {
+   "posts_in_tier1_window": 0,
+   "kept_for_alert": 0,
+   "main_post_views": 142761,
+   "prev_views": 116015,
+   "main_post_replies": 51,
+   "note": "主帖续涨约 +26746，回复 40→51，新增回复为谩骂/质疑，无新事实、无回应"
+  },
+  "tier1_x_hits_kept": 0,
+  "slot1_x_hits_kept": 0,
+  "weibo_didi_on_list": null
+ },
+ "candidates": [
+  {
+   "topic": "繁简价差 @Furinanatw 续涨",
+   "verdict": "already_covered_views_only",
+   "why": "116015→142761，回复 51，无新证据/媒体/回应",
+   "url": "https://x.com/Furinanatw/status/2110289680595886537"
+  },
+  {
+   "topic": "繁简主帖回复 @richieliuxi「应该是支付货币的缘故吧」",
+   "verdict": "reject_no_new_fact",
+   "why": "印象 1653，猜测性回复",
+   "url": "https://x.com/richieliuxi/status/2110585340604113299"
+  },
+  {
+   "topic": "MX 杜兰戈 DiDi 司机遭绑架勒索",
+   "verdict": "log_only_local_incident",
+   "why": "10-14 个案治安新闻，非公司级事件",
+   "url": "https://www.excelsior.com.mx/nacional/audaz-huida-durango-chofer-didi-burla-secuestradores-y-evita-extorsion"
+  },
+  {
+   "topic": "MX 普埃布拉售卖 DiDi 司机账号",
+   "verdict": "log_only_local_incident",
+   "why": "10-13 地方报道，平台审核漏洞个案，无公司回应",
+   "url": "https://contigopuebla.mx/2026/78162/ofrecen-cuentas-de-didi-sin-filtros-de-seguridad/"
+  },
+  {
+   "topic": "JP DiDi × 南城市连携",
+   "verdict": "reject_routine_pr",
+   "why": "10-13 常规合作发布",
+   "url": "https://prtimes.jp/main/html/rd/p/000000133.000051938.html"
+  }
+ ],
+ "sources_queried": [
+  "X tier1×8 + tier2 slot1×3 + counts×1 + post lookup×1 + conversation×1",
+  "WebSearch×8 (tier1×6 + slot1×2)",
+  "RSS fetch_sources（滴滴匹配=0）",
+  "微博热搜镜像 soso.re/api/weibo 无滴滴关键词",
+  "Tier3 skipped (already ran at 00Z)"
+ ],
+ "x_calls_used": 14,
+ "web_searches": 8,
+ "web_searches_used": 8,
+ "tiers": "tier1 + tier2 slot1",
+ "tiers_ran": [
+  "tier1",
+  "tier2_slot1"
+ ],
+ "slot": 1,
+ "push_needed": false,
+ "push_note": "kept=0、仅浏览量增长、alert_worthy=false：按 2026-10-15 省额度规则不启动 CloudAgent，本地保存，待下一次实质性运行或 watchdog 推送"
+}

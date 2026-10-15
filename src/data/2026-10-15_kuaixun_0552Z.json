@@ -1,0 +1,322 @@
+{
+ "routine": "大厂八卦热点快讯",
+ "fired_at_utc": "2026-10-15T05:50:00Z",
+ "scanned_at_utc": "2026-10-15T05:55:00Z",
+ "beijing_time": "2026-10-15 13:50–13:58 CST",
+ "window": "2026-10-15T02:56Z–05:55Z (Beijing 10:56–13:55)",
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "本窗无新的达标爆料。DeepSeek 中断已于 05:04Z（北京 13:04）由状态页宣布恢复（共 4h52m），但原因仍未披露，属已警报话题的收尾、不再单独警报；豆包低认知话题微博 #1→#5 回落；懂车帝/尊界白天回升，新支线「北美花生称懂车帝曾测出丰田赛那后摆臂断裂未发布」仅博主说法（@LZRationalnvest 1.3 万浏览）；绿泡泡 vs 红果白天回升但无新事实。微博 #1「长实否认李嘉诚逝世」为地产/名人辟谣，非大厂八卦。",
+ "items": [],
+ "tracked_updates": [
+  {
+   "company": "DeepSeek（深度求索）",
+   "topic": "DeepSeek网页/API大面积中断",
+   "tags": [
+    "实锤",
+    "官方状态页"
+   ],
+   "summary_zh": "DeepSeek 官方状态页显示，本次网页/API 部分中断于北京时间 12:49 标为「已实施修复、监控中」，13:04 宣布「问题已解决、服务已恢复」，从 08:11 起共持续 4 小时 52 分。故障原因官方仍未披露，网传「算力缺口」等说法无依据。",
+   "heat": {
+    "x_hourly_23Zto05Z": [
+     4,
+     21,
+     108,
+     185,
+     151,
+     118,
+     72
+    ],
+    "weibo": {
+     "DeepSeek崩了": [
+      22,
+      304174
+     ]
+    },
+    "sample_posts": {
+     "dmjk001": 5776,
+     "plantegg": 2543
+    }
+   },
+   "links": [
+    "https://status.deepseek.com/incidents/7116348214287",
+    "https://x.com/plantegg/status/2110570070531358977",
+    "https://x.com/humoni_moonix/status/2110599206524326315"
+   ],
+   "date": "2026-10-15",
+   "pending": [
+    "待补充：故障原因——官方未披露"
+   ]
+  },
+  {
+   "company": "懂车帝 / 华为尊界",
+   "topic": "懂车帝被曝邀约黑尊界",
+   "tags": [
+    "传闻",
+    "X 博主转述"
+   ],
+   "summary_zh": "尊界 V800 刹车门舆论战第三天仍在发酵，X 上「懂车帝 OR 尊界」每小时发帖从夜间个位数回升到 90 多条。新支线是博主「北美花生就是我」称懂车帝曾在测试场测出丰田赛那后摆臂断裂但没有发布，被转述为「懂车帝选择性发布」，目前只有博主一方说法，懂车帝和尊界都未正式回应。",
+   "heat": {
+    "x_hourly_23Zto05Z": [
+     42,
+     67,
+     92,
+     72,
+     98,
+     94,
+     66
+    ],
+    "sample_posts": {
+     "LZRationalnvest": 13062,
+     "KELMAND1": 3238
+    }
+   },
+   "links": [
+    "https://x.com/LZRationalnvest/status/2110567828155990491",
+    "https://x.com/KELMAND1/status/2110566088874524701"
+   ],
+   "date": "2026-10-15",
+   "pending": [
+    "待补充：「北美花生」原帖链接及懂车帝回应——X 上仅见转述截图"
+   ]
+  }
+ ],
+ "weibo": {
+  "mirror": "https://soso.re/weibo",
+  "updated": "2026-10-15 13:31 Beijing",
+  "company_adjacent": [
+   {
+    "rank": 1,
+    "topic": "长实否认李嘉诚逝世",
+    "heat": 2067102,
+    "note": "长实集团内部人士回应澎湃「绝无其事」；地产/名人辟谣，非大厂八卦，未警报"
+   },
+   {
+    "rank": 4,
+    "topic": "全体星店长喊你上京东11.11领红包",
+    "heat": 1021572,
+    "note": "营销"
+   },
+   {
+    "rank": 5,
+    "topic": "豆包对低认知人群有权威性",
+    "heat": 977209,
+    "note": "已追踪·豆包（10:32 为 #1/2117289，回落）"
+   },
+   {
+    "rank": 7,
+    "topic": "肖战大麦演唱会想看人数历史总榜第4",
+    "heat": 784417,
+    "note": "阿里大麦，娱乐票务"
+   },
+   {
+    "rank": 8,
+    "topic": "天猫双11买iPhone18Pro立省800",
+    "heat": 490653,
+    "note": "营销"
+   },
+   {
+    "rank": 11,
+    "topic": "老外来中国不用微信也能支付",
+    "heat": 482625,
+    "note": "产品/支付，非八卦"
+   },
+   {
+    "rank": 15,
+    "topic": "大麦公布肖战演唱会可售票数",
+    "heat": 383624,
+    "note": "娱乐票务"
+   },
+   {
+    "rank": 22,
+    "topic": "DeepSeek崩了",
+    "heat": 304174,
+    "note": "已警报；服务已恢复（另两条 DeepSeek 热搜已跌出前52）"
+   },
+   {
+    "rank": 35,
+    "topic": "appstore正式进入字节时代",
+    "heat": 219673,
+    "note": "字节免费 App 霸榜调侃（@abskoop 1558），无具体事件"
+   },
+   {
+    "rank": 36,
+    "topic": "长鑫科技市值跌破3万亿",
+    "heat": 208129,
+    "note": "股价"
+   },
+   {
+    "rank": 38,
+    "topic": "小米澎湃OS4正式版开启推送",
+    "heat": 193815,
+    "note": "产品"
+   },
+   {
+    "rank": 43,
+    "topic": "极氪车主评论区笑死了",
+    "heat": 169608,
+    "note": "车圈调侃，未核实具体事件"
+   },
+   {
+    "rank": 51,
+    "topic": "MONAL05首发评测",
+    "heat": 156238,
+    "note": "小鹏 MONA 产品评测"
+   }
+  ]
+ },
+ "maimai": {
+  "direct_fetch": "not retried (404 earlier runs)"
+ },
+ "x_heat": {
+  "DeepSeek中断": {
+   "hourly_23Zto05Z": [
+    4,
+    21,
+    108,
+    185,
+    151,
+    118,
+    72
+   ],
+   "note": "05Z partial to 05:50; 峰值 02Z 后回落"
+  },
+  "豆包": {
+   "hourly_23Zto05Z": [
+    55,
+    128,
+    166,
+    193,
+    186,
+    161,
+    168
+   ],
+   "zhuifei008": 710,
+   "ImYanBoss": 310
+  },
+  "腾讯云爬高德": {
+   "hourly_23Zto05Z": [
+    17,
+    17,
+    24,
+    19,
+    17,
+    13,
+    10
+   ],
+   "ethanelasky_views": 729179,
+   "sleepy0x13_views": 126741
+  },
+  "懂车帝/尊界": {
+   "hourly_23Zto05Z": [
+    42,
+    67,
+    92,
+    72,
+    98,
+    94,
+    66
+   ],
+   "LZRationalnvest": 13062
+  },
+  "绿泡泡/红果": {
+   "hourly_23Zto05Z": [
+    22,
+    35,
+    49,
+    56,
+    109,
+    72,
+    61
+   ],
+   "qihang_zeng6688": 643
+  },
+  "字节/ByteDance": {
+   "hourly_23Zto05Z": [
+    57,
+    54,
+    74,
+    62,
+    72,
+    75,
+    56
+   ],
+   "note": "平稳"
+  },
+  "大厂爆料/裁员/离职/翻车": {
+   "hourly_23Zto05Z": [
+    3,
+    3,
+    10,
+    3,
+    4,
+    4,
+    2
+   ],
+   "note": "无爆点"
+  },
+  "滴滴繁简": {
+   "Furinanatw_views": 146441,
+   "replies": 52
+  },
+  "合肥比亚迪封门": {
+   "whyyoutouzhele_views": 61393
+  }
+ },
+ "feeds_new": [
+  {
+   "source": "钛媒体(含互联网怪盗团)",
+   "title": "字节跳动豆包做不了 Muse",
+   "link": "https://www.tmtpost.com/8169616.html",
+   "note": "豆包 AI Agent 遭头部 App 集体拒绝的评论分析，并入豆包话题，非新爆料"
+  }
+ ],
+ "short_term_updates": {
+  "added": [],
+  "kept": [
+   "腾讯云AI智能体爬高德",
+   "懂车帝被曝邀约黑尊界",
+   "豆包手机助手SAEP151款拒绝",
+   "腾讯绿泡泡对战红果短剧",
+   "DeepSeek网页/API大面积中断"
+  ],
+  "removed": []
+ },
+ "candidates": [
+  {
+   "topic": "DeepSeek 服务恢复（4h52m）",
+   "verdict": "skip_alert_update_note",
+   "why": "已警报话题收尾；原因未披露，不满足『恢复且公布原因』的重大新进展标准"
+  },
+  {
+   "topic": "懂车帝曾测出丰田赛那断裂未发布（北美花生爆料）",
+   "verdict": "skip",
+   "why": "单一博主说法，转述帖 1.3 万浏览，并入已追踪懂车帝话题"
+  },
+  {
+   "topic": "长实否认李嘉诚逝世（微博 #1）",
+   "verdict": "skip",
+   "why": "地产/名人谣言且已辟谣，非大厂八卦"
+  },
+  {
+   "topic": "appstore正式进入字节时代（微博 #35）",
+   "verdict": "skip",
+   "why": "字节 App 霸榜调侃，无具体事件"
+  },
+  {
+   "topic": "华为内部文件曝「窃密有奖」",
+   "verdict": "skip",
+   "why": "仅见 @Jack1181258 政治频道标题党（5 浏览），无来源"
+  },
+  {
+   "topic": "腾讯 WorkBuddy 打通企业微信",
+   "verdict": "skip",
+   "why": "产品消息（@bangbuilds 508），非八卦"
+  },
+  {
+   "topic": "苹果国行 AI 12 月上线（阿里+百度）",
+   "verdict": "skip",
+   "why": "彭博产品消息，02:52Z 期已记录"
+  }
+ ]
+}

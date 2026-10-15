@@ -523,3 +523,32 @@ timestamp_utc,topic,metric,value,source
 2026-10-15T03:30:00Z,滴滴繁简价差,x_sample_post,116015,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-15T03:30:00Z,滴滴,x_sample_post,116015,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-15T03:30:00Z,滴滴,x_hourly_post_count_00to03Z,138|137|189|71,"X q=滴滴 OR 滴滴出行 OR ""DiDi Global"" OR ""Didi Chuxing""; 03Z partial to 03:29; mostly keyword-collision noise"
+2026-10-15T05:32:00Z,滴滴繁简价差,x_post_views,142761,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T05:32:00Z,滴滴繁简价差,x_post_replies,51,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T05:32:00Z,滴滴繁简价差,x_sample_post,142761,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T05:32:00Z,滴滴,x_sample_post,142761,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T05:32:00Z,滴滴,x_hourly_post_count_03to05Z,169|189|117,"X q=滴滴 OR 滴滴出行 OR ""DiDi Global"" OR ""Didi Chuxing""; 05Z partial to 05:29; mostly keyword-collision noise"
+2026-10-15T05:55:00Z,DeepSeek网页/API大面积中断,x_hourly_posts_23Zto05Z,4|21|108|185|151|118|72,X q=DeepSeek (崩了 OR 崩 OR 不可用 OR 繁忙 OR down OR outage OR 恢复); 05Z partial to 05:50
+2026-10-15T05:55:00Z,DeepSeek网页/API大面积中断,status_page,resolved_0504Z_duration_4h52m,https://status.deepseek.com/incidents/7116348214287
+2026-10-15T05:55:00Z,DeepSeek网页/API大面积中断,weibo_rank,22(304174),https://soso.re/weibo updated 2026-10-15 13:31 Beijing; DeepSeek崩了 (10:32 榜 #23/204447); 另两条已跌出前52
+2026-10-15T05:55:00Z,DeepSeek网页/API大面积中断,x_sample_post,5776,https://x.com/dmjk001/status/2110538819640631304
+2026-10-15T05:55:00Z,DeepSeek网页/API大面积中断,x_sample_post,2543,https://x.com/plantegg/status/2110570070531358977
+2026-10-15T05:55:00Z,豆包手机助手SAEP151款拒绝,weibo_rank,5(977209),https://soso.re/weibo updated 2026-10-15 13:31 Beijing; 豆包对低认知人群有权威性 (10:32 榜 #1/2117289)
+2026-10-15T05:55:00Z,豆包手机助手SAEP151款拒绝,x_hourly_posts_23Zto05Z,55|128|166|193|186|161|168,X q=豆包; 05Z partial to 05:50; 含大量「豆包豆包帮我P图」噪声
+2026-10-15T05:55:00Z,豆包手机助手SAEP151款拒绝,x_sample_post,710,https://x.com/zhuifei008/status/2110594111707529479
+2026-10-15T05:55:00Z,豆包手机助手SAEP151款拒绝,x_sample_post,310,https://x.com/ImYanBoss/status/2110581697033212293
+2026-10-15T05:55:00Z,腾讯云AI智能体爬高德,x_hourly_posts_23Zto05Z,17|17|24|19|17|13|10,X q=(腾讯云 高德) OR (Tencent Gaode) OR (Tencent Amap scrape) OR (Tencent Cloud scraping); 05Z partial
+2026-10-15T05:55:00Z,腾讯云AI智能体爬高德,x_post_views,729179,https://x.com/ethanelasky/status/2110355334556729766
+2026-10-15T05:55:00Z,腾讯云AI智能体爬高德,x_sample_post,729179,https://x.com/ethanelasky/status/2110355334556729766
+2026-10-15T05:55:00Z,腾讯云AI智能体爬高德,x_sample_post,126741,https://x.com/sleepy0x13/status/2110404623274332375
+2026-10-15T05:55:00Z,懂车帝被曝邀约黑尊界,x_hourly_posts_23Zto05Z,42|67|92|72|98|94|66,X q=懂车帝 OR 尊界; 05Z partial to 05:50; 白天回升
+2026-10-15T05:55:00Z,懂车帝被曝邀约黑尊界,x_sample_post,13062,https://x.com/LZRationalnvest/status/2110567828155990491
+2026-10-15T05:55:00Z,懂车帝被曝邀约黑尊界,x_sample_post,3238,https://x.com/KELMAND1/status/2110566088874524701
+2026-10-15T05:55:00Z,腾讯绿泡泡对战红果短剧,x_hourly_posts_23Zto05Z,22|35|49|56|109|72|61,X q=绿泡泡 OR 红果短剧 OR 红果; 05Z partial; 10-16 起算激励带动讨论
+2026-10-15T05:55:00Z,腾讯绿泡泡对战红果短剧,x_sample_post,643,https://x.com/qihang_zeng6688/status/2110572621691769272
+2026-10-15T05:55:00Z,腾讯绿泡泡对战红果短剧,x_sample_post,253,https://x.com/liangyun888/status/2110564443608535452
+2026-10-15T05:55:00Z,滴滴繁简价差,x_post_views,146441,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T05:55:00Z,滴滴繁简价差,x_post_replies,52,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T05:55:00Z,滴滴繁简价差,x_sample_post,146441,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T05:55:00Z,合肥比亚迪封门逼食堂,x_post_views,61393,https://x.com/whyyoutouzhele/status/2110349904266801377
+2026-10-15T05:55:00Z,合肥比亚迪封门逼食堂,x_sample_post,61393,https://x.com/whyyoutouzhele/status/2110349904266801377
