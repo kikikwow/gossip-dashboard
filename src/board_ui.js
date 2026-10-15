@@ -694,9 +694,9 @@
   function leadCard(it) {
     const s = itemStory(it);
     const pct = liftPct(it);
-    const bar = pct == null ? '' : '<div class="pmtr"><span>升版进度</span><div class="phb ap"><i style="width:' + pct + '%"></i></div><b>' + pct + '%</b></div>';
+    const bar = pct == null ? '' : '<div class="pmtr"><span>相对热度</span><div class="phb ap"><i style="width:' + pct + '%"></i></div><b>' + pct + '%</b></div>';
     const why = whyPill(it);
-    return '<article class="pcard nw"><div style="display:flex;align-items:center;gap:8px">' + (why ? '<span class="pwhy">' + esc(why) + '</span>' : '') + '<span style="margin-left:auto">' + stampOf(it) + '</span></div><button type="button" class="ptitle phit open-ev" data-id="' + esc(it.id) + '">' + hl(s.title) + '</button><p class="psum">' + esc(s.sum) + '</p>' + itemOrig(it) + heatRow(it._views) + bar + '<div class="pacts"><button type="button" class="p" data-promo="' + esc(it.id) + '">顶上头版</button><button type="button" data-hide="' + esc(it.id) + '">压下不表</button></div></article>';
+    return '<article class="pcard nw"><div style="display:flex;align-items:center;gap:8px">' + (why ? '<span class="pwhy">' + esc(why) + '</span>' : '') + '<span style="margin-left:auto">' + stampOf(it) + '</span></div><button type="button" class="ptitle phit open-ev" data-id="' + esc(it.id) + '">' + hl(s.title) + '</button><p class="psum">' + esc(s.sum) + '</p>' + itemOrig(it) + heatRow(it._views) + bar + '<div class="pacts"><button type="button" class="p" data-promo="' + esc(it.id) + '">转入追踪</button><button type="button" data-hide="' + esc(it.id) + '">忽略</button></div></article>';
   }
   function heatOpenId(topic) {
     const id = PostUI.matchTopic(topic, heatCands());
@@ -757,13 +757,13 @@
     const rest = pack.events.filter(g => g !== hero);
     const leads = pack.leads.slice(0, 3);
     const main = pinCard() + (hero ? eventCard(hero, true) : '') + '<div class="pevents">' + rest.map(g => eventCard(g, false)).join('') + '</div>';
-    const railLeads = '<div class="psec"><b>新瓜 · 尚未立案</b><button type="button" data-ptab="leads">全部 ' + pack.leads.length + ' 条 ›</button></div>' + (leads.length ? leads.map(leadCompact).join('') : '<p class="pfoot">没有待核的新瓜。</p>');
+    const railLeads = '<div class="psec"><b>新线索</b><button type="button" data-ptab="leads">全部 ' + pack.leads.length + ' 条 ›</button></div>' + (leads.length ? leads.map(leadCompact).join('') : '<p class="pfoot">没有待核的新瓜。</p>');
     const ranks = rankRows().slice(0, 5);
     const railHeat = '<div class="prail-heat"><div class="psec"><b style="color:#4A6FA5">热榜</b><button type="button" data-ptab="heat">全部 ›</button></div>' + (ranks.length ? ranks.map((r, i) => '<article class="pcard"><button type="button" class="phit open-ev heat-hit" data-id="' + esc(heatOpenId(r.t)) + '"><div class="prow-top"><b>' + (i + 1) + ' ' + esc(displayLabel(r.t)) + '</b><span class="psm">' + fmt(r.last.value) + '</span></div><div class="note">' + (r.last.metric === 'x_daily_post_count' ? 'X 日发帖 · ' + esc(fmtHeatDay(r.last.timestamp_utc)) : esc(r.last.metric)) + '</div></button></article>').join('') : '') + '</div>';
-    return '<div class="playout"><div class="pmain">' + (main || '<p class="pfoot">这一栏没有正在追踪的事件。</p>') + '</div><aside class="prail">' + railLeads + railHeat + '</aside></div><p class="pfoot">置顶是滴滴追踪。头瓜只留给最后进展在 48 小时内、衰减后仍最高的事件。头版事件来自已有标题、track / event_id，或你标过「顶上头版」。</p>';
+    return '<div class="playout"><div class="pmain">' + (main || '<p class="pfoot">这一栏没有正在追踪的事件。</p>') + '</div><aside class="prail">' + railLeads + railHeat + '</aside></div><p class="pfoot">置顶是滴滴追踪。头瓜只留给最后进展在 48 小时内、衰减后仍最高的事件。头版事件来自已有标题、track / event_id，或你点过「转入追踪」。</p>';
   }
   function paperLeads(pack) {
-    return '<div class="pleads"><div class="psec"><b>新瓜 · 尚未立案</b><span>升版进度按本期最高浏览估算，不会自动顶版</span></div>' + (pack.leads.length ? pack.leads.map(leadCard).join('') : '<p class="pfoot">新瓜都处理完了。</p>') + '</div>';
+    return '<div class="pleads"><div class="psec"><b>新线索</b><span>相对热度＝本条浏览÷本期最高浏览，仅供参考，不会自动转入追踪</span></div>' + (pack.leads.length ? pack.leads.map(leadCard).join('') : '<p class="pfoot">新瓜都处理完了。</p>') + '</div>';
   }
   function paperHeat() {
     const rows = rankRows();
