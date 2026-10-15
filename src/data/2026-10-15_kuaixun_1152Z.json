@@ -1,0 +1,387 @@
+{
+ "routine": "大厂八卦热点快讯",
+ "type": "alert",
+ "title": "大厂八卦热点快讯",
+ "timestamp": "2026-10-15T11:52:00Z",
+ "edition_date": "2026-10-15",
+ "fired_at_utc": "2026-10-15T11:49:00Z",
+ "scanned_at_utc": "2026-10-15T11:52:00Z",
+ "beijing_time": "2026-10-15 19:49–19:55 CST",
+ "window": "2026-10-15T08:52Z–11:52Z (Beijing 16:52–19:52)",
+ "alert_sent": false,
+ "alert_worthy": true,
+ "reason": "追踪话题「DeepSeek网页/API大面积中断」出现重大新进展：DeepSeek 官方开放平台发布服务恢复及补偿通知，按账号近 7 日（10.8–10.14）API 消耗金额以赠金形式全额返还；微博「DeepSeek故障补偿」登 #9（热度约 38.9 万）；X 相关发帖由降温转为回升（08–11Z≈76/104/105/58）；财联社/凤凰网同步。此前各期仅覆盖中断与恢复，未覆盖补偿方案。根因仍未披露。",
+ "lede": "快讯窗 16:52–19:52（北京）。信源：X 公开检索、微博热搜镜像 soso.re、财联社/凤凰网、V2EX 用户晒单、feeds。",
+ "top3": [
+  {
+   "section": "⚡ 快讯",
+   "index": 0
+  }
+ ],
+ "sections": [
+  {
+   "title": "⚡ 快讯",
+   "color": "#e4572e",
+   "items": [
+    {
+     "id": "20261015-kuaixun-1152Z-deepseek-compensation",
+     "company": "DeepSeek（深度求索）",
+     "tag": "实锤",
+     "source_types": [
+      "官方开放平台通知",
+      "主流媒体",
+      "微博热搜",
+      "X"
+     ],
+     "date": "10-15 傍晚",
+     "text": "DeepSeek 官方开放平台发布《服务恢复及补偿通知》：北京时间 10 月 15 日 8:11–13:04 API 故障已恢复；作为补偿，将按账号近 7 日（10 月 8–14 日）的 API 消耗金额以赠金形式全额返还，赠金自动到账，后续扣费优先扣赠金。财联社经凤凰网等转载（约 18:01 CST）。微博「DeepSeek故障补偿」约 #9、热度约 38.9 万。X 相关发帖本窗约 76→104→105→58（11Z 至 11:50 不完全小时），较 08:52Z 窗的水位回升。用户侧 V2EX/X 有晒到账金额，差异很大。通知提及将「剥离单点依赖」，但完整根因仍未公开披露。此前 02:56Z 已就大面积中断发过警报；本次为补偿方案新进展，单独警报。",
+     "links": [
+      {
+       "label": "凤凰网/财联社：补偿通知",
+       "url": "https://news.ifeng.com/c/8xFNuMcEhvB"
+      },
+      {
+       "label": "同花顺转载",
+       "url": "https://news.10jqka.com.cn/20261015/c680741865.shtml"
+      },
+      {
+       "label": "DeepSeek Status 事件页",
+       "url": "https://status.deepseek.com/incidents/7116348214287"
+      },
+      {
+       "label": "V2EX 讨论（通知原文）",
+       "url": "https://www.v2ex.com/t/1249099"
+      },
+      {
+       "label": "X @fkysly 到账观察",
+       "url": "https://x.com/fkysly/status/2110655770199015903",
+       "views": "5905"
+      },
+      {
+       "label": "X @yanhua1010 转述",
+       "url": "https://x.com/yanhua1010/status/2110677375138910286",
+       "views": "654"
+      },
+      {
+       "label": "微博热搜镜像",
+       "url": "https://soso.re/weibo"
+      }
+     ],
+     "pending": [
+      "待补充：故障根因——官方仅称系统故障并将剥离单点依赖，未公开具体原因"
+     ]
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "company": "DeepSeek（深度求索）",
+   "topic": "DeepSeek网页/API大面积中断",
+   "tags": [
+    "实锤",
+    "官方补偿+微博热搜"
+   ],
+   "summary_zh": "官方开放平台发布服务恢复及补偿通知：10 月 15 日 8:11–13:04 API 故障后，按账号近 7 日（10.8–10.14）API 消耗以赠金全额返还，自动到账、扣费优先吃赠金。微博「DeepSeek故障补偿」#9（约 38.9 万）；X 08–11Z≈76/104/105/58 回升。财联社/凤凰网同步。根因仍未披露。",
+   "heat": {
+    "x_hourly_08Zto11Z": [
+     76,
+     104,
+     105,
+     58
+    ],
+    "weibo": {
+     "DeepSeek故障补偿": [
+      9,
+      389394
+     ]
+    },
+    "sample_posts": {
+     "fkysly": 5905,
+     "yanhua1010": 654
+    },
+    "media": "凤凰网/财联社 18:01 CST；V2EX 通知原文"
+   },
+   "links": [
+    "https://news.ifeng.com/c/8xFNuMcEhvB",
+    "https://news.10jqka.com.cn/20261015/c680741865.shtml",
+    "https://status.deepseek.com/incidents/7116348214287",
+    "https://www.v2ex.com/t/1249099",
+    "https://x.com/fkysly/status/2110655770199015903",
+    "https://x.com/yanhua1010/status/2110677375138910286",
+    "https://soso.re/weibo"
+   ],
+   "date": "2026-10-15",
+   "credibility": "实锤",
+   "pending": [
+    "待补充：故障根因——官方未公开具体原因"
+   ]
+  }
+ ],
+ "tracked_updates": [
+  {
+   "company": "腾讯（绿泡泡）",
+   "topic": "腾讯绿泡泡对战红果短剧",
+   "tags": [
+    "实锤",
+    "微博热搜+X"
+   ],
+   "summary_zh": "微博「绿泡泡下架余茵版乖乖女」现约 #47（17.6 万，上期 #31）；X 08–11Z=85/112/60/95，晚间讨论回升。@_FORAB 禁用词观察帖浏览升至约 2.3 万。无新公司丑闻事实，不单独警报。",
+   "heat": {
+    "x_hourly_08Zto11Z": [
+     85,
+     112,
+     60,
+     95
+    ],
+    "weibo": {
+     "绿泡泡下架余茵版乖乖女": [
+      47,
+      175556
+     ]
+    },
+    "FORAB_banword": 23335,
+    "FORAB_incentive": 151464
+   },
+   "links": [
+    "https://soso.re/weibo",
+    "https://x.com/_FORAB/status/2110650149697708353",
+    "https://x.com/_FORAB/status/2110319029797916887"
+   ],
+   "date": "2026-10-15"
+  },
+  {
+   "company": "懂车帝 / 华为尊界",
+   "topic": "懂车帝被曝邀约黑尊界",
+   "tags": [
+    "实锤",
+    "否认后续热·无新公司动作"
+   ],
+   "summary_zh": "08:52Z 已警报的公司否认无新补充动作；X 08–11Z=69/72/65/54 仍活跃，多为车圈互撕续讨论；@LZRationalnvest 浏览约 3.5 万。不重复警报。",
+   "heat": {
+    "x_hourly_08Zto11Z": [
+     69,
+     72,
+     65,
+     54
+    ],
+    "LZRationalnvest": 35017
+   },
+   "links": [
+    "https://www.yicai.com/news/103394855.html",
+    "https://x.com/LZRationalnvest/status/2110567828155990491"
+   ],
+   "date": "2026-10-15"
+  },
+  {
+   "company": "腾讯云 / 阿里高德",
+   "topic": "腾讯云AI智能体爬高德",
+   "tags": [
+    "实锤",
+    "浏览续涨·无新事实"
+   ],
+   "summary_zh": "X 发帖继续缓降（08–11Z=13/16/12/4）；@ethanelasky 主帖浏览约 90.8 万（上期约 83.3 万）。腾讯仍无正式回应，无新事实，不警报。",
+   "heat": {
+    "x_hourly_08Zto11Z": [
+     13,
+     16,
+     12,
+     4
+    ],
+    "ethanelasky_views": 907869
+   },
+   "links": [
+    "https://x.com/ethanelasky/status/2110355334556729766"
+   ],
+   "date": "2026-10-15",
+   "pending": [
+    "待补充：腾讯正式回应——仍无"
+   ]
+  },
+  {
+   "company": "字节跳动（豆包）",
+   "topic": "豆包手机助手SAEP151款拒绝",
+   "tags": [
+    "实锤",
+    "降温"
+   ],
+   "summary_zh": "X 窄口径 SAEP 相关发帖个位数（08–11Z=5/6/7/6）；微博前 52 无相关；多为旧闻复述，无新丑闻。",
+   "heat": {
+    "x_saep_hourly_08Zto11Z": [
+     5,
+     6,
+     7,
+     6
+    ]
+   },
+   "links": [
+    "https://www.tmtpost.com/8169608.html"
+   ],
+   "date": "2026-10-15"
+  }
+ ],
+ "weibo": {
+  "mirror": "https://soso.re/weibo",
+  "updated": "2026-10-15 ~19:50 Beijing",
+  "company_adjacent": [
+   {
+    "rank": 8,
+    "topic": "天猫双11买iPhone18Pro立省800",
+    "heat": 389394,
+    "note": "营销"
+   },
+   {
+    "rank": 9,
+    "topic": "DeepSeek故障补偿",
+    "heat": 389394,
+    "note": "已追踪·本期警报"
+   },
+   {
+    "rank": 25,
+    "topic": "小家电首次参加天猫双11抢先购",
+    "heat": 327656,
+    "note": "营销"
+   },
+   {
+    "rank": 38,
+    "topic": "女子买iPhone18Pro被5名骑手冒领快递",
+    "heat": 228864,
+    "note": "物流纠纷，非八卦"
+   },
+   {
+    "rank": 45,
+    "topic": "天猫双11买电脑送token",
+    "heat": 179047,
+    "note": "营销"
+   },
+   {
+    "rank": 47,
+    "topic": "绿泡泡下架余茵版乖乖女",
+    "heat": 175556,
+    "note": "已追踪·绿泡泡内容下架，不单独警报"
+   }
+  ]
+ },
+ "maimai": {
+  "direct_fetch": "not retried (404 earlier runs)"
+ },
+ "x_heat": {
+  "DeepSeek中断/补偿": {
+   "hourly_08Zto11Z": [
+    76,
+    104,
+    105,
+    58
+   ],
+   "note": "补偿消息带动回升"
+  },
+  "懂车帝/尊界": {
+   "hourly_08Zto11Z": [
+    69,
+    72,
+    65,
+    54
+   ],
+   "LZRationalnvest": 35017
+  },
+  "绿泡泡/红果": {
+   "hourly_08Zto11Z": [
+    85,
+    112,
+    60,
+    95
+   ],
+   "FORAB_banword": 23335,
+   "FORAB_incentive": 151464
+  },
+  "腾讯云爬高德": {
+   "hourly_08Zto11Z": [
+    13,
+    16,
+    12,
+    4
+   ],
+   "ethanelasky_views": 907869
+  },
+  "豆包SAEP": {
+   "hourly_08Zto11Z": [
+    5,
+    6,
+    7,
+    6
+   ]
+  },
+  "字节裁员/宫斗/离职": {
+   "hourly_08Zto11Z": [
+    3,
+    1,
+    0,
+    0
+   ],
+   "note": "极低"
+  }
+ },
+ "feeds_new": [
+  {
+   "source": "雷峰网",
+   "title": "库克：苹果智能接入阿里千问大模型，10月底在中国发布测试版本",
+   "link": "https://www.leiphone.com/category/industrynews/P1btLjli3z8XoQkz.html",
+   "note": "产品/监管批准消息，非八卦"
+  },
+  {
+   "source": "雷峰网",
+   "title": "京东采销员工发布谣言诋毁其他平台被起诉，法院已立案",
+   "link": "https://www.leiphone.com/category/industrynews/3pF2gUvuBewkORgl.html",
+   "note": "法务案件，热度未达短期；观察未入选"
+  },
+  {
+   "source": "钛媒体(含互联网怪盗团)",
+   "title": "腾讯字节阿里，争抢下一个AI入口",
+   "link": "https://www.tmtpost.com/8169930.html",
+   "note": "行业分析，并入豆包/Agent 围墙讨论背景"
+  }
+ ],
+ "short_term_updates": {
+  "added": [],
+  "kept": [
+   "腾讯云AI智能体爬高德",
+   "懂车帝被曝邀约黑尊界",
+   "豆包手机助手SAEP151款拒绝",
+   "腾讯绿泡泡对战红果短剧",
+   "DeepSeek网页/API大面积中断"
+  ],
+  "removed": []
+ },
+ "candidates": [
+  {
+   "topic": "京东采销被抖音电商起诉（朋友圈诋毁）",
+   "verdict": "skip",
+   "why": "雷峰网法务立案报道，非短时爆料扩散；微博无对应大厂八卦热搜"
+  },
+  {
+   "topic": "苹果智能接入阿里千问将测",
+   "verdict": "skip",
+   "why": "库克采访产品消息，非八卦"
+  },
+  {
+   "topic": "字节洽谈联发科数据中心芯片",
+   "verdict": "skip",
+   "why": "旧闻续传，X 浏览极低"
+  },
+  {
+   "topic": "绿泡泡下架余茵版乖乖女",
+   "verdict": "skip_alert",
+   "why": "微博 #47，已记入绿泡泡追踪续更，不单独警报"
+  },
+  {
+   "topic": "公司宁愿流失老员工也不加薪",
+   "verdict": "skip",
+   "why": "微博 #1 但非具名大厂八卦"
+  }
+ ],
+ "focus_topics": {
+  "滴滴": "快讯窗无新达标爆料；@Furinanatw 繁简价差帖浏览 174886→175156、回复仍 59，仅浏览微增，不警报。",
+  "字节": "豆包 SAEP 继续降温；无新宫斗/裁员爆料（X 相关发帖本窗个位数）。",
+  "中国大模型": "DeepSeek 补偿为重大新进展（本期警报）；根因仍待补。"
+ }
+}

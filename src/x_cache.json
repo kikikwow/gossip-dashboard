@@ -1,6 +1,6 @@
 {
  "source": "https://api.fxtwitter.com/status/{id}",
- "fetched_at": "2026-10-15T08:53:27Z",
+ "fetched_at": "2026-10-15T11:54:21Z",
  "note": "静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。",
  "posts": {
   "2106320822444949760": {
@@ -2394,6 +2394,66 @@
    "bookmarks": 0,
    "url": "https://x.com/_FORAB/status/2110650149697708353",
    "fetched_at": "2026-10-15T08:53:27Z"
+  },
+  "2110660789006979156": {
+   "status": "ok",
+   "text": "🔥抖音百万粉二奢博主“张哥收包不累”陷争议！网传行政处罚文书与资金纠纷爆料引发关注！😱\n💥网传一份涉及成都青羊区的行政处罚及解除拘留文书，声称张哥曾因涉黄违法行为被行政拘留10天！\n与此同时，网络爆料还涉及多笔借款、二手奢侈品回收资金周转及合作伙伴之间的经济纠纷。\n👀更有网友翻出其此前被标注为虚构演绎的短视频，质疑网络人设与现实经营情况。\n⚠️目前相关文书真伪、借款明细及资金状况尚未得到独立核实，不能将网传指控直接认定为事实。\n究竟是经营纠纷，还是另有隐情？等待可靠信息进一步披露！\n#张哥收包不累 #张乃心 #成都二奢 #二奢回收 #网红争议 #资金纠纷 #网络热议 #黑料网",
+   "author": "@heiliao0",
+   "name": "黑料网-唯一官方号",
+   "created_at": "2026-10-15T09:15:20Z",
+   "views": 321,
+   "likes": 1,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/heiliao0/status/2110660789006979156",
+   "fetched_at": "2026-10-15T09:30:00Z"
+  },
+  "2110693109969670526": {
+   "status": "ok",
+   "text": "https://x.com/i/article/2110693045918380032",
+   "author": "@888semi",
+   "name": "全球半导体研究",
+   "created_at": "2026-10-15T11:23:46Z",
+   "views": 103,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/888semi/status/2110693109969670526",
+   "fetched_at": "2026-10-15T11:27:29Z"
+  },
+  "2110655770199015903": {
+   "status": "ok",
+   "text": "DeepSeek 这波宕机然后做了补偿好像，把影响的费用返还了。\n\n导致我用了半天，花了几百块赠金，一打开账户，又送回来了。",
+   "author": "@fkysly",
+   "name": "马天翼",
+   "created_at": "2026-10-15T08:55:24Z",
+   "views": 5957,
+   "likes": 22,
+   "reposts": 0,
+   "replies": 9,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/fkysly/status/2110655770199015903",
+   "fetched_at": "2026-10-15T11:54:21Z"
+  },
+  "2110677375138910286": {
+   "status": "ok",
+   "text": "卧槽，DeepSeek发钱了，赶紧看看你的账户！\n\n“北京时间 2026 年 10 月 15 日 8:11 至 13:04 期间，DeepSeek的服务系统出现故障，导致该时段内 API 服务无法正常使用。\n\n作为补偿，我们将按您账号 7 日内的消耗金额以赠金形式全额返还，赠金自动到账。”\n\nDeepSeek 还是大度啊，直接返回7日消耗金额。",
+   "author": "@yanhua1010",
+   "name": "Yanhua",
+   "created_at": "2026-10-15T10:21:15Z",
+   "views": 659,
+   "likes": 2,
+   "reposts": 0,
+   "replies": 2,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/yanhua1010/status/2110677375138910286",
+   "fetched_at": "2026-10-15T11:54:21Z"
   }
  }
 }

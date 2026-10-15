@@ -1,0 +1,127 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每两小时）",
+ "routine": "滴滴重点追踪（每两小时）",
+ "timestamp": "2026-10-15T11:30:00Z",
+ "fired_at_utc": "2026-10-15T11:24:00Z",
+ "scanned_at_utc": "2026-10-15T11:30:00Z",
+ "beijing_time": "2026-10-15 19:30 Asia/Shanghai",
+ "edition_date": "2026-10-15",
+ "window": {
+  "start_utc": "2026-10-15T09:30:00Z",
+  "end_utc": "2026-10-15T11:30:00Z",
+  "note": "自上轮 09:30Z（北京时间 17:30）以来约 2 小时；Tier1 + Tier2 slot1（日本 DiDiモビリティ / 澳新 / 埃及）；Tier3 跳过（当日已在 00Z 跑过）"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无滴滴本体新的可核验八卦/人事/监管/诉讼/财报/公司回应。Tier1 八组 X（start 09:30Z）有效 0 帖（cn_gossip 仅 1 条 t.co-only 半导体访谈假阳性已丢；其余 CN price/HK/BR×2/MX×2/EN 全 0）；slot1 三组 X（日语/澳新/埃及，start ~6h）有效 0（埃及 1 条 t.co-only 阿语文章假阳性已丢）。宽口径「滴滴」X 每小时 212/280（09Z/10Z；11Z 至 11:26 部分 85），较上轮 200/165 略升但无尖峰未做宽抽样。繁简主帖 @Furinanatw 浏览 173484→174886（+1402），回复仍 59，无新证据、无媒体升级、滴滴未专门回应。Web：裁员/组织调整均为旧闻（2024-11 张博卸任 CTO、2026-03 国际裁员传闻）；繁简仍为 Threads/unwire/LIHKG 旧线索；香港牌照仍未见正式递交（10-30 截止）；BR 99Food Cade/TJ-SP 与 Zesto（10-14）已在更早 edition 记录；MX PROFECO/裁员为历史；JP 旭川机场/南城市为 10-14 已覆盖常规 PR；AU/EG 无窗口内新投诉报道。RSS 新匹配 4 条均非滴滴；微博热搜镜像 52 条无滴滴/花小猪/程维/网约车/打车。",
+ "sections": [
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "公开媒体",
+      "RSS",
+      "微博镜像"
+     ],
+     "date": "10-15 19:30",
+     "text": "本期滴滴本体无新动态。扫描窗口 09:30Z–11:30Z（北京时间 10-15 17:30 至 19:30）。Tier1 全量 + Tier2 slot1（日本 DiDiモビリティ、澳新、埃及）未见新的公司八卦、人事、监管、诉讼或财务线索；宽口径「滴滴」X 帖量每小时 212/280，无尖峰。繁简价差主帖 @Furinanatw 浏览续涨至 174886（上轮 173484，约 +1400），回复仍 59，仍是同一组截图，没有新证据或新媒体报道，滴滴未专门回应；滴滴 8 月曾公开否认大数据杀熟，截图时间与路线不同、翔安机场尚未启用，仍属待核实。香港网约车牌照申请 10-30 截止，暂未见滴滴正式递交的公开消息。海外小语种线索：本期无窗口内新增（slot1 日语/英语/阿语检索无达到报警门槛的新进展；日本旭川机场配车、南城市联动及巴西 Zesto 产品发布均为更早窗口已记录材料，不重复报警）。",
+     "links": [
+      {
+       "label": "@Furinanatw 繁简价差主帖（174886 浏览）",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      },
+      {
+       "label": "unwire.hk 报道（繁中）",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/"
+      },
+      {
+       "label": "运输署：网约车服务牌照申请（10-30 截止）",
+       "url": "https://www.td.gov.hk/tc/transport_in_hong_kong/public_transport/rhv/index.html"
+      },
+      {
+       "label": "Threads @onlyu0913 原始线索",
+       "url": "https://www.threads.com/@onlyu0913/post/DebdcKKn9uV"
+      }
+     ],
+     "id": "20261015-didi-11Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "09Z": 212,
+   "10Z": 280,
+   "11Z_partial_to1126": 85,
+   "query": "滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"",
+   "note": "较上轮 200/165 略升，无尖峰未做宽抽样"
+  },
+  "trad_simp_price_x": {
+   "posts_in_tier1_window": 0,
+   "kept_for_alert": 0,
+   "main_post_views": 174886,
+   "prev_views": 173484,
+   "main_post_replies": 59,
+   "note": "主帖续涨约 +1402，回复仍 59，无新事实、无回应"
+  },
+  "tier1_x_hits_kept": 0,
+  "slot1_x_hits_kept": 0,
+  "weibo_didi_on_list": null
+ },
+ "candidates": [
+  {
+   "topic": "繁简价差 @Furinanatw 续涨",
+   "verdict": "already_covered_views_only",
+   "why": "173484→174886，回复 59，无新证据/媒体/回应",
+   "url": "https://x.com/Furinanatw/status/2110289680595886537"
+  },
+  {
+   "topic": "宽口径滴滴帖量 212/280",
+   "verdict": "reject_noise",
+   "why": "略升但无尖峰；历史抽样均为俚语/引流，本期未重抽",
+   "url": null
+  },
+  {
+   "topic": "cn_gossip / Egypt t.co-only 假阳性",
+   "verdict": "reject_noise",
+   "why": "仅 t.co 链接无实体关键词正文",
+   "url": "https://x.com/888semi/status/2110693109969670526"
+  },
+  {
+   "topic": "BR 99Food Cade/TJ-SP / Zesto",
+   "verdict": "already_covered_old",
+   "why": "Cade 9-02、TJ-SP 9-29、Zesto 10-14 已在更早 edition",
+   "url": "https://revistapegn.globo.com/startups/noticia/2026/10/99-entra-na-disputa-de-softwares-para-restaurantes-com-plataforma-de-ia.ghtml"
+  },
+  {
+   "topic": "JP DiDi 旭川机场/南城市",
+   "verdict": "already_covered_old",
+   "why": "10-14 已覆盖常规 PR，非八卦",
+   "url": "https://didimobility.co.jp/info/"
+  }
+ ],
+ "sources_queried": [
+  "X tier1×8 + tier2 slot1×3 + counts×1 + post lookup×1",
+  "WebSearch×8 (tier1×6 + slot1×2)",
+  "RSS fetch_sources（新匹配 4，滴滴=0）",
+  "微博热搜镜像 soso.re/api/weibo：52 条无滴滴/花小猪/程维/网约车/打车",
+  "Tier3 skipped (already ran at 00Z)"
+ ],
+ "x_calls_used": 14,
+ "web_searches": 8,
+ "web_searches_used": 8,
+ "tiers": "tier1 + tier2 slot1",
+ "tiers_ran": [
+  "tier1",
+  "tier2_slot1"
+ ],
+ "slot": 1,
+ "push_needed": false,
+ "push_note": "kept=0、仅浏览量增长、alert_worthy=false：按 2026-10-15 省额度规则不启动 CloudAgent，本地保存；didi_05Z/07Z/09Z/11Z 待下一次实质性运行或 watchdog 一并推送"
+}
