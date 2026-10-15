@@ -506,3 +506,20 @@ timestamp_utc,topic,metric,value,source
 2026-10-15T02:15:00Z,滴滴繁简价差,x_sample_post,99698,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-15T02:15:00Z,滴滴,x_sample_post,99698,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-15T02:15:00Z,滴滴,x_hourly_post_count_22to02Z,91|108|138|137|40,"X q=滴滴 OR 滴滴出行 OR ""DiDi Global"" OR ""Didi Chuxing""; 02Z partial to 02:11; morning noise"
+2026-10-15T02:56:00Z,DeepSeek网页/API大面积中断,x_hourly_posts_20Zto02Z,6|3|2|4|20|102|165,"X q=DeepSeek (崩了 OR 崩 OR 不可用 OR 繁忙 OR down OR outage); 02Z partial to 02:53"
+2026-10-15T02:56:00Z,DeepSeek网页/API大面积中断,weibo_rank,23(204447);29(181217);39(151430),https://soso.re/weibo updated 2026-10-15 10:32 Beijing
+2026-10-15T02:56:00Z,DeepSeek网页/API大面积中断,status_page,identified_ongoing,https://status.deepseek.com/incidents/7116348214287
+2026-10-15T02:56:00Z,DeepSeek网页/API大面积中断,x_sample_post,3676,https://x.com/dmjk001/status/2110538819640631304
+2026-10-15T02:56:00Z,DeepSeek网页/API大面积中断,x_sample_post,1183,https://x.com/realNyarime/status/2110553201300963589
+2026-10-15T02:56:00Z,豆包手机助手SAEP151款拒绝,weibo_rank,1(2117289),https://soso.re/weibo updated 2026-10-15 10:32 Beijing; 豆包对低认知人群有权威性
+2026-10-15T02:56:00Z,豆包手机助手SAEP151款拒绝,x_sample_post,301,https://x.com/wc8880/status/2110549242683314479
+2026-10-15T02:56:00Z,腾讯云AI智能体爬高德,x_post_views,583837,https://x.com/ethanelasky/status/2110355334556729766
+2026-10-15T02:56:00Z,腾讯云AI智能体爬高德,x_sample_post,583837,https://x.com/ethanelasky/status/2110355334556729766
+2026-10-15T02:56:00Z,腾讯云AI智能体爬高德,x_sample_post,96163,https://x.com/sleepy0x13/status/2110404623274332375
+2026-10-15T02:56:00Z,滴滴繁简价差,x_post_views,108584,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T02:56:00Z,合肥比亚迪封门逼食堂,x_post_views,56100,https://x.com/whyyoutouzhele/status/2110349904266801377
+2026-10-15T03:30:00Z,滴滴繁简价差,x_post_views,116015,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T03:30:00Z,滴滴繁简价差,x_post_replies,40,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T03:30:00Z,滴滴繁简价差,x_sample_post,116015,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T03:30:00Z,滴滴,x_sample_post,116015,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T03:30:00Z,滴滴,x_hourly_post_count_00to03Z,138|137|189|71,"X q=滴滴 OR 滴滴出行 OR ""DiDi Global"" OR ""Didi Chuxing""; 03Z partial to 03:29; mostly keyword-collision noise"

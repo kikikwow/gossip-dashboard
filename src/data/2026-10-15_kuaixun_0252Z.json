@@ -1,0 +1,82 @@
+{
+ "routine": "大厂八卦热点快讯",
+ "fired_at_utc": "2026-10-15T02:52:26.214Z",
+ "scanned_at_utc": "2026-10-15T02:56:00Z",
+ "beijing_time": "2026-10-15 10:52–11:00 CST",
+ "window": "2026-10-14T23:55Z–02:56Z (Beijing 07:55–10:56)",
+ "alert_sent": true,
+ "alert_worthy": true,
+ "reason": "DeepSeek 网页/App/API 自 08:11（北京时间）起大面积中断近 3 小时，官方状态页确认，微博热搜同时挂 3 条（#23/#29/#39），X 相关发帖每小时 4→20→102→165 快速上升，第一财经/IT之家已报道；此前各期均未覆盖。另：豆包「低认知人群权威性」话题从早报时的微博 #35（18.5万）冲到 #1（211.7万），属已追踪豆包话题的重大热度变化。",
+ "items": [
+  {
+   "company": "DeepSeek（深度求索）",
+   "topic": "DeepSeek网页/API大面积中断",
+   "tags": ["实锤", "官方状态页+媒体+微博热搜"],
+   "summary_zh": "10 月 15 日北京时间 08:11 起，DeepSeek 网页和 App 显示「服务器暂时不可用」，官方状态页确认对话服务、V4 Pro API 与 V4.1 Flash API 部分中断，09:08 起标为「已定位原因、正在修复」，截至约 10:55 仍未恢复（已持续近 3 小时）。微博同时挂出「DeepSeek崩了」#23（20.4万）、「DeepSeek服务器暂不可用」#29（18.1万）、「DeepSeek又崩了」#39（15.1万），X 上依赖其 API 的第三方工具（如 WorkBuddy）也被曝连带受影响；故障原因官方未披露，网传「新模型要来了」「被攻击」均无依据。",
+   "heat": {
+    "x_hourly_20Zto02Z": [6, 3, 2, 4, 20, 102, 165],
+    "weibo": {"DeepSeek崩了": [23, 204447], "DeepSeek服务器暂不可用": [29, 181217], "DeepSeek又崩了": [39, 151430]},
+    "status_page": "Identified · Ongoing ~2h+（02:55Z 抓取）",
+    "sample_posts": {"dmjk001": 3676, "realNyarime": 1183}
+   },
+   "links": [
+    "https://status.deepseek.com/incidents/7116348214287",
+    "https://www.yicai.com/news/103394174.html",
+    "https://www.ithome.com/1/013/179.htm",
+    "https://x.com/dmjk001/status/2110538819640631304",
+    "https://x.com/realNyarime/status/2110553201300963589"
+   ],
+   "pending": ["待补充：故障原因与恢复时间——官方未披露，截至 02:55Z 状态页仍为 Identified"]
+  },
+  {
+   "company": "字节跳动（豆包）",
+   "topic": "豆包手机助手SAEP151款拒绝",
+   "tags": ["实锤（热搜排名）", "微博热搜+X"],
+   "summary_zh": "微博热搜「豆包对低认知人群有权威性」从早报时的 #35（约 18.5 万）冲上 #1（211.7 万，10:32 榜单），内容主要是网友调侃有人什么事都问豆包、把它当权威，偏舆论吐槽而非公司事件。该话题与昨日 151 款 App 拒绝豆包手机助手代操作的讨论叠加发酵，X 上已有多帖称「豆包又上热搜」，字节/豆包方面暂无回应。",
+   "heat": {"weibo_rank_now": [1, 2117289], "weibo_rank_0837": [35, 184689], "x_sample": {"wc8880": 301}},
+   "links": [
+    "https://soso.re/weibo",
+    "https://x.com/wc8880/status/2110549242683314479",
+    "https://x.com/0xsuperspud/status/2110536430615502861"
+   ],
+   "pending": ["待补充：话题最初出处（哪篇微博/哪位博主带起）——镜像页未给出来源"]
+  }
+ ],
+ "weibo": {
+  "mirror": "https://soso.re/weibo",
+  "updated": "2026-10-15 10:32 Beijing",
+  "company_adjacent": [
+   {"rank": 1, "topic": "豆包对低认知人群有权威性", "heat": 2117289, "note": "已追踪·豆包"},
+   {"rank": 4, "topic": "全体星店长喊你上京东11.11领红包", "heat": 761509, "note": "营销"},
+   {"rank": 12, "topic": "代驾没开车就把钱挣了", "heat": 292186, "note": "未确认涉及哪家平台，未入选"},
+   {"rank": 13, "topic": "大麦公布肖战演唱会可售票数", "heat": 291775, "note": "阿里大麦，演出票务"},
+   {"rank": 18, "topic": "国行iPhone接入通义千问", "heat": 290551, "note": "产品消息"},
+   {"rank": 19, "topic": "大麦崩了", "heat": 290167, "note": "阿里大麦·肖战演唱会预售挤崩，娱乐向，未单独警报"},
+   {"rank": 23, "topic": "DeepSeek崩了", "heat": 204447, "note": "本期警报"},
+   {"rank": 29, "topic": "DeepSeek服务器暂不可用", "heat": 181217, "note": "本期警报"},
+   {"rank": 39, "topic": "DeepSeek又崩了", "heat": 151430, "note": "本期警报"}
+  ]
+ },
+ "maimai": {"direct_fetch": "not retried (404 earlier runs)"},
+ "x_heat": {
+  "腾讯云爬高德": {"ethanelasky_views": 583837, "sleepy0x13_views": 96163},
+  "滴滴繁简": {"Furinanatw_views": 108584},
+  "合肥比亚迪封门": {"whyyoutouzhele_views": 56100},
+  "拼多多古法编程": {"AndyL5cc_views": 8043, "x_hourly_23Zto02Z": [1, 2, 2, 0]}
+ },
+ "feeds_new": [
+  {"source": "Bloomberg Technology", "title": "ByteDance in Talks to Secure MediaTek AI Chips for Data Centers", "title_zh": "字节跳动洽谈采购联发科 AI 芯片用于数据中心", "lang": "en", "link": "https://www.bloomberg.com/news/articles/2026-10-15/bytedance-in-talks-to-secure-mediatek-ai-chips-for-data-centers", "note": "【付费】业务新闻，非八卦，未警报"},
+  {"source": "钛媒体", "title": "又见广撒网式投资，腾讯近两年最看重的赛道屡出手", "link": "https://www.tmtpost.com/8169279.html", "note": "投资分析，非八卦"}
+ ],
+ "short_term_updates": {
+  "added": ["DeepSeek网页/API大面积中断"],
+  "kept": ["腾讯云AI智能体爬高德", "懂车帝被曝邀约黑尊界", "豆包手机助手SAEP151款拒绝", "腾讯绿泡泡对战红果短剧"],
+  "removed": []
+ },
+ "candidates": [
+  {"topic": "拼多多「古法编程」坚持手写代码", "verdict": "skip", "why": "@AndyL5cc 8043 浏览，仅『有爆料称』无来源，X 每小时 0–2 帖；与已移出的拼多多不做AI争议同源"},
+  {"topic": "字节新一轮期权回购 241.35 美元含离职员工", "verdict": "skip", "why": "@SStracener3630 9 浏览，未见媒体确认，待核实"},
+  {"topic": "大麦崩了（肖战演唱会预售）", "verdict": "skip", "why": "微博 #19，娱乐票务向，非公司八卦"},
+  {"topic": "国行 Apple Intelligence 12 月上线（阿里+百度）", "verdict": "skip", "why": "彭博产品消息，非八卦"}
+ ]
+}

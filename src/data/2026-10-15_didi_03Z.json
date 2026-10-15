@@ -1,0 +1,124 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-15T03:30:00Z",
+ "fired_at_utc": "2026-10-15T03:28:00Z",
+ "scanned_at_utc": "2026-10-15T03:30:00Z",
+ "beijing_time": "2026-10-15 11:30 Asia/Shanghai",
+ "edition_date": "2026-10-15",
+ "window": {
+  "start_utc": "2026-10-15T02:15:00Z",
+  "end_utc": "2026-10-15T03:30:00Z",
+  "note": "自上轮 02:15Z（北京时间 10:15）以来约 1.25 小时；Tier1 + Tier2 slot2（国内其他业务：自动驾驶/送货/小桔/青桔/代驾/顺风车/MONA）；Tier3 跳过（当日已在 00Z 跑过）"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无滴滴本体新的可核验八卦/人事/监管/诉讼/财报/公司回应。Tier1 八组 X（CN gossip/CN price/HK-TW/BR×2/MX×2/EN，start 01:30Z）全部 0 帖。Slot2 三组 X（start 6h）结果全是撞词的 t.co 文章帖或无关内容（po18 合集、字节实习生文章、AI 话题等），postfilter 后 0 条。繁简主帖 @Furinanatw 浏览 99698→116015（+16317），回复 33→40；新增回复为质疑（“拼车和专车价格怎么可能一样”“有没有可能是台币”）和谩骂，无新证据、无媒体升级、滴滴未专门回应。Web：CN 裁员/繁简/港牌照均为旧闻；BR 99Food 仍是 9 月底 TJ-SP 排他条款判决与 Cade 调查旧闻；MX 无新 PROFECO 动作；slot2 web 仅见 R2、济宁无人车夜配、小桔充电更名等旧闻与花小猪顺风车/青桔日常投诉。RSS 新匹配 0；微博热搜镜像 51 条无滴滴/花小猪/程维/网约车/打车。",
+ "sections": [
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "公开媒体",
+      "RSS",
+      "微博镜像"
+     ],
+     "date": "10-15 11:30",
+     "text": "本期滴滴本体无新动态。扫描窗口 02:15Z–03:30Z（北京时间 10-15 10:15 至 11:30）。Tier1 全量 + Tier2 slot2（国内其他业务：自动驾驶、滴滴送货、小桔/滴滴充电、青桔、代驾、顺风车、小鹏 MONA）未见新的公司八卦、人事、监管、诉讼或财务线索。繁简价差主帖 @Furinanatw 浏览续涨至 116015（上轮 99698，本窗约 +1.6 万），回复 40，新增回复以质疑（拼车与专车不可比、是否误读币种）和谩骂为主，仍是同一组截图，没有新证据或新媒体报道，滴滴未专门回应；截图时间与路线不同、翔安机场尚未启用，仍属待核实。海外小语种线索：本期无新增（Tier1 葡语/西语/繁中/英语检索窗口内 0 帖）。国内其他业务仅见旧闻和日常投诉（花小猪顺风车司机迟到绕路、青桔调度费争议），不报警。",
+     "links": [
+      {
+       "label": "@Furinanatw 繁简价差主帖（116015 浏览）",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      },
+      {
+       "label": "unwire.hk 报道（繁中）",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/"
+      },
+      {
+       "label": "凤凰网：滴滴 8 月否认大数据杀熟",
+       "url": "https://tech.ifeng.com/c/8vxO0g8gk5L"
+      }
+     ],
+     "id": "20261015-didi-03Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "00Z": 138,
+   "01Z": 137,
+   "02Z": 189,
+   "03Z_partial_to0329": 71,
+   "query": "滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"",
+   "note": "02Z 小时计数升至 189，抽样仍以撞词噪音为主"
+  },
+  "trad_simp_price_x": {
+   "posts_in_tier1_window": 0,
+   "kept_for_alert": 0,
+   "main_post_views": 116015,
+   "prev_views": 99698,
+   "main_post_replies": 40,
+   "note": "主帖续涨约 +16317，回复 33→40，新增回复为质疑和谩骂，无新事实、无回应"
+  },
+  "tier1_x_hits_kept": 0,
+  "slot2_x_hits_kept": 0,
+  "weibo_didi_on_list": null
+ },
+ "candidates": [
+  {
+   "topic": "繁简价差 @Furinanatw 续涨",
+   "verdict": "already_covered_views_only",
+   "why": "99698→116015，回复 40，新增回复为质疑/谩骂，无新证据/媒体/回应，不报警",
+   "url": "https://x.com/Furinanatw/status/2110289680595886537"
+  },
+  {
+   "topic": "繁简主帖回复 @RichBear_xr「价差这么大？？」",
+   "verdict": "reject_no_new_fact",
+   "why": "印象 1056，仅一句感叹，无新证据",
+   "url": "https://x.com/RichBear_xr/status/2110558047529824432"
+  },
+  {
+   "topic": "Slot2 X 结果（po18 合集/字节实习生文章等）",
+   "verdict": "reject_postfilter",
+   "why": "t.co 文章帖或正文不含实体关键词，属撞词",
+   "url": "https://x.com/sleepy0x13/status/2110569894408491075"
+  },
+  {
+   "topic": "BR 99Food 排他条款 TJ-SP 判决 / Cade 调查",
+   "verdict": "already_covered_old",
+   "why": "9-29 判决、9-02 Cade 决定，本窗无新进展",
+   "url": "https://cspr.abrasel.com.br/noticias/noticias/acordao-do-tj-sp-proibe-99food-de-barrar-a-keeta-ate-com-clausulas-genericas261007120527/"
+  },
+  {
+   "topic": "花小猪顺风车/青桔日常投诉",
+   "verdict": "reject_routine_complaint",
+   "why": "消费保个案投诉，非公司级事件",
+   "url": "https://www.xfb365.com/tousu/102426239"
+  }
+ ],
+ "sources_queried": [
+  "X tier1×8 + tier2 slot2×3 + counts×1 + post lookup×1 + conversation×1",
+  "WebSearch×8 (tier1×6 + slot2×2)",
+  "RSS fetch_sources（new matching=0）",
+  "微博热搜镜像 soso.re/api/weibo 51 条无滴滴关键词",
+  "Tier3 skipped (already ran at 00Z)"
+ ],
+ "x_calls_used": 14,
+ "web_searches": 8,
+ "web_searches_used": 8,
+ "tiers": "tier1 + tier2 slot2",
+ "tiers_ran": [
+  "tier1",
+  "tier2_slot2"
+ ],
+ "slot": 2,
+ "push_needed": false,
+ "push_note": "kept=0、仅浏览量增长、alert_worthy=false：按 2026-10-15 省额度规则不启动 CloudAgent，本地保存，待下一次实质性运行或 watchdog 推送"
+}

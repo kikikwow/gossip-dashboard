@@ -1,6 +1,6 @@
 {
  "source": "https://api.fxtwitter.com/status/{id}",
- "fetched_at": "2026-10-15T02:13:34Z",
+ "fetched_at": "2026-10-15T03:31:09Z",
  "note": "静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。",
  "posts": {
   "2106320822444949760": {
@@ -2109,6 +2109,96 @@
    "bookmarks": 0,
    "url": "https://x.com/LeotaAlysh40849/status/2110542004602146876",
    "fetched_at": "2026-10-15T02:13:34Z"
+  },
+  "2110536430615502861": {
+   "status": "ok",
+   "text": "热搜第一，\n低认知人群觉得豆包很有权威性。\n用豆包的都是低认知人群？",
+   "author": "@0xsuperspud",
+   "name": "土豆超人",
+   "created_at": "2026-10-15T01:01:11Z",
+   "views": 21,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/0xsuperspud/status/2110536430615502861",
+   "fetched_at": "2026-10-15T02:55:11Z"
+  },
+  "2110538819640631304": {
+   "status": "ok",
+   "text": "DeepSeek崩了\n10月15日，北京时间早上8点后，DeepSeek网页和APP显示“服务器暂时不可用”。 DeepSeek官方信息显示对话服务部分中断、DeepSeekV4.1 FlashAPI服务部分中断，网页/API性能下降，官方正在排查问题、定位原因。（第一财经）",
+   "author": "@dmjk001",
+   "name": "大猫调研信息",
+   "created_at": "2026-10-15T01:10:41Z",
+   "views": 3715,
+   "likes": 1,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/dmjk001/status/2110538819640631304",
+   "fetched_at": "2026-10-15T02:55:11Z"
+  },
+  "2110549242683314479": {
+   "status": "ok",
+   "text": "豆包对低认知人群有权威性\n\n这个话题冲上了热搜第一\n\n还好我用的GPT \n\n要不然骂的就是我了",
+   "author": "@wc8880",
+   "name": "旺川",
+   "created_at": "2026-10-15T01:52:06Z",
+   "views": 309,
+   "likes": 6,
+   "reposts": 0,
+   "replies": 8,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/wc8880/status/2110549242683314479",
+   "fetched_at": "2026-10-15T02:55:11Z"
+  },
+  "2110553201300963589": {
+   "status": "ok",
+   "text": "今早DeepSeek崩了，10月15日北京时间早上8点后，DeepSeek网页和APP显示“服务器暂时不可用”\n\nDeepSeek官方信息显示对话服务部分中断、DeepSeekV4.1 FlashAPI服务部分中断，网页/API性能下降，官方正在排查问题、定位原因\n\n目前模型仍处于不可用状态。",
+   "author": "@realNyarime",
+   "name": "奶昔🥤",
+   "created_at": "2026-10-15T02:07:50Z",
+   "views": 1214,
+   "likes": 1,
+   "reposts": 0,
+   "replies": 2,
+   "quotes": 0,
+   "bookmarks": 1,
+   "url": "https://x.com/realNyarime/status/2110553201300963589",
+   "fetched_at": "2026-10-15T02:55:11Z"
+  },
+  "2110558047529824432": {
+   "status": "ok",
+   "text": "@Furinanatw 价差这么大？？",
+   "author": "@RichBear_xr",
+   "name": "虾仁猪心",
+   "created_at": "2026-10-15T02:27:05Z",
+   "views": 1069,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/RichBear_xr/status/2110558047529824432",
+   "fetched_at": "2026-10-15T03:31:09Z"
+  },
+  "2110569894408491075": {
+   "status": "ok",
+   "text": "https://x.com/i/article/2110559291539337216",
+   "author": "@sleepy0x13",
+   "name": "sleepy",
+   "created_at": "2026-10-15T03:14:09Z",
+   "views": 577,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 1,
+   "bookmarks": 0,
+   "url": "https://x.com/sleepy0x13/status/2110569894408491075",
+   "fetched_at": "2026-10-15T03:31:09Z"
   }
  }
 }
