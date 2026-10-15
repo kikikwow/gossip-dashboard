@@ -1,6 +1,6 @@
 {
   "source": "https://api.fxtwitter.com/status/{id}",
-  "fetched_at": "2026-10-15T13:04:40Z",
+  "fetched_at": "2026-10-15T15:00:00Z",
   "note": "静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。",
   "posts": {
     "2106320822444949760": {
@@ -2634,20 +2634,83 @@
       "url": "https://x.com/wufantouzi/status/2110698491144233337",
       "fetched_at": "2026-10-15T13:04:40Z"
     },
-    "2110603440527380988": {
+    "2110697233310154879": {
       "status": "ok",
-      "text": "App Store也正式进入字节时代了 \n\n字节免费app也要霸榜了 https://t.co/4zAYo2q20h https://t.co/F5jdppssdA",
-      "author": "@abskoop",
-      "name": "ahhhhfs",
-      "created_at": "2026-10-15T05:27:27Z",
-      "views": 1558,
+      "text": "一定要注意了！\n\n滴滴打车千万不要用英语跟韩语\n\n更不要用繁体中文！!\n\n别问我为什么！！！",
+      "author": "@kitesrox",
+      "name": "择月",
+      "created_at": "2026-10-15T11:40:09Z",
+      "views": 131,
       "likes": 1,
       "reposts": 0,
-      "replies": 2,
+      "replies": 0,
       "quotes": 0,
-      "bookmarks": 1,
-      "url": "https://x.com/abskoop/status/2110603440527380988",
-      "fetched_at": "2026-10-15T05:55:00Z"
+      "bookmarks": 0,
+      "url": "https://x.com/kitesrox/status/2110697233310154879",
+      "fetched_at": "2026-10-15T13:33:25Z"
+    },
+    "2110722564167504146": {
+      "status": "ok",
+      "text": "金融的第一法则是流动性，但加密世界的第一法则是生存\n守住本金，时间才是你最好的杠杆 https://x.com/i/article/2110720875804925952",
+      "author": "@Kelly88Eth",
+      "name": "kelly/Crypto & RWA",
+      "created_at": "2026-10-15T13:20:49Z",
+      "views": 331,
+      "likes": 2,
+      "reposts": 0,
+      "replies": 1,
+      "quotes": 0,
+      "bookmarks": 0,
+      "url": "https://x.com/Kelly88Eth/status/2110722564167504146",
+      "fetched_at": "2026-10-15T13:33:25Z"
+    },
+    "2110741270394184185": {
+      "id": "2110741270394184185",
+      "url": "https://x.com/TraderS18/status/2110741270394184185",
+      "username": "TraderS18",
+      "text": "尊界真是不老实啊……新华社发完三部门联合调查之后尊界的回复依然油滑……",
+      "created_at": "2026-10-15T14:35:09.000Z",
+      "public_metrics": {
+        "impression_count": 3045,
+        "like_count": 16,
+        "reply_count": 10,
+        "retweet_count": 1,
+        "quote_count": 0,
+        "bookmark_count": 0
+      },
+      "cached_at": "2026-10-15T15:00:00Z"
+    },
+    "2110739782385250681": {
+      "id": "2110739782385250681",
+      "url": "https://x.com/secondfloor/status/2110739782385250681",
+      "username": "secondfloor",
+      "text": "这下好了，联合调查了。针对网络反映的\"尊界V800刹车踏板支架断裂问题\"，工信部、网信办、市场监管总局三部门成立联合调查组……",
+      "created_at": "2026-10-15T14:29:14.000Z",
+      "public_metrics": {
+        "impression_count": 244,
+        "like_count": 1,
+        "reply_count": 1,
+        "retweet_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0
+      },
+      "cached_at": "2026-10-15T15:00:00Z"
+    },
+    "2110737494451147138": {
+      "id": "2110737494451147138",
+      "url": "https://x.com/WallStreetCN/status/2110737494451147138",
+      "username": "WallStreetCN",
+      "text": "尊界汽车：积极响应、完全服从并将全力配合联合调查组的工作……",
+      "created_at": "2026-10-15T14:20:08.000Z",
+      "public_metrics": {
+        "impression_count": 3,
+        "like_count": 0,
+        "reply_count": 0,
+        "retweet_count": 0,
+        "quote_count": 0,
+        "bookmark_count": 0
+      },
+      "cached_at": "2026-10-15T15:00:00Z"
     }
   }
 }

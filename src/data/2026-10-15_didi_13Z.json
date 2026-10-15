@@ -1,0 +1,134 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每两小时）",
+ "routine": "滴滴重点追踪（每两小时）",
+ "timestamp": "2026-10-15T13:30:00Z",
+ "fired_at_utc": "2026-10-15T13:29:00Z",
+ "scanned_at_utc": "2026-10-15T13:32:00Z",
+ "beijing_time": "2026-10-15 21:30 Asia/Shanghai",
+ "edition_date": "2026-10-15",
+ "window": {
+  "start_utc": "2026-10-15T11:30:00Z",
+  "end_utc": "2026-10-15T13:30:00Z",
+  "note": "自上轮 11:30Z（北京时间 19:30）以来约 2 小时；Tier1 + Tier2 slot0（拉美其他国家 + 金融）；Tier3 跳过（当日已在 00Z 跑过）"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无滴滴本体新的可核验八卦/人事/监管/诉讼/财报/公司回应。Tier1 八组 X（start 11:30Z）有效报警帖 0：cn_price 命中 2 条——①@Kelly88Eth 币圈文章 t.co/撞词假阳性已丢；②@kitesrox「滴滴打车不要用英语韩语繁体」浏览 127、回复 0，低于 min_engagement（300 浏览或 3 回复）→ log_only；其余 cn_gossip/HK/BR×2/MX×2/EN 全 0。slot0 三组 X（拉美西语/中美洲加勒比/金融，start ~6h）全 0。宽口径「滴滴」X 每小时 175/277（11Z/12Z；13Z 至 13:29 部分 108），无尖峰未做宽抽样。繁简主帖 @Furinanatw 浏览 174886→175875（+989），回复 59→60（+1），无新证据、无媒体升级、滴滴未专门回应。Web：裁员/组织调整均为旧闻（2024-11 张博卸任 CTO、2026-03 国际裁员传闻、2025-09 HR 劝退事件）；繁简仍为 Threads/unwire/LIHKG 旧线索；香港牌照仍未见正式递交公开消息（10-30 截止）；BR Cade/Senacon/Zesto 与 MX PROFECO/裁员为历史；拉美 web 阿根廷罗萨里奥 Uber/DiDi 市议会辩论仍为进行中议题、无窗口内新决议，已在 adr_13Z 晚报记录不重复报警；滴滴金融/Préstamos 仅为常规帮助页与旧投诉。RSS 新匹配 0；微博热搜镜像 52 条无滴滴/花小猪/程维/网约车/打车。",
+ "sections": [
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "公开媒体",
+      "RSS",
+      "微博镜像"
+     ],
+     "date": "10-15 21:30",
+     "text": "本期滴滴本体无新动态。扫描窗口 11:30Z–13:30Z（北京时间 10-15 19:30 至 21:30）。Tier1 全量 + Tier2 slot0（阿根廷/哥伦比亚/智利/秘鲁等拉美、中美洲加勒比、滴滴金融/Préstamos）未见新的公司八卦、人事、监管、诉讼或财务线索；宽口径「滴滴」X 帖量每小时 175/277，无尖峰。繁简价差主帖 @Furinanatw 浏览续涨至 175875（上轮 174886，约 +989），回复 60（上轮 59），仍是同一组截图，没有新证据或新媒体报道，滴滴未专门回应；滴滴 8 月曾公开否认大数据杀熟，截图时间与路线不同、翔安机场尚未启用，仍属待核实。香港网约车牌照申请 10-30 截止，暂未见滴滴正式递交的公开消息。海外小语种线索：本期无窗口内新增达到报警门槛的材料（slot0 西语/金融 X 全 0；阿根廷罗萨里奥 Uber/DiDi 合法化市议会辩论已在今日 adr_13Z 晚报记录，本窗口无新决议，不重复报警）。",
+     "links": [
+      {
+       "label": "@Furinanatw 繁简价差主帖（175875 浏览）",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      },
+      {
+       "label": "unwire.hk 报道（繁中）",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/"
+      },
+      {
+       "label": "运输署：网约车服务牌照申请（10-30 截止）",
+       "url": "https://www.td.gov.hk/tc/transport_in_hong_kong/public_transport/rhv/index.html"
+      },
+      {
+       "label": "Threads @onlyu0913 原始线索",
+       "url": "https://www.threads.com/@onlyu0913/post/DebdcKKn9uV"
+      }
+     ],
+     "id": "20261015-didi-13Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "11Z": 175,
+   "12Z": 277,
+   "13Z_partial_to1329": 108,
+   "query": "滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"",
+   "note": "较上轮 09Z/10Z 212/280 回落又回升，无尖峰未做宽抽样"
+  },
+  "trad_simp_price_x": {
+   "posts_in_tier1_window": 1,
+   "kept_for_alert": 0,
+   "main_post_views": 175875,
+   "prev_views": 174886,
+   "main_post_replies": 60,
+   "prev_replies": 59,
+   "note": "主帖续涨约 +989、回复 +1，无新事实、无回应；另有低互动繁体警示帖 log_only"
+  },
+  "tier1_x_hits_kept": 0,
+  "slot0_x_hits_kept": 0,
+  "weibo_didi_on_list": null
+ },
+ "candidates": [
+  {
+   "topic": "繁简价差 @Furinanatw 续涨",
+   "verdict": "already_covered_views_only",
+   "why": "174886→175875（+989），回复 59→60，无新证据/媒体/回应",
+   "url": "https://x.com/Furinanatw/status/2110289680595886537"
+  },
+  {
+   "topic": "@kitesrox 繁体/外语界面警示",
+   "verdict": "log_only_below_engagement",
+   "why": "「滴滴打车不要用英语韩语繁体」浏览 127、回复 0，低于门槛；无新截图证据",
+   "url": "https://x.com/kitesrox/status/2110697233310154879"
+  },
+  {
+   "topic": "宽口径滴滴帖量 175/277",
+   "verdict": "reject_noise",
+   "why": "无尖峰；历史抽样多为俚语/引流，本期未重抽",
+   "url": null
+  },
+  {
+   "topic": "cn_price @Kelly88Eth 币圈文章",
+   "verdict": "reject_noise",
+   "why": "正文无滴滴实体关键词，属 t.co/文章撞词假阳性",
+   "url": "https://x.com/Kelly88Eth/status/2110722564167504146"
+  },
+  {
+   "topic": "阿根廷罗萨里奥 Uber/DiDi 合法化",
+   "verdict": "already_covered_old",
+   "why": "市议会辩论/司机抗议已在 adr_13Z 晚报；本窗口无新决议",
+   "url": "https://www.versionrosario.com.ar/taxistas-reclaman-igualdad-de-condiciones-ante-el-proyecto-de-regulacion-de-uber-y-didi/"
+  },
+  {
+   "topic": "BR 99Food Cade / MX PROFECO",
+   "verdict": "already_covered_old",
+   "why": "Cade/Senacon 与 MX 历史 PROFECO/裁员，非本窗口新料",
+   "url": "https://www.bloomberglinea.com.br/tech/cade-mantem-investigacao-da-99food-e-vai-aprofundar-analise-sobre-o-mercado-de-delivery/"
+  }
+ ],
+ "sources_queried": [
+  "X tier1×8 + tier2 slot0×3 + counts×1 + post lookup×1",
+  "WebSearch×8 (tier1×6 + slot0×2，含 Rosario 合法化核对)",
+  "RSS fetch_sources（新匹配 0，滴滴=0）",
+  "微博热搜镜像 soso.re/api/weibo：52 条无滴滴/花小猪/程维/网约车/打车",
+  "Tier3 skipped (already ran at 00Z)"
+ ],
+ "x_calls_used": 13,
+ "web_searches": 8,
+ "web_searches_used": 8,
+ "tiers": "tier1 + tier2 slot0",
+ "tiers_ran": [
+  "tier1",
+  "tier2_slot0"
+ ],
+ "slot": 0,
+ "push_needed": false,
+ "push_note": "kept=0、仅浏览量增长、alert_worthy=false：按 2026-10-15 省额度规则不启动 CloudAgent，本地保存；didi_05Z/07Z/09Z/11Z/13Z 待下一次实质性运行或 watchdog 一并推送"
+}

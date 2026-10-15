@@ -639,3 +639,25 @@ timestamp_utc,topic,metric,value,source
 2026-10-15T13:05:00Z,滴滴繁简价差,x_post_replies,60,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-15T13:05:00Z,滴滴繁简价差,x_sample_post,175645,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-15T13:05:00Z,阿根廷罗萨里奥DiDi,x_sample_post,174,https://x.com/Cadena3_Rosario/status/2110645357403074599
+2026-10-15T13:30:00Z,滴滴,x_hourly_post_count_11to13Z,175|277|108,"X q=滴滴 OR 滴滴出行 OR ""DiDi Global"" OR ""Didi Chuxing""; 13Z partial to 13:29; no spike sampling"
+2026-10-15T13:30:00Z,滴滴繁简价差,x_post_views,175875,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T13:30:00Z,滴滴繁简价差,x_post_replies,60,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T13:30:00Z,滴滴繁简价差,x_sample_post,175875,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T13:30:00Z,滴滴,x_sample_post,175875,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T13:30:00Z,滴滴繁简价差,x_sample_post,127,https://x.com/kitesrox/status/2110697233310154879
+2026-10-15T15:00:00Z,尊界V800刹车踏板·三部门联合调查,weibo_rank,1,https://soso.re/weibo
+2026-10-15T15:00:00Z,尊界V800刹车踏板·三部门联合调查,weibo_heat,2682299,https://soso.re/weibo
+2026-10-15T15:00:00Z,尊界回应三部门联合调查,weibo_rank,6,https://soso.re/weibo
+2026-10-15T15:00:00Z,尊界回应三部门联合调查,weibo_heat,603958,https://soso.re/weibo
+2026-10-15T15:00:00Z,尊界V800刹车踏板·三部门联合调查,x_posts_hour_14Z,90,x_counts:尊界 刹车 OR 三部门
+2026-10-15T15:00:00Z,尊界V800刹车踏板·三部门联合调查,x_sample_post,3045,https://x.com/TraderS18/status/2110741270394184185
+2026-10-15T15:00:00Z,尊界V800刹车踏板·三部门联合调查,x_sample_post,244,https://x.com/secondfloor/status/2110739782385250681
+2026-10-15T15:00:00Z,DeepSeek网页/API大面积中断,x_posts_hour_09Z,117,x_counts
+2026-10-15T15:00:00Z,DeepSeek网页/API大面积中断,x_posts_hour_10Z,109,x_counts
+2026-10-15T15:00:00Z,DeepSeek网页/API大面积中断,x_posts_hour_11Z,64,x_counts
+2026-10-15T15:00:00Z,DeepSeek网页/API大面积中断,x_posts_hour_12Z,86,x_counts
+2026-10-15T15:00:00Z,DeepSeek网页/API大面积中断,x_posts_hour_13Z,71,x_counts
+2026-10-15T15:00:00Z,DeepSeek网页/API大面积中断,x_posts_hour_14Z,60,x_counts
+2026-10-15T15:00:00Z,月之暗面陈广宇离职,x_posts_hour_12Z,34,x_counts
+2026-10-15T15:00:00Z,月之暗面陈广宇离职,x_posts_hour_14Z,24,x_counts
+2026-10-15T15:00:00Z,懂车帝被曝邀约黑尊界,x_posts_hour_14Z,33,x_counts
