@@ -1,0 +1,417 @@
+{
+ "type": "adr",
+ "title": "美股中概 & 出海简报",
+ "timestamp": "2026-10-15T13:05:00Z",
+ "edition_date": "2026-10-15",
+ "slot": "13Z",
+ "beijing_time": "2026-10-15 21:05 Asia/Shanghai",
+ "lede": "晚报 · 覆盖自早报 2026-10-15T01:00Z（北京约 09:00）至此刻 · 信源：X 公开检索 + 公开媒体/RSS；与大厂八卦晚报分开送达；美股10-15常规开盘约北京21:30，本稿以港股全日为主",
+ "window": {
+  "start_utc": "2026-10-15T01:00:00Z",
+  "end_utc": "2026-10-15T13:05:00Z"
+ },
+ "alert_worthy": false,
+ "push_needed": true,
+ "top3": [
+  {
+   "section": "🚀 IPO & 高管",
+   "index": 0
+  },
+  {
+   "section": "📉 股价大动",
+   "index": 0
+  },
+  {
+   "section": "🚀 IPO & 高管",
+   "index": 1
+  }
+ ],
+ "sections": [
+  {
+   "title": "🎯 重点追踪",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "西语媒体"
+     ],
+     "date": "10-15",
+     "text": "繁简价差主帖 @Furinanatw 浏览续涨至约 17.6 万（早报约 8.3 万；回复约 60），仍无新证据、无权威媒体升级、无滴滴专门回应，维持待核实。阿根廷罗萨里奥出租车/礼车司机继续就 Uber/DiDi 合法化向市议会施压（见海外小语种）。巴西99/墨西哥/埃及/日本合资本窗口无新公司级线索。",
+     "links": [
+      {
+       "label": "X @Furinanatw",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537",
+       "views": "175645"
+      },
+      {
+       "label": "Rosario3（西语）",
+       "url": "https://www.rosario3.com/informaciongeneral/taxistas-y-remiseros-siguen-con-el-reclamo-contra-la-legalizacion-de-uber-y-didi-piden-igualdad-de-condiciones-20261014-0040.html"
+      }
+     ],
+     "id": "20261015-adr-13Z-didi"
+    },
+    {
+     "company": "字节 / TikTok",
+     "tag": "实锤",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-15",
+     "text": "本期（10-15 13Z 美股中概晚报）字节 / TikTok 没有重大可核验的新监管、股权或禁令动态；窗口内多为跨境运营广告与旧闻二次传播，不升格。",
+     "links": [],
+     "id": "20261015-adr-13Z-bytedance-none",
+     "pending": [
+      "待补充：来源——这是热度追踪或扫描状态行，没有单一来源链接，数据见 heat_log.csv"
+     ]
+    },
+    {
+     "company": "智谱 / 月之暗面 / 中国大模型",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "官方"
+     ],
+     "date": "10-15",
+     "text": "DeepSeek 官方就近5小时故障按账号10.8–10.14七日API消耗以赠金全额返还（快讯已警报）；属运维补偿非IPO交割，中概刊仅作观察。月之暗面美银退出IPO线与智谱上市进度本窗口无新可核验事实。",
+     "links": [
+      {
+       "label": "凤凰网 DeepSeek补偿",
+       "url": "https://news.ifeng.com/c/8xFNuMcEhvB"
+      },
+      {
+       "label": "第一财经",
+       "url": "https://www.yicai.com/news/103395363.html"
+      },
+      {
+       "label": "DeepSeek Status",
+       "url": "https://status.deepseek.com/incidents/7116348214287"
+      }
+     ],
+     "id": "20261015-adr-13Z-llm"
+    }
+   ]
+  },
+  {
+   "title": "⚡ 短期热点追踪",
+   "color": "#ea580c",
+   "items": [
+    {
+     "company": "茶百道 IPO 操纵停牌",
+     "tag": "实锤",
+     "source_types": [
+      "扫描",
+      "X"
+     ],
+     "date": "10-15",
+     "text": "➡️ 本窗口无新的证监会裁决、公司复牌或指数剔除时间变更；社交侧有门店歇业讨论未核实。X「茶百道/02555」01–12Z约49帖，热度缓降。10-22/23剔除安排仍有效（见早报）。",
+     "links": [
+      {
+       "label": "证监会26PR168",
+       "url": "https://apps.sfc.hk/edistributionWeb/gateway/TC/news-and-announcements/news/doc?refNo=26PR168"
+      },
+      {
+       "label": "X @wufantouzi（门店讨论）",
+       "url": "https://x.com/wufantouzi/status/2110698491144233337",
+       "views": "3680"
+      }
+     ],
+     "id": "20261015-adr-13Z-hot-chabaidao"
+    },
+    {
+     "company": "传音控股港股上市",
+     "tag": "实锤",
+     "source_types": [
+      "行情",
+      "媒体"
+     ],
+     "date": "10-15",
+     "text": "📈 首日开盘34.96（−0.96%）、收盘33.28（−5.72%）、成交约3.91亿港元（见 Top1 / IPO栏）。X「传音/02636」窗口合计约166帖。",
+     "links": [
+      {
+       "label": "澎湃首日收评",
+       "url": "https://www.thepaper.cn/newsDetail_forward_34256830"
+      },
+      {
+       "label": "X @HKEXGroup",
+       "url": "https://x.com/HKEXGroup/status/2110581152671203747",
+       "views": "504"
+      }
+     ],
+     "id": "20261015-adr-13Z-hot-transsion"
+    }
+   ]
+  },
+  {
+   "title": "🌏 海外小语种线索",
+   "color": "#0b7",
+   "items": [
+    {
+     "company": "阿根廷罗萨里奥·出租车抗议 Uber/DiDi",
+     "tag": "实锤",
+     "source_types": [
+      "西语媒体",
+      "X"
+     ],
+     "date": "10-14～15",
+     "lang": "es",
+     "translation_zh": "罗萨里奥出租车与礼车司机继续向市议会抗议 Uber/DiDi 合法化推进方式，要求平台出示阿根廷 CUIT、向市政府提供可监管数据，并在车辆标准、计价与司机登记上与出租车同等条件；指低价竞争不公平，称当地有700余出租车牌照停运。",
+     "original": "Taxistas y remiseros de Rosario volvieron a manifestarse contra la forma en que se busca regularizar Uber y Didi. Reclaman que las empresas presenten CUIT, entreguen datos al Ejecutivo para control, e igualdad de condiciones en vehículos, tarifas y registro de choferes.",
+     "text": "阿根廷罗萨里奥（西语）：出租车/礼车司机继续反对市政将 Uber/DiDi 合法化的推进方式，要求 CUIT、数据接入与同等条件（车辆/计价/登记）；指低价竞争不公平，并称当地700+牌照停运。市议会委员会仍在审议。",
+     "links": [
+      {
+       "label": "Rosario3",
+       "url": "https://www.rosario3.com/informaciongeneral/taxistas-y-remiseros-siguen-con-el-reclamo-contra-la-legalizacion-de-uber-y-didi-piden-igualdad-de-condiciones-20261014-0040.html"
+      },
+      {
+       "label": "Cadena3",
+       "url": "https://www.cadena3.com/noticia/juntos-rosario/taxistas-se-movilizan-contra-uber-y-didi-en-rosario-ponen-la-tarifa-que-quieren_603259"
+      },
+      {
+       "label": "X @Cadena3_Rosario",
+       "url": "https://x.com/Cadena3_Rosario/status/2110645357403074599",
+       "views": "174"
+      }
+     ],
+     "id": "20261015-adr-13Z-local-rosario"
+    }
+   ]
+  },
+  {
+   "title": "🏛️ 监管 · 诉讼 · 制裁",
+   "color": "#dc2626",
+   "items": [
+    {
+     "company": "茶百道",
+     "tag": "实锤",
+     "source_types": [
+      "扫描"
+     ],
+     "date": "10-15",
+     "text": "本窗口（早报之后）没有新的证监会裁决、公司复牌公告或恒生指数安排变更；停牌与10-23起指数剔除安排仍按早报所述执行。社交侧门店是否歇业属未核实讨论。",
+     "links": [
+      {
+       "label": "证监会26PR168",
+       "url": "https://apps.sfc.hk/edistributionWeb/gateway/TC/news-and-announcements/news/doc?refNo=26PR168"
+      },
+      {
+       "label": "公司10-14公告PDF",
+       "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1014/2026101401317.pdf"
+      }
+     ],
+     "id": "20261015-adr-13Z-chabaidao"
+    },
+    {
+     "company": "Temu / 拼多多",
+     "tag": "实锤",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-15",
+     "text": "密苏里州检察长诉 Temu 案在本窗口仅见旧闻二次传播，没有新的起诉方追加、判决或公司正式回应可核验进展，不重复展开案情。",
+     "links": [
+      {
+       "label": "X @spotlightoncn（旧闻转载）",
+       "url": "https://x.com/spotlightoncn/status/2110570916715397332",
+       "views": "446"
+      }
+     ],
+     "id": "20261015-adr-13Z-temu"
+    }
+   ]
+  },
+  {
+   "title": "📉 股价大动",
+   "color": "#2563eb",
+   "items": [
+    {
+     "company": "港股科网与中概孪生（10-15 收盘）",
+     "tag": "实锤",
+     "source_types": [
+      "行情",
+      "媒体"
+     ],
+     "date": "10-15",
+     "text": "恒指收24062.72（−1.03%），恒科4060.99（−2.72%），成交约2241.65亿。腾讯417.8（−1.32%）、阿里106.40（−3.71%）、美团约75.45（−2.14%）、百度约78.50（约−4.3%）、京东104.90（−1.13%）；理想约44.44（−1.68%）、蔚来约26.48（−3.50%）、小鹏37.20（−3.68%）；比亚迪72.95（+0.14%）、泡泡玛特145.50（−2.35%）。美股10-15截稿前未完整开盘，ADR参考10-14金龙−1.39%。",
+     "links": [
+      {
+       "label": "新华社港股",
+       "url": "https://www.news.cn/20261015/dff02906a0ce4b18923fccfa6872a0b4/c.html"
+      },
+      {
+       "label": "新浪港股收盘",
+       "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-10-15/doc-inivhyan4656611.shtml"
+      },
+      {
+       "label": "格隆汇收评",
+       "url": "https://hk.investing.com/news/stock-market-news/article-1700341"
+      },
+      {
+       "label": "新城港股ADR",
+       "url": "https://www.metroradio.com.hk/News/details.aspx?CategoryName=finance&NewsId=20261015065805"
+      }
+     ],
+     "id": "20261015-adr-13Z-hk-session"
+    },
+    {
+     "company": "传音控股首日",
+     "tag": "实锤",
+     "source_types": [
+      "行情",
+      "媒体"
+     ],
+     "date": "10-15",
+     "text": "开盘34.96（−0.96%）、收盘33.28（−5.72%）、成交约3.91亿、市值约676亿港元；详见 IPO 栏 / Top1，此处不重复展开。",
+     "links": [
+      {
+       "label": "澎湃",
+       "url": "https://www.thepaper.cn/newsDetail_forward_34256830"
+      },
+      {
+       "label": "etnet",
+       "url": "https://www.etnet.com.hk/www/tc/stocks/ipo-performance.php?category=recent&period=6"
+      }
+     ],
+     "id": "20261015-adr-13Z-transsion-px"
+    },
+    {
+     "company": "Michael Burry 帖续热",
+     "tag": "实锤",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-15",
+     "text": "@burrytracker 加仓中概主帖浏览约9.5万升至约12.3万（转发约115），窗口内无新的持仓披露或 Substack 更新，不升格 Top。",
+     "links": [
+      {
+       "label": "X @burrytracker",
+       "url": "https://x.com/burrytracker/status/2110368123291423113",
+       "views": "123215"
+      }
+     ],
+     "id": "20261015-adr-13Z-burry-heat",
+     "lang": "en",
+     "translation_zh": "市场追踪账号称迈克尔·伯里在做空纳指相关敞口的同时买入中国相关资产；具体标的与仓位以原帖/披露为准。",
+     "original": "Breaking: Michael Burry is buying China stocks while he shorts the Nasdaq — Bought more BYD; continues holding JD, TCEHY, MPNGF, HDALF; avoiding BABA until HK$70s or stops AI share issuance."
+    }
+   ]
+  },
+  {
+   "title": "🧸 消费出海",
+   "color": "#db2777",
+   "items": [
+    {
+     "company": "滴滴·繁简价差",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-15",
+     "text": "@Furinanatw 繁简对比帖浏览约17.6万（回复约60），滴滴仍未专门回应；截图时间/路线疑点未消，维持待核实。",
+     "links": [
+      {
+       "label": "X @Furinanatw",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537",
+       "views": "175645"
+      }
+     ],
+     "id": "20261015-adr-13Z-didi-price"
+    },
+    {
+     "company": "蜜雪集团 / 名创 / 泡泡玛特",
+     "tag": "实锤",
+     "source_types": [
+      "行情"
+     ],
+     "date": "10-15",
+     "text": "港股收盘：蜜雪集团约168.60（+0.78%）、名创优品20.56（+0.29%）、泡泡玛特145.50（−2.35%）。本窗口无新的公司级出海翻车或监管可核验爆点；行业门店统计多为旬初旧稿复述。",
+     "links": [
+      {
+       "label": "etnet 泡泡玛特",
+       "url": "https://content.etnet.com.hk/content/cpyrevamp/tc/stock_quote.php?code=09992"
+      },
+      {
+       "label": "长桥 蜜雪2097",
+       "url": "https://longbridge.com/zh-CN/quote/2097.HK"
+      }
+     ],
+     "id": "20261015-adr-13Z-consumer-px"
+    }
+   ]
+  },
+  {
+   "title": "🚀 IPO & 高管",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "company": "传音控股",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "港交所",
+      "行情"
+     ],
+     "date": "10-15",
+     "text": "港股主板挂牌首日：发行价35.30港元，开盘34.96（−0.96%），盘中最低约32.72，收盘33.28（−5.72%），成交约3.91亿港元，总市值约676亿；一手账面约亏202港元。公开发售约4.46倍、国际配售约2.55倍；募资净额约29.68亿，约40%拟投AI。早报「开盘/收盘待补充」已补齐。",
+     "links": [
+      {
+       "label": "澎湃首日破发",
+       "url": "https://www.thepaper.cn/newsDetail_forward_34256830"
+      },
+      {
+       "label": "Now财经",
+       "url": "https://finance.now.com/news/post.php?id=990013"
+      },
+      {
+       "label": "etnet新股表现",
+       "url": "https://www.etnet.com.hk/www/tc/stocks/ipo-performance.php?category=recent&period=6"
+      },
+      {
+       "label": "X @HKEXGroup",
+       "url": "https://x.com/HKEXGroup/status/2110581152671203747",
+       "views": "504"
+      },
+      {
+       "label": "X @agentladle",
+       "url": "https://x.com/agentladle/status/2110597630791475225",
+       "views": "2"
+      }
+     ],
+     "id": "20261015-adr-13Z-transsion"
+    },
+    {
+     "company": "小鹏 XPENG AI Engineering",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "X"
+     ],
+     "date": "10-14～15",
+     "text": "何小鹏在巴黎车展线宣布通过 XPENG AI Engineering 向全球伙伴开放整车平台、电子电气架构、智驾、图灵芯片、AI BOX、电池电驱及工程工具链；以与大众合作为案例，欧洲研发中心承担认证等，并有与欧洲出行平台谈 Robotaxi 的媒体转述。属卖车之外的技术授权叙事。",
+     "links": [
+      {
+       "label": "动点科技",
+       "url": "https://cn.technode.com/post/2026-10-15/xpeng-ai-engineering-global-technology-partnerships/"
+      },
+      {
+       "label": "第一财经",
+       "url": "https://www.yicai.com/news/103393049.html"
+      },
+      {
+       "label": "21经济网",
+       "url": "https://www.21jingji.com/article/20261014/herald/3947d7e0dc2cd5e9f02dc33c6e2f5ba3.html"
+      },
+      {
+       "label": "X @Gray99999999",
+       "url": "https://x.com/Gray99999999/status/2110607853929271683",
+       "views": "358"
+      }
+     ],
+     "id": "20261015-adr-13Z-xpeng"
+    }
+   ]
+  }
+ ]
+}

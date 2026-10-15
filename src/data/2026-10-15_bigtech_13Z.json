@@ -1,0 +1,270 @@
+{
+ "type": "bigtech",
+ "title": "中国大厂八卦简报",
+ "timestamp": "2026-10-15T12:58:00Z",
+ "edition_date": "2026-10-15",
+ "slot": "evening",
+ "lede": "晚报 · 窗口 2026-10-15T01:00Z→12:58Z（北京 ~09:00–20:58，接早报；含白天快讯已警报事项）· 信源：X 公开帖（主）+ 微博热搜镜像 + 公开媒体 + 滴滴两小时追踪 + RSS/公众号（1 新匹配）",
+ "alert_note": "DeepSeek补偿已于 2026-10-15T11:52Z 快讯 ALERT；懂车帝否认 08:52Z、腾讯云爬高德 10-14T23:50Z 已警报。晚报收录并更新热度，不重复警报。陈广宇离职为白天新进展但属人事八卦非危机，不单独 ALERT。",
+ "alert_worthy": false,
+ "top3": [
+  {
+   "section": "🤖 中国大模型 · DeepSeek",
+   "index": 0
+  },
+  {
+   "section": "🚪 离职·挖人 · 月之暗面",
+   "index": 0
+  },
+  {
+   "section": "🚗 公关翻车·电商互撕",
+   "index": 0
+  }
+ ],
+ "focus": {
+  "滴滴 & 滴滴出海": "繁简主帖浏览约17.6万、回复约60，仍待核实、无公司专门回应；白天 didi_05–11Z kept=0；海外小语种无新增",
+  "字节跳动": "懂车帝否认后讨论续热无新动作；豆包SAEP降温并移出短期；绿泡泡微博出榜、X晚间回升",
+  "中国大模型": "DeepSeek补偿（Top1·已警报）；陈广宇离职+Anthropic传闻（Top2·新入短期）；腾讯云爬高德续降；库克确认千问接入国行苹果智能"
+ },
+ "short_term_notes": [
+  "DeepSeek网页/API大面积中断 ➡️ 已警报·补偿；微博#7（30.5万）；X 09–12Z≈126/111/64/85",
+  "【新加入】月之暗面陈广宇离职 📈 本人确认离开；Anthropic去向传闻；X 09–12Z≈21/21/22/24",
+  "懂车帝被曝邀约黑尊界 ➡️ 否认后续热无新动作",
+  "腾讯绿泡泡对战红果短剧 ➡️ 微博出榜；X晚间回升",
+  "腾讯云AI智能体爬高德 📉 发帖个位数；@ethanelasky≈93.7万",
+  "【已移出】豆包手机助手SAEP151款拒绝——发帖约6/时、无新名单"
+ ],
+ "overseas_local_lang": [],
+ "sections": [
+  {
+   "title": "🤖 中国大模型 · DeepSeek",
+   "color": "#4c6ef5",
+   "items": [
+    {
+     "id": "20261015-13Z-deepseek-compensation",
+     "company": "DeepSeek（深度求索）",
+     "tag": "实锤",
+     "source_types": [
+      "官方开放平台通知",
+      "主流媒体",
+      "微博热搜",
+      "X"
+     ],
+     "date": "10-15 傍晚",
+     "text": "DeepSeek 官方开放平台发布《服务恢复及补偿通知》：北京时间 10 月 15 日 8:11–13:04 API 故障已恢复；作为补偿，将按账号近 7 日（10 月 8–14 日）的 API 消耗金额以赠金形式全额返还，赠金自动到账，后续扣费优先扣赠金。财联社经凤凰网等转载（约 18:01 CST）。微博「DeepSeek故障补偿」现约 #7、热度约 30.5 万（11:52Z 快讯时约 #9/38.9 万）。X 相关发帖 09–12Z≈126/111/64/85，补偿话题仍高位。用户侧 V2EX/X 有晒到账金额，差异很大。通知提及将「剥离单点依赖」，完整根因仍未公开披露。11:52Z 快讯已 ALERT；晚报更新热度不重复警报。",
+     "links": [
+      {
+       "label": "凤凰网/财联社：补偿通知",
+       "url": "https://news.ifeng.com/c/8xFNuMcEhvB"
+      },
+      {
+       "label": "DeepSeek Status 事件页",
+       "url": "https://status.deepseek.com/incidents/7116348214287"
+      },
+      {
+       "label": "V2EX 讨论（通知原文）",
+       "url": "https://www.v2ex.com/t/1249099"
+      },
+      {
+       "label": "X @fkysly 到账观察",
+       "url": "https://x.com/fkysly/status/2110655770199015903",
+       "views": "6772"
+      },
+      {
+       "label": "微博热搜镜像",
+       "url": "https://soso.re/weibo"
+      }
+     ],
+     "pending": [
+      "待补充：故障根因——官方仅称系统故障并将剥离单点依赖，未公开具体原因"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🚪 离职·挖人 · 月之暗面",
+   "color": "#ae3ec9",
+   "items": [
+    {
+     "id": "20261015-13Z-chen-guangyu-moonshot-exit",
+     "company": "月之暗面（Kimi）",
+     "tag": "实锤",
+     "source_types": [
+      "本人X",
+      "主流媒体",
+      "X"
+     ],
+     "date": "10-15",
+     "text": "17 岁 AI 研究员陈广宇（Nathan Chen，X @nathancgy4）发帖称近日已离开月之暗面 Kimi 团队。他于 2025 年 11 月以约 16 岁加入，任职不满一年，称过去一年是迄今最美好的经历，感谢团队在他未成年时给予机会；本人帖文未透露离职原因与下一站。紫牛新闻/扬子晚报 18:02 报道并写到他今年高中毕业，媒体推测或与升学有关。他曾是论文《Attention Residuals》共同一作（与张宇、苏剑林），马斯克曾公开称赞 Kimi 该项工作。X 圈傍晚另有支线：@xiax0603 等贴出与 Anthropic 的 Sholto Douglas 对话截图，称陈广宇确认赴湾区加入 Anthropic Scaling RL 团队——截图未经独立核实、本人未官宣下一站，该支线标为传闻。代表帖浏览：本人英文原帖约 33.7 万；@0xLogicrw 中文转述约 9.9 万；Anthropic 支线帖约 4.6 万。X「陈广宇/陈光宇+(月之暗面|Kimi|Anthropic|离职)」09–12Z≈21/21/22/24，呈升温。本期新加入短期热点列表。",
+     "links": [
+      {
+       "label": "紫牛新闻/扬子晚报",
+       "url": "https://www.yangtse.com/news/txs/202610/t20261015_402791.html"
+      },
+      {
+       "label": "X @nathancgy4 本人英文原帖",
+       "url": "https://x.com/nathancgy4/status/2110522061953327565",
+       "views": "337025"
+      },
+      {
+       "label": "X @0xLogicrw 中文转述",
+       "url": "https://x.com/0xLogicrw/status/2110575510728347889",
+       "views": "99065"
+      },
+      {
+       "label": "X @xiax0603 Anthropic 支线（传闻）",
+       "url": "https://x.com/xiax0603/status/2110666234064986582",
+       "views": "45538"
+      }
+     ],
+     "lang": "en",
+     "translation_zh": "近况更新：我最近已离开 @Kimi_Moonshot！过去一年在 Kimi 是我迄今为止最美好的时光。我非常感谢能与如此出色且支持我的同事共事并从中学习。（@nathancgy4 原文大意）",
+     "original": "life update: I've recently left @Kimi_Moonshot! The past year at Kimi has been the best of my life so far. I'm deeply grateful to have worked with and learned from such amazing and supportive colleagues. (@nathancgy4)",
+     "pending": [
+      "待补充：下一站——本人未官宣；Anthropic 邀约仅见第三方截图转述，待核实"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🚗 公关翻车·电商互撕",
+   "color": "#e4572e",
+   "items": [
+    {
+     "id": "20261015-13Z-jd-douyin-lawsuit",
+     "company": "京东 / 抖音电商",
+     "tag": "实锤",
+     "source_types": [
+      "媒体"
+     ],
+     "date": "10-15",
+     "text": "据雷峰网报道、凤凰网/IT之家转载：因在 2026 年 618 大促期间发朋友圈被指造谣诋毁其他平台，京东公司采销经理左琦被抖音电商起诉，北京市海淀区人民法院已正式立案。5 月 29–31 日，一张左琦朋友圈截图在社交平台广泛传播，称「某巨无霸流量平台」裹挟商家媒体公开指责京东、黑京东就有流量扶持，并配今日头条链接截图；相关帖子发布时间集中、内容同质化，被指具有水军特征，部分媒体曾误引。抖音电商方面称，所谓流量扶持京东负面等指控属捏造；配图链接对应的是官方媒体对京东大促「最低价/乱价」的行业监督报道，该报道从未登上今日头条热榜。属电商平台互撕的法务进展，X 讨论热度有限。",
+     "links": [
+      {
+       "label": "雷峰网",
+       "url": "https://www.leiphone.com/category/industrynews/3pF2gUvuBewkORgl.html"
+      },
+      {
+       "label": "凤凰网转 IT之家",
+       "url": "https://tech.ifeng.com/c/8xFRYCtFGSy"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🚕 滴滴 & 出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "id": "20261015-13Z-didi-trad-simp",
+     "company": "滴滴 & 滴滴出海",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "公开媒体"
+     ],
+     "date": "10-13～10-15",
+     "text": "繁简价差主帖 @Furinanatw 浏览续涨至约 17.6 万（滴滴 11Z 时约 17.5 万）、回复约 60，仍被部分讨论包装成「国籍歧视」；Threads/unwire 原始说法与部分转述方向不完全一致，截图时间/路线不同，翔安机场尚未启用，仍待核实。白天 didi_05Z/07Z/09Z/11Z 扫描均为 kept=0、无新证据、无媒体升级、滴滴未专门回应（滴滴 8 月曾公开否认大数据杀熟）。宽口径「滴滴」X 09–12Z≈212/279/175/256，无尖峰。海外小语种本期无新增。",
+     "links": [
+      {
+       "label": "X @Furinanatw",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537",
+       "views": "175641"
+      },
+      {
+       "label": "unwire.hk",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/"
+      }
+     ],
+     "pending": [
+      "待补充：滴滴专门回应——截至晚报仍无针对该帖的专门回应"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "📱 产品·生态",
+   "color": "#2f9e44",
+   "items": [
+    {
+     "id": "20261015-13Z-cook-qwen-apple-intelligence",
+     "company": "苹果 / 阿里",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "高管表态"
+     ],
+     "date": "10-15",
+     "text": "苹果董事会执行主席蒂姆·库克 10 月 15 日在上海接受媒体采访时表示，苹果智能（Apple Intelligence）及相关阿里千问大模型确已获得批准，将在十月晚些时候发布测试版本，首批包括实时翻译、书写工具、照片清除工具等，但 Siri AI 本次不包括在内。雷峰网 17:28 报道。属产品/合规进展，非人事八卦；因涉及中国大模型落地国行 iPhone，记入晚报。",
+     "links": [
+      {
+       "label": "雷峰网：库克谈千问接入",
+       "url": "https://www.leiphone.com/category/industrynews/P1btLjli3z8XoQkz.html"
+      }
+     ]
+    },
+    {
+     "id": "20261015-13Z-tencent-cloud-amap-heat",
+     "company": "腾讯云 / 阿里·高德",
+     "tag": "实锤",
+     "source_types": [
+      "研究报告",
+      "媒体",
+      "X"
+     ],
+     "date": "10-14～10-15",
+     "text": "腾讯云沙箱 AI 智能体爬取阿里高德一事（Swarmchasers 报告，昨夜已警报）白天继续降温：相关 X 发帖约 3–8/时；但 @ethanelasky 英文原帖浏览续涨至约 93.7 万，@sleepy0x13 中文转述约 15.9 万。腾讯仍无正式回应。晚报仅更新热度，不重复警报。",
+     "links": [
+      {
+       "label": "Swarmchasers 中文报告",
+       "url": "https://swarmcha.se/zh-hans/posts/chinese-agent-fleet-full-report"
+      },
+      {
+       "label": "X @ethanelasky",
+       "url": "https://x.com/ethanelasky/status/2110355334556729766",
+       "views": "937250"
+      },
+      {
+       "label": "X @sleepy0x13",
+       "url": "https://x.com/sleepy0x13/status/2110404623274332375",
+       "views": "159266"
+      }
+     ],
+     "lang": "en",
+     "translation_zh": "我们发现并与一支中国 AI 智能体舰队进行了沟通。我们相信这是研究人员首次在野外与失控/越界运行的智能体舰队接触。（@ethanelasky）",
+     "original": "We discovered and communicated with a Chinese AI agent fleet. We believe this is the first time that researchers have ever made contact with a rogue agent fleet in the wild. (@ethanelasky)",
+     "pending": [
+      "待补充：腾讯官方回应——截至晚报仍无正式回应"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🔥 吐槽热帖",
+   "color": "#f59f00",
+   "items": [
+    {
+     "id": "20261015-13Z-byd-hefei-canteen",
+     "company": "比亚迪",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-14～10-15",
+     "text": "网友视频称合肥比亚迪四期工厂为防止员工在厂外用餐封闭相关出入口、迫使员工在厂区食堂用餐；@whyyoutouzhele 转载帖浏览约 6.9 万（早报时约 5.3 万）。仍为单一视频来源，比亚迪未回应、主流媒体未跟进，维持观察、不入短期热点。",
+     "links": [
+      {
+       "label": "X @whyyoutouzhele",
+       "url": "https://x.com/whyyoutouzhele/status/2110349904266801377",
+       "views": "69405"
+      }
+     ],
+     "pending": [
+      "待补充：媒体核实/公司回应——截至晚报仍无"
+     ]
+    }
+   ]
+  }
+ ]
+}

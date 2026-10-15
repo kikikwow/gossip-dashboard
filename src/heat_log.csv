@@ -604,3 +604,38 @@ timestamp_utc,topic,metric,value,source
 2026-10-15T11:52:00Z,滴滴繁简价差,x_post_views,175156,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-15T11:52:00Z,滴滴繁简价差,x_post_replies,59,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-15T11:52:00Z,滴滴繁简价差,x_sample_post,175156,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T12:58:00Z,DeepSeek网页/API大面积中断,x_hourly_posts_09Zto12Z,126|111|64|85,X q=DeepSeek (故障 OR 中断 OR 补偿 OR outage OR 宕机); 12Z partial to ~12:58
+2026-10-15T12:58:00Z,DeepSeek网页/API大面积中断,weibo_rank,7,DeepSeek故障补偿|305088|soso.re/weibo ~20:50 CST
+2026-10-15T12:58:00Z,DeepSeek网页/API大面积中断,x_sample_post,6772,https://x.com/fkysly/status/2110655770199015903
+2026-10-15T12:58:00Z,DeepSeek网页/API大面积中断,x_sample_post,793,https://x.com/xiax0603/status/2110678770051142062
+2026-10-15T12:58:00Z,腾讯云AI智能体爬高德,x_hourly_posts_09Zto12Z,6|8|8|3|7,X q=(腾讯云 OR 腾讯) (高德 OR Swarmchasers OR 智能体); 09-12 incl partial
+2026-10-15T12:58:00Z,腾讯云AI智能体爬高德,x_sample_post,937250,https://x.com/ethanelasky/status/2110355334556729766
+2026-10-15T12:58:00Z,腾讯云AI智能体爬高德,x_sample_post,159266,https://x.com/sleepy0x13/status/2110404623274332375
+2026-10-15T12:58:00Z,懂车帝被曝邀约黑尊界,x_hourly_posts_09Zto12Z,25|21|17|19|23,X q=(懂车帝 OR 尊界) (黑 OR 邀约 OR 刹车 OR 否认)
+2026-10-15T12:58:00Z,懂车帝被曝邀约黑尊界,x_sample_post,36716,https://x.com/LZRationalnvest/status/2110567828155990491
+2026-10-15T12:58:00Z,豆包手机助手SAEP151款拒绝,x_hourly_posts_09Zto12Z,9|7|6|6|6,X q=(豆包 OR Doubao) (SAEP OR 手机助手 OR 代操作 OR 拒绝); removed from short-term
+2026-10-15T12:58:00Z,豆包手机助手SAEP151款拒绝,x_sample_post,342325,https://x.com/_FORAB/status/2110362974947037321
+2026-10-15T12:58:00Z,腾讯绿泡泡对战红果短剧,x_hourly_posts_09Zto12Z,48|37|23|50|38,X q=(绿泡泡 OR 红果) (短剧 OR 下架 OR 余茵 OR 乖乖女); evening rebound
+2026-10-15T12:58:00Z,腾讯绿泡泡对战红果短剧,weibo_rank,0,not_in_top50|soso.re/weibo ~20:50 CST
+2026-10-15T12:58:00Z,腾讯绿泡泡对战红果短剧,x_sample_post,27623,https://x.com/_FORAB/status/2110650149697708353
+2026-10-15T12:58:00Z,腾讯绿泡泡对战红果短剧,x_sample_post,152553,https://x.com/_FORAB/status/2110319029797916887
+2026-10-15T12:58:00Z,月之暗面陈广宇离职,x_hourly_posts_09Zto12Z,21|21|22|24,X q=(陈广宇 OR 陈光宇) (月之暗面 OR Kimi OR Anthropic OR 离职); new short-term
+2026-10-15T12:58:00Z,月之暗面陈广宇离职,x_sample_post,337025,https://x.com/nathancgy4/status/2110522061953327565
+2026-10-15T12:58:00Z,月之暗面陈广宇离职,x_sample_post,99065,https://x.com/0xLogicrw/status/2110575510728347889
+2026-10-15T12:58:00Z,月之暗面陈广宇离职,x_sample_post,45538,https://x.com/xiax0603/status/2110666234064986582
+2026-10-15T12:58:00Z,滴滴繁简价差,x_post_views,175641,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T12:58:00Z,滴滴繁简价差,x_post_replies,60,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T12:58:00Z,滴滴繁简价差,x_sample_post,175641,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T13:05:00Z,传音控股港股上市,x_posts_01_12Z,166,x:get_posts_counts_recent query=传音 OR 02636 OR Transsion
+2026-10-15T13:05:00Z,传音控股港股上市,x_sample_post,504,https://x.com/HKEXGroup/status/2110581152671203747
+2026-10-15T13:05:00Z,传音控股港股上市,x_sample_post,2,https://x.com/agentladle/status/2110597630791475225
+2026-10-15T13:05:00Z,传音控股港股上市,hk_close_chg_pct,-5.72,https://www.thepaper.cn/newsDetail_forward_34256830
+2026-10-15T13:05:00Z,茶百道 IPO 操纵停牌,x_posts_01_12Z,49,x:get_posts_counts_recent query=茶百道 OR 02555
+2026-10-15T13:05:00Z,茶百道 IPO 操纵停牌,x_sample_post,3680,https://x.com/wufantouzi/status/2110698491144233337
+2026-10-15T13:05:00Z,茶百道 IPO 操纵停牌,x_sample_post,7612,https://x.com/4ki4/status/2110582424476545156
+2026-10-15T13:05:00Z,Michael Burry中概,x_post_views,123215,https://x.com/burrytracker/status/2110368123291423113
+2026-10-15T13:05:00Z,Michael Burry中概,x_sample_post,123215,https://x.com/burrytracker/status/2110368123291423113
+2026-10-15T13:05:00Z,滴滴繁简价差,x_post_views,175645,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T13:05:00Z,滴滴繁简价差,x_post_replies,60,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T13:05:00Z,滴滴繁简价差,x_sample_post,175645,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T13:05:00Z,阿根廷罗萨里奥DiDi,x_sample_post,174,https://x.com/Cadena3_Rosario/status/2110645357403074599
