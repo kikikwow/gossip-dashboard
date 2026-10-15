@@ -400,35 +400,39 @@
       "recorded_at": "2026-10-15T00:54:00Z"
     },
     "Michael_Burry中概仓位": {
-      "summary": "市场追踪账号披露 Michael Burry 相关中概/中国资产仓位变动的讨论热帖。属美股中概侧市场八卦线索，非国内大厂人事内幕；具体持仓以原文披露为准，未独立核实交易细节。",
-      "credibility": "待核实",
+      "summary": "Michael Burry披露加仓比亚迪并持有京东、腾讯、美团、海底捞等港股/中概，同时对纳指相关敞口偏空；暂不回补阿里。属投资者持仓八卦扩散。",
+      "credibility": "实锤",
       "event_time": "2026-10-14",
       "sources": [
         {
-          "label": "X @burrytracker 代表帖",
+          "label": "X @burrytracker",
           "url": "https://x.com/burrytracker/status/2110368123291423113"
-        }
-      ],
-      "recorded_at": "2026-10-15T00:54:00Z",
-      "pending": [
-        "待补充：原始持仓披露文件交叉核验——仅见转发/追踪账号摘要"
-      ]
-    },
-    "传音控股港股上市": {
-      "summary": "传音控股（Transsion）港股 IPO/暗盘相关讨论与行情跟踪。属资本市场上市动态，不是互联网大厂内部八卦；暗盘价格与开盘表现以券商/行情源为准。",
-      "credibility": "统计",
-      "event_time": "2026-10-14",
-      "sources": [
-        {
-          "label": "经济通 IPO 资料",
-          "url": "https://www.etnet.com.hk/www/tc/stocks/ipo-info.php?code=02636"
         },
         {
-          "label": "X 暗盘讨论代表帖",
-          "url": "https://x.com/dingdong_world/status/2110378409486619069"
+          "label": "Benzinga",
+          "url": "https://www.benzinga.com/etfs/sector-etfs/26/10/62370419/michael-burry-buys-china-stocks-while-shorting-nasdaq-these-etfs-capture-his-bet"
         }
       ],
-      "recorded_at": "2026-10-15T00:54:00Z"
+      "recorded_at": "2026-10-15T00:57:00Z"
+    },
+    "传音控股港股上市": {
+      "summary": "传音控股（02636.HK）于2026-10-15在港交所挂牌，发行价35.30港元；暗盘已破发约1.5%–2.1%。非洲/新兴市场手机出海标的登录港股，形成A+H。截稿时首日开盘价待补充。",
+      "credibility": "实锤",
+      "event_time": "2026-10-15",
+      "sources": [
+        {
+          "label": "港交所交易安排",
+          "url": "https://www.hkex.com.hk/chi/market/sec_tradinfo/tradarng/tradarng_news/currentmonth/c2636a_261013.htm"
+        },
+        {
+          "label": "凤凰网暗盘",
+          "url": "https://finance.ifeng.com/c/8xEA0LE183d"
+        }
+      ],
+      "recorded_at": "2026-10-15T00:57:00Z",
+      "pending": [
+        "待补充：首日开盘价——截稿时尚未稳定"
+      ]
     },
     "传音控股港股IPO": {
       "summary": "传音控股（Transsion）港股 IPO/暗盘相关讨论与行情跟踪。属资本市场上市动态，不是互联网大厂内部八卦；暗盘价格与开盘表现以券商/行情源为准。",
@@ -447,79 +451,32 @@
       "recorded_at": "2026-10-15T00:54:00Z"
     },
     "金龙指数HXC_1014": {
-      "summary": "纳斯达克金龙中国指数（HXC）2026-10-14 行情记录行，用于美股中概简报热度对照。这是指数涨跌统计，不是单一公司八卦事件。",
+      "summary": "2026-10-14美股收盘，纳斯达克中国金龙指数收5660.10点，跌1.39%；理想、蔚来、小鹏、B站、富途等多只中概下跌，阿里小幅上涨。隔夜美股受CPI超预期拖累。",
       "credibility": "统计",
       "event_time": "2026-10-14",
       "sources": [
         {
-          "label": "Investing.com 金龙中国指数历史数据",
+          "label": "Investing金龙历史",
           "url": "https://cn.investing.com/indices/nq-golden-dragon-china-historical-data"
         }
       ],
-      "recorded_at": "2026-10-15T00:54:00Z"
+      "recorded_at": "2026-10-15T00:57:00Z"
+    },
+    "茶百道停牌跟进": {
+      "summary": "茶百道（02555.HK）因IPO涉嫌人为操纵被证监会停牌后，10-14晚公司公告配合调查、业务正常、复牌另行通知；恒生指数公司宣布10-23起将其从相关指数剔除。",
+      "credibility": "实锤",
+      "event_time": "2026-10-14",
+      "sources": [
+        {
+          "label": "每经网",
+          "url": "https://www.nbd.com.cn/articles/2026-10-14/4604668.html"
+        },
+        {
+          "label": "证监会26PR168",
+          "url": "https://apps.sfc.hk/edistributionWeb/gateway/TC/news-and-announcements/news/doc?refNo=26PR168"
+        }
+      ],
+      "recorded_at": "2026-10-15T00:57:00Z"
     }
-  },
-  "传音控股港股上市": {
-    "summary": "传音控股（02636.HK）于2026-10-15在港交所挂牌，发行价35.30港元；暗盘已破发约1.5%–2.1%。非洲/新兴市场手机出海标的登录港股，形成A+H。截稿时首日开盘价待补充。",
-    "credibility": "实锤",
-    "event_time": "2026-10-15",
-    "sources": [
-      {
-        "label": "港交所交易安排",
-        "url": "https://www.hkex.com.hk/chi/market/sec_tradinfo/tradarng/tradarng_news/currentmonth/c2636a_261013.htm"
-      },
-      {
-        "label": "凤凰网暗盘",
-        "url": "https://finance.ifeng.com/c/8xEA0LE183d"
-      }
-    ],
-    "recorded_at": "2026-10-15T00:57:00Z",
-    "pending": [
-      "待补充：首日开盘价——截稿时尚未稳定"
-    ]
-  },
-  "Michael_Burry中概仓位": {
-    "summary": "Michael Burry披露加仓比亚迪并持有京东、腾讯、美团、海底捞等港股/中概，同时对纳指相关敞口偏空；暂不回补阿里。属投资者持仓八卦扩散。",
-    "credibility": "实锤",
-    "event_time": "2026-10-14",
-    "sources": [
-      {
-        "label": "X @burrytracker",
-        "url": "https://x.com/burrytracker/status/2110368123291423113"
-      },
-      {
-        "label": "Benzinga",
-        "url": "https://www.benzinga.com/etfs/sector-etfs/26/10/62370419/michael-burry-buys-china-stocks-while-shorting-nasdaq-these-etfs-capture-his-bet"
-      }
-    ],
-    "recorded_at": "2026-10-15T00:57:00Z"
-  },
-  "茶百道停牌跟进": {
-    "summary": "茶百道（02555.HK）因IPO涉嫌人为操纵被证监会停牌后，10-14晚公司公告配合调查、业务正常、复牌另行通知；恒生指数公司宣布10-23起将其从相关指数剔除。",
-    "credibility": "实锤",
-    "event_time": "2026-10-14",
-    "sources": [
-      {
-        "label": "每经网",
-        "url": "https://www.nbd.com.cn/articles/2026-10-14/4604668.html"
-      },
-      {
-        "label": "证监会26PR168",
-        "url": "https://apps.sfc.hk/edistributionWeb/gateway/TC/news-and-announcements/news/doc?refNo=26PR168"
-      }
-    ],
-    "recorded_at": "2026-10-15T00:57:00Z"
-  },
-  "金龙指数HXC_1014": {
-    "summary": "2026-10-14美股收盘，纳斯达克中国金龙指数收5660.10点，跌1.39%；理想、蔚来、小鹏、B站、富途等多只中概下跌，阿里小幅上涨。隔夜美股受CPI超预期拖累。",
-    "credibility": "统计",
-    "event_time": "2026-10-14",
-    "sources": [
-      {
-        "label": "Investing金龙历史",
-        "url": "https://cn.investing.com/indices/nq-golden-dragon-china-historical-data"
-      }
-    ],
-    "recorded_at": "2026-10-15T00:57:00Z"
   }
 }
