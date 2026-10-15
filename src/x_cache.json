@@ -1,6 +1,6 @@
 {
  "source": "https://api.fxtwitter.com/status/{id}",
- "fetched_at": "2026-10-15T01:16:42Z",
+ "fetched_at": "2026-10-15T02:13:34Z",
  "note": "静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。",
  "posts": {
   "2106320822444949760": {
@@ -2094,6 +2094,21 @@
    "bookmarks": 0,
    "url": "https://x.com/Andreyzzzx/status/2110537927872975172",
    "fetched_at": "2026-10-15T01:16:42Z"
+  },
+  "2110542004602146876": {
+   "status": "ok",
+   "text": "@0xTheo520 繁体字在滴滴眼里等于有钱人？",
+   "author": "@LeotaAlysh40849",
+   "name": "深山老猴",
+   "created_at": "2026-10-15T01:23:20Z",
+   "views": 12,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/LeotaAlysh40849/status/2110542004602146876",
+   "fetched_at": "2026-10-15T02:13:34Z"
   }
  }
 }

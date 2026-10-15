@@ -502,3 +502,7 @@ timestamp_utc,topic,metric,value,source
 2026-10-15T01:15:00Z,滴滴繁简价差,x_sample_post,86328,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-15T01:15:00Z,滴滴,x_sample_post,86328,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-15T01:15:00Z,滴滴,x_hourly_post_count_22to01Z,91|108|138|41,"X q=滴滴 OR 滴滴出行 OR ""DiDi Global"" OR ""Didi Chuxing""; 01Z partial to 01:14; morning noise"
+2026-10-15T02:15:00Z,滴滴繁简价差,x_post_views,99698,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T02:15:00Z,滴滴繁简价差,x_sample_post,99698,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T02:15:00Z,滴滴,x_sample_post,99698,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T02:15:00Z,滴滴,x_hourly_post_count_22to02Z,91|108|138|137|40,"X q=滴滴 OR 滴滴出行 OR ""DiDi Global"" OR ""Didi Chuxing""; 02Z partial to 02:11; morning noise"

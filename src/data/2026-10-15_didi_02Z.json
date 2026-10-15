@@ -1,0 +1,125 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-15T02:15:00Z",
+ "fired_at_utc": "2026-10-15T02:10:19Z",
+ "scanned_at_utc": "2026-10-15T02:15:00Z",
+ "beijing_time": "2026-10-15 10:15 Asia/Shanghai",
+ "edition_date": "2026-10-15",
+ "window": {
+  "start_utc": "2026-10-15T01:15:00Z",
+  "end_utc": "2026-10-15T02:15:00Z",
+  "note": "自上轮 01:15Z（北京时间 09:15）以来约 1 小时；Tier1 + Tier2 slot1（日本/澳新/埃及）；Tier3 跳过（当日已在 00Z 跑过）"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无滴滴本体新的可核验八卦/人事/监管/诉讼/财报/公司回应。Tier1 八组 X：CN gossip/HK/MX/EN 0 帖；CN price 仅 1 条低浏览回复（11 次）复述繁简价差，未达门槛；BR gossip 仍是上轮已拒个人 99food+demissão 生活帖（51 浏览）。Slot1 JP/AU/EG X 全 0。繁简主帖 @Furinanatw 浏览 86328→99698（+13370，回复 29→33），仍无新证据/媒体升级/滴滴专门回应。Web：CN 裁员/繁简/港牌照均为旧闻；BR 99 推出餐厅 SaaS「Zesto」（10-14 PEGN，产品发布非八卦，不报警）；JP 旭川机场/南城联动已在 10-14 覆盖；AU/EG 无新投诉报道。RSS 新匹配 1 条非滴滴；微博热搜镜像前若干条无滴滴/花小猪/程维/网约车/打车。",
+ "sections": [
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "公开媒体",
+      "RSS",
+      "微博镜像"
+     ],
+     "date": "10-15 10:15",
+     "text": "本期滴滴本体无新动态。扫描窗口 01:15Z–02:15Z（北京时间 10-15 09:15 至 10:15）。Tier1 全量 + Tier2 slot1（日本 DiDiモビリティ / 澳新 / 埃及）未见新的公司八卦、人事、监管、诉讼或财务线索。繁简价差主帖 @Furinanatw 浏览续涨至 99698（上轮 86328，本窗约 +1.3 万），回复 33，仍是同一组截图，没有新证据，也没有新的媒体报道，滴滴未专门回应；截图时间与路线不同、翔安机场尚未启用，仍属待核实。海外小语种线索：本期无新增（slot1 窗口内日语/英语/阿语检索无达到报警门槛的新进展；10-14 已覆盖的旭川机场配车、南城市联动不重复报警）。另见候选：巴西 99 于 10-14 发布餐厅 SaaS「Zesto」（产品向，非人事/监管爆点，本轮不报警）。",
+     "links": [
+      {
+       "label": "@Furinanatw 繁简价差主帖（99698 浏览）",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      },
+      {
+       "label": "unwire.hk 报道（繁中）",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/"
+      },
+      {
+       "label": "凤凰网：滴滴 8 月否认大数据杀熟",
+       "url": "https://tech.ifeng.com/c/8vxO0g8gk5L"
+      }
+     ],
+     "id": "20261015-didi-02Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "22Z": 91,
+   "23Z": 108,
+   "00Z": 138,
+   "01Z": 137,
+   "02Z_partial_to0211": 40,
+   "query": "滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"",
+   "note": "晨间撞词噪音为主；01Z 小时计数与 00Z 持平偏高"
+  },
+  "trad_simp_price_x": {
+   "posts_in_tier1_window": 1,
+   "kept_for_alert": 0,
+   "main_post_views": 99698,
+   "prev_views": 86328,
+   "main_post_replies": 33,
+   "note": "主帖续涨约 +13370，回复 29→33，无新事实、无回应；另见低浏览回复帖 11 impressions"
+  },
+  "tier1_x_hits_kept": 0,
+  "slot1_x_hits_kept": 0,
+  "weibo_didi_on_list": null
+ },
+ "candidates": [
+  {
+   "topic": "X CN price @LeotaAlysh40849 回复复述繁简",
+   "verdict": "reject_below_engagement",
+   "why": "印象 11，仅一句追问，无新证据",
+   "url": "https://x.com/LeotaAlysh40849/status/2110542004602146876"
+  },
+  {
+   "topic": "X BR @gleymalvadeza 个人 99food+demissão 生活帖",
+   "verdict": "reject_not_company_news",
+   "why": "印象 51，个人消费后辞职吐槽，非 99/DiDi 公司人事或监管（上轮已拒）",
+   "url": "https://x.com/gleymalvadeza/status/2110526384678342716"
+  },
+  {
+   "topic": "繁简价差 @Furinanatw 续涨",
+   "verdict": "already_covered_views_only",
+   "why": "86328→99698，回复 33，无新证据/媒体/回应，不报警",
+   "url": "https://x.com/Furinanatw/status/2110289680595886537"
+  },
+  {
+   "topic": "99 发布餐厅 SaaS Zesto（PEGN 10-14）",
+   "verdict": "reject_product_not_gossip",
+   "why": "10-14 Tech Summit 产品发布，非本窗八卦/人事/监管爆点，不报警；记入候选备查",
+   "url": "https://revistapegn.globo.com/startups/noticia/2026/10/99-entra-na-disputa-de-softwares-para-restaurantes-com-plataforma-de-ia.ghtml"
+  },
+  {
+   "topic": "JP DiDi 旭川机场/南城市联动",
+   "verdict": "already_covered_old",
+   "why": "10-01/10-13 PR，已在 10-14 多期覆盖，无本窗新发展",
+   "url": "https://prtimes.jp/main/html/rd/p/000000133.000051938.html"
+  }
+ ],
+ "sources_queried": [
+  "X tier1×8 + tier2 slot1×3 + counts×1 + post lookup×1",
+  "WebSearch×8 (tier1×6 + slot1×2)",
+  "RSS fetch_sources（new matching=1，非滴滴）",
+  "微博热搜镜像 soso.re/api/weibo 前列无滴滴关键词",
+  "Tier3 skipped (already ran at 00Z)"
+ ],
+ "x_calls_used": 13,
+ "web_searches": 8,
+ "web_searches_used": 8,
+ "tiers": "tier1 + tier2 slot1",
+ "tiers_ran": [
+  "tier1",
+  "tier2_slot1"
+ ],
+ "slot": 1,
+ "push_needed": true,
+ "push_note": "New 02Z edition (10-15) Tier1+slot1; 繁简 heat 99698; push gossip-dashboard data-only"
+}
