@@ -661,3 +661,60 @@ timestamp_utc,topic,metric,value,source
 2026-10-15T15:00:00Z,月之暗面陈广宇离职,x_posts_hour_12Z,34,x_counts
 2026-10-15T15:00:00Z,月之暗面陈广宇离职,x_posts_hour_14Z,24,x_counts
 2026-10-15T15:00:00Z,懂车帝被曝邀约黑尊界,x_posts_hour_14Z,33,x_counts
+2026-10-15T15:42:00Z,尊界V800刹车踏板·三部门联合调查,weibo_rank,26,https://soso.re/weibo
+2026-10-15T15:42:00Z,尊界V800刹车踏板·三部门联合调查,weibo_heat,254197,https://soso.re/weibo
+2026-10-15T15:42:00Z,尊界回应三部门联合调查,weibo_rank,30,https://soso.re/weibo
+2026-10-15T15:42:00Z,尊界回应三部门联合调查,weibo_heat,209077,https://soso.re/weibo
+2026-10-15T15:42:00Z,DeepSeek网页/API大面积中断,weibo_rank,0,not_in_top52|soso.re/weibo ~23:34 CST
+2026-10-15T15:42:00Z,腾讯绿泡泡对战红果短剧,weibo_rank,0,not_in_top52|soso.re/weibo ~23:34 CST
+2026-10-15T15:42:00Z,懂车帝被曝邀约黑尊界,weibo_rank,0,not_in_top52|soso.re/weibo ~23:34 CST
+2026-10-15T15:42:00Z,尊界V800刹车踏板·三部门联合调查,x_posts_hour_12Z,16,x_counts:尊界 (刹车 OR 三部门 OR 踏板)
+2026-10-15T15:42:00Z,尊界V800刹车踏板·三部门联合调查,x_posts_hour_13Z,23,x_counts
+2026-10-15T15:42:00Z,尊界V800刹车踏板·三部门联合调查,x_posts_hour_14Z,94,x_counts
+2026-10-15T15:42:00Z,尊界V800刹车踏板·三部门联合调查,x_posts_hour_15Z_partial,37,x_counts; 15:00–15:42Z
+2026-10-15T15:42:00Z,尊界V800刹车踏板·三部门联合调查,x_sample_post,6475,https://x.com/TraderS18/status/2110741270394184185
+2026-10-15T15:42:00Z,DeepSeek网页/API大面积中断,x_posts_hour_09Z,125,x_counts:DeepSeek (故障 OR 补偿 OR 中断 OR 宕机 OR outage)
+2026-10-15T15:42:00Z,DeepSeek网页/API大面积中断,x_posts_hour_10Z,111,x_counts
+2026-10-15T15:42:00Z,DeepSeek网页/API大面积中断,x_posts_hour_11Z,64,x_counts
+2026-10-15T15:42:00Z,DeepSeek网页/API大面积中断,x_posts_hour_12Z,86,x_counts
+2026-10-15T15:42:00Z,DeepSeek网页/API大面积中断,x_posts_hour_13Z,71,x_counts
+2026-10-15T15:42:00Z,DeepSeek网页/API大面积中断,x_posts_hour_14Z,61,x_counts
+2026-10-15T15:42:00Z,DeepSeek网页/API大面积中断,x_posts_hour_15Z_partial,25,x_counts; 15:00–15:42Z
+2026-10-15T15:42:00Z,DeepSeek网页/API大面积中断,x_sample_post,8030,https://x.com/fkysly/status/2110655770199015903
+2026-10-15T15:42:00Z,月之暗面陈广宇离职,x_posts_hour_09Z,27,x_counts:(陈广宇 OR 陈光宇 OR nathancgy4)
+2026-10-15T15:42:00Z,月之暗面陈广宇离职,x_posts_hour_10Z,28,x_counts
+2026-10-15T15:42:00Z,月之暗面陈广宇离职,x_posts_hour_11Z,31,x_counts
+2026-10-15T15:42:00Z,月之暗面陈广宇离职,x_posts_hour_12Z,33,x_counts
+2026-10-15T15:42:00Z,月之暗面陈广宇离职,x_posts_hour_13Z,24,x_counts
+2026-10-15T15:42:00Z,月之暗面陈广宇离职,x_posts_hour_14Z,36,x_counts
+2026-10-15T15:42:00Z,月之暗面陈广宇离职,x_posts_hour_15Z_partial,27,x_counts; 15:00–15:42Z
+2026-10-15T15:42:00Z,月之暗面陈广宇离职,x_sample_post,456211,https://x.com/nathancgy4/status/2110522061953327565
+2026-10-15T15:42:00Z,月之暗面陈广宇离职,x_sample_post,122761,https://x.com/0xLogicrw/status/2110575510728347889
+2026-10-15T15:42:00Z,懂车帝被曝邀约黑尊界,x_posts_hour_12Z,14,x_counts:(懂车帝) (黑 OR 邀约 OR 否认 OR 尊界 OR 营收)
+2026-10-15T15:42:00Z,懂车帝被曝邀约黑尊界,x_posts_hour_13Z,18,x_counts
+2026-10-15T15:42:00Z,懂车帝被曝邀约黑尊界,x_posts_hour_14Z,38,x_counts
+2026-10-15T15:42:00Z,懂车帝被曝邀约黑尊界,x_posts_hour_15Z_partial,18,x_counts; 15:00–15:42Z
+2026-10-15T15:42:00Z,懂车帝被曝邀约黑尊界,x_sample_post,40404,https://x.com/LZRationalnvest/status/2110567828155990491
+2026-10-15T15:42:00Z,腾讯绿泡泡对战红果短剧,x_posts_hour_11Z,51,x_counts:(绿泡泡 OR 红果短剧)
+2026-10-15T15:42:00Z,腾讯绿泡泡对战红果短剧,x_posts_hour_12Z,38,x_counts
+2026-10-15T15:42:00Z,腾讯绿泡泡对战红果短剧,x_posts_hour_13Z,19,x_counts
+2026-10-15T15:42:00Z,腾讯绿泡泡对战红果短剧,x_posts_hour_14Z,33,x_counts
+2026-10-15T15:42:00Z,腾讯绿泡泡对战红果短剧,x_posts_hour_15Z_partial,17,x_counts; 15:00–15:42Z
+2026-10-15T15:42:00Z,腾讯绿泡泡对战红果短剧,x_sample_post,34898,https://x.com/_FORAB/status/2110650149697708353
+2026-10-15T15:42:00Z,腾讯绿泡泡对战红果短剧,x_sample_post,154987,https://x.com/_FORAB/status/2110319029797916887
+2026-10-15T15:42:00Z,腾讯云AI智能体爬高德,x_posts_hour_12Z,14,x_counts:(腾讯云 OR Swarmchasers OR ethanelasky) (高德 OR agent OR 智能体)
+2026-10-15T15:42:00Z,腾讯云AI智能体爬高德,x_posts_hour_13Z,23,x_counts
+2026-10-15T15:42:00Z,腾讯云AI智能体爬高德,x_posts_hour_14Z,15,x_counts
+2026-10-15T15:42:00Z,腾讯云AI智能体爬高德,x_posts_hour_15Z_partial,3,x_counts; 15:00–15:42Z
+2026-10-15T15:42:00Z,腾讯云AI智能体爬高德,x_sample_post,1004606,https://x.com/ethanelasky/status/2110355334556729766
+2026-10-15T15:42:00Z,豆包手机助手SAEP151款拒绝,x_posts_hour_12Z,7,x_counts:豆包 (SAEP OR 手机助手 OR 拒绝 OR 151)
+2026-10-15T15:42:00Z,豆包手机助手SAEP151款拒绝,x_posts_hour_13Z,9,x_counts
+2026-10-15T15:42:00Z,豆包手机助手SAEP151款拒绝,x_posts_hour_14Z,8,x_counts
+2026-10-15T15:42:00Z,豆包手机助手SAEP151款拒绝,x_sample_post,359588,https://x.com/_FORAB/status/2110362974947037321
+2026-10-15T15:42:00Z,滴滴繁简价差,x_post_views,176888,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T15:42:00Z,滴滴繁简价差,x_post_replies,60,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T15:42:00Z,滴滴繁简价差,x_sample_post,176888,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T15:42:00Z,滴滴繁简价差,x_keyword_posts_14_15Z,0,x_counts:滴滴 (繁体 OR 简体 OR 价差 OR 国籍歧视 OR 杀熟); views-only
+2026-10-15T15:42:00Z,合肥比亚迪封门逼食堂,x_sample_post,70450,https://x.com/whyyoutouzhele/status/2110349904266801377
+2026-10-15T15:42:00Z,传音控股港股上市,x_posts_hour_14Z,16,x_counts:传音 OR 02636 OR Transsion
+2026-10-15T15:42:00Z,传音控股港股上市,x_posts_hour_15Z_partial,6,x_counts

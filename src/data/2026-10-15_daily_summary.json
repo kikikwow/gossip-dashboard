@@ -1,0 +1,552 @@
+{
+ "type": "daily",
+ "title": "大厂八卦每日总结｜2026-10-15",
+ "edition_date": "2026-10-15",
+ "timestamp": "2026-10-15T15:42:00Z",
+ "generated_at": "2026-10-15T15:42:00Z",
+ "fired_at": "2026-10-15T15:42:00Z",
+ "fired_at_beijing": "2026-10-15 23:42",
+ "beijing_note": "覆盖约 2026-10-15 00:00 → 23:42 北京时间",
+ "window": {
+  "start_beijing": "2026-10-15 00:00",
+  "end_beijing": "2026-10-15 23:42"
+ },
+ "lede": "夜里三部门联合调查尊界V800刹车踏板成最大热度；白天DeepSeek先中断再发补偿；陈广宇离职本人确认、Anthropic去向传闻；懂车帝否认黑稿后随主线回流；腾讯云爬高德与豆包SAEP已移出短期。",
+ "heat_snapshot": {
+  "measured_at_utc": "2026-10-15T15:42:00Z",
+  "note": "X hourly counts; 15Z bucket covers first ~42 min only; weibo soso.re 23:34 Beijing",
+  "尊界_hourly_12_13_14_15Z": [
+   16,
+   23,
+   94,
+   37
+  ],
+  "尊界_weibo": {
+   "rank": 26,
+   "heat": 254197,
+   "peak_rank": 1,
+   "peak_heat": 2682299
+  },
+  "尊界回应_weibo": {
+   "rank": 30,
+   "heat": 209077
+  },
+  "尊界_@TraderS18_views": 6475,
+  "DeepSeek_hourly_09to15Z": [
+   125,
+   111,
+   64,
+   86,
+   71,
+   61,
+   25
+  ],
+  "DeepSeek_weibo_compensation": "out_of_top52_at_2334",
+  "DeepSeek_@fkysly_views": 8030,
+  "陈广宇_hourly_09to15Z": [
+   27,
+   28,
+   31,
+   33,
+   24,
+   36,
+   27
+  ],
+  "陈广宇_views": {
+   "@nathancgy4": 456211,
+   "@0xLogicrw": 122761
+  },
+  "懂车帝_hourly_12_13_14_15Z": [
+   14,
+   18,
+   38,
+   18
+  ],
+  "懂车帝_@LZRationalnvest_views": 40404,
+  "绿泡泡_hourly_11_12_13_14_15Z": [
+   51,
+   38,
+   19,
+   33,
+   17
+  ],
+  "绿泡泡_weibo": "out_of_top52",
+  "绿泡泡_views": {
+   "@_FORAB_激励": 154987,
+   "@_FORAB_禁用词": 34898
+  },
+  "腾讯云_hourly_12_13_14_15Z": [
+   14,
+   23,
+   15,
+   3
+  ],
+  "腾讯云_@ethanelasky_views": 1004606,
+  "豆包SAEP_hourly_12_13_14Z": [
+   7,
+   9,
+   8
+  ],
+  "豆包SAEP_@_FORAB_views": 359588,
+  "滴滴繁简_@Furinanatw_views": 176888,
+  "滴滴繁简_replies": 60,
+  "比亚迪食堂_@whyyoutouzhele_views": 70450,
+  "传音_hourly_14_15Z": [
+   16,
+   6
+  ]
+ },
+ "short_term_updates": {
+  "kept": [
+   {
+    "name": "尊界V800刹车踏板·三部门联合调查",
+    "trend": "📉"
+   },
+   {
+    "name": "DeepSeek网页/API大面积中断",
+    "trend": "📉"
+   },
+   {
+    "name": "月之暗面陈广宇离职",
+    "trend": "➡️"
+   },
+   {
+    "name": "懂车帝被曝邀约黑尊界",
+    "trend": "📈"
+   },
+   {
+    "name": "腾讯绿泡泡对战红果短剧",
+    "trend": "📉"
+   }
+  ],
+  "added_today_earlier": [
+   {
+    "name": "尊界V800刹车踏板·三部门联合调查",
+    "at": "14:59Z"
+   },
+   {
+    "name": "月之暗面陈广宇离职",
+    "at": "12:58Z晚报"
+   },
+   {
+    "name": "DeepSeek网页/API大面积中断",
+    "at": "02:56Z"
+   }
+  ],
+  "removed": [],
+  "previously_removed_today": [
+   "腾讯云AI智能体爬高德（14:59Z）",
+   "豆包手机助手SAEP151款拒绝（晚报12:58Z）"
+  ],
+  "watch_not_added": [
+   {
+    "name": "合肥比亚迪封门逼食堂",
+    "reason": "单一视频来源，浏览约7.0万，无媒体/公司回应"
+   },
+   {
+    "name": "传音控股港股破发",
+    "reason": "中概/出海线，观察1–2日"
+   },
+   {
+    "name": "抖音电商诉京东采销",
+    "reason": "法务线已入晚报，X热度不高"
+   }
+  ],
+  "green_bubble_note": "微博仍出前50，X晚间19–51/时余温、无新公司动作；暂保留，明日若持续低迷再移出"
+ },
+ "alert_summary": {
+  "alerts_sent": 5,
+  "detail": [
+   {
+    "routine": "快讯 2350Z（昨夜跨日）",
+    "topics": [
+     "腾讯云AI智能体爬高德"
+    ],
+    "delivered_beijing": "约07:50"
+   },
+   {
+    "routine": "快讯 0252Z",
+    "topics": [
+     "DeepSeek网页/API大面积中断"
+    ]
+   },
+   {
+    "routine": "快讯 0852Z",
+    "topics": [
+     "懂车帝否认黑尊界邀约与245亿营收"
+    ]
+   },
+   {
+    "routine": "快讯 1152Z",
+    "topics": [
+     "DeepSeek官方补偿"
+    ]
+   },
+   {
+    "routine": "快讯 1459Z",
+    "topics": [
+     "尊界V800刹车踏板·三部门联合调查"
+    ]
+   }
+  ],
+  "no_alert": [
+   "快讯 0552Z",
+   "滴滴 23Z–13Z 各轮（kept=0 / alert_worthy=false）",
+   "大厂早报/晚报、美股中概早报/晚报（不重复警报已送达项）"
+  ],
+  "daily_summary_alert_worthy": false,
+  "note": "ALERTs already delivered to user — do not re-alert"
+ },
+ "sources_ingested": [
+  "2026-10-15_bigtech_01Z.json",
+  "2026-10-15_bigtech_13Z.json",
+  "2026-10-15_adr_01Z.json",
+  "2026-10-15_adr_13Z.json",
+  "2026-10-15_kuaixun_2350Z.json",
+  "2026-10-15_kuaixun_0252Z.json",
+  "2026-10-15_kuaixun_0552Z.json",
+  "2026-10-15_kuaixun_0852Z.json",
+  "2026-10-15_kuaixun_1152Z.json",
+  "2026-10-15_kuaixun_1459Z.json",
+  "2026-10-15_didi_23Z..13Z.json"
+ ],
+ "markdown_file": "data/2026-10-15_daily_summary.md",
+ "sections": [
+  {
+   "title": "🔥 热度榜",
+   "color": "#dc2626",
+   "items": [
+    {
+     "id": "20261015-daily-zunjie-sandepartment",
+     "company": "华为·尊界 / 江淮",
+     "tag": "实锤",
+     "source_types": [
+      "官方",
+      "微博",
+      "媒体",
+      "X"
+     ],
+     "date": "10-15",
+     "text": "工信部、中央网信办、市场监管总局成立联合调查组核查尊界V800刹车踏板支架断裂；尊界表态配合。微博曾#1≈268万，23:34回落至#26≈25.4万（回应#30≈20.9万）📉；X 尊界刹车/三部门 14Z=94、15Z前42分钟37。14:59Z已警报。",
+     "links": [
+      {
+       "label": "中国证券报/工信微报",
+       "url": "https://www.cs.com.cn/xwzx/01/2026/10/15/detail_2026101510044905.html"
+      },
+      {
+       "label": "IT之家",
+       "url": "https://www.ithome.com/1/013/657.htm"
+      },
+      {
+       "label": "联合早报",
+       "url": "https://www.zaobao.com.sg/news/china/story20261015-9844572"
+      },
+      {
+       "label": "微博热搜镜像",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "X @TraderS18",
+       "url": "https://x.com/TraderS18/status/2110741270394184185"
+      }
+     ]
+    },
+    {
+     "id": "20261015-daily-deepseek-outage",
+     "company": "DeepSeek",
+     "tag": "实锤",
+     "source_types": [
+      "官方",
+      "媒体",
+      "微博",
+      "X"
+     ],
+     "date": "10-15",
+     "text": "北京约8:11–13:04网页/API大面积中断后，官方按近7日API消耗赠金全额返还；根因未披露。微博补偿条目曾#7–#9后跌出前52📉；X 09–14Z≈125/111/64/86/71/61。02:52Z与11:52Z已警报。",
+     "links": [
+      {
+       "label": "凤凰网/财联社",
+       "url": "https://news.ifeng.com/c/8xFNuMcEhvB"
+      },
+      {
+       "label": "Status事件页",
+       "url": "https://status.deepseek.com/incidents/7116348214287"
+      },
+      {
+       "label": "V2EX通知原文",
+       "url": "https://www.v2ex.com/t/1249099"
+      },
+      {
+       "label": "X @fkysly",
+       "url": "https://x.com/fkysly/status/2110655770199015903"
+      }
+     ]
+    },
+    {
+     "id": "20261015-daily-chen-guangyu",
+     "company": "月之暗面·Kimi",
+     "tag": "实锤",
+     "source_types": [
+      "本人X",
+      "媒体",
+      "X"
+     ],
+     "date": "10-15",
+     "text": "17岁陈广宇本人宣布离开月之暗面Kimi；下一站Anthropic属截图传闻、本人未官宣。本人帖浏览约45.6万、@0xLogicrw约12.3万；X 09–14Z≈27–36 ➡️。晚报新加入短期。",
+     "links": [
+      {
+       "label": "紫牛新闻/扬子晚报",
+       "url": "https://www.yangtse.com/news/txs/202610/t20261015_402791.html"
+      },
+      {
+       "label": "X @nathancgy4",
+       "url": "https://x.com/nathancgy4/status/2110522061953327565"
+      },
+      {
+       "label": "X @0xLogicrw",
+       "url": "https://x.com/0xLogicrw/status/2110575510728347889"
+      }
+     ]
+    },
+    {
+     "id": "20261015-daily-dongchedi-deny",
+     "company": "字节·懂车帝 / 华为·尊界",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "X"
+     ],
+     "date": "10-15",
+     "text": "懂车帝正式否认「邀约黑尊界」与「245亿营收」（08:52Z已警报）；三部门调查后支线回流，X 14Z=38 📈；@LZRationalnvest约4.0万浏览。邀约截图本身仍属传闻。",
+     "links": [
+      {
+       "label": "X @LZRationalnvest",
+       "url": "https://x.com/LZRationalnvest/status/2110567828155990491"
+      },
+      {
+       "label": "微博热搜镜像",
+       "url": "https://soso.re/weibo"
+      }
+     ]
+    },
+    {
+     "id": "20261015-daily-lvpaopao",
+     "company": "腾讯·微信 / 字节·红果",
+     "tag": "实锤",
+     "source_types": [
+      "微博",
+      "媒体",
+      "X"
+     ],
+     "date": "10-13～10-15",
+     "text": "绿泡泡对标红果；微博全天大部时间不在前50📉；X晚间11–14Z≈51/38/19/33余温；@_FORAB激励帖约15.5万。无新公司动作，暂保留短期。",
+     "links": [
+      {
+       "label": "微博热搜镜像",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "21经济网",
+       "url": "https://www.21jingji.com/article/20261013/herald/9f65eaeb88b0838b77401c49c13829bf.html"
+      },
+      {
+       "label": "X @_FORAB激励",
+       "url": "https://x.com/_FORAB/status/2110319029797916887"
+      },
+      {
+       "label": "X @_FORAB禁用词",
+       "url": "https://x.com/_FORAB/status/2110650149697708353"
+      }
+     ]
+    },
+    {
+     "id": "20261015-daily-didi-fanjian",
+     "company": "滴滴",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-13～10-15",
+     "text": "繁简价差主帖@Furinanatw浏览约17.69万（回复60），仍无公司回应；窄口径新帖近0，属单帖续涨待核实。白天滴滴追踪多轮kept=0。",
+     "links": [
+      {
+       "label": "X @Furinanatw",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      },
+      {
+       "label": "unwire.hk",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/"
+      }
+     ]
+    },
+    {
+     "id": "20261015-daily-tencentcloud-amap",
+     "company": "腾讯云 / 阿里·高德",
+     "tag": "实锤",
+     "source_types": [
+      "研究报告",
+      "媒体",
+      "X"
+     ],
+     "date": "10-14～10-15",
+     "text": "Swarmchasers报告腾讯云沙箱AI Agent对高德2600+次抓取；@ethanelasky浏览约100.5万，但发帖已降至个位数–十余，14:59Z已移出短期📉；腾讯无正式回应。",
+     "links": [
+      {
+       "label": "Swarmchasers中文报告",
+       "url": "https://swarmcha.se/zh-hans/posts/chinese-agent-fleet-full-report"
+      },
+      {
+       "label": "联合早报",
+       "url": "https://www.zaobao.com.sg/news/world/story20261014-9838546"
+      },
+      {
+       "label": "X @ethanelasky",
+       "url": "https://x.com/ethanelasky/status/2110355334556729766"
+      }
+     ]
+    },
+    {
+     "id": "20261015-daily-douyin-jd",
+     "company": "抖音电商 / 京东",
+     "tag": "实锤",
+     "source_types": [
+      "媒体"
+     ],
+     "date": "10-15",
+     "text": "抖音电商起诉京东采销经理左琦朋友圈「黑京东换流量」指控，北京市海淀区人民法院已立案；属电商互撕法务线，X热度不高，晚报Top3。",
+     "links": [
+      {
+       "label": "雷峰网",
+       "url": "https://www.leiphone.com/category/industrynews/3pF2gUvuBewkORgl.html"
+      },
+      {
+       "label": "凤凰网转IT之家",
+       "url": "https://tech.ifeng.com/c/8xFRYCtFGSy"
+      }
+     ]
+    },
+    {
+     "id": "20261015-daily-doubao-saep",
+     "company": "字节·豆包",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "X"
+     ],
+     "date": "10-14～10-15",
+     "text": "151款App拒绝名单无新事实；@_FORAB浏览约36.0万，发帖约6–9/时；晚报已移出短期📉。",
+     "links": [
+      {
+       "label": "第一财经",
+       "url": "https://www.yicai.com/news/103393570.html"
+      },
+      {
+       "label": "X @_FORAB",
+       "url": "https://x.com/_FORAB/status/2110362974947037321"
+      }
+     ]
+    },
+    {
+     "id": "20261015-daily-byd-canteen",
+     "company": "比亚迪",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "网友视频"
+     ],
+     "date": "10-14～10-15",
+     "text": "合肥比亚迪四期封门逼食堂视频帖浏览约7.0万，仍单一来源，无媒体/公司回应，维持观察不进短期。",
+     "links": [
+      {
+       "label": "X @whyyoutouzhele",
+       "url": "https://x.com/whyyoutouzhele/status/2110349904266801377"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🎯 重点追踪",
+   "color": "#2563eb",
+   "items": [
+    {
+     "id": "20261015-daily-focus-didi",
+     "company": "滴滴 & 滴滴出海",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "西班牙语",
+      "媒体"
+     ],
+     "date": "10-15",
+     "text": "全天滴滴两小时追踪多轮kept=0、无新警报。繁简价差主帖浏览约17.69万仍无公司回应（待核实）。海外：阿根廷罗萨里奥司机就Uber/DiDi合法化向市议会施压，要求CUIT与同等条件（西语）。香港牌照申请10-30截止。",
+     "links": [
+      {
+       "label": "X @Furinanatw",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      },
+      {
+       "label": "Rosario3（西语）",
+       "url": "https://www.rosario3.com/informaciongeneral/taxistas-y-remiseros-siguen-con-el-reclamo-contra-la-legalizacion-de-uber-y-didi-piden-igualdad-de-condiciones-20261014-0040.html"
+      },
+      {
+       "label": "Cadena3（西语）",
+       "url": "https://www.cadena3.com/noticia/juntos-rosario/taxistas-se-movilizan-contra-uber-y-didi-en-rosario-ponen-la-tarifa-que-quieren_603259"
+      }
+     ],
+     "lang": "es",
+     "translation_zh": "阿根廷罗萨里奥出租车与礼车司机继续向市议会抗议Uber/DiDi合法化推进方式，要求平台出示阿根廷CUIT、向市政府交付可监管数据，并在车辆标准、计价与司机登记上与出租车同等条件；指低价竞争不公平，并称当地有700余出租车牌照停运。",
+     "original": "Taxistas y remiseros de Rosario volvieron a reclamar ante el Concejo contra la legalización de Uber y DiDi; exigen CUIT, datos para control municipal e igualdad de condiciones (vehículos, tarifas, registro)."
+    },
+    {
+     "id": "20261015-daily-focus-bytedance",
+     "company": "字节跳动",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "X"
+     ],
+     "date": "10-15",
+     "text": "懂车帝否认后随尊界调查回流；豆包SAEP已移出短期；绿泡泡微博出榜缓降；抖音电商诉京东采销左琦海淀立案（晚报Top3）。库克确认国行苹果智能接千问属产品向。",
+     "links": [
+      {
+       "label": "雷峰网：抖音电商诉京东采销",
+       "url": "https://www.leiphone.com/category/industrynews/3pF2gUvuBewkORgl.html"
+      },
+      {
+       "label": "雷峰网：库克/千问",
+       "url": "https://www.leiphone.com/category/industrynews/P1btLjli3z8XoQkz.html"
+      }
+     ]
+    },
+    {
+     "id": "20261015-daily-focus-llm",
+     "company": "中国大模型",
+     "tag": "实锤",
+     "source_types": [
+      "官方",
+      "媒体",
+      "X"
+     ],
+     "date": "10-15",
+     "text": "DeepSeek故障+补偿为白天最大模型事件（根因未披露）；月之暗面陈广宇离职本人确认、Anthropic去向传闻；腾讯云爬高德浏览破百万但已移出短期。传音港股首日−5.72%见中概线。",
+     "links": [
+      {
+       "label": "凤凰网/财联社：DeepSeek补偿",
+       "url": "https://news.ifeng.com/c/8xFNuMcEhvB"
+      },
+      {
+       "label": "紫牛新闻：陈广宇",
+       "url": "https://www.yangtse.com/news/txs/202610/t20261015_402791.html"
+      },
+      {
+       "label": "澎湃：传音首日",
+       "url": "https://www.thepaper.cn/newsDetail_forward_34256830"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
