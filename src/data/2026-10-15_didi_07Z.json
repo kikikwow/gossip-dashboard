@@ -1,0 +1,126 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每两小时）",
+ "routine": "滴滴重点追踪（每两小时）",
+ "timestamp": "2026-10-15T07:34:00Z",
+ "fired_at_utc": "2026-10-15T07:28:07Z",
+ "scanned_at_utc": "2026-10-15T07:34:00Z",
+ "beijing_time": "2026-10-15 15:34 Asia/Shanghai",
+ "edition_date": "2026-10-15",
+ "window": {
+  "start_utc": "2026-10-15T05:30:00Z",
+  "end_utc": "2026-10-15T07:34:00Z",
+  "note": "自上轮 05:32Z（北京时间 13:32）以来约 2 小时；Tier1 + Tier2 slot0（拉美其他国家+金融）；Tier3 跳过（当日已在 00Z 跑过）"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无滴滴本体新的可核验八卦/人事/监管/诉讼/财报/公司回应。Tier1 八组 X（start 05:30Z）全部 0 帖；slot0 三组 X（阿根廷/哥伦比亚/智利/秘鲁/厄瓜多尔、中美加勒比、DiDi 金融，start 6h）全部 0 帖。宽口径「滴滴」X 每小时 256/330 帖，抽样 25 条全为「滴滴」网络俚语回复和成人引流垃圾，与公司无关。繁简主帖 @Furinanatw 浏览 142761→162717（+19956），回复 51→56，无新证据、无媒体升级、滴滴未专门回应。Web：国内裁员/组织调整均为旧闻（2026-03 国际业务裁员传闻、2024-11 张博卸任 CTO）；香港牌照仍未见滴滴正式递交（10-30 截止）；BR 99Food 与 Keeta 的 TJ-SP/Cade 纠纷与 Zesto 发布为窗口前旧闻；MX PROFECO 7 月警示、CDMX 骑手休息站（10-14）为行业性；AR 胡宁上线（10-02）、CL 拉斯孔德斯泥石流免佣（10-09）、CO 网约车立法均已在 10-14 各期记录；金融搜索仅为产品介绍页。RSS 新匹配 4 条均非滴滴；微博热搜镜像无滴滴/花小猪/程维/网约车/打车。",
+ "sections": [
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "公开媒体",
+      "RSS",
+      "微博镜像"
+     ],
+     "date": "10-15 15:34",
+     "text": "本期滴滴本体无新动态。扫描窗口 05:30Z–07:34Z（北京时间 10-15 13:30 至 15:34）。Tier1 全量 + Tier2 slot0（拉美其他国家与滴滴金融）未见新的公司八卦、人事、监管、诉讼或财务线索；宽口径「滴滴」X 帖量每小时 256/330，抽样全是网络俚语回复和引流垃圾，与公司无关。繁简价差主帖 @Furinanatw 浏览续涨至 162717（上轮 142761，约 +2 万），回复 56，仍是同一组截图，没有新证据或新媒体报道，滴滴未专门回应；滴滴 8 月曾公开否认大数据杀熟，截图时间与路线不同、翔安机场尚未启用，仍属待核实。香港网约车牌照申请 10-30 截止，暂未见滴滴正式递交的公开消息。海外小语种线索：本期无窗口内新增；拉美近期本地报道（阿根廷胡宁上线、智利拉斯孔德斯泥石流期间免佣并限制动态调价、哥伦比亚网约车立法）均已在此前各期记录。",
+     "links": [
+      {
+       "label": "@Furinanatw 繁简价差主帖（162717 浏览）",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      },
+      {
+       "label": "unwire.hk 报道（繁中）",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/"
+      },
+      {
+       "label": "运输署：网约车服务牌照申请（10-30 截止）",
+       "url": "https://www.td.gov.hk/tc/transport_in_hong_kong/public_transport/rhv/index.html"
+      },
+      {
+       "label": "FayerWayer：智利拉斯孔德斯泥石流 DiDi 免佣（西语，10-09）",
+       "url": "https://www.fayerwayer.com/internet/2026/10/09/aluvion-de-las-condes-didi-elimina-su-comision-limita-tarifas-dinamicas-y-activa-medidas-de-apoyo-por-emergencia/"
+      }
+     ],
+     "original": {
+      "lang": "es",
+      "text": "Aluvión de Las Condes: DiDi elimina su comisión, limita tarifas dinámicas y activa medidas de apoyo por emergencia (FayerWayer, 09-10-2026)",
+      "translation": "拉斯孔德斯泥石流：DiDi 取消抽成、限制动态调价并启动紧急援助措施（FayerWayer，2026-10-09）"
+     },
+     "id": "20261015-didi-07Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "05Z": 256,
+   "06Z": 330,
+   "07Z_partial_to0729": 115,
+   "query": "滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"",
+   "note": "帖量上升但抽样 25 条全为俚语回复/引流垃圾"
+  },
+  "trad_simp_price_x": {
+   "posts_in_tier1_window": 0,
+   "kept_for_alert": 0,
+   "main_post_views": 162717,
+   "prev_views": 142761,
+   "main_post_replies": 56,
+   "note": "主帖续涨约 +19956，回复 51→56，无新事实、无回应"
+  },
+  "tier1_x_hits_kept": 0,
+  "slot0_x_hits_kept": 0,
+  "weibo_didi_on_list": null
+ },
+ "candidates": [
+  {
+   "topic": "繁简价差 @Furinanatw 续涨",
+   "verdict": "already_covered_views_only",
+   "why": "142761→162717，回复 56，无新证据/媒体/回应",
+   "url": "https://x.com/Furinanatw/status/2110289680595886537"
+  },
+  {
+   "topic": "宽口径滴滴帖量 256/330",
+   "verdict": "reject_noise",
+   "why": "抽样全为俚语回复与成人引流",
+   "url": "https://x.com/ts0315yq/status/2110630055332519982"
+  },
+  {
+   "topic": "CL 拉斯孔德斯泥石流 DiDi 免佣",
+   "verdict": "already_covered_old",
+   "why": "10-09 报道，窗口前",
+   "url": "https://www.fayerwayer.com/internet/2026/10/09/aluvion-de-las-condes-didi-elimina-su-comision-limita-tarifas-dinamicas-y-activa-medidas-de-apoyo-por-emergencia/"
+  },
+  {
+   "topic": "MX CDMX 骑手新支持与休息站",
+   "verdict": "log_only_industry",
+   "why": "10-14 行业性政策，非滴滴专属",
+   "url": "https://www.cronica.com.mx/metropoli/2026/10/14/eres-repartidor-de-rappi-didi-o-uber-eats-habra-nuevos-apoyos-y-espacios-de-descanso-en-cdmx/"
+  }
+ ],
+ "sources_queried": [
+  "X tier1×8 + tier2 slot0×3 + counts×1 + post lookup×1 + broad sample×1",
+  "WebSearch×8 (tier1×6 + slot0×2)",
+  "RSS fetch_sources（新匹配 4，滴滴=0）",
+  "微博热搜镜像 soso.re/api/weibo 无滴滴关键词",
+  "Tier3 skipped (already ran at 00Z)"
+ ],
+ "x_calls_used": 14,
+ "web_searches": 8,
+ "web_searches_used": 8,
+ "tiers": "tier1 + tier2 slot0",
+ "tiers_ran": [
+  "tier1",
+  "tier2_slot0"
+ ],
+ "slot": 0,
+ "push_needed": false,
+ "push_note": "kept=0、仅浏览量增长、alert_worthy=false：按 2026-10-15 省额度规则不启动 CloudAgent，本地保存，待下一次实质性运行或 watchdog 推送"
+}

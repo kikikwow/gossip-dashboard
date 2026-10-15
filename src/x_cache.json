@@ -1,6 +1,6 @@
 {
  "source": "https://api.fxtwitter.com/status/{id}",
- "fetched_at": "2026-10-15T05:30:52Z",
+ "fetched_at": "2026-10-15T08:53:27Z",
  "note": "静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。",
  "posts": {
   "2106320822444949760": {
@@ -2349,6 +2349,51 @@
    "bookmarks": 1,
    "url": "https://x.com/abskoop/status/2110603440527380988",
    "fetched_at": "2026-10-15T05:55:00Z"
+  },
+  "2110630055332519982": {
+   "status": "ok",
+   "text": "新手滴滴",
+   "author": "@ts0315yq",
+   "name": "0315Yq开发",
+   "created_at": "2026-10-15T07:13:13Z",
+   "views": 4,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/ts0315yq/status/2110630055332519982",
+   "fetched_at": "2026-10-15T07:30:17Z"
+  },
+  "2110625642395938910": {
+   "status": "ok",
+   "text": "10月15日，针对网传的“懂车帝邀约博主黑尊界”“年营收超过245亿”等多个消息，懂车帝相关负责人向第一财经记者表示，网传“黑尊界”相关言论不实。“245亿营收”来源于3月份的一篇网络AI生成文章，相关信息均不实，懂车帝从未对外发布营收数据。\n——\n华为雇佣的水军新文案想好没，可以发了，不行找AI帮你编",
+   "author": "@cherylnatsu",
+   "name": "夏雨婷",
+   "created_at": "2026-10-15T06:55:41Z",
+   "views": 1083,
+   "likes": 22,
+   "reposts": 1,
+   "replies": 1,
+   "quotes": 0,
+   "bookmarks": 2,
+   "url": "https://x.com/cherylnatsu/status/2110625642395938910",
+   "fetched_at": "2026-10-15T08:53:27Z"
+  },
+  "2110650149697708353": {
+   "status": "ok",
+   "text": "刚发现腾讯新出的短剧平台绿泡泡，在很多平台都是禁用词。\n\n为了防止人们互加微信，绕开平台内置的社交、交易功能，索性之前把暗示微信的绿泡泡字样，一起给禁了 🤣",
+   "author": "@_FORAB",
+   "name": "AB Kuai.Dong",
+   "created_at": "2026-10-15T08:33:04Z",
+   "views": 4601,
+   "likes": 18,
+   "reposts": 0,
+   "replies": 16,
+   "quotes": 2,
+   "bookmarks": 0,
+   "url": "https://x.com/_FORAB/status/2110650149697708353",
+   "fetched_at": "2026-10-15T08:53:27Z"
   }
  }
 }

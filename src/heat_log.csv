@@ -552,3 +552,22 @@ timestamp_utc,topic,metric,value,source
 2026-10-15T05:55:00Z,滴滴繁简价差,x_sample_post,146441,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-15T05:55:00Z,合肥比亚迪封门逼食堂,x_post_views,61393,https://x.com/whyyoutouzhele/status/2110349904266801377
 2026-10-15T05:55:00Z,合肥比亚迪封门逼食堂,x_sample_post,61393,https://x.com/whyyoutouzhele/status/2110349904266801377
+2026-10-15T07:34:00Z,滴滴繁简价差,x_post_views,162717,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T07:34:00Z,滴滴繁简价差,x_post_replies,56,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T07:34:00Z,滴滴繁简价差,x_sample_post,162717,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T07:34:00Z,滴滴(宽口径),x_hourly_posts_05Zto07Z,256|330|115,X q=滴滴 OR 滴滴出行 OR "DiDi Global" OR "Didi Chuxing"; 07Z partial; 抽样全为俚语/引流噪音
+2026-10-15T08:52:00Z,懂车帝被曝邀约黑尊界,x_hourly_posts_05Z,78,X q=懂车帝 OR 尊界
+2026-10-15T08:52:00Z,懂车帝被曝邀约黑尊界,x_hourly_posts_06Z,89,X q=懂车帝 OR 尊界
+2026-10-15T08:52:00Z,懂车帝被曝邀约黑尊界,x_hourly_posts_07Z,88,X q=懂车帝 OR 尊界
+2026-10-15T08:52:00Z,懂车帝被曝邀约黑尊界,x_hourly_posts_08Z,60,X q=懂车帝 OR 尊界; partial to 08:50
+2026-10-15T08:52:00Z,懂车帝被曝邀约黑尊界,x_sample_post,28750,https://x.com/LZRationalnvest/status/2110567828155990491
+2026-10-15T08:52:00Z,懂车帝被曝邀约黑尊界,x_sample_post,1069,https://x.com/cherylnatsu/status/2110625642395938910
+2026-10-15T08:52:00Z,懂车帝被曝邀约黑尊界,media_response,1,https://www.yicai.com/news/103394855.html
+2026-10-15T08:52:00Z,腾讯绿泡泡对战红果短剧,x_hourly_posts_05Zto08Z,48|98|115|72,X q=绿泡泡 OR (微信 短剧) OR (红果 短剧)
+2026-10-15T08:52:00Z,腾讯绿泡泡对战红果短剧,weibo_rank,31,绿泡泡下架余茵版乖乖女|219473|soso.re/weibo 16:44
+2026-10-15T08:52:00Z,腾讯绿泡泡对战红果短剧,x_sample_post,4254,https://x.com/_FORAB/status/2110650149697708353
+2026-10-15T08:52:00Z,腾讯绿泡泡对战红果短剧,x_sample_post,146710,https://x.com/_FORAB/status/2110319029797916887
+2026-10-15T08:52:00Z,DeepSeek网页/API大面积中断,x_hourly_posts_02Zto08Z,189|168|126|96|54|55|56,X q=DeepSeek (崩 OR 中断 OR 宕机 OR outage OR down OR 恢复)
+2026-10-15T08:52:00Z,腾讯云AI智能体爬高德,x_hourly_posts_05Zto08Z,15|17|20|10,X q=(腾讯云 OR 腾讯) (高德 OR 爬取 OR 智能体 OR agent)
+2026-10-15T08:52:00Z,腾讯云AI智能体爬高德,x_sample_post,833196,https://x.com/ethanelasky/status/2110355334556729766
+2026-10-15T08:52:00Z,豆包手机助手SAEP151款拒绝,x_hourly_posts_05Zto08Z,9|13|11|4,X q=豆包 (SAEP OR 手机助手 OR 代操作 OR 低认知)

@@ -1,0 +1,332 @@
+{
+ "routine": "大厂八卦热点快讯",
+ "fired_at_utc": "2026-10-15T08:49:32.000Z",
+ "scanned_at_utc": "2026-10-15T08:52:00Z",
+ "beijing_time": "2026-10-15 16:49–16:55 CST",
+ "window": "2026-10-15T05:55Z–08:52Z (Beijing 13:55–16:52)",
+ "alert_sent": true,
+ "alert_worthy": true,
+ "reason": "追踪话题「懂车帝被曝邀约黑尊界」出现重大新进展：懂车帝相关负责人 10 月 15 日向第一财经正式否认网传「邀约博主黑尊界」与「245 亿营收」，称已溯源取证并将采取法律措施；经济观察网/时代财经、凤凰网同步报道。此前各期快讯均未覆盖该回应。",
+ "items": [
+  {
+   "company": "懂车帝 / 华为尊界",
+   "topic": "懂车帝被曝邀约黑尊界",
+   "tags": [
+    "实锤",
+    "公司回应+主流媒体"
+   ],
+   "summary_zh": "10 月 15 日下午，懂车帝相关负责人向第一财经表示，网传「邀约博主黑尊界」相关言论不实，公司已溯源取证，将采取法律措施维护合法权益；同时称「245 亿营收」来自 3 月一篇 AI 生成文章，属谣言，将追究造谣者责任。经济观察网（转时代财经）、凤凰网亦刊出同口径回应。此前多位汽车博主晒截图指控「5000 元补刀邀约」，懂车帝此前未正式表态；刹车测试本身争议仍在发酵，X「懂车帝 OR 尊界」本窗每小时约 78–89 帖，北美花生转述帖浏览升至约 2.9 万。",
+   "heat": {
+    "x_hourly_05Zto08Z": [
+     78,
+     89,
+     88,
+     60
+    ],
+    "sample_posts": {
+     "LZRationalnvest": 28750,
+     "cherylnatsu": 1069
+    },
+    "media": "第一财经 14:25 CST；经济观察网/凤凰网同步"
+   },
+   "links": [
+    "https://www.yicai.com/news/103394855.html",
+    "http://www.eeo.com.cn/2026/1015/1065239.shtml",
+    "https://news.ifeng.com/c/8xFBYzBUruL",
+    "https://x.com/cherylnatsu/status/2110625642395938910",
+    "https://x.com/LZRationalnvest/status/2110567828155990491"
+   ],
+   "date": "2026-10-15",
+   "credibility": "实锤",
+   "pending": [
+    "待补充：懂车帝「溯源取证」的具体对象与是否已立案——官方仅口头表态"
+   ]
+  }
+ ],
+ "tracked_updates": [
+  {
+   "company": "腾讯（绿泡泡）",
+   "topic": "腾讯绿泡泡对战红果短剧",
+   "tags": [
+    "实锤",
+    "微博热搜+X"
+   ],
+   "summary_zh": "微博 16:44「绿泡泡下架余茵版乖乖女」#31（21.9 万）；X 绿泡泡相关发帖本窗 48→98→115→72，下午因创作激励讨论回升。@_FORAB 新帖称「绿泡泡」在很多平台是禁用词（约 4254 浏览），属观察续更，无新公司丑闻事实，不单独警报。",
+   "heat": {
+    "x_hourly_05Zto08Z": [
+     48,
+     98,
+     115,
+     72
+    ],
+    "weibo": {
+     "绿泡泡下架余茵版乖乖女": [
+      31,
+      219473
+     ]
+    },
+    "FORAB_banword": 4254,
+    "FORAB_incentive": 146710
+   },
+   "links": [
+    "https://soso.re/weibo",
+    "https://x.com/_FORAB/status/2110650149697708353",
+    "https://x.com/_FORAB/status/2110319029797916887"
+   ],
+   "date": "2026-10-15"
+  },
+  {
+   "company": "DeepSeek（深度求索）",
+   "topic": "DeepSeek网页/API大面积中断",
+   "tags": [
+    "实锤",
+    "已恢复"
+   ],
+   "summary_zh": "服务已于北京 13:04 恢复后继续降温：X 相关发帖 05–08Z 为 96/54/55/56，微博「DeepSeek崩了」已跌出 16:44 前 52。原因仍未披露，无再警报。",
+   "heat": {
+    "x_hourly_02Zto08Z": [
+     189,
+     168,
+     126,
+     96,
+     54,
+     55,
+     56
+    ]
+   },
+   "links": [
+    "https://status.deepseek.com/incidents/7116348214287"
+   ],
+   "date": "2026-10-15",
+   "pending": [
+    "待补充：故障原因——官方未披露"
+   ]
+  },
+  {
+   "company": "腾讯云 / 阿里高德",
+   "topic": "腾讯云AI智能体爬高德",
+   "tags": [
+    "实锤",
+    "浏览续涨·无新事实"
+   ],
+   "summary_zh": "X 发帖量继续缓降（05–08Z=15/17/20/10）；@ethanelasky 主帖浏览约 83.3 万（上期约 72.9 万）。腾讯仍无正式回应，无新事实，不警报。",
+   "heat": {
+    "x_hourly_05Zto08Z": [
+     15,
+     17,
+     20,
+     10
+    ],
+    "ethanelasky_views": 833196
+   },
+   "links": [
+    "https://x.com/ethanelasky/status/2110355334556729766"
+   ],
+   "date": "2026-10-15",
+   "pending": [
+    "待补充：腾讯正式回应——仍无"
+   ]
+  },
+  {
+   "company": "字节跳动（豆包）",
+   "topic": "豆包手机助手SAEP151款拒绝",
+   "tags": [
+    "实锤",
+    "降温"
+   ],
+   "summary_zh": "微博「豆包对低认知人群有权威性」已跌出 16:44 前 52；钛媒体新发《155款App向豆包手机说「不」》跟进（与此前 151 款口径接近）。X 窄口径 SAEP 相关发帖个位数，无新丑闻。",
+   "heat": {
+    "x_saep_hourly_05Zto08Z": [
+     9,
+     13,
+     11,
+     4
+    ]
+   },
+   "links": [
+    "https://www.tmtpost.com/8169608.html"
+   ],
+   "date": "2026-10-15"
+  }
+ ],
+ "weibo": {
+  "mirror": "https://soso.re/weibo",
+  "updated": "2026-10-15 16:44 Beijing",
+  "company_adjacent": [
+   {
+    "rank": 2,
+    "topic": "老外来中国不用微信也能支付",
+    "heat": 899808,
+    "note": "产品/支付，非八卦"
+   },
+   {
+    "rank": 8,
+    "topic": "天猫双11买iPhone18Pro立省800",
+    "heat": 569065,
+    "note": "营销"
+   },
+   {
+    "rank": 10,
+    "topic": "影视飓风Tim辟谣",
+    "heat": 414094,
+    "note": "内容公司辟谣，非大厂"
+   },
+   {
+    "rank": 11,
+    "topic": "女子买iPhone18Pro被5名骑手冒领快递",
+    "heat": 325852,
+    "note": "物流纠纷，非八卦"
+   },
+   {
+    "rank": 31,
+    "topic": "绿泡泡下架余茵版乖乖女",
+    "heat": 219473,
+    "note": "已追踪·绿泡泡内容下架，未单独警报"
+   },
+   {
+    "rank": 37,
+    "topic": "Tim父亲出任影视飓风董事长",
+    "heat": 206440,
+    "note": "内容公司人事"
+   },
+   {
+    "rank": 47,
+    "topic": "appstore正式进入字节时代",
+    "heat": 147250,
+    "note": "调侃霸榜，无事件"
+   },
+   {
+    "rank": 50,
+    "topic": "荣耀WIN2把性能机价格卷到天花板",
+    "heat": 137459,
+    "note": "产品营销"
+   }
+  ]
+ },
+ "maimai": {
+  "direct_fetch": "not retried (404 earlier runs)"
+ },
+ "x_heat": {
+  "DeepSeek中断": {
+   "hourly_02Zto08Z": [
+    189,
+    168,
+    126,
+    96,
+    54,
+    55,
+    56
+   ],
+   "note": "持续回落"
+  },
+  "懂车帝/尊界": {
+   "hourly_05Zto08Z": [
+    78,
+    89,
+    88,
+    60
+   ],
+   "LZRationalnvest": 28750,
+   "cherylnatsu": 1069
+  },
+  "绿泡泡/红果": {
+   "hourly_05Zto08Z": [
+    48,
+    98,
+    115,
+    72
+   ],
+   "FORAB_banword": 4254,
+   "FORAB_incentive": 146710
+  },
+  "腾讯云爬高德": {
+   "hourly_05Zto08Z": [
+    15,
+    17,
+    20,
+    10
+   ],
+   "ethanelasky_views": 833196
+  },
+  "豆包SAEP": {
+   "hourly_05Zto08Z": [
+    9,
+    13,
+    11,
+    4
+   ]
+  },
+  "字节裁员/宫斗/离职": {
+   "hourly_05Zto08Z": [
+    0,
+    3,
+    1,
+    4
+   ],
+   "note": "极低"
+  },
+  "滴滴宽口径": {
+   "hourly_05Zto08Z": [
+    255,
+    329,
+    200,
+    143
+   ],
+   "note": "多为俚语/引流噪音（与滴滴专项一致）"
+  }
+ },
+ "feeds_new": [
+  {
+   "source": "钛媒体(含互联网怪盗团)",
+   "title": "155款App向豆包手机说“不”，智能体为什么翻不过互联网的围墙？",
+   "link": "https://www.tmtpost.com/8169608.html",
+   "note": "豆包 SAEP 跟进分析，并入已追踪话题"
+  },
+  {
+   "source": "Pandaily",
+   "title": "Alibaba's QwenWork Opens Invite Beta for an E-Commerce Edition Built for Multi-Platform Sellers",
+   "title_zh": "阿里千问工作台开启电商版邀请测试，面向多平台卖家",
+   "lang": "en",
+   "link": "https://pandaily.com/alibaba-qwenwork-ecommerce-edition-invite-beta-cross-platform-dashboard-sellers",
+   "note": "产品消息，非八卦"
+  }
+ ],
+ "short_term_updates": {
+  "added": [],
+  "kept": [
+   "腾讯云AI智能体爬高德",
+   "懂车帝被曝邀约黑尊界",
+   "豆包手机助手SAEP151款拒绝",
+   "腾讯绿泡泡对战红果短剧",
+   "DeepSeek网页/API大面积中断"
+  ],
+  "removed": []
+ },
+ "candidates": [
+  {
+   "topic": "月之暗面 17 岁研究员陈广宇离职",
+   "verdict": "skip",
+   "why": "@0xLogicrw 约 2871 浏览，属人事消息但热度未达标、无争议事实"
+  },
+  {
+   "topic": "字节洽谈联发科数据中心芯片",
+   "verdict": "skip",
+   "why": "彭博业务新闻（付费），非八卦；X 转述帖浏览极低"
+  },
+  {
+   "topic": "绿泡泡下架余茵版乖乖女",
+   "verdict": "skip_alert",
+   "why": "微博 #31，内容下架已记入绿泡泡追踪续更，不单独警报"
+  },
+  {
+   "topic": "appstore正式进入字节时代",
+   "verdict": "skip",
+   "why": "调侃霸榜，无事件"
+  }
+ ],
+ "focus_topics": {
+  "滴滴": "本期快讯窗无新达标爆料；宽口径 X 发帖仍高但多为噪音。专项 07Z 本地版已记繁简价差帖浏览续涨、无新事实。",
+  "字节": "豆包 SAEP 钛媒体跟进；无新宫斗/裁员爆料。",
+  "中国大模型": "DeepSeek 已恢复后持续降温；月之暗面陈广宇离职观察未入选。"
+ }
+}
