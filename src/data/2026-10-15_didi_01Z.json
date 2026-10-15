@@ -1,0 +1,124 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-15T01:15:00Z",
+ "fired_at_utc": "2026-10-15T01:12:47Z",
+ "scanned_at_utc": "2026-10-15T01:15:00Z",
+ "beijing_time": "2026-10-15 09:15 Asia/Shanghai",
+ "edition_date": "2026-10-15",
+ "window": {
+  "start_utc": "2026-10-15T00:15:00Z",
+  "end_utc": "2026-10-15T01:15:00Z",
+  "note": "自上轮 00:15Z（北京时间 08:15）以来约 1 小时；Tier1 + Tier2 slot0（拉美其他+金融）；Tier3 跳过（当日已在 00Z 跑过）"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无滴滴本体新的可核验八卦/人事/监管/诉讼/财报/公司回应。Tier1 八组 X：CN/HK/MX/EN 0 帖；BR 仅 1 条个人生活帖提及 99food+demissão（26 浏览，非公司新闻）。繁简价差主帖 @Furinanatw 浏览 75355→86328（+10973，回复 25→29），仍无新证据/媒体升级/滴滴专门回应。Slot0（AR/CO/CL/PE/EC、CR/PA/DO、DiDi Card/Préstamos/99Pay）X 0 有效帖（1 条仅 t.co 失业长文假阳性）。Web：CN 裁员/繁简/港牌照均为旧闻；BR 99Food×Keeta Cade/TJ-SP 为 9 月初旬既有纠纷；LatAm 为 10-02/07/09 扩城与灾害支援旧闻；金融投诉无新爆发。RSS 新匹配 1 条非滴滴；微博热搜前 52 无滴滴/花小猪/程维/网约车/打车。",
+ "sections": [
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "公开媒体",
+      "RSS",
+      "微博镜像"
+     ],
+     "date": "10-15 09:15",
+     "text": "本期滴滴本体无新动态。扫描窗口 00:15Z–01:15Z（北京时间 10-15 08:15 至 09:15）。Tier1 全量 + Tier2 slot0（拉美西语市场+ DiDi Card/Préstamos/99Pay/滴水贷金融投诉）未见新的公司八卦、人事、监管、诉讼或财务线索。繁简价差主帖 @Furinanatw 浏览续涨至 86328（上轮 75355，本窗约 +1.1 万），回复 29，仍是同一组截图，没有新证据，也没有新的媒体报道，滴滴未专门回应；截图时间与路线不同、翔安机场尚未启用，仍属待核实。海外小语种线索：本期无新增（检索窗口内无达到报警门槛的西语/葡语新进展；既有 AR 扩城、CL 灾害支援、CO 网约车法案、MX ISR 等不重复报警）。",
+     "links": [
+      {
+       "label": "@Furinanatw 繁简价差主帖（86328 浏览）",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      },
+      {
+       "label": "unwire.hk 报道（繁中）",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/"
+      },
+      {
+       "label": "凤凰网：滴滴 8 月否认大数据杀熟",
+       "url": "https://tech.ifeng.com/c/8vxO0g8gk5L"
+      }
+     ],
+     "id": "20261015-didi-01Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "22Z": 91,
+   "23Z": 108,
+   "00Z": 138,
+   "01Z_partial_to0114": 41,
+   "query": "滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"",
+   "note": "晨间撞词噪音为主；00Z 小时计数较 23Z 略升"
+  },
+  "trad_simp_price_x": {
+   "posts_in_tier1_window": 0,
+   "kept_for_alert": 0,
+   "main_post_views": 86328,
+   "prev_views": 75355,
+   "main_post_replies": 29,
+   "note": "主帖续涨约 +10973，回复 25→29，无新事实、无回应"
+  },
+  "tier1_x_hits_kept": 0,
+  "slot0_x_hits_kept": 0,
+  "weibo_didi_on_list": null
+ },
+ "candidates": [
+  {
+   "topic": "X BR @gleymalvadeza 个人 99food+demissão 生活帖",
+   "verdict": "reject_not_company_news",
+   "why": "印象 26，个人消费后辞职吐槽，非 99/DiDi 公司人事或监管",
+   "url": "https://x.com/gleymalvadeza/status/2110526384678342716"
+  },
+  {
+   "topic": "X slot0 金融假阳性（仅 t.co 失业长文）",
+   "verdict": "reject_tco_or_no_entity",
+   "why": "正文无 DiDi Card/Préstamos/99Pay/滴水贷实体关键词",
+   "url": "https://x.com/Andreyzzzx/status/2110537927872975172"
+  },
+  {
+   "topic": "繁简价差 @Furinanatw 续涨",
+   "verdict": "already_covered_views_only",
+   "why": "75355→86328，回复 29，无新证据/媒体/回应，不报警",
+   "url": "https://x.com/Furinanatw/status/2110289680595886537"
+  },
+  {
+   "topic": "LatAm web AR Junín扩城 / CL Las Condes灾害支援 / CO 网约车法案",
+   "verdict": "already_covered_old",
+   "why": "均为 10-02 至 10-09 窗口外旧闻，无本窗新发展，不重复报警",
+   "url": "https://www.fayerwayer.com/internet/2026/10/09/aluvion-de-las-condes-didi-elimina-su-comision-limita-tarifas-dinamicas-y-activa-medidas-de-apoyo-por-emergencia/"
+  },
+  {
+   "topic": "99Food×Keeta Cade/TJ-SP 排他条款纠纷",
+   "verdict": "already_covered_old",
+   "why": "Cade 9 月初继续调查、TJ-SP 判决均为既有进度，非本窗新爆发",
+   "url": "https://www.gov.br/cade/pt-br/assuntos/noticias/cade-determina-continuidade-de-investigacao-sobre-clausulas-contratuais-da-99food-mas-nega-pedido-de-medida-preventiva-no-caso"
+  }
+ ],
+ "sources_queried": [
+  "X tier1×8 + tier2 slot0×3 + counts×1 + post lookup×1",
+  "WebSearch×8 (tier1×6 + slot0×2)",
+  "RSS fetch_sources（new matching=1，非滴滴）",
+  "微博热搜镜像 soso.re/api/weibo 前52无滴滴",
+  "Tier3 skipped (already ran at 00Z)"
+ ],
+ "x_calls_used": 13,
+ "web_searches": 8,
+ "web_searches_used": 8,
+ "tiers": "tier1 + tier2 slot0",
+ "tiers_ran": [
+  "tier1",
+  "tier2_slot0"
+ ],
+ "slot": 0,
+ "push_needed": true,
+ "push_note": "New 01Z edition (10-15) Tier1+slot0; 繁简 heat 86328; push gossip-dashboard data-only"
+}

@@ -498,3 +498,7 @@ timestamp_utc,topic,metric,value,source
 2026-10-15T00:57:00Z,茶百道停牌跟进,media_followup,1,https://www.nbd.com.cn/articles/2026-10-14/4604668.html
 2026-10-15T00:57:00Z,滴滴繁简价差,x_sample_post,82566,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-15T00:57:00Z,金龙指数HXC_1014,pct_change,-1.39,https://cn.investing.com/indices/nq-golden-dragon-china-historical-data
+2026-10-15T01:15:00Z,滴滴繁简价差,x_post_views,86328,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T01:15:00Z,滴滴繁简价差,x_sample_post,86328,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T01:15:00Z,滴滴,x_sample_post,86328,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T01:15:00Z,滴滴,x_hourly_post_count_22to01Z,91|108|138|41,"X q=滴滴 OR 滴滴出行 OR ""DiDi Global"" OR ""Didi Chuxing""; 01Z partial to 01:14; morning noise"

@@ -1,6 +1,6 @@
 {
  "source": "https://api.fxtwitter.com/status/{id}",
- "fetched_at": "2026-10-15T00:57:49Z",
+ "fetched_at": "2026-10-15T01:16:42Z",
  "note": "静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。",
  "posts": {
   "2106320822444949760": {
@@ -2064,6 +2064,36 @@
    "bookmarks": 11,
    "url": "https://x.com/whyyoutouzhele/status/2110521033723933067",
    "fetched_at": "2026-10-15T00:57:49Z"
+  },
+  "2110526384678342716": {
+   "status": "ok",
+   "text": "Sou contratada\n\nTrabalho durante um mês\n\nPago meu cabelo, minha unha, meu cílios e compro muito 99food e bobeiras no TikTok shop\n\nPeço demissão 🧘🏽‍♀️",
+   "author": "@gleymalvadeza",
+   "name": "meduza malvadeza chucra chavosa maldita e perigosa",
+   "created_at": "2026-10-15T00:21:16Z",
+   "views": 26,
+   "likes": 1,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/gleymalvadeza/status/2110526384678342716",
+   "fetched_at": "2026-10-15T01:16:42Z"
+  },
+  "2110537927872975172": {
+   "status": "ok",
+   "text": "https://x.com/i/article/2110183834428030976",
+   "author": "@Andreyzzzx",
+   "name": "AndreY1tt",
+   "created_at": "2026-10-15T01:07:08Z",
+   "views": null,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/Andreyzzzx/status/2110537927872975172",
+   "fetched_at": "2026-10-15T01:16:42Z"
   }
  }
 }
