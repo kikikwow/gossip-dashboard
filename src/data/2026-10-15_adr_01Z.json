@@ -1,0 +1,347 @@
+{
+ "type": "adr",
+ "title": "美股中概 & 出海简报",
+ "timestamp": "2026-10-15T00:57:00Z",
+ "edition_date": "2026-10-15",
+ "slot": "01Z",
+ "beijing_time": "2026-10-15 08:57 Asia/Shanghai",
+ "lede": "早报 · 覆盖自上一档晚报 2026-10-14T13:10Z（北京约 21:05）至此刻 · 信源：X 公开检索 + 公开媒体/RSS；与大厂八卦早报分开送达",
+ "window": {
+  "start_utc": "2026-10-14T13:10:00Z",
+  "end_utc": "2026-10-15T00:57:00Z"
+ },
+ "alert_worthy": false,
+ "push_needed": true,
+ "top3": [
+  {
+   "section": "🏛️ 监管 · 诉讼 · 制裁",
+   "index": 0
+  },
+  {
+   "section": "🚀 IPO & 高管",
+   "index": 0
+  },
+  {
+   "section": "🚀 IPO & 高管",
+   "index": 1
+  }
+ ],
+ "sections": [
+  {
+   "title": "🎯 重点追踪",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "公开媒体"
+     ],
+     "date": "10-15",
+     "text": "繁简价差主帖 @Furinanatw 浏览续涨至约 8.3 万（早间小时档约 7.5 万），仍无新证据、无媒体升级、无滴滴专门回应；截图时间/路线疑点未消。巴西99/墨西哥/埃及/日本本期无新公司级线索。",
+     "links": [
+      {
+       "label": "X @Furinanatw",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537",
+       "views": "82566"
+      },
+      {
+       "label": "unwire.hk",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/"
+      }
+     ],
+     "id": "20261015-adr-01Z-didi"
+    },
+    {
+     "company": "字节 / TikTok",
+     "tag": "实锤",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-15",
+     "text": "本期（10-15 01Z 美股中概早报）字节 / TikTok 没有重大可核验的新动态；Meta 广告限制旧闻二次传播浏览量极低，不升格。",
+     "links": [],
+     "id": "20261015-adr-01Z-bytedance-none",
+     "pending": [
+      "待补充：来源——这是热度追踪或扫描状态行，没有单一来源链接，数据见 heat_log.csv"
+     ]
+    },
+    {
+     "company": "智谱 / 月之暗面 / 中国大模型",
+     "tag": "传闻",
+     "source_types": [
+      "媒体"
+     ],
+     "date": "10-15",
+     "text": "月之暗面美银退出 IPO 线无新进展（已移出短期列表）。DeepSeek「约 1000 亿融资」多为 10-13 报道再传播，本窗口未见官方交割确认，仅观察不入 Top。",
+     "links": [
+      {
+       "label": "21经济网 DeepSeek融资",
+       "url": "https://www.21jingji.com/article/20261013/herald/e445af80c18bdf8f76491b2226c2c22c.html"
+      }
+     ],
+     "id": "20261015-adr-01Z-llm"
+    }
+   ]
+  },
+  {
+   "title": "⚡ 短期热点追踪",
+   "color": "#ea580c",
+   "items": [
+    {
+     "company": "茶百道 IPO 操纵停牌",
+     "tag": "实锤",
+     "source_types": [
+      "公司公告",
+      "媒体"
+     ],
+     "date": "10-14 晚",
+     "text": "📈 公司晚间回应配合调查 + 恒生指数公司宣布 10-23 起剔除相关指数；停牌前约 4.035 港元。",
+     "links": [
+      {
+       "label": "每经网",
+       "url": "https://www.nbd.com.cn/articles/2026-10-14/4604668.html"
+      }
+     ],
+     "id": "20261015-adr-01Z-hot-chabaidao"
+    },
+    {
+     "company": "月之暗面美银退出IPO",
+     "tag": "传闻",
+     "source_types": [
+      "媒体"
+     ],
+     "date": "10-15",
+     "text": "➡️ 已于 10-14 每日总结移出短期列表；本窗口无新事实。",
+     "links": [
+      {
+       "label": "X @business（旧帖）",
+       "url": "https://x.com/business/status/2110235441802690623",
+       "views": "25444"
+      }
+     ],
+     "id": "20261015-adr-01Z-hot-moonshot-removed"
+    }
+   ]
+  },
+  {
+   "title": "🌏 海外小语种线索",
+   "color": "#0b7",
+   "items": [
+    {
+     "company": "海外小语种",
+     "tag": "实锤",
+     "source_types": [
+      "扫描"
+     ],
+     "date": "10-15",
+     "text": "本期美股中概早报窗口内没有新增可核验的海外小语种线索；墨西哥伊达尔戈州 DiDi/Uber 表态已在 10-14 晚报收录。",
+     "links": [
+      {
+       "label": "Síntesis（西语，晚报已收）",
+       "url": "https://sintesis.mx/2026/10/13/sin-reforma-legal-uber-y-didi-no-podran-operar-en-hidalgo-juan-pablo-escalante/"
+      }
+     ],
+     "id": "20261015-adr-01Z-local-lang-none"
+    }
+   ]
+  },
+  {
+   "title": "🏛️ 监管 · 诉讼 · 制裁",
+   "color": "#dc2626",
+   "items": [
+    {
+     "company": "茶百道",
+     "tag": "实锤",
+     "source_types": [
+      "公司公告",
+      "媒体",
+      "恒生指数"
+     ],
+     "date": "10-14 晚",
+     "text": "公司公告：紧急寻求法律意见、全力配合证监会、业务正常、复牌另行通知。恒生指数公司：10-22 将指数计算价调至 0.0001 港元，收市后从恒生综合及相关分类指数剔除，10-23 起生效。",
+     "links": [
+      {
+       "label": "每经网",
+       "url": "https://www.nbd.com.cn/articles/2026-10-14/4604668.html"
+      },
+      {
+       "label": "澎湃",
+       "url": "https://www.thepaper.cn/newsDetail_forward_34250000"
+      },
+      {
+       "label": "证监会26PR168",
+       "url": "https://apps.sfc.hk/edistributionWeb/gateway/TC/news-and-announcements/news/doc?refNo=26PR168"
+      }
+     ],
+     "id": "20261015-adr-01Z-chabaidao"
+    }
+   ]
+  },
+  {
+   "title": "📉 股价大动",
+   "color": "#2563eb",
+   "items": [
+    {
+     "company": "金龙指数及热门中概（10-14 收盘）",
+     "tag": "实锤",
+     "source_types": [
+      "行情"
+     ],
+     "date": "10-14 收盘",
+     "text": "HXC 收 5660.10（−1.39%）。LI −4.17%、NIO −4.21%、XPEV −3.38%、PDD −0.62%、BIDU −2.25%、BILI −4.74%、FUTU −4.04%、JD −0.37%；BABA +0.29%；CHA −1.84%。隔夜美股受 CPI 超预期拖累。界面盘中「跌超 2%/小鹏跌超 9%」与收盘不符，以收盘为准。",
+     "links": [
+      {
+       "label": "Investing金龙",
+       "url": "https://cn.investing.com/indices/nq-golden-dragon-china-historical-data"
+      },
+      {
+       "label": "Exa PDD",
+       "url": "https://exa.ai/library/markets/stock/PDD?date=2026-10-14&view=daily"
+      },
+      {
+       "label": "Exa NIO",
+       "url": "https://exa.ai/library/markets/stock/NIO?date=2026-10-14&view=daily"
+      },
+      {
+       "label": "Exa LI",
+       "url": "https://exa.ai/library/markets/stock/LI?date=2026-10-14&view=daily"
+      },
+      {
+       "label": "Exa XPEV",
+       "url": "https://exa.ai/library/markets/stock/XPEV?date=2026-10-14&view=daily"
+      }
+     ],
+     "id": "20261015-adr-01Z-stocks"
+    },
+    {
+     "company": "传音控股暗盘",
+     "tag": "实锤",
+     "source_types": [
+      "媒体"
+     ],
+     "date": "10-14",
+     "text": "暗盘破发：辉立约 34.78（−1.5%）、富途约 34.56（−2.1%），盘中见约 34.0–34.4；今日正式挂牌，截稿时首日开盘价待补充。",
+     "links": [
+      {
+       "label": "凤凰网",
+       "url": "https://finance.ifeng.com/c/8xEA0LE183d"
+      },
+      {
+       "label": "etnet",
+       "url": "https://www.etnet.com.hk/www/tc/stocks/ipo-info.php?code=02636"
+      }
+     ],
+     "id": "20261015-adr-01Z-transsion-grey",
+     "pending": [
+      "待补充：首日开盘价——截稿时港股连续竞价尚未给出稳定报价"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🧸 消费出海",
+   "color": "#db2777",
+   "items": [
+    {
+     "company": "滴滴·繁简价差",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-15",
+     "text": "@Furinanatw 繁简对比帖浏览约 8.3 万，滴滴仍未专门回应；疑点未消，维持待核实。",
+     "links": [
+      {
+       "label": "X @Furinanatw",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537",
+       "views": "82566"
+      }
+     ],
+     "id": "20261015-adr-01Z-didi-price"
+    },
+    {
+     "company": "霸王茶姬 CHA",
+     "tag": "实锤",
+     "source_types": [
+      "行情"
+     ],
+     "date": "10-14",
+     "text": "美股收 12.29 美元（−1.84%）；买一送一公关余波无新公司动作，不重复晚报展开。",
+     "links": [
+      {
+       "label": "Exa CHA",
+       "url": "https://exa.ai/library/markets/stock/CHA?date=2026-10-14&view=daily"
+      }
+     ],
+     "id": "20261015-adr-01Z-chagee"
+    }
+   ]
+  },
+  {
+   "title": "🚀 IPO & 高管",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "company": "传音控股",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "港交所"
+     ],
+     "date": "10-15",
+     "text": "今日港股挂牌，发行价 35.30 港元；暗盘已破发约 1.5%–2.1%。截稿时首日开盘价待补充。非洲/新兴市场手机出海标的正式登陆港股，形成 A+H。",
+     "links": [
+      {
+       "label": "港交所交易安排",
+       "url": "https://www.hkex.com.hk/chi/market/sec_tradinfo/tradarng/tradarng_news/currentmonth/c2636a_261013.htm"
+      },
+      {
+       "label": "凤凰网暗盘",
+       "url": "https://finance.ifeng.com/c/8xEA0LE183d"
+      },
+      {
+       "label": "X @dingdong_world",
+       "url": "https://x.com/dingdong_world/status/2110378409486619069",
+       "views": "79"
+      }
+     ],
+     "id": "20261015-adr-01Z-transsion",
+     "pending": [
+      "待补充：首日开盘价——截稿时尚未稳定"
+     ]
+    },
+    {
+     "company": "Michael Burry 持仓",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "X"
+     ],
+     "date": "10-14",
+     "text": "Burry 加仓比亚迪并持有京东、腾讯、美团、海底捞等，称港股低估；暂不回补阿里（除非取消 AI 增发或跌至约 70–79 港元）。Benzinga 跟进；@burrytracker 帖约 9.5 万浏览。",
+     "links": [
+      {
+       "label": "X @burrytracker",
+       "url": "https://x.com/burrytracker/status/2110368123291423113",
+       "views": "94740"
+      },
+      {
+       "label": "Benzinga",
+       "url": "https://www.benzinga.com/etfs/sector-etfs/26/10/62370419/michael-burry-buys-china-stocks-while-shorting-nasdaq-these-etfs-capture-his-bet"
+      },
+      {
+       "label": "Oninvest",
+       "url": "https://en.oninvest.com/article/the-hong-kong-market-is-under-pressure-which-stocks-did-the-investor-from-shorting-the-market-buy"
+      }
+     ],
+     "id": "20261015-adr-01Z-burry",
+     "lang": "en",
+     "translation_zh": "市场追踪账号称迈克尔·伯里正在买入中国相关资产；具体标的与仓位以原帖/披露为准，待核实。",
+     "original": "Breaking: Michael Burry is buying China stocks while he shorts the Nasdaq\n\nHe:\n• Bought more BYD $BYDDF\n• Continues holding $JD, $TCEHY, $MPNGF, $HDALF\n• Avoiding Alibaba $BABA until price hits KHD 70s or stops issuing stock for AI \n\nBurry has been calling Hong Kong \"very undervalued\", per his Substack"
+    }
+   ]
+  }
+ ]
+}

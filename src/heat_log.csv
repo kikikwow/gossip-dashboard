@@ -472,3 +472,29 @@ timestamp_utc,topic,metric,value,source
 2026-10-15T00:15:00Z,滴滴繁简价差,x_sample_post,75355,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-15T00:15:00Z,滴滴,x_sample_post,75355,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-15T00:15:00Z,滴滴,x_hourly_post_count_22to00Z,91|108|21,X q=滴滴 OR 滴滴出行 OR "DiDi Global" OR "Didi Chuxing"; 00Z partial to 00:09; morning noise
+2026-10-15T00:54:00Z,腾讯云AI智能体爬高德,x_post_views,478646,https://x.com/ethanelasky/status/2110355334556729766
+2026-10-15T00:54:00Z,腾讯云AI智能体爬高德,x_sample_post,478646,https://x.com/ethanelasky/status/2110355334556729766
+2026-10-15T00:54:00Z,腾讯云AI智能体爬高德,x_sample_post,68896,https://x.com/sleepy0x13/status/2110404623274332375
+2026-10-15T00:54:00Z,腾讯云AI智能体爬高德,x_sample_post,19257,https://x.com/dotey/status/2110489279646642209
+2026-10-15T00:54:00Z,腾讯云AI智能体爬高德,x_hourly_13to00Z_partial,37|72|162|125|103|96|149|90|65|73|81|47,X q=腾讯云 高德 OR Swarmchasers OR agent fleet OR 智能体 爬; 00Z to ~00:53
+2026-10-15T00:54:00Z,懂车帝被曝邀约黑尊界,x_hourly_13to00Z_partial,32|33|24|22|14|13|7|6|3|13|8|13,X q=懂车帝 尊界 OR 懂车帝 黑稿 OR 东门健男
+2026-10-15T00:54:00Z,豆包手机助手SAEP151款拒绝,x_post_views,232629,https://x.com/_FORAB/status/2110362974947037321
+2026-10-15T00:54:00Z,豆包手机助手SAEP151款拒绝,x_sample_post,232629,https://x.com/_FORAB/status/2110362974947037321
+2026-10-15T00:54:00Z,豆包手机助手SAEP151款拒绝,x_hourly_13to00Z_partial,15|24|23|6|20|14|7|6|5|3|4|13,X q=豆包 手机助手 OR SAEP OR 豆包 151
+2026-10-15T00:54:00Z,腾讯绿泡泡对战红果短剧,x_hourly_13to00Z_partial,77|93|69|78|36|48|17|16|5|11|14|15,X q=绿泡泡 OR (微信 红果) OR (腾讯 短剧 红果)
+2026-10-15T00:54:00Z,腾讯绿泡泡对战红果短剧,weibo_rank,out_of_top52,https://soso.re/weibo updated 2026-10-15 08:37 Beijing
+2026-10-15T00:54:00Z,滴滴繁简价差,x_post_views,82060,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T00:54:00Z,滴滴繁简价差,x_sample_post,82060,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T00:54:00Z,滴滴,x_sample_post,82060,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T00:54:00Z,合肥比亚迪封门逼食堂,x_post_views,52628,https://x.com/whyyoutouzhele/status/2110349904266801377
+2026-10-15T00:54:00Z,合肥比亚迪封门逼食堂,x_sample_post,52628,https://x.com/whyyoutouzhele/status/2110349904266801377
+2026-10-15T00:54:00Z,早报扫描_无达标项,weibo_company_adjacent_top52,国行iPhone通义#2(833233);京东双十一沈腾马丽#4(645597);美团北极星医美#8(641183);雷军小米汽车#31(211650);豆包低认知#35(184689),https://soso.re/weibo updated 2026-10-15 08:37 Beijing; PR/product adjacent
+2026-10-15T00:54:00Z,懂车帝被曝邀约黑尊界,x_sample_post,0,https://x.com/0427SMtieshou/status/2110264344324046901
+2026-10-15T00:54:00Z,懂车帝被曝邀约黑尊界,x_sample_post,0,https://x.com/KELMAND1/status/2110277563801297234
+2026-10-15T00:57:00Z,传音控股港股上市,x_hourly_posts_14Zto00Z,"0/1/0/1/0/0/0/0/0/0/3/0",x_counts
+2026-10-15T00:57:00Z,传音控股港股上市,x_sample_post,79,https://x.com/dingdong_world/status/2110378409486619069
+2026-10-15T00:57:00Z,Michael_Burry中概仓位,x_hourly_posts_13Zto00Z,"7/14/19/13/8/3/2/3/5/3/4/2",x_counts
+2026-10-15T00:57:00Z,Michael_Burry中概仓位,x_sample_post,94740,https://x.com/burrytracker/status/2110368123291423113
+2026-10-15T00:57:00Z,茶百道停牌跟进,media_followup,1,https://www.nbd.com.cn/articles/2026-10-14/4604668.html
+2026-10-15T00:57:00Z,滴滴繁简价差,x_sample_post,82566,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T00:57:00Z,金龙指数HXC_1014,pct_change,-1.39,https://cn.investing.com/indices/nq-golden-dragon-china-historical-data

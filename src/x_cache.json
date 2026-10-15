@@ -1,6 +1,6 @@
 {
  "source": "https://api.fxtwitter.com/status/{id}",
- "fetched_at": "2026-10-15T00:11:41Z",
+ "fetched_at": "2026-10-15T00:57:49Z",
  "note": "静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。",
  "posts": {
   "2106320822444949760": {
@@ -2002,6 +2002,68 @@
    "bookmarks": 0,
    "url": "https://x.com/voidJan/status/2110520735815061963",
    "fetched_at": "2026-10-15T00:11:41Z"
+  },
+  "2110368123291423113": {
+   "status": "ok",
+   "text": "Breaking: Michael Burry is buying China stocks while he shorts the Nasdaq\n\nHe:\n• Bought more BYD $BYDDF\n• Continues holding $JD, $TCEHY, $MPNGF, $HDALF\n• Avoiding Alibaba $BABA until price hits KHD 70s or stops issuing stock for AI \n\nBurry has been calling Hong Kong \"very undervalued\", per his Substack",
+   "author": "@burrytracker",
+   "name": "Michael Burry Stock Tracker ♟",
+   "created_at": "2026-10-14T13:52:23Z",
+   "views": 94838,
+   "likes": 645,
+   "reposts": 73,
+   "replies": 55,
+   "quotes": 21,
+   "bookmarks": 183,
+   "url": "https://x.com/burrytracker/status/2110368123291423113",
+   "fetched_at": "2026-10-15T00:57:49Z",
+   "lang": "en",
+   "translation_zh": "【译文】突发：迈克尔·伯里（Michael Burry）正在买入中国相关资产。 原文摘要：Breaking: Michael Burry is buying China stocks while he shorts the Nasdaq  He: • Bought more BYD $BYDDF • Continues holding $JD, $TCEHY, $MPNGF, $HDALF • Avoiding Alibaba $BABA unt"
+  },
+  "2110378409486619069": {
+   "status": "ok",
+   "text": "传音控股暗盘情况\n\n开盘恐慌砸盘（16:15–16:18，34.0–34.3）：主动性卖出砸出 34.02/34.00 低点，但接货的是 9583、9656、0326、0515 等席位 —— 也就是说低位割肉盘的筹码被这些席位不动声色地收走。\n\n反弹中有大量隐形供应：每当有人主动买入（↑），对手方的卖方几乎都是 0950（104 万）、9614（36 万）、2061。典型如 16:16 那笔 105 万的巨额主动买单，卖方的席位就是 2061 ；16:17 的 1 万股大单，卖方是 0950。这是借上涨出货/换手的特征。\n\n9583 是贯穿全天的吸筹主力：78 笔、净买入 106 万，且买入均价摊在 34.1–34.7 全程，越跌越买，尾盘的持续买入把价格托在 34.7 上方。\n\n结论：吸筹方是 9583、9656、9639、9687 等（合计净买入约 230 万），供应方是 0950、2061、9614（合计净卖出约 210 万）。恐慌筹码在低位完成向固定席位的集中，价格重心抬升，筹码结构信号仍然偏积极，但 34.8 上方有明显存量供应（0950/2061 尚未出完）。",
+   "author": "@dingdong_world",
+   "name": "叮咚探世界",
+   "created_at": "2026-10-14T14:33:16Z",
+   "views": 79,
+   "likes": 1,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/dingdong_world/status/2110378409486619069",
+   "fetched_at": "2026-10-15T00:57:49Z"
+  },
+  "2110519858110816745": {
+   "status": "ok",
+   "text": "拼多多这操作有点让人看不懂了！🤣\n\n现在各大厂都在用 AI 写代码，甚至让 AI Agent 自动干活。\n\n结果有爆料称，拼多多内部还在坚持程序员手写代码，走 古法编程路线。\n\n别人都开始用 AI 提效了，拼多多还在靠人力硬刚？😂",
+   "author": "@AndyL5cc",
+   "name": "Andy L",
+   "created_at": "2026-10-14T23:55:20Z",
+   "views": 2363,
+   "likes": 12,
+   "reposts": 1,
+   "replies": 13,
+   "quotes": 3,
+   "bookmarks": 1,
+   "url": "https://x.com/AndyL5cc/status/2110519858110816745",
+   "fetched_at": "2026-10-15T00:57:49Z"
+  },
+  "2110521033723933067": {
+   "status": "ok",
+   "text": "华为鸿蒙：“这些鸿蒙没有的功能，安卓准备什么时候关停？”，网友：“敢这样子对开发者不敢想对消费者是什么样”\n\n10月14日，酷安小编发帖称，收到鸿蒙应用商店要求补齐功能的邮件。\n他解释部分安卓版功能属于老功能或新尝试后，对方在电话中反问：“这些鸿蒙没有的安卓功能准备什么时候关停？”\n\n他晒出的邮件列出直播、神券、微博及抖音登录等缺失功能，同时要求修复长图首次打开时的闪屏，要求30天内整改，否则将影响应用在榜单推荐。酷安小编表示，安卓、iOS、鸿蒙各有特色，不可能完全相同。\n\n网友评论：\n“mate没有的功能nova什么时候关停？”\n“也是神了，就对小开发者敢这么说话了，咋不去用这种口气要求腾讯网易字节去啊？”\n“明明可以用流量激励的方式来鼓励开发者，非要上这种惩罚手段算是几个意思？”\n“(5)缺少广告功能[滑稽]”\n\n酷安（CoolApk）是一个源自中国的泛科技数码社区与应用分发平台。",
+   "author": "@whyyoutouzhele",
+   "name": "李老师不是你老师",
+   "created_at": "2026-10-15T00:00:00Z",
+   "views": 12299,
+   "likes": 55,
+   "reposts": 2,
+   "replies": 12,
+   "quotes": 0,
+   "bookmarks": 11,
+   "url": "https://x.com/whyyoutouzhele/status/2110521033723933067",
+   "fetched_at": "2026-10-15T00:57:49Z"
   }
  }
 }
