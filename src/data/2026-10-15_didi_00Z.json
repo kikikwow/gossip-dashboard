@@ -1,0 +1,132 @@
+{
+ "type": "didi",
+ "title": "滴滴重点追踪（每小时）",
+ "routine": "滴滴重点追踪（每小时）",
+ "timestamp": "2026-10-15T00:15:00Z",
+ "fired_at_utc": "2026-10-15T00:07:57Z",
+ "scanned_at_utc": "2026-10-15T00:15:00Z",
+ "beijing_time": "2026-10-15 08:15 Asia/Shanghai",
+ "edition_date": "2026-10-15",
+ "window": {
+  "start_utc": "2026-10-14T23:15:00Z",
+  "end_utc": "2026-10-15T00:15:00Z",
+  "note": "自上轮 23:15Z（北京时间 07:15）以来约 1 小时；Tier1 + Tier2 slot2（国内其他业务）+ Tier3（当日首个 ≥08:00 日间轮）"
+ },
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无滴滴本体新的可核验八卦/人事/监管/诉讼/财报/公司回应。Tier1 八组 X 检索 0 帖；繁简价差主帖 @Furinanatw 浏览 69753→75355（+5602，回复 25），仍无新证据/媒体升级/滴滴专门回应。Slot2（自动驾驶/送货小桔青桔/MONA孙枢付强）X 命中均为无实体或仅 t.co 假阳性，0 保留。Tier3：脉脉/爆料仅 1 条日语配车竞合评论（32 浏览，log_only）；UAE robotaxi 0 帖；投诉站/退出市场/港台检索均为旧闻或日常个例投诉（黑猫花小猪、Reclame Aqui 99Food、脉脉薪资吐槽、阿联酋 4 月试点旧闻、台湾已退出）。RSS 新匹配 0；微博热搜前 52 无滴滴/花小猪/程维/网约车/打车。",
+ "sections": [
+  {
+   "title": "🚕 滴滴 & 滴滴出海",
+   "color": "#ff6600",
+   "items": [
+    {
+     "company": "滴滴 & 滴滴出海",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "公开媒体",
+      "RSS",
+      "微博镜像",
+      "投诉站"
+     ],
+     "date": "10-15 08:15",
+     "text": "本期滴滴本体无新动态。扫描窗口 23:15Z–00:15Z（北京时间 10-15 07:15 至 08:15）。Tier1 全量 + Tier2 slot2（自动驾驶/送货/小桔/青桔/代驾顺风车/小鹏MONA/孙枢付强）+ Tier3（投诉站、退出市场、脉脉/UAE、RSS）未见新的公司八卦、人事、监管、诉讼或财务线索。繁简价差主帖 @Furinanatw 浏览续涨至 75355（上轮 69753），仍是同一组截图，没有新证据，也没有新的媒体报道，滴滴未专门回应；截图时间与路线不同、翔安机场尚未启用，仍属待核实。海外小语种线索：本期无新增。",
+     "links": [
+      {
+       "label": "@Furinanatw 繁简价差主帖（75355 浏览）",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      },
+      {
+       "label": "unwire.hk 报道（繁中）",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/"
+      },
+      {
+       "label": "凤凰网：滴滴 8 月否认大数据杀熟",
+       "url": "https://tech.ifeng.com/c/8vxO0g8gk5L"
+      }
+     ],
+     "id": "20261015-didi-00Z-none"
+    }
+   ]
+  }
+ ],
+ "heat_summary": {
+  "broad_didi_cn_en": {
+   "22Z": 91,
+   "23Z": 108,
+   "00Z_partial_to0009": 21,
+   "query": "滴滴 OR 滴滴出行 OR \"DiDi Global\" OR \"Didi Chuxing\"",
+   "note": "晨间仍以撞词噪音为主；23Z 相对夜间低谷小幅回升"
+  },
+  "trad_simp_price_x": {
+   "posts_in_tier1_window": 0,
+   "kept_for_alert": 0,
+   "main_post_views": 75355,
+   "prev_views": 69753,
+   "main_post_replies": 25,
+   "note": "主帖续涨约 +5602，无新事实、无回应"
+  },
+  "tier1_x_hits_kept": 0,
+  "slot2_x_hits_kept": 0,
+  "tier3_x_hits_kept": 0,
+  "weibo_didi_on_list": null
+ },
+ "candidates": [
+  {
+   "topic": "X slot2 robotaxi 假阳性（YouTube/AI/spam，无滴滴实体）",
+   "verdict": "reject_no_entity",
+   "why": "正文无自动驾驶/张博/Robotaxi 实体，多为 t.co 长文或无关帖",
+   "url": "https://x.com/TraceJie/status/2110517425846497312"
+  },
+  {
+   "topic": "X slot2 送货/小桔 假阳性（仅 t.co / 无关影视）",
+   "verdict": "reject_tco_or_no_entity",
+   "why": "2 帖均无业务实体关键词",
+   "url": "https://x.com/voidJan/status/2110520735815061963"
+  },
+  {
+   "topic": "X Tier3 @money_fish1091 日语配车竞合评论",
+   "verdict": "log_only_below_engagement",
+   "why": "impressions=32，回复性质提及 DiDi 为公取委语境下的竞合平台，非公司新闻",
+   "url": "https://x.com/money_fish1091/status/2110504619910828466"
+  },
+  {
+   "topic": "繁简价差 @Furinanatw 续涨",
+   "verdict": "already_covered_views_only",
+   "why": "69753→75355，无新证据/媒体/回应，不报警",
+   "url": "https://x.com/Furinanatw/status/2110289680595886537"
+  },
+  {
+   "topic": "黑猫投诉 花小猪日常个例",
+   "verdict": "log_only_routine_complaint",
+   "why": "个别未乘车收费/恶意扣款投诉，非可核验新八卦",
+   "url": "https://tousu.sina.com.cn/complaint/view/17381744810"
+  },
+  {
+   "topic": "UAE Robotaxi / 张博自动驾驶 / 99Food Senacon",
+   "verdict": "already_covered_old",
+   "why": "阿联酋试点为 2026-04 旧闻；Senacon/组织调整均为已收录或数月前",
+   "url": "https://www.nbd.com.cn/articles/2026-04-15/4340132.html"
+  }
+ ],
+ "sources_queried": [
+  "X tier1×8 + tier2 slot2×3 + tier3×2 + counts×1 + post lookup×1",
+  "WebSearch×17 (tier1×6 + slot2×2 + tier3 complaint/exited/UAE×9)",
+  "RSS fetch_sources（new matching=0）",
+  "微博热搜镜像 soso.re/weibo 08:02 北京（前52无滴滴）",
+  "Tier3 included (first daytime ≥08:00)"
+ ],
+ "x_calls_used": 15,
+ "web_searches": 17,
+ "web_searches_used": 17,
+ "tiers": "tier1 + tier2 slot2 + tier3",
+ "tiers_ran": [
+  "tier1",
+  "tier2_slot2",
+  "tier3"
+ ],
+ "slot": 2,
+ "push_needed": true,
+ "push_note": "New 00Z edition (10-15) with Tier3 daytime sweep + updated 繁简 heat (75355); push gossip-dashboard"
+}

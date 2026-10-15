@@ -459,3 +459,16 @@ timestamp_utc,topic,metric,value,source
 2026-10-14T23:15:00Z,滴滴繁简价差,x_post_views,69753,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-14T23:15:00Z,滴滴繁简价差,x_sample_post,69753,https://x.com/Furinanatw/status/2110289680595886537
 2026-10-14T23:15:00Z,滴滴,x_hourly_post_count_14to22Z,237|349|231|227|125|66|125|102|91,X q=滴滴 OR 滴滴出行 OR "DiDi Global" OR "Didi Chuxing"; overnight cooling; noise-dominated
+2026-10-14T23:55:00Z,腾讯云AI智能体爬高德,x_hourly_post_count_15to23Z,20|43|50|45|78|43|24|38|17,X q=(Tencent (Amap OR agents OR swarm)) OR swarmchasers OR (腾讯 高德 智能体); 23Z partial to 23:51Z; 10-14 00Z-23:51Z total 388
+2026-10-14T23:55:00Z,腾讯云AI智能体爬高德,x_post_views:@ethanelasky,428956,https://x.com/ethanelasky/status/2110355334556729766
+2026-10-14T23:55:00Z,腾讯云AI智能体爬高德,x_sample_post,428956,https://x.com/ethanelasky/status/2110355334556729766
+2026-10-14T23:55:00Z,腾讯云AI智能体爬高德,x_sample_post,53385,https://x.com/sleepy0x13/status/2110404623274332375
+2026-10-14T23:55:00Z,腾讯云AI智能体爬高德,x_sample_post,11599,https://x.com/dotey/status/2110489279646642209
+2026-10-14T23:55:00Z,懂车帝被曝邀约黑尊界,x_hourly_post_count_16to23Z,66|47|35|23|16|18|31|19,X q=懂车帝 OR (尊界 黑稿); overnight cooling; 23Z partial
+2026-10-14T23:55:00Z,豆包手机助手SAEP151款拒绝,x_hourly_post_count_16to23Z,6|4|9|2|3|1|5|5,X q=豆包 (SAEP OR 拒绝 OR 代操作 OR 手机助手); cooling; tmtpost 钛晨报 07:20 Beijing still covers 151款
+2026-10-14T23:55:00Z,腾讯绿泡泡对战红果短剧,x_hourly_post_count_16to23Z,93|51|60|22|23|15|25|14,X q=绿泡泡 OR 红果短剧 OR (微信 短剧); off Weibo top46 at 07:35 Beijing
+2026-10-14T23:55:00Z,快讯扫描_无达标项,weibo_company_adjacent_top46,国行iPhone接入通义千问#20(155597);京东服饰美妆#4(516793);雷军小米汽车冬季保障#34(143662),"https://soso.re/weibo updated 2026-10-15 07:35 Beijing; PR/product, not gossip alerts"
+2026-10-15T00:15:00Z,滴滴繁简价差,x_post_views,75355,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T00:15:00Z,滴滴繁简价差,x_sample_post,75355,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T00:15:00Z,滴滴,x_sample_post,75355,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T00:15:00Z,滴滴,x_hourly_post_count_22to00Z,91|108|21,X q=滴滴 OR 滴滴出行 OR "DiDi Global" OR "Didi Chuxing"; 00Z partial to 00:09; morning noise

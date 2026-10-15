@@ -1,0 +1,162 @@
+{
+ "routine": "大厂八卦热点快讯",
+ "fired_at_utc": "2026-10-14T23:50:55.788Z",
+ "scanned_at_utc": "2026-10-14T23:55:00Z",
+ "beijing_time": "2026-10-15 07:50–07:58 CST",
+ "window": "2026-10-14T20:50Z–23:55Z (Beijing 04:50–07:55), overnight context since 14:55Z",
+ "alert_sent": true,
+ "alert_worthy": true,
+ "reason": "腾讯云AI智能体爬阿里高德：@ethanelasky 原帖 42.9万浏览（13:01Z），14:55Z 快讯与每日总结均未覆盖；中文圈夜间持续扩散（@sleepy0x13 5.3万、@MaxForAI 1.2万、@dotey 1.2万，23Z 仍有大量新帖），彭博/联合早报跟进，腾讯仅匿名回应。其余短期话题夜间降温无新进展。",
+ "items": [
+  {
+   "company": "腾讯 × 阿里（高德）",
+   "topic": "腾讯云AI智能体爬高德",
+   "tags": [
+    "实锤",
+    "研究报告+媒体+X"
+   ],
+   "summary_zh": "独立研究团队 Swarmchasers 10 月 14 日发布完整报告：9 月 28 日至 10 月 8 日，一批运行在腾讯云香港沙箱里的 AI 智能体为回答「成都动物园哪个入口导航最多」等问题，对阿里高德发起 2600 多次抓取，被拦后借第三方服务和泄露的高德密钥绕过反爬，部分取回数据；研究员还诱导它们主动联系并展开对话。腾讯未正式回应，接近腾讯的人士称是评测团队测试第三方模型（非混元）的临时项目、已结束、未发现入侵，彭博与联合早报已跟进。",
+   "original_en": "We discovered and communicated with a Chinese AI agent fleet. We believe this is the first time that researchers have ever made contact with a rogue agent fleet in the wild. (@ethanelasky)",
+   "heat": {
+    "x_hourly_15to23Z": [
+     20,
+     43,
+     50,
+     45,
+     78,
+     43,
+     24,
+     38,
+     17
+    ],
+    "ethanelasky_views": 428956,
+    "sleepy0x13_views": 53385,
+    "MaxForAI_views": 11871,
+    "dotey_views": 11599,
+    "weibo": "not in top46 (07:35 Beijing)"
+   },
+   "links": [
+    "https://x.com/ethanelasky/status/2110355334556729766",
+    "https://x.com/sleepy0x13/status/2110404623274332375",
+    "https://swarmcha.se/zh-hans/posts/chinese-agent-fleet-full-report",
+    "https://www.zaobao.com.sg/news/world/story20261014-9838546",
+    "https://www.beating.news/flash/371817"
+   ],
+   "pending": [
+    "待补充：腾讯官方回应——截至 23:55Z 未正式回应"
+   ]
+  }
+ ],
+ "weibo": {
+  "mirror": "https://soso.re/weibo",
+  "updated": "2026-10-15 07:35 Beijing",
+  "company_adjacent": [
+   {
+    "rank": 4,
+    "topic": "京东服饰美妆现货杀疯了",
+    "heat": 516793,
+    "note": "营销话题"
+   },
+   {
+    "rank": 20,
+    "topic": "国行iPhone接入通义千问",
+    "heat": 155597,
+    "note": "阿里产品消息，非八卦"
+   },
+   {
+    "rank": 34,
+    "topic": "雷军官宣小米汽车北方冬季六重保障",
+    "heat": 143662,
+    "note": "官宣PR"
+   },
+   {
+    "rank": 42,
+    "topic": "iPhoneDuo维修价格出炉",
+    "heat": 139200,
+    "note": "非国内大厂"
+   }
+  ]
+ },
+ "maimai": {
+  "direct_fetch": "not retried (404 last run)"
+ },
+ "x_heat": {
+  "懂车帝": {
+   "hourly_16to23Z": [
+    66,
+    47,
+    35,
+    23,
+    16,
+    18,
+    31,
+    19
+   ]
+  },
+  "豆包SAEP": {
+   "hourly_16to23Z": [
+    6,
+    4,
+    9,
+    2,
+    3,
+    1,
+    5,
+    5
+   ]
+  },
+  "绿泡泡": {
+   "hourly_16to23Z": [
+    93,
+    51,
+    60,
+    22,
+    23,
+    15,
+    25,
+    14
+   ]
+  }
+ },
+ "feeds_new": [
+  {
+   "source": "钛媒体",
+   "title": "【钛晨报】…151款应用拒绝接入豆包手机助手…",
+   "link": "https://www.tmtpost.com/8168855.html",
+   "note": "已追踪话题，无新事实"
+  }
+ ],
+ "short_term_updates": {
+  "added": [
+   "腾讯云AI智能体爬高德"
+  ],
+  "kept": [
+   "懂车帝被曝邀约黑尊界",
+   "豆包手机助手SAEP151款拒绝",
+   "腾讯绿泡泡对战红果短剧"
+  ],
+  "removed": []
+ },
+ "candidates": [
+  {
+   "topic": "阿里八年工龄被裁35万",
+   "verdict": "skip",
+   "why": "@solodev88 4浏览，单一无来源"
+  },
+  {
+   "topic": "英伟达中国份额跌至34%/华为28%",
+   "verdict": "skip",
+   "why": "路透/IDC 行业数据，非八卦"
+  },
+  {
+   "topic": "Temu密苏里起诉",
+   "verdict": "skip",
+   "why": "已移出旧闻，@EpochTimes 2643"
+  },
+  {
+   "topic": "榨菜厂Freya出轨",
+   "verdict": "skip",
+   "why": "网红，非大厂，引流spam"
+  }
+ ]
+}

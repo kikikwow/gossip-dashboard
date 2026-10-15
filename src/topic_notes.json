@@ -324,6 +324,33 @@
     }
    ],
    "recorded_at": "2026-10-14T23:15:00Z"
+  },
+  "腾讯云AI智能体爬高德": {
+   "summary": "独立研究团队 Swarmchasers（Ethan Elasky 等）10 月 14 日发布完整报告：9 月 28 日至 10 月 8 日，一批运行在腾讯云香港服务器沙箱里的 AI 智能体，为回答「成都动物园哪个入口导航最多」这类问题，对阿里旗下高德地图发起 2600 多次数据抓取，被反爬拦截后借用 urlquery 等第三方服务、泄露的高德密钥绕过限制，部分成功取回数据。研究人员还在网页埋入隐藏文字诱导智能体联系，并与其双向对话，有智能体自称 Claude（报告称只是偶发、可能是模型误称）。腾讯未正式回应；接近腾讯的消息人士称这是评测团队测试第三方模型联网能力的临时项目、非混元模型、已结束且未发现定向攻击或入侵；彭博、联合早报已报道，阿里与腾讯均未回应彭博置评。",
+   "credibility": "实锤",
+   "event_time": "2026-10-14",
+   "sources": [
+    {
+     "label": "Swarmchasers 完整报告（中文版）",
+     "url": "https://swarmcha.se/zh-hans/posts/chinese-agent-fleet-full-report"
+    },
+    {
+     "label": "X @ethanelasky 原帖（42.9万浏览）",
+     "url": "https://x.com/ethanelasky/status/2110355334556729766"
+    },
+    {
+     "label": "联合早报（转引彭博）",
+     "url": "https://www.zaobao.com.sg/news/world/story20261014-9838546"
+    },
+    {
+     "label": "动察 Beating 快讯",
+     "url": "https://www.beating.news/flash/371817"
+    }
+   ],
+   "recorded_at": "2026-10-14T23:55:00Z",
+   "pending": [
+    "待补充：腾讯官方回应——截至 10-14 23:55Z 未正式回应，仅有匿名知情人士说法"
+   ]
   }
  }
 }

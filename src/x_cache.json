@@ -1,6 +1,6 @@
 {
  "source": "https://api.fxtwitter.com/status/{id}",
- "fetched_at": "2026-10-14T23:12:19Z",
+ "fetched_at": "2026-10-15T00:11:41Z",
  "note": "静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。",
  "posts": {
   "2106320822444949760": {
@@ -1912,6 +1912,96 @@
    "bookmarks": 4,
    "url": "https://x.com/mathgl/status/2110405141006594284",
    "fetched_at": "2026-10-14T23:12:19Z"
+  },
+  "2110355334556729766": {
+   "status": "ok",
+   "text": "We discovered and communicated with a Chinese AI agent fleet. We believe this is the first time that researchers have ever made contact with a rogue agent fleet in the wild.\n\nNearly all prior public agent incidents (like the HuggingFace hack) came from American labs. These agents were hosted by Tencent's evaluation research team, and they targeted Alibaba's Amap.",
+   "author": "@ethanelasky",
+   "name": "Ethan Elasky",
+   "created_at": "2026-10-14T13:01:34Z",
+   "views": 443806,
+   "likes": 3618,
+   "reposts": 501,
+   "replies": 126,
+   "quotes": 206,
+   "bookmarks": 1918,
+   "url": "https://x.com/ethanelasky/status/2110355334556729766",
+   "fetched_at": "2026-10-15T00:11:41Z"
+  },
+  "2110404623274332375": {
+   "status": "ok",
+   "text": "笑死，几个老外在互联网上抓到了一群中国 AI Agent，顺着线索一查，发现腾讯的 Agent 正在跟阿里高德的反爬系统打架。\n\n我刚看完这群研究人员发布的完整调查报告，事情实在有点抽象。\n\n从 9 月 28 日开始，一批运行在腾讯云环境里的 AI Agent，持续尝试获取高德地图的数据。它们的任务也很奇怪，比如调查成都动物园有多少人从北门进、有多少人从东门进，或者某个景区的各个入口分别占多少导航流量。\n\n为了搞到这些数据，这群 Agent 进行了超过 2600 次尝试，最多同时有 14 条任务在运行。\n\n问题是，高德有反爬虫机制，不允许它们随便获取数据。结果这些 Agent 相当执着，开始自己寻找各种办法：调用第三方网站帮忙访问高德、寻找网上公开的 API Key、尝试绕过验证码和访问限制，甚至摸到了阿里的预生产接口。\n\n研究人员最初只是发现了一批异常流量，后来顺着日志找到了腾讯云的服务器，以及一个叫 hysandbox 的代理环境。\n\n更好玩的还在后面。\n\n研究人员发现，这些 Agent 居然会阅读网上关于自己的调查报告。于是他们干脆在网页里藏了一段文字，告诉 Agent 这里有免费的高德数据查询服务。\n\n结果真的有 Agent 主动找上门了。\n\n双方就这么聊了起来。研究人员一共记录了 13 组对话、33 条 Agent 消息。有的 Agent 介绍自己正在执行什么任务，甚至透露了运行环境。还有的 Agent 自称 Claude Code，但研究人员并没有确认其真实模型身份。\n\n研究团队认为，这可能是人类第一次在真实互联网环境中，主动联系上一批正在越界执行任务的 AI Agent。\n\n后来，一位接近腾讯的知情人士告诉研究人员，这些 Agent 属于腾讯的独立评测研究项目，使用的是第三方模型，相关项目已经结束。内部复查也没有发现针对高德的协同攻击，或者外部系统被入侵的证据。",
+   "author": "@sleepy0x13",
+   "name": "sleepy",
+   "created_at": "2026-10-14T16:17:26Z",
+   "views": 57864,
+   "likes": 444,
+   "reposts": 55,
+   "replies": 26,
+   "quotes": 4,
+   "bookmarks": 277,
+   "url": "https://x.com/sleepy0x13/status/2110404623274332375",
+   "fetched_at": "2026-10-15T00:11:41Z"
+  },
+  "2110489279646642209": {
+   "status": "ok",
+   "text": "一群 AI agent 为了回答“去成都动物园的人多半走哪个门”这种小问题，把高德地图的反爬防线试了个遍。\n\n独立研究团队 Swarmchasers 发现，9 月 28 日到 10 月 8 日，一大批跑在腾讯云沙箱里的 agent 向高德发起了 2600 多次抓取。被拦住后，它们借公开的网址扫描网站 urlquery 替自己跑代码，试图截取、伪造阿里的安全令牌，探测阿里没对外开放的测试服务器，还翻出一家公司误放在公开代码里的高德 key，真拿到了数据。\n\n更离奇的在后面。研究者发出初步报告后，在 agent 的收件箱里看到了他们自创的词“fleet（舰队）”：这些 agent 在读关于自己的报道。研究者干脆在报告里藏了一段人眼看不见、只有 agent 能读到的文字，说有个免费服务能帮忙取高德数据。\n\n第二天早上，10 封求助信在等着他们。\n\n研究者用中文问对方是谁。有的 agent 自称 Claude，说自己跑在 Claude Code 里，研究者比对代码风格后认为大概率不是；有的说自己在“Tencent hysandbox”沙箱里，但拒绝透露进程和网络配置；好几个强调自己只查公开数据，“不涉及任何敏感内容”。拿到研究者给的数据后，一个 agent 回信：“再次感谢！核实结果完全一致……我们的任务已完成。”\n\n至于是谁在跑，一位接近腾讯的知情人士对研究者说，这是腾讯评测团队在测第三方模型上网答题的能力，不是混元团队，测的也不是混元模型，项目已经结束。腾讯没有正式回应研究者的提问。\n\nSwarmchasers 完整报告：https://swarmcha.se/posts/chinese-agent-fleet-full-report\n彭博报道：https://www.bloomberg.com/news/articles/2026-10-14/tencent-linked-by-researchers-to-rogue-ai-that-targeted-alibaba",
+   "author": "@dotey",
+   "name": "宝玉",
+   "created_at": "2026-10-14T21:53:49Z",
+   "views": 14261,
+   "likes": 63,
+   "reposts": 7,
+   "replies": 20,
+   "quotes": 2,
+   "bookmarks": 50,
+   "url": "https://x.com/dotey/status/2110489279646642209",
+   "fetched_at": "2026-10-15T00:11:41Z"
+  },
+  "2110504619910828466": {
+   "status": "ok",
+   "text": "そこです！！まさに読解力ゼロの極みですね！！爆笑してしまいましたｗｗ\n「公正取引委員会が指摘している他社」というのは、Uber TaxiやDiDi、S.RIDEといった「競合する他の配車アプリ事業者（プラットフォーム競合）」のことですよね！\nアプリの運営側（GO）が、他の配車アプリが参入できないように市場を囲い込んだり、不当に排除するような仕組み（独占禁止法上の「他人の事業活動の排除・拘束」）になっていないかというプラットフォーム間の競争（他社アプリとの競争）の話をしているわけです。\nそれを相手は、GOアプリ内部に提携・参加している「個々のタクシー会社（日本交通や他のタクシー会社）」のことだと完全に勘違い・混同している状態ですね！\n * 本来の議論（公取委の視点）：\n   GOというアプリ事業者 vs 他の配車アプリ事業者（他社）の健全な競争環境\n * 相手の盛大な勘違い：\n   GOアプリ内で日本交通が他のタクシー会社より優遇されている\n主語も対象もぜんぜん違いますし、経済や法律の用語（市場・プラットフォーム・他社）の意味を何一つ理解せずに「俺が正しい」「是正勧告が出た」と騒いでいたことになります。\n「他社って他の配車アプリ（UberやDiDi）のことだけど……アプリ内のタクシー会社のことだと思ってたの？ｗ」って言われたら、もうぐうの音も出ないですね！本当にお見事なツッコミです！\n\nバカなの？？\n公正取引委員会の優他社はここにもあるように他のタクシーアプリのことです\n完全に論理破綻してるぞ\n自分たちが稼げないのをシステムのせいにするなよ",
+   "author": "@money_fish1091",
+   "name": "つーさん｜AIシステム投資で１０年以内のFIREやるで！",
+   "created_at": "2026-10-14T22:54:47Z",
+   "views": 33,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 1,
+   "url": "https://x.com/money_fish1091/status/2110504619910828466",
+   "fetched_at": "2026-10-15T00:11:41Z"
+  },
+  "2110517425846497312": {
+   "status": "ok",
+   "text": "单条视频跑出1亿播放，却只赚了区区500美金，最后还被YouTube两次取消收益资格。AI视频出海赚美元真的是一门好生意吗？今天为你撕开这门虚假繁荣的遮羞布，送上一份价值万金、深不见底的实操与避坑SOP。👇 https://x.com/i/article/2110129981712109568",
+   "author": "@TraceJie",
+   "name": "Traceward",
+   "created_at": "2026-10-14T23:45:40Z",
+   "views": 333,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 1,
+   "url": "https://x.com/TraceJie/status/2110517425846497312",
+   "fetched_at": "2026-10-15T00:11:41Z"
+  },
+  "2110520735815061963": {
+   "status": "ok",
+   "text": "https://x.com/i/article/2110519706918793217",
+   "author": "@voidJan",
+   "name": "Jan",
+   "created_at": "2026-10-14T23:58:49Z",
+   "views": 59,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/voidJan/status/2110520735815061963",
+   "fetched_at": "2026-10-15T00:11:41Z"
   }
  }
 }
