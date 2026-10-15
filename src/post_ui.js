@@ -594,6 +594,13 @@
       var box = e.target.closest && e.target.closest('.clampbox');
       if (box && !(e.target.closest && e.target.closest('a'))) {
         var btn = box.querySelector('.xmore');
+        var onBtn = !!(e.target.closest && e.target.closest('.xmore'));
+        if (!onBtn) {
+          // Body clicks never collapse an open box, and a text selection never toggles it.
+          if (box.classList.contains('is-open')) return;
+          var sel = window.getSelection && window.getSelection();
+          if (sel && !sel.isCollapsed && String(sel).trim()) return;
+        }
         if (btn && !btn.hidden) {
           e.preventDefault();
           e.stopPropagation();
