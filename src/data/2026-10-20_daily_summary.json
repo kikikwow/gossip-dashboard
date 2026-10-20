@@ -1,0 +1,1062 @@
+{
+ "type": "daily",
+ "title": "大厂八卦每日总结｜2026-10-20",
+ "edition_date": "2026-10-20",
+ "timestamp": "2026-10-20T15:07:00Z",
+ "generated_at": "2026-10-20T15:07:00Z",
+ "fired_at": "2026-10-20T15:07:00Z",
+ "fired_at_beijing": "2026-10-20 23:07",
+ "beijing_note": "晚间新料窗口：2026-10-20 16:00 → 23:07 北京时间；一次性补漏窗口：2026-10-16 07:50 → 2026-10-20 23:07 北京时间（服务停更期间）",
+ "window": {
+  "start_beijing": "2026-10-16 07:50",
+  "end_beijing": "2026-10-20 23:07",
+  "evening_start_beijing": "2026-10-20 16:00"
+ },
+ "lede": "停更四天回来，最大的瓜是美国禁用DeepSeek、商务部晚间强硬回应；路透曝字节阿里腾讯抢订300万张英伟达RTX PRO 5500；晚上淘宝双11预售“崩了”，王腾一句“希望雷总放我们一条生路”上热搜；陈广宇被曝加入Jeff Dean的Discovery Loop。",
+ "heat_snapshot": {
+  "measured_at_utc": "2026-10-20T15:07:00Z",
+  "note": "X counts via get_posts_counts_recent; weibo soso.re 22:56 Beijing; trends vs 2026-10-15T23:54Z heat_log rows span the 10/16–10/20 pause",
+  "deepseek_ban_hourly_08to14Z": [
+   106,
+   92,
+   95,
+   135,
+   135,
+   177,
+   159
+  ],
+  "deepseek_ban_total_since_1019T12Z": 3181,
+  "deepseek_weibo": {
+   "rank": 13,
+   "heat": 265423
+  },
+  "rtx5500_hourly_09to14Z": [
+   39,
+   44,
+   58,
+   73,
+   119,
+   59
+  ],
+  "rtx5500_today": 401,
+  "rtx_FORAB_views": 41008,
+  "zunjie_daily_1016to1020": [
+   1150,
+   565,
+   396,
+   207,
+   116
+  ],
+  "chen_daily_1016to1020": [
+   179,
+   24,
+   30,
+   31,
+   82
+  ],
+  "chen_nathancgy4_views": 792692,
+  "dongchedi_daily_1016to1020": [
+   707,
+   443,
+   333,
+   213,
+   124
+  ],
+  "greenbubble_daily_1016to1020": [
+   28,
+   32,
+   47,
+   23,
+   11
+  ],
+  "wangteng_weibo": {
+   "rank": 17,
+   "heat": 265120
+  },
+  "taobao_weibo": {
+   "rank": 32,
+   "heat": 222016
+  },
+  "miit_weibo": {
+   "rank": 44,
+   "heat": 162372
+  },
+  "didi_fanjian_views": 182082,
+  "lidangzzz_views": 323246
+ },
+ "short_term_updates": {
+  "kept": [
+   {
+    "name": "尊界V800刹车踏板·三部门联合调查",
+    "trend": "📉"
+   },
+   {
+    "name": "月之暗面陈广宇离职",
+    "trend": "📈"
+   }
+  ],
+  "added": [
+   {
+    "name": "美国禁用DeepSeek·商务部回应",
+    "trend": "📈"
+   },
+   {
+    "name": "字节阿里腾讯抢购英伟达RTX PRO 5500",
+    "trend": "📈"
+   }
+  ],
+  "removed": [
+   {
+    "name": "DeepSeek网页/API大面积中断",
+    "reason": "10-15故障+补偿后5天无新进展，DeepSeek热度已转到禁令新话题"
+   },
+   {
+    "name": "懂车帝被曝邀约黑尊界",
+    "reason": "并入尊界主线，日发帖707→124"
+   },
+   {
+    "name": "腾讯绿泡泡对战红果短剧",
+    "reason": "5天无新公司动作，X日发帖降到11"
+   }
+  ],
+  "watch_not_added": [
+   {
+    "name": "王腾今日宜休·放我们一条生路",
+    "reason": "微博#17但X极少，10-29发布会再看"
+   },
+   {
+    "name": "淘宝双11预售崩了",
+    "reason": "微博#32，单晚故障，看是否有官方说明"
+   },
+   {
+    "name": "「毒瘤厂」帖",
+    "reason": "32.3万浏览但未点名、无事实"
+   }
+  ]
+ },
+ "alert_summary": {
+  "daily_summary_alert_worthy": false,
+  "note": "停更期间无快讯/警报；本期为每日总结，不单独警报"
+ },
+ "sources_ingested": [
+  "research/feeds/2026-10-20T1504Z.json",
+  "X search/counts（约24次调用）",
+  "soso.re/weibo 22:56"
+ ],
+ "markdown_file": "data/2026-10-20_daily_summary.md",
+ "key_points": [
+  "美国DHS禁止联邦民用机构使用DeepSeek（含基于它开发的第三方产品）；商务部晚间“强烈不满、坚决反对”【实锤】",
+  "路透：字节阿里腾讯抢订300万+张英伟达RTX PRO 5500（超350亿美元），英伟达或只交付5%–10%【传闻】",
+  "双11预售首晚淘宝支付异常上热搜；王腾“希望雷总放我们一条生路”上微博#17【实锤】",
+  "尊界刹车调查结论未出，X日发帖1150（10/16）→116（今日）；工信部表态车企测试验证不充分【实锤】",
+  "陈广宇被曝加入Discovery Loop，本人未确认【传闻】"
+ ],
+ "sections": [
+  {
+   "title": "🔥 热度榜",
+   "color": "#dc2626",
+   "items": [
+    {
+     "id": "20261020-daily-deepseek-ban",
+     "company": "DeepSeek / 美国国土安全部 / 商务部",
+     "tag": "实锤",
+     "source_types": [
+      "官方",
+      "媒体",
+      "微博",
+      "X"
+     ],
+     "date": "10-19→10-20",
+     "text": "美国国土安全部10-19公开命令：联邦民用机构停止采购并从IT系统移除DeepSeek及其关联公司产品，基于DeepSeek开发的第三方产品和服务也在移除范围内。10-20晚商务部发言人表示“强烈不满、坚决反对”，称美方泛化国家安全、敦促撤销歧视性措施，并称将“采取一切必要措施”。微博「商务部回应美机构禁用DeepSeek」#13（约26.5万）；X 相关发帖 10-19 12Z 以来累计3181，今晚13Z/14Z 为177/159帖/时，📈。",
+     "links": [
+      {
+       "label": "商务部：发言人答记者问（10-20 21:17）",
+       "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_a0e310017a2f4d98aa035cb51be5049c.html"
+      },
+      {
+       "label": "AP News：China hits back at US ban of DeepSeek",
+       "url": "https://apnews.com/article/us-china-deepseek-ai-ban-2bffa5b0131808735280b2c0e6f0d856"
+      },
+      {
+       "label": "Bloomberg【付费】：US Moves to Bar China’s DeepSeek From Federal Agency Systems",
+       "url": "https://www.bloomberg.com/news/articles/2026-10-19/us-moves-to-bar-deepseek-from-federal-agencies-and-contracts"
+      },
+      {
+       "label": "微博热搜镜像（22:56）",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "X @sleepy0x13（2.08万浏览）",
+       "url": "https://x.com/sleepy0x13/status/2112173684177932615"
+      },
+      {
+       "label": "X @Fei2411（3789浏览）",
+       "url": "https://x.com/Fei2411/status/2112355113478336955"
+      }
+     ]
+    },
+    {
+     "id": "20261020-daily-rtx5500",
+     "company": "字节跳动 / 阿里巴巴 / 腾讯 / 英伟达",
+     "tag": "传闻",
+     "source_types": [
+      "外媒(路透·消息人士)",
+      "X"
+     ],
+     "date": "10-20",
+     "text": "路透独家（援引两名知情人士）：字节、阿里、腾讯合计向英伟达订购超300万张 RTX PRO 5500 工作站卡，单价约1.14万美元、标价合计超350亿美元，主要用于推理；英伟达称无法保证交付，可能只能满足5%–10%，2027年全球产量或不超过300万张，中国客户总订单已超600万张。三家公司未见公开回应。X 相关发帖 09Z 起出现，13Z 达119帖/时；@_FORAB 解读帖约4.10万浏览。",
+     "links": [
+      {
+       "label": "Reuters（经 US News 转载）：Exclusive-ByteDance, Alibaba, Tencent place over $35 billion worth of Nvidia chip orders",
+       "url": "https://money.usnews.com/investing/news/articles/2026-10-20/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-of-nvidia-chip-orders"
+      },
+      {
+       "label": "Euronext 转 Reuters 全文",
+       "url": "https://live.euronext.com/en/financial-news/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-nvidia-chip-orders"
+      },
+      {
+       "label": "X @_FORAB（4.10万浏览）",
+       "url": "https://x.com/_FORAB/status/2112495864317125032"
+      }
+     ],
+     "lang": "en",
+     "translation_zh": "路透10月20日：据两名知情人士，字节跳动、阿里巴巴和腾讯已订购超过300万张英伟达新款RTX PRO 5500显卡，标价合计超过350亿美元；英伟达已告知客户和合作伙伴，由于中国科技公司需求远超计划产能，无法保证满足订单。",
+     "original": "Oct 20 (Reuters) - ByteDance, Alibaba and Tencent have ordered more than 3 million of Nvidia's new RTX PRO 5500 graphics cards with a collective sticker price of over $35 billion, two people familiar with the matter said... Nvidia has told customers and partners it cannot guarantee that it can fill the orders because demand from Chinese technology companies far exceeds planned production."
+    },
+    {
+     "id": "20261020-daily-zunjie",
+     "company": "华为·尊界 / 懂车帝",
+     "tag": "实锤",
+     "source_types": [
+      "官方",
+      "媒体",
+      "X"
+     ],
+     "date": "10-16→10-20",
+     "text": "三部门联合调查尊界V800刹车踏板支架断裂仍无结论。停更期间：驱动中国报道：懂车帝复测智界V9、理想、保时捷等多车同工况未断裂，尊界承认支架底座极端受力冗余仍需提升、11月起免费升级；10-20工信部总工程师王卫明在国新办发布会称“确实也出现了部分企业跟风推出新产品，测试验证不充分等问题”，四部门拟收紧汽车创新设计与测试验证管理（未点名尊界；微博#44约16.2万）。X「尊界+刹车/调查」日发帖 1150（10/16）→207（10/19）→今日截至23:07为116，📉较10/16（跨停更期）。",
+     "links": [
+      {
+       "label": "驱动中国：懂车帝复测多车未断裂，三部门已介入",
+       "url": "https://www.qudong.com/article/526550.html"
+      },
+      {
+       "label": "人民网：工信部坚决防范未经充分验证的汽车产品进入市场",
+       "url": "http://finance.people.com.cn/n1/2026/1020/c1004-40818373.html"
+      },
+      {
+       "label": "微博热搜镜像（22:56）",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "X @TraderS18（5.93万浏览）",
+       "url": "https://x.com/TraderS18/status/2110741270394184185"
+      },
+      {
+       "label": "X @chairbtc（3431浏览，称懂车帝删视频）",
+       "url": "https://x.com/chairbtc/status/2110920599447146887"
+      }
+     ]
+    },
+    {
+     "id": "20261020-daily-chenguangyu",
+     "company": "月之暗面·Kimi / Discovery Loop",
+     "tag": "传闻",
+     "source_types": [
+      "媒体",
+      "X"
+     ],
+     "date": "10-20",
+     "text": "17岁陈广宇（Nathan Chen）10-15宣布离开Kimi后，曾以一个“不”字否认加入Anthropic；10-20有消息人士在社媒称其已加入Jeff Dean等四名谷歌老将8月创办的AI初创公司Discovery Loop，观察者网10-20 18:26 跟进报道，但本人尚未确认。X「陈广宇」发帖从10-17~10-19的24–31帖/日回升到今日82帖📈；本人离职帖约79.3万浏览，@leo114119 爆料帖约1.44万。",
+     "links": [
+      {
+       "label": "观察者网：Kimi“天才少年”被曝加入美国AI初创公司",
+       "url": "https://www.guancha.cn/CaiJing/2026_10_20_905103.shtml"
+      },
+      {
+       "label": "X @leo114119（1.44万浏览）",
+       "url": "https://x.com/leo114119/status/2112377401653252526"
+      },
+      {
+       "label": "X @nathancgy4 离职帖（79.3万浏览）",
+       "url": "https://x.com/nathancgy4/status/2110522061953327565"
+      }
+     ],
+     "pending": [
+      "待补充：说明——陈广宇本人或Discovery Loop官方确认，截至23:07未见"
+     ]
+    },
+    {
+     "id": "20261020-daily-wangteng",
+     "company": "小米 / 今日宜休（王腾）",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "微博",
+      "X"
+     ],
+     "date": "10-20",
+     "text": "前小米中国区市场部总经理、REDMI品牌总经理王腾（2025年因泄密被小米辞退）创业公司「今日宜休」10-20官宣首款产品ISHO Ring睡眠戒指，10-29在北京开发布会；在与韩路、李杰灵的视频里被问“前东家会不会也做一个”，王腾笑答“希望雷总放我们一条生路”，并摆出OK手势被网友调侃“Are you OK”。微博「王腾说希望雷总放我们一条生路」#17（约26.5万）。",
+     "links": [
+      {
+       "label": "凤凰网/快科技：王腾：希望雷总放我们一条生路",
+       "url": "https://feng.ifeng.com/c/8xNjn52XED7"
+      },
+      {
+       "label": "凤凰网：今日宜休官宣首款产品，10-29 发布会",
+       "url": "https://feng.ifeng.com/c/8xNtLcmo5BM"
+      },
+      {
+       "label": "新浪/北京商报：今日宜休首场发布会10月29日举行",
+       "url": "https://finance.sina.cn/2026-10-19/detail-inivtpwq0771084.d.html?vt=4"
+      },
+      {
+       "label": "微博热搜镜像（22:56）",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "X @YaoXiao46714（326浏览）",
+       "url": "https://x.com/YaoXiao46714/status/2112433709022683212"
+      }
+     ]
+    },
+    {
+     "id": "20261020-daily-taobao-down",
+     "company": "阿里巴巴·淘宝",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "微博",
+      "X"
+     ],
+     "date": "10-20",
+     "text": "10-20晚天猫双11开启预售后，大量用户反馈淘宝支付失败、确认订单时提示“平台优惠金额发生变化”、优惠券状态异常，#淘宝崩了#上微博热搜（22:56镜像为#32、约22.2万）。淘宝客服回应称“大促期间活动火爆，建议稍后再试”；未见官方技术说明。X 讨论量小（14Z约6帖）。",
+     "links": [
+      {
+       "label": "凤凰网（白鹿视频）：“淘宝崩了”冲上热搜，官方回应",
+       "url": "https://feng.ifeng.com/c/8xNtLcmo5Cb"
+      },
+      {
+       "label": "微博热搜镜像（22:56）",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "X @Miduowa（374浏览）",
+       "url": "https://x.com/Miduowa/status/2112525375620435993"
+      }
+     ],
+     "pending": [
+      "待补充：说明——淘宝/阿里官方是否发布故障原因与恢复时间，本期未见"
+     ]
+    },
+    {
+     "id": "20261020-daily-dongchedi",
+     "company": "懂车帝 / 尊界",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "X"
+     ],
+     "date": "10-16→10-20",
+     "text": "懂车帝支线随尊界主线降温：驱动中国称懂车帝复测多款车同工况未断裂；X「懂车帝+黑/邀约/否认/尊界」日发帖 707（10/16）→213（10/19）→今日截至23:07为124，📉较10/16（跨停更期）。本期并入尊界主线，移出短期列表。",
+     "links": [
+      {
+       "label": "驱动中国：懂车帝复测多车未断裂，三部门已介入",
+       "url": "https://www.qudong.com/article/526550.html"
+      }
+     ]
+    },
+    {
+     "id": "20261020-daily-didi-fanjian",
+     "company": "滴滴",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-14→10-20",
+     "text": "滴滴「繁简价差」主帖 @Furinanatw 浏览约18.21万（10/16 约17.84万，较10/16（跨停更期）➡️ 仅+3690），停更期间未见新证据、未见媒体升级核实，滴滴仍无专门回应，维持待核实。国内其他：10-17岳阳通报约谈13家网约车平台、对违规派单立案9起（行业整治，未点名滴滴处罚）。",
+     "links": [
+      {
+       "label": "X @Furinanatw（18.21万浏览）",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      },
+      {
+       "label": "unwire.hk（10-13 原报道）",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/"
+      },
+      {
+       "label": "腾讯新闻/网约车观察：岳阳约谈13家平台、立案9起",
+       "url": "https://news.qq.com/rain/a/20261017A044XF00"
+      }
+     ]
+    },
+    {
+     "id": "20261020-daily-greenbubble",
+     "company": "腾讯·微信 / 字节·红果",
+     "tag": "实锤",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-16→10-20",
+     "text": "微信「绿泡泡」短剧对标红果的话题停更期间无新公司动作：X 日发帖 28（10/16）→23（10/19）→今日11，微博未回榜；@_FORAB 旧帖浏览涨到约16.8万但无新事实，📉，本期移出短期列表。",
+     "links": [
+      {
+       "label": "X @_FORAB（16.8万浏览，10-14旧帖）",
+       "url": "https://x.com/_FORAB/status/2110319029797916887"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🆕 今晚新料",
+   "color": "#ea580c",
+   "items": [
+    {
+     "id": "20261020-daily-n-rtx5500",
+     "company": "字节跳动 / 阿里巴巴 / 腾讯 / 英伟达",
+     "tag": "传闻",
+     "source_types": [
+      "外媒(路透·消息人士)",
+      "X"
+     ],
+     "date": "10-20",
+     "text": "路透独家（援引两名知情人士）：字节、阿里、腾讯合计向英伟达订购超300万张 RTX PRO 5500 工作站卡，单价约1.14万美元、标价合计超350亿美元，主要用于推理；英伟达称无法保证交付，可能只能满足5%–10%，2027年全球产量或不超过300万张，中国客户总订单已超600万张。三家公司未见公开回应。X 相关发帖 09Z 起出现，13Z 达119帖/时；@_FORAB 解读帖约4.10万浏览。",
+     "links": [
+      {
+       "label": "Reuters（经 US News 转载）：Exclusive-ByteDance, Alibaba, Tencent place over $35 billion worth of Nvidia chip orders",
+       "url": "https://money.usnews.com/investing/news/articles/2026-10-20/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-of-nvidia-chip-orders"
+      },
+      {
+       "label": "Euronext 转 Reuters 全文",
+       "url": "https://live.euronext.com/en/financial-news/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-nvidia-chip-orders"
+      },
+      {
+       "label": "X @_FORAB（4.10万浏览）",
+       "url": "https://x.com/_FORAB/status/2112495864317125032"
+      }
+     ],
+     "lang": "en",
+     "translation_zh": "路透10月20日：据两名知情人士，字节跳动、阿里巴巴和腾讯已订购超过300万张英伟达新款RTX PRO 5500显卡，标价合计超过350亿美元；英伟达已告知客户和合作伙伴，由于中国科技公司需求远超计划产能，无法保证满足订单。",
+     "original": "Oct 20 (Reuters) - ByteDance, Alibaba and Tencent have ordered more than 3 million of Nvidia's new RTX PRO 5500 graphics cards with a collective sticker price of over $35 billion, two people familiar with the matter said... Nvidia has told customers and partners it cannot guarantee that it can fill the orders because demand from Chinese technology companies far exceeds planned production."
+    },
+    {
+     "id": "20261020-daily-n-taobao-down",
+     "company": "阿里巴巴·淘宝",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "微博",
+      "X"
+     ],
+     "date": "10-20",
+     "text": "10-20晚天猫双11开启预售后，大量用户反馈淘宝支付失败、确认订单时提示“平台优惠金额发生变化”、优惠券状态异常，#淘宝崩了#上微博热搜（22:56镜像为#32、约22.2万）。淘宝客服回应称“大促期间活动火爆，建议稍后再试”；未见官方技术说明。X 讨论量小（14Z约6帖）。",
+     "links": [
+      {
+       "label": "凤凰网（白鹿视频）：“淘宝崩了”冲上热搜，官方回应",
+       "url": "https://feng.ifeng.com/c/8xNtLcmo5Cb"
+      },
+      {
+       "label": "微博热搜镜像（22:56）",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "X @Miduowa（374浏览）",
+       "url": "https://x.com/Miduowa/status/2112525375620435993"
+      }
+     ],
+     "pending": [
+      "待补充：说明——淘宝/阿里官方是否发布故障原因与恢复时间，本期未见"
+     ]
+    },
+    {
+     "id": "20261020-daily-n-wangteng",
+     "company": "小米 / 今日宜休（王腾）",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "微博",
+      "X"
+     ],
+     "date": "10-20",
+     "text": "前小米中国区市场部总经理、REDMI品牌总经理王腾（2025年因泄密被小米辞退）创业公司「今日宜休」10-20官宣首款产品ISHO Ring睡眠戒指，10-29在北京开发布会；在与韩路、李杰灵的视频里被问“前东家会不会也做一个”，王腾笑答“希望雷总放我们一条生路”，并摆出OK手势被网友调侃“Are you OK”。微博「王腾说希望雷总放我们一条生路」#17（约26.5万）。",
+     "links": [
+      {
+       "label": "凤凰网/快科技：王腾：希望雷总放我们一条生路",
+       "url": "https://feng.ifeng.com/c/8xNjn52XED7"
+      },
+      {
+       "label": "凤凰网：今日宜休官宣首款产品，10-29 发布会",
+       "url": "https://feng.ifeng.com/c/8xNtLcmo5BM"
+      },
+      {
+       "label": "新浪/北京商报：今日宜休首场发布会10月29日举行",
+       "url": "https://finance.sina.cn/2026-10-19/detail-inivtpwq0771084.d.html?vt=4"
+      },
+      {
+       "label": "微博热搜镜像（22:56）",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "X @YaoXiao46714（326浏览）",
+       "url": "https://x.com/YaoXiao46714/status/2112433709022683212"
+      }
+     ]
+    },
+    {
+     "id": "20261020-daily-n-chenguangyu",
+     "company": "月之暗面·Kimi / Discovery Loop",
+     "tag": "传闻",
+     "source_types": [
+      "媒体",
+      "X"
+     ],
+     "date": "10-20",
+     "text": "17岁陈广宇（Nathan Chen）10-15宣布离开Kimi后，曾以一个“不”字否认加入Anthropic；10-20有消息人士在社媒称其已加入Jeff Dean等四名谷歌老将8月创办的AI初创公司Discovery Loop，观察者网10-20 18:26 跟进报道，但本人尚未确认。X「陈广宇」发帖从10-17~10-19的24–31帖/日回升到今日82帖📈；本人离职帖约79.3万浏览，@leo114119 爆料帖约1.44万。",
+     "links": [
+      {
+       "label": "观察者网：Kimi“天才少年”被曝加入美国AI初创公司",
+       "url": "https://www.guancha.cn/CaiJing/2026_10_20_905103.shtml"
+      },
+      {
+       "label": "X @leo114119（1.44万浏览）",
+       "url": "https://x.com/leo114119/status/2112377401653252526"
+      },
+      {
+       "label": "X @nathancgy4 离职帖（79.3万浏览）",
+       "url": "https://x.com/nathancgy4/status/2110522061953327565"
+      }
+     ],
+     "pending": [
+      "待补充：说明——陈广宇本人或Discovery Loop官方确认，截至23:07未见"
+     ]
+    },
+    {
+     "id": "20261020-daily-n-miit",
+     "company": "工信部 / 汽车行业",
+     "tag": "官方",
+     "source_types": [
+      "官方发布会",
+      "媒体"
+     ],
+     "date": "10-20",
+     "text": "工信部总工程师王卫明10-20在国新办发布会上表示，坚决防范不合理创新设计和未经充分研发测试验证的汽车产品进入市场，确实出现部分企业跟风推出新产品、测试验证不充分；四部门《通知》征求意见中，可靠性测试不低于3万公里、22项推荐标准拟上升为强制。未点名具体车企。",
+     "links": [
+      {
+       "label": "人民网：工信部坚决防范未经充分验证的汽车产品进入市场",
+       "url": "http://finance.people.com.cn/n1/2026/1020/c1004-40818373.html"
+      },
+      {
+       "label": "微博热搜镜像（22:56）",
+       "url": "https://soso.re/weibo"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "⏪ 停更期间补漏（10/16–10/20）",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "id": "20261020-daily-b-deepseek-ban",
+     "company": "DeepSeek / 美国国土安全部 / 商务部",
+     "tag": "实锤",
+     "source_types": [
+      "官方",
+      "媒体",
+      "微博",
+      "X"
+     ],
+     "date": "10-19→10-20",
+     "text": "美国国土安全部10-19公开命令：联邦民用机构停止采购并从IT系统移除DeepSeek及其关联公司产品，基于DeepSeek开发的第三方产品和服务也在移除范围内。10-20晚商务部发言人表示“强烈不满、坚决反对”，称美方泛化国家安全、敦促撤销歧视性措施，并称将“采取一切必要措施”。微博「商务部回应美机构禁用DeepSeek」#13（约26.5万）；X 相关发帖 10-19 12Z 以来累计3181，今晚13Z/14Z 为177/159帖/时，📈。",
+     "links": [
+      {
+       "label": "商务部：发言人答记者问（10-20 21:17）",
+       "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_a0e310017a2f4d98aa035cb51be5049c.html"
+      },
+      {
+       "label": "AP News：China hits back at US ban of DeepSeek",
+       "url": "https://apnews.com/article/us-china-deepseek-ai-ban-2bffa5b0131808735280b2c0e6f0d856"
+      },
+      {
+       "label": "Bloomberg【付费】：US Moves to Bar China’s DeepSeek From Federal Agency Systems",
+       "url": "https://www.bloomberg.com/news/articles/2026-10-19/us-moves-to-bar-deepseek-from-federal-agencies-and-contracts"
+      },
+      {
+       "label": "微博热搜镜像（22:56）",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "X @sleepy0x13（2.08万浏览）",
+       "url": "https://x.com/sleepy0x13/status/2112173684177932615"
+      },
+      {
+       "label": "X @Fei2411（3789浏览）",
+       "url": "https://x.com/Fei2411/status/2112355113478336955"
+      }
+     ]
+    },
+    {
+     "id": "20261020-daily-b-zunjie",
+     "company": "华为·尊界 / 懂车帝",
+     "tag": "实锤",
+     "source_types": [
+      "官方",
+      "媒体",
+      "X"
+     ],
+     "date": "10-16→10-20",
+     "text": "三部门联合调查尊界V800刹车踏板支架断裂仍无结论。停更期间：驱动中国报道：懂车帝复测智界V9、理想、保时捷等多车同工况未断裂，尊界承认支架底座极端受力冗余仍需提升、11月起免费升级；10-20工信部总工程师王卫明在国新办发布会称“确实也出现了部分企业跟风推出新产品，测试验证不充分等问题”，四部门拟收紧汽车创新设计与测试验证管理（未点名尊界；微博#44约16.2万）。X「尊界+刹车/调查」日发帖 1150（10/16）→207（10/19）→今日截至23:07为116，📉较10/16（跨停更期）。",
+     "links": [
+      {
+       "label": "驱动中国：懂车帝复测多车未断裂，三部门已介入",
+       "url": "https://www.qudong.com/article/526550.html"
+      },
+      {
+       "label": "人民网：工信部坚决防范未经充分验证的汽车产品进入市场",
+       "url": "http://finance.people.com.cn/n1/2026/1020/c1004-40818373.html"
+      },
+      {
+       "label": "微博热搜镜像（22:56）",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "X @TraderS18（5.93万浏览）",
+       "url": "https://x.com/TraderS18/status/2110741270394184185"
+      },
+      {
+       "label": "X @chairbtc（3431浏览，称懂车帝删视频）",
+       "url": "https://x.com/chairbtc/status/2110920599447146887"
+      }
+     ]
+    },
+    {
+     "id": "20261020-daily-seed-huangwenhao",
+     "company": "字节跳动·Seed / 豆包；快手",
+     "tag": "传闻",
+     "source_types": [
+      "媒体(消息人士)",
+      "爆料号"
+     ],
+     "date": "10-19",
+     "text": "10-19多家媒体/爆料号称：字节Seed模型评测负责人黄文灏（2024年8月从零一万物加入）已离职，字节未回应；字节数据智能体iDA整体并入豆包工作、本月开始迁移；快手推荐模型负责人唐睿明（前华为诺亚方舟实验室，2025年7月加入）也已离职、内部未发公告。同期豆包公关负责人刘星回应“过半算力造爽剧”，称字节总算力只有约10%用于视频生成。",
+     "links": [
+      {
+       "label": "网易/i黑马：AI智能体周报（10-19）",
+       "url": "https://www.163.com/dy/article/L9KFE6ML05118I96.html"
+      },
+      {
+       "label": "BiaNews：今日大厂员工事（10-19）",
+       "url": "https://www.bianews.com/news/details?id=247455"
+      }
+     ]
+    },
+    {
+     "id": "20261020-daily-tencent-amap-reply",
+     "company": "腾讯·混元 / 高德",
+     "tag": "实锤",
+     "source_types": [
+      "媒体(转述公司回应)"
+     ],
+     "date": "≤10-19",
+     "text": "已移出短期的「腾讯云AI智能体爬高德」有了回应：据i黑马10-19周报，腾讯混元称相关访问来自对第三方模型的评估，并非腾讯混元模型或腾讯云自身产品，内部审查未发现智能体蓄意针对特定平台或相互协同的证据，正加强网络访问控制和智能体监控；高德仍未公开回应。",
+     "links": [
+      {
+       "label": "网易/i黑马：AI智能体周报（10-19）",
+       "url": "https://www.163.com/dy/article/L9KFE6ML05118I96.html"
+      }
+     ],
+     "pending": [
+      "待补充：时间——腾讯回应的具体日期与原始出处，周报未注明"
+     ]
+    },
+    {
+     "id": "20261020-daily-deepseek-product",
+     "company": "DeepSeek",
+     "tag": "实锤",
+     "source_types": [
+      "媒体"
+     ],
+     "date": "10-17→10-19",
+     "text": "禁令前后DeepSeek连发产品：10-17至18上线自研搜索引擎的Search/Fetch接口（每千次成功请求5元，11月1日起正式收费）；10-19发布V4.1 Flash-1017，加强编码与Agent能力；The Information称DeepSeek正参与塑造华为AI芯片（付费，仅标题）。",
+     "links": [
+      {
+       "label": "网易/i黑马：AI智能体周报（10-19）",
+       "url": "https://www.163.com/dy/article/L9KFE6ML05118I96.html"
+      },
+      {
+       "label": "TechNode：DeepSeek launches web search and page-fetching APIs",
+       "url": "https://technode.com/2026/10/19/deepseek-launches-web-search-and-page-fetching-apis-for-ai-agents/"
+      },
+      {
+       "label": "TechNode：DeepSeek releases V4.1 Flash-1017",
+       "url": "https://technode.com/2026/10/19/deepseek-releases-v4-1-flash-1017-with-stronger-coding-and-agent-capabilities/"
+      },
+      {
+       "label": "The Information【付费】：How DeepSeek Is Shaping Huawei’s AI Chips",
+       "url": "https://www.theinformation.com/articles/deepseek-shaping-huaweis-ai-chips-growing-challenge-nvidia"
+      }
+     ]
+    },
+    {
+     "id": "20261020-daily-dulius-post",
+     "company": "中国大模型圈（未点名）",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-19",
+     "text": "@lidangzzz 10-19发帖称中国LLM行业各家“相处融洽”，是因为“把那个毒瘤厂先淘汰掉了”，约32.3万浏览、1151赞，是停更期间浏览最高的大模型圈八卦帖；原帖未点名，X上有回复将其解读为指华为盘古（2025年“套壳”争议），本期未核实，仅作舆情观察。",
+     "links": [
+      {
+       "label": "X @lidangzzz（32.3万浏览）",
+       "url": "https://x.com/lidangzzz/status/2112051485114605645"
+      }
+     ]
+    },
+    {
+     "id": "20261020-daily-salary-inversion",
+     "company": "BAT / 字节 / 小红书等",
+     "tag": "传闻",
+     "source_types": [
+      "媒体(猎头/匿名员工)"
+     ],
+     "date": "10-19",
+     "text": "雷峰网10-19援引猎头和匿名员工称：大厂HC普遍收缩但基模人才照单全收，今年做基模的应届生年包“200万元起步”，小红书、字节Seed顶档可达400–500万元，导致做基础模型的低职级员工薪酬“吊打”高职级同事；文中提到某公司传出可能取消职级，但未证实。",
+     "links": [
+      {
+       "label": "雷峰网：AI 引爆 BAT「薪酬倒挂」潮",
+       "url": "https://www.leiphone.com/category/industrynews/uCsyLxONvXeV9qXc.html"
+      }
+     ]
+    },
+    {
+     "id": "20261020-daily-didi-rosario-b",
+     "company": "滴滴出海·阿根廷",
+     "tag": "实锤",
+     "source_types": [
+      "当地媒体(西语)"
+     ],
+     "date": "10-16",
+     "text": "阿根廷罗萨里奥：市政府拟修改10.544号条例，让Uber、DiDi、Cabify合法化（平台登记、司机职业驾照和专门保险、动态价但设最低价1720比索、禁止摩托载客），但10-16在委员会没拿到意见书、未能上会，各党派互相指责；委员会10-19、10-20再议，政府希望10-22会议表决。自由前进党议员称现行对司机罚款为250万比索。",
+     "links": [
+      {
+       "label": "Diario Santa Fe（西语）：Sin dictamen, el proyecto para regular Uber y Didi no llegó al Concejo de Rosario",
+       "url": "https://diariosantafe.com/2026/10/16/sin-dictamen-proyecto-regular-uber-didi-concejo-rosario/"
+      }
+     ],
+     "lang": "es",
+     "translation_zh": "罗萨里奥执政方监管客运平台（如Uber、Didi）的条例草案在委员会未获意见书，周四会议未能审议，各党派就此互相指责。委员会将于10月19日（周一）和20日（周二）再次开会。",
+     "original": "La iniciativa del oficialismo rosarino para regular plataformas de transporte de pasajeros como Uber o Didi no obtuvo dictamen en comisiones y no fue tratada en la sesión del jueves. Los bloques se cruzaron por el fracaso del debate. Las comisiones volverán a reunirse el lunes 19 y martes 20 de octubre."
+    },
+    {
+     "id": "20261020-daily-didi-durango-b",
+     "company": "滴滴出海·墨西哥",
+     "tag": "传闻",
+     "source_types": [
+      "X(当地媒体号，西语)"
+     ],
+     "date": "10-16",
+     "text": "墨西哥杜兰戈：当地媒体号称一名DiDi司机被乘客骗到La Ferrería一带土路，两名持枪男子逼他打电话向雇主和妻子索要5万比索；他趁隙开车逃回家并报警，州警察到场，三名嫌疑人未找到。帖子约4204浏览；未见DiDi回应，属司机安全类本地线索。",
+     "links": [
+      {
+       "label": "X @QuePocaMadre_Mx（西语，4204浏览）",
+       "url": "https://x.com/QuePocaMadre_Mx/status/2111162762416082965"
+      }
+     ],
+     "lang": "es",
+     "translation_zh": "像电影一样！杜兰戈一名DiDi司机从绑匪手中逃脱，免遭勒索。一名平台司机在杜兰戈经历了惊魂时刻，据称他被企图勒索他的人剥夺了人身自由。",
+     "original": "¡DE PELÍCULA! CHOFER DE DIDI ESCAPA DE SUS SECUESTRADORES EN DURANGO Y EVITA SER EXT0RSIONADO. Un conductor de plataforma vivió momentos de terror en #Durango, luego de ser presuntamente privado de la libertad por sujetos que intentaron ext0rsionarlo."
+    }
+   ]
+  },
+  {
+   "title": "🌏 美股中概 & 出海",
+   "color": "#0891b2",
+   "items": [
+    {
+     "id": "20261020-adr15z-deepseek-ban-d",
+     "company": "DeepSeek / 美国国土安全部 / 商务部",
+     "tag": "实锤",
+     "source_types": [
+      "官方",
+      "媒体",
+      "微博",
+      "X"
+     ],
+     "date": "10-19→10-20",
+     "text": "美国国土安全部10-19公开命令：联邦民用机构停止采购并从IT系统移除DeepSeek及其关联公司产品，基于DeepSeek开发的第三方产品和服务也在移除范围内。10-20晚商务部发言人表示“强烈不满、坚决反对”，称美方泛化国家安全、敦促撤销歧视性措施，并称将“采取一切必要措施”。微博「商务部回应美机构禁用DeepSeek」#13（约26.5万）；X 相关发帖 10-19 12Z 以来累计3181，今晚13Z/14Z 为177/159帖/时，📈。",
+     "links": [
+      {
+       "label": "商务部：发言人答记者问（10-20 21:17）",
+       "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_a0e310017a2f4d98aa035cb51be5049c.html"
+      },
+      {
+       "label": "AP News：China hits back at US ban of DeepSeek",
+       "url": "https://apnews.com/article/us-china-deepseek-ai-ban-2bffa5b0131808735280b2c0e6f0d856"
+      },
+      {
+       "label": "Bloomberg【付费】：US Moves to Bar China’s DeepSeek From Federal Agency Systems",
+       "url": "https://www.bloomberg.com/news/articles/2026-10-19/us-moves-to-bar-deepseek-from-federal-agencies-and-contracts"
+      },
+      {
+       "label": "微博热搜镜像（22:56）",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "X @sleepy0x13（2.08万浏览）",
+       "url": "https://x.com/sleepy0x13/status/2112173684177932615"
+      },
+      {
+       "label": "X @Fei2411（3789浏览）",
+       "url": "https://x.com/Fei2411/status/2112355113478336955"
+      }
+     ]
+    },
+    {
+     "id": "20261020-adr15z-rtx5500-d",
+     "company": "字节跳动 / 阿里巴巴 / 腾讯 / 英伟达",
+     "tag": "传闻",
+     "source_types": [
+      "外媒(路透·消息人士)",
+      "X"
+     ],
+     "date": "10-20",
+     "text": "路透独家（援引两名知情人士）：字节、阿里、腾讯合计向英伟达订购超300万张 RTX PRO 5500 工作站卡，单价约1.14万美元、标价合计超350亿美元，主要用于推理；英伟达称无法保证交付，可能只能满足5%–10%，2027年全球产量或不超过300万张，中国客户总订单已超600万张。三家公司未见公开回应。X 相关发帖 09Z 起出现，13Z 达119帖/时；@_FORAB 解读帖约4.10万浏览。",
+     "links": [
+      {
+       "label": "Reuters（经 US News 转载）：Exclusive-ByteDance, Alibaba, Tencent place over $35 billion worth of Nvidia chip orders",
+       "url": "https://money.usnews.com/investing/news/articles/2026-10-20/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-of-nvidia-chip-orders"
+      },
+      {
+       "label": "Euronext 转 Reuters 全文",
+       "url": "https://live.euronext.com/en/financial-news/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-nvidia-chip-orders"
+      },
+      {
+       "label": "X @_FORAB（4.10万浏览）",
+       "url": "https://x.com/_FORAB/status/2112495864317125032"
+      }
+     ],
+     "lang": "en",
+     "translation_zh": "路透10月20日：据两名知情人士，字节跳动、阿里巴巴和腾讯已订购超过300万张英伟达新款RTX PRO 5500显卡，标价合计超过350亿美元；英伟达已告知客户和合作伙伴，由于中国科技公司需求远超计划产能，无法保证满足订单。",
+     "original": "Oct 20 (Reuters) - ByteDance, Alibaba and Tencent have ordered more than 3 million of Nvidia's new RTX PRO 5500 graphics cards with a collective sticker price of over $35 billion, two people familiar with the matter said... Nvidia has told customers and partners it cannot guarantee that it can fill the orders because demand from Chinese technology companies far exceeds planned production."
+    },
+    {
+     "id": "20261020-daily-adr-market-d",
+     "company": "中概股（HXC）",
+     "tag": "统计",
+     "source_types": [
+      "财经媒体"
+     ],
+     "date": "10-19→10-20",
+     "text": "美东10-19收盘（北京10-20凌晨）：纳斯达克中国金龙指数收跌0.27%，阿里-0.49%、京东-0.85%、百度-0.45%、蔚来-1.17%，拼多多+0.52%、小马智行+1.62%、文远知行+2.94%。10-20盘前（北京16:01）：小鹏+3%、理想+2%、阿里-1%、拼多多-0.4%。今晚21:30开盘后的盘中行情本期未查到可核实数据。",
+     "links": [
+      {
+       "label": "新浪财经：10月20日热门中概股涨跌不一（美东10-19收盘）",
+       "url": "https://finance.sina.com.cn/world/2026-10-20/doc-inivvhfv7544451.shtml"
+      },
+      {
+       "label": "同花顺7x24：美股中概股盘前涨跌互现（10-20 16:01）",
+       "url": "https://stock.10jqka.com.cn/20261020/c680879647.shtml"
+      }
+     ],
+     "pending": [
+      "待补充：说明——10-20美股开盘后中概盘中/收盘数据，本期检索未找到可核实来源，明早早报补"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🎯 重点追踪",
+   "color": "#2563eb",
+   "items": [
+    {
+     "id": "20261020-daily-didi-fanjian-focus",
+     "company": "滴滴",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-14→10-20",
+     "text": "滴滴「繁简价差」主帖 @Furinanatw 浏览约18.21万（10/16 约17.84万，较10/16（跨停更期）➡️ 仅+3690），停更期间未见新证据、未见媒体升级核实，滴滴仍无专门回应，维持待核实。国内其他：10-17岳阳通报约谈13家网约车平台、对违规派单立案9起（行业整治，未点名滴滴处罚）。",
+     "links": [
+      {
+       "label": "X @Furinanatw（18.21万浏览）",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      },
+      {
+       "label": "unwire.hk（10-13 原报道）",
+       "url": "https://unwire.hk/2026/10/13/didi-traditional-simplified-fare-price-difference/software/"
+      },
+      {
+       "label": "腾讯新闻/网约车观察：岳阳约谈13家平台、立案9起",
+       "url": "https://news.qq.com/rain/a/20261017A044XF00"
+      }
+     ]
+    },
+    {
+     "id": "20261020-daily-focus-bytedance",
+     "company": "字节跳动",
+     "tag": "传闻",
+     "source_types": [
+      "外媒",
+      "媒体"
+     ],
+     "date": "10-19→10-20",
+     "text": "字节本期两条：①路透称字节与阿里、腾讯合计订购超300万张英伟达RTX PRO 5500（传闻·消息人士）；②Seed模型评测负责人黄文灏被曝离职、iDA并入豆包工作，豆包公关回应“字节只有约10%算力用于视频生成”。抖音电商诉京东采销左琦案本期无新进展。",
+     "links": [
+      {
+       "label": "Reuters（经 US News 转载）：Exclusive-ByteDance, Alibaba, Tencent place over $35 billion worth of Nvidia chip orders",
+       "url": "https://money.usnews.com/investing/news/articles/2026-10-20/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-of-nvidia-chip-orders"
+      },
+      {
+       "label": "网易/i黑马：AI智能体周报（10-19）",
+       "url": "https://www.163.com/dy/article/L9KFE6ML05118I96.html"
+      }
+     ]
+    },
+    {
+     "id": "20261020-daily-focus-llm",
+     "company": "中国大模型",
+     "tag": "实锤",
+     "source_types": [
+      "官方",
+      "媒体",
+      "X"
+     ],
+     "date": "10-17→10-20",
+     "text": "DeepSeek成为焦点：美国DHS禁令（10-19）+商务部强硬回应（10-20），同期上线Search/Fetch API、发布V4.1 Flash-1017；月之暗面陈广宇被曝加入Discovery Loop（传闻，本人未确认）；@lidangzzz「毒瘤厂」帖32.3万浏览（未点名，未核实）。",
+     "links": [
+      {
+       "label": "商务部：发言人答记者问（10-20 21:17）",
+       "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_a0e310017a2f4d98aa035cb51be5049c.html"
+      },
+      {
+       "label": "TechNode：DeepSeek releases V4.1 Flash-1017",
+       "url": "https://technode.com/2026/10/19/deepseek-releases-v4-1-flash-1017-with-stronger-coding-and-agent-capabilities/"
+      },
+      {
+       "label": "观察者网：Kimi“天才少年”被曝加入美国AI初创公司",
+       "url": "https://www.guancha.cn/CaiJing/2026_10_20_905103.shtml"
+      },
+      {
+       "label": "X @lidangzzz（32.3万浏览）",
+       "url": "https://x.com/lidangzzz/status/2112051485114605645"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🌐 海外小语种线索",
+   "color": "#059669",
+   "items": [
+    {
+     "id": "20261020-daily-didi-rosario",
+     "company": "滴滴出海·阿根廷",
+     "tag": "实锤",
+     "source_types": [
+      "当地媒体(西语)"
+     ],
+     "date": "10-16",
+     "text": "阿根廷罗萨里奥：市政府拟修改10.544号条例，让Uber、DiDi、Cabify合法化（平台登记、司机职业驾照和专门保险、动态价但设最低价1720比索、禁止摩托载客），但10-16在委员会没拿到意见书、未能上会，各党派互相指责；委员会10-19、10-20再议，政府希望10-22会议表决。自由前进党议员称现行对司机罚款为250万比索。",
+     "links": [
+      {
+       "label": "Diario Santa Fe（西语）：Sin dictamen, el proyecto para regular Uber y Didi no llegó al Concejo de Rosario",
+       "url": "https://diariosantafe.com/2026/10/16/sin-dictamen-proyecto-regular-uber-didi-concejo-rosario/"
+      }
+     ],
+     "lang": "es",
+     "translation_zh": "罗萨里奥执政方监管客运平台（如Uber、Didi）的条例草案在委员会未获意见书，周四会议未能审议，各党派就此互相指责。委员会将于10月19日（周一）和20日（周二）再次开会。",
+     "original": "La iniciativa del oficialismo rosarino para regular plataformas de transporte de pasajeros como Uber o Didi no obtuvo dictamen en comisiones y no fue tratada en la sesión del jueves. Los bloques se cruzaron por el fracaso del debate. Las comisiones volverán a reunirse el lunes 19 y martes 20 de octubre."
+    },
+    {
+     "id": "20261020-daily-didi-durango",
+     "company": "滴滴出海·墨西哥",
+     "tag": "传闻",
+     "source_types": [
+      "X(当地媒体号，西语)"
+     ],
+     "date": "10-16",
+     "text": "墨西哥杜兰戈：当地媒体号称一名DiDi司机被乘客骗到La Ferrería一带土路，两名持枪男子逼他打电话向雇主和妻子索要5万比索；他趁隙开车逃回家并报警，州警察到场，三名嫌疑人未找到。帖子约4204浏览；未见DiDi回应，属司机安全类本地线索。",
+     "links": [
+      {
+       "label": "X @QuePocaMadre_Mx（西语，4204浏览）",
+       "url": "https://x.com/QuePocaMadre_Mx/status/2111162762416082965"
+      }
+     ],
+     "lang": "es",
+     "translation_zh": "像电影一样！杜兰戈一名DiDi司机从绑匪手中逃脱，免遭勒索。一名平台司机在杜兰戈经历了惊魂时刻，据称他被企图勒索他的人剥夺了人身自由。",
+     "original": "¡DE PELÍCULA! CHOFER DE DIDI ESCAPA DE SUS SECUESTRADORES EN DURANGO Y EVITA SER EXT0RSIONADO. Un conductor de plataforma vivió momentos de terror en #Durango, luego de ser presuntamente privado de la libertad por sujetos que intentaron ext0rsionarlo."
+    },
+    {
+     "id": "20261020-daily-didi-profeco",
+     "company": "滴滴出海·墨西哥",
+     "tag": "传闻",
+     "source_types": [
+      "X(用户投诉，西语)"
+     ],
+     "date": "10-17",
+     "text": "墨西哥用户在X投诉：路线未变但车费从230比索跳到341比索，@DiDi_Mexico 不给真实明细、只给10比索优惠券，并@墨西哥消费者保护署PROFECO；单个用户投诉，约108浏览，属计价投诉线索。",
+     "links": [
+      {
+       "label": "X @acortrejo12（西语，108浏览）",
+       "url": "https://x.com/acortrejo12/status/2111508049269547190"
+      }
+     ],
+     "lang": "es",
+     "translation_zh": "车费在路线没有调整的情况下从230比索涨到341比索。@DiDi_Mexico 回避给出真实明细，想用一张10比索的优惠券了事。@AtencionProfeco #DiDi",
+     "original": "La tarifa brincó de $230 a $341 sin ajuste de ruta. @DiDi_Mexico evade el desglose real y pretende resolverlo con un cupón de $10. @AtencionProfeco #DiDi"
+    },
+    {
+     "id": "20261020-daily-didi-mazatlan",
+     "company": "滴滴出海·墨西哥",
+     "tag": "传闻",
+     "source_types": [
+      "X(当地媒体号，西语)"
+     ],
+     "date": "10-19",
+     "text": "墨西哥马萨特兰：当地媒体EntreVeredas称一名25岁DiDi司机10-19上午在Lico Velarde社区疑似抢劫中身中两枪，自行开车逃离求助后被送医，警方和军队到场调查；约52浏览，未见DiDi回应，属司机安全线索。",
+     "links": [
+      {
+       "label": "X @entreveredas（西语，52浏览）",
+       "url": "https://x.com/entreveredas/status/2112219379392024696"
+      }
+     ],
+     "lang": "es",
+     "translation_zh": "马萨特兰一名DiDi司机在抢劫未遂中身中两枪。一名25岁的年轻DiDi司机（身份为José Luis “N”）周一上午在一起疑似抢劫未遂事件中被两颗子弹击中受伤。",
+     "original": "CONDUCTOR DE DIDI RECIBE DOS BALAZOS DURANTE INTENTO DE ASALTO EN MAZATLÁN. Un joven conductor de DiDi, identificado como José Luis “N”, de 25 años, resultó herido de dos impactos de bala durante un presunto intento de asalto ocurrido la mañana de este lunes"
+    },
+    {
+     "id": "20261020-daily-didi-99pop",
+     "company": "滴滴出海·巴西99",
+     "tag": "传闻",
+     "source_types": [
+      "X(用户吐槽，葡语)"
+     ],
+     "date": "10-20",
+     "text": "巴西用户10-20吐槽99Pop从早上8点起一直叫不到车、没有司机接单；单个低浏览帖（约25浏览），仅作体验类线索。",
+     "links": [
+      {
+       "label": "X @sualobaedengosa（葡语，25浏览）",
+       "url": "https://x.com/sualobaedengosa/status/2112517611154215377"
+      }
+     ],
+     "lang": "pt",
+     "translation_zh": "99Pop真丢人，我从早上8点就一直在找车，没有一个司机接单，这破玩意儿关了吧。",
+     "original": "a 99pop tá uma vergonha, estou desde 8h tentando achar um carro e nenhum motorista aceita, fecha essa bomba"
+    }
+   ]
+  }
+ ],
+ "tomorrow_watch": [
+  "商务部“必要措施”是否落地",
+  "中概10-20收盘与三大厂/英伟达回应",
+  "尊界调查结论与免费升级方案",
+  "陈广宇去向确认",
+  "淘宝故障说明；王腾10-29发布会",
+  "滴滴：罗萨里奥10-22表决、香港牌照10-30截止"
+ ]
+}

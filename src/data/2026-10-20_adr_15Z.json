@@ -1,0 +1,231 @@
+{
+ "type": "adr",
+ "title": "美股中概&出海晚间增补｜2026-10-20 15Z",
+ "timestamp": "2026-10-20T15:07:00Z",
+ "edition_date": "2026-10-20",
+ "slot": "15Z",
+ "beijing_time": "2026-10-20 23:07",
+ "lede": "美国DHS禁用DeepSeek、商务部晚间回应；路透曝三大厂抢订英伟达卡；中概10-19收盘涨跌不一、10-20盘中数据待补；滴滴海外西/葡语线索5条。",
+ "window": {
+  "start_beijing": "2026-10-16 07:50",
+  "end_beijing": "2026-10-20 23:07"
+ },
+ "alert_worthy": false,
+ "push_needed": true,
+ "top3": [
+  "美国禁用DeepSeek·商务部回应",
+  "字节阿里腾讯抢购英伟达RTX PRO 5500",
+  "中概股10-19收盘/10-20盘前"
+ ],
+ "sections": [
+  {
+   "title": "🏛️ 监管 · 诉讼 · 制裁",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "id": "20261020-adr15z-deepseek-ban",
+     "company": "DeepSeek / 美国国土安全部 / 商务部",
+     "tag": "实锤",
+     "source_types": [
+      "官方",
+      "媒体",
+      "微博",
+      "X"
+     ],
+     "date": "10-19→10-20",
+     "text": "美国国土安全部10-19公开命令：联邦民用机构停止采购并从IT系统移除DeepSeek及其关联公司产品，基于DeepSeek开发的第三方产品和服务也在移除范围内。10-20晚商务部发言人表示“强烈不满、坚决反对”，称美方泛化国家安全、敦促撤销歧视性措施，并称将“采取一切必要措施”。微博「商务部回应美机构禁用DeepSeek」#13（约26.5万）；X 相关发帖 10-19 12Z 以来累计3181，今晚13Z/14Z 为177/159帖/时，📈。",
+     "links": [
+      {
+       "label": "商务部：发言人答记者问（10-20 21:17）",
+       "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_a0e310017a2f4d98aa035cb51be5049c.html"
+      },
+      {
+       "label": "AP News：China hits back at US ban of DeepSeek",
+       "url": "https://apnews.com/article/us-china-deepseek-ai-ban-2bffa5b0131808735280b2c0e6f0d856"
+      },
+      {
+       "label": "Bloomberg【付费】：US Moves to Bar China’s DeepSeek From Federal Agency Systems",
+       "url": "https://www.bloomberg.com/news/articles/2026-10-19/us-moves-to-bar-deepseek-from-federal-agencies-and-contracts"
+      },
+      {
+       "label": "微博热搜镜像（22:56）",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "X @sleepy0x13（2.08万浏览）",
+       "url": "https://x.com/sleepy0x13/status/2112173684177932615"
+      },
+      {
+       "label": "X @Fei2411（3789浏览）",
+       "url": "https://x.com/Fei2411/status/2112355113478336955"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "💸 算力·采购",
+   "color": "#0891b2",
+   "items": [
+    {
+     "id": "20261020-adr15z-rtx5500",
+     "company": "字节跳动 / 阿里巴巴 / 腾讯 / 英伟达",
+     "tag": "传闻",
+     "source_types": [
+      "外媒(路透·消息人士)",
+      "X"
+     ],
+     "date": "10-20",
+     "text": "路透独家（援引两名知情人士）：字节、阿里、腾讯合计向英伟达订购超300万张 RTX PRO 5500 工作站卡，单价约1.14万美元、标价合计超350亿美元，主要用于推理；英伟达称无法保证交付，可能只能满足5%–10%，2027年全球产量或不超过300万张，中国客户总订单已超600万张。三家公司未见公开回应。X 相关发帖 09Z 起出现，13Z 达119帖/时；@_FORAB 解读帖约4.10万浏览。",
+     "links": [
+      {
+       "label": "Reuters（经 US News 转载）：Exclusive-ByteDance, Alibaba, Tencent place over $35 billion worth of Nvidia chip orders",
+       "url": "https://money.usnews.com/investing/news/articles/2026-10-20/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-of-nvidia-chip-orders"
+      },
+      {
+       "label": "Euronext 转 Reuters 全文",
+       "url": "https://live.euronext.com/en/financial-news/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-nvidia-chip-orders"
+      },
+      {
+       "label": "X @_FORAB（4.10万浏览）",
+       "url": "https://x.com/_FORAB/status/2112495864317125032"
+      }
+     ],
+     "lang": "en",
+     "translation_zh": "路透10月20日：据两名知情人士，字节跳动、阿里巴巴和腾讯已订购超过300万张英伟达新款RTX PRO 5500显卡，标价合计超过350亿美元；英伟达已告知客户和合作伙伴，由于中国科技公司需求远超计划产能，无法保证满足订单。",
+     "original": "Oct 20 (Reuters) - ByteDance, Alibaba and Tencent have ordered more than 3 million of Nvidia's new RTX PRO 5500 graphics cards with a collective sticker price of over $35 billion, two people familiar with the matter said... Nvidia has told customers and partners it cannot guarantee that it can fill the orders because demand from Chinese technology companies far exceeds planned production."
+    }
+   ]
+  },
+  {
+   "title": "📉 股价大动",
+   "color": "#dc2626",
+   "items": [
+    {
+     "id": "20261020-daily-adr-market",
+     "company": "中概股（HXC）",
+     "tag": "统计",
+     "source_types": [
+      "财经媒体"
+     ],
+     "date": "10-19→10-20",
+     "text": "美东10-19收盘（北京10-20凌晨）：纳斯达克中国金龙指数收跌0.27%，阿里-0.49%、京东-0.85%、百度-0.45%、蔚来-1.17%，拼多多+0.52%、小马智行+1.62%、文远知行+2.94%。10-20盘前（北京16:01）：小鹏+3%、理想+2%、阿里-1%、拼多多-0.4%。今晚21:30开盘后的盘中行情本期未查到可核实数据。",
+     "links": [
+      {
+       "label": "新浪财经：10月20日热门中概股涨跌不一（美东10-19收盘）",
+       "url": "https://finance.sina.com.cn/world/2026-10-20/doc-inivvhfv7544451.shtml"
+      },
+      {
+       "label": "同花顺7x24：美股中概股盘前涨跌互现（10-20 16:01）",
+       "url": "https://stock.10jqka.com.cn/20261020/c680879647.shtml"
+      }
+     ],
+     "pending": [
+      "待补充：说明——10-20美股开盘后中概盘中/收盘数据，本期检索未找到可核实来源，明早早报补"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🌏 海外小语种线索",
+   "color": "#059669",
+   "items": [
+    {
+     "id": "20261020-daily-didi-rosario-adr",
+     "company": "滴滴出海·阿根廷",
+     "tag": "实锤",
+     "source_types": [
+      "当地媒体(西语)"
+     ],
+     "date": "10-16",
+     "text": "阿根廷罗萨里奥：市政府拟修改10.544号条例，让Uber、DiDi、Cabify合法化（平台登记、司机职业驾照和专门保险、动态价但设最低价1720比索、禁止摩托载客），但10-16在委员会没拿到意见书、未能上会，各党派互相指责；委员会10-19、10-20再议，政府希望10-22会议表决。自由前进党议员称现行对司机罚款为250万比索。",
+     "links": [
+      {
+       "label": "Diario Santa Fe（西语）：Sin dictamen, el proyecto para regular Uber y Didi no llegó al Concejo de Rosario",
+       "url": "https://diariosantafe.com/2026/10/16/sin-dictamen-proyecto-regular-uber-didi-concejo-rosario/"
+      }
+     ],
+     "lang": "es",
+     "translation_zh": "罗萨里奥执政方监管客运平台（如Uber、Didi）的条例草案在委员会未获意见书，周四会议未能审议，各党派就此互相指责。委员会将于10月19日（周一）和20日（周二）再次开会。",
+     "original": "La iniciativa del oficialismo rosarino para regular plataformas de transporte de pasajeros como Uber o Didi no obtuvo dictamen en comisiones y no fue tratada en la sesión del jueves. Los bloques se cruzaron por el fracaso del debate. Las comisiones volverán a reunirse el lunes 19 y martes 20 de octubre."
+    },
+    {
+     "id": "20261020-daily-didi-durango-adr",
+     "company": "滴滴出海·墨西哥",
+     "tag": "传闻",
+     "source_types": [
+      "X(当地媒体号，西语)"
+     ],
+     "date": "10-16",
+     "text": "墨西哥杜兰戈：当地媒体号称一名DiDi司机被乘客骗到La Ferrería一带土路，两名持枪男子逼他打电话向雇主和妻子索要5万比索；他趁隙开车逃回家并报警，州警察到场，三名嫌疑人未找到。帖子约4204浏览；未见DiDi回应，属司机安全类本地线索。",
+     "links": [
+      {
+       "label": "X @QuePocaMadre_Mx（西语，4204浏览）",
+       "url": "https://x.com/QuePocaMadre_Mx/status/2111162762416082965"
+      }
+     ],
+     "lang": "es",
+     "translation_zh": "像电影一样！杜兰戈一名DiDi司机从绑匪手中逃脱，免遭勒索。一名平台司机在杜兰戈经历了惊魂时刻，据称他被企图勒索他的人剥夺了人身自由。",
+     "original": "¡DE PELÍCULA! CHOFER DE DIDI ESCAPA DE SUS SECUESTRADORES EN DURANGO Y EVITA SER EXT0RSIONADO. Un conductor de plataforma vivió momentos de terror en #Durango, luego de ser presuntamente privado de la libertad por sujetos que intentaron ext0rsionarlo."
+    },
+    {
+     "id": "20261020-daily-didi-profeco-adr",
+     "company": "滴滴出海·墨西哥",
+     "tag": "传闻",
+     "source_types": [
+      "X(用户投诉，西语)"
+     ],
+     "date": "10-17",
+     "text": "墨西哥用户在X投诉：路线未变但车费从230比索跳到341比索，@DiDi_Mexico 不给真实明细、只给10比索优惠券，并@墨西哥消费者保护署PROFECO；单个用户投诉，约108浏览，属计价投诉线索。",
+     "links": [
+      {
+       "label": "X @acortrejo12（西语，108浏览）",
+       "url": "https://x.com/acortrejo12/status/2111508049269547190"
+      }
+     ],
+     "lang": "es",
+     "translation_zh": "车费在路线没有调整的情况下从230比索涨到341比索。@DiDi_Mexico 回避给出真实明细，想用一张10比索的优惠券了事。@AtencionProfeco #DiDi",
+     "original": "La tarifa brincó de $230 a $341 sin ajuste de ruta. @DiDi_Mexico evade el desglose real y pretende resolverlo con un cupón de $10. @AtencionProfeco #DiDi"
+    },
+    {
+     "id": "20261020-daily-didi-mazatlan-adr",
+     "company": "滴滴出海·墨西哥",
+     "tag": "传闻",
+     "source_types": [
+      "X(当地媒体号，西语)"
+     ],
+     "date": "10-19",
+     "text": "墨西哥马萨特兰：当地媒体EntreVeredas称一名25岁DiDi司机10-19上午在Lico Velarde社区疑似抢劫中身中两枪，自行开车逃离求助后被送医，警方和军队到场调查；约52浏览，未见DiDi回应，属司机安全线索。",
+     "links": [
+      {
+       "label": "X @entreveredas（西语，52浏览）",
+       "url": "https://x.com/entreveredas/status/2112219379392024696"
+      }
+     ],
+     "lang": "es",
+     "translation_zh": "马萨特兰一名DiDi司机在抢劫未遂中身中两枪。一名25岁的年轻DiDi司机（身份为José Luis “N”）周一上午在一起疑似抢劫未遂事件中被两颗子弹击中受伤。",
+     "original": "CONDUCTOR DE DIDI RECIBE DOS BALAZOS DURANTE INTENTO DE ASALTO EN MAZATLÁN. Un joven conductor de DiDi, identificado como José Luis “N”, de 25 años, resultó herido de dos impactos de bala durante un presunto intento de asalto ocurrido la mañana de este lunes"
+    },
+    {
+     "id": "20261020-daily-didi-99pop-adr",
+     "company": "滴滴出海·巴西99",
+     "tag": "传闻",
+     "source_types": [
+      "X(用户吐槽，葡语)"
+     ],
+     "date": "10-20",
+     "text": "巴西用户10-20吐槽99Pop从早上8点起一直叫不到车、没有司机接单；单个低浏览帖（约25浏览），仅作体验类线索。",
+     "links": [
+      {
+       "label": "X @sualobaedengosa（葡语，25浏览）",
+       "url": "https://x.com/sualobaedengosa/status/2112517611154215377"
+      }
+     ],
+     "lang": "pt",
+     "translation_zh": "99Pop真丢人，我从早上8点就一直在找车，没有一个司机接单，这破玩意儿关了吧。",
+     "original": "a 99pop tá uma vergonha, estou desde 8h tentando achar um carro e nenhum motorista aceita, fecha essa bomba"
+    }
+   ]
+  }
+ ]
+}

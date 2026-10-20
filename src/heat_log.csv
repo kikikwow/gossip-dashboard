@@ -718,3 +718,95 @@ timestamp_utc,topic,metric,value,source
 2026-10-15T15:42:00Z,合肥比亚迪封门逼食堂,x_sample_post,70450,https://x.com/whyyoutouzhele/status/2110349904266801377
 2026-10-15T15:42:00Z,传音控股港股上市,x_posts_hour_14Z,16,x_counts:传音 OR 02636 OR Transsion
 2026-10-15T15:42:00Z,传音控股港股上市,x_posts_hour_15Z_partial,6,x_counts
+2026-10-15T23:30:00Z,滴滴繁简价差,x_sample_post,178352,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T23:30:00Z,滴滴繁简价差,x_post_replies,60,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-15T23:54:00Z,尊界V800刹车踏板·三部门联合调查,x_posts_hour_19Z,16,x_counts:尊界 (刹车 OR 三部门 OR 调查)
+2026-10-15T23:54:00Z,尊界V800刹车踏板·三部门联合调查,x_posts_hour_20Z,13,x_counts
+2026-10-15T23:54:00Z,尊界V800刹车踏板·三部门联合调查,x_posts_hour_21Z,13,x_counts
+2026-10-15T23:54:00Z,尊界V800刹车踏板·三部门联合调查,x_posts_hour_22Z,19,x_counts
+2026-10-15T23:54:00Z,尊界V800刹车踏板·三部门联合调查,x_posts_hour_23Z_partial,25,x_counts
+2026-10-15T23:54:00Z,尊界V800刹车踏板·三部门联合调查,x_sample_post,28923,https://x.com/TraderS18/status/2110741270394184185
+2026-10-15T23:54:00Z,尊界V800刹车踏板·三部门联合调查,x_sample_post,334,https://x.com/MgSevenxx/status/2110860770900685066
+2026-10-15T23:54:00Z,尊界V800刹车踏板·三部门联合调查,weibo_rank,0,https://soso.re/weibo#out_of_top50_2026-10-16_0742
+2026-10-15T23:54:00Z,DeepSeek网页/API大面积中断,x_posts_hour_19Z,5,x_counts:DeepSeek (故障 OR 补偿 OR 中断 OR 宕机 OR 赠金)
+2026-10-15T23:54:00Z,DeepSeek网页/API大面积中断,x_posts_hour_20Z,1,x_counts
+2026-10-15T23:54:00Z,DeepSeek网页/API大面积中断,x_posts_hour_21Z,13,x_counts
+2026-10-15T23:54:00Z,DeepSeek网页/API大面积中断,x_posts_hour_22Z,8,x_counts
+2026-10-15T23:54:00Z,DeepSeek网页/API大面积中断,x_posts_hour_23Z_partial,12,x_counts
+2026-10-15T23:54:00Z,DeepSeek网页/API大面积中断,x_sample_post,136,https://x.com/syiytr/status/2110865131265839164
+2026-10-15T23:54:00Z,月之暗面陈广宇离职,x_posts_hour_19Z,6,x_counts:陈广宇 OR (月之暗面 离职)
+2026-10-15T23:54:00Z,月之暗面陈广宇离职,x_posts_hour_20Z,4,x_counts
+2026-10-15T23:54:00Z,月之暗面陈广宇离职,x_posts_hour_21Z,2,x_counts
+2026-10-15T23:54:00Z,月之暗面陈广宇离职,x_posts_hour_22Z,4,x_counts
+2026-10-15T23:54:00Z,月之暗面陈广宇离职,x_posts_hour_23Z_partial,3,x_counts
+2026-10-15T23:54:00Z,月之暗面陈广宇离职,x_sample_post,582136,https://x.com/nathancgy4/status/2110522061953327565
+2026-10-15T23:54:00Z,月之暗面陈广宇离职,x_sample_post,141202,https://x.com/0xLogicrw/status/2110575510728347889
+2026-10-15T23:54:00Z,懂车帝被曝邀约黑尊界,x_posts_hour_19Z,52,x_counts:懂车帝
+2026-10-15T23:54:00Z,懂车帝被曝邀约黑尊界,x_posts_hour_20Z,31,x_counts
+2026-10-15T23:54:00Z,懂车帝被曝邀约黑尊界,x_posts_hour_21Z,21,x_counts
+2026-10-15T23:54:00Z,懂车帝被曝邀约黑尊界,x_posts_hour_22Z,41,x_counts
+2026-10-15T23:54:00Z,懂车帝被曝邀约黑尊界,x_posts_hour_23Z_partial,55,x_counts
+2026-10-15T23:54:00Z,懂车帝被曝邀约黑尊界,x_sample_post,426,https://x.com/OhonoJP/status/2110855615723803035
+2026-10-15T23:54:00Z,腾讯绿泡泡对战红果短剧,x_posts_hour_19Z,27,x_counts:绿泡泡
+2026-10-15T23:54:00Z,腾讯绿泡泡对战红果短剧,x_posts_hour_20Z,1,x_counts
+2026-10-15T23:54:00Z,腾讯绿泡泡对战红果短剧,x_posts_hour_21Z,0,x_counts
+2026-10-15T23:54:00Z,腾讯绿泡泡对战红果短剧,x_posts_hour_22Z,7,x_counts
+2026-10-15T23:54:00Z,腾讯绿泡泡对战红果短剧,x_posts_hour_23Z_partial,8,x_counts
+2026-10-15T23:54:00Z,腾讯绿泡泡对战红果短剧,x_sample_post,157105,https://x.com/_FORAB/status/2110319029797916887
+2026-10-15T23:54:00Z,滴滴繁简价差,x_sample_post,178392,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-20T15:07:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour_08Z,106,x_counts
+2026-10-20T15:07:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour_09Z,92,x_counts
+2026-10-20T15:07:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour_10Z,95,x_counts
+2026-10-20T15:07:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour_11Z,135,x_counts
+2026-10-20T15:07:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour_12Z,135,x_counts
+2026-10-20T15:07:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour_13Z,177,x_counts
+2026-10-20T15:07:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour_14Z,159,x_counts
+2026-10-20T15:07:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour_15Z_partial,16,x_counts
+2026-10-20T15:07:00Z,美国禁用DeepSeek·商务部回应,x_posts_since_1019T12Z,3181,x_counts
+2026-10-20T15:07:00Z,美国禁用DeepSeek·商务部回应,weibo_rank,13,https://soso.re/weibo
+2026-10-20T15:07:00Z,美国禁用DeepSeek·商务部回应,weibo_heat,265423,https://soso.re/weibo
+2026-10-20T15:07:00Z,美国禁用DeepSeek·商务部回应,x_sample_post,20764,https://x.com/sleepy0x13/status/2112173684177932615
+2026-10-20T15:07:00Z,美国禁用DeepSeek·商务部回应,x_sample_post,3789,https://x.com/Fei2411/status/2112355113478336955
+2026-10-20T15:07:00Z,字节阿里腾讯抢购英伟达RTX PRO 5500,x_posts_hour_09Z,39,x_counts
+2026-10-20T15:07:00Z,字节阿里腾讯抢购英伟达RTX PRO 5500,x_posts_hour_10Z,44,x_counts
+2026-10-20T15:07:00Z,字节阿里腾讯抢购英伟达RTX PRO 5500,x_posts_hour_11Z,58,x_counts
+2026-10-20T15:07:00Z,字节阿里腾讯抢购英伟达RTX PRO 5500,x_posts_hour_12Z,73,x_counts
+2026-10-20T15:07:00Z,字节阿里腾讯抢购英伟达RTX PRO 5500,x_posts_hour_13Z,119,x_counts
+2026-10-20T15:07:00Z,字节阿里腾讯抢购英伟达RTX PRO 5500,x_posts_hour_14Z,59,x_counts
+2026-10-20T15:07:00Z,字节阿里腾讯抢购英伟达RTX PRO 5500,x_posts_hour_15Z_partial,7,x_counts
+2026-10-20T15:07:00Z,字节阿里腾讯抢购英伟达RTX PRO 5500,x_posts_since_1020T00Z,401,x_counts
+2026-10-20T15:07:00Z,字节阿里腾讯抢购英伟达RTX PRO 5500,x_sample_post,41008,https://x.com/_FORAB/status/2112495864317125032
+2026-10-20T15:07:00Z,尊界V800刹车踏板·三部门联合调查,x_daily_post_count_1016,1150,x_counts
+2026-10-20T15:07:00Z,尊界V800刹车踏板·三部门联合调查,x_daily_post_count_1017,565,x_counts
+2026-10-20T15:07:00Z,尊界V800刹车踏板·三部门联合调查,x_daily_post_count_1018,396,x_counts
+2026-10-20T15:07:00Z,尊界V800刹车踏板·三部门联合调查,x_daily_post_count_1019,207,x_counts
+2026-10-20T15:07:00Z,尊界V800刹车踏板·三部门联合调查,x_daily_post_count,116,x_counts_1020_to_15Z
+2026-10-20T15:07:00Z,尊界V800刹车踏板·三部门联合调查,x_sample_post,59291,https://x.com/TraderS18/status/2110741270394184185
+2026-10-20T15:07:00Z,尊界V800刹车踏板·三部门联合调查,x_sample_post,3431,https://x.com/chairbtc/status/2110920599447146887
+2026-10-20T15:07:00Z,月之暗面陈广宇离职,x_daily_post_count_1016,179,x_counts
+2026-10-20T15:07:00Z,月之暗面陈广宇离职,x_daily_post_count_1017,24,x_counts
+2026-10-20T15:07:00Z,月之暗面陈广宇离职,x_daily_post_count_1018,30,x_counts
+2026-10-20T15:07:00Z,月之暗面陈广宇离职,x_daily_post_count_1019,31,x_counts
+2026-10-20T15:07:00Z,月之暗面陈广宇离职,x_daily_post_count,82,x_counts_1020_to_15Z
+2026-10-20T15:07:00Z,月之暗面陈广宇离职,x_sample_post,792692,https://x.com/nathancgy4/status/2110522061953327565
+2026-10-20T15:07:00Z,月之暗面陈广宇离职,x_sample_post,14389,https://x.com/leo114119/status/2112377401653252526
+2026-10-20T15:07:00Z,王腾今日宜休·放我们一条生路,weibo_rank,17,https://soso.re/weibo
+2026-10-20T15:07:00Z,王腾今日宜休·放我们一条生路,weibo_heat,265120,https://soso.re/weibo
+2026-10-20T15:07:00Z,王腾今日宜休·放我们一条生路,x_posts_1019T12Z_to_now,25,x_counts
+2026-10-20T15:07:00Z,王腾今日宜休·放我们一条生路,x_sample_post,326,https://x.com/YaoXiao46714/status/2112433709022683212
+2026-10-20T15:07:00Z,淘宝双11预售崩了,weibo_rank,32,https://soso.re/weibo
+2026-10-20T15:07:00Z,淘宝双11预售崩了,weibo_heat,222016,https://soso.re/weibo
+2026-10-20T15:07:00Z,淘宝双11预售崩了,x_posts_hour_14Z,6,x_counts
+2026-10-20T15:07:00Z,淘宝双11预售崩了,x_sample_post,374,https://x.com/Miduowa/status/2112525375620435993
+2026-10-20T15:07:00Z,懂车帝被曝邀约黑尊界,x_daily_post_count_1016,707,x_counts
+2026-10-20T15:07:00Z,懂车帝被曝邀约黑尊界,x_daily_post_count_1017,443,x_counts
+2026-10-20T15:07:00Z,懂车帝被曝邀约黑尊界,x_daily_post_count_1018,333,x_counts
+2026-10-20T15:07:00Z,懂车帝被曝邀约黑尊界,x_daily_post_count_1019,213,x_counts
+2026-10-20T15:07:00Z,懂车帝被曝邀约黑尊界,x_daily_post_count,124,x_counts_1020_to_15Z
+2026-10-20T15:07:00Z,腾讯绿泡泡对战红果短剧,x_daily_post_count_1016,28,x_counts
+2026-10-20T15:07:00Z,腾讯绿泡泡对战红果短剧,x_daily_post_count_1017,32,x_counts
+2026-10-20T15:07:00Z,腾讯绿泡泡对战红果短剧,x_daily_post_count_1018,47,x_counts
+2026-10-20T15:07:00Z,腾讯绿泡泡对战红果短剧,x_daily_post_count_1019,23,x_counts
+2026-10-20T15:07:00Z,腾讯绿泡泡对战红果短剧,x_daily_post_count,11,x_counts_1020_to_15Z
+2026-10-20T15:07:00Z,腾讯绿泡泡对战红果短剧,x_sample_post,168091,https://x.com/_FORAB/status/2110319029797916887
+2026-10-20T15:07:00Z,滴滴繁简价差,x_sample_post,182082,https://x.com/Furinanatw/status/2110289680595886537

@@ -1,0 +1,207 @@
+{
+ "type": "bigtech",
+ "title": "大厂八卦晚间增补｜2026-10-20 15Z",
+ "timestamp": "2026-10-20T15:07:00Z",
+ "edition_date": "2026-10-20",
+ "slot": "15Z",
+ "lede": "16:00后晚间新料：路透曝字节阿里腾讯抢订RTX PRO 5500；淘宝双11预售崩了；王腾“放我们一条生路”；陈广宇被曝加入Discovery Loop；工信部表态车企测试验证不充分。",
+ "alert_note": "每日总结增补，不单独警报",
+ "alert_worthy": false,
+ "top3": [
+  "字节阿里腾讯抢购英伟达RTX PRO 5500",
+  "淘宝双11预售崩了",
+  "王腾今日宜休·放我们一条生路"
+ ],
+ "focus": {
+  "滴滴": "繁简价差单帖续涨至18.21万，无回应",
+  "字节": "RTX PRO 5500 订单（传闻）、Seed 黄文灏离职（传闻）",
+  "中国大模型": "DeepSeek 禁令+商务部回应；陈广宇去向传闻"
+ },
+ "short_term_notes": "见每日总结 short_term_updates",
+ "overseas_local_lang": [
+  "20261020-daily-didi-rosario",
+  "20261020-daily-didi-durango",
+  "20261020-daily-didi-profeco",
+  "20261020-daily-didi-mazatlan",
+  "20261020-daily-didi-99pop"
+ ],
+ "sections": [
+  {
+   "title": "💸 算力·采购",
+   "color": "#0891b2",
+   "items": [
+    {
+     "id": "20261020-bt15z-rtx5500",
+     "company": "字节跳动 / 阿里巴巴 / 腾讯 / 英伟达",
+     "tag": "传闻",
+     "source_types": [
+      "外媒(路透·消息人士)",
+      "X"
+     ],
+     "date": "10-20",
+     "text": "路透独家（援引两名知情人士）：字节、阿里、腾讯合计向英伟达订购超300万张 RTX PRO 5500 工作站卡，单价约1.14万美元、标价合计超350亿美元，主要用于推理；英伟达称无法保证交付，可能只能满足5%–10%，2027年全球产量或不超过300万张，中国客户总订单已超600万张。三家公司未见公开回应。X 相关发帖 09Z 起出现，13Z 达119帖/时；@_FORAB 解读帖约4.10万浏览。",
+     "links": [
+      {
+       "label": "Reuters（经 US News 转载）：Exclusive-ByteDance, Alibaba, Tencent place over $35 billion worth of Nvidia chip orders",
+       "url": "https://money.usnews.com/investing/news/articles/2026-10-20/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-of-nvidia-chip-orders"
+      },
+      {
+       "label": "Euronext 转 Reuters 全文",
+       "url": "https://live.euronext.com/en/financial-news/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-nvidia-chip-orders"
+      },
+      {
+       "label": "X @_FORAB（4.10万浏览）",
+       "url": "https://x.com/_FORAB/status/2112495864317125032"
+      }
+     ],
+     "lang": "en",
+     "translation_zh": "路透10月20日：据两名知情人士，字节跳动、阿里巴巴和腾讯已订购超过300万张英伟达新款RTX PRO 5500显卡，标价合计超过350亿美元；英伟达已告知客户和合作伙伴，由于中国科技公司需求远超计划产能，无法保证满足订单。",
+     "original": "Oct 20 (Reuters) - ByteDance, Alibaba and Tencent have ordered more than 3 million of Nvidia's new RTX PRO 5500 graphics cards with a collective sticker price of over $35 billion, two people familiar with the matter said... Nvidia has told customers and partners it cannot guarantee that it can fill the orders because demand from Chinese technology companies far exceeds planned production."
+    }
+   ]
+  },
+  {
+   "title": "💥 翻车·故障",
+   "color": "#dc2626",
+   "items": [
+    {
+     "id": "20261020-bt15z-taobao-down",
+     "company": "阿里巴巴·淘宝",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "微博",
+      "X"
+     ],
+     "date": "10-20",
+     "text": "10-20晚天猫双11开启预售后，大量用户反馈淘宝支付失败、确认订单时提示“平台优惠金额发生变化”、优惠券状态异常，#淘宝崩了#上微博热搜（22:56镜像为#32、约22.2万）。淘宝客服回应称“大促期间活动火爆，建议稍后再试”；未见官方技术说明。X 讨论量小（14Z约6帖）。",
+     "links": [
+      {
+       "label": "凤凰网（白鹿视频）：“淘宝崩了”冲上热搜，官方回应",
+       "url": "https://feng.ifeng.com/c/8xNtLcmo5Cb"
+      },
+      {
+       "label": "微博热搜镜像（22:56）",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "X @Miduowa（374浏览）",
+       "url": "https://x.com/Miduowa/status/2112525375620435993"
+      }
+     ],
+     "pending": [
+      "待补充：说明——淘宝/阿里官方是否发布故障原因与恢复时间，本期未见"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🚪 离职·创业·挖人",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "id": "20261020-bt15z-wangteng",
+     "company": "小米 / 今日宜休（王腾）",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "微博",
+      "X"
+     ],
+     "date": "10-20",
+     "text": "前小米中国区市场部总经理、REDMI品牌总经理王腾（2025年因泄密被小米辞退）创业公司「今日宜休」10-20官宣首款产品ISHO Ring睡眠戒指，10-29在北京开发布会；在与韩路、李杰灵的视频里被问“前东家会不会也做一个”，王腾笑答“希望雷总放我们一条生路”，并摆出OK手势被网友调侃“Are you OK”。微博「王腾说希望雷总放我们一条生路」#17（约26.5万）。",
+     "links": [
+      {
+       "label": "凤凰网/快科技：王腾：希望雷总放我们一条生路",
+       "url": "https://feng.ifeng.com/c/8xNjn52XED7"
+      },
+      {
+       "label": "凤凰网：今日宜休官宣首款产品，10-29 发布会",
+       "url": "https://feng.ifeng.com/c/8xNtLcmo5BM"
+      },
+      {
+       "label": "新浪/北京商报：今日宜休首场发布会10月29日举行",
+       "url": "https://finance.sina.cn/2026-10-19/detail-inivtpwq0771084.d.html?vt=4"
+      },
+      {
+       "label": "微博热搜镜像（22:56）",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "X @YaoXiao46714（326浏览）",
+       "url": "https://x.com/YaoXiao46714/status/2112433709022683212"
+      }
+     ]
+    },
+    {
+     "id": "20261020-bt15z-chenguangyu",
+     "company": "月之暗面·Kimi / Discovery Loop",
+     "tag": "传闻",
+     "source_types": [
+      "媒体",
+      "X"
+     ],
+     "date": "10-20",
+     "text": "17岁陈广宇（Nathan Chen）10-15宣布离开Kimi后，曾以一个“不”字否认加入Anthropic；10-20有消息人士在社媒称其已加入Jeff Dean等四名谷歌老将8月创办的AI初创公司Discovery Loop，观察者网10-20 18:26 跟进报道，但本人尚未确认。X「陈广宇」发帖从10-17~10-19的24–31帖/日回升到今日82帖📈；本人离职帖约79.3万浏览，@leo114119 爆料帖约1.44万。",
+     "links": [
+      {
+       "label": "观察者网：Kimi“天才少年”被曝加入美国AI初创公司",
+       "url": "https://www.guancha.cn/CaiJing/2026_10_20_905103.shtml"
+      },
+      {
+       "label": "X @leo114119（1.44万浏览）",
+       "url": "https://x.com/leo114119/status/2112377401653252526"
+      },
+      {
+       "label": "X @nathancgy4 离职帖（79.3万浏览）",
+       "url": "https://x.com/nathancgy4/status/2110522061953327565"
+      }
+     ],
+     "pending": [
+      "待补充：说明——陈广宇本人或Discovery Loop官方确认，截至23:07未见"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🚗 监管·车圈",
+   "color": "#ea580c",
+   "items": [
+    {
+     "id": "20261020-bt15z-zunjie",
+     "company": "华为·尊界 / 懂车帝",
+     "tag": "实锤",
+     "source_types": [
+      "官方",
+      "媒体",
+      "X"
+     ],
+     "date": "10-16→10-20",
+     "text": "三部门联合调查尊界V800刹车踏板支架断裂仍无结论。停更期间：驱动中国报道：懂车帝复测智界V9、理想、保时捷等多车同工况未断裂，尊界承认支架底座极端受力冗余仍需提升、11月起免费升级；10-20工信部总工程师王卫明在国新办发布会称“确实也出现了部分企业跟风推出新产品，测试验证不充分等问题”，四部门拟收紧汽车创新设计与测试验证管理（未点名尊界；微博#44约16.2万）。X「尊界+刹车/调查」日发帖 1150（10/16）→207（10/19）→今日截至23:07为116，📉较10/16（跨停更期）。",
+     "links": [
+      {
+       "label": "驱动中国：懂车帝复测多车未断裂，三部门已介入",
+       "url": "https://www.qudong.com/article/526550.html"
+      },
+      {
+       "label": "人民网：工信部坚决防范未经充分验证的汽车产品进入市场",
+       "url": "http://finance.people.com.cn/n1/2026/1020/c1004-40818373.html"
+      },
+      {
+       "label": "微博热搜镜像（22:56）",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "X @TraderS18（5.93万浏览）",
+       "url": "https://x.com/TraderS18/status/2110741270394184185"
+      },
+      {
+       "label": "X @chairbtc（3431浏览，称懂车帝删视频）",
+       "url": "https://x.com/chairbtc/status/2110920599447146887"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
