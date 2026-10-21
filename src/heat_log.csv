@@ -901,3 +901,81 @@ timestamp_utc,topic,metric,value,source
 2026-10-21T08:25:00Z,问界海外版改用博世,x_sample_post,74,https://x.com/EddTTom/status/2112815562380243290
 2026-10-21T08:25:00Z,第一次见豆包发脾气,weibo_rank,24,https://soso.re/weibo
 2026-10-21T08:25:00Z,第一次见豆包发脾气,weibo_heat,303834,https://soso.re/weibo
+2026-10-21T08:26:00Z,美国禁用DeepSeek·商务部回应,x_hourly_posts_refresh_0507Z,33,x_counts 05Z
+2026-10-21T08:26:00Z,美国禁用DeepSeek·商务部回应,x_hourly_posts_refresh_0607Z,22,x_counts 06Z
+2026-10-21T08:26:00Z,美国禁用DeepSeek·商务部回应,x_hourly_posts_refresh_0708Z,36,x_counts 07Z (last full hour)
+2026-10-21T08:26:00Z,美国禁用DeepSeek·商务部回应,hours_since_last_progress,16.4,last_progress=2026-10-20 https://www.federalregister.gov/documents/2026/10/20/2026-21447/notice-of-order-regarding-exclusion-and-removal-of-deepseek-products-from-federal-civilian-executive
+2026-10-21T08:26:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_hourly_posts_refresh_0507Z,234,x_counts 05Z
+2026-10-21T08:26:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_hourly_posts_refresh_0607Z,219,x_counts 06Z
+2026-10-21T08:26:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_hourly_posts_refresh_0708Z,237,x_counts 07Z (last full hour)
+2026-10-21T08:26:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,hours_since_last_progress,23.4,last_progress=2026-10-20 17:00 https://thenewstack.io/deepseek-deepinfer-huawei-nvidia/
+2026-10-21T08:26:00Z,字节阿里腾讯抢购英伟达RTX PRO 5500,x_hourly_posts_refresh_0507Z,34,x_counts 05Z
+2026-10-21T08:26:00Z,字节阿里腾讯抢购英伟达RTX PRO 5500,x_hourly_posts_refresh_0607Z,20,x_counts 06Z
+2026-10-21T08:26:00Z,字节阿里腾讯抢购英伟达RTX PRO 5500,x_hourly_posts_refresh_0708Z,9,x_counts 07Z (last full hour)
+2026-10-21T08:26:00Z,字节阿里腾讯抢购英伟达RTX PRO 5500,hours_since_last_progress,16.4,last_progress=2026-10-20 https://www.trendforce.com/news/2026/10/21/news-nvidia-rtx-pro-5500-reportedly-draws-35b-in-china-orders-with-supply-seen-at-just-5-10/
+2026-10-21T08:26:00Z,尊界V800刹车踏板·三部门联合调查,x_hourly_posts_refresh_0507Z,5,x_counts 05Z
+2026-10-21T08:26:00Z,尊界V800刹车踏板·三部门联合调查,x_hourly_posts_refresh_0607Z,11,x_counts 06Z
+2026-10-21T08:26:00Z,尊界V800刹车踏板·三部门联合调查,x_hourly_posts_refresh_0708Z,8,x_counts 07Z (last full hour)
+2026-10-21T08:26:00Z,尊界V800刹车踏板·三部门联合调查,hours_since_last_progress,40.5,last_progress=2026-10-19 https://www.qudong.com/article/526550.html
+2026-10-21T08:26:00Z,月之暗面陈广宇离职,x_hourly_posts_refresh_0507Z,1,x_counts 05Z
+2026-10-21T08:26:00Z,月之暗面陈广宇离职,x_hourly_posts_refresh_0607Z,3,x_counts 06Z
+2026-10-21T08:26:00Z,月之暗面陈广宇离职,x_hourly_posts_refresh_0708Z,1,x_counts 07Z (last full hour)
+2026-10-21T08:26:00Z,月之暗面陈广宇离职,hours_since_last_progress,16.4,last_progress=2026-10-20 https://www.guancha.cn/CaiJing/2026_10_20_905103.shtml
+2026-10-21T08:26:00Z,懂车帝被曝邀约黑尊界,x_hourly_posts_refresh_0507Z,2,x_counts 05Z
+2026-10-21T08:26:00Z,懂车帝被曝邀约黑尊界,x_hourly_posts_refresh_0607Z,4,x_counts 06Z
+2026-10-21T08:26:00Z,懂车帝被曝邀约黑尊界,x_hourly_posts_refresh_0708Z,1,x_counts 07Z (last full hour)
+2026-10-21T08:26:00Z,懂车帝被曝邀约黑尊界,hours_since_last_progress,136.4,last_progress=2026-10-15 https://news.qq.com/rain/a/20261015A095DE00
+2026-10-21T08:26:00Z,腾讯绿泡泡对战红果短剧,x_hourly_posts_refresh_0507Z,0,x_counts 05Z
+2026-10-21T08:26:00Z,腾讯绿泡泡对战红果短剧,x_hourly_posts_refresh_0607Z,1,x_counts 06Z
+2026-10-21T08:26:00Z,腾讯绿泡泡对战红果短剧,x_hourly_posts_refresh_0708Z,1,x_counts 07Z (last full hour)
+2026-10-21T08:26:00Z,腾讯绿泡泡对战红果短剧,hours_since_last_progress,136.4,last_progress=2026-10-15 https://x.com/_FORAB/status/2110319029797916887
+2026-10-21T08:26:00Z,宁德时代AH股绩后重挫,x_hourly_posts_refresh_0507Z,68,x_counts 05Z
+2026-10-21T08:26:00Z,宁德时代AH股绩后重挫,x_hourly_posts_refresh_0607Z,63,x_counts 06Z
+2026-10-21T08:26:00Z,宁德时代AH股绩后重挫,x_hourly_posts_refresh_0708Z,83,x_counts 07Z (last full hour)
+2026-10-21T08:26:00Z,宁德时代AH股绩后重挫,hours_since_last_progress,1.4,"last_progress=2026-10-21 15:00 https://finance.eastmoney.com/news/11822,202610213902475873.html"
+2026-10-21T08:26:00Z,小鹏汇天交付阿联酋,x_hourly_posts_refresh_0507Z,1,x_counts 05Z
+2026-10-21T08:26:00Z,小鹏汇天交付阿联酋,x_hourly_posts_refresh_0607Z,8,x_counts 06Z
+2026-10-21T08:26:00Z,小鹏汇天交付阿联酋,x_hourly_posts_refresh_0708Z,5,x_counts 07Z (last full hour)
+2026-10-21T08:26:00Z,小鹏汇天交付阿联酋,hours_since_last_progress,16.4,last_progress=2026-10-20 https://www.chinanews.com.cn/cj/2026/10-20/10718152.shtml
+2026-10-21T08:26:00Z,王腾今日宜休·放我们一条生路,x_hourly_posts_refresh_0507Z,1,x_counts 05Z
+2026-10-21T08:26:00Z,王腾今日宜休·放我们一条生路,x_hourly_posts_refresh_0607Z,0,x_counts 06Z
+2026-10-21T08:26:00Z,王腾今日宜休·放我们一条生路,x_hourly_posts_refresh_0708Z,0,x_counts 07Z (last full hour)
+2026-10-21T08:26:00Z,王腾今日宜休·放我们一条生路,hours_since_last_progress,16.4,last_progress=2026-10-20 https://news.ifeng.com/c/8xNT8g64EkD
+2026-10-21T08:26:00Z,汽车之家回应韩路,x_hourly_posts_refresh_0507Z,0,x_counts 05Z
+2026-10-21T08:26:00Z,汽车之家回应韩路,x_hourly_posts_refresh_0607Z,1,x_counts 06Z
+2026-10-21T08:26:00Z,汽车之家回应韩路,x_hourly_posts_refresh_0708Z,0,x_counts 07Z (last full hour)
+2026-10-21T08:26:00Z,汽车之家回应韩路,hours_since_last_progress,8.1,last_progress=2026-10-21 08:20 https://www.guancha.cn/qiche/2026_10_21_905196.shtml
+2026-10-21T08:26:00Z,拟出台的中国AI禁令,x_hourly_posts_refresh_0507Z,11,x_counts 05Z
+2026-10-21T08:26:00Z,拟出台的中国AI禁令,x_hourly_posts_refresh_0607Z,8,x_counts 06Z
+2026-10-21T08:26:00Z,拟出台的中国AI禁令,x_hourly_posts_refresh_0708Z,11,x_counts 07Z (last full hour)
+2026-10-21T08:26:00Z,拟出台的中国AI禁令,weibo_rank,50,https://soso.re/weibo
+2026-10-21T08:26:00Z,拟出台的中国AI禁令,weibo_heat,151409,https://soso.re/weibo
+2026-10-21T08:26:00Z,拟出台的中国AI禁令,hours_since_last_progress,112.5,last_progress=2026-10-16 https://www.caixin.com/2026-10-16/102494128.html
+2026-10-21T08:26:00Z,抖音电商诉京东采销左琦,x_hourly_posts_refresh_0507Z,0,x_counts 05Z
+2026-10-21T08:26:00Z,抖音电商诉京东采销左琦,x_hourly_posts_refresh_0607Z,0,x_counts 06Z
+2026-10-21T08:26:00Z,抖音电商诉京东采销左琦,x_hourly_posts_refresh_0708Z,0,x_counts 07Z (last full hour)
+2026-10-21T08:26:00Z,抖音电商诉京东采销左琦,hours_since_last_progress,4.8,last_progress=2026-10-21 11:41 https://t.cj.sina.com.cn/articles/view/3815062128/e3653a7000101pwby?finpagefr=p_103
+2026-10-21T08:26:00Z,淘宝双11预售崩了,x_hourly_posts_refresh_0507Z,0,x_counts 05Z
+2026-10-21T08:26:00Z,淘宝双11预售崩了,x_hourly_posts_refresh_0607Z,1,x_counts 06Z
+2026-10-21T08:26:00Z,淘宝双11预售崩了,x_hourly_posts_refresh_0708Z,1,x_counts 07Z (last full hour)
+2026-10-21T08:26:00Z,淘宝双11预售崩了,hours_since_last_progress,16.4,last_progress=2026-10-20 https://feng.ifeng.com/c/8xNtLcmo5Cb
+2026-10-21T08:26:00Z,第一次见豆包发脾气,x_hourly_posts_refresh_0507Z,0,x_counts 05Z
+2026-10-21T08:26:00Z,第一次见豆包发脾气,x_hourly_posts_refresh_0607Z,0,x_counts 06Z
+2026-10-21T08:26:00Z,第一次见豆包发脾气,x_hourly_posts_refresh_0708Z,0,x_counts 07Z (last full hour)
+2026-10-21T08:26:00Z,第一次见豆包发脾气,weibo_rank,24,https://soso.re/weibo
+2026-10-21T08:26:00Z,第一次见豆包发脾气,weibo_heat,303834,https://soso.re/weibo
+2026-10-21T08:26:00Z,第一次见豆包发脾气,hours_since_last_progress,112.5,last_progress=2026-10-16 https://soso.re/weibo
+2026-10-21T08:26:00Z,问界神木碰撞起火·官方回应,x_hourly_posts_refresh_0507Z,17,x_counts 05Z
+2026-10-21T08:26:00Z,问界神木碰撞起火·官方回应,x_hourly_posts_refresh_0607Z,27,x_counts 06Z
+2026-10-21T08:26:00Z,问界神木碰撞起火·官方回应,x_hourly_posts_refresh_0708Z,32,x_counts 07Z (last full hour)
+2026-10-21T08:26:00Z,问界神木碰撞起火·官方回应,weibo_rank,1,https://soso.re/weibo
+2026-10-21T08:26:00Z,问界神木碰撞起火·官方回应,weibo_heat,2880267,https://soso.re/weibo
+2026-10-21T08:26:00Z,问界神木碰撞起火·官方回应,hours_since_last_progress,1.4,last_progress=2026-10-21 15:05 https://www.ithome.com/1/015/864.htm
+2026-10-21T08:26:00Z,Temu得州和解,x_hourly_posts_refresh_0507Z,0,x_counts 05Z
+2026-10-21T08:26:00Z,Temu得州和解,x_hourly_posts_refresh_0607Z,0,x_counts 06Z
+2026-10-21T08:26:00Z,Temu得州和解,x_hourly_posts_refresh_0708Z,0,x_counts 07Z (last full hour)
+2026-10-21T08:26:00Z,Temu得州和解,hours_since_last_progress,112.5,last_progress=2026-10-16 https://www.texasattorneygeneral.gov/news/releases/attorney-general-paxton-secures-first-its-kind-settlement-temu-protect-texans-data-ccp-and-protect
+2026-10-21T08:26:00Z,TikTok误封马斯克纪录片,x_hourly_posts_refresh_0507Z,0,x_counts 05Z
+2026-10-21T08:26:00Z,TikTok误封马斯克纪录片,x_hourly_posts_refresh_0607Z,1,x_counts 06Z
+2026-10-21T08:26:00Z,TikTok误封马斯克纪录片,x_hourly_posts_refresh_0708Z,0,x_counts 07Z (last full hour)
+2026-10-21T08:26:00Z,TikTok误封马斯克纪录片,hours_since_last_progress,88.5,last_progress=2026-10-17 https://www.theverge.com/tech/1013527/the-musk-documentarys-tiktok-account-has-been-restored-after-an-error

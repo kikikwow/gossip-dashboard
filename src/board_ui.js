@@ -97,10 +97,11 @@
     const asof = stamps.length ? fmtTs(stamps[stamps.length - 1]) : '未知';
     const dailyN = H.filter(r => r.metric === 'x_daily_post_count').length;
     return `<div class="heat-how"><div class="heat-head"><b>热度怎么算</b><button type="button" class="xmore heat-toggle" aria-expanded="false">展开</button></div>
-<p class="heat-brief">热度榜按 heat_log 里该话题最近完整 UTC 日的 X 发帖量排序；卡片「浏览」是另一套链接浏览量。</p>
+<p class="heat-brief">热度榜按每小时发帖量排序。48 小时内没有新进展的话题乘 0.3，并标「无新进展」。卡片「浏览」是另一套链接浏览量。</p>
 <div class="heat-full">
-<p>热度榜以 heat_log 里<strong>最近一条记录的时间</strong>当作最近一期。先排最近 48 小时内有记录的话题，再排更早的。有完整日发帖量的，用最近一个完整 UTC 日的发帖量；没有日发帖、但有窗口或小时发帖计数的，用最新一条发帖计数；只有代表帖浏览的，才用浏览量，并且排在有发帖计数的话题后面。数字从该条记录的时间算到最近一期，乘 36 小时半衰期。超过 48 小时的旧浏览不能压过新话题。日发帖量持平或下降、并且已经超过 48 小时的，再乘 0.5。近 48 小时里日发帖量在升的，乘 1.25。</p>
-<p>折线按时间排同一指标。图上有纵轴刻度、每个点的精确值，以及最后两个完整日的差额。名字里带 partial 的是采集截止前的未完成日，只补在图末尾，<strong>不参与排名</strong>。</p>
+<p>热度榜以 heat_log 里<strong>最近一条记录的时间</strong>当作最近一期。先看有没有 48 小时内的真实进展：优先用 hours_since_last_progress，其次用本期 topic_progress 的 no_progress_48h，都没有就用对上的事件最新进展时间。重新计数不会让旧话题变新。没有新进展的分数再乘 0.3，并标「无新进展」。</p>
+<p>发帖量都换成每小时再比：小时计数（含 x_hourly_posts）原样使用；完整日除以 24；来源里写了 _to_15Z 这类截止时刻的，按覆盖的小时数除；窗口计数按指标名或窗口里的小时数除。取值用不早于最近一条日计数的最新一条计数。微博热搜单独换算：前 10 大约相当于每小时 50 帖以上，榜上写成「微博热搜 #名次 · 热度」。测量时间按 36 小时半衰期衰减。代表帖浏览只在没有发帖计数、也没有微博热搜时才用来展示。</p>
+<p>折线按时间排列。x_daily_post_count_MMDD 画成日点。「当前」是时间上最新的一个点。图上有纵轴刻度、每个点的精确值，以及最后两个完整日的差额。名字里带 partial、或来源写了 _to_ 截止时刻的，是未完结计数。</p>
 <p>卡片上的「浏览」是另一套数：该条链接和缓存帖浏览量的最大值（万/亿/k/M）。≥10 万标「爆」，≥1 万标「热」。条宽用相对最大值的平方根，避免头部把其余挤没。</p>
 <p>头版另算，时间也锚在最近一期，不看页面生成时间。头瓜必须是最后进展落在 48 小时内、衰减后最高的一条。最近一期里的报道，不必手工标记追踪，也会进头版。热度优先用链接、缓存和 heat_log 代表帖的浏览量；没有浏览量就用发帖计数；都没有就按时间新旧。48 小时内一条都没有时，头版改显示时间上最新的几条，不再把过期旧闻排到前面。</p>
 <p>topics.md 里的「热度：待更新」是编辑备注，不是算出来的。这份快照有 ${H.length} 条热度记录（日发帖 ${dailyN} 条），最新时间 ${esc(asof)}。榜单不会自己滚，要更新得重新采集、追加 csv，再跑构建。</p>
@@ -110,17 +111,30 @@
     return PostUI.topicSeries(topic, D.heat);
   }
   function topicGroups() {
-    return PostUI.topicGroups(D.heat);
+    return PostUI.topicGroups(D.heat, heatCands(), heatOpt());
+  }
+  function topicProgressMap() {
+    const map = {};
+    (D.editions || []).forEach(e => {
+      (e.topic_progress || []).forEach(p => { if (p && p.topic) map[p.topic] = p; });
+    });
+    return map;
+  }
+  function heatOpt() {
+    return { progress: topicProgressMap() };
   }
   function heatCands() {
     return ITEMS.map(it => {
       const d = it.detail || {};
+      const ms = progressMs({ root: it, members: [] }) || 0;
       return {
         id: it.id,
         title: d.title || '',
         company: it.company || '',
         blob: (it.company || '') + ' ' + (d.title || '') + ' ' + (it.text || ''),
-        rich: !!(d.title || (d.timeline && d.timeline.length))
+        rich: !!(d.title || (d.timeline && d.timeline.length)),
+        time: ms,
+        progressMs: ms
       };
     });
   }
@@ -132,8 +146,24 @@
   }
   let rankCache = null;
   function rankRows() {
-    if (!rankCache) rankCache = PostUI.rankHeat(D.heat, heatCands());
+    if (!rankCache) rankCache = PostUI.rankHeat(D.heat, heatCands(), heatOpt());
     return rankCache;
+  }
+  function heatSig(r) {
+    if (r && r.signalText) return r.signalText;
+    return heatMetricLabel(r && r.last && r.last.metric);
+  }
+  function heatNum(r) {
+    const n = r && r.showValue != null ? r.showValue : (r && r.last && r.last.value);
+    return fmt(n);
+  }
+  function heatFreshTag(r) {
+    return r && r.fresh ? '' : '<span class="chip">无新进展</span>';
+  }
+  function heatNote(r) {
+    const when = r && r.last ? fmtHeatDay(r.last.timestamp_utc) : '';
+    const delta = !r || r.delta == null ? '' : ' · 较前一日 ' + (r.delta > 0 ? '+' : '') + fmt(r.delta);
+    return esc(heatSig(r)) + (when ? ' · ' + esc(when) : '') + delta + (r && r.fresh ? '' : ' ') + heatFreshTag(r);
   }
   function heatMetricLabel(metric) {
     const m = String(metric || '');
@@ -146,7 +176,7 @@
     return m;
   }
   function shortList() {
-    return PostUI.shortHeat(D.heat, heatCands(), D.shortterm);
+    return PostUI.shortHeat(D.heat, heatCands(), D.shortterm, heatOpt());
   }
   function overlayPosts(it) {
     const seen = {};
@@ -183,7 +213,8 @@
     return p.partial ? day.slice(5, 16) : day.slice(5);
   }
   function trendChart(pts) {
-    if (!pts || !pts.length) return '<p class="empty">这个话题在 heat_log 里还没有序列。</p>';
+    pts = (pts || []).slice().sort((a, b) => String(a.t).localeCompare(String(b.t)));
+    if (!pts.length) return '<p class="empty">这个话题在 heat_log 里还没有序列。</p>';
     const w = 560, h = 168, pl = 52, pr = 10, pt = 18, pb = 32;
     const iw = w - pl - pr, ih = h - pt - pb;
     const max = Math.max.apply(null, pts.map(p => p.v).concat([1]));
@@ -193,18 +224,19 @@
     const grid = ticks.map(tv => `<line x1="${pl}" y1="${y(tv).toFixed(1)}" x2="${w - pr}" y2="${y(tv).toFixed(1)}" stroke="var(--line)"></line><text x="${pl - 4}" y="${(y(tv) + 3).toFixed(1)}" text-anchor="end" class="ax">${esc(fmt(tv))}</text>`).join('');
     const poly = pts.map((p, i) => `${x(i).toFixed(1)},${y(p.v).toFixed(1)}`).join(' ');
     const dots = pts.map((p, i) => {
-      const tip = `${axisLabel(p)} · ${fmt(p.v)}${p.partial ? '（未完结，不参与排名）' : ''}`;
+      const tip = `${axisLabel(p)} · ${fmt(p.v)}${p.partial ? '（未完结）' : ''}`;
       return `<g class="pt" tabindex="0" data-tip="${esc(tip)}"><circle cx="${x(i).toFixed(1)}" cy="${y(p.v).toFixed(1)}" r="4.5" fill="${p.partial ? 'var(--warn)' : 'var(--acc)'}"></circle><text class="pv" x="${x(i).toFixed(1)}" y="${(y(p.v) - 7).toFixed(1)}" text-anchor="middle">${esc(fmt(p.v))}</text><title>${esc(tip)}</title></g>`;
     }).join('');
     const xlab = pts.map((p, i) => `<text class="xl" x="${x(i).toFixed(1)}" y="${h - 6}" text-anchor="middle">${esc(axisLabel(p))}</text>`).join('');
+    const newest = pts[pts.length - 1];
     const completes = pts.filter(p => !p.partial);
-    let note = '';
+    let note = `当前 ${fmt(newest.v)}`;
     if (completes.length >= 2) {
       const a = completes[completes.length - 1], b = completes[completes.length - 2];
       const d = a.v - b.v;
-      note = `完整日 ${fmt(a.v)}，较前一日 ${d > 0 ? '+' : ''}${fmt(d)}`;
-    } else if (pts.length) note = `当前 ${fmt(pts[pts.length - 1].v)}`;
-    if (pts.some(p => p.partial)) note += (note ? ' · ' : '') + `未完结 ${fmt(pts.filter(p => p.partial).pop().v)}`;
+      note += ` · 完整日 ${fmt(a.v)}，较前一日 ${d > 0 ? '+' : ''}${fmt(d)}`;
+    }
+    if (pts.some(p => p.partial)) note += ` · 未完结 ${fmt(pts.filter(p => p.partial).pop().v)}`;
     return `<div class="tchart"><svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(note)}">${grid}<polyline points="${poly}" fill="none" stroke="var(--acc)" stroke-width="2.5"></polyline>${dots}${xlab}</svg><div class="tdelta">${esc(note)}</div><div class="ttip" hidden></div></div>`;
   }
   function showTip(g) {
@@ -310,11 +342,7 @@
   function heatPanel() {
     const rows = rankRows();
     if (rows.length) {
-      const ol = rows.map((r, i) => {
-        const d = r.delta;
-        const ds = d == null ? '' : `<span class="delta ${d > 0 ? 'up' : d < 0 ? 'down' : ''}">${d > 0 ? '+' : ''}${fmt(d)} 较前一日</span>`;
-        return `<li class="rankrow"><button type="button" class="open-ev heat-hit" data-id="${esc(heatOpenId(r.t))}"><span class="no">${i + 1}</span><div class="t"><b>${esc(displayLabel(r.t))}</b><div class="note">${esc(heatMetricLabel(r.last.metric))} · ${esc(fmtHeatDay(r.last.timestamp_utc))}${r.fresh ? '' : ' · 已超过 48 小时'} ${ds}</div></div><span class="v">${fmt(r.last.value)}</span></button>${trendChart(r.pts)}</li>`;
-      }).join('');
+      const ol = rows.map((r, i) => `<li class="rankrow"><button type="button" class="open-ev heat-hit" data-id="${esc(heatOpenId(r.t))}"><span class="no">${i + 1}</span><div class="t"><b>${esc(displayLabel(r.t))}</b><div class="note">${heatNote(r)}</div></div><span class="v">${heatNum(r)}</span></button>${trendChart(r.pts)}</li>`).join('');
       $('#heat').innerHTML = heatExplain() + `<ol class="rank">${ol}</ol>`;
       return;
     }
@@ -323,7 +351,10 @@
   }
   function shortPanel() {
     const blocks = shortList().map(t => `<div class="hot"><button type="button" class="open-ev heat-hit" data-id="${esc(heatOpenId(t.name))}"><b>${esc(displayLabel(t.name))}</b><div class="r">${esc(t.reason)}</div><div class="note">编辑备注「热度：${esc(t.heat)}」不是公式结果 · ${esc(t.status)} · 加入 ${esc(fmtTs(t.added))}</div></button>${trendChart(topicSeries(t.name))}</div>`).join('');
-    $('#short').innerHTML = heatExplain() + (blocks || '<p class="empty">topics.md 中暂无短期热点</p>');
+    const empty = (D.shortterm || []).length
+      ? '<p class="empty">短期热点已经排进热度榜，这里不再重复。</p>'
+      : '<p class="empty">topics.md 中暂无短期热点</p>';
+    $('#short').innerHTML = heatExplain() + (blocks || empty);
   }
   function loadIds(key) {
     try {
@@ -525,8 +556,29 @@
     return String(it._sec || it.section || '').indexOf('重点追踪') >= 0;
   }
   function isStubText(it) {
-    const text = String(it.text || '').trim();
-    return text.indexOf('本期无新动态') === 0 || text.indexOf('本期无重大新动态') === 0 || text.indexOf('本期有新动态') === 0 || text.indexOf('本期无警报') === 0;
+    const text = String((it && it.text) || '').trim();
+    if (!text) return false;
+    if (/^本期.{0,8}无.{0,2}新动态/.test(text)) return true;
+    if (/^本期.{0,8}无.{0,4}新进展/.test(text)) return true;
+    if (/^本期无警报/.test(text)) return true;
+    if (/^本期有新动态/.test(text)) return true;
+    if (/^无新进展/.test(text)) return true;
+    if (/^【?补漏/.test(text) && /无新进展|无新动态|没有新进展|没有新动态/.test(text)) return true;
+    return false;
+  }
+  function isNoProgressNote(text) {
+    const s = String(text || '').trim();
+    if (!s) return false;
+    if (isStubText({ text: s })) return true;
+    if (s.length <= 80 && /无新进展|没有新进展|无新动态|没有新动态/.test(s)) return true;
+    if (s.length <= 120 && /补漏/.test(s) && /无新进展|没有新进展|无新动态|没有新动态|旧闻/.test(s)) return true;
+    return false;
+  }
+  function leadWithin72h(it) {
+    const e = it._e || {};
+    const ms = stampMs(e.timestamp || e.edition_date, e.edition_date);
+    if (ms == null) return false;
+    return asOfMs() - ms <= 72 * 3600000;
   }
   function autoFront(it) {
     return editionFresh(it) && !isStubText(it) && !isRoundup(it);
@@ -556,6 +608,7 @@
       if (rootOf(it)) return false;
       if ((it.detail || {}).title || explicitTrack(it) || promo.has(it.id) || autoFront(it)) return false;
       if (hide.has(it.id) || isRoundup(it) || isStubText(it)) return false;
+      if (!leadWithin72h(it)) return false;
       return match(it);
     }).sort((a, b) => (editionFresh(b) - editionFresh(a)) || ((parseTs(b._e && b._e.timestamp) || 0) - (parseTs(a._e && a._e.timestamp) || 0)) || ((b._views || 0) - (a._views || 0))));
     const shown = merged.filter(g => match(g.root) || g.members.some(match));
@@ -662,10 +715,11 @@
   function liftPct(it) {
     if (it._views) return Math.max(4, Math.round(100 * it._views / MAXV));
     const rank = matchedRank(it);
-    if (!rank || !rank.last || !rank.last.value) return null;
+    const signal = rank.perHour || rank.showValue || (rank.last && rank.last.value) || 0;
+    if (!signal) return null;
     const rows = rankRows();
-    const max = Math.max.apply(null, rows.map(r => r.last.value).concat([1]));
-    return Math.max(4, Math.round(100 * rank.last.value / max));
+    const max = Math.max.apply(null, rows.map(r => r.perHour || r.showValue || (r.last && r.last.value) || 0).concat([1]));
+    return Math.max(4, Math.round(100 * signal / max));
   }
   function secLabel(it) {
     return displayLabel(String(it._sec || '').replace(/[\u{1F300}-\u{1FAFF}\u2600-\u27BF]/gu, '').trim());
@@ -686,7 +740,11 @@
     return PostUI.heatBadge(views, MAXV);
   }
   function freshMark(g) {
-    return isFresh(g) ? '<span class="pdot"></span><span class="pnt">有新进展</span>' : '';
+    if (!isFresh(g)) return '';
+    const prog = latestProg(g);
+    if (prog && isNoProgressNote(prog.text)) return '';
+    if (isNoProgressNote(g.root && g.root.text)) return '';
+    return '<span class="pdot"></span><span class="pnt">有新进展</span>';
   }
   function paperNodes(g) {
     const nodes = [];
@@ -775,9 +833,7 @@
   function heatOpenId(topic) {
     const id = PostUI.matchTopic(topic, heatCands());
     const it = id && ITEMS.find(x => x.id === id);
-    const text = String((it && it.text) || '').trim();
-    const stub = text.indexOf('本期无新动态') === 0 || text.indexOf('本期无重大新动态') === 0 || text.indexOf('本期有新动态') === 0;
-    if (it && !stub) return id;
+    if (it && !isStubText(it)) return id;
     if (/滴滴|didi|99app/i.test(String(topic || ''))) return 'ride:didi';
     return 'heat:' + topic;
   }
@@ -787,7 +843,7 @@
     const id = PostUI.matchTopic(topic, heatCands());
     const paper = document.documentElement.dataset.ui !== 'classic';
     const summary = row
-      ? (heatMetricLabel(row.last.metric) + ' ' + fmt(row.last.value) + (row.delta == null ? '' : '，较前一日 ' + (row.delta > 0 ? '+' : '') + fmt(row.delta)) + '。从记录时间算到最近一期，按 36 小时半衰期衰减。' + (row.fresh ? '这条还在最近 48 小时内。' : '这条已超过 48 小时，所以排在新话题后面。') + (row.kind === 'views' ? '没有发帖计数，榜上用的是代表帖浏览。' : '这个数字是发帖量，不是卡片浏览。'))
+      ? (heatSig(row) + (row.delta == null ? '' : '，较前一日 ' + (row.delta > 0 ? '+' : '') + fmt(row.delta)) + '。计数按每小时比较，从记录时间算到最近一期，按 36 小时半衰期衰减。' + (row.fresh ? '最近 48 小时内有新进展。' : '最近 48 小时没有新进展，所以乘 0.3，排在有进展的话题后面。') + (row.kind === 'weibo' ? '这个数字按微博热搜名次换算。' : row.kind === 'views' ? '没有发帖计数，榜上用的是代表帖浏览。' : '这个数字是每小时发帖量，不是卡片浏览。'))
       : ((short && short.reason) || 'topics.md 里有这个话题，heat_log 没有单独的日发帖序列。');
     let pts = row && row.pts && row.pts.length ? row.pts.slice() : [];
     if (!pts.length && row && row.last) {
@@ -837,7 +893,7 @@
     const main = pinCard() + (hero ? eventCard(hero, true) : '') + '<div class="pevents">' + rest.map(g => eventCard(g, false)).join('') + '</div>';
     const railLeads = '<div class="psec"><b>新线索</b><button type="button" data-ptab="leads">全部 ' + pack.leads.length + ' 条 ›</button></div>' + (leads.length ? leads.map(leadCompact).join('') : '<p class="pfoot">没有待核的新线索。</p>');
     const ranks = rankRows().slice(0, 5);
-    const railHeat = '<div class="prail-heat"><div class="psec"><b style="color:#4A6FA5">热榜</b><button type="button" data-ptab="heat">全部 ›</button></div>' + (ranks.length ? ranks.map((r, i) => '<article class="pcard"><button type="button" class="phit open-ev heat-hit" data-id="' + esc(heatOpenId(r.t)) + '"><div class="prow-top"><b>' + (i + 1) + ' ' + esc(displayLabel(r.t)) + '</b><span class="psm">' + fmt(r.last.value) + '</span></div><div class="note">' + esc(heatMetricLabel(r.last.metric)) + ' · ' + esc(fmtHeatDay(r.last.timestamp_utc)) + (r.fresh ? '' : ' · 已超过 48 小时') + '</div></button></article>').join('') : '') + '</div>';
+    const railHeat = '<div class="prail-heat"><div class="psec"><b style="color:#4A6FA5">热榜</b><button type="button" data-ptab="heat">全部 ›</button></div>' + (ranks.length ? ranks.map((r, i) => '<article class="pcard"><button type="button" class="phit open-ev heat-hit" data-id="' + esc(heatOpenId(r.t)) + '"><div class="prow-top"><b>' + (i + 1) + ' ' + esc(displayLabel(r.t)) + '</b><span class="psm">' + heatNum(r) + '</span></div><div class="note">' + heatNote(r) + '</div></button></article>').join('') : '') + '</div>';
     return '<div class="playout"><div class="pmain">' + (main || '<p class="pfoot">这一栏没有正在追踪的事件。</p>') + '</div><aside class="prail">' + railLeads + railHeat + '</aside></div><p class="pfoot">置顶是滴滴，随快讯更新。头瓜只留给最后进展在最近一期 48 小时内、衰减后仍最高的事件。最近一期的报道会自动进头版。48 小时内没有事件时，头版改显示最新的几条。</p>';
   }
   function paperLeads(pack) {
@@ -845,9 +901,10 @@
   }
   function paperHeat() {
     const rows = rankRows();
-    const blocks = rows.map(r => '<article class="pcard"><button type="button" class="phit open-ev heat-hit" data-id="' + esc(heatOpenId(r.t)) + '"><b>' + esc(displayLabel(r.t)) + '</b><div class="note">' + esc(heatMetricLabel(r.last.metric)) + ' · ' + esc(fmtHeatDay(r.last.timestamp_utc)) + (r.fresh ? '' : ' · 已超过 48 小时') + (r.delta == null ? '' : ' · 较前一日 ' + (r.delta > 0 ? '+' : '') + fmt(r.delta)) + '</div><div class="phr"><span class="pnum">' + fmt(r.last.value) + '</span></div></button>' + trendChart(r.pts) + '</article>').join('');
+    const blocks = rows.map(r => '<article class="pcard"><button type="button" class="phit open-ev heat-hit" data-id="' + esc(heatOpenId(r.t)) + '"><b>' + esc(displayLabel(r.t)) + '</b><div class="note">' + heatNote(r) + '</div><div class="phr"><span class="pnum">' + heatNum(r) + '</span></div></button>' + trendChart(r.pts) + '</article>').join('');
     const shorts = shortList().map(t => '<article class="pcard"><button type="button" class="phit open-ev heat-hit" data-id="' + esc(heatOpenId(t.name)) + '"><b>' + esc(displayLabel(t.name)) + '</b><div class="note">' + esc(t.reason) + '</div><div class="note">编辑备注「热度：' + esc(t.heat) + '」不是公式结果</div></button>' + trendChart(topicSeries(t.name)) + '</article>').join('');
-    return heatExplain() + '<div class="psec"><b style="color:#4A6FA5">热度榜</b><span>同一事件只保留一行</span></div><div class="pheat-grid">' + (blocks || '<p class="pfoot">没有热度序列</p>') + '</div>' + (shorts ? '<div class="psec"><b style="color:#4A6FA5">短期热点</b><span>已并入热度榜的不再重复</span></div><div class="pheat-grid">' + shorts + '</div>' : '');
+    const shortEmpty = !shorts && (D.shortterm || []).length ? '<p class="pfoot">短期热点已经排进热度榜，这里不再重复。</p>' : '';
+    return heatExplain() + '<div class="psec"><b style="color:#4A6FA5">热度榜</b><span>同一事件只保留一行</span></div><div class="pheat-grid">' + (blocks || '<p class="pfoot">没有热度序列</p>') + '</div>' + (shorts ? '<div class="psec"><b style="color:#4A6FA5">短期热点</b><span>已并入热度榜的不再重复</span></div><div class="pheat-grid">' + shorts + '</div>' : shortEmpty);
   }
   function groupFor(id) {
     const pack = clusters();
@@ -998,7 +1055,7 @@ ${(d.responses || []).length ? `<section class="ov-sec"><h3>各方回应</h3>${d
   }
   function mobileHeat() {
     const rows = rankRows();
-    const slides = rows.map((r, i) => `<section class="mslide"><button type="button" class="open-ev heat-hit" data-id="${esc(heatOpenId(r.t))}"><div class="note">第 ${i + 1} 名</div><h3>${esc(displayLabel(r.t))}</h3><div class="bigv">${fmt(r.last.value)}</div><div class="note">${r.delta == null ? '' : (r.delta > 0 ? '+' : '') + fmt(r.delta) + ' 较前一日'}</div></button>${trendChart(r.pts)}</section>`).join('');
+    const slides = rows.map((r, i) => `<section class="mslide"><button type="button" class="open-ev heat-hit" data-id="${esc(heatOpenId(r.t))}"><div class="note">第 ${i + 1} 名</div><h3>${esc(displayLabel(r.t))}</h3><div class="bigv">${heatNum(r)}</div><div class="note">${heatNote(r)}</div></button>${trendChart(r.pts)}</section>`).join('');
     const shorts = shortList().map(t => `<section class="mslide"><button type="button" class="open-ev heat-hit" data-id="${esc(heatOpenId(t.name))}"><h3>${esc(displayLabel(t.name))}</h3><div class="note">${esc(t.reason)}</div></button>${trendChart(topicSeries(t.name))}</section>`).join('');
     return heatExplain() + `<h2 class="sec">热度榜 · 左右滑</h2><div class="mswipe">${slides || '<p class="empty">没有热度序列</p>'}</div>` + (shorts ? `<h2 class="sec">短期热点</h2><div class="mswipe">${shorts}</div>` : '');
   }
