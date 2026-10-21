@@ -1,0 +1,231 @@
+{
+ "type": "bigtech",
+ "title": "中国大厂八卦简报｜2026-10-21 早报",
+ "timestamp": "2026-10-21T00:55:00Z",
+ "edition_date": "2026-10-21",
+ "slot": "01Z",
+ "lede": "过夜窗口偏安静：DeepSeek 被禁次日开源 DeepInfer、外媒曝华为工程师驻场 DeepSeek 设计昇腾芯片、巴西 99Pop 司机恐同言论帖 2万+浏览。",
+ "alert_note": "早报，不单独警报",
+ "alert_worthy": false,
+ "top3": [
+  "DeepSeek开源DeepInfer",
+  "华为DeepSeek联合设计芯片",
+  "99Pop司机恐同言论"
+ ],
+ "focus": {
+  "滴滴": "繁简价差主帖18.21万、无回应；巴西99Pop投诉帖2.17万；墨西哥恰帕斯重申未授权",
+  "字节": "RTX PRO 5500 订单传闻降温，无回应",
+  "中国大模型": "DeepInfer 开源；华为驻场传闻；外交部回应禁令；Kimi K3.1 泄露传闻"
+ },
+ "short_term_notes": "新加入 DeepSeek开源DeepInfer·华为联合设计芯片；其余续追踪",
+ "overseas_local_lang": [
+  "20261021-bt01z-99pop-homophobia",
+  "20261021-bt01z-didi-chiapas"
+ ],
+ "window": "2026-10-20T15:07Z → 2026-10-21T00:55Z",
+ "markdown_file": "2026-10-21_bigtech_01Z_digest.md",
+ "sections": [
+  {
+   "title": "⭐ 今日 Top 3",
+   "color": "#dc2626",
+   "items": [
+    {
+     "id": "20261021-bt01z-deepinfer",
+     "company": "DeepSeek（深度求索）",
+     "tag": "实锤",
+     "source_types": [
+      "官方",
+      "媒体",
+      "X"
+     ],
+     "date": "10-20",
+     "text": "DeepSeek 10-20（北京时间约17:00）官宣把内部推理框架 DeepInfer 全面开源（Apache-2.0），同时开源生产级 Token 编解码组件 deepseek-recipe；官方称它就是支撑 V4.1-Flash 线上服务的推理栈，支持英伟达 SM100 和华为昇腾 950，但不含 KV cache、PD 分离和负载均衡三块。时间点正好在美国 DHS 禁令公开后一天，X 上大量帖子拿“一边被禁一边开源”做文章。X 相关发帖 10-20 09Z 起累计约7178，夜间仍有180–240帖/时、今早 00Z 回升到214；@tianyi 英文首发帖约24.9万浏览。另有 @Michaelzsguo 称其技术文档写了“38美元/GPU/小时”收入、推算毛利率92%，属个人推算、未核实。",
+     "links": [
+      {
+       "label": "IT之家：DeepSeek 宣布将内部推理框架 DeepInfer 全面开源",
+       "url": "https://www.ithome.com/1/015/429.htm"
+      },
+      {
+       "label": "GitHub：deepseek-ai/DeepInfer",
+       "url": "https://github.com/deepseek-ai/DeepInfer"
+      },
+      {
+       "label": "X @tianyi（24.9万浏览）",
+       "url": "https://x.com/tianyi/status/2112471106426900677"
+      },
+      {
+       "label": "X @Michaelzsguo「暴利生意」推算帖（1049浏览，未核实）",
+       "url": "https://x.com/Michaelzsguo/status/2112667491520360939"
+      }
+     ],
+     "lang": "zh"
+    },
+    {
+     "id": "20261021-bt01z-huawei-deepseek-chip",
+     "company": "华为 / DeepSeek",
+     "tag": "传闻",
+     "source_types": [
+      "外媒(The Information·消息人士)【付费】",
+      "媒体",
+      "X"
+     ],
+     "date": "10-19→10-20",
+     "text": "The Information 10-19 援引两名知情人士：华为工程师长期驻扎 DeepSeek 办公室，把大模型训练里怎么分配计算、怎么在芯片间传数据的需求直接写进下一代昇腾芯片设计；DeepSeek 最快今年底用昇腾 950DT 开始预训练，华为打算把 2027 年一季度的昇腾 960DT 大部分供给 DeepSeek。两家均未公开回应。动察 Beating 补充：去年 DeepSeek 用昇腾训 R2 没成功、最后转回英伟达。X 相关发帖 15Z 以来约136，A 股半导体板块 10-20 随传闻异动。",
+     "links": [
+      {
+       "label": "The Information【付费】：How DeepSeek Is Shaping Huawei’s AI Chips",
+       "url": "https://www.theinformation.com/articles/deepseek-shaping-huaweis-ai-chips-growing-challenge-nvidia"
+      },
+      {
+       "label": "动察 Beating：DeepSeek与华为联手……年底冲刺国产芯片预训练",
+       "url": "https://www.beating.news/flash/372713"
+      },
+      {
+       "label": "X @lbz7354",
+       "url": "https://x.com/lbz7354/status/2112572350059487251"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🎯 重点追踪",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "id": "20261021-bt01z-deepseek-ban-mfa",
+     "company": "DeepSeek / 外交部",
+     "tag": "官方",
+     "source_types": [
+      "官方",
+      "X"
+     ],
+     "date": "10-20",
+     "text": "昨晚总结漏收：外交部发言人毛宁 10-20 例行记者会回应美国禁用 DeepSeek，称“中方一贯反对泛化国家安全概念、将科技经贸问题政治化”，将坚决维护中国企业合法权益（早于当晚商务部表态）。禁令话题 X 发帖夜间 15Z–23Z 为75/141/70/43/34/34/39/20/28，今早 00Z 回升到116（50分钟），📈。",
+     "links": [
+      {
+       "label": "外交部：2026年10月20日例行记者会",
+       "url": "https://www.mfa.gov.cn/fyrbt_673021/202610/t20261020_12043799.shtml"
+      },
+      {
+       "label": "新华社英文：China slams U.S. ban on DeepSeek AI tools",
+       "url": "https://english.news.cn/20261020/7a7628d32bd74071b6e48280eece5221/c.html"
+      },
+      {
+       "label": "X @sleepy0x13（约2.09万）",
+       "url": "https://x.com/sleepy0x13/status/2112173684177932615"
+      }
+     ]
+    },
+    {
+     "id": "20261021-bt01z-kimi-k31-leak",
+     "company": "月之暗面（Kimi）",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "GitHub"
+     ],
+     "date": "10-20",
+     "text": "@leo114119 称 SGLang 仓库出现 moonshotai/Kimi-K3.1 支持的 PR，开了约7分钟就被关掉，但测试数据被存档：新增 medium 思考档、支持图片输入，10-18 DeepInfra 已有部署痕迹。官方无模型卡、权重或 API，属泄露传闻；帖子浏览约641。",
+     "links": [
+      {
+       "label": "X @leo114119（641浏览）",
+       "url": "https://x.com/leo114119/status/2112620336525296038"
+      }
+     ]
+    },
+    {
+     "id": "20261021-bt01z-rtx5500-cool",
+     "company": "字节跳动 / 阿里巴巴 / 腾讯",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-20→10-21",
+     "text": "路透“三家合计订超300万张 RTX PRO 5500”一夜无新增事实，三家仍未回应；X 发帖 15Z 起 86→69→32→36→25→30→29→25→26→23/时 📉；@_FORAB 解读帖浏览 4.10万→5.55万。",
+     "links": [
+      {
+       "label": "X @_FORAB（约5.55万）",
+       "url": "https://x.com/_FORAB/status/2112495864317125032"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🌐 海外小语种线索",
+   "color": "#0891b2",
+   "items": [
+    {
+     "id": "20261021-bt01z-99pop-homophobia",
+     "company": "滴滴出海·巴西（99Pop）",
+     "tag": "传闻",
+     "source_types": [
+      "X(葡语)"
+     ],
+     "date": "10-20",
+     "text": "巴西网友 @decofior 10-20 晚发帖称：99Pop 司机在行程中说“上帝会治好你的同性恋”，他警告要起诉后司机才开始求饶，他已在平台拉黑并举报。帖子约2.17万浏览、近2000赞，单一当事人说法，99 未见回应。",
+     "lang": "pt",
+     "translation_zh": "99Pop 的司机在行程中说上帝会治好我的同性恋，我说他要是不闭嘴我就起诉他，那家伙就开始求我原谅。我已在平台上拉黑并举报了他。",
+     "original": "o motorista do 99Pop falou durante a corrida que Deus ia curar minha homossexualidade, eu disse que ia meter um processo se ele não se calasse e o fudido começou a implorar perdão. Bloqueei na plataforma e denunciei.",
+     "links": [
+      {
+       "label": "X @decofior（约2.17万浏览）",
+       "url": "https://x.com/decofior/status/2112656474782757225"
+      }
+     ]
+    },
+    {
+     "id": "20261021-bt01z-didi-chiapas",
+     "company": "滴滴出海·墨西哥（恰帕斯/塔瓦斯科）",
+     "tag": "实锤",
+     "source_types": [
+      "媒体(西语)",
+      "X(西语)"
+     ],
+     "date": "10-20",
+     "text": "墨西哥恰帕斯州交通部门 10-20 重申：Uber、DiDi、inDrive、Proto 未获授权用私家车载客；同日塔瓦斯科州议会交通委员会议员 Abby Tejada 呼吁对 Uber、DiDi 立规以保障乘客安全。均为地方监管表态，未见处罚动作。",
+     "lang": "es",
+     "translation_zh": "恰帕斯重申：交通与运输部重申 Uber、DiDi、Proto 和 inDrive 未获授权用私家车提供出行服务。",
+     "original": "La Secretaría de Movilidad y Transporte de Chiapas reiteró que Uber, Didi, Proto e inDrive no está autorizados para ofrecer viajes en vehículos particulares.",
+     "links": [
+      {
+       "label": "X @DiarioChiapas",
+       "url": "https://x.com/DiarioChiapas/status/2112614129857114184"
+      },
+      {
+       "label": "X @Reaccionnmx（塔瓦斯科议员）",
+       "url": "https://x.com/Reaccionnmx/status/2112697022599876903"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🚗 车圈·华为",
+   "color": "#ea580c",
+   "items": [
+    {
+     "id": "20261021-bt01z-yinwang-ads",
+     "company": "华为·引望 / 车企",
+     "tag": "传闻",
+     "source_types": [
+      "媒体(消息称)"
+     ],
+     "date": "10-20",
+     "text": "IT之家等 10-20 援引消息：引望要求合作车企不得用补贴、减免、抵扣等方式变相降低华为乾崑智驾 ADS 软件费，车企可以降整车价，但 ADS 软件费须单独收；理由是持续收费才能养得起庞大研发团队。华为/引望未正式发文，X 讨论极少（10-20 约3帖）。",
+     "links": [
+      {
+       "label": "IT之家：消息称引望不允许车企补贴华为乾崑智驾 ADS 软件费用",
+       "url": "https://www.ithome.com/1/015/383.htm"
+      },
+      {
+       "label": "凤凰网汽车：网通社快报",
+       "url": "https://auto.ifeng.com/c/8xNa0UKg8eS"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

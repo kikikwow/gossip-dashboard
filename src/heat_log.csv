@@ -810,3 +810,26 @@ timestamp_utc,topic,metric,value,source
 2026-10-20T15:07:00Z,腾讯绿泡泡对战红果短剧,x_daily_post_count,11,x_counts_1020_to_15Z
 2026-10-20T15:07:00Z,腾讯绿泡泡对战红果短剧,x_sample_post,168091,https://x.com/_FORAB/status/2110319029797916887
 2026-10-20T15:07:00Z,滴滴繁简价差,x_sample_post,182082,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-21T00:55:00Z,DeepSeek开源DeepInfer,x_post_count_since_1020_09Z,7178,x_counts
+2026-10-21T00:55:00Z,DeepSeek开源DeepInfer,x_hourly_post_count_00Z_partial,214,x_counts
+2026-10-21T00:55:00Z,DeepSeek开源DeepInfer,x_sample_post,248535,https://x.com/tianyi/status/2112471106426900677
+2026-10-21T00:55:00Z,DeepSeek开源DeepInfer,x_sample_post,1049,https://x.com/Michaelzsguo/status/2112667491520360939
+2026-10-21T00:55:00Z,华为DeepSeek联合设计芯片,x_post_count_15Z_to_00Z,136,x_counts
+2026-10-21T00:55:00Z,华为DeepSeek联合设计芯片,x_sample_post,315,https://x.com/lbz7354/status/2112572350059487251
+2026-10-21T00:55:00Z,美国禁用DeepSeek·商务部回应,x_post_count_15Z_to_00Z,600,x_counts
+2026-10-21T00:55:00Z,美国禁用DeepSeek·商务部回应,x_hourly_post_count_00Z_partial,116,x_counts
+2026-10-21T00:55:00Z,美国禁用DeepSeek·商务部回应,x_sample_post,20906,https://x.com/sleepy0x13/status/2112173684177932615
+2026-10-21T00:55:00Z,字节阿里腾讯抢购英伟达RTX PRO 5500,x_post_count_15Z_to_00Z,381,x_counts
+2026-10-21T00:55:00Z,字节阿里腾讯抢购英伟达RTX PRO 5500,x_sample_post,55549,https://x.com/_FORAB/status/2112495864317125032
+2026-10-21T00:55:00Z,尊界V800刹车踏板·三部门联合调查,x_post_count_15Z_to_00Z,43,x_counts
+2026-10-21T00:55:00Z,尊界V800刹车踏板·三部门联合调查,x_sample_post,59305,https://x.com/TraderS18/status/2110741270394184185
+2026-10-21T00:55:00Z,月之暗面陈广宇离职,x_post_count_15Z_to_00Z,60,x_counts
+2026-10-21T00:55:00Z,月之暗面陈广宇离职,x_sample_post,16882,https://x.com/leo114119/status/2112377401653252526
+2026-10-21T00:55:00Z,滴滴繁简价差,x_sample_post,182131,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-21T00:55:00Z,滴滴出海·巴西99Pop司机恐同言论,x_sample_post,21724,https://x.com/decofior/status/2112656474782757225
+2026-10-21T01:30:00Z,小鹏汇天交付阿联酋,x_post_count_day_1020,77,x_counts
+2026-10-21T01:30:00Z,小鹏汇天交付阿联酋,x_sample_post,3089,https://x.com/globaltimesnews/status/2112562885687971915
+2026-10-21T01:30:00Z,小鹏汇天交付阿联酋,x_sample_post,199,https://x.com/ShanghaiEye/status/2112685382009823705
+2026-10-21T01:30:00Z,Temu得州和解,x_sample_post,76889,https://x.com/whyyoutouzhele/status/2111706344189309092
+2026-10-21T01:30:00Z,Temu得州和解,x_sample_post,16948,https://x.com/__Inty__/status/2111706486267056397
+2026-10-21T01:30:00Z,TikTok误封马斯克纪录片,x_sample_post,308,https://x.com/filmstories/status/2112086353387110844

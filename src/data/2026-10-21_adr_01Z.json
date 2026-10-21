@@ -1,0 +1,160 @@
+{
+ "type": "adr",
+ "title": "美股中概 & 出海简报｜2026-10-21 早报",
+ "timestamp": "2026-10-21T01:35:00Z",
+ "edition_date": "2026-10-21",
+ "slot": "01Z",
+ "beijing_time": "2026-10-21 09:35",
+ "lede": "美东10-20中概逆势普涨（金龙+0.68%），小鹏因汇天飞行汽车交付阿联酋涨7.6%、禾赛涨约8.3%；补漏停更期的 Temu 得州和解（判决书措辞与新闻稿不一）和 TikTok 误封马斯克纪录片广告账号。",
+ "window": {
+  "start_beijing": "2026-10-20 23:07",
+  "end_beijing": "2026-10-21 09:35"
+ },
+ "alert_worthy": false,
+ "push_needed": true,
+ "top3": [
+  "中概10-20收盘·小鹏汇天交付阿联酋",
+  "Temu得州和解·判决书与新闻稿不一",
+  "TikTok误封马斯克纪录片广告账号"
+ ],
+ "focus": {
+  "滴滴": "过夜无新料（早报已收巴西99Pop、墨西哥恰帕斯）；繁简价差主帖约18.21万无回应",
+  "字节/TikTok": "TikTok误封马斯克纪录片广告后恢复；TikTok Shop租京东英国仓；RTX PRO 5500订单无回应",
+  "中国大模型": "无新的出海/IPO动态；DeepSeek禁令与DeepInfer见大厂早报"
+ },
+ "markdown_file": "2026-10-21_adr_01Z_digest.md",
+ "sections": [
+  {
+   "title": "⭐ 今日 Top 3",
+   "color": "#dc2626",
+   "items": [
+    {
+     "id": "20261021-adr01z-market",
+     "company": "中概股（HXC）/ 小鹏 / 禾赛",
+     "tag": "实锤",
+     "source_types": [
+      "财经媒体",
+      "X"
+     ],
+     "date": "10-20（美东）",
+     "text": "美东10-20（周二）收盘，纳斯达克中国金龙指数收涨0.68%报5719.25点，与纳指（-0.02%）、龙头科技股走弱形成反差。小鹏收涨7.60%：当天阿联酋拉斯海玛酋长到广州参观小鹏汇天飞行汽车量产线，现场接收首架投入阿联酋低空飞行监管示范区的「陆地航母」X3-F试验机，后续将在阿联酋民航监管下沙盒试运行。禾赛初步收涨约8.3%，智通财经归因于其10-14发布的Kosmo三维世界数据引擎（物理AI/机器人仿真）。理想+5.67%、世纪互联+5.5%、美团+2.9%；爱奇艺-0.76%、B站-0.64%、网易-0.11%、京东-0.07%。X 上小鹏汇天/阿联酋相关帖 10-20 全天约77条，环球时报英文帖约3089浏览。",
+     "links": [
+      {
+       "label": "第一财经（新浪转载）：中概股普涨、个股涨跌",
+       "url": "https://finance.sina.com.cn/roll/2026-10-21/doc-inivxrnv5553971.shtml"
+      },
+      {
+       "label": "每经早参：金龙收5719.25、禾赛初步收涨8.3%",
+       "url": "https://www.nbd.com.cn/articles/2026-10-20/4610369.html"
+      },
+      {
+       "label": "智通财经：小鹏涨7% 汇天X3-F交付阿联酋",
+       "url": "https://www.zhitongcaijing.com/content/detail/1509805.html"
+      },
+      {
+       "label": "智通财经：禾赛涨8% 布局物理AI",
+       "url": "https://www.zhitongcaijing.com/content/detail/1509804.html"
+      },
+      {
+       "label": "Investing：金龙指数历史数据",
+       "url": "https://cn.investing.com/indices/nq-golden-dragon-china-historical-data"
+      },
+      {
+       "label": "X @globaltimesnews（3089浏览）",
+       "url": "https://x.com/globaltimesnews/status/2112562885687971915"
+      }
+     ],
+     "lang": "zh"
+    },
+    {
+     "id": "20261021-adr01z-temu-texas",
+     "company": "拼多多 / Temu",
+     "tag": "实锤",
+     "source_types": [
+      "官方(得州检察长)",
+      "法律媒体",
+      "X"
+     ],
+     "date": "10-16→10-20",
+     "text": "得州检察长帕克斯顿10-16宣布与 PDD 和 Temu 运营主体 Whaleco 和解：Temu 付300万美元，得州用户个人数据须存放在美国境内、由美国公司拥有和控制的服务器，限制中国境内人员和机构访问，商品每年做独立安全检测，查出有害物质要下架、清退卖家并全额退款；Temu 在判决书中否认全部指控、不承认责任，路透称得州是起诉 Temu 的各州里第一个和解的。10-20 法律媒体 JDSupra 逐字比对27页判决书后指出：新闻稿里「受必要业务功能限制」和「每年违规罚800万美元」两句话判决书里都没有，800万美元实际是「每次年度审计不合格」才触发。这条在停更期间（10/16–10/20）发生，此前各期没收，本期补上；X @whyyoutouzhele 中文帖约7.69万浏览。",
+     "links": [
+      {
+       "label": "得州检察长办公室新闻稿（10-16）",
+       "url": "https://www.texasattorneygeneral.gov/news/releases/attorney-general-paxton-secures-first-its-kind-settlement-temu-protect-texans-data-ccp-and-protect"
+      },
+      {
+       "label": "JDSupra（10-20）：新闻稿与判决书措辞不一致",
+       "url": "https://www.jdsupra.com/legalnews/texas-temu-judgment-limits-china-based-1349491/"
+      },
+      {
+       "label": "X @whyyoutouzhele（7.69万浏览）",
+       "url": "https://x.com/whyyoutouzhele/status/2111706344189309092"
+      },
+      {
+       "label": "X @__Inty__（1.69万浏览）",
+       "url": "https://x.com/__Inty__/status/2111706486267056397"
+      }
+     ],
+     "lang": "en",
+     "translation_zh": "JDSupra：新闻稿概括的两项条款用了判决书里没有的措辞。新闻稿说 Temu 须限制中国境内人员和机构访问得州人数据「但受必要业务功能限制」，违反数据安全条款「每年违规罚800万美元」；全文检索判决书找不到这两句话。判决书把800万美元民事罚款设为「每次年度审计不合格」，由 Temu 聘请的独立机构认定存在重大违规时触发。",
+     "original": "The release summarized two terms in language the judgment does not use. It said Temu must restrict access to Texans' data by people and entities based in China \"subject to essential business functions,\" and that a breach of various data security provisions would bring an \"$8,000,000 penalty each year a violation occurs.\" A full-text search of the Agreed Final Judgment ... finds neither phrase. ... The $8 million figure is a civil penalty \"per failed annual audit,\" and the judgment ties it expressly to an independent firm's final report finding what it calls Material Noncompliance."
+    },
+    {
+     "id": "20261021-adr01z-tiktok-musk-doc",
+     "company": "字节跳动 / TikTok",
+     "tag": "实锤",
+     "source_types": [
+      "外媒",
+      "X"
+     ],
+     "date": "10-17→10-19",
+     "text": "TikTok 10-17 被曝以「多次违反政治内容政策」为由永久封禁发行方 Bleecker Street 为 Alex Gibney 四小时纪录片《Musk》开设的广告账号；片中有 TikTok 美国合资公司股东拉里·埃里森表示愿资助马斯克收购推特的片段，英媒《每日电讯报》直接用「埃里森的 TikTok」做标题，X 上大量帖子拿这点做文章。随后 TikTok 改口称是误封，The Verge 报道账号「因错误已恢复」，可投放合规广告。X 也拒绝了该片广告，Meta 和 YouTube 起初拒后放行。属停更期间的事，此前各期没收，本期补上；相关 X 单帖浏览量都不高（数十到数百）。",
+     "links": [
+      {
+       "label": "The Verge：TikTok 广告账号已恢复（称为错误）",
+       "url": "https://www.theverge.com/tech/1013527/the-musk-documentarys-tiktok-account-has-been-restored-after-an-error"
+      },
+      {
+       "label": "The Hollywood Reporter：TikTok 以政治内容为由封号",
+       "url": "https://www.hollywoodreporter.com/news/politics-news/musk-movie-tiktok-banned-theaters-showtimes-1236734308/"
+      },
+      {
+       "label": "Telegraph【付费】：Larry Ellison’s TikTok bans ad account for Musk documentary",
+       "url": "https://www.telegraph.co.uk/business/2026/10/18/larry-ellisons-tiktok-bans-ad-account-for-musk-documentary/"
+      },
+      {
+       "label": "X @filmstories（308浏览）",
+       "url": "https://x.com/filmstories/status/2112086353387110844"
+      }
+     ],
+     "lang": "en",
+     "translation_zh": "Film Stories：TikTok 周五封禁了马斯克纪录片《Musk》的官方账号，随后撤回了这一决定。",
+     "original": "TikTok banned the official account for Elon Musk documentary Musk on Friday before reversing its decision."
+    }
+   ]
+  },
+  {
+   "title": "🧸 出海动态",
+   "color": "#0891b2",
+   "items": [
+    {
+     "id": "20261021-adr01z-tiktok-jd-uk",
+     "company": "TikTok Shop / 京东产发",
+     "tag": "实锤",
+     "source_types": [
+      "媒体(亿邦动力)"
+     ],
+     "date": "10-18",
+     "text": "亿邦动力周报：TikTok Shop 履约业务 FBT 租下英国拉格比约25万平方英尺仓库，业主是京东旗下京东产发；京东产发确认已交付给「一家头部跨境电商企业」。同一周报称 SHEIN 再收紧美国半托管运费补贴（DSR 低于4星取消资格）、10-12 起下线 UniUni 物流，是今年第三次换物流商。",
+     "links": [
+      {
+       "label": "腾讯新闻（亿邦动力）：跨境电商周报",
+       "url": "https://news.qq.com/rain/a/20261018A07SJK00"
+      }
+     ],
+     "lang": "zh"
+    }
+   ]
+  }
+ ]
+}
