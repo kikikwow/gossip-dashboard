@@ -1,6 +1,6 @@
 {
  "source": "https://api.fxtwitter.com/status/{id}",
- "fetched_at": "2026-10-21T03:21:34Z",
+ "fetched_at": "2026-10-21T05:17:15Z",
  "note": "静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。",
  "posts": {
   "2106320822444949760": {
@@ -3198,6 +3198,36 @@
    "bookmarks": 0,
    "url": "https://x.com/AFARUNM/status/2112497380457349627",
    "fetched_at": "2026-10-21T03:21:34Z"
+  },
+  "2112738140989600106": {
+   "status": "ok",
+   "text": "卧槽，宁王这是咋的了？\n\n净利涨14.54%，股价跌停\n宁德时代，两地同时创52周新低\n\nA股 232.80，-10.2%\n最低231.8，就是52周最低\nH股 372.80，-9.5%\n最低371.2，也是52周最低\n\nPE只剩12.44，股息3.48%\n60日-39.08%\n\n一边是利润还在涨，一边是两地一起创新低。\n你觉得市场在怕什么？\n\n个人记录，非投资建议。",
+   "author": "@aystxdlzfhj",
+   "name": "大道至简｜全球资产配置",
+   "created_at": "2026-10-21T02:50:00Z",
+   "views": 767,
+   "likes": 5,
+   "reposts": 0,
+   "replies": 6,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/aystxdlzfhj/status/2112738140989600106",
+   "fetched_at": "2026-10-21T05:17:15Z"
+  },
+  "2112739439281901639": {
+   "status": "ok",
+   "text": "宁德时代暴跌超10%\n打压了科创板指数\n\n9月份的时候就很明了很多汽车厂商\n由于成本的考虑在去宁德化\n后知后觉资金要到今天业绩出来才夺命而逃",
+   "author": "@freearkshaw",
+   "name": "投研荟",
+   "created_at": "2026-10-21T02:55:09Z",
+   "views": 3489,
+   "likes": 3,
+   "reposts": 0,
+   "replies": 1,
+   "quotes": 0,
+   "bookmarks": 1,
+   "url": "https://x.com/freearkshaw/status/2112739439281901639",
+   "fetched_at": "2026-10-21T05:17:15Z"
   }
  }
 }
