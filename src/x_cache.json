@@ -1,6 +1,6 @@
 {
  "source": "https://api.fxtwitter.com/status/{id}",
- "fetched_at": "2026-10-21T01:28:01Z",
+ "fetched_at": "2026-10-21T03:21:34Z",
  "note": "静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。",
  "posts": {
   "2106320822444949760": {
@@ -3168,6 +3168,36 @@
    "fetched_at": "2026-10-21T01:28:01Z",
    "translation_zh": "中国小鹏向阿联酋交付首架飞行汽车 🇦🇪（中英双语帖）",
    "lang": "en"
+  },
+  "2112404625198289080": {
+   "status": "ok",
+   "text": "“韩路游记”卖了几百万，韩路说自己竟不知情。\n\n他昨晚点名汽车之家，称对方以他的名义接了400万—600万元项目，自己只被请去录开场，团队收了10万元访谈费，连个人账号的发布资源也被打包卖了。\n\n拿他的名义接单，到底谁给的授权？\n\n目前是韩路单方说法，等汽车之家回应。",
+   "author": "@HansChinaAuto",
+   "name": "老韩聊车",
+   "created_at": "2026-10-20T04:44:43Z",
+   "views": 442,
+   "likes": 15,
+   "reposts": 0,
+   "replies": 7,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/HansChinaAuto/status/2112404625198289080",
+   "fetched_at": "2026-10-21T03:21:34Z"
+  },
+  "2112497380457349627": {
+   "status": "ok",
+   "text": "卧槽！！汽车圈又出大事！！\n\n一个叫韩路的大 V 汽车博主爆料\n\n当年拍摄汽车之家拍一个汽车商单节目名字叫韩路出游记，结果里面并没有韩路。\n\n几百万的商单瞒着韩路，只给了 10 万块钱\n\n汽车之家创始人李想\n\n刚好理想 i6 又在这个月底发布\n\n整个事件串起来\n\n理想这次估计要跟懂车帝一起完蛋了\n\n🤔🤔🤔",
+   "author": "@AFARUNM",
+   "name": "啊发FA",
+   "created_at": "2026-10-20T10:53:18Z",
+   "views": 1334,
+   "likes": 1,
+   "reposts": 0,
+   "replies": 8,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/AFARUNM/status/2112497380457349627",
+   "fetched_at": "2026-10-21T03:21:34Z"
   }
  }
 }

@@ -1,0 +1,188 @@
+{
+ "routine": "大厂八卦热点快讯",
+ "type": "alert",
+ "title": "大厂八卦热点快讯",
+ "timestamp": "2026-10-21T03:18:00Z",
+ "edition_date": "2026-10-21",
+ "edition_id": "kuaixun_0318Z",
+ "fired_at_utc": "2026-10-21T03:18:34Z",
+ "scanned_at_utc": "2026-10-21T03:24:00Z",
+ "beijing_time": "2026-10-21 11:18–11:25 CST",
+ "window": "2026-10-21T01:00Z–03:20Z (北京 09:00–11:20，接 9:00 早报)",
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无达标的新爆料。DeepInfer/华为话题 X 发帖继续升温（01Z=267、02Z=305/时），但早报已作为 Top1/2 报过，无新事实。美国禁用DeepSeek 129→87/时回落。汽车之家回应韩路控诉（启动内部专项核查）为新官方回应、此前各期漏收，但微博仅#33（约24.3万）、X 约8–11帖/时，按惯例（王腾#17未警报）不单独警报，列为观察。微博#1「拟出台的中国AI禁令震动全球」是10-16商务部/科技部出口技术目录征求意见的旧闻回榜，非公司八卦。微博#2宝马离职补偿挤崩系统为德国宝马，非中国公司。滴滴 Tier1+slot2 X 全部为撞词/广告/低互动，无公司级新线索；巴西99Pop恐同帖浏览2.17万→4.32万，属早报已报故事续热。",
+ "lede": "快讯窗北京09:00–11:20。信源：X公开检索（约20次）、微博热搜镜像soso.re（11:16）、RSS（新匹配2条，非独立新料）、网页交叉核实。无警报。",
+ "items": [],
+ "top3": [],
+ "sections": [
+  {
+   "title": "⚡ 快讯",
+   "color": "#e4572e",
+   "items": [
+    {
+     "id": "20261021-kx0318Z-autohome",
+     "company": "汽车之家（ATHM）/ 韩路",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "微博",
+      "X"
+     ],
+     "date": "10-21 09:48",
+     "event_time": "2026-10-19 深夜（爆料）/ 2026-10-21 上午（回应）",
+     "text": "汽车之家前总编、车评人韩路10-19深夜发视频，指控汽车之家两年多前未经他同意，以「韩路游记」名义向车企卖出约400万–600万元内容合作，再以200万–230万元外包，他本人只拿到约10万+10万访谈/发布费。10-21上午汽车之家回应称已第一时间启动内部专项核查，希望与韩路沟通、消除误解；微博「汽车之家回应韩路」#33（约24.3万）。金额为韩路单方说法，合同细节未核实。",
+     "links": [
+      {
+       "label": "凤凰网：汽车之家回应韩路控诉",
+       "url": "https://tech.ifeng.com/c/8xOjbRMKUO4"
+      },
+      {
+       "label": "汤姆出行：韩路深夜开撕前东家",
+       "url": "https://www.tomautos.cn/article/6ad73a728e9f0913443e8de9/"
+      },
+      {
+       "label": "新浪：韩路自曝被前东家坑了数百万",
+       "url": "https://www.sina.cn/gc/article/nivwitm5820691.html"
+      },
+      {
+       "label": "X @AFARUNM",
+       "url": "https://x.com/AFARUNM/status/2112497380457349627"
+      }
+     ]
+    },
+    {
+     "id": "20261021-kx0318Z-deepinfer",
+     "company": "DeepSeek / 华为",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "统计"
+     ],
+     "date": "10-21 11:20",
+     "text": "DeepInfer开源及「华为工程师驻场DeepSeek共同设计昇腾」话题在X上继续升温，01Z、02Z分别约267、305帖/时；@tianyi 开源帖浏览从约24.9万涨到约25.8万。本窗无新的官方或媒体事实，华为驻场仍为The Information付费报道的传闻。",
+     "links": [
+      {
+       "label": "X @tianyi",
+       "url": "https://x.com/tianyi/status/2112471106426900677"
+      },
+      {
+       "label": "GitHub DeepInfer",
+       "url": "https://github.com/deepseek-ai/DeepInfer"
+      },
+      {
+       "label": "The Information【付费】",
+       "url": "https://www.theinformation.com/articles/deepseek-shaping-huaweis-ai-chips-growing-challenge-nvidia"
+      }
+     ]
+    },
+    {
+     "id": "20261021-kx0318Z-weibo-ai-export",
+     "company": "商务部 / 科技部（中国大模型相关）",
+     "tag": "官方",
+     "source_types": [
+      "微博热搜",
+      "官方"
+     ],
+     "date": "10-21 11:16",
+     "event_time": "2026-10-16",
+     "text": "微博热搜#1「拟出台的中国AI禁令震动全球」（约119.7万）实为10-16商务部、科技部就修订《中国禁止出口限制出口技术目录》征求意见：拟增列AI、生物医药、光伏40项技术，其中AI 23项，已开源或公开发表的技术不纳入。征求意见到11-15，属旧闻回榜，不是新的公司八卦。",
+     "links": [
+      {
+       "label": "商务部公告2026年第48号",
+       "url": "https://www.mofcom.gov.cn/zfxxgk/gkml/art/2026/art_ccd0391072a94c809ae7e820abe2536b.html"
+      },
+      {
+       "label": "RTHK",
+       "url": "https://news.rthk.hk/rthk/en/component/k2/1874239-20261016.htm"
+      },
+      {
+       "label": "微博热搜镜像",
+       "url": "https://soso.re/weibo"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "tracked_updates": [
+  {
+   "topic": "美国禁用DeepSeek·商务部回应",
+   "status": "追踪中·回落",
+   "heat": "X 01Z/02Z/03Z(partial)=129/87/18；无新官方动作"
+  },
+  {
+   "topic": "DeepSeek开源DeepInfer·华为联合设计芯片",
+   "status": "追踪中·升温",
+   "heat": "X 01Z/02Z/03Z(partial)=267/305/98；@tianyi≈25.8万"
+  },
+  {
+   "topic": "字节阿里腾讯抢购英伟达RTX PRO 5500",
+   "status": "追踪中·持平低位",
+   "heat": "X 01Z/02Z/03Z(partial)=27/30/13；@_FORAB≈6.20万；三家仍未回应"
+  },
+  {
+   "topic": "尊界V800刹车踏板·三部门联合调查",
+   "status": "追踪中·降温",
+   "heat": "X 01Z/02Z/03Z(partial)=7/3/3；无调查结论"
+  },
+  {
+   "topic": "月之暗面陈广宇离职",
+   "status": "追踪中·降温",
+   "heat": "X 01Z/02Z/03Z(partial)=2/1/2；Kimi K3.1 泄露帖@leo114119≈905"
+  }
+ ],
+ "focus_topics": {
+  "滴滴": "本期无新动态。Tier1+slot2（国内其他业务）X检索均为撞词、广告或低互动；巴西99Pop恐同帖@decofior 2.17万→4.32万（早报已报）；繁简主帖@Furinanatw≈18.21万，无回应。",
+  "字节": "本期无新动态（RTX PRO 5500 传闻持平低位）。",
+  "中国大模型": "DeepInfer/华为线继续升温但无新事实；微博#1为10-16出口技术目录征求意见旧闻回榜。"
+ },
+ "overseas_minor_language": [],
+ "weibo": {
+  "mirror": "https://soso.re/weibo",
+  "updated": "2026-10-21 11:16 Beijing",
+  "company_adjacent": [
+   {
+    "rank": 1,
+    "title": "拟出台的中国AI禁令震动全球",
+    "heat": 1196897,
+    "note": "10-16出口技术目录征求意见旧闻回榜"
+   },
+   {
+    "rank": 2,
+    "title": "宝马员工争着离职挤崩系统",
+    "heat": 962908,
+    "note": "德国宝马自愿离职补偿，非中国公司"
+   },
+   {
+    "rank": 9,
+    "title": "目前我国只批准两款L3车型",
+    "heat": 748502,
+    "note": "车圈政策，非八卦"
+   },
+   {
+    "rank": 33,
+    "title": "汽车之家回应韩路",
+    "heat": 242895,
+    "note": "见快讯条目"
+   }
+  ]
+ },
+ "maimai": {
+  "status": "未抓取",
+  "pending": [
+   "待补充：脉脉热榜——需登录，本期未取"
+  ]
+ },
+ "feeds_new": 2,
+ "feeds_file": "research/feeds/2026-10-21T0319Z.json",
+ "short_term_updates": "短期五项不变，无新加入/移出。观察未入短期：汽车之家回应韩路（微博#33）。",
+ "candidates": [
+  {
+   "topic": "汽车之家回应韩路",
+   "heat": "微博#33≈24.3万；X 10-20 12Z起累计约124帖（2–13/时）",
+   "decision": "观察，不警报"
+  }
+ ],
+ "push_needed": true
+}

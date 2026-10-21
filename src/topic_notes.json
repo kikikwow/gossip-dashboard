@@ -702,8 +702,52 @@
     "待补充：说明——淘宝官方故障原因与恢复时间未公布"
    ]
   },
+  "DeepSeek开源DeepInfer": {
+   "summary": "DeepSeek 10-20 官宣全面开源内部推理框架 DeepInfer（Apache-2.0）及 deepseek-recipe 编解码组件，称其支撑 V4.1-Flash 线上服务，支持英伟达 SM100 与华为昇腾 950；开源版不含 KV cache、PD 分离和负载均衡。发布时间恰在美国 DHS 禁令公开次日。",
+   "credibility": "实锤",
+   "event_time": "2026-10-20",
+   "sources": [
+    {
+     "label": "IT之家",
+     "url": "https://www.ithome.com/1/015/429.htm"
+    },
+    {
+     "label": "GitHub：deepseek-ai/DeepInfer",
+     "url": "https://github.com/deepseek-ai/DeepInfer"
+    }
+   ],
+   "recorded_at": "2026-10-21T00:55:00Z"
+  },
+  "华为DeepSeek联合设计芯片": {
+   "summary": "The Information 10-19 援引知情人士称华为工程师长期驻扎 DeepSeek 办公室，把训练需求写进下一代昇腾芯片设计；DeepSeek 最快年底用 950DT 预训练，华为拟把 2027Q1 的 960DT 大部分供给 DeepSeek。两家未公开回应。",
+   "credibility": "传闻",
+   "event_time": "2026-10-19",
+   "sources": [
+    {
+     "label": "The Information【付费】",
+     "url": "https://www.theinformation.com/articles/deepseek-shaping-huaweis-ai-chips-growing-challenge-nvidia"
+    },
+    {
+     "label": "动察 Beating",
+     "url": "https://www.beating.news/flash/372713"
+    }
+   ],
+   "recorded_at": "2026-10-21T00:55:00Z"
+  },
+  "滴滴出海·巴西99Pop司机恐同言论": {
+   "summary": "巴西网友 @decofior 10-20 发帖称 99Pop 司机在行程中说“上帝会治好你的同性恋”，警告起诉后司机求饶，他已拉黑并举报；约2.17万浏览，单一当事人说法，99 未回应。",
+   "credibility": "传闻",
+   "event_time": "2026-10-20",
+   "sources": [
+    {
+     "label": "X @decofior",
+     "url": "https://x.com/decofior/status/2112656474782757225"
+    }
+   ],
+   "recorded_at": "2026-10-21T00:55:00Z"
+  },
   "小鹏汇天交付阿联酋": {
-   "summary": "10月20日，阿联酋拉斯海玛酋长到广州参观小鹏汇天飞行汽车量产线，现场接收首架投入阿联酋低空飞行监管示范区的「陆地航母」X3-F试验机，后续将在阿联酋民航监管下沙盒试运行。同日美股小鹏收涨7.60%。X上小鹏汇天/阿联酋相关帖当天约77条，环球时报英文帖约3089浏览。本期作为观察，未入短期热点。",
+   "summary": "10 月 20 日，阿联酋拉斯海玛酋长率团参观小鹏汇天广州飞行汽车量产工厂，现场接收首架将投入阿联酋先进低空飞行监管示范区的「陆地航母」X3-F 试验机，后续在阿联酋民航局监管下沙盒试运行。当晚小鹏美股收涨 7.60%，智通财经把涨幅归因于这条消息。X 上相关帖 10-20 全天约 77 条。",
    "credibility": "实锤",
    "event_time": "2026-10-20",
    "sources": [
@@ -712,15 +756,83 @@
      "url": "https://www.zhitongcaijing.com/content/detail/1509805.html"
     },
     {
-     "label": "第一财经（新浪转载）：中概股普涨、个股涨跌",
-     "url": "https://finance.sina.com.cn/roll/2026-10-21/doc-inivxrnv5553971.shtml"
-    },
-    {
      "label": "X @globaltimesnews",
      "url": "https://x.com/globaltimesnews/status/2112562885687971915"
     }
    ],
    "recorded_at": "2026-10-21T01:35:00Z"
+  },
+  "Temu得州和解": {
+   "summary": "得州检察长 10 月 16 日宣布与 Temu 和解：Temu 付 300 万美元，得州用户数据存美国服务器、限制中国访问，商品每年独立安全检测；Temu 否认全部指控。10 月 20 日 JDSupra 指出新闻稿里「每年违规罚 800 万美元」等措辞判决书里没有，罚款实际按年度审计不合格触发。",
+   "credibility": "实锤",
+   "event_time": "2026-10-16",
+   "sources": [
+    {
+     "label": "得州检察长新闻稿",
+     "url": "https://www.texasattorneygeneral.gov/news/releases/attorney-general-paxton-secures-first-its-kind-settlement-temu-protect-texans-data-ccp-and-protect"
+    },
+    {
+     "label": "JDSupra",
+     "url": "https://www.jdsupra.com/legalnews/texas-temu-judgment-limits-china-based-1349491/"
+    }
+   ],
+   "recorded_at": "2026-10-21T01:35:00Z"
+  },
+  "TikTok误封马斯克纪录片": {
+   "summary": "TikTok 10 月 17 日被曝以政治内容违规为由永久封禁纪录片《Musk》发行方的广告账号，片中有 TikTok 美国股东埃里森愿资助马斯克收购推特的片段。随后 TikTok 称是误封，The Verge 报道账号已恢复。",
+   "credibility": "实锤",
+   "event_time": "2026-10-17",
+   "sources": [
+    {
+     "label": "The Verge",
+     "url": "https://www.theverge.com/tech/1013527/the-musk-documentarys-tiktok-account-has-been-restored-after-an-error"
+    },
+    {
+     "label": "X @filmstories",
+     "url": "https://x.com/filmstories/status/2112086353387110844"
+    }
+   ],
+   "recorded_at": "2026-10-21T01:35:00Z"
+  },
+  "拟出台的中国AI禁令": {
+   "summary": "微博热搜「拟出台的中国AI禁令震动全球」10-21 上午排#1（约119.7万），对应的是10-16商务部、科技部就修订《中国禁止出口限制出口技术目录》公开征求意见：拟增列AI、生物医药、光伏共40项技术（14项禁止、26项限制），其中AI涉及大模型、智能体、算力集群等23项，已开源或公开发表的技术不纳入。征求意见截至11-15，仍是拟议措施，不是已生效的禁令，也不是新的公司八卦。",
+   "credibility": "官方",
+   "event_time": "2026-10-16",
+   "sources": [
+    {
+     "label": "商务部 科技部公告2026年第48号",
+     "url": "https://www.mofcom.gov.cn/zfxxgk/gkml/art/2026/art_ccd0391072a94c809ae7e820abe2536b.html"
+    },
+    {
+     "label": "RTHK：China mulls curbs on AI exports",
+     "url": "https://news.rthk.hk/rthk/en/component/k2/1874239-20261016.htm"
+    },
+    {
+     "label": "微博热搜镜像（11:16）",
+     "url": "https://soso.re/weibo"
+    }
+   ],
+   "recorded_at": "2026-10-21T03:24:00Z"
+  },
+  "汽车之家回应韩路": {
+   "summary": "车评人、汽车之家前总编韩路10-19深夜发视频，指控汽车之家两年多前未经他同意以「韩路游记」名义向车企卖出约400万–600万元内容合作，再以约200万–230万元外包，他本人只拿到约20万元。10-21上午汽车之家回应称已启动内部专项核查，希望与韩路沟通、消除误解，微博热搜#33（约24.3万）。金额是韩路单方说法，合同细节未核实。",
+   "credibility": "实锤",
+   "event_time": "2026-10-19～10-21",
+   "sources": [
+    {
+     "label": "凤凰网：汽车之家回应韩路控诉",
+     "url": "https://tech.ifeng.com/c/8xOjbRMKUO4"
+    },
+    {
+     "label": "汤姆出行：韩路深夜开撕前东家",
+     "url": "https://www.tomautos.cn/article/6ad73a728e9f0913443e8de9/"
+    },
+    {
+     "label": "X @AFARUNM",
+     "url": "https://x.com/AFARUNM/status/2112497380457349627"
+    }
+   ],
+   "recorded_at": "2026-10-21T03:24:00Z"
   }
  }
 }
