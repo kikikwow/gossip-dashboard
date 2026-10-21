@@ -419,6 +419,8 @@
     stubs = pack(stubs);
     return { foreign: foreign, rest: rest, stubs: stubs, shown: foreign.concat(rest, stubs), coveredIds: covered };
   }
+  var FRONT_FRESH_H = 48;
+  var FRONT_HALF_H = 36;
   function frontScore(views, hours, delta) {
     var h = Math.max(0, Number(hours) || 0);
     var score = (Number(views) || 0) * Math.pow(0.5, h / 36);
@@ -725,17 +727,81 @@
     partial.forEach(function (r) { pts.push({ t: r.timestamp_utc, v: +r.value, partial: true }); });
     return pts;
   }
+  function heatClock(heat) {
+    var best = 0;
+    (heat || []).forEach(function (r) {
+      var t = Date.parse(r.timestamp_utc);
+      if (t > best) best = t;
+    });
+    return best;
+  }
+  function isViewMetric(metric) {
+    var m = String(metric || '');
+    return m === 'x_sample_post' || m.indexOf('x_sample_post') === 0 || m.indexOf('views') >= 0;
+  }
+  function isPostMetric(metric) {
+    var m = String(metric || '');
+    if (!m || m.indexOf('partial') >= 0) return false;
+    if (isViewMetric(m)) return false;
+    if (m.indexOf('repl') >= 0 || m.indexOf('like') >= 0 || m.indexOf('weibo') >= 0) return false;
+    return m.indexOf('post_count') >= 0 || m.indexOf('posts_') >= 0 || m.indexOf('x_posts') >= 0 || m.indexOf('x_hourly') >= 0;
+  }
+  function pickSignal(rs) {
+    var daily = rs.filter(function (r) { return r.metric === 'x_daily_post_count'; });
+    if (daily.length) {
+      var last = daily[daily.length - 1];
+      var prev = daily.length >= 2 ? daily[daily.length - 2] : null;
+      return { row: last, kind: 'posts', prev: prev };
+    }
+    var posts = rs.filter(function (r) { return isPostMetric(r.metric) && !/^x_daily_post_count_\d/.test(r.metric); });
+    if (posts.length) {
+      var latestT = posts[posts.length - 1].timestamp_utc;
+      var at = posts.filter(function (r) { return r.timestamp_utc === latestT; });
+      var windows = at.filter(function (r) {
+        return r.metric.indexOf('hour') < 0 && (r.metric.indexOf('x_posts_') === 0 || r.metric.indexOf('post_count') >= 0);
+      });
+      var pool = windows.length ? windows : at;
+      pool = pool.slice().sort(function (a, b) { return (b.value || 0) - (a.value || 0); });
+      var row = pool[0];
+      var same = posts.filter(function (r) { return r.metric === row.metric; });
+      var earlier = same.length >= 2 ? same[same.length - 2] : null;
+      return { row: row, kind: 'posts', prev: earlier && earlier.timestamp_utc !== row.timestamp_utc ? earlier : null };
+    }
+    var views = rs.filter(function (r) { return isViewMetric(r.metric); });
+    if (views.length) {
+      var viewT = views[views.length - 1].timestamp_utc;
+      var atv = views.filter(function (r) { return r.timestamp_utc === viewT; });
+      atv.sort(function (a, b) { return (b.value || 0) - (a.value || 0); });
+      return { row: atv[0], kind: 'views', prev: null };
+    }
+    return { row: rs[rs.length - 1], kind: 'other', prev: null };
+  }
+  function annotateHeat(group, asOf) {
+    var stamp = group.last ? Date.parse(group.last.timestamp_utc) : 0;
+    var hours = asOf && stamp ? Math.max(0, (asOf - stamp) / 3600000) : 24 * 30;
+    group.hours = hours;
+    group.fresh = hours <= FRONT_FRESH_H;
+    group.score = frontScore(group.last && group.last.value, hours, group.delta);
+    return group;
+  }
   function topicGroupsOf(heat) {
     var H = heat || [];
     if (!H.length) return [];
+    var asOf = heatClock(H);
     var by = {};
     H.forEach(function (r) { (by[r.topic] = by[r.topic] || []).push(r); });
     return Object.keys(by).map(function (t) {
       var rs = by[t].slice().sort(function (a, b) { return a.timestamp_utc < b.timestamp_utc ? -1 : 1; });
-      var daily = rs.filter(function (r) { return r.metric === 'x_daily_post_count'; });
-      var last = daily.length ? daily[daily.length - 1] : rs[rs.length - 1];
-      var prev = daily.length >= 2 ? daily[daily.length - 2] : null;
-      return { t: t, last: last, delta: prev ? last.value - prev.value : null, pts: topicSeriesOf(t, H) };
+      var sig = pickSignal(rs);
+      var last = sig.row;
+      var prev = sig.prev;
+      return annotateHeat({
+        t: t,
+        last: last,
+        kind: sig.kind,
+        delta: prev ? last.value - prev.value : null,
+        pts: topicSeriesOf(t, H)
+      }, asOf);
     });
   }
   function heatKeyOf(topic, cands) {
@@ -744,10 +810,14 @@
     return 'tp:' + normTopic(topic);
   }
   function preferHeatRow(a, b) {
+    if (!!a.fresh !== !!b.fresh) return a.fresh ? a : b;
+    var ap = a.kind === 'posts';
+    var bp = b.kind === 'posts';
+    if (ap !== bp) return ap ? a : b;
     var ad = a.last && a.last.metric === 'x_daily_post_count';
     var bd = b.last && b.last.metric === 'x_daily_post_count';
     if (ad !== bd) return ad ? a : b;
-    return (b.last && b.last.value || 0) > (a.last && a.last.value || 0) ? b : a;
+    return (b.score || 0) > (a.score || 0) ? b : a;
   }
   function dedupeHeatRows(rows, cands) {
     var by = {};
@@ -761,7 +831,13 @@
       keep.also = (keep.also || prev.also || []).concat([drop.t]);
       by[key] = keep;
     });
-    return order.map(function (k) { return by[k]; }).sort(function (a, b) { return (b.last.value || 0) - (a.last.value || 0); });
+    return order.map(function (k) { return by[k]; }).sort(function (a, b) {
+      if (!!a.fresh !== !!b.fresh) return a.fresh ? -1 : 1;
+      var ap = a.kind === 'posts';
+      var bp = b.kind === 'posts';
+      if (ap !== bp) return ap ? -1 : 1;
+      return (b.score || 0) - (a.score || 0);
+    });
   }
   function rankHeat(heat, cands) {
     return dedupeHeatRows(topicGroupsOf(heat), cands).slice(0, 10);
@@ -853,8 +929,8 @@
     wireClamps: wireClamps,
     bind: bind,
     langLabel: langLabel,
-    FRONT_HALF_H: 36,
-    FRONT_FRESH_H: 48,
+    FRONT_HALF_H: FRONT_HALF_H,
+    FRONT_FRESH_H: FRONT_FRESH_H,
     frontScore: frontScore,
     matchTopic: matchTopic,
     trackerName: trackerName,

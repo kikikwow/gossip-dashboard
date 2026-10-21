@@ -75,9 +75,9 @@
 规则：评论必须是真实原文+链接；指标必须来自工具结果并写 fetched_at；没有就留空，不要编。
 
 ## heat_log.csv 约定（v2）
-文件就是 `src/heat_log.csv`。每小时 / 简报任务如果写在追踪仓库，路径是 `/workspace/gossip-tracking/heat_log.csv`，列相同，同步进本仓库后再构建。
+文件就是 `src/heat_log.csv`。早报、快讯和每日总结如果写在追踪仓库，路径是 `/workspace/gossip-tracking/heat_log.csv`，列相同，同步进本仓库后再构建。
 
-- `x_daily_post_count`：timestamp 用当日 `YYYY-MM-DDT23:59:59Z`，value 为该 UTC 日发帖量 → 热度榜按最近一日排序、画折线。这一行的 `source` 通常是检索式，**不是**帖子 id。
+- `x_daily_post_count`：timestamp 用当日 `YYYY-MM-DDT23:59:59Z`，value 为该 UTC 日发帖量 → 热度榜优先用它，并按 36 小时半衰期、48 小时新鲜度排序、画折线。这一行的 `source` 通常是检索式，**不是**帖子 id。
 - `x_sample_post`：**代表帖，热榜弹层靠它出原文。** `value` 填该帖浏览量，没有就填 `0`。`source` 必须是完整链接 `https://x.com/<handle>/status/<id>`。同一个话题可以追加多行。构建会按这个链接抓进 `src/x_cache.json`。
 - `x_post_<views|likes|reposts|replies>:@handle` 和 `x_top_post_views:@handle`：单帖指标。`source` 里只要有 status 链接，同样会当作代表帖缓存并显示。
 - `x_post_count_partial_<date>`：当日未完结的部分计数。
@@ -89,7 +89,7 @@
 `research/` 保存 2026-10-13 深度调研的原始 X 工具结果与 `enrich_details.py`（把 detail 写入 data/ 并追加 heat_log；**勿重复运行**，否则 heat_log 会重复追加）。
 
 ## 🚕 网约车特色栏目
-看板顶部固定「🚕 网约车」面板，顶栏另有「网约车」标签（与全部/大厂八卦/…并列）。命中规则与 topics.md 里的「滴滴」重点追踪相同（滴滴、DiDi、滴滴出海、99app、巴西99），另外包含网约车、程维、柳青、花小猪、曹操出行、T3、高德打车。单独出现「国内」或国名不算。由每小时滴滴专项例程写入 `data/` 后重跑 `build_dashboard.py` 刷新；**无匹配条目时显示空态，禁止编造**。详见 `topics.md`「特色栏目」。
+看板顶部固定「🚕 网约车」面板，顶栏另有「网约车」标签（与全部/大厂八卦/…并列）。命中规则与 topics.md 里的「滴滴」重点追踪相同（滴滴、DiDi、滴滴出海、99app、巴西99），另外包含网约车、程维、柳青、花小猪、曹操出行、T3、高德打车。单独出现「国内」或国名不算。由 11:00/13:00/16:00 快讯里的滴滴检索写入 `data/` 后重跑 `build_dashboard.py` 刷新；**无匹配条目时显示空态，禁止编造**。详见 `topics.md`「特色栏目」。
 
 ## 移动端 / 微信
 视口 ≤820px 时整页换成另一套结构（`#mapp`），不是把桌面三栏压扁：底栏「动态 / 热榜 / 追踪」、竖向信息流、热榜左右滑、详情是铺满屏幕的层。桌面仍是顶栏筛选 + 三栏 + 居中浮层。更窄的 `≤430px` 规则只作用在桌面 DOM 上，窄屏时桌面 DOM 已隐藏。含 Open Graph / Twitter Card 与 `og-share.png` 分享图。

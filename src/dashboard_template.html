@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="zh-CN" data-theme="dark" data-ui="new"><head><script>try{var t=(location.hash.match(/theme=(\w+)/)||[])[1]||localStorage.getItem("gossipTheme");if(t)document.documentElement.dataset.theme=t;var q=new URLSearchParams(location.search).get("ui");var ui=(q==="classic"||q==="new")?q:localStorage.getItem("gossipUi");if(q==="classic"||q==="new"){try{localStorage.setItem("gossipUi",q)}catch(e){}}if(ui==="classic"||ui==="new")document.documentElement.dataset.ui=ui}catch(e){}</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>大厂八卦追踪看板</title>
-<meta name="description" content="中国大厂八卦 · 美股中概&出海 · 滴滴网约车追踪。实锤/传闻标注，每小时更新。">
+<meta name="description" content="中国大厂八卦 · 美股中概&出海 · 滴滴网约车追踪。实锤/传闻标注，每天 5 次更新。">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,viewport-fit=cover">
 <meta property="og:type" content="website">
 <meta property="og:title" content="🕵️ 中国大厂八卦追踪看板">
-<meta property="og:description" content="大厂八卦 · 美股中概&出海 · 滴滴网约车追踪。实锤/传闻标注，每小时更新。">
+<meta property="og:description" content="大厂八卦 · 美股中概&出海 · 滴滴网约车追踪。实锤/传闻标注，每天 5 次更新。">
 <meta property="og:image" content="https://kikikwow.github.io/gossip-dashboard/og-share.png">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary_large_image">
@@ -387,7 +387,7 @@ html[data-ui=new] .xclose{background:#F3EEE4;border-color:#E4DFD6;color:#1F1D1A}
 <select id="fsrc"><option value="">全部信源</option></select>
 <input type="search" id="q" placeholder="🔍 搜索公司 / 内容 / 链接…"></div></div></div></div>
 <main class="wrap">
-<section class="ride" id="ride"><h2>🚕 网约车 <span class="note"><span class="pulse"></span>每小时专项追踪 · <span id="didi-name">滴滴</span></span></h2>
+<section class="ride" id="ride"><h2>🚕 网约车 <span class="note"><span class="pulse"></span>滴滴 · 随快讯更新 · <span id="didi-name">滴滴</span></span></h2>
 <div class="sub">覆盖：滴滴国内 · 巴西 99 · 埃及 · 墨西哥 · 拉美 · 澳洲 · 香港，以及相关竞品。关键词匹配条目；暂无数据时显示空态。</div>
 <div id="ridebody"></div></section>
 <div class="grid3"><section class="panel"><h2>🔥 热度榜</h2><div id="heat"></div></section>
@@ -467,7 +467,7 @@ function match(it){const s=state;if(s.type==='ride'){if(!isRide(it))return false
 if(s.co&&!it.company.split(/\s*\/\s*/).includes(s.co))return false;if(s.src&&!(it.source_types||[]).includes(s.src))return false;if(s.q&&!it._hay.includes(s.q))return false;return true}
 function render(){let L=ITEMS.filter(match);if(document.documentElement.dataset.theme==='hot')L=L.slice().sort((a,b)=>b._views-a._views);$('#cards').innerHTML=L.map(card).join('')||'<p class="empty">没有符合条件的条目。</p>';$('#cnt').textContent=`共 ${L.length} / ${ITEMS.length} 条`;renderHero()}
 function renderHero(){// top3 of latest edition of selected type (or latest bigtech/adr when 全部)
- if(state.type==='ride'){const L=ITEMS.filter(isRide).slice(0,3);$('#herolbl').textContent=L.length?`网约车匹配 ${ITEMS.filter(isRide).length} 条`:'';$('#hero').innerHTML=L.length?L.map((it,i)=>{const grads=['linear-gradient(135deg,#ff6b4a,#c2185b)','linear-gradient(135deg,#7c3aed,#4f46e5)','linear-gradient(135deg,#0ea5e9,#0d9488)'];return `<div class="herocard" style="background:${grads[i]}"><div class="big">${i+1}</div><div class="co">${esc(it.company)}</div><div class="ed">📅 ${esc(fmtTs(it.date))}</div><p>${esc(it.text)}</p><a href="events/${encodeURIComponent(it.id)}.html"><b>事件详情 →</b></a></div>`}).join(''):'<p class="empty">暂无滴滴相关条目，每小时追踪中</p>';return}
+ if(state.type==='ride'){const L=ITEMS.filter(isRide).slice(0,3);$('#herolbl').textContent=L.length?`网约车匹配 ${ITEMS.filter(isRide).length} 条`:'';$('#hero').innerHTML=L.length?L.map((it,i)=>{const grads=['linear-gradient(135deg,#ff6b4a,#c2185b)','linear-gradient(135deg,#7c3aed,#4f46e5)','linear-gradient(135deg,#0ea5e9,#0d9488)'];return `<div class="herocard" style="background:${grads[i]}"><div class="big">${i+1}</div><div class="co">${esc(it.company)}</div><div class="ed">📅 ${esc(fmtTs(it.date))}</div><p>${esc(it.text)}</p><a href="events/${encodeURIComponent(it.id)}.html"><b>事件详情 →</b></a></div>`}).join(''):'<p class="empty">暂无滴滴相关条目，随快讯更新</p>';return}
  const eds=D.editions.filter(e=>!state.type||e.type===state.type);const e=eds[0];
  if(!e||!e.top3){$('#hero').innerHTML='<p class="empty">该分类暂无期次。</p>';$('#herolbl').textContent='';return}
  $('#herolbl').textContent=`来自 ${fmtTs(e.edition_date||e.timestamp)} · ${TYPES[e.type]||e.type}`;
@@ -493,7 +493,7 @@ function timeline(){$('#tl').innerHTML=D.editions.map(e=>{const n=e.sections.red
  return `<div class="tl"><span class="badge ty" style="background:${TCOL[e.type]||'#888'};color:#fff">${esc(TYPES[e.type]||e.type)}</span> <b>${esc(e.title||'')}</b> <span class="note">· ${esc(fmtTs(e.timestamp))} · ${n} 条 · ${e.sections.length} 个栏目 · ${esc(e._file)}</span><div class="note">${esc(e.lede||'')}</div></div>`}).join('')||'<p class="empty">暂无期次</p>'}
 
 function ridePanel(){const L=ITEMS.filter(isRide);
-  if(!L.length){$('#ridebody').innerHTML=`<div class="empty-box"><b>暂无滴滴相关条目，每小时追踪中</b>覆盖国内滴滴与出海（巴西99 / 埃及 / 墨西哥 / 拉美 / 澳洲 / 香港）。有新进展会自动出现在此。</div>`;return}
+  if(!L.length){$('#ridebody').innerHTML=`<div class="empty-box"><b>暂无滴滴相关条目，随快讯更新</b>覆盖国内滴滴与出海（巴西99 / 埃及 / 墨西哥 / 拉美 / 澳洲 / 香港）。有新进展会自动出现在此。</div>`;return}
   $('#ridebody').innerHTML=`<div class="items">${L.slice(0,6).map(it=>card(it)).join('')}</div>`+(L.length>6?`<p class="note" style="margin-top:8px">共 ${L.length} 条 · <a href="#" id="ride-more">在「网约车」标签查看全部 →</a></p>`:'');
   const m=$('#ride-more');if(m)m.onclick=e=>{e.preventDefault();const b=document.querySelector('.tab[data-t=ride]');if(b)b.click();window.scrollTo({top:document.querySelector('#cards').offsetTop-80,behavior:'smooth'})}}
 
