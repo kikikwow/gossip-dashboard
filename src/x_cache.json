@@ -1,6 +1,6 @@
 {
  "source": "https://api.fxtwitter.com/status/{id}",
- "fetched_at": "2026-10-21T05:17:15Z",
+ "fetched_at": "2026-10-21T08:22:26Z",
  "note": "静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。",
  "posts": {
   "2106320822444949760": {
@@ -3228,6 +3228,66 @@
    "bookmarks": 1,
    "url": "https://x.com/freearkshaw/status/2112739439281901639",
    "fetched_at": "2026-10-21T05:17:15Z"
+  },
+  "2112796796271710459": {
+   "status": "ok",
+   "text": "问界又又又出事了\n\n华为回应如下：\n1.增程器起火，不是电池起火\n2.司机酒驾，超速，闯红灯\n3. 符合国家标准\n4. 没开智驾\n5. 这是跟分家以后的问界，不关的事\n6. 敌对分子舍命打击中华脊梁\n7. 这是小米汽车\n\n话说这个司机，有碰撞检测资质吗？😀",
+   "author": "@skynet_tiantian",
+   "name": "冻梨dlidex",
+   "created_at": "2026-10-21T06:43:04Z",
+   "views": 193,
+   "likes": 1,
+   "reposts": 0,
+   "replies": 1,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/skynet_tiantian/status/2112796796271710459",
+   "fetched_at": "2026-10-21T08:22:26Z"
+  },
+  "2112803441814999500": {
+   "status": "ok",
+   "text": "问界起火\n\n买这车不学好物理都不行。车头烧了不算烧，增程器着火了不算自燃。这波重定义“安全”，硬是把危机公关玩成了智商筛选器。必须遥遥领先，",
+   "author": "@shaok45000",
+   "name": "sha sha",
+   "created_at": "2026-10-21T07:09:29Z",
+   "views": 1592,
+   "likes": 3,
+   "reposts": 0,
+   "replies": 2,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/shaok45000/status/2112803441814999500",
+   "fetched_at": "2026-10-21T08:22:26Z"
+  },
+  "2112815562380243290": {
+   "status": "ok",
+   "text": "赛力斯花140亿元深度绑定华为，问界出海却传出要用德国博世！\n\n2024年，25亿元买下问界相关商标专利。\n\n2025年，又花115亿元入股华为引望，获得10%股权。\n\n如今36氪爆料，欧洲版M6、M7、M8、M9拟采用博世智能化方案。\n\n最值得关注的不是双方分没分家。\n\n而是同一个问界品牌，国内靠华为，海外可能靠博世，技术供应商开始出现差异。",
+   "author": "@EddTTom",
+   "name": "达达 | DaDa",
+   "created_at": "2026-10-21T07:57:38Z",
+   "views": 88,
+   "likes": 1,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/EddTTom/status/2112815562380243290",
+   "fetched_at": "2026-10-21T08:22:26Z"
+  },
+  "2112818416805712246": {
+   "status": "ok",
+   "text": "问界汽车回应陕西榆林车辆起火事故\n\n初步分析，高速情况下车辆机舱遭受剧烈撞击引发线路短路及油液泄漏，导致起火燃烧。\n\n还要等官方通报！",
+   "author": "@mcudirector",
+   "name": "神盾局局长",
+   "created_at": "2026-10-21T08:08:59Z",
+   "views": 58,
+   "likes": 1,
+   "reposts": 0,
+   "replies": 1,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/mcudirector/status/2112818416805712246",
+   "fetched_at": "2026-10-21T08:22:26Z"
   }
  }
 }

@@ -870,3 +870,34 @@ timestamp_utc,topic,metric,value,source
 2026-10-21T05:20:00Z,第一次见豆包发脾气,weibo_heat,288732,https://soso.re/weibo
 2026-10-21T05:20:00Z,拟出台的中国AI禁令,weibo_rank,1,https://soso.re/weibo
 2026-10-21T05:20:00Z,拟出台的中国AI禁令,weibo_heat,1270468,https://soso.re/weibo
+2026-10-21T08:25:00Z,问界神木碰撞起火·官方回应,weibo_rank,1,https://soso.re/weibo
+2026-10-21T08:25:00Z,问界神木碰撞起火·官方回应,weibo_heat,2880267,https://soso.re/weibo
+2026-10-21T08:25:00Z,问界神木碰撞起火·官方回应,x_posts_hour_05Z,4,x_counts
+2026-10-21T08:25:00Z,问界神木碰撞起火·官方回应,x_posts_hour_06Z,8,x_counts
+2026-10-21T08:25:00Z,问界神木碰撞起火·官方回应,x_posts_hour_07Z,18,x_counts
+2026-10-21T08:25:00Z,问界神木碰撞起火·官方回应,x_posts_08Z_first20min,20,x_counts
+2026-10-21T08:25:00Z,问界神木碰撞起火·官方回应,x_sample_post,1462,https://x.com/shaok45000/status/2112803441814999500
+2026-10-21T08:25:00Z,问界神木碰撞起火·官方回应,x_sample_post,191,https://x.com/skynet_tiantian/status/2112796796271710459
+2026-10-21T08:25:00Z,问界神木碰撞起火·官方回应,x_sample_post,51,https://x.com/mcudirector/status/2112818416805712246
+2026-10-21T08:25:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour_05Z,24,x_counts
+2026-10-21T08:25:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour_06Z,16,x_counts
+2026-10-21T08:25:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour_07Z,31,x_counts
+2026-10-21T08:25:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_posts_hour_05Z,117,x_counts
+2026-10-21T08:25:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_posts_hour_06Z,92,x_counts
+2026-10-21T08:25:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_posts_hour_07Z,117,x_counts
+2026-10-21T08:25:00Z,字节阿里腾讯抢购英伟达RTX PRO 5500,x_posts_hour_05Z,13,x_counts
+2026-10-21T08:25:00Z,字节阿里腾讯抢购英伟达RTX PRO 5500,x_posts_hour_06Z,13,x_counts
+2026-10-21T08:25:00Z,字节阿里腾讯抢购英伟达RTX PRO 5500,x_posts_hour_07Z,6,x_counts
+2026-10-21T08:25:00Z,尊界V800刹车踏板·三部门联合调查,x_posts_hour_05Z,2,x_counts
+2026-10-21T08:25:00Z,尊界V800刹车踏板·三部门联合调查,x_posts_hour_06Z,5,x_counts
+2026-10-21T08:25:00Z,尊界V800刹车踏板·三部门联合调查,x_posts_hour_07Z,3,x_counts
+2026-10-21T08:25:00Z,月之暗面陈广宇离职,x_posts_hour_05Z,1,x_counts
+2026-10-21T08:25:00Z,月之暗面陈广宇离职,x_posts_hour_06Z,1,x_counts
+2026-10-21T08:25:00Z,月之暗面陈广宇离职,x_posts_hour_07Z,1,x_counts
+2026-10-21T08:25:00Z,宁德时代AH股绩后重挫,x_posts_hour_05Z,25,x_counts
+2026-10-21T08:25:00Z,宁德时代AH股绩后重挫,x_posts_hour_06Z,24,x_counts
+2026-10-21T08:25:00Z,宁德时代AH股绩后重挫,x_posts_hour_07Z,31,x_counts
+2026-10-21T08:25:00Z,问界海外版改用博世,x_posts_day_1021,14,x_counts
+2026-10-21T08:25:00Z,问界海外版改用博世,x_sample_post,74,https://x.com/EddTTom/status/2112815562380243290
+2026-10-21T08:25:00Z,第一次见豆包发脾气,weibo_rank,24,https://soso.re/weibo
+2026-10-21T08:25:00Z,第一次见豆包发脾气,weibo_heat,303834,https://soso.re/weibo
