@@ -1,0 +1,165 @@
+{
+ "type": "bigtech",
+ "title": "大厂八卦晚间增补｜2026-10-21 15Z",
+ "timestamp": "2026-10-21T15:10:00Z",
+ "edition_date": "2026-10-21",
+ "slot": "15Z",
+ "lede": "16:00后晚间新料：神木警方称问界事故司机已遇难；红果短剧宣布下线金币功能冲上微博#1。",
+ "alert_note": "每日总结增补，不单独警报",
+ "alert_worthy": false,
+ "top3": [
+  "问界神木起火·司机遇难",
+  "红果短剧下线金币",
+  "DeepInfer热度回落"
+ ],
+ "focus": {
+  "滴滴": "繁简价差主帖约18.22万无回应；阿根廷罗萨里奥两条西语线索",
+  "字节": "红果短剧下线金币（微博#1）",
+  "中国大模型": "DeepInfer/华为驻场热度回落，无新事实"
+ },
+ "short_term_notes": "见每日总结 short_term_updates",
+ "overseas_local_lang": [
+  "20261021-bt15z-didi-rosario",
+  "20261021-bt15z-didi-rosario-moto"
+ ],
+ "sections": [
+  {
+   "title": "💥 翻车·事故",
+   "color": "#dc2626",
+   "items": [
+    {
+     "id": "20261021-bt15z-aito",
+     "company": "问界（赛力斯 / 华为鸿蒙智行）",
+     "tag": "实锤",
+     "source_types": [
+      "警方",
+      "媒体",
+      "微博热搜",
+      "X"
+     ],
+     "date": "10-21 16:31",
+     "event_time": "2026-10-17 23:25（事故）/ 2026-10-21 下午（警方通报）",
+     "text": "16:00快讯后新进展：神木警方10-21称这起问界碰撞起火事故是单方事故，车上只有司机一人，司机已遇难；神木交警仍在调查。问界此前的说明只写了人驾、车速139.1km/h（限速50）、撞灯柱致机舱线路短路和油液泄漏起火，并否认电池爆燃和智驾撞击，没有提伤亡，晚间不少帖子批评说明「没有一个字提到遇难司机」。微博热搜白天曾到#1（约288万），22:53 时#41「问界道路救援中心曾拨打122」（约34.9万）仍在榜；X 相关帖 08Z–14Z 每小时 46/61/57/42/45/51/31。",
+     "links": [
+      {
+       "label": "新京报（新浪转载，16:31）：神木警方回应，司机已遇难",
+       "url": "https://finance.sina.cn/2026-10-21/detail-inivynsm5486455.d.html?cref=cj"
+      },
+      {
+       "label": "IT之家（17:19）",
+       "url": "https://www.ithome.com/1/016/003.htm"
+      },
+      {
+       "label": "每日经济新闻（17:35）",
+       "url": "https://www.mrjjxw.com/articles/2026-10-21/4611329.html"
+      },
+      {
+       "label": "金融界/凤凰网财经：此前问界通报未提伤亡",
+       "url": "https://finance.jrj.com.cn/2026/10/21172558809790.shtml"
+      },
+      {
+       "label": "X @shaok45000（约1.83万浏览）",
+       "url": "https://x.com/shaok45000/status/2112803441814999500"
+      },
+      {
+       "label": "X @maoshen（约2662浏览）",
+       "url": "https://x.com/maoshen/status/2112851562477523077"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "📺 产品·商业",
+   "color": "#e4572e",
+   "items": [
+    {
+     "id": "20261021-bt15z-hongguo",
+     "company": "字节跳动 / 红果短剧",
+     "tag": "实锤",
+     "source_types": [
+      "公司公告",
+      "媒体",
+      "微博热搜",
+      "X"
+     ],
+     "date": "10-21 16:50",
+     "event_time": "2026-10-21（红果短剧官方公告）",
+     "text": "红果短剧官方10-21发布公告，分阶段下线「看剧赚金币」：11-1 起当天及之后新激活的用户不再有金币功能，12-31 前对所有用户停发金币；已获得的金币和现金余额不受影响，会留出兑换和提现时间。网友称之为「自砍摇钱树」并担心以后收费，客服回应平台内容一直免费、暂未接到收费通知。22:53 微博热搜#1「红果短剧自砍摇钱树」（约155.3万）；X 相关帖 10Z–14Z 每小时 21/32/18/36/24。IT之家引 QuestMobile 称红果月活约3.56亿（2026年5月）。",
+     "links": [
+      {
+       "label": "IT之家（16:50）：红果短剧计划年底下线金币功能",
+       "url": "https://www.ithome.com/1/015/978.htm"
+      },
+      {
+       "label": "北京时间：关于红果短剧计划下线金币功能的公告",
+       "url": "https://item.btime.com/41pqoq5qqop93b98o74cpojaoh9"
+      },
+      {
+       "label": "凤凰网（白鹿视频）：客服回应不会收费",
+       "url": "https://feng.ifeng.com/c/8xPcEyFFvaV"
+      },
+      {
+       "label": "凤凰网：红果短剧将全面下线金币功能",
+       "url": "https://feng.ifeng.com/c/8xPQyBkHK8o"
+      },
+      {
+       "label": "微博热搜镜像 soso.re（22:53）",
+       "url": "https://soso.re/weibo"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🌏 海外小语种线索",
+   "color": "#0f766e",
+   "items": [
+    {
+     "id": "20261021-bt15z-didi-rosario",
+     "company": "滴滴出海（阿根廷·罗萨里奥）",
+     "tag": "实锤",
+     "source_types": [
+      "当地媒体(西班牙语)"
+     ],
+     "date": "10-21",
+     "event_time": "2026-10-21 11:00（当地时间）联席会议",
+     "text": "🇦🇷 阿根廷罗萨里奥｜西班牙语：Uber/DiDi 合法化条例 10-21 在市议会两个委员会联席会上继续审，已按外卖骑手工会要求修改（普通外卖仍只许摩托送，出租车只能接摩托装不下的大件）；庇隆派和 Ciudad Futura 不支持，能否出意见书取决于自由前进党（La Libertad Avanza）。目标从原定 10-22 改为下周四（10-29）全会最终表决。",
+     "links": [
+      {
+       "label": "Rosario3（西语，10-21）",
+       "url": "https://www.rosario3.com/informaciongeneral/uber-y-didi-en-rosario-el-oficialismo-busca-destrabar-el-proyecto-y-obtener-dictamen-este-miercoles-20261021-0020.html"
+      }
+     ],
+     "lang": "es",
+     "translation_zh": "罗萨里奥市政府提出的让 Uber、DiDi 等出行平台合法化并受监管的条例，周三在市议会公共服务委员会和政府委员会联席会议上继续讨论（11点开始），目标是拿到多数意见书，下周四提交全会最终表决。",
+     "original": "El debate alrededor del proyecto del Ejecutivo municipal para legalizar y regular las aplicaciones de transporte como Uber y DiDi en Rosario continúa este miércoles en el Concejo Municipal, en un plenario conjunto de las comisiones de Servicios Públicos y la de Gobierno que empezó a las 11, con el objetivo de lograr dictamen de mayoría y llevar la ordenanza al recinto para tratar su aprobación definitiva durante el jueves de la próxima semana."
+    },
+    {
+     "id": "20261021-bt15z-didi-rosario-moto",
+     "company": "滴滴出海（阿根廷·罗萨里奥）",
+     "tag": "传闻",
+     "source_types": [
+      "当地媒体(西班牙语)",
+      "乘客投诉"
+     ],
+     "date": "10-21",
+     "event_time": "2026-10-21 08:51（当地媒体报道）；事故日期 待补充",
+     "text": "🇦🇷 阿根廷罗萨里奥｜西班牙语：Cadena 3 报道一名47岁乘客坐 DiDi 摩托出事故、锁骨骨折，他称司机撞车后没救助就离开；交通法律师借此呼吁平台承担责任、保障乘客安全。乘客说法为单方投诉，DiDi 未见回应。",
+     "links": [
+      {
+       "label": "Cadena 3 Rosario（西语，10-21）",
+       "url": "https://www.cadena3.com/noticia/radioinforme-3-rosario/un-pasajero-sufrio-una-fractura-en-un-viaje-de-didi-los-riesgos-no-pueden-terminar-en-el-usuario_605574"
+      }
+     ],
+     "lang": "es",
+     "translation_zh": "47岁的泥瓦匠胡利奥在罗萨里奥乘坐 DiDi 摩托时出事故、锁骨骨折，这起事故让出行平台监管问题再次被讨论。这名有五个未成年孩子的父亲投诉说，撞车后司机没有救助他就走了。",
+     "original": "El accidente que sufrió Julio, un albañil de 47 años que resultó con una fractura de clavícula tras viajar en una moto de DiDi en Rosario, volvió a poner en discusión la regulación de las aplicaciones de transporte. El hombre, padre de cinco hijos menores, denunció que el conductor se fue sin asistirlo después del choque.",
+     "pending": [
+      "待补充：事故具体日期——报道未写明"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,587 @@
+{
+ "type": "daily",
+ "title": "大厂八卦每日总结｜2026-10-21",
+ "edition_date": "2026-10-21",
+ "timestamp": "2026-10-21T15:10:00Z",
+ "generated_at": "2026-10-21T15:10:00Z",
+ "fired_at": "2026-10-21T15:02:59Z",
+ "fired_at_beijing": "2026-10-21 23:03",
+ "beijing_note": "晚间新料窗口：2026-10-21 16:25 → 23:10 北京时间（接 16:00 快讯与下午重刷）；24小时回顾覆盖 9:00 早报、11:00/13:00/16:00 快讯、16:17 重刷",
+ "window": {
+  "start_beijing": "2026-10-20 23:07",
+  "end_beijing": "2026-10-21 23:10",
+  "evening_start_beijing": "2026-10-21 16:25"
+ },
+ "lede": "今天最热的是问界神木起火：下午警方说司机已遇难，问界的说明却只字未提；晚上红果短剧宣布年底下线「看剧赚金币」冲上微博第一；白天宁德时代绩后AH股同日暴跌超10%；DeepSeek开源DeepInfer、华为驻场共研芯片仍是大模型圈最热话题。",
+ "heat_snapshot": {
+  "measured_at_utc": "2026-10-21T15:05:00Z",
+  "note": "X counts via get_posts_counts_recent（晚间各话题检索口径与白天快讯不同，趋势按同口径/媒体与微博判断）；微博 soso.re 22:53 北京",
+  "aito_hourly_08to14Z": [
+   46,
+   61,
+   57,
+   42,
+   45,
+   51,
+   31
+  ],
+  "aito_weibo_late": {
+   "rank": 41,
+   "heat": 349338,
+   "title": "问界道路救援中心曾拨打122"
+  },
+  "aito_shaok45000_views": 18310,
+  "hongguo_hourly_06to14Z": [
+   18,
+   13,
+   11,
+   11,
+   21,
+   32,
+   18,
+   36,
+   24
+  ],
+  "hongguo_weibo": {
+   "rank": 1,
+   "heat": 1553257
+  },
+  "deepinfer_huawei_hourly_08to14Z": [
+   182,
+   189,
+   170,
+   172,
+   169,
+   139,
+   143
+  ],
+  "tianyi_views": 281485,
+  "catl_hourly_08to14Z": [
+   46,
+   23,
+   25,
+   26,
+   19,
+   27,
+   11
+  ],
+  "catl_freearkshaw_views": 11786,
+  "ban_hourly_08to14Z": [
+   44,
+   35,
+   48,
+   34,
+   39,
+   44,
+   43
+  ],
+  "didi_fanjian_views": 182206,
+  "miracleplus_0xLogicrw_views": 2919
+ },
+ "short_term_updates": {
+  "kept": [
+   {
+    "name": "问界神木碰撞起火·官方回应",
+    "trend": "📈"
+   },
+   {
+    "name": "DeepSeek开源DeepInfer·华为联合设计芯片",
+    "trend": "📉"
+   },
+   {
+    "name": "美国禁用DeepSeek·商务部回应",
+    "trend": "➡️"
+   },
+   {
+    "name": "字节阿里腾讯抢购英伟达RTX PRO 5500",
+    "trend": "📉"
+   },
+   {
+    "name": "京东 抖音",
+    "trend": "➡️"
+   }
+  ],
+  "added": [
+   {
+    "name": "红果短剧下线金币·自砍摇钱树",
+    "trend": "📈"
+   }
+  ],
+  "removed": [
+   {
+    "name": "尊界V800刹车踏板·三部门联合调查",
+    "reason": "最近专属进展在10-19前、三部门结论未出，X降到个位数/时；按计划提前到今晚移出，出结论再回收"
+   }
+  ],
+  "watch_not_added": [
+   {
+    "name": "奇绩创坛被美国制裁",
+    "reason": "10-19/20事件，X单帖不到3000浏览，收入美股中概&出海补漏"
+   },
+   {
+    "name": "余承东离任传闻",
+    "reason": "X 个人号转述「内部员工爆料」，浏览约1500，无媒体或公司信源，不采信"
+   },
+   {
+    "name": "宁德时代AH股绩后重挫",
+    "reason": "财报行情，晚间回落"
+   }
+  ]
+ },
+ "alert_summary": {
+  "daily_summary_alert_worthy": false,
+  "note": "今日快讯已警报2条（宁德时代、问界起火）；每日总结不单独警报"
+ },
+ "sources_ingested": [
+  "research/feeds/2026-10-21T0820Z.json（fetch_sources 本期 0 条新匹配）",
+  "X search/counts（约14次调用）",
+  "soso.re/weibo 22:53",
+  "网页检索与核实"
+ ],
+ "markdown_file": "data/2026-10-21_daily_summary.md",
+ "key_points": [
+  "问界神木起火：警方称是单方事故、司机已遇难，问界此前说明只谈车速和起火原因、没提伤亡，晚间舆论转向说明的措辞【实锤】",
+  "红果短剧宣布年底前下线「看剧赚金币」，#红果短剧自砍摇钱树#晚间冲到微博#1（约155万），客服称不会收费【实锤】",
+  "宁德时代三季报后AH股同日跌超10%，是今天最大的财报行情；晚间讨论回落【实锤】",
+  "DeepSeek 开源 DeepInfer 和华为驻场共研芯片仍是X上最热的大模型话题，但全天没有新的官方事实【实锤/传闻】",
+  "补漏：陆奇的奇绩创坛因投资前谷歌工程师丁林伟的上海至算被美国制裁，奇绩称并未投资至算；今晚中概普遍低开，阿里跌约2%【实锤】"
+ ],
+ "sections": [
+  {
+   "title": "🔥 热度榜",
+   "color": "#dc2626",
+   "items": [
+    {
+     "id": "20261021-daily-aito-police",
+     "company": "问界（赛力斯 / 华为鸿蒙智行）",
+     "tag": "实锤",
+     "source_types": [
+      "警方",
+      "媒体",
+      "微博热搜",
+      "X"
+     ],
+     "date": "10-21 16:31",
+     "event_time": "2026-10-17 23:25（事故）/ 2026-10-21 下午（警方通报）",
+     "text": "16:00快讯后新进展：神木警方10-21称这起问界碰撞起火事故是单方事故，车上只有司机一人，司机已遇难；神木交警仍在调查。问界此前的说明只写了人驾、车速139.1km/h（限速50）、撞灯柱致机舱线路短路和油液泄漏起火，并否认电池爆燃和智驾撞击，没有提伤亡，晚间不少帖子批评说明「没有一个字提到遇难司机」。微博热搜白天曾到#1（约288万），22:53 时#41「问界道路救援中心曾拨打122」（约34.9万）仍在榜；X 相关帖 08Z–14Z 每小时 46/61/57/42/45/51/31。",
+     "links": [
+      {
+       "label": "新京报（新浪转载，16:31）：神木警方回应，司机已遇难",
+       "url": "https://finance.sina.cn/2026-10-21/detail-inivynsm5486455.d.html?cref=cj"
+      },
+      {
+       "label": "IT之家（17:19）",
+       "url": "https://www.ithome.com/1/016/003.htm"
+      },
+      {
+       "label": "每日经济新闻（17:35）",
+       "url": "https://www.mrjjxw.com/articles/2026-10-21/4611329.html"
+      },
+      {
+       "label": "金融界/凤凰网财经：此前问界通报未提伤亡",
+       "url": "https://finance.jrj.com.cn/2026/10/21172558809790.shtml"
+      },
+      {
+       "label": "X @shaok45000（约1.83万浏览）",
+       "url": "https://x.com/shaok45000/status/2112803441814999500"
+      },
+      {
+       "label": "X @maoshen（约2662浏览）",
+       "url": "https://x.com/maoshen/status/2112851562477523077"
+      }
+     ]
+    },
+    {
+     "id": "20261021-daily-hongguo-coins",
+     "company": "字节跳动 / 红果短剧",
+     "tag": "实锤",
+     "source_types": [
+      "公司公告",
+      "媒体",
+      "微博热搜",
+      "X"
+     ],
+     "date": "10-21 16:50",
+     "event_time": "2026-10-21（红果短剧官方公告）",
+     "text": "红果短剧官方10-21发布公告，分阶段下线「看剧赚金币」：11-1 起当天及之后新激活的用户不再有金币功能，12-31 前对所有用户停发金币；已获得的金币和现金余额不受影响，会留出兑换和提现时间。网友称之为「自砍摇钱树」并担心以后收费，客服回应平台内容一直免费、暂未接到收费通知。22:53 微博热搜#1「红果短剧自砍摇钱树」（约155.3万）；X 相关帖 10Z–14Z 每小时 21/32/18/36/24。IT之家引 QuestMobile 称红果月活约3.56亿（2026年5月）。",
+     "links": [
+      {
+       "label": "IT之家（16:50）：红果短剧计划年底下线金币功能",
+       "url": "https://www.ithome.com/1/015/978.htm"
+      },
+      {
+       "label": "北京时间：关于红果短剧计划下线金币功能的公告",
+       "url": "https://item.btime.com/41pqoq5qqop93b98o74cpojaoh9"
+      },
+      {
+       "label": "凤凰网（白鹿视频）：客服回应不会收费",
+       "url": "https://feng.ifeng.com/c/8xPcEyFFvaV"
+      },
+      {
+       "label": "凤凰网：红果短剧将全面下线金币功能",
+       "url": "https://feng.ifeng.com/c/8xPQyBkHK8o"
+      },
+      {
+       "label": "微博热搜镜像 soso.re（22:53）",
+       "url": "https://soso.re/weibo"
+      }
+     ]
+    },
+    {
+     "id": "20261021-daily-catl-heat",
+     "company": "宁德时代（300750 / 03750）",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "X"
+     ],
+     "date": "10-21",
+     "text": "13:00 快讯已警报：三季报毛利率创新低，A股、H股同日跌超10%，公司向证券时报回应需求和现金流问题。晚间 X 讨论回落，08Z 46 帖后 09Z–14Z 每小时 19–27 帖；@freearkshaw 帖约1.18万浏览。今晚没有新的公司或监管动作。",
+     "links": [
+      {
+       "label": "证券时报：宁德时代紧急回应",
+       "url": "https://www.stcn.com/article/detail/4229778.html"
+      },
+      {
+       "label": "X @freearkshaw（约1.18万浏览）",
+       "url": "https://x.com/freearkshaw/status/2112739439281901639"
+      }
+     ]
+    },
+    {
+     "id": "20261021-daily-deepinfer-heat",
+     "company": "DeepSeek / 华为",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "统计",
+      "媒体"
+     ],
+     "date": "10-21",
+     "text": "DeepInfer 开源和「华为工程师驻场 DeepSeek 共同设计昇腾」两条线今天仍是 X 上讨论最多的中国大模型话题：晚间 08Z–14Z 每小时 182/189/170/172/169/139/143 帖（宽口径，含华为+DeepSeek+昇腾），比上午 01–02Z 的 267/305 回落；@tianyi 开源帖浏览涨到约28.1万。钛媒体、TechNode 跟进解读，没有新的官方事实；华为驻场仍是 The Information 付费报道的传闻。",
+     "links": [
+      {
+       "label": "X @tianyi（约28.1万浏览）",
+       "url": "https://x.com/tianyi/status/2112471106426900677"
+      },
+      {
+       "label": "TechNode（10-21）",
+       "url": "https://technode.com/2026/10/21/deepseek-open-sources-inference-framework-with-support-for-nvidia-and-huawei-chips/"
+      },
+      {
+       "label": "钛媒体（10-21）",
+       "url": "https://www.tmtpost.com/8175996.html"
+      },
+      {
+       "label": "The Information【付费】",
+       "url": "https://www.theinformation.com/articles/deepseek-shaping-huaweis-ai-chips-growing-challenge-nvidia"
+      }
+     ]
+    },
+    {
+     "id": "20261021-daily-ban-heat",
+     "company": "DeepSeek / 美国DHS",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "统计"
+     ],
+     "date": "10-21",
+     "text": "美国国土安全部禁用 DeepSeek（含基于它开发的第三方产品）的讨论晚间平稳，X 08Z–14Z 每小时 34–48 帖（宽口径）；X 新闻页仍把它列为科技热点。今天没有新的美方或中方官方动作。",
+     "links": [
+      {
+       "label": "X 新闻页：DHS Orders Federal Agencies to Remove DeepSeek",
+       "url": "https://x.com/i/trending/2112188369618784335"
+      },
+      {
+       "label": "X @sleepy0x13",
+       "url": "https://x.com/sleepy0x13/status/2112173684177932615"
+      }
+     ],
+     "lang": "zh"
+    },
+    {
+     "id": "20261021-daily-jd-douyin",
+     "company": "京东 / 抖音电商",
+     "tag": "实锤",
+     "source_types": [
+      "媒体"
+     ],
+     "date": "10-21",
+     "text": "电商互撕固定检索线今晚没查到新声明：抖音黑板报最新表态仍是10-19点名网经社「20万元/份」黑公关，京东发言人最新仍是10-16支持左琦反诉；10-21 白天到晚上只有媒体转述旧声明，京东反诉是否立案未见报道。",
+     "links": [
+      {
+       "label": "新浪（品牌与商业，10-21 10:15）：抖音电商指控遭遇付费黑公关",
+       "url": "https://k.sina.cn/article_5953189932_162d6782c067051ize.html"
+      },
+      {
+       "label": "21经济网（10-19）：京东发起举报、提起反诉",
+       "url": "https://www.21jingji.com/article/20261019/herald/0577dd853699a3511ca0f4fff504662f.html"
+      }
+     ]
+    },
+    {
+     "id": "20261021-daily-didi-fanjian",
+     "company": "滴滴",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-21",
+     "text": "滴滴「繁体版比简体版贵」主帖 @Furinanatw 浏览约18.22万（昨晚约18.21万，几乎不再涨），一周来无新证据，滴滴未回应。今晚国内滴滴无新的八卦或投诉级线索（下午重刷已收滴滴×国航凤凰知音会员合作）。",
+     "links": [
+      {
+       "label": "X @Furinanatw（约18.22万浏览）",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🆕 今晚新料",
+   "color": "#e4572e",
+   "items": [
+    {
+     "id": "20261021-daily-new-aito",
+     "company": "问界（赛力斯 / 华为鸿蒙智行）",
+     "tag": "实锤",
+     "source_types": [
+      "警方",
+      "媒体",
+      "微博热搜",
+      "X"
+     ],
+     "date": "10-21 16:31",
+     "event_time": "2026-10-17 23:25（事故）/ 2026-10-21 下午（警方通报）",
+     "text": "16:00快讯后新进展：神木警方10-21称这起问界碰撞起火事故是单方事故，车上只有司机一人，司机已遇难；神木交警仍在调查。问界此前的说明只写了人驾、车速139.1km/h（限速50）、撞灯柱致机舱线路短路和油液泄漏起火，并否认电池爆燃和智驾撞击，没有提伤亡，晚间不少帖子批评说明「没有一个字提到遇难司机」。微博热搜白天曾到#1（约288万），22:53 时#41「问界道路救援中心曾拨打122」（约34.9万）仍在榜；X 相关帖 08Z–14Z 每小时 46/61/57/42/45/51/31。",
+     "links": [
+      {
+       "label": "新京报（新浪转载，16:31）：神木警方回应，司机已遇难",
+       "url": "https://finance.sina.cn/2026-10-21/detail-inivynsm5486455.d.html?cref=cj"
+      },
+      {
+       "label": "IT之家（17:19）",
+       "url": "https://www.ithome.com/1/016/003.htm"
+      },
+      {
+       "label": "每日经济新闻（17:35）",
+       "url": "https://www.mrjjxw.com/articles/2026-10-21/4611329.html"
+      },
+      {
+       "label": "金融界/凤凰网财经：此前问界通报未提伤亡",
+       "url": "https://finance.jrj.com.cn/2026/10/21172558809790.shtml"
+      },
+      {
+       "label": "X @shaok45000（约1.83万浏览）",
+       "url": "https://x.com/shaok45000/status/2112803441814999500"
+      },
+      {
+       "label": "X @maoshen（约2662浏览）",
+       "url": "https://x.com/maoshen/status/2112851562477523077"
+      }
+     ]
+    },
+    {
+     "id": "20261021-daily-new-hongguo",
+     "company": "字节跳动 / 红果短剧",
+     "tag": "实锤",
+     "source_types": [
+      "公司公告",
+      "媒体",
+      "微博热搜",
+      "X"
+     ],
+     "date": "10-21 16:50",
+     "event_time": "2026-10-21（红果短剧官方公告）",
+     "text": "红果短剧官方10-21发布公告，分阶段下线「看剧赚金币」：11-1 起当天及之后新激活的用户不再有金币功能，12-31 前对所有用户停发金币；已获得的金币和现金余额不受影响，会留出兑换和提现时间。网友称之为「自砍摇钱树」并担心以后收费，客服回应平台内容一直免费、暂未接到收费通知。22:53 微博热搜#1「红果短剧自砍摇钱树」（约155.3万）；X 相关帖 10Z–14Z 每小时 21/32/18/36/24。IT之家引 QuestMobile 称红果月活约3.56亿（2026年5月）。",
+     "links": [
+      {
+       "label": "IT之家（16:50）：红果短剧计划年底下线金币功能",
+       "url": "https://www.ithome.com/1/015/978.htm"
+      },
+      {
+       "label": "北京时间：关于红果短剧计划下线金币功能的公告",
+       "url": "https://item.btime.com/41pqoq5qqop93b98o74cpojaoh9"
+      },
+      {
+       "label": "凤凰网（白鹿视频）：客服回应不会收费",
+       "url": "https://feng.ifeng.com/c/8xPcEyFFvaV"
+      },
+      {
+       "label": "凤凰网：红果短剧将全面下线金币功能",
+       "url": "https://feng.ifeng.com/c/8xPQyBkHK8o"
+      },
+      {
+       "label": "微博热搜镜像 soso.re（22:53）",
+       "url": "https://soso.re/weibo"
+      }
+     ]
+    },
+    {
+     "id": "20261021-daily-new-miracle",
+     "company": "奇绩创坛（陆奇）/ 上海至算科技",
+     "tag": "实锤",
+     "source_types": [
+      "官方(美国财政部OFAC/国务院)",
+      "公司声明",
+      "媒体",
+      "X"
+     ],
+     "date": "10-19→10-21",
+     "event_time": "2026-10-19（美方制裁）/ 2026-10-20 晚（奇绩声明）/ 2026-10-21（商务部回应报道）",
+     "text": "补漏（今天各期未收）：美国国务院和财政部OFAC 10-19 依据《保护美国知识产权法》制裁5家中国实体：前谷歌工程师丁林伟创办的上海至算科技，以及陆奇创办的奇绩创坛（MiraclePlus）旗下管理公司、一期和二期基金等4个主体，理由是奇绩给至算提供种子资金、换取股权；措施包括冻结受美国管辖的资产、限制金融交易、禁止美国人投资其股债，存量交易可在2027-01-19前收尾。奇绩创坛10-20晚声明称事先没有沟通、并未投资上海至算，正在沟通争取解除；X 上有帖子援引加州法院裁定书称丁林伟2023年进创业营、获500万元对应7%股权（未独立核实）。电子工程专辑报道商务部表态坚决反对。",
+     "links": [
+      {
+       "label": "美国财政部OFAC公告（10-19）",
+       "url": "https://ofac.treasury.gov/recent-actions/20261019"
+      },
+      {
+       "label": "美国国务院中文版说明",
+       "url": "https://www.state.gov/translations/chinese/%E5%AE%9E%E6%96%BD%E5%88%B6%E8%A3%81%E4%BB%A5%E4%BF%9D%E6%8A%A4%E7%BE%8E%E5%9B%BD%E4%BA%BA%E5%85%8D%E9%81%AD%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E7%9B%97%E7%AA%83%E4%BE%B5%E5%AE%B3-2"
+      },
+      {
+       "label": "界面新闻：奇绩创坛回应被美国制裁",
+       "url": "https://www.jiemian.com/article/15214607.html"
+      },
+      {
+       "label": "电子工程专辑：商务部回应",
+       "url": "https://www.eet-china.com/news/202610219441.html"
+      },
+      {
+       "label": "X @0xLogicrw（约2919浏览）",
+       "url": "https://x.com/0xLogicrw/status/2112738024572502236"
+      }
+     ],
+     "lang": "zh"
+    }
+   ]
+  },
+  {
+   "title": "🌏 美股中概 & 出海",
+   "color": "#4A6FA5",
+   "items": [
+    {
+     "id": "20261021-daily-adr-open",
+     "company": "中概股（阿里 / 拼多多 / 京东 / 小鹏等）",
+     "tag": "统计",
+     "source_types": [
+      "财经媒体"
+     ],
+     "date": "10-21 21:35",
+     "event_time": "2026-10-21 21:30 北京时间（美股开盘）",
+     "text": "今晚美股高开（标普+0.29%、纳指+0.69%），中概却普遍低开：小鹏-4.45%（前一日刚涨7.6%）、阿里-2.11%、理想-2.10%、B站-1.87%、蔚来-1.75%、京东-1.72%、网易-1.69%、携程-1.49%、拼多多-1.36%；盘前东方财富已显示阿里、理想跌约2%。原因媒体没有单独说明。收盘数据留给明早早报。",
+     "links": [
+      {
+       "label": "新浪财经/中新经纬（21:35）：美股开盘",
+       "url": "https://finance.sina.com.cn/stock/wbstock/2026-10-21/doc-inivzcqh8072433.shtml"
+      },
+      {
+       "label": "每经网（16:06）：中概股盘前普跌",
+       "url": "https://www.nbd.com.cn/articles/2026-10-21/4611127.html"
+      }
+     ],
+     "pending": [
+      "待补充：美东10-21收盘涨跌与金龙指数——收盘在北京时间10-22凌晨，留给早报"
+     ]
+    },
+    {
+     "id": "20261021-daily-miracleplus-sanction",
+     "company": "奇绩创坛（陆奇）/ 上海至算科技",
+     "tag": "实锤",
+     "source_types": [
+      "官方(美国财政部OFAC/国务院)",
+      "公司声明",
+      "媒体",
+      "X"
+     ],
+     "date": "10-19→10-21",
+     "event_time": "2026-10-19（美方制裁）/ 2026-10-20 晚（奇绩声明）/ 2026-10-21（商务部回应报道）",
+     "text": "补漏（今天各期未收）：美国国务院和财政部OFAC 10-19 依据《保护美国知识产权法》制裁5家中国实体：前谷歌工程师丁林伟创办的上海至算科技，以及陆奇创办的奇绩创坛（MiraclePlus）旗下管理公司、一期和二期基金等4个主体，理由是奇绩给至算提供种子资金、换取股权；措施包括冻结受美国管辖的资产、限制金融交易、禁止美国人投资其股债，存量交易可在2027-01-19前收尾。奇绩创坛10-20晚声明称事先没有沟通、并未投资上海至算，正在沟通争取解除；X 上有帖子援引加州法院裁定书称丁林伟2023年进创业营、获500万元对应7%股权（未独立核实）。电子工程专辑报道商务部表态坚决反对。",
+     "links": [
+      {
+       "label": "美国财政部OFAC公告（10-19）",
+       "url": "https://ofac.treasury.gov/recent-actions/20261019"
+      },
+      {
+       "label": "美国国务院中文版说明",
+       "url": "https://www.state.gov/translations/chinese/%E5%AE%9E%E6%96%BD%E5%88%B6%E8%A3%81%E4%BB%A5%E4%BF%9D%E6%8A%A4%E7%BE%8E%E5%9B%BD%E4%BA%BA%E5%85%8D%E9%81%AD%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E7%9B%97%E7%AA%83%E4%BE%B5%E5%AE%B3-2"
+      },
+      {
+       "label": "界面新闻：奇绩创坛回应被美国制裁",
+       "url": "https://www.jiemian.com/article/15214607.html"
+      },
+      {
+       "label": "电子工程专辑：商务部回应",
+       "url": "https://www.eet-china.com/news/202610219441.html"
+      },
+      {
+       "label": "X @0xLogicrw（约2919浏览）",
+       "url": "https://x.com/0xLogicrw/status/2112738024572502236"
+      }
+     ],
+     "lang": "zh"
+    }
+   ]
+  },
+  {
+   "title": "🌐 海外小语种线索",
+   "color": "#0f766e",
+   "items": [
+    {
+     "id": "20261021-daily-didi-rosario",
+     "company": "滴滴出海（阿根廷·罗萨里奥）",
+     "tag": "实锤",
+     "source_types": [
+      "当地媒体(西班牙语)"
+     ],
+     "date": "10-21",
+     "event_time": "2026-10-21 11:00（当地时间）联席会议",
+     "text": "🇦🇷 阿根廷罗萨里奥｜西班牙语：Uber/DiDi 合法化条例 10-21 在市议会两个委员会联席会上继续审，已按外卖骑手工会要求修改（普通外卖仍只许摩托送，出租车只能接摩托装不下的大件）；庇隆派和 Ciudad Futura 不支持，能否出意见书取决于自由前进党（La Libertad Avanza）。目标从原定 10-22 改为下周四（10-29）全会最终表决。",
+     "links": [
+      {
+       "label": "Rosario3（西语，10-21）",
+       "url": "https://www.rosario3.com/informaciongeneral/uber-y-didi-en-rosario-el-oficialismo-busca-destrabar-el-proyecto-y-obtener-dictamen-este-miercoles-20261021-0020.html"
+      }
+     ],
+     "lang": "es",
+     "translation_zh": "罗萨里奥市政府提出的让 Uber、DiDi 等出行平台合法化并受监管的条例，周三在市议会公共服务委员会和政府委员会联席会议上继续讨论（11点开始），目标是拿到多数意见书，下周四提交全会最终表决。",
+     "original": "El debate alrededor del proyecto del Ejecutivo municipal para legalizar y regular las aplicaciones de transporte como Uber y DiDi en Rosario continúa este miércoles en el Concejo Municipal, en un plenario conjunto de las comisiones de Servicios Públicos y la de Gobierno que empezó a las 11, con el objetivo de lograr dictamen de mayoría y llevar la ordenanza al recinto para tratar su aprobación definitiva durante el jueves de la próxima semana."
+    },
+    {
+     "id": "20261021-daily-didi-rosario-moto",
+     "company": "滴滴出海（阿根廷·罗萨里奥）",
+     "tag": "传闻",
+     "source_types": [
+      "当地媒体(西班牙语)",
+      "乘客投诉"
+     ],
+     "date": "10-21",
+     "event_time": "2026-10-21 08:51（当地媒体报道）；事故日期 待补充",
+     "text": "🇦🇷 阿根廷罗萨里奥｜西班牙语：Cadena 3 报道一名47岁乘客坐 DiDi 摩托出事故、锁骨骨折，他称司机撞车后没救助就离开；交通法律师借此呼吁平台承担责任、保障乘客安全。乘客说法为单方投诉，DiDi 未见回应。",
+     "links": [
+      {
+       "label": "Cadena 3 Rosario（西语，10-21）",
+       "url": "https://www.cadena3.com/noticia/radioinforme-3-rosario/un-pasajero-sufrio-una-fractura-en-un-viaje-de-didi-los-riesgos-no-pueden-terminar-en-el-usuario_605574"
+      }
+     ],
+     "lang": "es",
+     "translation_zh": "47岁的泥瓦匠胡利奥在罗萨里奥乘坐 DiDi 摩托时出事故、锁骨骨折，这起事故让出行平台监管问题再次被讨论。这名有五个未成年孩子的父亲投诉说，撞车后司机没有救助他就走了。",
+     "original": "El accidente que sufrió Julio, un albañil de 47 años que resultó con una fractura de clavícula tras viajar en una moto de DiDi en Rosario, volvió a poner en discusión la regulación de las aplicaciones de transporte. El hombre, padre de cinco hijos menores, denunció que el conductor se fue sin asistirlo después del choque.",
+     "pending": [
+      "待补充：事故具体日期——报道未写明"
+     ]
+    }
+   ]
+  }
+ ],
+ "tomorrow_watch": [
+  "问界：神木交警调查结论、问界是否补充回应伤亡",
+  "红果短剧：金币下线后的收费/会员安排",
+  "中概10-21收盘（小鹏回吐、阿里跌）",
+  "奇绩创坛能否解除制裁、商务部后续",
+  "DeepSeek：华为驻场传闻有无官方回应；美方禁令是否扩围",
+  "尊界三部门结论（已移出短期，有结论再回收）",
+  "滴滴：罗萨里奥10-29全会表决；香港网约车牌照10-30截止；繁简价差回应"
+ ]
+}

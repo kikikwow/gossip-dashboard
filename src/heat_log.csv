@@ -979,3 +979,50 @@ timestamp_utc,topic,metric,value,source
 2026-10-21T08:26:00Z,TikTok误封马斯克纪录片,x_hourly_posts_refresh_0607Z,1,x_counts 06Z
 2026-10-21T08:26:00Z,TikTok误封马斯克纪录片,x_hourly_posts_refresh_0708Z,0,x_counts 07Z (last full hour)
 2026-10-21T08:26:00Z,TikTok误封马斯克纪录片,hours_since_last_progress,88.5,last_progress=2026-10-17 https://www.theverge.com/tech/1013527/the-musk-documentarys-tiktok-account-has-been-restored-after-an-error
+2026-10-21T15:10:00Z,问界神木碰撞起火·官方回应,x_posts_hour_08Z,46,x_counts 问界 (起火 OR 神木 OR 139)
+2026-10-21T15:10:00Z,问界神木碰撞起火·官方回应,x_posts_hour_09Z,61,x_counts 问界 (起火 OR 神木 OR 139)
+2026-10-21T15:10:00Z,问界神木碰撞起火·官方回应,x_posts_hour_10Z,57,x_counts 问界 (起火 OR 神木 OR 139)
+2026-10-21T15:10:00Z,问界神木碰撞起火·官方回应,x_posts_hour_11Z,42,x_counts 问界 (起火 OR 神木 OR 139)
+2026-10-21T15:10:00Z,问界神木碰撞起火·官方回应,x_posts_hour_12Z,45,x_counts 问界 (起火 OR 神木 OR 139)
+2026-10-21T15:10:00Z,问界神木碰撞起火·官方回应,x_posts_hour_13Z,51,x_counts 问界 (起火 OR 神木 OR 139)
+2026-10-21T15:10:00Z,问界神木碰撞起火·官方回应,x_posts_hour_14Z,31,x_counts 问界 (起火 OR 神木 OR 139)
+2026-10-21T15:10:00Z,问界神木碰撞起火·官方回应,weibo_rank,41,soso.re 22:53 问界道路救援中心曾拨打122
+2026-10-21T15:10:00Z,问界神木碰撞起火·官方回应,weibo_heat,349338,soso.re 22:53
+2026-10-21T15:10:00Z,问界神木碰撞起火·官方回应,x_sample_post,18310,https://x.com/shaok45000/status/2112803441814999500
+2026-10-21T15:10:00Z,问界神木碰撞起火·官方回应,x_sample_post,2662,https://x.com/maoshen/status/2112851562477523077
+2026-10-21T15:10:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour_06Z,18,x_counts 红果 (短剧 OR 摇钱树 OR 下架)
+2026-10-21T15:10:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour_07Z,13,x_counts 红果 (短剧 OR 摇钱树 OR 下架)
+2026-10-21T15:10:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour_08Z,11,x_counts 红果 (短剧 OR 摇钱树 OR 下架)
+2026-10-21T15:10:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour_09Z,11,x_counts 红果 (短剧 OR 摇钱树 OR 下架)
+2026-10-21T15:10:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour_10Z,21,x_counts 红果 (短剧 OR 摇钱树 OR 下架)
+2026-10-21T15:10:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour_11Z,32,x_counts 红果 (短剧 OR 摇钱树 OR 下架)
+2026-10-21T15:10:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour_12Z,18,x_counts 红果 (短剧 OR 摇钱树 OR 下架)
+2026-10-21T15:10:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour_13Z,36,x_counts 红果 (短剧 OR 摇钱树 OR 下架)
+2026-10-21T15:10:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour_14Z,24,x_counts 红果 (短剧 OR 摇钱树 OR 下架)
+2026-10-21T15:10:00Z,红果短剧下线金币·自砍摇钱树,weibo_rank,1,soso.re 22:53 红果短剧自砍摇钱树
+2026-10-21T15:10:00Z,红果短剧下线金币·自砍摇钱树,weibo_heat,1553257,soso.re 22:53
+2026-10-21T15:10:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_posts_hour_08Z,182,x_counts DeepInfer OR (华为 DeepSeek 昇腾)
+2026-10-21T15:10:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_posts_hour_09Z,189,x_counts DeepInfer OR (华为 DeepSeek 昇腾)
+2026-10-21T15:10:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_posts_hour_10Z,170,x_counts DeepInfer OR (华为 DeepSeek 昇腾)
+2026-10-21T15:10:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_posts_hour_11Z,172,x_counts DeepInfer OR (华为 DeepSeek 昇腾)
+2026-10-21T15:10:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_posts_hour_12Z,169,x_counts DeepInfer OR (华为 DeepSeek 昇腾)
+2026-10-21T15:10:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_posts_hour_13Z,139,x_counts DeepInfer OR (华为 DeepSeek 昇腾)
+2026-10-21T15:10:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_posts_hour_14Z,143,x_counts DeepInfer OR (华为 DeepSeek 昇腾)
+2026-10-21T15:10:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_sample_post,281485,https://x.com/tianyi/status/2112471106426900677
+2026-10-21T15:10:00Z,宁德时代AH股绩后重挫,x_posts_hour_08Z,46,x_counts 宁德时代 (跌 OR 三季报 OR 回应)
+2026-10-21T15:10:00Z,宁德时代AH股绩后重挫,x_posts_hour_09Z,23,x_counts 宁德时代 (跌 OR 三季报 OR 回应)
+2026-10-21T15:10:00Z,宁德时代AH股绩后重挫,x_posts_hour_10Z,25,x_counts 宁德时代 (跌 OR 三季报 OR 回应)
+2026-10-21T15:10:00Z,宁德时代AH股绩后重挫,x_posts_hour_11Z,26,x_counts 宁德时代 (跌 OR 三季报 OR 回应)
+2026-10-21T15:10:00Z,宁德时代AH股绩后重挫,x_posts_hour_12Z,19,x_counts 宁德时代 (跌 OR 三季报 OR 回应)
+2026-10-21T15:10:00Z,宁德时代AH股绩后重挫,x_posts_hour_13Z,27,x_counts 宁德时代 (跌 OR 三季报 OR 回应)
+2026-10-21T15:10:00Z,宁德时代AH股绩后重挫,x_posts_hour_14Z,11,x_counts 宁德时代 (跌 OR 三季报 OR 回应)
+2026-10-21T15:10:00Z,宁德时代AH股绩后重挫,x_sample_post,11786,https://x.com/freearkshaw/status/2112739439281901639
+2026-10-21T15:10:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour_08Z,44,x_counts DeepSeek (禁 OR ban OR DHS OR 商务部)
+2026-10-21T15:10:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour_09Z,35,x_counts DeepSeek (禁 OR ban OR DHS OR 商务部)
+2026-10-21T15:10:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour_10Z,48,x_counts DeepSeek (禁 OR ban OR DHS OR 商务部)
+2026-10-21T15:10:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour_11Z,34,x_counts DeepSeek (禁 OR ban OR DHS OR 商务部)
+2026-10-21T15:10:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour_12Z,39,x_counts DeepSeek (禁 OR ban OR DHS OR 商务部)
+2026-10-21T15:10:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour_13Z,44,x_counts DeepSeek (禁 OR ban OR DHS OR 商务部)
+2026-10-21T15:10:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour_14Z,43,x_counts DeepSeek (禁 OR ban OR DHS OR 商务部)
+2026-10-21T15:10:00Z,滴滴繁简价差,x_sample_post,182206,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-21T15:10:00Z,奇绩创坛被美国制裁,x_sample_post,2919,https://x.com/0xLogicrw/status/2112738024572502236
