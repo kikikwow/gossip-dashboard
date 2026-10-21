@@ -513,6 +513,7 @@
       for (i = 0; i + n <= t.length; i++) {
         sub = t.slice(i, i + n);
         if (isGenericSlice(sub) || /^\d+$/.test(sub)) continue;
+        if (/^[a-z0-9]+$/.test(sub) && sub.length < 4) continue;
         if (hay.indexOf(sub) >= 0) slices.push(sub);
       }
     }
@@ -1066,8 +1067,47 @@
     delete group.progress;
     return group;
   }
+  function isBareDidiTopic(topic) {
+    var t = String(topic || '').replace(/\s+/g, '');
+    if (!/滴滴|didi/i.test(t)) return false;
+    if (/恐同|价差|繁简|繁体|简体|罗萨里奥|凤凰|杀熟|投诉|司机/.test(t)) return false;
+    if (t === '滴滴' || t === '滴滴&滴滴出海' || t === '滴滴＆滴滴出海') return true;
+    if (/^滴滴(八卦关键词|海外市场|宽口径|巴西99)$/.test(t)) return true;
+    if (/^滴滴(海外|出海|国内)/.test(t)) return true;
+    if (/微博/.test(t) && /滴滴/.test(t)) return true;
+    return false;
+  }
+  function isUnfilteredDidiRow(r) {
+    if (!r || isBareDidiTopic(r.topic)) return false;
+    if (!/滴滴|didi/i.test(String(r.topic || ''))) return false;
+    var blob = String(r.metric || '') + ' ' + String(r.source || '');
+    return /task_broad|name-collision|keyword-collision|noise|noisy|unfiltered|\braw\b|宽口径|未过滤|撞词|broad\/noisy|\bbroad\b/i.test(blob);
+  }
+  function storyTokens(topic) {
+    var t = flatText(topic);
+    var out = [];
+    var seen = {};
+    var latinStop = { deepseek: 1, nvidia: 1, openai: 1, anthropic: 1, bytedance: 1, google: 1, microsoft: 1 };
+    (t.match(/[a-z][a-z0-9]{5,}/g) || []).forEach(function (w) {
+      if (latinStop[w] || seen[w]) return;
+      seen[w] = 1;
+      out.push(w);
+    });
+    var n, i, sub, maxN = Math.min(t.length, 12);
+    for (n = 6; n <= maxN; n++) {
+      for (i = 0; i + n <= t.length; i++) {
+        sub = t.slice(i, i + n);
+        if (!/^[\u4e00-\u9fff]+$/.test(sub) || isGenericSlice(sub) || seen[sub]) continue;
+        seen[sub] = 1;
+        out.push(sub);
+      }
+    }
+    return out;
+  }
   function topicGroupsOf(heat, cands, opt) {
-    var H = heat || [];
+    var H = (heat || []).filter(function (r) {
+      return r && !isBareDidiTopic(r.topic) && !isUnfilteredDidiRow(r);
+    });
     if (!H.length) return [];
     opt = opt || {};
     var progress = opt.progress || {};
@@ -1098,7 +1138,7 @@
     if (!id) return 'tp:' + normTopic(topic);
     var cand = null;
     list.forEach(function (c) { if (c && c.id === id) cand = c; });
-    if (cand && sliceScore(topic, flatText(cand.title), 4) > 0) return 'ev:' + id;
+    if (cand && sliceScore(topic, hayOf(cand), 4) > 0) return 'ev:' + id;
     return 'tp:' + normTopic(topic);
   }
   function preferHeatRow(a, b) {
@@ -1106,18 +1146,57 @@
     return (b.score || 0) > (a.score || 0) ? b : a;
   }
   function dedupeHeatRows(rows, cands) {
-    var by = {};
-    var order = [];
-    (rows || []).forEach(function (r) {
+    var list = rows || [];
+    var parent = list.map(function (_, i) { return i; });
+    function find(i) {
+      while (parent[i] !== i) { parent[i] = parent[parent[i]]; i = parent[i]; }
+      return i;
+    }
+    function unite(a, b) {
+      var pa = find(a);
+      var pb = find(b);
+      if (pa !== pb) parent[pb] = pa;
+    }
+    var byKey = {};
+    list.forEach(function (r, i) {
       var key = heatKeyOf(r.t, cands);
-      var prev = by[key];
-      if (!prev) { by[key] = r; order.push(key); return; }
-      var keep = preferHeatRow(prev, r);
-      var drop = keep === prev ? r : prev;
-      keep.also = (keep.also || prev.also || []).concat([drop.t]);
-      by[key] = keep;
+      if (byKey[key] != null) unite(byKey[key], i);
+      else byKey[key] = i;
     });
-    return order.map(function (k) { return by[k]; }).sort(function (a, b) {
+    var tokAt = {};
+    var tokN = {};
+    list.forEach(function (r) {
+      storyTokens(r.t).forEach(function (tok) { tokN[tok] = (tokN[tok] || 0) + 1; });
+    });
+    list.forEach(function (r, i) {
+      storyTokens(r.t).forEach(function (tok) {
+        if (tokN[tok] < 2 || tokN[tok] > 4) return;
+        if (tokAt[tok] != null) unite(tokAt[tok], i);
+        else tokAt[tok] = i;
+      });
+    });
+    var groups = {};
+    list.forEach(function (r, i) {
+      var p = find(i);
+      (groups[p] = groups[p] || []).push(r);
+    });
+    var out = Object.keys(groups).map(function (k) {
+      var gs = groups[k];
+      var keep = gs[0];
+      gs.slice(1).forEach(function (other) {
+        var winner = preferHeatRow(keep, other);
+        var names = (winner.also || []).concat(keep.also || []).concat(other.also || []).concat([keep.t, other.t]);
+        var seen = {};
+        winner.also = names.filter(function (name) {
+          if (!name || name === winner.t || seen[name]) return false;
+          seen[name] = 1;
+          return true;
+        });
+        keep = winner;
+      });
+      return keep;
+    });
+    return out.sort(function (a, b) {
       if (!!a.fresh !== !!b.fresh) return a.fresh ? -1 : 1;
       return (b.score || 0) - (a.score || 0);
     });
