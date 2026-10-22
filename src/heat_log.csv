@@ -1134,3 +1134,21 @@ timestamp_utc,topic,metric,value,source
 2026-10-22T03:25:00Z,红果短剧下线金币·自砍摇钱树,weibo_heat,208617,soso.re/weibo 11:12
 2026-10-22T03:25:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour,27,x_counts 红果 短剧/金币/收费 02Z; 00Z/01Z=13/24
 2026-10-22T03:25:00Z,京东 抖音,x_posts_hour,5,x_counts (京东 抖音) OR 左琦 OR 网经社 02Z; 00Z/01Z=0/1
+2026-10-22T05:30:00Z,DeepSeek完成千亿融资,x_posts_hour,128,x_counts DeepSeek 融资/1000亿/15 billion 04Z; 02Z/03Z=41/140; 05Z partial 49
+2026-10-22T05:30:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour,14,x_counts DeepSeek ban/DHS/禁用 04Z; 02Z/03Z=22/8
+2026-10-22T05:30:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_posts_hour,56,x_counts DeepInfer OR DeepSeek 华为/昇腾 04Z; 02Z/03Z=50/64
+2026-10-22T05:30:00Z,问界神木碰撞起火·官方回应,x_posts_hour,48,x_counts 问界 神木/起火/事故/超速/M9 04Z; 02Z/03Z=65/51
+2026-10-22T05:30:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour,63,x_counts 红果 短剧/金币/收费 04Z; 02Z/03Z=27/25
+2026-10-22T05:30:00Z,红果短剧下线金币·自砍摇钱树,weibo_rank,24,soso.re 13:13 #24 红果开始忘本 245419
+2026-10-22T05:30:00Z,红果短剧下线金币·自砍摇钱树,weibo_heat,245419,soso.re/weibo 13:13
+2026-10-22T05:30:00Z,红果短剧下线金币·自砍摇钱树,x_sample_post,495,https://x.com/JMLLS888/status/2113125191379198176
+2026-10-22T05:30:00Z,京东 抖音,x_posts_hour,1,x_counts (京东 抖音) OR 左琦 OR 网经社 04Z; 02Z/03Z=5/0
+2026-10-22T05:30:00Z,港股科技重挫·MiniMax首次破发,x_posts_hour,9,x_counts MiniMax/稀宇 破发/发行价/IPO price/跌 04Z; 02Z/03Z=8/9
+2026-10-22T05:30:00Z,港股科技重挫·MiniMax首次破发,x_sample_post,5303,https://x.com/joely7758521/status/2113112219038736714
+2026-10-22T05:30:00Z,港股科技重挫·MiniMax首次破发,x_sample_post,272,https://x.com/gpuhell/status/2113088361825206372
+2026-10-22T05:30:00Z,港股科技重挫·MiniMax首次破发,x_sample_post,43,https://x.com/MartynZheng/status/2113129909186879939
+2026-10-22T05:30:00Z,盘石创始人田宁被采取刑事强制措施,x_posts_hour,12,x_counts 盘石 OR 田宁 04Z; 03Z=14
+2026-10-22T05:30:00Z,盘石创始人田宁被采取刑事强制措施,weibo_rank,42,soso.re 13:13 #42 杭州警方通报盘石创始人田宁失联 227885
+2026-10-22T05:30:00Z,盘石创始人田宁被采取刑事强制措施,weibo_heat,227885,soso.re/weibo 13:13
+2026-10-22T05:30:00Z,盘石创始人田宁被采取刑事强制措施,x_sample_post,425,https://x.com/bitbiz_bruce/status/2112853272331690446
+2026-10-22T05:30:00Z,盘石创始人田宁被采取刑事强制措施,x_sample_post,122,https://x.com/MilandaRap42647/status/2113114163312750611
