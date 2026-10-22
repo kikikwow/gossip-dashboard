@@ -1,0 +1,184 @@
+{
+ "routine": "大厂八卦热点快讯",
+ "type": "alert",
+ "title": "大厂八卦热点快讯",
+ "timestamp": "2026-10-22T08:14:00Z",
+ "edition_date": "2026-10-22",
+ "edition_id": "kuaixun_0814Z",
+ "fired_at_utc": "2026-10-22T08:14:23Z",
+ "scanned_at_utc": "2026-10-22T08:20:00Z",
+ "beijing_time": "2026-10-22 16:14–16:25 CST",
+ "window": "2026-10-22T05:20Z–08:16Z (北京 13:20–16:16，接 13:00 快讯)",
+ "alert_sent": true,
+ "alert_worthy": true,
+ "reason": "短期追踪话题「问界神木碰撞起火」13:00时已出微博前51，16:15重回微博#4「问界事故车速数据为何有差异」（1020006）和#11「问界客服称起火车辆车速是后台数据」（764095）；有新进展：问界客服10-22回应139.1km/h系后台数据核实、正配合调查，神木警方称正在调查、等官方通报（凤凰网、九派新闻、新浪）。",
+ "lede": "快讯窗北京13:20–16:16。信源：X公开检索与计数（约11次）、微博热搜镜像soso.re（16:15）、RSS（新匹配5条）、网页交叉核实。警报1条：问界车速争议重回微博前五。",
+ "items": [],
+ "top3": [],
+ "sections": [
+  {
+   "title": "⚡ 快讯",
+   "color": "#e4572e",
+   "items": [
+    {
+     "id": "20261022-kx0814Z-wenjie-speed",
+     "company": "问界 / 赛力斯 / 华为",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "客服回应",
+      "警方表态",
+      "微博热搜",
+      "X"
+     ],
+     "date": "10-22 13:46",
+     "event_time": "2026-10-22 白天（凤凰网 05:46Z 报道客服回应）",
+     "text": "问界10-21说明称神木事故车「行经至交汇路口时」车速139.1km/h，网友按监控视频逐帧推算碰撞瞬间约60–90km/h，质疑通报只给路口速度、不给碰撞速度。10-22问界客服回应称车速根据后台数据核实、正配合相关部门调查，神木警方称正在调查、等官方通报；话题16:15重回微博#4（约102万）和#11（约76万），X 05Z–07Z每小时49/22/39帖。",
+     "links": [
+      {
+       "label": "凤凰网·客服称根据后台数据核实",
+       "url": "https://news.ifeng.com/c/8xQj61dYq7E"
+      },
+      {
+       "label": "九派新闻（MCNDATA转录）",
+       "url": "https://www.mcndata.cn/c/2113148614720225280"
+      },
+      {
+       "label": "新浪·车速争议关键逻辑",
+       "url": "https://www.sina.cn/news/detail/5356646838829857.html"
+      },
+      {
+       "label": "什么值得买·车速之争梳理",
+       "url": "https://post.smzdm.com/p/agg5gl5d/"
+      },
+      {
+       "label": "X @cuichenghao（约1.6万浏览）",
+       "url": "https://x.com/cuichenghao/status/2113143496156844362"
+      },
+      {
+       "label": "X @WangNextDoor2",
+       "url": "https://x.com/WangNextDoor2/status/2113114369949053354"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "tracked_updates": [
+  {
+   "topic": "问界神木碰撞起火·官方回应",
+   "status": "追踪中·升温",
+   "heat": "微博16:15 #4 1020006、#11 764095（13:13已出榜）；X 05Z/06Z/07Z=49/22/39，08Z前16分钟14；@cuichenghao≈1.6万"
+  },
+  {
+   "topic": "DeepSeek完成千亿融资",
+   "status": "追踪中·降温",
+   "heat": "X 05Z/06Z/07Z=120/109/88；X新闻聚合称路透跟进；无公司回应、无新事实"
+  },
+  {
+   "topic": "美国禁用DeepSeek·商务部回应",
+   "status": "追踪中·降温",
+   "heat": "X 40/10/7；无新官方动作"
+  },
+  {
+   "topic": "DeepSeek开源DeepInfer·华为联合设计芯片",
+   "status": "追踪中·持平",
+   "heat": "X 57/50/66；仅转述The Information旧料，无新事实，22:50考虑移出"
+  },
+  {
+   "topic": "红果短剧下线金币·自砍摇钱树",
+   "status": "追踪中·持平",
+   "heat": "X 35/48/23；微博#30「红果开始忘本」293210（13:13为#24）；无新官方表态"
+  },
+  {
+   "topic": "京东 抖音",
+   "status": "追踪中·持平",
+   "heat": "X 0/2/7；无新声明"
+  }
+ ],
+ "focus_topics": {
+  "滴滴": "本期无新动态。Tier1+slot1（日本/澳新/埃及）X共2次合并检索：中文为「太原滴滴司机」低俗段子（早报已辟误为出租车事件，待核实）、发票广告和低互动个案吐槽；海外仅日语闲聊、墨西哥PROFECO个案回复（1浏览）和Keeta巴西旧闻转述；RSS和微博前51无滴滴。",
+  "字节": "钛媒体10-22《字节正在构建一套完整的AI视频工具生态》为行业分析，非新事件；FT称Politico/Telegraph母公司曾提议收购TikTok欧洲业务【付费】；红果见短期追踪。",
+  "中国大模型": "DeepSeek融资讨论回落；钛媒体10-22评腾讯姚顺雨「AI加班论」（旧事件评论）；彭博称华为获23亿美元离岸贷款用于芯片支出【付费】。"
+ },
+ "overseas_minor_language": [],
+ "weibo": {
+  "mirror": "https://soso.re/weibo",
+  "updated": "2026-10-22 16:15 Beijing",
+  "company_adjacent": [
+   {
+    "rank": 4,
+    "title": "问界事故车速数据为何有差异",
+    "heat": 1020006,
+    "note": "短期追踪·快讯"
+   },
+   {
+    "rank": 11,
+    "title": "问界客服称起火车辆车速是后台数据",
+    "heat": 764095,
+    "note": "短期追踪·快讯"
+   },
+   {
+    "rank": 9,
+    "title": "麻六记位列阿宽食品第一大欠款方",
+    "heat": 803094,
+    "note": "非大厂，观察"
+   },
+   {
+    "rank": 15,
+    "title": "A股创年内新低",
+    "heat": 626333,
+    "note": "行情"
+   },
+   {
+    "rank": 25,
+    "title": "iPhoneDuo微信不适配",
+    "heat": 332444,
+    "note": "观察"
+   },
+   {
+    "rank": 27,
+    "title": "微信回应iPhoneDuo不适配",
+    "heat": 324462,
+    "note": "腾讯客服回应，观察"
+   },
+   {
+    "rank": 30,
+    "title": "红果开始忘本",
+    "heat": 293210,
+    "note": "短期追踪"
+   }
+  ]
+ },
+ "maimai": {
+  "status": "未抓取",
+  "pending": [
+   "待补充：脉脉热榜——需登录，本期未取"
+  ]
+ },
+ "feeds_new": 5,
+ "feeds_file": "research/feeds/2026-10-22T0815Z.json",
+ "short_term_updates": "无新加入、无移出（列表6项超上限一项）。问界重回微博前五已警报；DeepInfer线仍无新事实，22:50总结考虑移出。",
+ "candidates": [
+  {
+   "topic": "微信回应iPhone Duo不适配",
+   "heat": "微博#25 332444、#27 324462；21经济网、凤凰网、新京报、界面报道腾讯客服称目前未针对iPhone Duo适配",
+   "decision": "客服层面回应、产品适配问题，观察未入短期",
+   "links": [
+    {
+     "label": "21经济网",
+     "url": "https://www.21jingji.com/article/20261022/herald/b7fd8f660d0acf5bf0efd7a486efb43d.html"
+    },
+    {
+     "label": "新京报",
+     "url": "https://www.bjnews.com.cn/detail/1792651723129834.html"
+    }
+   ]
+  },
+  {
+   "topic": "沪深300进入技术性熊市·港股续跌",
+   "heat": "X新闻聚合：沪深300较6月高点跌20%；微博#15「A股创年内新低」626333",
+   "decision": "大盘行情，非公司事件，不警报"
+  }
+ ]
+}

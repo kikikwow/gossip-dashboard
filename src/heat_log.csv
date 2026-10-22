@@ -1152,3 +1152,19 @@ timestamp_utc,topic,metric,value,source
 2026-10-22T05:30:00Z,盘石创始人田宁被采取刑事强制措施,weibo_heat,227885,soso.re/weibo 13:13
 2026-10-22T05:30:00Z,盘石创始人田宁被采取刑事强制措施,x_sample_post,425,https://x.com/bitbiz_bruce/status/2112853272331690446
 2026-10-22T05:30:00Z,盘石创始人田宁被采取刑事强制措施,x_sample_post,122,https://x.com/MilandaRap42647/status/2113114163312750611
+2026-10-22T08:20:00Z,问界神木碰撞起火·官方回应,x_posts_hour,39,x_counts (问界 OR 赛力斯)(车速 OR 起火 OR 事故 OR 神木 OR 139) 07Z; 05Z=49 06Z=22 08Z前16分钟=14
+2026-10-22T08:20:00Z,问界神木碰撞起火·官方回应,weibo_rank,4,soso.re 16:15 #4 问界事故车速数据为何有差异 1020006
+2026-10-22T08:20:00Z,问界神木碰撞起火·官方回应,weibo_heat,1020006,soso.re/weibo 16:15 #4；#11 问界客服称起火车辆车速是后台数据 764095
+2026-10-22T08:20:00Z,问界神木碰撞起火·官方回应,x_sample_post,16154,https://x.com/cuichenghao/status/2113143496156844362
+2026-10-22T08:20:00Z,问界神木碰撞起火·官方回应,x_sample_post,2180,https://x.com/WangNextDoor2/status/2113114369949053354
+2026-10-22T08:20:00Z,DeepSeek完成千亿融资,x_posts_hour,88,"x_counts DeepSeek (融资 OR 1000亿 OR funding OR ""$15 billion"" OR raise) 07Z; 05Z=120 06Z=109"
+2026-10-22T08:20:00Z,DeepSeek完成千亿融资,x_sample_post,21,https://x.com/665162/status/2113178273362628858
+2026-10-22T08:20:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour,23,x_counts 红果 (金币 OR 短剧 OR 收费 OR 忘本) 07Z; 05Z=35 06Z=48
+2026-10-22T08:20:00Z,红果短剧下线金币·自砍摇钱树,weibo_rank,30,soso.re 16:15 #30 红果开始忘本 293210
+2026-10-22T08:20:00Z,红果短剧下线金币·自砍摇钱树,weibo_heat,293210,soso.re/weibo 16:15
+2026-10-22T08:20:00Z,京东 抖音,x_posts_hour,7,x_counts (京东 抖音) OR 左琦 OR 网经社 OR (抖音 黑公关) 07Z; 05Z=0 06Z=2
+2026-10-22T08:20:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour,7,x_counts DeepSeek (ban OR banned OR DHS OR 禁用 OR 禁令) 07Z; 05Z=40 06Z=10
+2026-10-22T08:20:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_posts_hour,66,x_counts DeepInfer OR (DeepSeek (华为 OR Huawei OR 昇腾 OR Ascend)) 07Z; 05Z=57 06Z=50
+2026-10-22T08:20:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_sample_post,257,https://x.com/hhp121222/status/2113164258955374801
+2026-10-22T08:20:00Z,微信回应iPhone Duo不适配,weibo_rank,27,soso.re 16:15 #27 微信回应iPhoneDuo不适配 324462；#25 iPhoneDuo微信不适配 332444
+2026-10-22T08:20:00Z,微信回应iPhone Duo不适配,weibo_heat,324462,soso.re/weibo 16:15
