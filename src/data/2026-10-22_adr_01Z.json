@@ -1,0 +1,191 @@
+{
+ "type": "adr",
+ "title": "美股中概 & 出海简报｜2026-10-22 早报",
+ "timestamp": "2026-10-22T01:40:00Z",
+ "edition_date": "2026-10-22",
+ "slot": "01Z",
+ "beijing_time": "2026-10-22 09:40",
+ "lede": "美东10-21中概逆势大跌，金龙指数收跌2.35%、恒生科技白天先跌破4000点；段永平称泡泡玛特还会再买但持股不超10%（补漏）；SHEIN美国条款改为客服协助只是“好意”。",
+ "window": {
+  "start_beijing": "2026-10-21 23:10",
+  "end_beijing": "2026-10-22 09:40"
+ },
+ "alert_worthy": false,
+ "push_needed": true,
+ "top3": [
+  "中概10-21收盘·金龙跌2.35%",
+  "段永平：泡泡玛特还会再买但不超10%",
+  "SHEIN美国条款：客服协助只是“好意”"
+ ],
+ "focus": {
+  "滴滴": "过夜无新公司级线索；Keeta诉99Food已在今早大厂早报收录；繁简价差主帖约18.22万无回应",
+  "字节/TikTok": "TikTok Shop美区黑五大促定档11-11至11-30；无新八卦",
+  "中国大模型": "本期无新的出海/IPO动态"
+ },
+ "markdown_file": "2026-10-22_adr_01Z_digest.md",
+ "sections": [
+  {
+   "title": "⭐ 今日 Top 3",
+   "color": "#dc2626",
+   "items": [
+    {
+     "id": "20261022-adr01z-market",
+     "company": "中概股（HXC）/ 阿里 / 京东 / 拼多多 / 小鹏 / 好未来",
+     "tag": "实锤",
+     "source_types": [
+      "财经媒体",
+      "X"
+     ],
+     "date": "10-21（美东）",
+     "event_time": "2026-10-22 04:00 北京时间（美股收盘）",
+     "text": "美东10-21（周三）美股三大指数收涨、纳指约+1.05%，中概却逆势普跌：纳斯达克中国金龙指数收跌2.35%报5584.79点，盘中一度跌超3%。小鹏跌超5%（前一日刚涨7.6%），阿里、京东、理想、拼多多跌超3%，B站、百度、蔚来跌超2%，网易、知乎跌超1%；好未来盘中一度跌9.67%、禾赛跌7.59%。白天港股恒生科技指数跌破4000点、创2024年10月以来新低，腾讯跌超4%失守400港元。媒体归因于前一日智驾链涨多后的获利回吐、港股白天先跌的补跌，以及10年期美债收益率在5.1%上方压制成长股估值，没有单一公司利空。",
+     "links": [
+      {
+       "label": "东方财富/每经：金龙指数收跌2.35%",
+       "url": "https://finance.eastmoney.com/a/202610223903075210.html"
+      },
+      {
+       "label": "钛媒体：盘中跌超3%、好未来跌9.67%",
+       "url": "https://www.tmtpost.com/nictation/8176916.html"
+      },
+      {
+       "label": "智通财经（同花顺）：恒生科技跌破4000点",
+       "url": "https://stock.10jqka.com.cn/20261021/c680925904.shtml"
+      },
+      {
+       "label": "网易·懂财帝：为什么美股涨、中概跌",
+       "url": "https://www.163.com/dy/article/L9Q3ADJF0519MB19.html"
+      },
+      {
+       "label": "X @SimonLe99917871（470浏览）",
+       "url": "https://x.com/SimonLe99917871/status/2113041389042672080"
+      },
+      {
+       "label": "X @ManQinHelper（293浏览）",
+       "url": "https://x.com/ManQinHelper/status/2112953675236978773"
+      }
+     ],
+     "lang": "zh"
+    },
+    {
+     "id": "20261022-adr01z-popmart",
+     "company": "泡泡玛特 / 段永平",
+     "tag": "实锤",
+     "source_types": [
+      "财经媒体",
+      "雪球（本人发言）",
+      "X"
+     ],
+     "date": "10-21（补漏）",
+     "event_time": "2026-10-21（港股收盘后）",
+     "text": "泡泡玛特10-21港股收跌4.84%报129.8港元，自10-14起五连跌、累计跌超13%，回到2025年4月以来低位。第二大股东段永平在雪球回应还会再买一些，但持股不会超过总股本10%，理由是超过10%就有召集股东大会、请求解散公司等权利，管理层和原大股东会“有意见”；他还说自己被说成“泡泡玛特代理人”，以后不想再回答，对错几年后才知道。港交所披露其持股约8.01%，市场估算成本约152港元/股；高盛渠道跟踪称三季度天猫+抖音销售同比-30%、美国信用卡数据-58%，公司三季度业务更新尚未公布。X 上“浮亏22亿”帖约10.4万浏览。前一晚每日总结未收，本期补漏。",
+     "links": [
+      {
+       "label": "新浪财经：泡泡玛特五连跌，段永平还会再买",
+       "url": "https://finance.sina.com.cn/stock/marketresearch/2026-10-21/doc-inivysyi5420242.shtml"
+      },
+      {
+       "label": "京报网：段永平“应该还会再买一些”",
+       "url": "https://news.bjd.com.cn/2026/10/21/12003992.shtml"
+      },
+      {
+       "label": "东方财富：股价已五连跌",
+       "url": "https://finance.eastmoney.com/news/1345,202610213902914131.html"
+      },
+      {
+       "label": "X @maodi86（约10.4万浏览）",
+       "url": "https://x.com/maodi86/status/2112846219647266896"
+      },
+      {
+       "label": "X @RJDAIGOGO（3594浏览）",
+       "url": "https://x.com/RJDAIGOGO/status/2112845719522697713"
+      }
+     ],
+     "lang": "zh"
+    },
+    {
+     "id": "20261022-adr01z-shein-terms",
+     "company": "SHEIN",
+     "tag": "实锤",
+     "source_types": [
+      "官网条款",
+      "条款监测站"
+     ],
+     "date": "10-21",
+     "event_time": "2026-10-21（条款生效日）",
+     "text": "SHEIN美国站10-21更新使用条款（官网条款页修改时间显示为10-21），据条款监测站 QuietlyChanged 比对，唯一实质改动是新增第17条“客户支持”：SHEIN“可酌情”协助处理物流、退款、支付等问题，但除非另有政策明确规定，这类协助只是“一种好意”，不构成解决快递、银行、支付机构或第三方卖家造成问题的合同义务，可以把用户转给相关第三方。原有“14天内向客服申报运输丢损”等承诺不变。监测站称当天没查到媒体或社交平台报道。",
+     "translation_zh": "SHEIN 可酌情协助处理订单的发货、配送、退货、退款或付款问题，并会以合理方式处理客服咨询。除非 SHEIN 政策另有明确规定，任何此类协助均属好意，不构成 SHEIN 解决由承运商、银行、支付处理方、第三方卖家或其他第三方造成之问题的合同义务。若需第三方介入才能解决，我们可能会将您转介给该第三方。",
+     "original": "SHEIN may, in its discretion, assist with questions about the shipment, delivery, return, refund, or payment of an order, and will handle customer service inquiries in a reasonable manner. Unless a SHEIN policy expressly states otherwise, any such assistance is a courtesy and does not create a contractual obligation for SHEIN to resolve issues caused by carriers, banks, payment processors, Third-Party Sellers, or other third parties. Where a third party's involvement is necessary to resolve your issue, we may refer you to that third party.",
+     "links": [
+      {
+       "label": "QuietlyChanged：SHEIN 10-21 条款改动比对",
+       "url": "https://quietlychanged.com/changes/2026-10-21-shein-new-oct-21-terms-call-customer-support-a-courtesy-not-an-obligation-when/"
+      },
+      {
+       "label": "SHEIN 美国使用条款（官网）",
+       "url": "https://us.shein.com/Terms-and-Conditions-a-399.html"
+      }
+     ],
+     "lang": "en",
+     "pending": [
+      "待补充：X 热度——X 上暂无相关帖"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🧸 出海动态",
+   "color": "#0891b2",
+   "items": [
+    {
+     "id": "20261022-adr01z-tiktok-bfcm",
+     "company": "TikTok Shop",
+     "tag": "实锤",
+     "source_types": [
+      "行业媒体"
+     ],
+     "date": "10-21",
+     "event_time": "2026-10-21",
+     "text": "TikTok Shop美国站黑五网一大促定档11-11至11-30，共20天，靠丝芙兰、百思买、维密等大品牌直播和头部达人拉动；平台称上半年美国直播带货销售额同比翻倍，去年黑五四天销售额超5亿美元。跨境日报称全托管模式同步扩展到16国。属业务新闻，无八卦。",
+     "lang": "en",
+     "translation_zh": "TikTok Shop 的黑五/网一假日活动将于 11 月 11 日至 30 日进行，平台寄望大品牌直播和成熟达人带动假日销售。",
+     "original": "TikTok Shop's Black Friday/Cyber Monday holiday campaign will run from Nov. 11 to Nov. 30 ... The platform is counting on livestreams from bigger brands and more established creators to drive holiday sales.",
+     "links": [
+      {
+       "label": "Retail Brew（10-21）",
+       "url": "https://www.retailbrew.com/stories/tiktok-shop-announces-three-week-black-friday-cyber-monday-promotions"
+      },
+      {
+       "label": "AltoSea 跨境日报（10-21）",
+       "url": "https://aitosea.ai/daily-reports/2026-10-21"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🎯 重点追踪",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "id": "20261022-adr01z-didi",
+     "company": "滴滴 & 滴滴出海",
+     "tag": "统计",
+     "source_types": [
+      "X",
+      "媒体检索"
+     ],
+     "date": "10-22",
+     "text": "本期无新动态：过夜 X 检索（滴滴/DiDi/99Food）只有无关的“滴滴滴”口头语帖，无公司级新线索；美团 Keeta 在巴西告 99Food 违抗禁令已在今早大厂早报 Top 1 收录，不重复；巴西媒体另有 99Food 新开若昂佩索阿、特雷西纳等城市的稿件，属赞助稿不采用。繁简价差主帖约18.22万浏览，无回应。",
+     "links": [
+      {
+       "label": "O Globo：Keeta 诉 99Food（见大厂早报）",
+       "url": "https://oglobo.globo.com/blogs/lauro-jardim/post/2026/10/keeta-aciona-tj-sp-contra-99food-por-descumprimento-de-ordem-que-derrubou-clausula-de-banimento.ghtml"
+      }
+     ],
+     "lang": "zh"
+    }
+   ]
+  }
+ ]
+}

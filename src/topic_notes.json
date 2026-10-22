@@ -909,6 +909,50 @@
     }
    ],
    "recorded_at": "2026-10-21T08:26:00Z"
+  },
+  "姚顺雨把DeepSeek卷到加班": {
+   "summary": "晚点 LatePost 10-20 报道：腾讯首席 AI 科学家姚顺雨接手混元一年，团队扩到近 2000 人；据一位混元成员回忆，他在内部说过（大意）“不能像 DeepSeek 那样不加班，但可以把 DeepSeek 卷到加班”。腾讯和姚顺雨本人未公开回应，属媒体转述员工说法。",
+   "credibility": "传闻",
+   "event_time": "2026-10-20",
+   "sources": [
+    {
+     "label": "21经济网：把DeepSeek“卷”到加班，姚顺雨想把混元模型做成世界第一",
+     "url": "https://www.21jingji.com/article/20261021/herald/38aade432f7c456e7d66ef1d57946633.html"
+    },
+    {
+     "label": "格隆汇：转述晚点报道",
+     "url": "https://www.gelonghui.com/live/2719770"
+    }
+   ],
+   "recorded_at": "2026-10-22T01:00:00Z"
+  },
+  "Keeta诉99Food违抗禁令": {
+   "summary": "美团海外外卖品牌 Keeta 10-16 向巴西圣保罗州法院申诉，指滴滴旗下 99Food 违抗 9-29 判决，用“最多再选 1 家平台”的新条款变相封杀 Keeta，已发现 45 个以上案例。99Food 回应称新条款符合法院裁决、判决仍可上诉。O Globo、Estadão/UOL 10-21 报道。",
+   "credibility": "实锤",
+   "event_time": "2026-10-21",
+   "sources": [
+    {
+     "label": "O Globo（Lauro Jardim 专栏，葡语）",
+     "url": "https://oglobo.globo.com/blogs/lauro-jardim/post/2026/10/keeta-aciona-tj-sp-contra-99food-por-descumprimento-de-ordem-que-derrubou-clausula-de-banimento.ghtml"
+    },
+    {
+     "label": "UOL/Estadão（葡语）",
+     "url": "https://economia.uol.com.br/noticias/estadao-conteudo/2026/10/21/keeta-acusa-99food-de-descumprir-ordem-da-justica-de-sp-e-99-fala-em-evolucao-dos-contratos.htm"
+    }
+   ],
+   "recorded_at": "2026-10-22T01:00:00Z"
+  },
+  "小米成立独立汽车安全研究中心": {
+   "summary": "雷军 10-21 在世界智能网联汽车大会上说，小米内部成立了汽车安全研究中心和独立研发机构，独立调查端到端问题，并设全域安全部、汽车安全顾问委员会，安全相关团队超 3000 人。10-22 早上微博热搜 #41。",
+   "credibility": "官方",
+   "event_time": "2026-10-21",
+   "sources": [
+    {
+     "label": "北京商报（东方财富转载）：小米汽车雷军：安全高于一切",
+     "url": "https://wap.eastmoney.com/a/202610213902943510.html"
+    }
+   ],
+   "recorded_at": "2026-10-22T01:00:00Z"
   }
  }
 }

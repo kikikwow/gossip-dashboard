@@ -1,0 +1,310 @@
+{
+ "type": "bigtech",
+ "title": "中国大厂八卦简报｜2026-10-22 早报",
+ "timestamp": "2026-10-22T01:00:00Z",
+ "edition_date": "2026-10-22",
+ "slot": "01Z",
+ "lede": "过夜窗口：美团 Keeta 在巴西告滴滴 99Food 违抗法院禁令；姚顺雨“把 DeepSeek 卷到加班”在 X 二次发酵；问界 M9 起火舆论转向“公关只字不提遇难司机”，微博 #2/#8。",
+ "alert_note": "早报，不单独警报",
+ "alert_worthy": false,
+ "top3": [
+  "美团Keeta告99Food违令",
+  "姚顺雨把DeepSeek卷到加班",
+  "问界M9起火公关应对"
+ ],
+ "focus": {
+  "滴滴": "巴西Keeta告99Food违抗禁令；繁简价差18.22万无回应；广州司机多收150元被查（补漏）；太原“滴滴司机”帖实为出租车",
+  "字节": "红果金币下线降温至微博#18；RTX PRO 5500 传闻移出短期",
+  "中国大模型": "姚顺雨卷到加班（补漏）；月之暗面进新加坡（补漏）；DeepSeek禁令美东再炒；DeepInfer回落"
+ },
+ "short_term_notes": "已移出 字节阿里腾讯抢购英伟达RTX PRO 5500；无新加入；短期5项",
+ "overseas_local_lang": [
+  "20261022-bt01z-keeta-99food"
+ ],
+ "window": "2026-10-21T14:50Z → 2026-10-22T00:58Z",
+ "markdown_file": "2026-10-22_bigtech_01Z_digest.md",
+ "sections": [
+  {
+   "title": "⭐ 今日 Top 3",
+   "color": "#dc2626",
+   "items": [
+    {
+     "id": "20261022-bt01z-keeta-99food",
+     "company": "美团（Keeta） vs 滴滴出海·巴西（99Food）",
+     "tag": "实锤",
+     "source_types": [
+      "媒体(葡语)",
+      "法院文书(据媒体)",
+      "公司回应",
+      "X(葡语)"
+     ],
+     "date": "10-21",
+     "text": "美团海外外卖品牌 Keeta 上周五（10-16）向巴西圣保罗州法院（TJ-SP）申诉，指滴滴旗下 99Food 违抗 9-29 的判决：法院当时认定 99Food 与餐厅签的“封杀 Keeta”条款违法，禁止它用任何变相写法（如“新进入者”“未签约平台”）排挤 Keeta，违者每份合同罚 10 万雷亚尔。Keeta 称判决第二天 99Food 就给餐厅发补充协议，把“禁止接 Keeta”改成“除 99Food 外最多再选 1 家平台”，实际效果仍是挡住 Keeta，已发现 45 个以上案例，还有 WhatsApp 截图显示 99 对餐厅说旧合同照样有效。99Food 回应称新条款符合法院临时裁决、减轻了餐厅负担，判决仍可上诉，并坚称“部分独家”合法、是对抗占八成市场的 iFood 所必需。巴西反垄断机构 CADE 对 99Food 合同的调查仍在进行。O Globo 10-21 首发，Estadão/UOL 当晚跟进。",
+     "lang": "pt",
+     "translation_zh": "Keeta 就 99Food 违反“推翻封杀条款”的法院命令向圣保罗州法院提起申诉。[…] 新条款写的是：餐厅承诺用 99Food 做外卖，并且“如果愿意，可以再选最多 1 个其他外卖平台，自由选择”。这一改动在 45 个以上案例中被发现。（O Globo/Lauro Jardim 专栏）——“谈判是在双方同意、充分讨论的基础上进行的。99Food 重申对部分独家条款的合法性和经济合理性有信心，行业里其他平台也采用这种模式。”（99Food 回应，Estadão 通讯社/UOL）",
+     "original": "Keeta aciona TJ-SP contra 99Food por descumprimento de ordem que derrubou cláusula de banimento. […] Na nova redação, os estabelecimentos se comprometem a operar seu serviço de delivery com a 99Food e, \"se assim desejar, em até 1 (uma) outra plataforma digital de intermediação de pedidos de alimentação, à sua livre escolha\". A mudança foi identificada em mais de 45 casos. (O Globo/Lauro Jardim) — \"As negociações estão sendo conduzidas em comum acordo e mediante amplo debate. A 99Food reforça sua confiança na legalidade e na racionalidade econômica das cláusulas de exclusividade parcial, modelo também praticado por outras plataformas do setor.\" (99Food, via Estadão Conteúdo/UOL)",
+     "links": [
+      {
+       "label": "O Globo（Lauro Jardim 专栏）：Keeta 就 99Food 违反禁令向圣保罗法院申诉（葡语）",
+       "url": "https://oglobo.globo.com/blogs/lauro-jardim/post/2026/10/keeta-aciona-tj-sp-contra-99food-por-descumprimento-de-ordem-que-derrubou-clausula-de-banimento.ghtml"
+      },
+      {
+       "label": "UOL/Estadão：Keeta 指控 99Food 违令，99 称是在“优化合同”（葡语）",
+       "url": "https://economia.uol.com.br/noticias/estadao-conteudo/2026/10/21/keeta-acusa-99food-de-descumprir-ordem-da-justica-de-sp-e-99-fala-em-evolucao-dos-contratos.htm"
+      },
+      {
+       "label": "Abrasel：9-29 判决禁止 99Food 以任何形式封杀 Keeta、每份合同罚 10 万雷亚尔（葡语）",
+       "url": "https://cspr.abrasel.com.br/noticias/noticias/acordao-do-tj-sp-proibe-99food-de-barrar-a-keeta-ate-com-clausulas-genericas261007120527/"
+      },
+      {
+       "label": "X @laurojardim（约3563浏览）",
+       "url": "https://x.com/laurojardim/status/2112950582960893963"
+      }
+     ]
+    },
+    {
+     "id": "20261022-bt01z-yaoshunyu-hunyuan",
+     "company": "腾讯（混元） / DeepSeek",
+     "tag": "传闻",
+     "source_types": [
+      "媒体(晚点LatePost·员工转述)",
+      "X"
+     ],
+     "date": "10-20→10-21（补漏）",
+     "text": "前两期漏收、昨夜 X 上二次发酵：晚点 LatePost 10-20 报道，28 岁的腾讯首席 AI 科学家姚顺雨接手混元一年，团队扩到近 2000 人；据一位混元成员回忆，他在内部说过（大意）“我们不能像 DeepSeek 那样不加班，但可以把 DeepSeek 卷到加班”，还定下“成为世界第一之前不发技术报告”。报道还称 Hy4 Preview 发布后他给研究员集体放了一周假，并把模型应用中心、搜索算法中心划给元宝所在事业群，在混元自研模型没好时派后训练骨干帮元宝调接入的 DeepSeek。腾讯和姚顺雨本人未公开回应。X 上 @NFT_Chen 昨晚的“姚顺雨如何管理近2000人”帖约 9217 浏览，@AsiaFinance 10-20 的“腾讯混元查无此人？”帖约 2.25 万；“腾讯为什么要逼 DeepSeek 加班”成了吐槽点。X 发帖量不大（10-20 起累计约 94 帖，昨晚 22Z 有 9 帖小高峰）。",
+     "links": [
+      {
+       "label": "21经济网：把DeepSeek“卷”到加班，姚顺雨想把混元模型做成世界第一",
+       "url": "https://www.21jingji.com/article/20261021/herald/38aade432f7c456e7d66ef1d57946633.html"
+      },
+      {
+       "label": "格隆汇：腾讯姚顺雨：不能像DeepSeek那样不加班，但可以把DeepSeek卷到加班（转述晚点）",
+       "url": "https://www.gelonghui.com/live/2719770"
+      },
+      {
+       "label": "新浪新闻：#腾讯姚顺雨想把DeepSeek卷到加班#",
+       "url": "https://www.sina.cn/news/detail/5356442196117513.html"
+      },
+      {
+       "label": "X @NFT_Chen（约9217浏览）",
+       "url": "https://x.com/NFT_Chen/status/2113028875647426966"
+      },
+      {
+       "label": "X @AsiaFinance（约2.25万浏览）",
+       "url": "https://x.com/AsiaFinance/status/2112537503022580108"
+      }
+     ]
+    },
+    {
+     "id": "20261022-bt01z-aito-pr",
+     "company": "问界（赛力斯 / 华为鸿蒙智行）",
+     "tag": "实锤",
+     "source_types": [
+      "警方(据媒体)",
+      "公司说明",
+      "媒体",
+      "微博",
+      "X"
+     ],
+     "date": "10-21→10-22",
+     "text": "神木问界 M9 起火事故一夜之间从“车出了什么事”变成“公关怎么写”：今早 08:52 微博热搜 #2「问界M9事故系单方事故」（约127.2万）、#8「问界M9起火公关应对」（约73.7万）、#31「问界辟谣网传电池爆燃智驾撞击」（约23.2万）同时在榜。焦点是问界说明写清了人驾、车速 139.1km/h（限速50）、否认电池爆燃和智驾，却只字未提已遇难的司机，结尾还要大家“不信谣不传谣”；虎嗅评论称“人的缺席”让“深表痛心”显得不真诚。神木交警调查结论仍未出，问界也没有补充回应伤亡。X 上 @whyyoutouzhele 转发警方通报的帖子约 5.25 万浏览；X 每小时发帖从夜间 6–21 帖回升到今早 00Z 的 48 帖。",
+     "links": [
+      {
+       "label": "虎嗅：问界新能源起火声明：一句不提人员伤亡？",
+       "url": "https://www.huxiu.com/article/4899334.html"
+      },
+      {
+       "label": "快科技（新浪）10-22：司机已遇难！问界回应车辆起火",
+       "url": "https://finance.sina.cn/tech/2026-10-22/detail-inivzyty4742477.d.html?fromtech=1&pos=108&vt=4"
+      },
+      {
+       "label": "微博热搜镜像 soso.re（08:52）",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "X @whyyoutouzhele（约5.25万浏览）",
+       "url": "https://x.com/whyyoutouzhele/status/2112931917989286130"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🎯 重点追踪",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "id": "20261022-bt01z-didi-fanjian",
+     "company": "滴滴",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-14→10-22",
+     "text": "繁简价差主帖 @Furinanatw 约 18.22 万浏览，一夜几乎没涨，仍无新证据、滴滴无回应；香港网约车牌照申请 10-30 截止，暂无新消息。",
+     "links": [
+      {
+       "label": "X @Furinanatw（约18.22万浏览）",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      }
+     ]
+    },
+    {
+     "id": "20261022-bt01z-didi-gz-driver",
+     "company": "滴滴（网约车·广州）",
+     "tag": "官方",
+     "source_types": [
+      "交通执法部门(据媒体)"
+     ],
+     "date": "10-21",
+     "text": "补漏：广州一名网约车司机韦某 10-16 在广州南站线下揽客，到广州白云站多收乘客 150 元；广州市交通运输局 10-19 立案、罚款并责令退款，滴滴对其做了 1 周内不派单的内部处理，乘客表示满意。凤凰网 10-21 14:23 刊发。",
+     "links": [
+      {
+       "label": "凤凰网：网约车司机韦某收取车费比正常价格贵150元，被立案查处",
+       "url": "https://news.ifeng.com/c/8xP6kKCLGe6"
+      }
+     ]
+    },
+    {
+     "id": "20261022-bt01z-taiyuan-not-didi",
+     "company": "滴滴（辟误）",
+     "tag": "待核实",
+     "source_types": [
+      "X",
+      "媒体"
+     ],
+     "date": "10-21",
+     "text": "X 上昨晚有几条帖子把太原“醉酒女乘客与司机车内亲密”视频说成“滴滴司机”，但网易等报道写的是出租车司机，太原警方未见通报，视频真伪和细节待核实，目前没有证据和滴滴有关。",
+     "links": [
+      {
+       "label": "网易：网传太原出租车内发生“亲密行为” 律师：若乘客处于无意识状态司机或涉嫌违法",
+       "url": "https://www.163.com/dy/article/L9KL3JI605539XL0.html"
+      }
+     ]
+    },
+    {
+     "id": "20261022-bt01z-hongguo-cool",
+     "company": "字节跳动 / 红果短剧",
+     "tag": "实锤",
+     "source_types": [
+      "微博",
+      "X"
+     ],
+     "date": "10-21→10-22",
+     "text": "红果短剧下线“看剧赚金币”一夜降温：微博从昨晚 #1（约155.3万）降到今早 #18（约73.0万）；X 每小时发帖 15Z 起 26→11→8→7→2→2→4→1→6→12，今早略回升。官方没有新动作，客服仍称内容免费、不收费。",
+     "links": [
+      {
+       "label": "IT之家：红果短剧宣布下线金币功能",
+       "url": "https://www.ithome.com/1/015/978.htm"
+      },
+      {
+       "label": "X @qg7777（约1244浏览）",
+       "url": "https://x.com/qg7777/status/2112937195405545890"
+      }
+     ]
+    },
+    {
+     "id": "20261022-bt01z-moonshot-sg",
+     "company": "月之暗面（Kimi）",
+     "tag": "实锤",
+     "source_types": [
+      "外媒(路透)",
+      "X"
+     ],
+     "date": "10-21（补漏）",
+     "text": "补漏：路透 10-21 报道，月之暗面在 LinkedIn 挂出新加坡销售岗（10-20 发布），要找有销售、风投、咨询、产品或工程背景的人，把“早期胜利转化为规模收入、战略合作和市场存在”；TokenPost 等称该“Business Builder & Ecosystem”岗年薪底薪 10 万–50 万新元。其新加坡实体 2023 年 7 月注册、2026 年 6 月更名为 Novascent，Kimi 用户协议的签约方就是这家公司。月之暗面未回应。X 上讨论很少，被解读为“从卷模型到卷卖钱”。",
+     "lang": "zh",
+     "links": [
+      {
+       "label": "路透（US News 转载）：China's Moonshot AI to Operate in Singapore, Jobs Post Shows",
+       "url": "https://money.usnews.com/investing/news/articles/2026-10-21/chinas-moonshot-ai-to-operate-in-singapore-jobs-post-shows"
+      },
+      {
+       "label": "The Business Times：同题报道",
+       "url": "https://www.businesstimes.com.sg/companies-markets/chinas-moonshot-ai-operate-singapore-jobs-post-shows"
+      },
+      {
+       "label": "TokenPost：岗位薪资 10万–50万新元",
+       "url": "https://www.tokenpost.com/news/business/37189"
+      },
+      {
+       "label": "X @MingJingNews（约1431浏览）",
+       "url": "https://x.com/MingJingNews/status/2112983028381208924"
+      }
+     ]
+    },
+    {
+     "id": "20261022-bt01z-deepseek-ban-us-morning",
+     "company": "DeepSeek / 美国 DHS",
+     "tag": "实锤",
+     "source_types": [
+      "外媒",
+      "X"
+     ],
+     "date": "10-21→10-22",
+     "text": "美国禁用 DeepSeek 话题在美东白天被英文媒体再炒一轮（如 SecurityWeek“中国为 DeepSeek 辩护”），X 发帖从夜间每小时 12–20 帖跳到 23Z 72 帖、00Z 100 帖📈，但没有新的官方动作，内容仍是 10-20 DHS 公告和中方表态。DeepInfer/华为驻场话题继续回落，每小时 45–59 帖📉，@tianyi 开源帖约 28.6 万浏览。",
+     "translation_zh": "中国为 DeepSeek 辩护：此前美国禁止其 AI 进入政府系统。",
+     "original": "China Defends DeepSeek After US Ban of Its AI From Government Systems",
+     "links": [
+      {
+       "label": "X @SecurityWeek（约582浏览）",
+       "url": "https://x.com/SecurityWeek/status/2113056991849349187"
+      },
+      {
+       "label": "X @tianyi（DeepInfer 开源帖，约28.6万浏览）",
+       "url": "https://x.com/tianyi/status/2112471106426900677"
+      },
+      {
+       "label": "X 新闻页：DHS Orders Federal Agencies to Remove DeepSeek AI Products",
+       "url": "https://x.com/i/trending/2112188369618784335"
+      }
+     ]
+    },
+    {
+     "id": "20261022-bt01z-rtx5500-out",
+     "company": "字节跳动 / 阿里巴巴 / 腾讯",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-20→10-22",
+     "text": "路透“三家合订超300万张 RTX PRO 5500”两天无新事实、三家仍未回应，X 每小时只剩 2–9 帖，本期移出短期追踪；@_FORAB 解读帖累计约 7.48 万浏览。",
+     "links": [
+      {
+       "label": "X @_FORAB（约7.48万浏览）",
+       "url": "https://x.com/_FORAB/status/2112495864317125032"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🚗 车圈·华为/小米",
+   "color": "#ea580c",
+   "items": [
+    {
+     "id": "20261022-bt01z-xiaomi-safety",
+     "company": "小米汽车",
+     "tag": "官方",
+     "source_types": [
+      "公开讲话",
+      "媒体",
+      "微博"
+     ],
+     "date": "10-21",
+     "text": "雷军 10-21 在世界智能网联汽车大会上说小米内部成立了汽车安全研究中心和独立研发机构，专门独立调查端到端问题，还设了全域安全部、汽车安全顾问委员会，安全相关团队已超 3000 人。正赶上问界起火舆论，今早微博 #41「小米成立独立汽车安全研究中心」（约17.3万）。",
+     "links": [
+      {
+       "label": "北京商报（东方财富转载）：小米汽车雷军：安全高于一切",
+       "url": "https://wap.eastmoney.com/a/202610213902943510.html"
+      },
+      {
+       "label": "微博热搜镜像 soso.re（08:52）",
+       "url": "https://soso.re/weibo"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
