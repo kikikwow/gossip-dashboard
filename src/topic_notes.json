@@ -953,6 +953,26 @@
     }
    ],
    "recorded_at": "2026-10-22T01:00:00Z"
+  },
+  "DeepSeek完成千亿融资": {
+   "summary": "彭博 10 月 22 日（北京时间 10:17）援引知情人士报道，DeepSeek 新一轮融资已筹得约 1000 亿元人民币（约 150 亿美元），是中国规模最大的融资之一。融资目标在洽谈中至少两次上调，从 500 亿元到 800 亿元，最终约 1000 亿元，宁德时代和腾讯是最大出资方之一。10 月 6 日彭博、路透曾报「接近完成至少 800 亿元」，这次是完成口径；DeepSeek、腾讯、宁德时代均未回应置评。",
+   "credibility": "传闻",
+   "event_time": "2026-10-22",
+   "sources": [
+    {
+     "label": "彭博【付费】：DeepSeek Raises $15 Billion in Challenge to Leading US Labs",
+     "url": "https://www.bloomberg.com/news/articles/2026-10-22/deepseek-raises-15-billion-in-challenge-to-leading-us-labs"
+    },
+    {
+     "label": "凤凰网：消息称DeepSeek已融资1000亿元",
+     "url": "https://original.ifeng.com/c/8xQSeOBHHiq"
+    },
+    {
+     "label": "IT之家：DeepSeek 最新一轮融资筹集近千亿元",
+     "url": "https://www.ithome.com/1/016/263.htm"
+    }
+   ],
+   "recorded_at": "2026-10-22T03:25:00Z"
   }
  }
 }

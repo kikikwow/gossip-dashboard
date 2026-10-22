@@ -1119,3 +1119,18 @@ timestamp_utc,topic,metric,value,source
 2026-10-22T01:30:00Z,泡泡玛特 段永平,x_posts_day_1021,56,x_counts (泡泡玛特 OR "Pop Mart") 段永平 10-21 全天；10-22 00Z起 5
 2026-10-22T01:30:00Z,泡泡玛特 段永平,x_sample_post,104263,https://x.com/maodi86/status/2112846219647266896
 2026-10-22T01:30:00Z,泡泡玛特 段永平,x_sample_post,3594,https://x.com/RJDAIGOGO/status/2112845719522697713
+2026-10-22T03:25:00Z,DeepSeek完成千亿融资,x_posts_hour_02Z,45,x_counts DeepSeek (15 billion OR 融资 OR 估值...) 02Z
+2026-10-22T03:25:00Z,DeepSeek完成千亿融资,x_posts_hour_03Z_partial18m,51,x_counts same query 03:00–03:18Z; 22Z–01Z=6/5/11/14
+2026-10-22T03:25:00Z,DeepSeek完成千亿融资,x_sample_post,5054,https://x.com/TechHornLab/status/2113087660147580944
+2026-10-22T03:25:00Z,DeepSeek完成千亿融资,x_sample_post,1998,https://x.com/MTSlive/status/2113098923636371641
+2026-10-22T03:25:00Z,DeepSeek完成千亿融资,x_sample_post,694,https://x.com/miraclemasui/status/2113096403102863617
+2026-10-22T03:25:00Z,问界神木碰撞起火·官方回应,x_posts_hour,63,x_counts 问界 起火/神木/事故/公关 02Z; 00Z/01Z=50/49
+2026-10-22T03:25:00Z,问界神木碰撞起火·官方回应,weibo_rank,45,soso.re 11:12 #45 问界称起火车辆事发时为超速状态 148634
+2026-10-22T03:25:00Z,问界神木碰撞起火·官方回应,weibo_heat,148634,soso.re/weibo 11:12
+2026-10-22T03:25:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour,20,x_counts DeepSeek ban/DHS 02Z; 00Z/01Z=99/20
+2026-10-22T03:25:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_posts_hour,50,x_counts DeepInfer OR DeepSeek 华为/昇腾 02Z; 00Z/01Z=73/64
+2026-10-22T03:25:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_sample_post,1,https://x.com/AlokBarai12/status/2113091088366149680
+2026-10-22T03:25:00Z,红果短剧下线金币·自砍摇钱树,weibo_rank,30,soso.re 11:12 #30 红果短剧自砍摇钱树 208617; #43 红果短剧暂无全面收费计划 156732
+2026-10-22T03:25:00Z,红果短剧下线金币·自砍摇钱树,weibo_heat,208617,soso.re/weibo 11:12
+2026-10-22T03:25:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour,27,x_counts 红果 短剧/金币/收费 02Z; 00Z/01Z=13/24
+2026-10-22T03:25:00Z,京东 抖音,x_posts_hour,5,x_counts (京东 抖音) OR 左琦 OR 网经社 02Z; 00Z/01Z=0/1

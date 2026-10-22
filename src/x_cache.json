@@ -1,6 +1,6 @@
 {
  "source": "https://api.fxtwitter.com/status/{id}",
- "fetched_at": "2026-10-22T01:27:37Z",
+ "fetched_at": "2026-10-22T03:20:39Z",
  "note": "静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。",
  "posts": {
   "2106320822444949760": {
@@ -3487,6 +3487,66 @@
    "bookmarks": 0,
    "url": "https://x.com/SimonLe99917871/status/2113041389042672080",
    "fetched_at": "2026-10-22T01:27:37Z"
+  },
+  "2113087660147580944": {
+   "status": "ok",
+   "text": "Tencent, CATL and Geely are reportedly putting money into the same company: DeepSeek.\n\nAccording to Caijing, DeepSeek is nearing completion of a second funding round that has doubled from roughly $7.5 billion to $15 billion, at an unchanged valuation of about $75 billion before the investment. CATL alone reportedly plans to add around $1.5 billion.\n\nThere is a shift in who Liang Wenfeng wants on board. Caijing reports that he increasingly favors industrial investors with resources DeepSeek can use. Tencent brings cloud services and applications. CATL and Geely bring batteries, cars and manufacturing. These companies could become major customers as well as shareholders.\n\nThat makes this more than another huge funding headline. Some of China’s biggest companies are becoming owners of DeepSeek. When they decide which AI models to buy and deploy, where does that leave DeepSeek?\n\n#DeepSeek #Tencent #CATL #ChinaAI",
+   "author": "@TechHornLab",
+   "name": "TechHorn Lab",
+   "created_at": "2026-10-22T01:58:52Z",
+   "views": 5054,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/TechHornLab/status/2113087660147580944",
+   "fetched_at": "2026-10-22T03:20:39Z"
+  },
+  "2113091088366149680": {
+   "status": "ok",
+   "text": "Stop paying $200/mo for closed-source AI.\n\nDeepSeek just open-sourced DeepInfer (for V4.1-Flash)—running natively on Nvidia Blackwell SM100 & Huawei Ascend and cutting serving costs by 90%+.\n\nMeanwhile, Anthropic's leaked IPO filing shows an $80.7B H1 loss & $750B cloud lock",
+   "author": "@AlokBarai12",
+   "name": "Alok Barai",
+   "created_at": "2026-10-22T02:12:29Z",
+   "views": 1,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/AlokBarai12/status/2113091088366149680",
+   "fetched_at": "2026-10-22T03:20:39Z"
+  },
+  "2113096403102863617": {
+   "status": "ok",
+   "text": "[Bloomberg] 11:17 掲載\n\nDeepSeekが150億ドルを調達、米主要ラボに挑む\n\nDeepSeek Raises $15 Billion in Challenge to Leading US Labs\n\n中国のAIパイオニアであるDeepSeekは、最新の資金調達ラウンドで約1,000億元（150億ドル）を調達した。これは中国最大規模の調達の一つであり、Anthropic PBCやOpenAIなどの企業と世界的に競い合おうとする同スタートアップの野心の表れである。\n\nhttps://www.bloomberg.com/news/articles/2026-10-22/deepseek-raises-15-billion-in-challenge-to-leading-us-labs",
+   "author": "@miraclemasui",
+   "name": "増井",
+   "created_at": "2026-10-22T02:33:36Z",
+   "views": 700,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/miraclemasui/status/2113096403102863617",
+   "fetched_at": "2026-10-22T03:20:39Z"
+  },
+  "2113098923636371641": {
+   "status": "ok",
+   "text": "SITUATION DETECTED: DeepSeek raised $15 billion in one of China’s largest funding rounds ever. Tencent was a major investor, per Bloomberg.",
+   "author": "@MTSlive",
+   "name": "MTS",
+   "created_at": "2026-10-22T02:43:37Z",
+   "views": 2065,
+   "likes": 40,
+   "reposts": 4,
+   "replies": 2,
+   "quotes": 2,
+   "bookmarks": 2,
+   "url": "https://x.com/MTSlive/status/2113098923636371641",
+   "fetched_at": "2026-10-22T03:20:39Z"
   }
  }
 }

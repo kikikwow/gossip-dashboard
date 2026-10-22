@@ -1,0 +1,191 @@
+{
+ "routine": "大厂八卦热点快讯",
+ "type": "alert",
+ "title": "大厂八卦热点快讯",
+ "timestamp": "2026-10-22T03:18:00Z",
+ "edition_date": "2026-10-22",
+ "edition_id": "kuaixun_0318Z",
+ "fired_at_utc": "2026-10-22T03:17:31Z",
+ "scanned_at_utc": "2026-10-22T03:25:00Z",
+ "beijing_time": "2026-10-22 11:17–11:30 CST",
+ "window": "2026-10-22T00:58Z–03:20Z (北京 08:58–11:20，接 9:00 早报)",
+ "alert_sent": true,
+ "alert_worthy": true,
+ "reason": "DeepSeek新一轮约1000亿元（150亿美元）融资完成（彭博北京10:17报道，凤凰网/IT之家/Investing跟进），是长期重点话题「中国大模型」的重大新进展：此前各期只报过「接近完成/至少800亿」。X 相关发帖 01Z=14、02Z=45、03Z 前18分钟已51，快速扩散。其他短期话题无新事实；滴滴 Tier1+slot2 无有效新线索。",
+ "lede": "快讯窗北京08:58–11:20。信源：X公开检索（约16次）、微博热搜镜像soso.re（11:12）、RSS（新匹配1条：彭博DeepSeek融资）、网页交叉核实。警报1条：DeepSeek完成千亿融资。",
+ "items": [],
+ "top3": [],
+ "sections": [
+  {
+   "title": "⚡ 快讯",
+   "color": "#e4572e",
+   "items": [
+    {
+     "id": "20261022-kx0318Z-deepseek-funding",
+     "company": "DeepSeek / 腾讯 / 宁德时代",
+     "tag": "传闻",
+     "source_types": [
+      "外媒",
+      "媒体",
+      "X"
+     ],
+     "date": "10-22 10:17",
+     "event_time": "2026-10-22 10:17 北京时间（彭博发稿）",
+     "text": "彭博10-22报道，DeepSeek新一轮融资已筹得约1000亿元人民币（约150亿美元），是中国规模最大的融资之一；知情人士称目标从500亿元两次上调到800亿元、最终约1000亿元，宁德时代和腾讯是最大出资方之一。10-6彭博/路透曾报「接近完成至少800亿元」，本次为完成口径；DeepSeek、腾讯、宁德时代均未回应置评，属媒体援引知情人士。",
+     "lang": "en",
+     "translation_zh": "中国AI先锋DeepSeek在最新一轮融资中筹集约1000亿元人民币（150亿美元），是中国有史以来规模最大的融资之一，显示其与Anthropic、OpenAI在全球竞争的雄心。知情人士称，这家杭州公司在与投资者洽谈期间至少两次上调融资目标，从500亿元到800亿元，最终达到该数字；宁德时代和腾讯是本轮最大投资者之一。DeepSeek、腾讯和宁德时代代表未回复置评请求。",
+     "original": "The Chinese AI pioneer DeepSeek has raised about 100 billion yuan ($15 billion) in its latest fundraising round, one of the country's largest ever and a sign of the startup's ambitions to compete globally with the likes of Anthropic PBC and OpenAI. The Hangzhou-based firm boosted its financing target at least twice as it talked with investors, from 50 billion yuan to 80 billion yuan before reaching the final tally, according to people familiar with the matter. Battery pioneer Contemporary Amperex Technology Co. Ltd. and WeChat-operator Tencent Holdings Ltd. were among the biggest investors in the round... DeepSeek, Tencent and CATL representatives didn't respond to emailed requests for comment.",
+     "links": [
+      {
+       "label": "彭博【付费】",
+       "url": "https://www.bloomberg.com/news/articles/2026-10-22/deepseek-raises-15-billion-in-challenge-to-leading-us-labs"
+      },
+      {
+       "label": "凤凰网：DeepSeek已融资1000亿元",
+       "url": "https://original.ifeng.com/c/8xQSeOBHHiq"
+      },
+      {
+       "label": "Moneycontrol（彭博转载）",
+       "url": "https://www.moneycontrol.com/artificial-intelligence/deepseek-raises-15-billion-in-challenge-to-leading-us-labs-article-14057241.html"
+      },
+      {
+       "label": "IT之家",
+       "url": "https://www.ithome.com/1/016/263.htm"
+      },
+      {
+       "label": "X @TechHornLab",
+       "url": "https://x.com/TechHornLab/status/2113087660147580944"
+      },
+      {
+       "label": "X @MTSlive",
+       "url": "https://x.com/MTSlive/status/2113098923636371641"
+      }
+     ]
+    },
+    {
+     "id": "20261022-kx0318Z-wenjie",
+     "company": "问界（华为/赛力斯）",
+     "tag": "实锤",
+     "source_types": [
+      "微博热搜",
+      "X"
+     ],
+     "date": "10-22 11:12",
+     "event_time": "2026-10-17 事故 / 2026-10-21 官方说明",
+     "text": "问界神木起火事故热度在微博明显回落：早上#2「问界M9事故系单方事故」已出榜，11:12 仅剩#45「问界称起火车辆事发时为超速状态」约14.9万。X 每小时50/49/63帖持平，本窗没有交警结论或问界新回应。",
+     "links": [
+      {
+       "label": "微博热搜镜像",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "虎嗅",
+       "url": "https://www.huxiu.com/article/4899334.html"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "tracked_updates": [
+  {
+   "topic": "DeepSeek完成千亿融资",
+   "status": "新加入·升温",
+   "heat": "X 22Z–03Z=6/5/11/14/45/51(18分钟)；@TechHornLab≈5054"
+  },
+  {
+   "topic": "美国禁用DeepSeek·商务部回应",
+   "status": "追踪中·降温",
+   "heat": "X 00Z/01Z/02Z=99/20/20；无新官方动作"
+  },
+  {
+   "topic": "DeepSeek开源DeepInfer·华为联合设计芯片",
+   "status": "追踪中·降温",
+   "heat": "X 00Z/01Z/02Z=73/64/50；无新事实，22:50考虑移出"
+  },
+  {
+   "topic": "问界神木碰撞起火·官方回应",
+   "status": "追踪中·持平",
+   "heat": "X 50/49/63；微博#2→#45（148634）"
+  },
+  {
+   "topic": "红果短剧下线金币·自砍摇钱树",
+   "status": "追踪中·持平",
+   "heat": "微博#30（208617）+#43「红果短剧暂无全面收费计划」（156732）；X 13/24/27"
+  },
+  {
+   "topic": "京东 抖音",
+   "status": "追踪中·持平",
+   "heat": "X 0/1/5；无新声明"
+  }
+ ],
+ "focus_topics": {
+  "滴滴": "本期无新动态。Tier1+slot2（国内其他业务）X检索为撞词/广告/低互动；X上「太原滴滴司机」低俗帖≈9130浏览仍属早报已辟误的出租车事件（待核实，不涉滴滴）；墨西哥 @DiDi_Mexico 回复个别 PROFECO 投诉（8浏览，个案）；葡语/英语/日语0条。",
+  "字节": "本期无新动态（红果短剧微博#30/#43持平）。",
+  "中国大模型": "DeepSeek完成约1000亿元融资（彭博），见快讯；DeepInfer/华为线与禁令话题回落。"
+ },
+ "overseas_minor_language": [],
+ "weibo": {
+  "mirror": "https://soso.re/weibo",
+  "updated": "2026-10-22 11:12 Beijing",
+  "company_adjacent": [
+   {
+    "rank": 9,
+    "title": "宇树机器人展示举起汽车救人",
+    "heat": 330678,
+    "note": "产品展示，非八卦"
+   },
+   {
+    "rank": 30,
+    "title": "红果短剧自砍摇钱树",
+    "heat": 208617,
+    "note": "短期追踪"
+   },
+   {
+    "rank": 43,
+    "title": "红果短剧暂无全面收费计划",
+    "heat": 156732,
+    "note": "短期追踪"
+   },
+   {
+    "rank": 45,
+    "title": "问界称起火车辆事发时为超速状态",
+    "heat": 148634,
+    "note": "短期追踪"
+   },
+   {
+    "rank": 51,
+    "title": "客栈新组合疯抢京东组合购",
+    "heat": 129073,
+    "note": "广告位"
+   }
+  ]
+ },
+ "maimai": {
+  "status": "未抓取",
+  "pending": [
+   "待补充：脉脉热榜——需登录，本期未取"
+  ]
+ },
+ "feeds_new": 1,
+ "feeds_file": "research/feeds/2026-10-22T0318Z.json",
+ "short_term_updates": "新加入 DeepSeek完成千亿融资（警报）。短期列表6项、超上限一项，DeepInfer/华为线 22:50 考虑移出。无移出。",
+ "candidates": [
+  {
+   "topic": "DeepSeek完成千亿融资",
+   "heat": "X 02Z=45、03Z前18分钟51；彭博+凤凰网+IT之家",
+   "decision": "警报，新加入短期"
+  },
+  {
+   "topic": "百度前副总裁王劲创业公司破产付不出1.5万仲裁款",
+   "heat": "@maoshen≈2589，单帖转述",
+   "decision": "观察，未核实，不警报"
+  },
+  {
+   "topic": "AI一句话叫车实测（千问/豆包/滴滴）",
+   "heat": "X 低互动",
+   "decision": "观察"
+  }
+ ],
+ "push_needed": true
+}
