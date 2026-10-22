@@ -1,0 +1,605 @@
+{
+ "type": "daily",
+ "title": "大厂八卦每日总结｜2026-10-22",
+ "edition_date": "2026-10-22",
+ "timestamp": "2026-10-22T15:15:00Z",
+ "generated_at": "2026-10-22T15:15:00Z",
+ "fired_at": "2026-10-22T14:58:00Z",
+ "fired_at_beijing": "2026-10-22 22:58",
+ "beijing_note": "晚间新料窗口：2026-10-22 16:15 → 23:10 北京时间（接 16:00 快讯）；24小时回顾覆盖 9:00 早报（大厂+美股中概）、11:00/13:00/16:00 快讯",
+ "window": {
+  "start_beijing": "2026-10-21 23:10",
+  "end_beijing": "2026-10-22 23:10",
+  "evening_start_beijing": "2026-10-22 16:15"
+ },
+ "lede": "今天最热的仍是问界神木起火：晚上交管称灯柱没撞断、调查未完，最早发视频的搜狐汽车微博被指禁言15天；DeepSeek 千亿融资路透补出美团、吉利等新股东；港股科技重挫，MiniMax 收盘首次破发；红果「每千次曝光25元」上热搜。",
+ "heat_snapshot": {
+  "measured_at_utc": "2026-10-22T15:05:00Z",
+  "note": "X counts via get_posts_counts_recent 08Z–14Z（14Z 截至14:59）；微博 soso.re 22:57 北京",
+  "aito_hourly_08to14Z": [
+   36,
+   42,
+   48,
+   30,
+   37,
+   28,
+   31
+  ],
+  "aito_weibo": {
+   "rank": 20,
+   "heat": 325100,
+   "title": "交管大队回应问界汽车碰撞起火事故"
+  },
+  "aito_xiaojingcanxue_views": 26434,
+  "aito_cuichenghao_views": 38116,
+  "ds_funding_hourly_08to14Z": [
+   57,
+   57,
+   100,
+   69,
+   71,
+   83,
+   71
+  ],
+  "hongguo_hourly_08to14Z": [
+   19,
+   29,
+   39,
+   58,
+   31,
+   22,
+   29
+  ],
+  "hongguo_weibo": {
+   "rank": 21,
+   "heat": 324977,
+   "title": "红果把观众的时间标好了价"
+  },
+  "minimax_hourly_08to14Z": [
+   13,
+   8,
+   16,
+   18,
+   9,
+   13,
+   10
+  ],
+  "deepinfer_hourly_08to14Z": [
+   40,
+   51,
+   46,
+   38,
+   38,
+   53,
+   49
+  ],
+  "tianyi_views": 292471,
+  "ban_hourly_08to14Z": [
+   8,
+   16,
+   13,
+   10,
+   14,
+   19,
+   12
+  ],
+  "jd_douyin_hourly_08to14Z": [
+   0,
+   3,
+   0,
+   0,
+   2,
+   5,
+   1
+  ],
+  "panshi_hourly_08to14Z": [
+   9,
+   1,
+   3,
+   6,
+   7,
+   3,
+   1
+  ],
+  "didi_fanjian_views": 182314
+ },
+ "short_term_updates": {
+  "kept": [
+   {
+    "name": "问界神木碰撞起火·官方回应",
+    "trend": "➡️"
+   },
+   {
+    "name": "DeepSeek完成千亿融资",
+    "trend": "📈"
+   },
+   {
+    "name": "红果短剧下线金币·自砍摇钱树",
+    "trend": "➡️"
+   },
+   {
+    "name": "美国禁用DeepSeek·商务部回应",
+    "trend": "📉"
+   }
+  ],
+  "added": [
+   {
+    "name": "港股科技重挫·MiniMax首次破发",
+    "trend": "➡️",
+    "reason": "收盘确认首次破发（160.70港元），东方财富/21经济网/财新/新浪/凤凰等多家报道，X 全天每小时8–18帖持续"
+   }
+  ],
+  "removed": [
+   {
+    "name": "DeepSeek开源DeepInfer·华为联合设计芯片",
+    "reason": "10-20 后两天无新事实，华为驻场仍只有付费传闻；热度并入融资话题（X 38–53/时），按计划移出"
+   },
+   {
+    "name": "京东 抖音",
+    "reason": "最近实质进展为10-19网经社辟谣，3天无新声明，X 0–5/时；电商互撕固定检索线（topics.md 第4条）每期照跑，有新声明再回收"
+   }
+  ],
+  "watch_not_added": [
+   {
+    "name": "盘石创始人田宁被采取刑事强制措施",
+    "reason": "警方通报已收，晚间 X 1–9/时、无新进展，名额已满"
+   },
+   {
+    "name": "市场监管总局约谈电商平台",
+    "reason": "官方座谈，偏监管行情，收入美股中概&出海"
+   },
+   {
+    "name": "阿维塔副总裁孙百功离职",
+    "reason": "单一媒体独家，热度数据未见"
+   },
+   {
+    "name": "X 传「蚂蚁被立案调查」",
+    "reason": "@fang_danie121 约6278浏览，网页检索未见任何媒体或官方信源，不采信"
+   }
+  ]
+ },
+ "alert_summary": {
+  "daily_summary_alert_worthy": false,
+  "note": "今日快讯已警报4条（DeepSeek融资、港股科技重挫·MiniMax破发、盘石田宁、问界车速争议）；每日总结不单独警报"
+ },
+ "sources_ingested": [
+  "research/feeds/2026-10-22T1459Z.json（fetch_sources 本期 9 条新匹配，采用钛媒体阿维塔独家）",
+  "X search/counts（约17次调用）",
+  "soso.re/weibo 22:57",
+  "网页检索与核实"
+ ],
+ "markdown_file": "data/2026-10-22_daily_summary.md",
+ "key_points": [
+  "问界神木起火：神木交管大队称灯柱没撞断、调查仍在进行；最早发事故视频的搜狐汽车微博停更，被指禁言15天（对方未否认），事故讨论晚间还在微博 #20【实锤/传闻】",
+  "DeepSeek 千亿融资：路透补出名单，美团、吉利、美的、兆易创新新进，投资方超15家，投前估值约5000亿元；X 每小时最高100帖，是今天大模型圈最热话题【传闻·知情人士】",
+  "港股科技重挫：MiniMax 收报160.70港元首次跌破发行价，智谱跌7.1%；市场监管总局约谈电商平台叠加大盘走弱，阿里港股一度跌超6%【实锤】",
+  "红果短剧余温：服务商报价「每千次曝光25元、中插强制看5秒」上微博 #21，金币下线争议转到广告【实锤】",
+  "人事：阿维塔副总裁孙百功被曝即将离职，或转做AI与出海创业【传闻·媒体独家】"
+ ],
+ "sections": [
+  {
+   "title": "🔥 热度榜",
+   "color": "#dc2626",
+   "items": [
+    {
+     "id": "20261022-daily-aito",
+     "company": "问界（赛力斯 / 华为鸿蒙智行）/ 搜狐汽车",
+     "tag": "实锤",
+     "source_types": [
+      "交管部门",
+      "媒体",
+      "微博热搜",
+      "X"
+     ],
+     "date": "10-22 18:39",
+     "text": "神木问界M9碰撞起火事故今晚两条新进展：①新京报18:39报道，神木市交管大队工作人员称「交通灯柱没断」，是车辆起火后把灯柱里的线路烧短路、灯柱被烧变色，正在重新喷漆，事故仍在调查中；②凤凰网/新黄河19:43报道，最早发布事故视频的搜狐汽车微博（240多万粉丝）自10-21晚10点起停更，关联账号「酱爆车事」称其「因故休整15天」，记者求证时搜狐汽车官微未予否认，搜狐方面没有正式说明。22:57 微博热搜 #20「交管大队回应问界汽车碰撞起火事故」（约32.5万）；X 相关帖 08Z–14Z 每小时 36/42/48/30/37/28/31，@xiaojingcanxue「搜狐汽车被禁言15天」帖约2.64万浏览。",
+     "links": [
+      {
+       "label": "新京报（搜狐转载，18:39）：神木交管大队回应：交通灯柱没撞断",
+       "url": "https://www.sohu.com/a/1091288359_114988"
+      },
+      {
+       "label": "新京报：神木交管大队回应「问界汽车碰撞起火事故」",
+       "url": "https://www.bjnews.com.cn/detail/1792664127129071.html"
+      },
+      {
+       "label": "凤凰网/新黄河（19:43）：下架问界起火事故视频后，搜狐汽车微博疑似停更",
+       "url": "https://news.ifeng.com/c/8xR8bcYZEPy"
+      },
+      {
+       "label": "观察者网风闻：搜狐汽车微博被禁言15天",
+       "url": "https://user.guancha.cn/main/content?id=1757694"
+      },
+      {
+       "label": "X @xiaojingcanxue（约2.64万浏览）",
+       "url": "https://x.com/xiaojingcanxue/status/2113208352260153368"
+      },
+      {
+       "label": "微博热搜镜像 soso.re（22:57）",
+       "url": "https://soso.re/weibo"
+      }
+     ],
+     "event_time": "2026-10-17 23:25（事故）/ 2026-10-22 晚（交管回应、搜狐汽车停更报道）",
+     "pending": [
+      "待补充：搜狐汽车微博被禁言的原因——微博平台与搜狐官方均未说明，仅关联账号称「休整15天」"
+     ]
+    },
+    {
+     "id": "20261022-daily-deepseek-funding",
+     "company": "DeepSeek / 宁德时代 / 腾讯 / 美团 / 吉利",
+     "tag": "传闻",
+     "source_types": [
+      "媒体(路透/彭博，知情人士)",
+      "X"
+     ],
+     "date": "10-22 18:26",
+     "text": "路透10-22（北京约18:26）援引四位知情人士补充了DeepSeek约1000亿元（约150亿美元）新一轮融资的名单：新进投资方有兆易创新、美团、吉利、美的，老股东网易、IDG跟投，另有博裕、CPE源峰、君联资本等，投资方超过15家；宁德时代、腾讯是最大出资方之一。知情人士称投前估值约5000亿元，融资几天内完成，但金额和名单仍可能变化；吉利拒绝置评，DeepSeek及其他公司未回应。X 相关帖 08Z–14Z 每小时 57/57/100/69/71/83/71，10Z 路透稿后冲到100。",
+     "links": [
+      {
+       "label": "路透（Devdiscourse 转载，北京18:26）：DeepSeek wrapping up $15 billion fundraising",
+       "url": "https://www.devdiscourse.com/article/international/3996376-deepseek-wrapping-up-15-billion-fundraising-to-fuel-ai-race-sources-say"
+      },
+      {
+       "label": "DealStreetAsia：DeepSeek raises $15b from Meituan, Geely, others",
+       "url": "https://www.dealstreetasia.com/stories/deepseek-raises-15b-from-meituan-geely-others-to-fuel-ai-race-498983"
+      },
+      {
+       "label": "华尔街日报中文网【付费】：DeepSeek在潜在IPO前筹得150亿美元",
+       "url": "https://cn.wsj.com/articles/chinese-ai-startup-deepseek-raises-15-billion-ahead-of-potential-ipo-dd459eeb"
+      },
+      {
+       "label": "X @RJasonHA（约1104浏览）",
+       "url": "https://x.com/RJasonHA/status/2113249007539798523"
+      },
+      {
+       "label": "X @CausMoney（约593浏览）",
+       "url": "https://x.com/CausMoney/status/2113246545281692112"
+      }
+     ],
+     "event_time": "2026-10-22（彭博10:17首报；路透约18:26补充投资方名单）"
+    },
+    {
+     "id": "20261022-daily-hongguo",
+     "company": "字节跳动 / 红果短剧",
+     "tag": "实锤",
+     "source_types": [
+      "媒体调查",
+      "微博热搜",
+      "X"
+     ],
+     "date": "10-22",
+     "text": "红果短剧下线金币后，蓝鲸新闻10-21晚的调查稿今天被21经济网、中国经济网等转载，#红果把观众的时间标好了价# 22:57 上微博热搜 #21（约32.5万）：据一家巨量营销一级服务商报价，红果品牌广告按每千次曝光25元计费，每天最低10万次曝光（最低消耗2500元），中插广告不能关、须强制看5秒。X 相关帖 08Z–14Z 每小时 19/29/39/58/31/22/29，网友吐槽「免费起家却越插越多广告」。官方没有新动作。",
+     "links": [
+      {
+       "label": "东方财富/蓝鲸新闻（10-21 21:23）：红果把观众的时间标好了价：每千次曝光25元",
+       "url": "https://finance.eastmoney.com/a/202610213902916822.html"
+      },
+      {
+       "label": "21经济网（10-22 转载）",
+       "url": "https://www.21jingji.com/article/20261022/herald/c55be58951d8f7b4c2e13422382405c1.html"
+      },
+      {
+       "label": "中国经济网（10-22 转载）",
+       "url": "http://finance.ce.cn/stock/gsgdbd/202610/t20261022_3268072.shtml"
+      },
+      {
+       "label": "微博热搜镜像 soso.re（22:57）",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "X @Yaty0304（约236浏览）",
+       "url": "https://x.com/Yaty0304/status/2113250455409279070"
+      }
+     ],
+     "event_time": "2026-10-21 21:23（蓝鲸新闻稿）/ 2026-10-22 晚（微博热搜）"
+    },
+    {
+     "id": "20261022-daily-minimax",
+     "company": "MiniMax / 智谱 / 港股AI",
+     "tag": "实锤",
+     "source_types": [
+      "财经媒体",
+      "统计",
+      "X"
+     ],
+     "date": "10-22 16:10",
+     "text": "MiniMax（00100）10-22港股收盘报160.70港元、跌6.52%，盘中最低158.10港元，今年1月上市以来首次收盘跌破165港元发行价；智谱同日收跌7.1%报460.80港元。东方财富研究中心统计，两家自高点分别回撤约88%和85%，并把原因归于港股整体走弱和大模型价格战（MiniMax 10-19 发布 M3.1 Flash、称使用成本降约70%）。X 相关帖 08Z–14Z 每小时 13/8/16/18/9/13/10。公司未回应。",
+     "links": [
+      {
+       "label": "东方财富研究中心（19:22）：MiniMax破发！双雄回撤均超八成",
+       "url": "https://finance.eastmoney.com/news/11137,202610223904303455.html"
+      },
+      {
+       "label": "21经济网：MiniMax破发、阿里巴巴股价跌破百元关口",
+       "url": "https://www.21jingji.com/article/20261022/herald/71546bba73e44d66a66ac863a8cdb9d6.html"
+      },
+      {
+       "label": "财新【付费】：MiniMax港股破发 市场为何重估AI模型公司？",
+       "url": "https://www.caixin.com/2026-10-22/102496143.html"
+      },
+      {
+       "label": "X @joely7758521（约1.32万浏览）",
+       "url": "https://x.com/joely7758521/status/2113112219038736714"
+      }
+     ],
+     "event_time": "2026-10-22 港股收盘"
+    },
+    {
+     "id": "20261022-daily-deepinfer",
+     "company": "DeepSeek / 华为",
+     "tag": "统计",
+     "source_types": [
+      "X",
+      "统计"
+     ],
+     "date": "10-22",
+     "text": "DeepInfer 开源和「华为工程师驻场 DeepSeek 共同设计昇腾」讨论仍有热度但已两天没有新事实：X 宽口径 08Z–14Z 每小时 40/51/46/38/38/53/49，部分是融资稿顺带提到昇腾算力；@tianyi 开源帖约29.2万浏览。华为驻场仍只有 The Information 付费报道。本期移出短期追踪。",
+     "links": [
+      {
+       "label": "X @tianyi（约29.2万浏览）",
+       "url": "https://x.com/tianyi/status/2112471106426900677"
+      },
+      {
+       "label": "The Information【付费】",
+       "url": "https://www.theinformation.com/articles/deepseek-shaping-huaweis-ai-chips-growing-challenge-nvidia"
+      }
+     ]
+    },
+    {
+     "id": "20261022-daily-ban",
+     "company": "DeepSeek / 美国DHS",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "统计"
+     ],
+     "date": "10-22",
+     "text": "美国禁用 DeepSeek 话题继续降温：X 08Z–14Z 每小时 8/16/13/10/14/19/12 帖，比今早美东白天的 72/100 明显回落；没有新的官方动作，晚间帖子多是在融资新闻里顺带提到禁令。",
+     "links": [
+      {
+       "label": "X @jiangkoumo_（约318浏览）",
+       "url": "https://x.com/jiangkoumo_/status/2113227923000025521"
+      }
+     ]
+    },
+    {
+     "id": "20261022-daily-didi-fj",
+     "company": "滴滴",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-14→10-22",
+     "text": "滴滴「繁体版比简体版贵」主帖 @Furinanatw 浏览约18.23万、回复59，一天只涨几十，仍无新证据，滴滴也没有回应。",
+     "links": [
+      {
+       "label": "X @Furinanatw（约18.23万浏览）",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🆕 今晚新料",
+   "color": "#e4572e",
+   "items": [
+    {
+     "id": "20261022-daily-new-aito",
+     "company": "问界 / 神木交管",
+     "tag": "实锤",
+     "source_types": [
+      "交管部门",
+      "媒体"
+     ],
+     "date": "10-22 18:39",
+     "text": "神木交管大队回应问界碰撞起火：交通灯柱没撞断，是车起火后烧短路了灯柱内线路、灯柱已重新喷漆，事故仍在调查中；微博 #20（约32.5万）。",
+     "links": [
+      {
+       "label": "新京报（搜狐转载，18:39）：神木交管大队回应：交通灯柱没撞断",
+       "url": "https://www.sohu.com/a/1091288359_114988"
+      },
+      {
+       "label": "虎嗅快讯：交通灯柱没撞断，相关调查正在进行",
+       "url": "https://www.huxiu.com/moment/1290502.html"
+      }
+     ]
+    },
+    {
+     "id": "20261022-daily-new-sohu",
+     "company": "搜狐汽车 / 问界",
+     "tag": "传闻",
+     "source_types": [
+      "媒体",
+      "微博",
+      "X"
+     ],
+     "date": "10-22 19:43",
+     "text": "最早发问界起火视频的搜狐汽车微博停更20多小时，关联账号称「因故休整15天」，凤凰网/新黄河记者求证时对方未予否认，被普遍解读为被禁言；原视频已删，置顶换成问界的事故说明。",
+     "links": [
+      {
+       "label": "凤凰网/新黄河（19:43）：下架问界起火事故视频后，搜狐汽车微博疑似停更",
+       "url": "https://news.ifeng.com/c/8xR8bcYZEPy"
+      },
+      {
+       "label": "观察者网风闻：搜狐汽车微博被禁言15天",
+       "url": "https://user.guancha.cn/main/content?id=1757694"
+      },
+      {
+       "label": "X @xiaojingcanxue（约2.64万浏览）",
+       "url": "https://x.com/xiaojingcanxue/status/2113208352260153368"
+      }
+     ],
+     "pending": [
+      "待补充：禁言原因——平台和搜狐均未说明"
+     ]
+    },
+    {
+     "id": "20261022-daily-new-ds",
+     "company": "DeepSeek",
+     "tag": "传闻",
+     "source_types": [
+      "媒体(路透，知情人士)"
+     ],
+     "date": "10-22 18:26",
+     "text": "路透补充千亿融资名单：美团、吉利、美的、兆易创新新进，网易、IDG跟投，投资方超15家，投前估值约5000亿元。",
+     "links": [
+      {
+       "label": "路透（Devdiscourse 转载，北京18:26）：DeepSeek wrapping up $15 billion fundraising",
+       "url": "https://www.devdiscourse.com/article/international/3996376-deepseek-wrapping-up-15-billion-fundraising-to-fuel-ai-race-sources-say"
+      },
+      {
+       "label": "DealStreetAsia：DeepSeek raises $15b from Meituan, Geely, others",
+       "url": "https://www.dealstreetasia.com/stories/deepseek-raises-15b-from-meituan-geely-others-to-fuel-ai-race-498983"
+      }
+     ]
+    },
+    {
+     "id": "20261022-daily-new-avatr",
+     "company": "阿维塔（长安/华为/宁德）",
+     "tag": "传闻",
+     "source_types": [
+      "媒体独家(钛媒体/光子星球)"
+     ],
+     "date": "10-22 18:32",
+     "text": "阿维塔产品与营销副总裁孙百功被曝即将离职（前华为、荣耀、理想高管），或转去做AI与出海方向创业，公司未回应。",
+     "links": [
+      {
+       "label": "钛媒体/光子星球独家（18:32）：阿维塔副总裁孙百功即将离职",
+       "url": "https://www.tmtpost.com/8177799.html"
+      }
+     ]
+    },
+    {
+     "id": "20261022-daily-new-hongguo",
+     "company": "字节跳动 / 红果短剧",
+     "tag": "实锤",
+     "source_types": [
+      "媒体调查",
+      "微博热搜"
+     ],
+     "date": "10-21→10-22",
+     "text": "#红果把观众的时间标好了价# 上微博 #21：服务商报价红果广告每千次曝光25元，中插广告须强制看5秒。",
+     "links": [
+      {
+       "label": "东方财富/蓝鲸新闻（10-21 21:23）：红果把观众的时间标好了价：每千次曝光25元",
+       "url": "https://finance.eastmoney.com/a/202610213902916822.html"
+      },
+      {
+       "label": "微博热搜镜像 soso.re（22:57）",
+       "url": "https://soso.re/weibo"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🌏 美股中概 & 出海",
+   "color": "#4A6FA5",
+   "items": [
+    {
+     "id": "20261022-daily-adr-open",
+     "company": "中概股（阿里 / 网易 / 京东 / 百度等）",
+     "tag": "统计",
+     "source_types": [
+      "财经媒体"
+     ],
+     "date": "10-22 21:30",
+     "text": "今晚美股周四开盘下跌：新浪财经报道道指跌约0.4%、标普跌0.9%、纳指跌1.5%，Meta跌约5%、特斯拉跌超2%，市场担心AI投入和资金面，油价因伊朗局势传闻涨近3%。中概方面，每经网16:05报道盘前普跌：网易跌5%、阿里跌4%，B站、理想、百济神州、蔚来跌3%，京东、百度跌2%。开盘后个股涨跌没查到可核实的数据，留给明早早报。",
+     "links": [
+      {
+       "label": "新浪财经：开盘：纳指跌1.5% AI担忧升温 特斯拉、Meta等拖累指数",
+       "url": "https://finance.sina.com.cn/stock/usstock/c/2026-10-22/doc-iniwchpk4997568.shtml"
+      },
+      {
+       "label": "每经网（16:05）：美股中概股盘前普跌，网易跌5%",
+       "url": "https://www.nbd.com.cn/articles/2026-10-22/4612538.html"
+      }
+     ],
+     "event_time": "2026-10-22 21:30 北京时间（美股开盘）",
+     "pending": [
+      "待补充：今晚开盘后中概个股涨跌与金龙指数——未查到可核实的开盘数据，收盘留给明早早报"
+     ]
+    },
+    {
+     "id": "20261022-daily-samr",
+     "company": "阿里 / 京东 / 拼多多 / 抖音 / 快手等",
+     "tag": "官方",
+     "source_types": [
+      "官方(市场监管总局)",
+      "媒体"
+     ],
+     "date": "10-21→10-22",
+     "text": "补漏（今天各期未单独收）：市场监管总局10-21公布，近日在北京召开平台产品和服务质量提升专题座谈会，京东、淘天、拼多多、小红书、快手、抖音、多点、唯品会、得物到会，要求平台压实「守门人」责任，重点提到直播带货、即时零售、社交电商中的假冒伪劣、货不对板和虚假宣传。消息叠加大盘走弱，阿里10-22港股一度跌超6%（8月24日以来最大跌幅），京东跌约4.7%、快手跌超4%。",
+     "links": [
+      {
+       "label": "联合早报（15:37）：中国监管部门要求电商平台加强质量管理 阿里港股跌逾6%",
+       "url": "https://www.zaobao.com.sg/news/china/story20261022-9877306"
+      },
+      {
+       "label": "Investing.com：Alibaba, JD shares slide on more Chinese regulatory scrutiny",
+       "url": "https://www.investing.com/news/stock-market-news/alibaba-jd-shares-slide-on-more-chinese-regulatory-scrutiny-4964624"
+      }
+     ],
+     "event_time": "2026-10-21（市场监管总局公布座谈会）/ 2026-10-22 港股"
+    },
+    {
+     "id": "20261022-daily-adr-minimax",
+     "company": "MiniMax / 智谱",
+     "tag": "实锤",
+     "source_types": [
+      "财经媒体"
+     ],
+     "date": "10-22",
+     "text": "港股大模型双雄同日重挫：MiniMax 收报160.70港元首次破发，智谱收跌7.1%；详见热度榜。",
+     "links": [
+      {
+       "label": "东方财富研究中心（19:22）：MiniMax破发！双雄回撤均超八成",
+       "url": "https://finance.eastmoney.com/news/11137,202610223904303455.html"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🌐 海外小语种线索",
+   "color": "#0f766e",
+   "items": [
+    {
+     "id": "20261022-daily-didi-rosario",
+     "company": "滴滴出海（阿根廷·罗萨里奥）",
+     "tag": "实锤",
+     "source_types": [
+      "当地媒体(西班牙语)",
+      "X"
+     ],
+     "date": "10-22",
+     "text": "🇦🇷 阿根廷罗萨里奥｜西班牙语：Uber/DiDi 合法化条例在市议会两个委员会联席会上第二次没拿到意见书。分歧在三点：自由前进党议员 Aleart 要放开 Uber Moto 和自由定价，执政方拒绝；庇隆派要求按公共服务管理、保留车龄上限。执政方原定下周四（10-29）全会表决，现在讨论改到下周一（10-26）继续，表决时间推迟。市长 Javkin 抱怨「是议会让我起草的，现在又反对」。",
+     "links": [
+      {
+       "label": "Diario Santa Fe（西语，10-22）：La regularización de Uber y DiDi volvió a quedar sin dictamen",
+       "url": "https://diariosantafe.com/2026/10/22/regularizacion-uber-didi-sin-dictamen-concejo-rosario/"
+      },
+      {
+       "label": "X @CortaRosario（西语）",
+       "url": "https://x.com/CortaRosario/status/2113249259218772142"
+      }
+     ],
+     "event_time": "2026-10-21（当地时间周三）联席会议；10-22 当地媒体报道",
+     "lang": "es",
+     "translation_zh": "罗萨里奥市政府提出的让 Uber、DiDi 等出行平台合法化并受监管的条例，周三在市议会再次没能拿到意见书。公共服务委员会和政府委员会联席会议第二次没有达成共识，提交全会审议的时间因此推迟；执政方原本希望下周四的全会通过。[……]没有形成共识文本，讨论将在下周一继续。",
+     "original": "El nuevo intento de dar dictamen al proyecto del Ejecutivo rosarino para legalizar y regular las aplicaciones de transporte de pasajeros, como Uber y DiDi, no prosperó este miércoles en el Concejo Municipal. Por segunda vez, no hubo consenso en el plenario de las comisiones de Servicios Públicos y de Gobierno, por lo que se retrasa el tratamiento en el recinto. El oficialismo pretendía tener aprobada la ordenanza respectiva en la sesión del jueves de la semana próxima. [...] no se alcanzó un texto de consenso y la discusión continuará el lunes próximo."
+    }
+   ]
+  }
+ ],
+ "tomorrow_watch": [
+  "问界：神木交警调查结论；搜狐汽车微博是否恢复、平台有无说明",
+  "DeepSeek：融资正式落定与最终名单；科创板IPO进度",
+  "中概10-22美股收盘（今晚纳指开盘跌1.5%，盘前网易、阿里跌4–5%）",
+  "MiniMax/智谱能否收回发行价；港股科技是否企稳",
+  "红果：金币下线后的广告与会员安排",
+  "滴滴：罗萨里奥条例 10-26 续议、表决推迟；香港网约车牌照 10-30 截止；繁简价差回应",
+  "电商：市场监管总局座谈后平台有无整改动作；京东抖音（左琦案）新声明"
+ ]
+}

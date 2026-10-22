@@ -1,0 +1,209 @@
+{
+ "type": "bigtech",
+ "title": "大厂八卦晚间增补｜2026-10-22 15Z",
+ "timestamp": "2026-10-22T15:15:00Z",
+ "edition_date": "2026-10-22",
+ "slot": "15Z",
+ "lede": "16:00后晚间新料：神木交管称灯柱没撞断、搜狐汽车微博被指禁言；路透补出DeepSeek融资名单；阿维塔副总裁孙百功被曝离职；红果广告报价上热搜。",
+ "alert_note": "每日总结增补，不单独警报",
+ "alert_worthy": false,
+ "top3": [
+  "问界：交管回应+搜狐汽车被指禁言",
+  "DeepSeek融资名单（路透）",
+  "阿维塔孙百功离职"
+ ],
+ "focus": {
+  "滴滴": "繁简价差约18.23万无回应；阿根廷罗萨里奥条例第二次没拿到意见书，表决推迟",
+  "字节": "红果广告报价「每千次曝光25元」上微博#21",
+  "中国大模型": "DeepSeek融资路透补充名单；MiniMax首次破发；DeepInfer移出短期"
+ },
+ "short_term_notes": "见每日总结 short_term_updates",
+ "overseas_local_lang": [
+  "20261022-bt15z-didi-rosario"
+ ],
+ "sections": [
+  {
+   "title": "💥 翻车·事故",
+   "color": "#dc2626",
+   "items": [
+    {
+     "id": "20261022-bt15z-aito",
+     "company": "问界（赛力斯 / 华为鸿蒙智行）/ 搜狐汽车",
+     "tag": "实锤",
+     "source_types": [
+      "交管部门",
+      "媒体",
+      "微博热搜",
+      "X"
+     ],
+     "date": "10-22 18:39",
+     "text": "神木问界M9碰撞起火事故今晚两条新进展：①新京报18:39报道，神木市交管大队工作人员称「交通灯柱没断」，是车辆起火后把灯柱里的线路烧短路、灯柱被烧变色，正在重新喷漆，事故仍在调查中；②凤凰网/新黄河19:43报道，最早发布事故视频的搜狐汽车微博（240多万粉丝）自10-21晚10点起停更，关联账号「酱爆车事」称其「因故休整15天」，记者求证时搜狐汽车官微未予否认，搜狐方面没有正式说明。22:57 微博热搜 #20「交管大队回应问界汽车碰撞起火事故」（约32.5万）；X 相关帖 08Z–14Z 每小时 36/42/48/30/37/28/31，@xiaojingcanxue「搜狐汽车被禁言15天」帖约2.64万浏览。",
+     "links": [
+      {
+       "label": "新京报（搜狐转载，18:39）：神木交管大队回应：交通灯柱没撞断",
+       "url": "https://www.sohu.com/a/1091288359_114988"
+      },
+      {
+       "label": "新京报：神木交管大队回应「问界汽车碰撞起火事故」",
+       "url": "https://www.bjnews.com.cn/detail/1792664127129071.html"
+      },
+      {
+       "label": "凤凰网/新黄河（19:43）：下架问界起火事故视频后，搜狐汽车微博疑似停更",
+       "url": "https://news.ifeng.com/c/8xR8bcYZEPy"
+      },
+      {
+       "label": "观察者网风闻：搜狐汽车微博被禁言15天",
+       "url": "https://user.guancha.cn/main/content?id=1757694"
+      },
+      {
+       "label": "X @xiaojingcanxue（约2.64万浏览）",
+       "url": "https://x.com/xiaojingcanxue/status/2113208352260153368"
+      },
+      {
+       "label": "微博热搜镜像 soso.re（22:57）",
+       "url": "https://soso.re/weibo"
+      }
+     ],
+     "event_time": "2026-10-17 23:25（事故）/ 2026-10-22 晚（交管回应、搜狐汽车停更报道）",
+     "pending": [
+      "待补充：搜狐汽车微博被禁言的原因——微博平台与搜狐官方均未说明，仅关联账号称「休整15天」"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🤖 大模型·融资",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "id": "20261022-bt15z-deepseek-funding",
+     "company": "DeepSeek / 宁德时代 / 腾讯 / 美团 / 吉利",
+     "tag": "传闻",
+     "source_types": [
+      "媒体(路透/彭博，知情人士)",
+      "X"
+     ],
+     "date": "10-22 18:26",
+     "text": "路透10-22（北京约18:26）援引四位知情人士补充了DeepSeek约1000亿元（约150亿美元）新一轮融资的名单：新进投资方有兆易创新、美团、吉利、美的，老股东网易、IDG跟投，另有博裕、CPE源峰、君联资本等，投资方超过15家；宁德时代、腾讯是最大出资方之一。知情人士称投前估值约5000亿元，融资几天内完成，但金额和名单仍可能变化；吉利拒绝置评，DeepSeek及其他公司未回应。X 相关帖 08Z–14Z 每小时 57/57/100/69/71/83/71，10Z 路透稿后冲到100。",
+     "links": [
+      {
+       "label": "路透（Devdiscourse 转载，北京18:26）：DeepSeek wrapping up $15 billion fundraising",
+       "url": "https://www.devdiscourse.com/article/international/3996376-deepseek-wrapping-up-15-billion-fundraising-to-fuel-ai-race-sources-say"
+      },
+      {
+       "label": "DealStreetAsia：DeepSeek raises $15b from Meituan, Geely, others",
+       "url": "https://www.dealstreetasia.com/stories/deepseek-raises-15b-from-meituan-geely-others-to-fuel-ai-race-498983"
+      },
+      {
+       "label": "华尔街日报中文网【付费】：DeepSeek在潜在IPO前筹得150亿美元",
+       "url": "https://cn.wsj.com/articles/chinese-ai-startup-deepseek-raises-15-billion-ahead-of-potential-ipo-dd459eeb"
+      },
+      {
+       "label": "X @RJasonHA（约1104浏览）",
+       "url": "https://x.com/RJasonHA/status/2113249007539798523"
+      },
+      {
+       "label": "X @CausMoney（约593浏览）",
+       "url": "https://x.com/CausMoney/status/2113246545281692112"
+      }
+     ],
+     "event_time": "2026-10-22（彭博10:17首报；路透约18:26补充投资方名单）"
+    }
+   ]
+  },
+  {
+   "title": "👔 人事",
+   "color": "#b45309",
+   "items": [
+    {
+     "id": "20261022-bt15z-avatr",
+     "company": "阿维塔（长安/华为/宁德）",
+     "tag": "传闻",
+     "source_types": [
+      "媒体独家(钛媒体/光子星球)"
+     ],
+     "date": "10-22 18:32",
+     "text": "钛媒体旗下光子星球10-22 18:32独家称，阿维塔负责产品操盘和营销的副总裁孙百功即将离职，下一步或将聚焦AI与出海方向创业。孙百功在华为体系工作近20年，曾任华为中东非洲消费者BG副总裁、荣耀相关业务负责人，2024年1月加入理想汽车任销服副总裁，2025年阿维塔战略2.0后加入阿维塔。阿维塔和本人暂未公开回应。",
+     "links": [
+      {
+       "label": "钛媒体/光子星球独家（18:32）：阿维塔副总裁孙百功即将离职",
+       "url": "https://www.tmtpost.com/8177799.html"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "📺 产品·商业",
+   "color": "#e4572e",
+   "items": [
+    {
+     "id": "20261022-bt15z-hongguo",
+     "company": "字节跳动 / 红果短剧",
+     "tag": "实锤",
+     "source_types": [
+      "媒体调查",
+      "微博热搜",
+      "X"
+     ],
+     "date": "10-22",
+     "text": "红果短剧下线金币后，蓝鲸新闻10-21晚的调查稿今天被21经济网、中国经济网等转载，#红果把观众的时间标好了价# 22:57 上微博热搜 #21（约32.5万）：据一家巨量营销一级服务商报价，红果品牌广告按每千次曝光25元计费，每天最低10万次曝光（最低消耗2500元），中插广告不能关、须强制看5秒。X 相关帖 08Z–14Z 每小时 19/29/39/58/31/22/29，网友吐槽「免费起家却越插越多广告」。官方没有新动作。",
+     "links": [
+      {
+       "label": "东方财富/蓝鲸新闻（10-21 21:23）：红果把观众的时间标好了价：每千次曝光25元",
+       "url": "https://finance.eastmoney.com/a/202610213902916822.html"
+      },
+      {
+       "label": "21经济网（10-22 转载）",
+       "url": "https://www.21jingji.com/article/20261022/herald/c55be58951d8f7b4c2e13422382405c1.html"
+      },
+      {
+       "label": "中国经济网（10-22 转载）",
+       "url": "http://finance.ce.cn/stock/gsgdbd/202610/t20261022_3268072.shtml"
+      },
+      {
+       "label": "微博热搜镜像 soso.re（22:57）",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "X @Yaty0304（约236浏览）",
+       "url": "https://x.com/Yaty0304/status/2113250455409279070"
+      }
+     ],
+     "event_time": "2026-10-21 21:23（蓝鲸新闻稿）/ 2026-10-22 晚（微博热搜）"
+    }
+   ]
+  },
+  {
+   "title": "🌏 海外小语种线索",
+   "color": "#0f766e",
+   "items": [
+    {
+     "id": "20261022-bt15z-didi-rosario",
+     "company": "滴滴出海（阿根廷·罗萨里奥）",
+     "tag": "实锤",
+     "source_types": [
+      "当地媒体(西班牙语)",
+      "X"
+     ],
+     "date": "10-22",
+     "text": "🇦🇷 阿根廷罗萨里奥｜西班牙语：Uber/DiDi 合法化条例在市议会两个委员会联席会上第二次没拿到意见书。分歧在三点：自由前进党议员 Aleart 要放开 Uber Moto 和自由定价，执政方拒绝；庇隆派要求按公共服务管理、保留车龄上限。执政方原定下周四（10-29）全会表决，现在讨论改到下周一（10-26）继续，表决时间推迟。市长 Javkin 抱怨「是议会让我起草的，现在又反对」。",
+     "links": [
+      {
+       "label": "Diario Santa Fe（西语，10-22）：La regularización de Uber y DiDi volvió a quedar sin dictamen",
+       "url": "https://diariosantafe.com/2026/10/22/regularizacion-uber-didi-sin-dictamen-concejo-rosario/"
+      },
+      {
+       "label": "X @CortaRosario（西语）",
+       "url": "https://x.com/CortaRosario/status/2113249259218772142"
+      }
+     ],
+     "event_time": "2026-10-21（当地时间周三）联席会议；10-22 当地媒体报道",
+     "lang": "es",
+     "translation_zh": "罗萨里奥市政府提出的让 Uber、DiDi 等出行平台合法化并受监管的条例，周三在市议会再次没能拿到意见书。公共服务委员会和政府委员会联席会议第二次没有达成共识，提交全会审议的时间因此推迟；执政方原本希望下周四的全会通过。[……]没有形成共识文本，讨论将在下周一继续。",
+     "original": "El nuevo intento de dar dictamen al proyecto del Ejecutivo rosarino para legalizar y regular las aplicaciones de transporte de pasajeros, como Uber y DiDi, no prosperó este miércoles en el Concejo Municipal. Por segunda vez, no hubo consenso en el plenario de las comisiones de Servicios Públicos y de Gobierno, por lo que se retrasa el tratamiento en el recinto. El oficialismo pretendía tener aprobada la ordenanza respectiva en la sesión del jueves de la semana próxima. [...] no se alcanzó un texto de consenso y la discusión continuará el lunes próximo."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,110 @@
+{
+ "type": "adr",
+ "title": "美股中概&出海晚间增补｜2026-10-22 15Z",
+ "timestamp": "2026-10-22T15:15:00Z",
+ "edition_date": "2026-10-22",
+ "slot": "15Z",
+ "beijing_time": "2026-10-22 23:15",
+ "lede": "今晚美股开盘纳指跌1.5%，中概盘前普跌（网易-5%、阿里-4%）；MiniMax港股收盘首次破发；补漏市场监管总局约谈电商平台。",
+ "window": {
+  "start_beijing": "2026-10-22 16:15",
+  "end_beijing": "2026-10-22 23:10"
+ },
+ "alert_worthy": false,
+ "push_needed": true,
+ "top3": [
+  "中概盘前普跌·纳指开盘跌1.5%",
+  "MiniMax收盘首次破发",
+  "市场监管总局约谈电商平台（补漏）"
+ ],
+ "sections": [
+  {
+   "title": "📉 股价大动",
+   "color": "#dc2626",
+   "items": [
+    {
+     "id": "20261022-adr15z-adr-open",
+     "company": "中概股（阿里 / 网易 / 京东 / 百度等）",
+     "tag": "统计",
+     "source_types": [
+      "财经媒体"
+     ],
+     "date": "10-22 21:30",
+     "text": "今晚美股周四开盘下跌：新浪财经报道道指跌约0.4%、标普跌0.9%、纳指跌1.5%，Meta跌约5%、特斯拉跌超2%，市场担心AI投入和资金面，油价因伊朗局势传闻涨近3%。中概方面，每经网16:05报道盘前普跌：网易跌5%、阿里跌4%，B站、理想、百济神州、蔚来跌3%，京东、百度跌2%。开盘后个股涨跌没查到可核实的数据，留给明早早报。",
+     "links": [
+      {
+       "label": "新浪财经：开盘：纳指跌1.5% AI担忧升温 特斯拉、Meta等拖累指数",
+       "url": "https://finance.sina.com.cn/stock/usstock/c/2026-10-22/doc-iniwchpk4997568.shtml"
+      },
+      {
+       "label": "每经网（16:05）：美股中概股盘前普跌，网易跌5%",
+       "url": "https://www.nbd.com.cn/articles/2026-10-22/4612538.html"
+      }
+     ],
+     "event_time": "2026-10-22 21:30 北京时间（美股开盘）",
+     "pending": [
+      "待补充：今晚开盘后中概个股涨跌与金龙指数——未查到可核实的开盘数据，收盘留给明早早报"
+     ]
+    },
+    {
+     "id": "20261022-adr15z-minimax",
+     "company": "MiniMax / 智谱",
+     "tag": "实锤",
+     "source_types": [
+      "财经媒体",
+      "X"
+     ],
+     "date": "10-22 16:10",
+     "text": "MiniMax（00100）10-22港股收盘报160.70港元、跌6.52%，盘中最低158.10港元，今年1月上市以来首次收盘跌破165港元发行价；智谱同日收跌7.1%报460.80港元。东方财富研究中心统计，两家自高点分别回撤约88%和85%，并把原因归于港股整体走弱和大模型价格战（MiniMax 10-19 发布 M3.1 Flash、称使用成本降约70%）。X 相关帖 08Z–14Z 每小时 13/8/16/18/9/13/10。公司未回应。",
+     "links": [
+      {
+       "label": "东方财富研究中心（19:22）：MiniMax破发！双雄回撤均超八成",
+       "url": "https://finance.eastmoney.com/news/11137,202610223904303455.html"
+      },
+      {
+       "label": "21经济网：MiniMax破发、阿里巴巴股价跌破百元关口",
+       "url": "https://www.21jingji.com/article/20261022/herald/71546bba73e44d66a66ac863a8cdb9d6.html"
+      },
+      {
+       "label": "财新【付费】：MiniMax港股破发 市场为何重估AI模型公司？",
+       "url": "https://www.caixin.com/2026-10-22/102496143.html"
+      },
+      {
+       "label": "X @joely7758521（约1.32万浏览）",
+       "url": "https://x.com/joely7758521/status/2113112219038736714"
+      }
+     ],
+     "event_time": "2026-10-22 港股收盘"
+    }
+   ]
+  },
+  {
+   "title": "🏛️ 监管 · 诉讼 · 制裁",
+   "color": "#4A6FA5",
+   "items": [
+    {
+     "id": "20261022-adr15z-samr",
+     "company": "阿里 / 京东 / 拼多多 / 抖音 / 快手等",
+     "tag": "官方",
+     "source_types": [
+      "官方(市场监管总局)",
+      "媒体"
+     ],
+     "date": "10-21→10-22",
+     "text": "补漏（今天各期未单独收）：市场监管总局10-21公布，近日在北京召开平台产品和服务质量提升专题座谈会，京东、淘天、拼多多、小红书、快手、抖音、多点、唯品会、得物到会，要求平台压实「守门人」责任，重点提到直播带货、即时零售、社交电商中的假冒伪劣、货不对板和虚假宣传。消息叠加大盘走弱，阿里10-22港股一度跌超6%（8月24日以来最大跌幅），京东跌约4.7%、快手跌超4%。",
+     "links": [
+      {
+       "label": "联合早报（15:37）：中国监管部门要求电商平台加强质量管理 阿里港股跌逾6%",
+       "url": "https://www.zaobao.com.sg/news/china/story20261022-9877306"
+      },
+      {
+       "label": "Investing.com：Alibaba, JD shares slide on more Chinese regulatory scrutiny",
+       "url": "https://www.investing.com/news/stock-market-news/alibaba-jd-shares-slide-on-more-chinese-regulatory-scrutiny-4964624"
+      }
+     ],
+     "event_time": "2026-10-21（市场监管总局公布座谈会）/ 2026-10-22 港股"
+    }
+   ]
+  }
+ ]
+}

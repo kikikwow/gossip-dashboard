@@ -1168,3 +1168,26 @@ timestamp_utc,topic,metric,value,source
 2026-10-22T08:20:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_sample_post,257,https://x.com/hhp121222/status/2113164258955374801
 2026-10-22T08:20:00Z,微信回应iPhone Duo不适配,weibo_rank,27,soso.re 16:15 #27 微信回应iPhoneDuo不适配 324462；#25 iPhoneDuo微信不适配 332444
 2026-10-22T08:20:00Z,微信回应iPhone Duo不适配,weibo_heat,324462,soso.re/weibo 16:15
+2026-10-22T15:05:00Z,问界神木碰撞起火·官方回应,x_posts_hour,31,x_counts (问界 OR 赛力斯)(车速 OR 起火 OR 事故 OR 神木 OR 139) 14Z; 08Z–13Z=36/42/48/30/37/28
+2026-10-22T15:05:00Z,问界神木碰撞起火·官方回应,weibo_rank,20,soso.re 22:57 #20 交管大队回应问界汽车碰撞起火事故 325100
+2026-10-22T15:05:00Z,问界神木碰撞起火·官方回应,weibo_heat,325100,soso.re/weibo 22:57
+2026-10-22T15:05:00Z,问界神木碰撞起火·官方回应,x_sample_post,26434,https://x.com/xiaojingcanxue/status/2113208352260153368
+2026-10-22T15:05:00Z,问界神木碰撞起火·官方回应,x_sample_post,38116,https://x.com/cuichenghao/status/2113143496156844362
+2026-10-22T15:05:00Z,问界神木碰撞起火·官方回应,x_sample_post,1853,https://x.com/ChinaTruth/status/2113195967935905834
+2026-10-22T15:05:00Z,DeepSeek完成千亿融资,x_posts_hour,71,"x_counts DeepSeek (融资 OR 1000亿 OR funding OR ""$15 billion"" OR raise) 14Z; 08Z–13Z=57/57/100/69/71/83"
+2026-10-22T15:05:00Z,DeepSeek完成千亿融资,x_sample_post,1104,https://x.com/RJasonHA/status/2113249007539798523
+2026-10-22T15:05:00Z,DeepSeek完成千亿融资,x_sample_post,593,https://x.com/CausMoney/status/2113246545281692112
+2026-10-22T15:05:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour,29,x_counts 红果 (金币 OR 短剧 OR 收费 OR 忘本 OR 广告) 14Z; 08Z–13Z=19/29/39/58/31/22
+2026-10-22T15:05:00Z,红果短剧下线金币·自砍摇钱树,weibo_rank,21,soso.re 22:57 #21 红果把观众的时间标好了价 324977
+2026-10-22T15:05:00Z,红果短剧下线金币·自砍摇钱树,weibo_heat,324977,soso.re/weibo 22:57
+2026-10-22T15:05:00Z,红果短剧下线金币·自砍摇钱树,x_sample_post,305,https://x.com/jaker_Q/status/2113190818047775050
+2026-10-22T15:05:00Z,红果短剧下线金币·自砍摇钱树,x_sample_post,236,https://x.com/Yaty0304/status/2113250455409279070
+2026-10-22T15:05:00Z,港股科技重挫·MiniMax首次破发,x_posts_hour,10,x_counts (MiniMax OR 稀宇)(破发 OR 发行价 OR 跌 OR IPO) 14Z; 08Z–13Z=13/8/16/18/9/13
+2026-10-22T15:05:00Z,港股科技重挫·MiniMax首次破发,x_sample_post,13171,https://x.com/joely7758521/status/2113112219038736714
+2026-10-22T15:05:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_posts_hour,49,x_counts DeepInfer OR (DeepSeek (华为 OR Huawei OR 昇腾 OR Ascend)) 14Z; 08Z–13Z=40/51/46/38/38/53
+2026-10-22T15:05:00Z,DeepSeek开源DeepInfer·华为联合设计芯片,x_sample_post,292471,https://x.com/tianyi/status/2112471106426900677
+2026-10-22T15:05:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour,12,x_counts DeepSeek (ban OR banned OR DHS OR 禁用 OR 禁令) 14Z; 08Z–13Z=8/16/13/10/14/19
+2026-10-22T15:05:00Z,美国禁用DeepSeek·商务部回应,x_sample_post,318,https://x.com/jiangkoumo_/status/2113227923000025521
+2026-10-22T15:05:00Z,京东 抖音,x_posts_hour,1,x_counts (京东 抖音) OR 左琦 OR 网经社 OR (抖音 黑公关) OR (淘宝 起诉) OR (拼多多 二选一) 14Z; 08Z–13Z=0/3/0/0/2/5
+2026-10-22T15:05:00Z,盘石创始人田宁被采取刑事强制措施,x_posts_hour,1,x_counts 盘石 OR 田宁 14Z; 08Z–13Z=9/1/3/6/7/3
+2026-10-22T15:05:00Z,滴滴繁简价差,x_sample_post,182314,https://x.com/Furinanatw/status/2110289680595886537
