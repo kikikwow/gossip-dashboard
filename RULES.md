@@ -29,6 +29,7 @@
 - Threads 等需登录平台：不注册、不登录、不评论；只通过搜索引擎、二次转载和未登录可见的公开信息（链接、作者、摘要、预览图）获取。
 - 小红书/公众号抓取须模拟人类节奏：随机抖动间隔，不固定轮询，按 anti_bot/config.yaml 自适应限额（小红书默认 ≤4 次/天、间隔 ≥1.5 小时，风险升高自动降额/暂停）。
 - 北京时间 0:00–7:00 静默：不发任何小红书/公众号请求。
+- 小红书/公众号数据：每期开头先跑 `/workspace/scrapers/anti_bot/ensure_running.sh`，再从 pending/social/ 读新条目；路径、字段、可信度见 SOCIAL_SOURCES.md（小红书默认【传闻】）。
 - X 结果用前须过滤（didi_queries.yaml 的 postfilter/blacklist）：去掉无关推广、邀请码、纯短链帖。
 
 ## 3 滴滴追踪范围

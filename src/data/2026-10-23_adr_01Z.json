@@ -1,0 +1,325 @@
+{
+ "type": "adr",
+ "title": "美股中概 & 出海简报｜2026-10-23 早报",
+ "timestamp": "2026-10-23T01:25:00Z",
+ "edition_date": "2026-10-23",
+ "slot": "01Z",
+ "beijing_time": "2026-10-23 09:25",
+ "lede": "美财政部公布对华投资限制新规草案、新增生物科技；美东10-22纳指跌2.6%，金龙指数收跌1.19%，世纪互联、再鼎、禾赛跌约8%–9%；补漏PCAOB主席首次赴华观摩审计检查。",
+ "window": {
+  "start_beijing": "2026-10-22 23:10",
+  "end_beijing": "2026-10-23 09:25"
+ },
+ "alert_worthy": false,
+ "push_needed": true,
+ "top3": [
+  "美财政部对外投资新规草案·新增生物科技",
+  "中概10-22收盘·金龙跌1.19%",
+  "PCAOB主席首次赴华观摩审计检查（补漏）"
+ ],
+ "focus": {
+  "滴滴": "无公司级新动态；墨西哥西语低优先级线索3条；繁简价差≈18.23万无回应",
+  "字节/TikTok": "KIRO：TikTok贝尔维尤员工约2100人、两轮裁员约140人，无新八卦",
+  "中国大模型": "无新的出海/IPO事实，DeepSeek上市计划与MiniMax破发已收录"
+ },
+ "source_status": {
+  "小红书": "正常，窗口内5篇「滴滴 杀熟」笔记均无可用料",
+  "微信公众号": "微信读书登录失效，本期暂缺（大厂日爆、晚点）"
+ },
+ "markdown_file": "2026-10-23_adr_01Z_digest.md",
+ "sections": [
+  {
+   "title": "⭐ 今日 Top 3",
+   "color": "#dc2626",
+   "items": [
+    {
+     "id": "20261023-adr01z-coins",
+     "company": "中概股 / 中国科技企业（AI、芯片、生物科技）",
+     "tag": "实锤",
+     "source_types": [
+      "官方",
+      "通讯社",
+      "X"
+     ],
+     "date": "10-22 美东",
+     "text": "美国财政部10-22（美东周四）发布落实《全面对外投资国家安全法》（COINS Act）的拟议规则：美国人投资中国（含香港、澳门）等“受关注国家”的半导体、人工智能、量子、高性能计算/超算、高超音速系统企业，部分交易须事先向财政部申报、部分直接禁止；财政部还动用授权新加入生物科技。征求意见截至12-7，最终规则和生效日期另定。美联社称这是把现有限制扩大到更多领域；新闻信札作者 Bill Bishop 在 X 上评论“对涉华投资出奇地严”，意见期后可能放宽。对中概的直接影响（例如美资对中国AI、生物科技公司的投资和IPO认购）要等规则细节解读，媒体暂未点名具体公司。X 相关帖 15Z–00Z 每小时 14/11/6/8/2/6/15/17/24/20，00Z 前后升温。",
+     "links": [
+      {
+       "label": "美国财政部新闻稿（英文）",
+       "url": "https://home.treasury.gov/news/press-releases/sb0667/"
+      },
+      {
+       "label": "拟议规则全文 PDF（英文）",
+       "url": "https://home.treasury.gov/system/files/206/COINS-NPRM.pdf"
+      },
+      {
+       "label": "美联社（英文）",
+       "url": "https://apnews.com/article/treasury-china-tech-investments-rule-b742c292ff8eb19e6a4c8cf03d4d66b9"
+      },
+      {
+       "label": "FT【付费】：US Treasury proposes tighter rules on investing in sensitive Chinese tech",
+       "url": "https://www.ft.com/content/f57a1f1c-60ce-432d-a901-673ae7d1241e"
+      },
+      {
+       "label": "X @niubi（Bill Bishop）👁357",
+       "url": "https://x.com/niubi/status/2113397217600106742"
+      },
+      {
+       "label": "X @AIFIRSTTHING 中文解读",
+       "url": "https://x.com/AIFIRSTTHING/status/2113439602879111284"
+      }
+     ],
+     "event_time": "2026-10-22 美东（北京 10-23 凌晨）",
+     "lang": "zh",
+     "original": "Treasury … issued a Notice of Proposed Rulemaking … The COINS Act authorizes the Secretary to prescribe regulations … in five technology sectors: semiconductor technologies and microelectronics; artificial intelligence systems; quantum information technologies; high-performance computing and supercomputing; and hypersonic systems. … Accordingly, the Secretary has added biotechnology to the proposed regulations.（财政部新闻稿节选）"
+    },
+    {
+     "id": "20261023-adr01z-close",
+     "company": "中概股（世纪互联 / 再鼎医药 / 禾赛 / 阿里等）",
+     "tag": "实锤",
+     "source_types": [
+      "财经媒体",
+      "X"
+     ],
+     "date": "10-22 美东",
+     "text": "美东10-22（周四）美股大跌，纳指收跌约2.6%、标普跌约1.2%。纳斯达克中国金龙指数收跌1.19%报5518.53点，连续两天下跌（前一天-2.35%）。个股方面，世纪互联跌约8.9%、再鼎医药跌约8.8%、禾赛跌约8%，万国数据、阿特斯跌超6%，阿里跌约2.5%、百度跌约1.1%；逆势上涨的有网易有道+4.7%、腾讯音乐+1.6%、华住和唯品会各+1.2%。KWEB跌2.23%、CQQQ跌2.87%。媒体没有给出单一公司利空，数据中心股（世纪互联、万国数据）跌幅居前。",
+     "links": [
+      {
+       "label": "深蓝财经：美股收盘与中概表现",
+       "url": "https://www.shenlannews.com/dispatch/999483"
+      },
+      {
+       "label": "X @qdylds 👁716",
+       "url": "https://x.com/qdylds/status/2113409445808210379"
+      },
+      {
+       "label": "X @guxiaqidan 👁528",
+       "url": "https://x.com/guxiaqidan/status/2113409244045484118"
+      },
+      {
+       "label": "X @sumacoinVision 个股涨跌",
+       "url": "https://x.com/sumacoinVision/status/2113373750481842317"
+      }
+     ],
+     "event_time": "2026-10-22 美股收盘（北京 10-23 04:00）",
+     "lang": "zh"
+    },
+    {
+     "id": "20261023-adr01z-pcaob",
+     "company": "中概股审计（PCAOB / 证监会）",
+     "tag": "实锤",
+     "source_types": [
+      "官方",
+      "财经媒体",
+      "X"
+     ],
+     "date": "10-22（补漏）",
+     "text": "美国公众公司会计监督委员会（PCAOB）主席 Jim Logothetis 10-14 前后首次到中国，在上海现场观摩PCAOB对在华会计师事务所的检查，并在北京与证监会主席吴清、财政部副部长郭婷婷会面，讨论中美审计监管合作。PCAOB 美东10-21发出会面纪要，证监会10-22官网通报，财新10-22晚报道。这是中概审计底稿问题2022年签协议后，PCAOB主席首次亲自来华观摩检查。昨晚各期没收录，今早补上。X 上讨论很少（15Z–00Z 只有约5帖）。",
+     "links": [
+      {
+       "label": "证监会通报",
+       "url": "https://www.csrc.gov.cn/csrc/c106311/c7666065/content.shtml"
+      },
+      {
+       "label": "PCAOB 会面纪要（英文）",
+       "url": "https://pcaobus.org/news-events/news-releases/news-release-detail/readout--pcaob-chairman-jim-logothetis-meets-with-counterparts-in-china"
+      },
+      {
+       "label": "财新",
+       "url": "https://finance.caixin.com/2026-10-22/102496150.html"
+      },
+      {
+       "label": "Bloomberg Law【付费】：China, US Regulators Discuss Audit Oversight Ties in Beijing",
+       "url": "https://news.bloomberglaw.com/securities-law/china-us-regulators-discuss-audit-oversight-ties-in-beijing"
+      },
+      {
+       "label": "X @zhangsheng5w 👁175",
+       "url": "https://x.com/zhangsheng5w/status/2113303102011158857"
+      }
+     ],
+     "event_time": "会面约 2026-10-14；PCAOB 纪要 10-21 美东；证监会 10-22 发布",
+     "lang": "zh"
+    }
+   ]
+  },
+  {
+   "title": "🏛️ 监管 · 诉讼 · 制裁",
+   "color": "#7c2d12",
+   "items": [
+    {
+     "id": "20261023-adr01z-odi",
+     "company": "出海企业 / 居民个人境外投资",
+     "tag": "实锤",
+     "source_types": [
+      "官方",
+      "官媒"
+     ],
+     "date": "10-22",
+     "text": "国家发改委10-22发布《对外投资管理办法》，12-1起施行。新办法把居民个人直接境外投资也纳入管理：非敏感类直接投资向户籍地或经常居住地省级发改部门备案，敏感类由国家发改委核准，备案或核准要在投资实施前拿到。发改委答记者问说，个人通过QDII、港股通、跨境理财通等渠道投资境外金融市场不受影响；具体表格和线上办理指南待配套文件。对出海企业创始人个人在海外设公司、持股的操作有影响。",
+     "links": [
+      {
+       "label": "新华网",
+       "url": "https://www.news.cn/fortune/20261022/454dea4d6880472686ee9b1395073c22/c.html"
+      },
+      {
+       "label": "中国政府网：发改委答记者问",
+       "url": "https://www.gov.cn/zhengce/202610/content_7084050.htm"
+      },
+      {
+       "label": "界面新闻",
+       "url": "https://www.jiemian.com/article/15224468.html"
+      },
+      {
+       "label": "新浪财经：全文",
+       "url": "https://finance.sina.com.cn/china/2026-10-22/doc-iniwavxi5237618.shtml"
+      }
+     ],
+     "event_time": "2026-10-22 发布，12-01 施行",
+     "lang": "zh"
+    }
+   ]
+  },
+  {
+   "title": "💼 高管 · 大股东八卦",
+   "color": "#b45309",
+   "items": [
+    {
+     "id": "20261023-adr01z-bloks",
+     "company": "布鲁可（00325.HK）/ 海底捞",
+     "tag": "实锤",
+     "source_types": [
+      "公司公告",
+      "财经媒体",
+      "X"
+     ],
+     "date": "10-22（补漏）",
+     "text": "布鲁可10-22公告：董事长兼CEO朱伟松全资持有的Smart Bloks当天以每股65.28港元大宗出售384.9万股（约1.56%），套现约2.51亿港元，理由是“自身资金需要及财务安排”；朱伟松合计权益降到约52.03%，仍是控股股东。股价当天收跌21.38%报54.60港元，跌破60.35港元发行价。港媒（巴士的报、am730）把它和9月海底捞张勇家族信托套现约27.5亿港元联系起来，猜测与财政部、税务总局7月发布的离岸信托个人所得税新规（历史事项90天内补申报）有关；这一说法【传闻】，两家公司都说是股东个人财务安排。昨晚各期没收录，今早补上。X 相关帖 15Z–00Z 每小时 16/6/10/5/4/2/2/5/4/12。",
+     "links": [
+      {
+       "label": "新浪财经/21世纪经济报道",
+       "url": "https://finance.sina.com.cn/roll/2026-10-22/doc-iniwcafi5930050.shtml"
+      },
+      {
+       "label": "凤凰网：从游族到布鲁可",
+       "url": "https://feng.ifeng.com/c/8xRIDxfi6Wl"
+      },
+      {
+       "label": "巴士的报：大股东减持惹追税忧虑",
+       "url": "https://www.bastillepost.com/hongkong/article/17023632-%e5%b8%83%e9%ad%af%e5%8f%af%e6%8f%92%e9%80%be17-%e5%a4%a7%e8%82%a1%e6%9d%b1%e6%b8%9b%e6%8c%81%e6%83%b9%e8%bf%bd%e7%a8%85%e6%86%82%e6%85%ae"
+      },
+      {
+       "label": "8world：海底捞减持疑因离岸信托补税",
+       "url": "https://www.8world.com/finance/haidilao-share-3278371"
+      },
+      {
+       "label": "X @Wujizhuzhu 👁359",
+       "url": "https://x.com/Wujizhuzhu/status/2113431613409579181"
+      }
+     ],
+     "event_time": "2026-10-22 港股交易日",
+     "lang": "zh"
+    }
+   ]
+  },
+  {
+   "title": "🎯 重点追踪",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "id": "20261023-adr01z-didi",
+     "company": "滴滴 & 滴滴出海",
+     "tag": "统计",
+     "source_types": [
+      "X",
+      "媒体检索"
+     ],
+     "date": "10-22 至 10-23",
+     "text": "本期无公司级新动态：过夜中文 X 检索只有“滴滴滴”口头语帖；西语圈有三条地方监管/招募低优先级线索（见海外小语种线索）。小红书「滴滴 杀熟」关键词5篇新笔记均与平台无实质关系。繁简价差主帖约18.23万浏览，滴滴无回应（今早大厂早报已收录）。",
+     "links": [
+      {
+       "label": "X @Furinanatw 繁简价差主帖",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      }
+     ],
+     "event_time": "2026-10-22 23:10 至 10-23 09:25 检索",
+     "lang": "zh"
+    },
+    {
+     "id": "20261023-adr01z-tiktok",
+     "company": "字节 / TikTok",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "X"
+     ],
+     "date": "10-22",
+     "text": "西雅图电台 KIRO Newsradio 10-22报道：TikTok 在华盛顿州贝尔维尤的员工去年达到约2100人、比前年增长30%，期间两轮裁员涉及约140人，但招聘快过裁员，当地员工大多在 TikTok Shop。属业务面信息，无新八卦。",
+     "links": [
+      {
+       "label": "X @KIRONewsradio 👁173",
+       "url": "https://x.com/KIRONewsradio/status/2113395513332580509"
+      }
+     ],
+     "event_time": "2026-10-22 美西",
+     "lang": "zh",
+     "original": "TikTok's Bellevue workforce hit 2,100 employees last year, up 30% from the year before. Two rounds of layoffs affected about 140, but hiring continues to outpace cuts. Most local staff work for TikTok Shop."
+    },
+    {
+     "id": "20261023-adr01z-ai",
+     "company": "中国大模型（出海 / IPO）",
+     "tag": "统计",
+     "source_types": [
+      "X",
+      "媒体检索"
+     ],
+     "date": "10-22 至 10-23",
+     "text": "本期无新的出海或上市事实：DeepSeek 融资与上市计划，均在10-22白天已报道、已在短期追踪里；MiniMax/智谱港股破发同样已收录，待今日港股开盘看是否续跌。",
+     "links": [
+      {
+       "label": "钛媒体·钛晨报（含DeepSeek融资）",
+       "url": "https://www.tmtpost.com/8178065.html"
+      }
+     ],
+     "event_time": "2026-10-22",
+     "lang": "zh"
+    }
+   ]
+  },
+  {
+   "title": "🌏 海外小语种线索",
+   "color": "#0891b2",
+   "items": [
+    {
+     "id": "20261023-adr01z-latam",
+     "company": "滴滴（墨西哥 Hidalgo / Tabasco / Chiapas）",
+     "tag": "传闻",
+     "source_types": [
+      "地方媒体",
+      "X"
+     ],
+     "date": "10-22",
+     "text": "墨西哥西语线索，均为低优先级：①《La Jornada Hidalgo》问“DiDi 准备进入伊达尔戈州？”，称有招募司机的启事宣传首周最多赚1万比索，滴滴未确认；②塔巴斯科州电台称当地 Uber、DiDi、InDrive 司机等监管已等了六年；③恰帕斯州《Cuarto Poder》报道当地人士呼吁监管 Uber 和 DiDi、改善传统出租车。阿根廷罗萨里奥条例续议已在大厂早报收录，不重复。",
+     "links": [
+      {
+       "label": "X @JornadaHidalgo 👁51",
+       "url": "https://x.com/JornadaHidalgo/status/2113319471716675975"
+      },
+      {
+       "label": "X @noticias103fm（塔巴斯科）",
+       "url": "https://x.com/noticias103fm/status/2113319227742621919"
+      },
+      {
+       "label": "X @CuartoPoderMX（恰帕斯）👁78",
+       "url": "https://x.com/CuartoPoderMX/status/2113400757055558060"
+      }
+     ],
+     "event_time": "2026-10-22 墨西哥当地时间",
+     "lang": "zh",
+     "country": "墨西哥",
+     "language": "西班牙语",
+     "original": "¿DiDi prepara su llegada a Hidalgo? 🚗📲 Una convocatoria busca conductores y anuncia ganancias de hasta 10 mil pesos en la primera semana. ｜ Conductores de Uber, DiDi e InDrive llevan seis años esperando regulación en Tabasco. ｜ Piden regular Uber y Didi en #Chiapas"
+    }
+   ]
+  }
+ ]
+}

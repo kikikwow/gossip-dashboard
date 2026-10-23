@@ -1,0 +1,248 @@
+{
+ "type": "bigtech",
+ "title": "中国大厂八卦简报｜2026-10-23 早报",
+ "timestamp": "2026-10-23T01:00:00Z",
+ "edition_date": "2026-10-23",
+ "slot": "01Z",
+ "lede": "过夜窗口新料偏少：宁德时代“董秘路演被打”传闻被第一财经辟谣（补漏）；Arena 匿名模型 Kibitz/Kalmia 被指是 Kimi K3.1 和 Qwen 4；X 又冒出尊界踏板门“18人测试、3车出问题”的未证实传闻。",
+ "alert_note": "早报，不单独警报",
+ "alert_worthy": false,
+ "top3": [
+  "宁德时代董秘被打传闻辟谣",
+  "Kimi K3.1·Qwen 4 Arena暗测",
+  "尊界踏板门新传闻"
+ ],
+ "focus": {
+  "滴滴": "7家平台签国家医保局倡议（补漏）；繁简价差18.23万无回应；DiDi México 安全AI（西语，低优先级）",
+  "字节": "本期无新动态；红果降温至X每小时2–17帖",
+  "中国大模型": "Kimi K3.1/Qwen 4 Arena暗测传闻；DeepSeek融资热度回落；美国禁用DeepSeek移出短期"
+ },
+ "short_term_notes": "已移出 美国禁用DeepSeek·商务部回应；新加入 Kimi K3.1·Qwen 4 Arena暗测；短期5项",
+ "overseas_local_lang": [
+  "20261023-bt01z-didi-mx-ai"
+ ],
+ "window": "2026-10-22T15:10Z → 2026-10-23T00:58Z",
+ "markdown_file": "2026-10-23_bigtech_01Z_digest.md",
+ "sections": [
+  {
+   "title": "⭐ 今日 Top 3",
+   "color": "#dc2626",
+   "items": [
+    {
+     "id": "20261023-bt01z-catl-dongmi",
+     "company": "宁德时代",
+     "tag": "传闻",
+     "source_types": [
+      "X",
+      "媒体辟谣（第一财经）"
+     ],
+     "date": "10-22",
+     "text": "10-22 白天 X 上流传“宁德时代董秘去景顺长城路演被打了”，没有现场画面或其他佐证。当晚 21:59 第一财经援引知情人士回应：消息不实，董秘根本没出席这场路演。宁德时代官方和景顺长城都没有公开发声。X 上还有人顺带爆料“景顺不满回购承诺 200–400 亿、实际只做了几十亿”，这一说法没有任何信源，不采信。昨晚每日总结漏收，本期补上。",
+     "links": [
+      {
+       "label": "第一财经：宁德时代董秘被打？知情人士回应",
+       "url": "https://www.yicai.com/news/103404997.html"
+      },
+      {
+       "label": "新浪财经（转第一财经）：知情人士回应消息不实",
+       "url": "https://finance.sina.com.cn/chanjing/gsnews/2026-10-22/doc-iniwchpf5933756.shtml"
+      },
+      {
+       "label": "X @LSX0008 原传闻帖（约4943浏览）",
+       "url": "https://x.com/LSX0008/status/2113194467385921550"
+      },
+      {
+       "label": "X @dmjk001 转发辟谣（约5576浏览）",
+       "url": "https://x.com/dmjk001/status/2113270324683014278"
+      }
+     ]
+    },
+    {
+     "id": "20261023-bt01z-kibitz-kalmia",
+     "company": "月之暗面（Kimi） / 阿里（通义千问）",
+     "tag": "传闻",
+     "source_types": [
+      "X(英文/中文)",
+      "海外资讯站"
+     ],
+     "date": "10-22",
+     "text": "10-22 起，大模型盲测平台 Arena 上出现两个匿名模型 Kibitz 和 Kalmia。X 上传 Kibitz 是还没发布的 Kimi K3.1、Kalmia 是通义千问 Qwen 4，有人晒出两者生成的直升机 3D 场景对比。英文博主 @notjazii 称“下周会很热闹”，还说 GLM 5.5 可能也在测；KuCoin 快讯转述“本周有望发布”。月之暗面和阿里都没确认模型身份和发布时间。10-21 早报已记过 Kimi K3.1 泄露传闻，Kalmia/Qwen 4 是新线索。",
+     "lang": "en",
+     "translation_zh": "下周会很热闹。现在 Arena 上在测一大批中国模型，其中两个已经知道是谁：Kimi K3.1 叫 kibitz，Qwen 4 叫 kalmia。早期测试看两个都很强，比现有模型提升很大，很想试试。我很确定 GLM 5.5 也在测，只是还没人找到。我正在 Arena 上测 Kimi 和 Qwen，测完分享结果，敬请期待。",
+     "original": "next week is gonna be a big one\n\nalot of chinese models are being tested in arena right now and we know two of them are\n\n> kimi k3.1 under the name kibitz\n> qwen 4 under the name kalmia\n\nfrom early tests, both look really good and huge step up from current models. super excited to try\n\npretty sure glm 5.5 is being tested too, but no one has found it yet\n\ntrying to test kimi and qwen in arena now. will share results when done, stay tuned",
+     "links": [
+      {
+       "label": "X @notjazii（约1.19万浏览）",
+       "url": "https://x.com/notjazii/status/2113228071377793484"
+      },
+      {
+       "label": "X @noclipepe 对比样例（约1302浏览）",
+       "url": "https://x.com/noclipepe/status/2113263335093264651"
+      },
+      {
+       "label": "KuCoin 快讯：Kimi K3.1 与 Qwen4 预计本周发布（英文）",
+       "url": "https://www.kucoin.com/news/flash/kimi-k3-1-and-qwen4-expected-to-launch-this-week"
+      },
+      {
+       "label": "LINUX DO：Arena 新模型 Kibitz 疑似 K3.1",
+       "url": "https://linux.do/t/topic/3056564"
+      }
+     ]
+    },
+    {
+     "id": "20261023-bt01z-zunjie-rumor",
+     "company": "华为（尊界）",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-23",
+     "text": "X 博主 @maoshen 今早 08:28 发帖称听说“尊界刹车踏板门”有新八卦：事发当天就有部门组织测试，18 人领导团队参与（7 个安徽本地、11 个北京），一次提走 9 辆新车，据说其中 3 辆出现严重问题，另有一个“神秘部门”参与。帖子本人也提醒“谨慎吃瓜”，没有截图、文件或媒体佐证，三部门联合调查组至今未公布结论，华为/江淮没有回应。尊界线已于 10-21 移出短期，本条只作传闻记录。",
+     "links": [
+      {
+       "label": "X @maoshen（约1141浏览）",
+       "url": "https://x.com/maoshen/status/2113427216361029715"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🎯 重点追踪",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "id": "20261023-bt01z-didi-yibao",
+     "company": "滴滴出行（及美团、淘宝闪购等）",
+     "tag": "官方",
+     "source_types": [
+      "政府部门（国家医保局公众号）",
+      "媒体"
+     ],
+     "date": "10-22",
+     "text": "国家医保局 10-22 公布一份 10-9 签署的联合倡议书，美团、淘宝闪购、顺丰同城、中通快递、曹操专车、T3出行、滴滴出行 7 家平台签名，承诺向骑手、快递员、网约车司机宣传职工医保，依法合规探索“个人缴费+平台补贴”，在 App 里放参保入口，并配合做好跨平台、跨区域参保衔接。倡议没有写补贴金额和时间表，滴滴没有单独发声明。前几期漏收，本期补上。",
+     "links": [
+      {
+       "label": "澎湃（转国家医保局公众号）：七家新业态平台联合倡议",
+       "url": "https://www.thepaper.cn/newsDetail_forward_34307177"
+      },
+      {
+       "label": "新浪财经：美团、滴滴等七大平台联合倡议推动骑手司机参保",
+       "url": "https://finance.sina.com.cn/roll/2026-10-22/doc-iniwcaff5208837.shtml"
+      }
+     ]
+    },
+    {
+     "id": "20261023-bt01z-didi-fanjian",
+     "company": "滴滴",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-14→10-23",
+     "text": "繁体版与简体版价差主帖 @Furinanatw 今早约 18.23 万浏览，跟昨晚基本一样，一夜不涨；没有新证据，滴滴也没有回应。",
+     "links": [
+      {
+       "label": "X @Furinanatw（约18.23万浏览）",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      }
+     ]
+    },
+    {
+     "id": "20261023-bt01z-didi-mx-ai",
+     "company": "滴滴出海·墨西哥（DiDi México）",
+     "tag": "官方",
+     "source_types": [
+      "媒体(西语)",
+      "公司官网",
+      "X(西语)"
+     ],
+     "date": "10-22",
+     "text": "DiDi México 10-22 对外介绍行程安全 AI：四个模型 Hércules、Clío、Temis、Pitia 分工识别行程风险，其中 Pitia 会优先照顾女乘客；发现紧急情况时，可以通过 Axon 911 把位置、车速和车辆信息共享给警方。El Informador、Expansión、El Economista 都有报道。这是公司宣传，不是八卦，低优先级。",
+     "lang": "es",
+     "translation_zh": "DiDi 墨西哥：用人工智能保障行程安全。AI 作为第一道检测防线，专门团队负责评估警报，DiDi 希望借此加强预防，并在行程中提供协助。（El Informador）",
+     "original": "DiDi México: Seguridad en viajes con Inteligencia Artificial. Con la IA como primera línea de detección y los equipos especializados a cargo de evaluar las alertas, DiDi busca fortalecer la prevención y ofrecer asistencia durante los recorridos.",
+     "links": [
+      {
+       "label": "El Informador：DiDi México 用 AI 保障行程安全（西语）",
+       "url": "https://www.informador.mx/tecnologia/didi-mexico-seguridad-en-viajes-con-inteligencia-artificial-20261022-0140.html"
+      },
+      {
+       "label": "Expansión：DiDi 行程将受 AI 监控，紧急时警方可介入（西语）",
+       "url": "https://expansion.mx/tecnologia/2026/10/22/didi-ubicacion-tiempo-real-policia-seguridad-ia"
+      },
+      {
+       "label": "El Economista：DiDi 用 AI 加强行程安全（西语）",
+       "url": "https://www.eleconomista.com.mx/empresas/didi-refuerza-seguridad-viajes-apoyo-ia-20261022-840065.html"
+      },
+      {
+       "label": "X @informador（约320浏览）",
+       "url": "https://x.com/informador/status/2113405136760393933"
+      }
+     ]
+    },
+    {
+     "id": "20261023-bt01z-ds-funding",
+     "company": "DeepSeek",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-22",
+     "text": "千亿融资热度一夜回落，X 每小时从 60 多帖降到 21–43 帖。X 上的分析帖称腾讯、宁德时代联合领投，融资完成后估值约 700 亿美元，超过月之暗面、智谱、MiniMax 三家之和；这些是博主转述和测算，DeepSeek 仍未正式回应融资。",
+     "links": [
+      {
+       "label": "X @WangNextDoor2（约1045浏览）",
+       "url": "https://x.com/WangNextDoor2/status/2113381882654061023"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🚗 车圈·华为/小米",
+   "color": "#ea580c",
+   "items": [
+    {
+     "id": "20261023-bt01z-wenjie-sohu",
+     "company": "华为（问界）",
+     "tag": "实锤",
+     "source_types": [
+      "X",
+      "媒体（此前已报）"
+     ],
+     "date": "10-22→10-23",
+     "text": "问界神木起火事故仍在等交警结论。今早 X 讨论回升，00Z 一小时约 39 帖，焦点是“最早发视频的搜狐汽车微博被禁言”，有博主调侃“一千万以内最好的车撞到了一千万以内最好的柱子”。没有新的官方通报，问界也没有补充回应。",
+     "links": [
+      {
+       "label": "X @giantcutie666（约687浏览）",
+       "url": "https://x.com/giantcutie666/status/2113432656578842857"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "📌 其他",
+   "color": "#64748b",
+   "items": [
+    {
+     "id": "20261023-bt01z-adr-close",
+     "company": "中概股（阿里、网易、京东、百度等）",
+     "tag": "统计",
+     "source_types": [
+      "行情（新浪）"
+     ],
+     "date": "10-22",
+     "text": "美股 10-22 收盘，纳斯达克中国金龙指数跌 1.19%，阿里跌 2.48%，热门中概股多数下跌；微博 #8「美股科技股大跌」约 56.3 万。详细行情见美股中概&出海早报。",
+     "links": [
+      {
+       "label": "新浪财经：10月23日热门中概股多数下跌，阿里跌2.48%",
+       "url": "https://finance.sina.com.cn/stock/usstock/c/2026-10-23/doc-iniwcxma4893028.shtml"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1013,6 +1013,54 @@
     }
    ],
    "recorded_at": "2026-10-22T05:30:00Z"
+  },
+  "微信回应iPhone Duo不适配": {
+   "summary": "10 月 22 日「iPhoneDuo微信不适配」「微信回应iPhoneDuo不适配」同时登上微博热搜（#25 约 33 万、#27 约 32 万）。腾讯客服称目前微信还没有针对苹果折叠屏 iPhone Duo 提供适配支持，需关注后续版本更新；此前评测指出 iPhone Duo 上的微信不能用平板模式、不能双开。这是产品适配问题，属客服层面回应，不是八卦。",
+   "credibility": "实锤",
+   "event_time": "2026-10-22",
+   "sources": [
+    {
+     "label": "21经济网：腾讯客服称微信未针对iPhone Duo适配",
+     "url": "https://www.21jingji.com/article/20261022/herald/b7fd8f660d0acf5bf0efd7a486efb43d.html"
+    },
+    {
+     "label": "新京报：iPhoneDuo 微信不适配？微信回应",
+     "url": "https://www.bjnews.com.cn/detail/1792651723129834.html"
+    },
+    {
+     "label": "凤凰网：腾讯客服回应",
+     "url": "https://feng.ifeng.com/c/8xQnVXGe7rx"
+    }
+   ],
+   "recorded_at": "2026-10-22T08:25:00Z"
+  },
+  "Kimi K3.1·Qwen 4 Arena暗测": {
+   "summary": "10-22 起 Arena 盲测平台出现匿名模型 Kibitz 和 Kalmia，网友据分词器特征推测分别是月之暗面未发布的 Kimi K3.1 和阿里通义千问 Qwen 4，海外资讯站转述“本周有望发布”。两家公司均未确认身份和发布时间。",
+   "credibility": "传闻",
+   "event_time": "2026-10-22",
+   "sources": [
+    {
+     "label": "X @notjazii：kibitz=Kimi K3.1、kalmia=Qwen 4",
+     "url": "https://x.com/notjazii/status/2113228071377793484"
+    },
+    {
+     "label": "KuCoin 快讯：Kimi K3.1 与 Qwen4 预计本周发布",
+     "url": "https://www.kucoin.com/news/flash/kimi-k3-1-and-qwen4-expected-to-launch-this-week"
+    }
+   ],
+   "recorded_at": "2026-10-23T01:00:00Z"
+  },
+  "宁德时代董秘被打传闻": {
+   "summary": "10-22 网传宁德时代董秘在景顺长城路演时被打，当晚第一财经援引知情人士称消息不实、董秘并未出席该场路演。公司与基金公司均未公开发声。",
+   "credibility": "传闻",
+   "event_time": "2026-10-22",
+   "sources": [
+    {
+     "label": "第一财经：宁德时代董秘被打？知情人士回应",
+     "url": "https://www.yicai.com/news/103404997.html"
+    }
+   ],
+   "recorded_at": "2026-10-23T01:00:00Z"
   }
  }
 }

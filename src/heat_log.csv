@@ -1191,3 +1191,26 @@ timestamp_utc,topic,metric,value,source
 2026-10-22T15:05:00Z,京东 抖音,x_posts_hour,1,x_counts (京东 抖音) OR 左琦 OR 网经社 OR (抖音 黑公关) OR (淘宝 起诉) OR (拼多多 二选一) 14Z; 08Z–13Z=0/3/0/0/2/5
 2026-10-22T15:05:00Z,盘石创始人田宁被采取刑事强制措施,x_posts_hour,1,x_counts 盘石 OR 田宁 14Z; 08Z–13Z=9/1/3/6/7/3
 2026-10-22T15:05:00Z,滴滴繁简价差,x_sample_post,182314,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-23T01:00:00Z,DeepSeek完成千亿融资,x_posts_hour,43,x_counts DeepSeek (融资 OR funding OR raise OR raised OR 估值 OR valuation OR 千亿) 00Z(至00:56); 15Z–23Z=65/61/61/50/45/21/23/28/30
+2026-10-23T01:00:00Z,DeepSeek完成千亿融资,x_sample_post,1045,https://x.com/WangNextDoor2/status/2113381882654061023
+2026-10-23T01:00:00Z,问界神木碰撞起火·官方回应,x_posts_hour,39,x_counts 问界 (神木 OR 起火 OR 撞 OR M9 OR 搜狐汽车 OR 交管) 00Z(至00:56); 15Z–23Z=43/35/11/12/16/11/8/12/21
+2026-10-23T01:00:00Z,问界神木碰撞起火·官方回应,x_sample_post,687,https://x.com/giantcutie666/status/2113432656578842857
+2026-10-23T01:00:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour,17,x_counts 红果 (金币 OR 短剧 OR 广告 OR 收费) 00Z(至00:56); 15Z–23Z=17/14/20/15/9/5/2/4/12
+2026-10-23T01:00:00Z,港股科技重挫·MiniMax首次破发,x_posts_hour,9,x_counts (MiniMax OR 智谱 OR 00100 OR 恒生科技) (跌 OR 破发 OR 股价 OR 港股 OR shares OR stock) 00Z(至00:56); 15Z–23Z=8/8/6/4/3/0/1/6/4
+2026-10-23T01:00:00Z,美国禁用DeepSeek·商务部回应,x_posts_hour,18,x_counts DeepSeek (ban OR banned OR DHS OR 禁用 OR 禁令) 00Z(至00:56); 15Z–23Z=14/12/8/10/4/8/6/6/13
+2026-10-23T01:00:00Z,Kimi K3.1·Qwen 4 Arena暗测,x_sample_post,11882,https://x.com/notjazii/status/2113228071377793484
+2026-10-23T01:00:00Z,宁德时代董秘被打传闻,x_posts_hour,2,x_counts 宁德时代 (董秘 OR 被打 OR 路演 OR 景顺) 00Z; 10-22 07Z–16Z=6/2/7/2/3/3/3/8/4/4，17Z起0–1
+2026-10-23T01:00:00Z,宁德时代董秘被打传闻,x_sample_post,5576,https://x.com/dmjk001/status/2113270324683014278
+2026-10-23T01:00:00Z,京东 抖音,x_posts_hour,0,x_counts (京东 抖音) OR 左琦 OR 网经社 OR (抖音 黑公关) OR (淘宝 起诉) OR (拼多多 二选一) OR (京东 声明) OR (美团 起诉) 00Z; 15Z–23Z=0/0/1/0/2/5/0/1/0
+2026-10-23T01:00:00Z,盘石创始人田宁被采取刑事强制措施,x_posts_hour,3,x_counts 盘石 OR 田宁 00Z; 15Z–23Z=13/3/4/1/2/1/1/3/7
+2026-10-23T01:00:00Z,滴滴繁简价差,x_sample_post,182330,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-23T01:25:00Z,美财政部COINS对外投资新规,x_posts_hour,20,x_counts (COINS OR 对外投资 OR outbound investment China) 00Z; 15Z–23Z=14/11/6/8/2/6/15/17/24
+2026-10-23T01:25:00Z,中概10-22收盘,x_posts_hour,12,x_counts 中概 OR 金龙指数 OR KWEB OR 中概股 00Z; 15Z–23Z=9/10/7/4/4/7/2/5/9
+2026-10-23T01:25:00Z,PCAOB主席赴华,x_posts_hour,0,x_counts PCAOB 00Z; 15Z–23Z=0/4/0/0/0/0/1/0/0
+2026-10-23T01:25:00Z,布鲁可减持·离岸信托,x_posts_hour,12,x_counts 布鲁可 OR 离岸信托 00Z; 15Z–23Z=16/6/10/5/4/2/2/5/4
+2026-10-23T01:25:00Z,美财政部COINS对外投资新规,x_sample_post,357,https://x.com/niubi/status/2113397217600106742
+2026-10-23T01:25:00Z,中概10-22收盘,x_sample_post,716,https://x.com/qdylds/status/2113409445808210379
+2026-10-23T01:25:00Z,中概10-22收盘,x_sample_post,528,https://x.com/guxiaqidan/status/2113409244045484118
+2026-10-23T01:25:00Z,PCAOB主席赴华,x_sample_post,175,https://x.com/zhangsheng5w/status/2113303102011158857
+2026-10-23T01:25:00Z,布鲁可减持·离岸信托,x_sample_post,359,https://x.com/Wujizhuzhu/status/2113431613409579181
+2026-10-23T01:25:00Z,泡泡玛特·段永平,x_sample_post,10400,https://x.com/Dragonhau66/status/2113404798275928342
