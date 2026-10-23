@@ -1,0 +1,191 @@
+{
+ "routine": "大厂八卦热点快讯",
+ "type": "alert",
+ "title": "大厂八卦热点快讯",
+ "timestamp": "2026-10-23T03:15:00Z",
+ "edition_date": "2026-10-23",
+ "edition_id": "kuaixun_0315Z",
+ "fired_at_utc": "2026-10-23T03:14:59Z",
+ "scanned_at_utc": "2026-10-23T03:30:00Z",
+ "beijing_time": "2026-10-23 11:15–11:30 CST",
+ "window": "2026-10-23T01:00Z–03:20Z（北京 9:00–11:20，接 9:00 早报）",
+ "alert_sent": true,
+ "alert_worthy": true,
+ "reason": "①月之暗面官方 @Kimi_Moonshot 09:41 发无配文预告视频，画面显示「Kimi K3.1」，约1.5小时浏览27.7万；X 上 Kimi K3.1/Qwen 4 相关发帖从每小时37、59 跳到218，短期追踪话题出现官方动作。②玉渊谭天10-22 23:49 称 DeepSeek、MiniMax 已完成技术出口登记并完成开源和海外授权使用，彭博、IT之家、格隆汇、Pandaily、华尔街见闻跟进，早报未收。",
+ "lede": "快讯窗北京9:00–11:20。信源：X公开检索与计数（约18次）、微博热搜镜像soso.re（11:13）、RSS（新匹配6条）、网页交叉核实；小红书窗口内无新条目，公众号因微信读书登录失效缺失。警报2条：Kimi K3.1官方预热、DeepSeek/MiniMax完成出口登记。",
+ "items": [],
+ "top3": [],
+ "sections": [
+  {
+   "title": "⚡ 快讯",
+   "color": "#e4572e",
+   "items": [
+    {
+     "id": "20261023-kx0315Z-kimi-k31-teaser",
+     "company": "月之暗面 / Kimi",
+     "tag": "实锤",
+     "source_types": [
+      "官方账号",
+      "X"
+     ],
+     "date": "10-23 09:41",
+     "event_time": "2026-10-23 09:41 北京时间（01:41Z）",
+     "text": "月之暗面官方 X 账号 @Kimi_Moonshot 10-23 上午发布一条无配文的复古风预告视频，网友截图显示 Kimi Code 界面模型名为「Kimi K3.1」、并有「Kimi k3.1 thinking: High」提示，被普遍解读为 K3.1 即将发布。该帖约1.5小时浏览约27.7万、点赞5646；X 上相关发帖 02Z 一小时218条（前两小时37、59），发布日期和价格官方仍未公布，Arena 匿名模型 Kibitz 是否即 K3.1 仍属网友推测。",
+     "links": [
+      {
+       "label": "X @Kimi_Moonshot 官方预告（约27.7万浏览）",
+       "url": "https://x.com/Kimi_Moonshot/status/2113445757185606062"
+      },
+      {
+       "label": "X @PANewsCN 解读",
+       "url": "https://x.com/PANewsCN/status/2113463420204835275"
+      },
+      {
+       "label": "X @TokenGremlin（约1.23万浏览，自称已测试，英文）",
+       "url": "https://x.com/TokenGremlin/status/2113452369929220550"
+      }
+     ],
+     "translation_zh": "@TokenGremlin 帖子译文：「Kimi-K3.1、Opus-5.5、GPT-6、Astra 随时都可能来了。（我真的测过 Kimi K3.1，这模型确实强得离谱……）」",
+     "original": "We're getting Kimi-K3.1-Opus-5.5-GPT-6-Astra any day now, guys.\n\n(I've actually tested Kimi K3.1, and the model is genuinely INCREDIBLE...)"
+    },
+    {
+     "id": "20261023-kx0315Z-deepseek-minimax-export",
+     "company": "DeepSeek / MiniMax",
+     "tag": "实锤",
+     "source_types": [
+      "官媒",
+      "媒体"
+     ],
+     "date": "10-22 23:49",
+     "event_time": "2026-10-22 23:49 北京时间（玉渊谭天发文）",
+     "text": "央视旗下玉渊谭天10-22晚发文称，商务部、科技部10-16就技术出口目录征求意见以来，DeepSeek、MiniMax 两家已顺利履行出口前登记手续，并完成开源和海外授权使用；文章强调用大模型提供 API、App、SaaS 服务不算技术出口。彭博以「DeepSeek、MiniMax 获准在海外使用」为题报道，IT之家、格隆汇、华尔街见闻、Pandaily 跟进；X 上相关发帖每小时11–14条，热度不高。",
+     "links": [
+      {
+       "label": "华尔街见闻·玉渊谭天原文",
+       "url": "https://wallstreetcn.com/articles/3784243"
+      },
+      {
+       "label": "IT之家",
+       "url": "https://www.ithome.com/1/016/796.htm"
+      },
+      {
+       "label": "格隆汇快讯",
+       "url": "https://m.gelonghui.com/live/2724888"
+      },
+      {
+       "label": "Bloomberg【付费】",
+       "url": "https://www.bloomberg.com/news/articles/2026-10-23/deepseek-minimax-win-approval-for-global-use-state-media-says"
+      },
+      {
+       "label": "Pandaily（英文）",
+       "url": "https://pandaily.com/deepseek-minimax-complete-ai-technology-export-registration-open-source-overseas-licensing"
+      }
+     ],
+     "lang": "en",
+     "translation_zh": "彭博标题译文：国家媒体称 DeepSeek、MiniMax 获准在全球使用。摘要译文：国家媒体旗下账号称，DeepSeek 和 MiniMax 已获准在海外部署模型，北京将允许一批国产 AI 技术在全球运营。",
+     "original": "DeepSeek, MiniMax Win Approval for Global Use, State Media Says — DeepSeek and MiniMax Group Inc. have won approval to deploy models overseas, part of a wave of homegrown AI technologies that Beijing will allow to operate globally, a Chinese state media affiliate said."
+    }
+   ]
+  }
+ ],
+ "tracked_updates": [
+  {
+   "topic": "问界神木碰撞起火·官方回应",
+   "status": "追踪中·升温",
+   "heat": "微博11:13 #9「三问问界神木碰撞起火事故」427007；X 00Z/01Z/02Z=25/28/12；TechWeb 10-23 转述神木交管大队「灯柱没断、正喷漆修复」（10-22晚已报，无新事实）"
+  },
+  {
+   "topic": "红果短剧下线金币·自砍摇钱树",
+   "status": "追踪中·升温",
+   "heat": "X 00Z/01Z/02Z=18/25/40，多为用户吐槽和擦边引流帖，官方无新动作"
+  },
+  {
+   "topic": "DeepSeek完成千亿融资",
+   "status": "追踪中·持平",
+   "heat": "X 00Z/01Z/02Z=31/46/38，多为彭博稿转述，公司仍未回应"
+  },
+  {
+   "topic": "港股科技重挫·MiniMax首次破发",
+   "status": "追踪中·持平",
+   "heat": "X 00Z/01Z/02Z=2/8/6；微博#6「A股跌破3600点」482723为大盘行情；MiniMax出口登记见快讯"
+  },
+  {
+   "topic": "Kimi K3.1·Qwen 4 Arena暗测",
+   "status": "追踪中·升温（官方预热）",
+   "heat": "X 00Z/01Z/02Z=37/59/218，03Z前16分钟63；@Kimi_Moonshot 预告≈27.7万"
+  }
+ ],
+ "focus_topics": {
+  "滴滴": "本期无新动态。Tier1+slot2（国内其他业务）X 2次合并检索：中文结果全为撞词/色情引流（「滴滴代操」「太原出租车」）和个案闲聊；葡语多为用户庆祝99Food进入新城市（Foz do Iguaçu、Ponta Grossa等，低互动）；西语、日语、阿语无有效帖；RSS 和微博前52无滴滴。",
+  "字节": "本期无新动态。红果短剧 X 发帖回升但无官方新动作（见短期追踪）；豆包见微博无新条目。",
+  "中国大模型": "Kimi K3.1 官方预热与 DeepSeek/MiniMax 完成出口登记见快讯；X 传 1024 程序员节 GLM-5.5、Kimi K3.1、Qwen 4 同发，属猜测。"
+ },
+ "overseas_minor_language": [],
+ "weibo": {
+  "mirror": "https://soso.re/weibo",
+  "updated": "2026-10-23 11:13 Beijing",
+  "company_adjacent": [
+   {
+    "rank": 4,
+    "title": "全球AI新品看京东Aidol创造营",
+    "heat": 577046,
+    "note": "京东营销话题，非八卦"
+   },
+   {
+    "rank": 6,
+    "title": "A股跌破3600点",
+    "heat": 482723,
+    "note": "行情"
+   },
+   {
+    "rank": 9,
+    "title": "三问问界神木碰撞起火事故",
+    "heat": 427007,
+    "note": "短期追踪"
+   },
+   {
+    "rank": 40,
+    "title": "华强北商家说iPhoneDuo毫无技术含量",
+    "heat": 219930,
+    "note": "非中国公司"
+   },
+   {
+    "rank": 47,
+    "title": "美团李宁给肖战演唱会送花篮",
+    "heat": 180692,
+    "note": "营销，非八卦"
+   },
+   {
+    "rank": 52,
+    "title": "港股遭针对性做空极其少见",
+    "heat": 163170,
+    "note": "行情观点，未见具体做空机构报告"
+   }
+  ]
+ },
+ "maimai": {
+  "status": "未抓取",
+  "pending": [
+   "待补充：脉脉热榜——需登录，本期未取"
+  ]
+ },
+ "social_sources": {
+  "xhs": "窗口内无新条目（今日已抓1轮，下次约12:41）",
+  "wechat": "微信读书登录失效（auth_expired），公众号本期缺失"
+ },
+ "feeds_new": 6,
+ "feeds_file": "research/feeds/2026-10-23T0316Z.json",
+ "short_term_updates": "无新加入、无移出（5项）。Kimi K3.1 话题由暗测升级为官方预热，已警报。",
+ "candidates": [
+  {
+   "topic": "港股遭针对性做空极其少见",
+   "heat": "微博#52 163170",
+   "decision": "大盘观点话题，未见具体做空报告，不入短期"
+  },
+  {
+   "topic": "A股跌破3600点·隔夜纳指跌2.6%",
+   "heat": "微博#6 482723",
+   "decision": "大盘行情，非公司事件，不警报"
+  }
+ ]
+}

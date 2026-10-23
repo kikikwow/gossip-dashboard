@@ -1,6 +1,6 @@
 {
  "source": "https://api.fxtwitter.com/status/{id}",
- "fetched_at": "2026-10-23T01:19:46Z",
+ "fetched_at": "2026-10-23T03:18:52Z",
  "note": "静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。",
  "posts": {
   "2106320822444949760": {
@@ -4130,6 +4130,102 @@
    "bookmarks": 0,
    "url": "https://x.com/AIFIRSTTHING/status/2113439602879111284",
    "fetched_at": "2026-10-23T01:19:46Z"
+  },
+  "2113439629378769268": {
+   "status": "ok",
+   "text": "10月16日，商务部、科技部就修订《中国禁止出口限制出口技术目录》公开征求意见，修订涉及23项人工智能领域技术，包括大模型、智能体、算力集群和信息处理。据玉渊谭天10月23日报道，征求意见公布以来，DeepSeek、MiniMax已履行相关登记手续，并完成开源和海外授权使用。\n\n这两家公司的案例说明，目录修订对应的是登记与授权流程，开源发布和海外合作可以继续。公开报道把监管重点概括为三类：数据安全、敏感用途、算力底座。对行业来说，影响主要在合规环节：开放权重的跨境发布需要先完成登记，材料准备和办理节奏会影响版本发布；海外使用方也需要确认授权范围是否覆盖API调用和衍生模型。\n\n尚未明确的部分包括目录最终版本、登记所需材料与办理时限，以及开源权重出境是否逐次登记。同日，MiniMax开源M3.1 Flash，并称上线72小时处理超过100万亿Token；该数字来自媒体报道，尚缺第三方核验。\n\n#AI开源 #技术出口管制 #大模型",
+   "author": "@bytelee_trade",
+   "name": "ByteLee · AI Investing",
+   "created_at": "2026-10-23T01:17:28Z",
+   "views": 64,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/bytelee_trade/status/2113439629378769268",
+   "fetched_at": "2026-10-23T03:18:52Z"
+  },
+  "2113445757185606062": {
+   "status": "unavailable",
+   "error": "empty text",
+   "fetched_at": "2026-10-23T03:18:52Z",
+   "url": "https://x.com/Kimi_Moonshot/status/2113445757185606062"
+  },
+  "2113450784356794751": {
+   "status": "ok",
+   "text": "有多少人看红果的?过来集合一下\n想不想听听我最近我做红果短剧的一些心得和吐槽?\n我统计一下我也是做过比较多部红果剧的人了,有人想看看吗?哈哈哈哈哈哈哈",
+   "author": "@pjL6Hjv8GC7Cj7H",
+   "name": "可乐不冰怎么喝丶",
+   "created_at": "2026-10-23T02:01:47Z",
+   "views": 195,
+   "likes": 7,
+   "reposts": 0,
+   "replies": 7,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/pjL6Hjv8GC7Cj7H/status/2113450784356794751",
+   "fetched_at": "2026-10-23T03:18:52Z"
+  },
+  "2113452267298816197": {
+   "status": "ok",
+   "text": "Our DeepSeek open-source and compliance series continues: DeepSeek and MiniMax completed registration under China's draft AI export rules (23 new AI items) and pressed on with open-source releases and overseas licensing. @deepseek_ai @MiniMax_AI https://x.com/i/article/2113451690212884484",
+   "author": "@thePandaily",
+   "name": "Pandaily",
+   "created_at": "2026-10-23T02:07:41Z",
+   "views": 122,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 2,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/thePandaily/status/2113452267298816197",
+   "fetched_at": "2026-10-23T03:18:52Z"
+  },
+  "2113452369929220550": {
+   "status": "ok",
+   "text": "We're getting Kimi-K3.1-Opus-5.5-GPT-6-Astra any day now, guys.\n\n(I've actually tested Kimi K3.1, and the model is genuinely INCREDIBLE...)",
+   "author": "@TokenGremlin",
+   "name": "Token Gremlin",
+   "created_at": "2026-10-23T02:08:05Z",
+   "views": 12305,
+   "likes": 294,
+   "reposts": 4,
+   "replies": 17,
+   "quotes": 0,
+   "bookmarks": 15,
+   "url": "https://x.com/TokenGremlin/status/2113452369929220550",
+   "fetched_at": "2026-10-23T03:18:52Z"
+  },
+  "2113461219562750138": {
+   "status": "ok",
+   "text": "DeepSeek 据报完成约150亿美元融资：由宁德时代、腾讯等领投，估值约740亿美元，紧随美国对联邦机构禁用其后。  \n中国开源模型领先者获巨额资本，缩小与美国前沿实验室的资金差距，加剧中美AI竞赛与出口管制张力。",
+   "author": "@bitcool1234",
+   "name": "骄阳 (bitcool)",
+   "created_at": "2026-10-23T02:43:15Z",
+   "views": 45,
+   "likes": 1,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/bitcool1234/status/2113461219562750138",
+   "fetched_at": "2026-10-23T03:18:52Z"
+  },
+  "2113463420204835275": {
+   "status": "ok",
+   "text": "月之暗面发布预告视频，疑似预热 Kimi K3.1\n\n月之暗面官方账号 @Kimi_Moonshot 发布一条无配文预告视频。视频中 Kimi Code 界面显示当前模型为「Kimi k3.1」，并出现「Kimi k3.1 thinking: High」提示，示范任务为用 Three.js 构建复杂程序性 3D 场景。",
+   "author": "@PANewsCN",
+   "name": "PANews丨APP全面升级",
+   "created_at": "2026-10-23T02:52:00Z",
+   "views": 695,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/PANewsCN/status/2113463420204835275",
+   "fetched_at": "2026-10-23T03:18:52Z"
   }
  }
 }
