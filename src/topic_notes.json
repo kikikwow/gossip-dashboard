@@ -1061,6 +1061,44 @@
     }
    ],
    "recorded_at": "2026-10-23T01:00:00Z"
+  },
+  "微信适配iPhoneDuo版本": {
+   "summary": "苹果 iPhone Duo 10月23日发售当天，微信发布 iOS 8.0.80，初步适配内屏左右分栏，设置页按钮换成液态玻璃风格。外屏和内屏仍有黑边，不支持单应用多窗口和图片拖拽。腾讯客服称当前为初步适配，后续持续优化。此前因影视飓风等测评发现微信不适配曾上热搜。",
+   "credibility": "官方",
+   "event_time": "2026-10-23",
+   "sources": [
+    {
+     "label": "IT之家",
+     "url": "https://www.ithome.com/1/016/859.htm"
+    },
+    {
+     "label": "虎嗅",
+     "url": "https://www.huxiu.com/moment/1290709.html"
+    },
+    {
+     "label": "微信更新日志",
+     "url": "https://weixin.qq.com/updates"
+    }
+   ],
+   "recorded_at": "2026-10-23T08:25:00Z",
+   "pending": ""
+  },
+  "何刚升任华为董事": {
+   "summary": "华为官网10月23日更新管理层名单，终端BG CEO何刚由候补董事转为公司董事，继续担任终端BG CEO。华为未就此单独发布公告。何刚1998年加入华为，2024年4月接替余承东任终端BG CEO。",
+   "credibility": "官方",
+   "event_time": "2026-10-23",
+   "sources": [
+    {
+     "label": "观察者网",
+     "url": "https://www.guancha.cn/CaiJing/2026_10_23_905510.shtml"
+    },
+    {
+     "label": "凤凰网科技",
+     "url": "https://tech.ifeng.com/c/8xSAftzwZus"
+    }
+   ],
+   "recorded_at": "2026-10-23T08:25:00Z",
+   "pending": ""
   }
  }
 }

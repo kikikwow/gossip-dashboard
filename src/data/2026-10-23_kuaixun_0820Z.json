@@ -1,0 +1,108 @@
+{
+ "routine": "大厂八卦热点快讯",
+ "type": "alert",
+ "title": "大厂八卦热点快讯",
+ "timestamp": "2026-10-23T08:20:00Z",
+ "edition_date": "2026-10-23",
+ "edition_id": "kuaixun_0820Z",
+ "fired_at_utc": "2026-10-23T08:20:38Z",
+ "scanned_at_utc": "2026-10-23T08:25:00Z",
+ "beijing_time": "2026-10-23 16:20–16:30 CST",
+ "window": "2026-10-23T05:15Z–08:21Z（北京 13:15–16:21，接 13:13 快讯）",
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无新爆点：短期5项X发帖平稳或回落，均无新官方动作；微博热搜前50中与大厂相关的仅为产品适配（微信适配iPhone Duo）和人事更新（何刚升任华为董事），不属突发八卦；滴滴无公司级新动态。",
+ "lede": "快讯窗北京13:15–16:21。信源：X公开检索与计数、微博热搜镜像soso.re（16:21）、RSS（新匹配5条）；小红书窗口内4条均不相关；公众号因微信读书登录失效缺失。本期无警报。",
+ "items": [],
+ "top3": [],
+ "sections": [],
+ "tracked_updates": [
+  {
+   "topic": "Kimi K3.1·Qwen 4 Arena暗测",
+   "status": "追踪中·平稳",
+   "heat": "X 05Z/06Z/07Z=114/98/117，08Z前21分钟49；X新闻摘要（07:11Z更新）仍称「最快明天或下周一」发布，属推测，无官方日期"
+  },
+  {
+   "topic": "问界神木碰撞起火·官方回应",
+   "status": "追踪中·降温",
+   "heat": "X 05Z/06Z/07Z=30/17/19，08Z前21分钟5；微博前50无问界话题"
+  },
+  {
+   "topic": "红果短剧下线金币·自砍摇钱树",
+   "status": "追踪中",
+   "heat": "X 05Z/06Z/07Z=18/16/45（07Z小峰为闲聊/梗图），无官方新动作；钛媒体15:36发分析「一撤一补，字节腾讯反向操作背后，短剧赛道正在分叉」 https://www.tmtpost.com/8179037.html"
+  },
+  {
+   "topic": "DeepSeek完成千亿融资",
+   "status": "追踪中",
+   "heat": "X 05Z/06Z/07Z=20/24/25；The Information 06:13Z 简讯标题「DeepSeek Raises Nearly $16 billion in Second Funding Round」（硬付费墙，正文待补充） https://www.theinformation.com/briefings/deepseek-raises-nearly-16-billion-second-funding-round"
+  },
+  {
+   "topic": "港股科技重挫·MiniMax首次破发",
+   "status": "追踪中·降温",
+   "heat": "X 05Z/06Z/07Z=2/2/1，08Z前21分钟0"
+  }
+ ],
+ "focus_topics": {
+  "滴滴": "本期无新动态。X 中文「滴滴」多为「滴滴滴」口头语刷屏，另有个人求职帖（@goxionjing 应聘滴滴自动驾驶运营岗，73浏览，个案）；葡语仅有99Food用户个人帖（@wyy_exe，7浏览）；阿语「ديدي」为人名撞词/成人内容，已剔除；X新闻与RSS无滴滴条目。",
+  "字节": "本期无新动态。红果下线金币后，钛媒体发字节/腾讯短剧路线对比分析；X新闻有 Sume API 转售字节 Seedance 的小新闻（影响小）。",
+  "中国大模型": "Kimi K3.1 发布日期仍为推测；DeepSeek V4.1 Flash 见X新闻；The Information 称 DeepSeek 第二轮融资近160亿美元（仅标题）；阿里 Qoder 增加龙芯 LoongArch 支持（Pandaily）。"
+ },
+ "overseas_minor_language": [],
+ "weibo": {
+  "mirror": "https://soso.re/weibo",
+  "updated": "2026-10-23 16:21 Beijing",
+  "company_adjacent": [
+   {
+    "rank": 1,
+    "title": "微信适配iPhoneDuo版本",
+    "heat": 1127329,
+    "note": "微信 iOS 8.0.80 于 iPhone Duo 发售当天初步适配内屏分栏，仍有黑边；腾讯客服称后续持续优化。产品新闻，非八卦。来源：https://www.ithome.com/1/016/859.htm"
+   },
+   {
+    "rank": 4,
+    "title": "沈腾马丽趣味诠释京东送装一体",
+    "heat": 434283,
+    "note": "京东营销内容"
+   },
+   {
+    "rank": 7,
+    "title": "何刚升任华为董事",
+    "heat": 393035,
+    "note": "华为官网管理层名单更新，终端BG CEO何刚由候补董事转为董事；人事更新，非八卦。来源：https://www.guancha.cn/CaiJing/2026_10_23_905510.shtml"
+   },
+   {
+    "rank": 50,
+    "title": "荣耀Magic9激活量登顶",
+    "heat": 136766,
+    "note": "厂商营销"
+   }
+  ]
+ },
+ "maimai": {
+  "status": "未抓取",
+  "pending": [
+   "待补充：脉脉热榜——需登录，本期未取"
+  ]
+ },
+ "social_sources": {
+  "xhs": "窗口内4条（13:14 关键词「字节 裁员」）均为泛职场内容、低互动，不相关",
+  "wechat": "微信读书登录失效（auth_expired），公众号本期缺失",
+  "infra": "13:41后 /workspace/scrapers 下 .venv 缺失：we-mp-rss 未能启动（http=000），anti_bot 调度器无法加载 PyYAML，后续小红书排程可能不会执行；RSS 本期用临时环境抓取"
+ },
+ "feeds_new": 5,
+ "feeds_file": "research/feeds/2026-10-23T0823Z.json",
+ "short_term_updates": "无新加入、无移出（5项）。",
+ "candidates": [
+  {
+   "topic": "微信适配iPhoneDuo版本",
+   "heat": "微博#1 1127329",
+   "decision": "产品适配新闻，非八卦，不入短期"
+  },
+  {
+   "topic": "何刚升任华为董事",
+   "heat": "微博#7 393035",
+   "decision": "常规人事更新，不入短期"
+  }
+ ]
+}
