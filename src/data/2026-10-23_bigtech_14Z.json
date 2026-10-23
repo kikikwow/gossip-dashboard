@@ -1,0 +1,227 @@
+{
+  "type": "bigtech",
+  "title": "中国大厂八卦简报｜2026-10-23 晚间补充",
+  "timestamp": "2026-10-23T15:10:00Z",
+  "edition_date": "2026-10-23",
+  "slot": "14Z",
+  "lede": "晚间新料：国办发文减缓 AI 就业替代影响，微博 #6、#16 两条上榜；问界「事故三连环站不住脚」上微博 #40；Kimi 官网短暂出现 K3.1 Pro 博客链接又撤下；MiniMax 开源 M3.1 Flash 权重。",
+  "alert_note": "每日总结附带的晚间补充，不单独警报",
+  "alert_worthy": false,
+  "top3": [
+    "国办减缓AI就业替代影响",
+    "问界事故三连环舆论",
+    "Kimi K3.1 Pro博客短暂上线"
+  ],
+  "focus": {
+    "滴滴": "香港：联合8家机构补贴司机考牌（官方）；墨西哥圣路易斯波托西：Didi正在登记司机（西语）；繁简价差无回应",
+    "字节": "Seedance 2.5 4K首批20家试用（小细节）；豆包手机助手拒绝名单约166款，热度低",
+    "中国大模型": "Kimi K3.1 Pro博客短暂上线（传闻）；MiniMax M3.1 Flash开源；DeepSeek据WSJ加速筹备上海上市"
+  },
+  "short_term_notes": "见每日总结：新加入 美军嘉手纳禁比亚迪；移出 港股科技重挫·MiniMax首次破发",
+  "overseas_local_lang": [
+    "20261023-bt14z-didislp"
+  ],
+  "window": "2026-10-23T08:20Z → 2026-10-23T15:00Z",
+  "markdown_file": "2026-10-23_bigtech_14Z_digest.md",
+  "sections": [
+    {
+      "title": "⭐ 今日 Top 3",
+      "color": "#dc2626",
+      "items": [
+        {
+          "id": "20261023-bt14z-aijob",
+          "company": "国务院办公厅（AI政策）",
+          "tag": "官方",
+          "source_types": [
+            "官方文件/新华社",
+            "微博热搜"
+          ],
+          "date": "10-23",
+          "text": "国办印发关于减缓人工智能应用就业替代影响的意见（国办发〔2026〕29号），落款 10-16，新华社 10-23 下午发布，共 6 方面 18 项任务。要点：AI 优先用在缺工和危险岗位；劳动密集型行业要「稳慎把握」AI 应用的范围、强度和节奏；鼓励企业建立失业缓冲期制度；AI 项目要做就业风险评估。22:52 微博 #6「减缓人工智能应用就业替代影响」约 79.5 万、#16「国办发文减缓人工智能就业替代影响」约 77.9 万。平台用工型大厂（外卖、网约车、电商客服）后续怎么落地，值得关注。",
+          "links": [
+            {
+              "label": "新华网",
+              "url": "https://www.news.cn/politics/20261023/f21a5777774749daa0eed451c81f4002/c.html"
+            },
+            {
+              "label": "科技日报",
+              "url": "https://www.stdaily.com/web/2026-10/23/content_601752.html"
+            },
+            {
+              "label": "第一财经",
+              "url": "https://www.yicai.com/news/103406813.html"
+            }
+          ],
+          "event_time": "2026-10-23 约17:00 发布（文件落款 10-16）",
+          "pending": []
+        },
+        {
+          "id": "20261023-bt14z-aito",
+          "company": "问界 / 赛力斯",
+          "tag": "实锤",
+          "source_types": [
+            "微博热搜",
+            "媒体分析",
+            "X"
+          ],
+          "date": "10-23",
+          "text": "问界神木起火迎来第三轮舆论。22:52 微博 #40「问界M9事故三连环站不住脚」约 75.0 万。这是一篇工程角度的反驳，针对网传「灯杆只受轻伤→车速不高→不该起火→车有质量问题」的推理链。什么值得买 18:03 的分析指出，官方事故认定还没出，撞击速度和起火时间线也没公布。背景：10-21 问界官方称车辆为人驾、车速 139.1km/h（限速 50）。X 晚间 08Z–14Z 每小时 14/20/18/27/20/26/28 帖，比昨晚的 28–48 低。",
+          "links": [
+            {
+              "label": "微博（新浪转载）",
+              "url": "https://www.sina.cn/weibo/detail/5357240660789699.html"
+            },
+            {
+              "label": "什么值得买（10-23 18:03）",
+              "url": "https://post.smzdm.com/p/a6zpvxz0/"
+            },
+            {
+              "label": "新浪 10-21 问界官方说明",
+              "url": "https://www.sina.cn/news/detail/5356480673875021.html"
+            }
+          ],
+          "event_time": "2026-10-23 晚（微博热搜 22:52）",
+          "pending": [
+            "待补充：神木交警事故认定结论——官方尚未公布"
+          ]
+        },
+        {
+          "id": "20261023-bt14z-kimi",
+          "company": "月之暗面 / Kimi",
+          "tag": "传闻",
+          "source_types": [
+            "X",
+            "科技媒体"
+          ],
+          "date": "10-23",
+          "text": "Kimi K3.1 仍未正式发布。晚间有网友称 Kimi 官网短暂出现「Kimi K3.1 Pro 技术博客」链接，随后被撤下（@plotarmordev 约 865 浏览，@srikanthvaluri 约 555）。@AndyL5cc 转述的 Minecraft 测试称：K3.1 用 0.38 美元搭了 13707 个方块，GPT-6 Astra 用 5.31 美元搭了 5738 个；他还称「据爆料下周二前发布、开源」，这一说法没有官方确认。雷峰网 18:57 以「Kimi K3.1 泄露：3D 成本仅有 GPT-6 Astra 的 1/14」为题报道。X 广口径检索 08Z–14Z 每小时 178/233/167/164/177/207/169 帖。",
+          "links": [
+            {
+              "label": "X @AndyL5cc（约2170浏览）",
+              "url": "https://x.com/AndyL5cc/status/2113561300160909808"
+            },
+            {
+              "label": "X @plotarmordev（英语）",
+              "url": "https://x.com/plotarmordev/status/2113600890888397297"
+            },
+            {
+              "label": "X @srikanthvaluri（英语）",
+              "url": "https://x.com/srikanthvaluri/status/2113596831284535579"
+            },
+            {
+              "label": "雷峰网（10-23 18:57）",
+              "url": "https://www.leiphone.com/category/yanxishe/PZo9w14YeFSo4jmf.html"
+            }
+          ],
+          "event_time": "2026-10-23 晚",
+          "lang": "en",
+          "translation_zh": "可能有个 Kimi K3.1 Pro：今天 Kimi 官网「Research」菜单里、K3 博客上方出现了一个「Kimi K3.1 Pro 技术博客」链接，随后被撤下。我猜 Pro 是比普通 K3.1 更高一档的独立版本。目前还没有日期、价格或跑分。",
+          "original": "There might be a Kimi K3.1 Pro\n\nA \"Kimi K3.1 Pro tech blog\" link showed up today in the Research menu on Kimi's site, right above the K3 blog, and then got pulled.\n\nMakes me think Pro is a separate, higher tier above plain K3.1. No date, price or benchmarks yet.",
+          "pending": [
+            "待补充：官方发布日期——月之暗面未确认"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🎯 重点追踪",
+      "color": "#7c3aed",
+      "items": [
+        {
+          "id": "20261023-bt14z-didihk",
+          "company": "滴滴（香港）",
+          "tag": "官方",
+          "source_types": [
+            "香港媒体"
+          ],
+          "date": "10-23",
+          "text": "香港网约车牌照制度快要落地，滴滴联合汽车交通运输业总工会、李健驾驶学校等 8 家培训机构帮司机考牌：课程费最多减 500 多港元；专班费用全包，已办 2 期，还计划再办 10 期，覆盖 200 多名司机；免费模拟考试工具已有约 50% 的活跃司机用过。滴滴称近 3 个月新注册的出租车司机增长超 35%。牌照申请 10-30 截止。",
+          "links": [
+            {
+              "label": "东网 on.cc（10-23 16:28）",
+              "url": "https://hk.on.cc/hk/bkn/cnt/finance/20261023/bkn-20261023162817998-1023_00842_001.html"
+            },
+            {
+              "label": "3hk（10-23 19:18）",
+              "url": "http://www.3hk.com.cn/blog/view/161822.html"
+            }
+          ],
+          "event_time": "2026-10-23",
+          "pending": []
+        },
+        {
+          "id": "20261023-bt14z-didislp",
+          "company": "滴滴出海（墨西哥·圣路易斯波托西）",
+          "tag": "官方",
+          "source_types": [
+            "当地媒体(西班牙语)"
+          ],
+          "date": "10-23",
+          "text": "🇲🇽 墨西哥圣路易斯波托西州｜西班牙语：州交通部门（SCT）负责人 Araceli Martínez Acosta 说，Uber 和 Didi 正按第 71 BIS 条登记为网约车企业。Uber 已交授权费，但车辆和司机还没登记完；Didi 正在登记司机。inDrive 不要求第三者险，离合规还远。她提醒市民别用没登记的平台，司机可以个人申请临时许可。当地媒体此前报道，上周已扣押 20 辆网约车（El Expres 10-21）。",
+          "links": [
+            {
+              "label": "Pulso SLP（西语，10-23）：Uber y Didi se darían de alta ante la SCT",
+              "url": "https://pulsoslp.com.mx/slp/uber-y-didi-se-darian-de-alta-ante-la-sct/2098950"
+            },
+            {
+              "label": "El Expres（西语，10-21）",
+              "url": "https://www.expres.com.mx/nota.php?story_id=373476"
+            }
+          ],
+          "event_time": "2026-10-23（当地时间）",
+          "lang": "es",
+          "translation_zh": "她介绍说，Uber 已经付清授权费，但还没有给提供服务的车辆和司机办登记；Didi 则正在为旗下司机办理登记。",
+          "original": "Describió que Uber ya cubrió el pago de autorización, sin embargo, todavía tiene pendiente dar de alta los vehículos y choferes que brindan el servicio. A su vez, Didi se encuentra en proceso de registrar a sus operadores.",
+          "pending": []
+        },
+        {
+          "id": "20261023-bt14z-minimax",
+          "company": "MiniMax",
+          "tag": "实锤",
+          "source_types": [
+            "科技媒体"
+          ],
+          "date": "10-23",
+          "text": "MiniMax 10-23 开源 M3.1 Flash 模型权重：总参数约 4280 亿，激活 230 亿，支持文本、图像、视频输入和 100 万 token 上下文，适配 SGLang、vLLM 和 FlagOS。模型服务 10-19 已先上线。股价方面，MiniMax 港股破发话题的 X 热度降到每小时 2–7 帖。",
+          "links": [
+            {
+              "label": "TechNode（英语，10-23）",
+              "url": "https://technode.com/2026/10/23/minimax-releases-open-weights-for-428-billion-parameter-m3-1-flash-model/"
+            }
+          ],
+          "event_time": "2026-10-23",
+          "lang": "en",
+          "translation_zh": "MiniMax 发布 4280 亿参数 M3.1 Flash 模型的开放权重",
+          "original": "MiniMax releases open weights for 428-billion-parameter M3.1 Flash model",
+          "pending": []
+        },
+        {
+          "id": "20261023-bt14z-seedance",
+          "company": "字节跳动 / 火山引擎",
+          "tag": "实锤",
+          "source_types": [
+            "科技媒体",
+            "X"
+          ],
+          "date": "10-23",
+          "text": "字节 Seedance 2.5 4K 视频模型面向影视制作发布，火山引擎首批企业试用给了 20 家导演工作室和制片公司。16:00 快讯已提过 Seedance，这期只补「首批 20 家试用」这个细节。X @NFT_Chen 介绍帖约 1982 浏览。",
+          "links": [
+            {
+              "label": "TechNode（英语，10-23）",
+              "url": "https://technode.com/2026/10/23/bytedance-launches-seedance-2-5-4k-video-model-for-film-production/"
+            },
+            {
+              "label": "X @NFT_Chen",
+              "url": "https://x.com/NFT_Chen/status/2113634756864925917"
+            }
+          ],
+          "event_time": "2026-10-23",
+          "lang": "en",
+          "translation_zh": "字节跳动发布面向影视制作的 Seedance 2.5 4K 视频模型",
+          "original": "ByteDance launches Seedance 2.5 4K video model for film production",
+          "pending": []
+        }
+      ]
+    }
+  ]
+}

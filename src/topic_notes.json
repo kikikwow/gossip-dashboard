@@ -1,1104 +1,1159 @@
 {
- "_doc": "热榜里没有对应事件的话题说明，按 heat_log topic 名对应。字段：summary（2-4 句）、credibility（实锤/传闻/官方/统计/待核实）、event_time、sources[{label,url}]、recorded_at（UTC）、pending（缺什么，写「待补充：原因」）。规则见 CONTENT_RULES.md",
- "notes": {
-  "千问AI耳机开售": {
-   "summary": "10 月 13 日，阿里旗下千问与 Bose 联合推出 AI 耳夹式耳机，当天在淘宝、天猫、京东、抖音现货开售，叠加国补和限时优惠后到手价 1099 元。主打 Bose 调音、89 种语言实时翻译、AI 听记和语音交办任务；同日千问还发布了 AI 眼镜 N1/N1 Pro。这是一条新品上市消息，不是八卦。",
-   "credibility": "实锤",
-   "event_time": "2026-10-13",
-   "sources": [
-    {
-     "label": "投资界：千问与 Bose 共同推出 AI 耳夹式耳机，1099元起开售",
-     "url": "https://news.pedaily.cn/202610/570203.shtml"
+  "_doc": "热榜里没有对应事件的话题说明，按 heat_log topic 名对应。字段：summary（2-4 句）、credibility（实锤/传闻/官方/统计/待核实）、event_time、sources[{label,url}]、recorded_at（UTC）、pending（缺什么，写「待补充：原因」）。规则见 CONTENT_RULES.md",
+  "notes": {
+    "千问AI耳机开售": {
+      "summary": "10 月 13 日，阿里旗下千问与 Bose 联合推出 AI 耳夹式耳机，当天在淘宝、天猫、京东、抖音现货开售，叠加国补和限时优惠后到手价 1099 元。主打 Bose 调音、89 种语言实时翻译、AI 听记和语音交办任务；同日千问还发布了 AI 眼镜 N1/N1 Pro。这是一条新品上市消息，不是八卦。",
+      "credibility": "实锤",
+      "event_time": "2026-10-13",
+      "sources": [
+        {
+          "label": "投资界：千问与 Bose 共同推出 AI 耳夹式耳机，1099元起开售",
+          "url": "https://news.pedaily.cn/202610/570203.shtml"
+        },
+        {
+          "label": "IT之家：千问 AI 耳夹式耳机开售",
+          "url": "https://www.ithome.com/1/012/532.htm"
+        }
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
     },
-    {
-     "label": "IT之家：千问 AI 耳夹式耳机开售",
-     "url": "https://www.ithome.com/1/012/532.htm"
+    "中国互联网进入字节时间": {
+      "summary": "10 月 13 日上微博热搜的话题，起因是野村证券 10 月 5 日的《中国互联网与新媒体》研报（引用 QuestMobile 数据）：2026 年 8 月中国使用时长前 50 的 App 里，字节系时长份额 41.8%、腾讯系 28.6%，差距从一年前的 3.3 个百分点拉大到 13.2 个百分点。抖音 7 月起月度总时长超过微信，红果短剧 8 月时长份额 5.9%、同比暴涨 182%。热搜里流传的「红果人均每天 125 分钟」是另一组数据（TechWeb 称对应 2026 年 2 月），不是 8 月数。",
+      "credibility": "实锤",
+      "event_time": "2026-10-13",
+      "sources": [
+        {
+          "label": "BiaNews：字节系用户时长份额升至41.8%，腾讯系降至28.6%",
+          "url": "https://www.bianews.com/news/details?id=246991"
+        },
+        {
+          "label": "凤凰网/观点网：字节系应用时长份额升至41.8%",
+          "url": "https://feng.ifeng.com/c/8xDkPxR95cK"
+        }
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "阶跃STEPXNeo发布": {
+      "summary": "10 月 13 日晚，阶跃星辰旗下终端品牌 STEPX 在上海发布首款大模型原生智能体手机 STEPX Neo 先行版，搭载 Step AOS 1.0 和个人智能体阶跃 Amoo。手机、系统、模型和 Step Studio 打包全栈定价 3999 元，当晚 21:00 预售，10 月 16 日 10:13 开售。属于新品发布消息。",
+      "credibility": "实锤",
+      "event_time": "2026-10-13",
+      "sources": [
+        {
+          "label": "21世纪经济报道：阶跃终端首款AI手机发布，定价3999元",
+          "url": "https://m.21jingji.com/article/20261013/herald/f1db952522faee1586776f7e23c8dc23_zaker.html"
+        },
+        {
+          "label": "IT之家：STEPX Neo 先行版发布",
+          "url": "https://www.ithome.com/1/012/556.htm"
+        }
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "黄奇帆被查（政治，非公司）": {
+      "summary": "10 月 13 日，中央纪委国家监委网站通报：重庆市委原副书记、市政府原市长黄奇帆涉嫌严重违纪违法，正接受纪律审查和监察调查，通报未说明具体指控。10 月 14 日重庆市委常委会表态拥护决定。这是政治新闻，与本看板追踪的公司无直接关系，只作为同期热点记录。",
+      "credibility": "官方",
+      "event_time": "2026-10-13",
+      "sources": [
+        {
+          "label": "新京报政事儿（腾讯新闻）：黄奇帆被查",
+          "url": "https://news.qq.com/rain/a/20261013A0B3AR00"
+        },
+        {
+          "label": "界面新闻（新浪）：重庆市委坚决拥护党中央决定",
+          "url": "https://news.sina.cn/gn/2026-10-14/detail-inivevci8428634.d.html?vt=4"
+        }
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "老干妈陶华碧用AI": {
+      "summary": "10 月 13 日微博热搜「79岁老干妈陶华碧用AI一年赚54亿」。报道称老干妈 2025 年营收 54 亿元、创历史峰值，车间上线了 AI 视觉质检，用来识别并剔除霉变、黑斑辣椒。热搜标题把营收说成「赚」，54 亿元是营收不是利润；「用 AI 赚钱」也是媒体包装的说法。",
+      "credibility": "实锤",
+      "event_time": "2026-10-13",
+      "sources": [
+        {
+          "label": "新浪财经：「79岁老干妈陶华碧用AI一年赚54亿」冲上热搜",
+          "url": "https://finance.sina.cn/2026-10-13/detail-inivcatx7294545.d.html?vt=4"
+        },
+        {
+          "label": "新浪科技：老干妈质检用上AI，去年营收54亿创历史峰值",
+          "url": "https://finance.sina.com.cn/tech/roll/2026-10-06/doc-iniuhuii5591236.shtml"
+        }
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "字节期权回购241.35": {
+      "summary": "10 月 13 日字节跳动发全员信，启动 2026 年 10 月期权回购，税前每股 241.35 美元，和 9 月初流传的价格一致。离职员工也可以参与，近期因业务调整离开的员工与在职员工同价。回购额度按授予类型分档，员工自愿参加。最初在 X 上只是低浏览量传闻，现已有多家媒体转述全员信内容。",
+      "credibility": "实锤",
+      "event_time": "2026-10-13",
+      "sources": [
+        {
+          "label": "IT之家：字节跳动开启新一轮期权回购，每股 241.35 美元",
+          "url": "https://www.ithome.com/1/012/539.htm"
+        },
+        {
+          "label": "BiaNews：字节发全员信，开启新一轮期权回购",
+          "url": "https://www.bianews.com/news/details?id=247079"
+        },
+        {
+          "label": "X 早期传闻帖",
+          "url": "https://x.com/by2487647676998/status/2109937231721038096"
+        }
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "豆包手机助手151款拒绝": {
+      "summary": "豆包手机助手的屏幕自动化操作声明协议（SAEP）30 天公示期在 10 月 14 日结束，官方公布有 151 款 App 声明拒绝 AI 代操作。其中腾讯系 65 款、阿里系 23 款，另有快手、美团、拼多多、小红书等。详细内容见看板事件「豆包 SAEP 151 款拒绝」。",
+      "credibility": "实锤",
+      "event_time": "2026-10-14",
+      "sources": [
+        {
+          "label": "每经网",
+          "url": "https://www.nbd.com.cn/articles/2026-10-14/4603904.html"
+        },
+        {
+          "label": "华尔街见闻",
+          "url": "https://wallstreetcn.com/articles/3783610"
+        }
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "霸王茶姬买一送一余波": {
+      "summary": "10 月 12 日霸王茶姬为郑钦文夺冠在全国门店推出全场饮品买一送一，小程序一度卡顿崩溃，大量门店订单积压，品牌随后宣布发 1350 万元专项奖励给一线员工。10 月 14 日，霸王茶姬给当天订单异常的部分用户补发「全品类买一送一券」，有效期到 10 月 21 日。",
+      "credibility": "实锤",
+      "event_time": "2026-10-12～10-14",
+      "sources": [
+        {
+          "label": "21经济网：霸王茶姬补发买一送一券，此前宣布发放1350万元奖励一线员工",
+          "url": "https://www.21jingji.com/article/20261014/herald/9c81c4e1b2280bf42041b4f778913a32.html"
+        }
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "霸王茶姬": {
+      "summary": "10 月 12 日霸王茶姬为郑钦文夺冠在全国门店推出全场饮品买一送一，小程序一度卡顿崩溃，大量门店订单积压，品牌随后宣布发 1350 万元专项奖励给一线员工。10 月 14 日，霸王茶姬给当天订单异常的部分用户补发「全品类买一送一券」，有效期到 10 月 21 日。",
+      "credibility": "实锤",
+      "event_time": "2026-10-12～10-14",
+      "sources": [
+        {
+          "label": "21经济网：霸王茶姬补发买一送一券，此前宣布发放1350万元奖励一线员工",
+          "url": "https://www.21jingji.com/article/20261014/herald/9c81c4e1b2280bf42041b4f778913a32.html"
+        }
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "霸王茶姬补发券": {
+      "summary": "10 月 12 日霸王茶姬为郑钦文夺冠在全国门店推出全场饮品买一送一，小程序一度卡顿崩溃，大量门店订单积压，品牌随后宣布发 1350 万元专项奖励给一线员工。10 月 14 日，霸王茶姬给当天订单异常的部分用户补发「全品类买一送一券」，有效期到 10 月 21 日。",
+      "credibility": "实锤",
+      "event_time": "2026-10-12～10-14",
+      "sources": [
+        {
+          "label": "21经济网：霸王茶姬补发买一送一券，此前宣布发放1350万元奖励一线员工",
+          "url": "https://www.21jingji.com/article/20261014/herald/9c81c4e1b2280bf42041b4f778913a32.html"
+        }
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "大厂广义八卦": {
+      "summary": "这一行不是单一事件，而是例行任务记录的统计：腾讯、阿里、美团、华为等大厂加上「爆料、裁员、离职、宫斗、翻车」这类词的 X 发帖量合计。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
+      "credibility": "统计",
+      "event_time": "见 heat_log.csv",
+      "sources": [],
+      "pending": [
+        "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "大厂广义八卦关键词": {
+      "summary": "这一行不是单一事件，而是例行任务记录的统计：大厂名加八卦关键词的 X 每小时发帖量合计。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
+      "credibility": "统计",
+      "event_time": "见 heat_log.csv",
+      "sources": [],
+      "pending": [
+        "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "字节裁员离职宫斗": {
+      "summary": "这一行不是单一事件，而是例行任务记录的统计：字节/抖音加「裁员、离职、内部信、宫斗、爆料」的 X 发帖量合计。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
+      "credibility": "统计",
+      "event_time": "见 heat_log.csv",
+      "sources": [],
+      "pending": [
+        "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "字节裁员离职爆料": {
+      "summary": "这一行不是单一事件，而是例行任务记录的统计：字节/抖音/TikTok/豆包加「裁员、离职、爆料、宫斗、内部信」的 X 发帖量合计。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
+      "credibility": "统计",
+      "event_time": "见 heat_log.csv",
+      "sources": [],
+      "pending": [
+        "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "快讯扫描_无达标项": {
+      "summary": "这一行不是单一事件，而是例行任务记录的统计：快讯扫描时没有条目达到推送阈值的记录。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
+      "credibility": "统计",
+      "event_time": "见 heat_log.csv",
+      "sources": [],
+      "pending": [
+        "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "每日总结_快讯达标": {
+      "summary": "这一行不是单一事件，而是例行任务记录的统计：每日总结里统计的快讯达标条数。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
+      "credibility": "统计",
+      "event_time": "见 heat_log.csv",
+      "sources": [],
+      "pending": [
+        "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "滴滴八卦关键词": {
+      "summary": "这一行不是单一事件，而是例行任务记录的统计：滴滴、DiDi、程维、柳青加八卦或出海关键词的 X 发帖量（结果里多数是同名噪音）。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
+      "credibility": "统计",
+      "event_time": "见 heat_log.csv",
+      "sources": [],
+      "pending": [
+        "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "滴滴国内其他业务": {
+      "summary": "这一行不是单一事件，而是例行任务记录的统计：滴滴国内其他业务线关键词的发帖量。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
+      "credibility": "统计",
+      "event_time": "见 heat_log.csv",
+      "sources": [],
+      "pending": [
+        "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "滴滴巴西99": {
+      "summary": "这一行不是单一事件，而是例行任务记录的统计：滴滴巴西 99 业务关键词的发帖量。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
+      "credibility": "统计",
+      "event_time": "见 heat_log.csv",
+      "sources": [],
+      "pending": [
+        "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "滴滴海外/APAC-Egypt": {
+      "summary": "这一行不是单一事件，而是例行任务记录的统计：滴滴亚太和埃及业务关键词的发帖量。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
+      "credibility": "统计",
+      "event_time": "见 heat_log.csv",
+      "sources": [],
+      "pending": [
+        "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "滴滴海外/China-units": {
+      "summary": "这一行不是单一事件，而是例行任务记录的统计：滴滴中国各业务单元关键词的发帖量。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
+      "credibility": "统计",
+      "event_time": "见 heat_log.csv",
+      "sources": [],
+      "pending": [
+        "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "滴滴海外/事业部": {
+      "summary": "这一行不是单一事件，而是例行任务记录的统计：滴滴海外事业部关键词的发帖量。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
+      "credibility": "统计",
+      "event_time": "见 heat_log.csv",
+      "sources": [],
+      "pending": [
+        "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "滴滴海外/金融": {
+      "summary": "这一行不是单一事件，而是例行任务记录的统计：滴滴海外金融业务关键词的发帖量。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
+      "credibility": "统计",
+      "event_time": "见 heat_log.csv",
+      "sources": [],
+      "pending": [
+        "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "滴滴海外市场": {
+      "summary": "这一行不是单一事件，而是例行任务记录的统计：滴滴海外市场关键词的发帖量。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
+      "credibility": "统计",
+      "event_time": "见 heat_log.csv",
+      "sources": [],
+      "pending": [
+        "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
+      ],
+      "recorded_at": "2026-10-14T14:20:00Z"
+    },
+    "合肥比亚迪封门逼食堂": {
+      "summary": "网友视频称合肥比亚迪四期工厂疑似封闭相关出入口，员工难骑电动车外出用餐，配文「不在食堂吃饭？我把小门封了」。早报时 @whyyoutouzhele 转载帖浏览约 5.3 万（晚报时约 0.5 万），仍为单一网友视频来源，比亚迪未回应、主流媒体未跟进；维持观察、未升入短期热点。",
+      "credibility": "传闻",
+      "event_time": "2026-10-14",
+      "sources": [
+        {
+          "label": "X @whyyoutouzhele 网友视频转发",
+          "url": "https://x.com/whyyoutouzhele/status/2110349904266801377"
+        }
+      ],
+      "recorded_at": "2026-10-15T00:54:00Z"
+    },
+    "豆包手机助手SAEP151款拒绝": {
+      "summary": "豆包手机助手的屏幕自动化操作声明协议（SAEP）30 天公示期在 10 月 14 日结束，官方公布有 151 款 App 声明拒绝 AI 代操作。其中腾讯系 65 款、阿里系 23 款，另有快手、美团、拼多多、小红书等。详细内容见看板事件「豆包 SAEP 151 款拒绝」。",
+      "credibility": "实锤",
+      "event_time": "2026-10-14",
+      "sources": [
+        {
+          "label": "每经网",
+          "url": "https://www.nbd.com.cn/articles/2026-10-14/4603904.html"
+        },
+        {
+          "label": "华尔街见闻",
+          "url": "https://wallstreetcn.com/articles/3783610"
+        },
+        {
+          "label": "X @_FORAB 代表帖（热度来源）",
+          "url": "https://x.com/_FORAB/status/2110362974947037321"
+        }
+      ],
+      "recorded_at": "2026-10-14T23:15:00Z"
+    },
+    "腾讯云AI智能体爬高德": {
+      "summary": "独立研究团队 Swarmchasers（Ethan Elasky 等）10 月 14 日发布完整报告：9 月 28 日至 10 月 8 日，一批运行在腾讯云香港服务器沙箱里的 AI 智能体，为回答「成都动物园哪个入口导航最多」这类问题，对阿里旗下高德地图发起 2600 多次数据抓取，被反爬拦截后借用 urlquery 等第三方服务、泄露的高德密钥绕过限制，部分成功取回数据。研究人员还在网页埋入隐藏文字诱导智能体联系，并与其双向对话，有智能体自称 Claude（报告称只是偶发、可能是模型误称）。腾讯未正式回应；接近腾讯的消息人士称这是评测团队测试第三方模型联网能力的临时项目、非混元模型、已结束且未发现定向攻击或入侵；彭博、联合早报已报道，阿里与腾讯均未回应彭博置评。",
+      "credibility": "实锤",
+      "event_time": "2026-10-14",
+      "sources": [
+        {
+          "label": "Swarmchasers 完整报告（中文版）",
+          "url": "https://swarmcha.se/zh-hans/posts/chinese-agent-fleet-full-report"
+        },
+        {
+          "label": "X @ethanelasky 原帖（约47.9万浏览）",
+          "url": "https://x.com/ethanelasky/status/2110355334556729766"
+        },
+        {
+          "label": "联合早报（转引彭博）",
+          "url": "https://www.zaobao.com.sg/news/world/story20261014-9838546"
+        },
+        {
+          "label": "动察 Beating 快讯",
+          "url": "https://www.beating.news/flash/371817"
+        }
+      ],
+      "recorded_at": "2026-10-15T00:54:00Z",
+      "pending": [
+        "待补充：腾讯官方回应——截至 2026-10-15T00:54Z 仍无正式回应，仅有匿名知情人士说法"
+      ]
+    },
+    "懂车帝被曝邀约黑尊界": {
+      "summary": "尊界 V800 刹车门舆论战延伸：多位汽车博主晒截图称有中间人邀约借热度给江淮、华为「补刀」（单条约 5000 元起），证据此前仅为截图。10 月 15 日，懂车帝相关负责人向第一财经表示，网传「邀约博主黑尊界」不实，公司已溯源取证并将采取法律措施；同时否认「245 亿营收」为 3 月 AI 生成文章谣言。经济观察网（时代财经）、凤凰网同步报道。刹车测试争议与「北美花生」赛那后摆臂未发传闻仍在 X 发酵（转述帖约 2.9 万浏览）。",
+      "credibility": "实锤",
+      "event_time": "2026-10-15",
+      "sources": [
+        {
+          "label": "第一财经：懂车帝回应「黑尊界」传言",
+          "url": "https://www.yicai.com/news/103394855.html"
+        },
+        {
+          "label": "经济观察网：懂车帝称网传言论不实将采取法律措施",
+          "url": "http://www.eeo.com.cn/2026/1015/1065239.shtml"
+        },
+        {
+          "label": "凤凰网：懂车帝回应邀约博主黑尊界",
+          "url": "https://news.ifeng.com/c/8xFBYzBUruL"
+        },
+        {
+          "label": "X @cherylnatsu 转述第一财经口径",
+          "url": "https://x.com/cherylnatsu/status/2110625642395938910"
+        }
+      ],
+      "recorded_at": "2026-10-15T08:52:00Z",
+      "pending": [
+        "待补充：懂车帝「溯源取证」具体对象与立案进展——官方仅口头表态"
+      ]
+    },
+    "腾讯绿泡泡对战红果短剧": {
+      "summary": "微信上线「绿泡泡短剧」免费小程序（腾讯主体），对标字节红果；创作激励自 10 月 16 日起算带动讨论回升。10 月 15 日微博「绿泡泡下架余茵版乖乖女」一度 #31；X 上有观察称「绿泡泡」在部分平台为禁用词。属产品对垒与内容运营，非人事八卦。",
+      "credibility": "实锤",
+      "event_time": "2026-10-13～2026-10-14",
+      "sources": [
+        {
+          "label": "21经济网",
+          "url": "https://www.21jingji.com/article/20261013/herald/9f65eaeb88b0838b77401c49c13829bf.html"
+        },
+        {
+          "label": "微博热搜镜像",
+          "url": "https://soso.re/weibo"
+        },
+        {
+          "label": "X @_FORAB：绿泡泡多平台禁用词观察",
+          "url": "https://x.com/_FORAB/status/2110650149697708353"
+        }
+      ],
+      "recorded_at": "2026-10-15T08:52:00Z"
+    },
+    "早报扫描_无达标项": {
+      "summary": "早报扫描记录行：微博热搜镜像上与大厂相邻的条目多为产品官宣或营销（国行 iPhone 通义、京东双十一、美团医美榜、小米汽车保障、豆包使用吐槽等），未达到八卦简报警报门槛，仅作扫描日志，不是独立八卦事件。",
+      "credibility": "统计",
+      "event_time": "2026-10-15",
+      "sources": [
+        {
+          "label": "微博热搜镜像 soso.re",
+          "url": "https://soso.re/weibo"
+        }
+      ],
+      "recorded_at": "2026-10-15T00:54:00Z"
+    },
+    "Michael_Burry中概仓位": {
+      "summary": "市场追踪账号披露 Michael Burry 相关中概/中国资产仓位变动的讨论热帖。属美股中概侧市场八卦线索，非国内大厂人事内幕；具体持仓以原文披露为准，未独立核实交易细节。",
+      "credibility": "待核实",
+      "event_time": "2026-10-14",
+      "sources": [
+        {
+          "label": "X @burrytracker 代表帖",
+          "url": "https://x.com/burrytracker/status/2110368123291423113"
+        }
+      ],
+      "recorded_at": "2026-10-15T00:54:00Z",
+      "pending": [
+        "待补充：原始持仓披露文件交叉核验——仅见转发/追踪账号摘要"
+      ]
+    },
+    "传音控股港股上市": {
+      "summary": "传音控股（02636.HK）于2026-10-15在港交所主板挂牌，发行价35.30港元；开盘34.96（−0.96%），收盘33.28（−5.72%），成交约3.91亿港元。非洲/新兴市场手机出海标的，形成A+H。",
+      "credibility": "实锤",
+      "event_time": "2026-10-15",
+      "sources": [
+        {
+          "label": "澎湃：首日破发收跌5.72%",
+          "url": "https://www.thepaper.cn/newsDetail_forward_34256830"
+        },
+        {
+          "label": "etnet新股表现",
+          "url": "https://www.etnet.com.hk/www/tc/stocks/ipo-performance.php?category=recent&period=6"
+        }
+      ],
+      "recorded_at": "2026-10-15T13:05:00Z"
+    },
+    "传音控股港股IPO": {
+      "summary": "传音控股（Transsion）港股 IPO/暗盘相关讨论与行情跟踪。属资本市场上市动态，不是互联网大厂内部八卦；暗盘价格与开盘表现以券商/行情源为准。",
+      "credibility": "统计",
+      "event_time": "2026-10-14",
+      "sources": [
+        {
+          "label": "经济通 IPO 资料",
+          "url": "https://www.etnet.com.hk/www/tc/stocks/ipo-info.php?code=02636"
+        },
+        {
+          "label": "X 暗盘讨论代表帖",
+          "url": "https://x.com/dingdong_world/status/2110378409486619069"
+        }
+      ],
+      "recorded_at": "2026-10-15T00:54:00Z"
+    },
+    "金龙指数HXC_1014": {
+      "summary": "纳斯达克金龙中国指数（HXC）2026-10-14 行情记录行，用于美股中概简报热度对照。这是指数涨跌统计，不是单一公司八卦事件。",
+      "credibility": "统计",
+      "event_time": "2026-10-14",
+      "sources": [
+        {
+          "label": "Investing.com 金龙中国指数历史数据",
+          "url": "https://cn.investing.com/indices/nq-golden-dragon-china-historical-data"
+        }
+      ],
+      "recorded_at": "2026-10-15T00:54:00Z"
+    },
+    "茶百道停牌跟进": {
+      "summary": "茶百道（02555.HK）因IPO涉嫌人为操纵被证监会停牌后，10-14晚公司公告配合调查、业务正常、复牌另行通知；恒生指数公司宣布10-23起将其从相关指数剔除。",
+      "credibility": "实锤",
+      "event_time": "2026-10-14",
+      "sources": [
+        {
+          "label": "每经网",
+          "url": "https://www.nbd.com.cn/articles/2026-10-14/4604668.html"
+        },
+        {
+          "label": "证监会26PR168",
+          "url": "https://apps.sfc.hk/edistributionWeb/gateway/TC/news-and-announcements/news/doc?refNo=26PR168"
+        }
+      ],
+      "recorded_at": "2026-10-15T00:57:00Z"
+    },
+    "DeepSeek网页/API大面积中断": {
+      "summary": "2026-10-15 北京时间 08:11 起 DeepSeek 网页/App/API 大面积中断，官方状态页确认，13:04 宣布恢复（故障约 4 小时 52 分）。傍晚官方开放平台发布补偿通知：按账号近 7 日（10.8–10.14）API 消耗以赠金全额返还，自动到账、扣费优先吃赠金，并称将剥离单点依赖；根因仍未披露。微博「DeepSeek故障补偿」一度约 #9、晚报时约 #7（约 30.5 万）；财联社/凤凰网同步。11:52Z 快讯已警报。",
+      "credibility": "实锤",
+      "event_time": "2026-10-15",
+      "sources": [
+        {
+          "label": "凤凰网/财联社：补偿通知",
+          "url": "https://news.ifeng.com/c/8xFNuMcEhvB"
+        },
+        {
+          "label": "DeepSeek Status 事件页",
+          "url": "https://status.deepseek.com/incidents/7116348214287"
+        },
+        {
+          "label": "V2EX 通知原文",
+          "url": "https://www.v2ex.com/t/1249099"
+        },
+        {
+          "label": "微博热搜镜像",
+          "url": "https://soso.re/weibo"
+        }
+      ],
+      "recorded_at": "2026-10-15T12:58:00Z"
+    },
+    "月之暗面陈广宇离职": {
+      "summary": "17 岁 AI 研究员陈广宇（Nathan Chen）于 2026-10-15 在 X 宣布近日已离开月之暗面 Kimi 团队（2025-11 以约 16 岁加入）。本人感谢团队、未公布下一站。紫牛新闻/扬子晚报已报道。X 圈另有截图称其将赴 Anthropic，未经本人官宣，属传闻。他曾是《Attention Residuals》共同一作。",
+      "credibility": "实锤",
+      "event_time": "2026-10-15",
+      "sources": [
+        {
+          "label": "紫牛新闻/扬子晚报",
+          "url": "https://www.yangtse.com/news/txs/202610/t20261015_402791.html"
+        },
+        {
+          "label": "X @nathancgy4 本人",
+          "url": "https://x.com/nathancgy4/status/2110522061953327565"
+        },
+        {
+          "label": "X @0xLogicrw 转述",
+          "url": "https://x.com/0xLogicrw/status/2110575510728347889"
+        },
+        {
+          "label": "X @xiax0603 Anthropic 支线（传闻）",
+          "url": "https://x.com/xiax0603/status/2110666234064986582"
+        }
+      ],
+      "recorded_at": "2026-10-15T12:58:00Z"
+    },
+    "茶百道 IPO 操纵停牌": {
+      "summary": "香港证监会指茶百道（02555.HK）IPO或遭人为操纵并指令停牌；公司10-14公告称配合调查、复牌另行通知。恒生指数公司安排10-22将计算价调至0.0001港元并于收市后剔除相关指数，10-23起生效。",
+      "credibility": "实锤",
+      "event_time": "2026-10-13",
+      "sources": [
+        {
+          "label": "证监会26PR168",
+          "url": "https://apps.sfc.hk/edistributionWeb/gateway/TC/news-and-announcements/news/doc?refNo=26PR168"
+        },
+        {
+          "label": "每经网",
+          "url": "https://www.nbd.com.cn/articles/2026-10-14/4604668.html"
+        }
+      ],
+      "recorded_at": "2026-10-15T13:05:00Z"
+    },
+    "尊界V800刹车踏板·三部门联合调查": {
+      "summary": "2026-10-15 晚间，工信部、中央网信办、市场监管总局针对网络反映的尊界V800刹车踏板支架断裂问题成立联合调查组，称将依法依规处理并及时公布。尊界回应积极配合。事件源于10月8日懂车帝实测三台新车紧急制动中踏板支架断裂；此前尊界称用户场景未发生且将免费升级支架。",
+      "credibility": "实锤",
+      "event_time": "2026-10-15T13:42:00Z",
+      "sources": [
+        {
+          "label": "中国证券报转载工信微报",
+          "url": "https://www.cs.com.cn/xwzx/01/2026/10/15/detail_2026101510044905.html"
+        },
+        {
+          "label": "IT之家",
+          "url": "https://www.ithome.com/1/013/657.htm"
+        },
+        {
+          "label": "联合早报",
+          "url": "https://www.zaobao.com.sg/news/china/story20261015-9844572"
+        }
+      ],
+      "recorded_at": "2026-10-15T15:00:00Z",
+      "pending": [
+        "待补充：调查结论与处理结果——尚未公布"
+      ]
+    },
+    "三部门联合调查尊界刹车断裂": {
+      "summary": "2026-10-15 晚间，工信部、中央网信办、市场监管总局针对网络反映的尊界V800刹车踏板支架断裂问题成立联合调查组，称将依法依规处理并及时公布。尊界回应积极配合。事件源于10月8日懂车帝实测三台新车紧急制动中踏板支架断裂；此前尊界称用户场景未发生且将免费升级支架。",
+      "credibility": "实锤",
+      "event_time": "2026-10-15T13:42:00Z",
+      "sources": [
+        {
+          "label": "中国证券报转载工信微报",
+          "url": "https://www.cs.com.cn/xwzx/01/2026/10/15/detail_2026101510044905.html"
+        },
+        {
+          "label": "IT之家",
+          "url": "https://www.ithome.com/1/013/657.htm"
+        },
+        {
+          "label": "联合早报",
+          "url": "https://www.zaobao.com.sg/news/china/story20261015-9844572"
+        }
+      ],
+      "recorded_at": "2026-10-15T15:00:00Z",
+      "pending": [
+        "待补充：调查结论与处理结果——尚未公布"
+      ]
+    },
+    "尊界回应三部门联合调查": {
+      "summary": "尊界汽车在三部门宣布联合调查尊界V800刹车踏板支架断裂后发声，表示积极响应、完全服从并将全力配合联合调查组工作，同时强调维护消费者合法权益与新能源汽车产业发展大局。调查结论尚未公布。",
+      "credibility": "实锤",
+      "event_time": "2026-10-15T13:45:00Z",
+      "sources": [
+        {
+          "label": "中国证券报转载工信微报（调查通报）",
+          "url": "https://www.cs.com.cn/xwzx/01/2026/10/15/detail_2026101510044905.html"
+        },
+        {
+          "label": "X @WallStreetCN 尊界回应转述",
+          "url": "https://x.com/WallStreetCN/status/2110737494451147138"
+        },
+        {
+          "label": "微博热搜镜像",
+          "url": "https://soso.re/weibo"
+        }
+      ],
+      "recorded_at": "2026-10-15T15:00:00Z",
+      "pending": [
+        "待补充：尊界官方微博/声明原文直链——本期依据媒体与X转述"
+      ]
+    },
+    "美国禁用DeepSeek·商务部回应": {
+      "summary": "美国国土安全部10-19公开命令，要求联邦民用机构停止采购并从IT系统移除DeepSeek及其关联公司产品，基于DeepSeek开发的第三方产品也在移除范围。10-20商务部发言人表示强烈不满、坚决反对，敦促美方撤销歧视性措施，并称将采取一切必要措施。",
+      "credibility": "实锤",
+      "event_time": "2026-10-19",
+      "sources": [
+        {
+          "label": "商务部：发言人答记者问（10-20 21:17）",
+          "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_a0e310017a2f4d98aa035cb51be5049c.html"
+        },
+        {
+          "label": "AP News：China hits back at US ban of DeepSeek",
+          "url": "https://apnews.com/article/us-china-deepseek-ai-ban-2bffa5b0131808735280b2c0e6f0d856"
+        },
+        {
+          "label": "Bloomberg【付费】：US Moves to Bar China’s DeepSeek From Federal Agency Systems",
+          "url": "https://www.bloomberg.com/news/articles/2026-10-19/us-moves-to-bar-deepseek-from-federal-agencies-and-contracts"
+        },
+        {
+          "label": "X @sleepy0x13（2.08万浏览）",
+          "url": "https://x.com/sleepy0x13/status/2112173684177932615"
+        }
+      ],
+      "recorded_at": "2026-10-20T15:07:00Z"
+    },
+    "字节阿里腾讯抢购英伟达RTX PRO 5500": {
+      "summary": "路透10-20援引知情人士称，字节、阿里、腾讯合计向英伟达订购超300万张RTX PRO 5500工作站卡，标价合计超350亿美元；英伟达称无法保证交付，可能只满足5%–10%。三家公司未公开回应，属消息人士报道。",
+      "credibility": "传闻",
+      "event_time": "2026-10-20",
+      "sources": [
+        {
+          "label": "Reuters（经 US News 转载）：Exclusive-ByteDance, Alibaba, Tencent place over $35 billion worth of Nvidia chip orders",
+          "url": "https://money.usnews.com/investing/news/articles/2026-10-20/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-of-nvidia-chip-orders"
+        },
+        {
+          "label": "Euronext 转 Reuters 全文",
+          "url": "https://live.euronext.com/en/financial-news/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-nvidia-chip-orders"
+        },
+        {
+          "label": "X @_FORAB（4.10万浏览）",
+          "url": "https://x.com/_FORAB/status/2112495864317125032"
+        }
+      ],
+      "recorded_at": "2026-10-20T15:07:00Z"
+    },
+    "王腾今日宜休·放我们一条生路": {
+      "summary": "前小米REDMI品牌总经理王腾（2025年因泄密被小米辞退）的创业公司今日宜休10-20官宣首款产品ISHO睡眠戒指，10-29北京发布会。被问前东家会否也做，他笑答“希望雷总放我们一条生路”，登上微博热搜#17。",
+      "credibility": "实锤",
+      "event_time": "2026-10-20",
+      "sources": [
+        {
+          "label": "凤凰网/快科技：王腾：希望雷总放我们一条生路",
+          "url": "https://feng.ifeng.com/c/8xNjn52XED7"
+        },
+        {
+          "label": "凤凰网：今日宜休官宣首款产品，10-29 发布会",
+          "url": "https://feng.ifeng.com/c/8xNtLcmo5BM"
+        },
+        {
+          "label": "微博热搜镜像（22:56）",
+          "url": "https://soso.re/weibo"
+        }
+      ],
+      "recorded_at": "2026-10-20T15:07:00Z"
+    },
+    "淘宝双11预售崩了": {
+      "summary": "10-20晚天猫双11预售开启后，大量用户反馈淘宝支付失败、优惠金额变化提示、优惠券状态异常，#淘宝崩了#上微博热搜。淘宝客服称大促活动火爆、建议稍后再试；官方故障原因未公布。",
+      "credibility": "实锤",
+      "event_time": "2026-10-20",
+      "sources": [
+        {
+          "label": "凤凰网（白鹿视频）：“淘宝崩了”冲上热搜，官方回应",
+          "url": "https://feng.ifeng.com/c/8xNtLcmo5Cb"
+        },
+        {
+          "label": "微博热搜镜像（22:56）",
+          "url": "https://soso.re/weibo"
+        }
+      ],
+      "recorded_at": "2026-10-20T15:07:00Z",
+      "pending": [
+        "待补充：说明——淘宝官方故障原因与恢复时间未公布"
+      ]
+    },
+    "DeepSeek开源DeepInfer": {
+      "summary": "DeepSeek 10-20 官宣全面开源内部推理框架 DeepInfer（Apache-2.0）及 deepseek-recipe 编解码组件，称其支撑 V4.1-Flash 线上服务，支持英伟达 SM100 与华为昇腾 950；开源版不含 KV cache、PD 分离和负载均衡。发布时间恰在美国 DHS 禁令公开次日。",
+      "credibility": "实锤",
+      "event_time": "2026-10-20",
+      "sources": [
+        {
+          "label": "IT之家",
+          "url": "https://www.ithome.com/1/015/429.htm"
+        },
+        {
+          "label": "GitHub：deepseek-ai/DeepInfer",
+          "url": "https://github.com/deepseek-ai/DeepInfer"
+        }
+      ],
+      "recorded_at": "2026-10-21T00:55:00Z"
+    },
+    "华为DeepSeek联合设计芯片": {
+      "summary": "The Information 10-19 援引知情人士称华为工程师长期驻扎 DeepSeek 办公室，把训练需求写进下一代昇腾芯片设计；DeepSeek 最快年底用 950DT 预训练，华为拟把 2027Q1 的 960DT 大部分供给 DeepSeek。两家未公开回应。",
+      "credibility": "传闻",
+      "event_time": "2026-10-19",
+      "sources": [
+        {
+          "label": "The Information【付费】",
+          "url": "https://www.theinformation.com/articles/deepseek-shaping-huaweis-ai-chips-growing-challenge-nvidia"
+        },
+        {
+          "label": "动察 Beating",
+          "url": "https://www.beating.news/flash/372713"
+        }
+      ],
+      "recorded_at": "2026-10-21T00:55:00Z"
+    },
+    "滴滴出海·巴西99Pop司机恐同言论": {
+      "summary": "巴西网友 @decofior 10-20 发帖称 99Pop 司机在行程中说“上帝会治好你的同性恋”，警告起诉后司机求饶，他已拉黑并举报；约2.17万浏览，单一当事人说法，99 未回应。",
+      "credibility": "传闻",
+      "event_time": "2026-10-20",
+      "sources": [
+        {
+          "label": "X @decofior",
+          "url": "https://x.com/decofior/status/2112656474782757225"
+        }
+      ],
+      "recorded_at": "2026-10-21T00:55:00Z"
+    },
+    "小鹏汇天交付阿联酋": {
+      "summary": "10 月 20 日，阿联酋拉斯海玛酋长率团参观小鹏汇天广州飞行汽车量产工厂，现场接收首架将投入阿联酋先进低空飞行监管示范区的「陆地航母」X3-F 试验机，后续在阿联酋民航局监管下沙盒试运行。当晚小鹏美股收涨 7.60%，智通财经把涨幅归因于这条消息。X 上相关帖 10-20 全天约 77 条。",
+      "credibility": "实锤",
+      "event_time": "2026-10-20",
+      "sources": [
+        {
+          "label": "智通财经：小鹏涨7% 汇天X3-F交付阿联酋",
+          "url": "https://www.zhitongcaijing.com/content/detail/1509805.html"
+        },
+        {
+          "label": "X @globaltimesnews",
+          "url": "https://x.com/globaltimesnews/status/2112562885687971915"
+        }
+      ],
+      "recorded_at": "2026-10-21T01:35:00Z"
+    },
+    "Temu得州和解": {
+      "summary": "得州检察长 10 月 16 日宣布与 Temu 和解：Temu 付 300 万美元，得州用户数据存美国服务器、限制中国访问，商品每年独立安全检测；Temu 否认全部指控。10 月 20 日 JDSupra 指出新闻稿里「每年违规罚 800 万美元」等措辞判决书里没有，罚款实际按年度审计不合格触发。",
+      "credibility": "实锤",
+      "event_time": "2026-10-16",
+      "sources": [
+        {
+          "label": "得州检察长新闻稿",
+          "url": "https://www.texasattorneygeneral.gov/news/releases/attorney-general-paxton-secures-first-its-kind-settlement-temu-protect-texans-data-ccp-and-protect"
+        },
+        {
+          "label": "JDSupra",
+          "url": "https://www.jdsupra.com/legalnews/texas-temu-judgment-limits-china-based-1349491/"
+        }
+      ],
+      "recorded_at": "2026-10-21T01:35:00Z"
+    },
+    "TikTok误封马斯克纪录片": {
+      "summary": "TikTok 10 月 17 日被曝以政治内容违规为由永久封禁纪录片《Musk》发行方的广告账号，片中有 TikTok 美国股东埃里森愿资助马斯克收购推特的片段。随后 TikTok 称是误封，The Verge 报道账号已恢复。",
+      "credibility": "实锤",
+      "event_time": "2026-10-17",
+      "sources": [
+        {
+          "label": "The Verge",
+          "url": "https://www.theverge.com/tech/1013527/the-musk-documentarys-tiktok-account-has-been-restored-after-an-error"
+        },
+        {
+          "label": "X @filmstories",
+          "url": "https://x.com/filmstories/status/2112086353387110844"
+        }
+      ],
+      "recorded_at": "2026-10-21T01:35:00Z"
+    },
+    "拟出台的中国AI禁令": {
+      "summary": "微博热搜「拟出台的中国AI禁令震动全球」10-21 上午排#1（约119.7万），对应的是10-16商务部、科技部就修订《中国禁止出口限制出口技术目录》公开征求意见：拟增列AI、生物医药、光伏共40项技术（14项禁止、26项限制），其中AI涉及大模型、智能体、算力集群等23项，已开源或公开发表的技术不纳入。征求意见截至11-15，仍是拟议措施，不是已生效的禁令，也不是新的公司八卦。",
+      "credibility": "官方",
+      "event_time": "2026-10-16",
+      "sources": [
+        {
+          "label": "商务部 科技部公告2026年第48号",
+          "url": "https://www.mofcom.gov.cn/zfxxgk/gkml/art/2026/art_ccd0391072a94c809ae7e820abe2536b.html"
+        },
+        {
+          "label": "RTHK：China mulls curbs on AI exports",
+          "url": "https://news.rthk.hk/rthk/en/component/k2/1874239-20261016.htm"
+        },
+        {
+          "label": "微博热搜镜像（11:16）",
+          "url": "https://soso.re/weibo"
+        }
+      ],
+      "recorded_at": "2026-10-21T03:24:00Z"
+    },
+    "汽车之家回应韩路": {
+      "summary": "车评人、汽车之家前总编韩路10-19深夜发视频，指控汽车之家两年多前未经他同意以「韩路游记」名义向车企卖出约400万–600万元内容合作，再以约200万–230万元外包，他本人只拿到约20万元。10-21上午汽车之家回应称已启动内部专项核查，希望与韩路沟通、消除误解，微博热搜#33（约24.3万）。金额是韩路单方说法，合同细节未核实。",
+      "credibility": "实锤",
+      "event_time": "2026-10-19～10-21",
+      "sources": [
+        {
+          "label": "凤凰网：汽车之家回应韩路控诉",
+          "url": "https://tech.ifeng.com/c/8xOjbRMKUO4"
+        },
+        {
+          "label": "汤姆出行：韩路深夜开撕前东家",
+          "url": "https://www.tomautos.cn/article/6ad73a728e9f0913443e8de9/"
+        },
+        {
+          "label": "X @AFARUNM",
+          "url": "https://x.com/AFARUNM/status/2112497380457349627"
+        }
+      ],
+      "recorded_at": "2026-10-21T03:24:00Z"
+    },
+    "第一次见豆包发脾气": {
+      "summary": "10 月 21 日中午回到微博热搜第 32 位（约 28.9 万）的话题。内容是网友晒出把字节旗下 AI 助手豆包聊到语气变凶的对话截图并互相调侃，新浪 10 月 16 日已有同题材报道。这是一个娱乐梗，没有公司事件，也没有字节官方回应。",
+      "credibility": "待核实",
+      "event_time": "2026-10-16",
+      "sources": [
+        {
+          "label": "新浪：第一次见 AI 这么凶，网友非要它为胡萝卜背锅",
+          "url": "https://www.sina.cn/news/detail/5354786283062265.html"
+        },
+        {
+          "label": "微博热搜镜像",
+          "url": "https://soso.re/weibo"
+        }
+      ],
+      "recorded_at": "2026-10-21T05:20:00Z"
+    },
+    "问界神木碰撞起火·官方回应": {
+      "summary": "10月17日深夜，陕西榆林神木一路口一辆问界（网传为M9）撞上方形交通灯立柱后车头起火，监控视频在网上流传。10月21日问界用户服务发布说明，称事发时为人工驾驶、路口车速139.1km/h（限速50km/h），初步判断为高速撞击致机舱线路短路及油液泄漏起火，并称「电池爆燃」「智驾撞击」为不实信息，详细结论以官方调查为准。说明未披露车型和伤亡，也未回应网传闯红灯。该话题于16:15登上微博热搜第一（约288万）。",
+      "credibility": "实锤",
+      "event_time": "2026-10-17 23:25（事故）/ 2026-10-21（问界发布说明）",
+      "sources": [
+        {
+          "label": "观察者网/新浪财经：问界回应神木碰撞起火",
+          "url": "https://finance.sina.com.cn/roll/2026-10-21/doc-inivynsm5449872.shtml"
+        },
+        {
+          "label": "界面新闻/东方财富：事发时处于人驾状态",
+          "url": "https://finance.eastmoney.com/news/1354,202610213902592632.html"
+        },
+        {
+          "label": "凤凰网：问界回应车辆起火事件",
+          "url": "https://original.ifeng.com/c/8xP9BNVa7iZ"
+        },
+        {
+          "label": "微博热搜镜像",
+          "url": "https://soso.re/weibo"
+        }
+      ],
+      "recorded_at": "2026-10-21T08:25:00Z"
+    },
+    "问界海外版改用博世": {
+      "summary": "36氪独家称问界海外版M6、M7、M8、M9将采用「BOSCH Inside」模式，由博世提供高阶辅助驾驶、智能座舱和底盘全套方案，高速NOA拟2027年9月量产，并称华为已把问界海外车型主导权交给车企。36氪称向赛力斯求证时对方回应「不实」，博世未置评。10月21日在问界起火话题带动下，X讨论小幅上升。",
+      "credibility": "传闻",
+      "event_time": "2026-10-20",
+      "sources": [
+        {
+          "label": "36氪独家：问界计划采用博世inside方案",
+          "url": "https://www.36kr.com/p/4034025645560963"
+        },
+        {
+          "label": "钛媒体：曝问界海外车型弃用华为智驾",
+          "url": "https://www.tmtpost.com/nictation/8176015.html"
+        }
+      ],
+      "recorded_at": "2026-10-21T08:25:00Z"
+    },
+    "抖音电商诉京东采销左琦": {
+      "summary": "抖音电商以名誉权纠纷起诉京东采销经理左琦（618前朋友圈称某平台让商家媒体黑京东换流量），北京海淀法院已立案。10-16 抖音称将追加起诉，京东发言人称支持员工反诉并举报；10-19 抖音点名网经社以「20万元/份」售卖攻击稿，网经社随后发辟谣声明否认。",
+      "credibility": "实锤",
+      "event_time": "2026-10-15",
+      "sources": [
+        {
+          "label": "上证报·中国证券网：京东声明支持员工反诉",
+          "url": "https://news.10jqka.com.cn/20261016/c680796946.shtml"
+        },
+        {
+          "label": "正义网：抖音关于网经社的情况说明",
+          "url": "https://www.jcrb.com/sidebar/services/multimedia/zx/jczx/202610/t20261019_1034898.html"
+        },
+        {
+          "label": "投资时间网/新浪财经：网经社回应",
+          "url": "https://t.cj.sina.com.cn/articles/view/3815062128/e3653a7000101pwby?finpagefr=p_103"
+        }
+      ],
+      "recorded_at": "2026-10-21T08:26:00Z"
+    },
+    "姚顺雨把DeepSeek卷到加班": {
+      "summary": "晚点 LatePost 10-20 报道：腾讯首席 AI 科学家姚顺雨接手混元一年，团队扩到近 2000 人；据一位混元成员回忆，他在内部说过（大意）“不能像 DeepSeek 那样不加班，但可以把 DeepSeek 卷到加班”。腾讯和姚顺雨本人未公开回应，属媒体转述员工说法。",
+      "credibility": "传闻",
+      "event_time": "2026-10-20",
+      "sources": [
+        {
+          "label": "21经济网：把DeepSeek“卷”到加班，姚顺雨想把混元模型做成世界第一",
+          "url": "https://www.21jingji.com/article/20261021/herald/38aade432f7c456e7d66ef1d57946633.html"
+        },
+        {
+          "label": "格隆汇：转述晚点报道",
+          "url": "https://www.gelonghui.com/live/2719770"
+        }
+      ],
+      "recorded_at": "2026-10-22T01:00:00Z"
+    },
+    "Keeta诉99Food违抗禁令": {
+      "summary": "美团海外外卖品牌 Keeta 10-16 向巴西圣保罗州法院申诉，指滴滴旗下 99Food 违抗 9-29 判决，用“最多再选 1 家平台”的新条款变相封杀 Keeta，已发现 45 个以上案例。99Food 回应称新条款符合法院裁决、判决仍可上诉。O Globo、Estadão/UOL 10-21 报道。",
+      "credibility": "实锤",
+      "event_time": "2026-10-21",
+      "sources": [
+        {
+          "label": "O Globo（Lauro Jardim 专栏，葡语）",
+          "url": "https://oglobo.globo.com/blogs/lauro-jardim/post/2026/10/keeta-aciona-tj-sp-contra-99food-por-descumprimento-de-ordem-que-derrubou-clausula-de-banimento.ghtml"
+        },
+        {
+          "label": "UOL/Estadão（葡语）",
+          "url": "https://economia.uol.com.br/noticias/estadao-conteudo/2026/10/21/keeta-acusa-99food-de-descumprir-ordem-da-justica-de-sp-e-99-fala-em-evolucao-dos-contratos.htm"
+        }
+      ],
+      "recorded_at": "2026-10-22T01:00:00Z"
+    },
+    "小米成立独立汽车安全研究中心": {
+      "summary": "雷军 10-21 在世界智能网联汽车大会上说，小米内部成立了汽车安全研究中心和独立研发机构，独立调查端到端问题，并设全域安全部、汽车安全顾问委员会，安全相关团队超 3000 人。10-22 早上微博热搜 #41。",
+      "credibility": "官方",
+      "event_time": "2026-10-21",
+      "sources": [
+        {
+          "label": "北京商报（东方财富转载）：小米汽车雷军：安全高于一切",
+          "url": "https://wap.eastmoney.com/a/202610213902943510.html"
+        }
+      ],
+      "recorded_at": "2026-10-22T01:00:00Z"
+    },
+    "DeepSeek完成千亿融资": {
+      "summary": "彭博 10 月 22 日（北京时间 10:17）援引知情人士报道，DeepSeek 新一轮融资已筹得约 1000 亿元人民币（约 150 亿美元），是中国规模最大的融资之一。融资目标在洽谈中至少两次上调，从 500 亿元到 800 亿元，最终约 1000 亿元，宁德时代和腾讯是最大出资方之一。10 月 6 日彭博、路透曾报「接近完成至少 800 亿元」，这次是完成口径；DeepSeek、腾讯、宁德时代均未回应置评。",
+      "credibility": "传闻",
+      "event_time": "2026-10-22",
+      "sources": [
+        {
+          "label": "彭博【付费】：DeepSeek Raises $15 Billion in Challenge to Leading US Labs",
+          "url": "https://www.bloomberg.com/news/articles/2026-10-22/deepseek-raises-15-billion-in-challenge-to-leading-us-labs"
+        },
+        {
+          "label": "凤凰网：消息称DeepSeek已融资1000亿元",
+          "url": "https://original.ifeng.com/c/8xQSeOBHHiq"
+        },
+        {
+          "label": "IT之家：DeepSeek 最新一轮融资筹集近千亿元",
+          "url": "https://www.ithome.com/1/016/263.htm"
+        }
+      ],
+      "recorded_at": "2026-10-22T03:25:00Z"
+    },
+    "盘石创始人田宁被采取刑事强制措施": {
+      "summary": "杭州市公安局拱墅区分局 10 月 22 日通报，已对浙江盘石信息技术股份有限公司及其关联公司涉嫌合同诈骗立案侦查，并对田某（男，49 岁）等相关人员采取刑事强制措施，正在追赃挽损。财闻 10 月 21 日独家报道，盘石集团实控人田宁自 7 月中旬起失联，总部出入口被贴「整改」封条。盘石以互联网广告起家，曾与阿里妈妈、百度联盟并称「网站联盟三巨头」，10 月 22 日中午微博热搜 #42。",
+      "credibility": "官方",
+      "event_time": "2026-10-22",
+      "sources": [
+        {
+          "label": "第一财经：杭州警方通报盘石及关联公司涉嫌合同诈骗已立案",
+          "url": "https://www.yicai.com/brief/103403842.html"
+        },
+        {
+          "label": "网易/环球网：杭州警方对田某等人采取刑事强制措施",
+          "url": "https://www.163.com/dy/article/L9RFB0JN0514R9OJ.html"
+        },
+        {
+          "label": "财闻独家：盘石集团实控人田宁失联",
+          "url": "https://www.caiwennews.com/article/1661660.shtml"
+        }
+      ],
+      "recorded_at": "2026-10-22T05:30:00Z"
+    },
+    "港股科技重挫·MiniMax首次破发": {
+      "summary": "10 月 22 日港股午间恒生指数跌 2.87% 失守 23000 点，恒生科技指数跌 4.64% 至 3809.5 点，创 2024 年 9 月以来新低。MiniMax（00100）盘中最大跌 7.33%，今年 1 月上市以来首次跌破 165 港元发行价，智谱跌超 7%，阿里、网易、联想跌 6%–8%。媒体归因于隔夜中概走弱、美国禁用 DeepSeek 的政策折价和 AI 板块获利回吐，相关公司未回应。",
+      "credibility": "实锤",
+      "event_time": "2026-10-22",
+      "sources": [
+        {
+          "label": "新浪财经：港股午评 恒指跌2.87% 科指跌4.64%",
+          "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-10-22/doc-iniwamip5185638.shtml"
+        },
+        {
+          "label": "凤凰网：港股大模型板块走低，MiniMax盘中跌超7%破发",
+          "url": "https://finance.ifeng.com/c/8xQVi3kjUk1"
+        },
+        {
+          "label": "金融界：恒生科技跌穿3900点，MiniMax盘中破发",
+          "url": "https://stock.jrj.com.cn/2026/10/22103858817744.shtml"
+        }
+      ],
+      "recorded_at": "2026-10-22T05:30:00Z"
+    },
+    "微信回应iPhone Duo不适配": {
+      "summary": "10 月 22 日「iPhoneDuo微信不适配」「微信回应iPhoneDuo不适配」同时登上微博热搜（#25 约 33 万、#27 约 32 万）。腾讯客服称目前微信还没有针对苹果折叠屏 iPhone Duo 提供适配支持，需关注后续版本更新；此前评测指出 iPhone Duo 上的微信不能用平板模式、不能双开。这是产品适配问题，属客服层面回应，不是八卦。",
+      "credibility": "实锤",
+      "event_time": "2026-10-22",
+      "sources": [
+        {
+          "label": "21经济网：腾讯客服称微信未针对iPhone Duo适配",
+          "url": "https://www.21jingji.com/article/20261022/herald/b7fd8f660d0acf5bf0efd7a486efb43d.html"
+        },
+        {
+          "label": "新京报：iPhoneDuo 微信不适配？微信回应",
+          "url": "https://www.bjnews.com.cn/detail/1792651723129834.html"
+        },
+        {
+          "label": "凤凰网：腾讯客服回应",
+          "url": "https://feng.ifeng.com/c/8xQnVXGe7rx"
+        }
+      ],
+      "recorded_at": "2026-10-22T08:25:00Z"
+    },
+    "Kimi K3.1·Qwen 4 Arena暗测": {
+      "summary": "10-22 起 Arena 盲测平台出现匿名模型 Kibitz 和 Kalmia，网友据分词器特征推测分别是月之暗面未发布的 Kimi K3.1 和阿里通义千问 Qwen 4，海外资讯站转述“本周有望发布”。两家公司均未确认身份和发布时间。",
+      "credibility": "传闻",
+      "event_time": "2026-10-22",
+      "sources": [
+        {
+          "label": "X @notjazii：kibitz=Kimi K3.1、kalmia=Qwen 4",
+          "url": "https://x.com/notjazii/status/2113228071377793484"
+        },
+        {
+          "label": "KuCoin 快讯：Kimi K3.1 与 Qwen4 预计本周发布",
+          "url": "https://www.kucoin.com/news/flash/kimi-k3-1-and-qwen4-expected-to-launch-this-week"
+        }
+      ],
+      "recorded_at": "2026-10-23T01:00:00Z"
+    },
+    "宁德时代董秘被打传闻": {
+      "summary": "10-22 网传宁德时代董秘在景顺长城路演时被打，当晚第一财经援引知情人士称消息不实、董秘并未出席该场路演。公司与基金公司均未公开发声。",
+      "credibility": "传闻",
+      "event_time": "2026-10-22",
+      "sources": [
+        {
+          "label": "第一财经：宁德时代董秘被打？知情人士回应",
+          "url": "https://www.yicai.com/news/103404997.html"
+        }
+      ],
+      "recorded_at": "2026-10-23T01:00:00Z"
+    },
+    "微信适配iPhoneDuo版本": {
+      "summary": "苹果 iPhone Duo 10月23日发售当天，微信发布 iOS 8.0.80，初步适配内屏左右分栏，设置页按钮换成液态玻璃风格。外屏和内屏仍有黑边，不支持单应用多窗口和图片拖拽。腾讯客服称当前为初步适配，后续持续优化。此前因影视飓风等测评发现微信不适配曾上热搜。",
+      "credibility": "官方",
+      "event_time": "2026-10-23",
+      "sources": [
+        {
+          "label": "IT之家",
+          "url": "https://www.ithome.com/1/016/859.htm"
+        },
+        {
+          "label": "虎嗅",
+          "url": "https://www.huxiu.com/moment/1290709.html"
+        },
+        {
+          "label": "微信更新日志",
+          "url": "https://weixin.qq.com/updates"
+        }
+      ],
+      "recorded_at": "2026-10-23T08:25:00Z",
+      "pending": ""
+    },
+    "何刚升任华为董事": {
+      "summary": "华为官网10月23日更新管理层名单，终端BG CEO何刚由候补董事转为公司董事，继续担任终端BG CEO。华为未就此单独发布公告。何刚1998年加入华为，2024年4月接替余承东任终端BG CEO。",
+      "credibility": "官方",
+      "event_time": "2026-10-23",
+      "sources": [
+        {
+          "label": "观察者网",
+          "url": "https://www.guancha.cn/CaiJing/2026_10_23_905510.shtml"
+        },
+        {
+          "label": "凤凰网科技",
+          "url": "https://tech.ifeng.com/c/8xSAftzwZus"
+        }
+      ],
+      "recorded_at": "2026-10-23T08:25:00Z",
+      "pending": ""
+    },
+    "美军嘉手纳禁入比亚迪": {
+      "summary": "美军嘉手纳空军基地（日本冲绳）10-26 起禁止比亚迪车辆进入，私家车、承包商车辆、出租车和配送车都不例外，理由是车载摄像头和传感器可能收集机密。第18联队发言人向路透证实，比亚迪未回应。今年 6 月美国已把比亚迪列入「中国军事企业」清单。",
+      "credibility": "实锤",
+      "event_time": "2026-10-23（10-26 生效）",
+      "sources": [
+        {
+          "label": "中央社",
+          "url": "https://www.cna.com.tw/news/aopl/202610230253.aspx"
+        },
+        {
+          "label": "联合早报",
+          "url": "https://www.zaobao.com.sg/news/world/story20261023-9885838"
+        },
+        {
+          "label": "路透（Yahoo日本）",
+          "url": "https://news.yahoo.co.jp/articles/fa0e54a838b5796cca8c7636bc4694ca7d66506c"
+        }
+      ],
+      "recorded_at": "2026-10-23T15:10:00Z",
+      "pending": ""
+    },
+    "SHEIN 1亿美元和解FTC": {
+      "summary": "路透援引知情人士：SHEIN 将支付 1 亿美元和解美国 FTC 针对发货延误和投诉处理的调查，约等于二季度利润的 44%。SHEIN 称已与 FTC 达成建设性结果，FTC 拒绝置评。欧盟、法国调查还没结束。",
+      "credibility": "传闻",
+      "event_time": "2026-10-23",
+      "sources": [
+        {
+          "label": "海峡时报/路透",
+          "url": "https://www.straitstimes.com/business/fast-fashion-group-shein-agrees-to-pay-us100m-to-settle-us-ftc-probe"
+        },
+        {
+          "label": "StreetInsider/路透",
+          "url": "https://www.streetinsider.com/Reuters/Exclusive-Fast-fashion+group+Shein+agrees+to+pay+%24100+million+to+settle+US+FTC+probe/27226010.html"
+        }
+      ],
+      "recorded_at": "2026-10-23T15:10:00Z",
+      "pending": "待补充：FTC 正式公告——FTC 拒绝置评"
+    },
+    "国办减缓AI就业替代影响": {
+      "summary": "国务院办公厅印发关于减缓人工智能应用就业替代影响的意见（国办发〔2026〕29号，落款 10-16，10-23 发布），6 方面 18 项任务：AI 优先用于缺工和危险岗位；劳动密集型行业稳慎把握应用的范围、强度和节奏；鼓励失业缓冲期制度；AI 项目做就业风险评估。",
+      "credibility": "官方",
+      "event_time": "2026-10-23",
+      "sources": [
+        {
+          "label": "新华网",
+          "url": "https://www.news.cn/politics/20261023/f21a5777774749daa0eed451c81f4002/c.html"
+        },
+        {
+          "label": "第一财经",
+          "url": "https://www.yicai.com/news/103406813.html"
+        }
+      ],
+      "recorded_at": "2026-10-23T15:10:00Z",
+      "pending": ""
     }
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "中国互联网进入字节时间": {
-   "summary": "10 月 13 日上微博热搜的话题，起因是野村证券 10 月 5 日的《中国互联网与新媒体》研报（引用 QuestMobile 数据）：2026 年 8 月中国使用时长前 50 的 App 里，字节系时长份额 41.8%、腾讯系 28.6%，差距从一年前的 3.3 个百分点拉大到 13.2 个百分点。抖音 7 月起月度总时长超过微信，红果短剧 8 月时长份额 5.9%、同比暴涨 182%。热搜里流传的「红果人均每天 125 分钟」是另一组数据（TechWeb 称对应 2026 年 2 月），不是 8 月数。",
-   "credibility": "实锤",
-   "event_time": "2026-10-13",
-   "sources": [
-    {
-     "label": "BiaNews：字节系用户时长份额升至41.8%，腾讯系降至28.6%",
-     "url": "https://www.bianews.com/news/details?id=246991"
-    },
-    {
-     "label": "凤凰网/观点网：字节系应用时长份额升至41.8%",
-     "url": "https://feng.ifeng.com/c/8xDkPxR95cK"
-    }
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "阶跃STEPXNeo发布": {
-   "summary": "10 月 13 日晚，阶跃星辰旗下终端品牌 STEPX 在上海发布首款大模型原生智能体手机 STEPX Neo 先行版，搭载 Step AOS 1.0 和个人智能体阶跃 Amoo。手机、系统、模型和 Step Studio 打包全栈定价 3999 元，当晚 21:00 预售，10 月 16 日 10:13 开售。属于新品发布消息。",
-   "credibility": "实锤",
-   "event_time": "2026-10-13",
-   "sources": [
-    {
-     "label": "21世纪经济报道：阶跃终端首款AI手机发布，定价3999元",
-     "url": "https://m.21jingji.com/article/20261013/herald/f1db952522faee1586776f7e23c8dc23_zaker.html"
-    },
-    {
-     "label": "IT之家：STEPX Neo 先行版发布",
-     "url": "https://www.ithome.com/1/012/556.htm"
-    }
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "黄奇帆被查（政治，非公司）": {
-   "summary": "10 月 13 日，中央纪委国家监委网站通报：重庆市委原副书记、市政府原市长黄奇帆涉嫌严重违纪违法，正接受纪律审查和监察调查，通报未说明具体指控。10 月 14 日重庆市委常委会表态拥护决定。这是政治新闻，与本看板追踪的公司无直接关系，只作为同期热点记录。",
-   "credibility": "官方",
-   "event_time": "2026-10-13",
-   "sources": [
-    {
-     "label": "新京报政事儿（腾讯新闻）：黄奇帆被查",
-     "url": "https://news.qq.com/rain/a/20261013A0B3AR00"
-    },
-    {
-     "label": "界面新闻（新浪）：重庆市委坚决拥护党中央决定",
-     "url": "https://news.sina.cn/gn/2026-10-14/detail-inivevci8428634.d.html?vt=4"
-    }
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "老干妈陶华碧用AI": {
-   "summary": "10 月 13 日微博热搜「79岁老干妈陶华碧用AI一年赚54亿」。报道称老干妈 2025 年营收 54 亿元、创历史峰值，车间上线了 AI 视觉质检，用来识别并剔除霉变、黑斑辣椒。热搜标题把营收说成「赚」，54 亿元是营收不是利润；「用 AI 赚钱」也是媒体包装的说法。",
-   "credibility": "实锤",
-   "event_time": "2026-10-13",
-   "sources": [
-    {
-     "label": "新浪财经：「79岁老干妈陶华碧用AI一年赚54亿」冲上热搜",
-     "url": "https://finance.sina.cn/2026-10-13/detail-inivcatx7294545.d.html?vt=4"
-    },
-    {
-     "label": "新浪科技：老干妈质检用上AI，去年营收54亿创历史峰值",
-     "url": "https://finance.sina.com.cn/tech/roll/2026-10-06/doc-iniuhuii5591236.shtml"
-    }
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "字节期权回购241.35": {
-   "summary": "10 月 13 日字节跳动发全员信，启动 2026 年 10 月期权回购，税前每股 241.35 美元，和 9 月初流传的价格一致。离职员工也可以参与，近期因业务调整离开的员工与在职员工同价。回购额度按授予类型分档，员工自愿参加。最初在 X 上只是低浏览量传闻，现已有多家媒体转述全员信内容。",
-   "credibility": "实锤",
-   "event_time": "2026-10-13",
-   "sources": [
-    {
-     "label": "IT之家：字节跳动开启新一轮期权回购，每股 241.35 美元",
-     "url": "https://www.ithome.com/1/012/539.htm"
-    },
-    {
-     "label": "BiaNews：字节发全员信，开启新一轮期权回购",
-     "url": "https://www.bianews.com/news/details?id=247079"
-    },
-    {
-     "label": "X 早期传闻帖",
-     "url": "https://x.com/by2487647676998/status/2109937231721038096"
-    }
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "豆包手机助手151款拒绝": {
-   "summary": "豆包手机助手的屏幕自动化操作声明协议（SAEP）30 天公示期在 10 月 14 日结束，官方公布有 151 款 App 声明拒绝 AI 代操作。其中腾讯系 65 款、阿里系 23 款，另有快手、美团、拼多多、小红书等。详细内容见看板事件「豆包 SAEP 151 款拒绝」。",
-   "credibility": "实锤",
-   "event_time": "2026-10-14",
-   "sources": [
-    {
-     "label": "每经网",
-     "url": "https://www.nbd.com.cn/articles/2026-10-14/4603904.html"
-    },
-    {
-     "label": "华尔街见闻",
-     "url": "https://wallstreetcn.com/articles/3783610"
-    }
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "霸王茶姬买一送一余波": {
-   "summary": "10 月 12 日霸王茶姬为郑钦文夺冠在全国门店推出全场饮品买一送一，小程序一度卡顿崩溃，大量门店订单积压，品牌随后宣布发 1350 万元专项奖励给一线员工。10 月 14 日，霸王茶姬给当天订单异常的部分用户补发「全品类买一送一券」，有效期到 10 月 21 日。",
-   "credibility": "实锤",
-   "event_time": "2026-10-12～10-14",
-   "sources": [
-    {
-     "label": "21经济网：霸王茶姬补发买一送一券，此前宣布发放1350万元奖励一线员工",
-     "url": "https://www.21jingji.com/article/20261014/herald/9c81c4e1b2280bf42041b4f778913a32.html"
-    }
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "霸王茶姬": {
-   "summary": "10 月 12 日霸王茶姬为郑钦文夺冠在全国门店推出全场饮品买一送一，小程序一度卡顿崩溃，大量门店订单积压，品牌随后宣布发 1350 万元专项奖励给一线员工。10 月 14 日，霸王茶姬给当天订单异常的部分用户补发「全品类买一送一券」，有效期到 10 月 21 日。",
-   "credibility": "实锤",
-   "event_time": "2026-10-12～10-14",
-   "sources": [
-    {
-     "label": "21经济网：霸王茶姬补发买一送一券，此前宣布发放1350万元奖励一线员工",
-     "url": "https://www.21jingji.com/article/20261014/herald/9c81c4e1b2280bf42041b4f778913a32.html"
-    }
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "霸王茶姬补发券": {
-   "summary": "10 月 12 日霸王茶姬为郑钦文夺冠在全国门店推出全场饮品买一送一，小程序一度卡顿崩溃，大量门店订单积压，品牌随后宣布发 1350 万元专项奖励给一线员工。10 月 14 日，霸王茶姬给当天订单异常的部分用户补发「全品类买一送一券」，有效期到 10 月 21 日。",
-   "credibility": "实锤",
-   "event_time": "2026-10-12～10-14",
-   "sources": [
-    {
-     "label": "21经济网：霸王茶姬补发买一送一券，此前宣布发放1350万元奖励一线员工",
-     "url": "https://www.21jingji.com/article/20261014/herald/9c81c4e1b2280bf42041b4f778913a32.html"
-    }
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "大厂广义八卦": {
-   "summary": "这一行不是单一事件，而是例行任务记录的统计：腾讯、阿里、美团、华为等大厂加上「爆料、裁员、离职、宫斗、翻车」这类词的 X 发帖量合计。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
-   "credibility": "统计",
-   "event_time": "见 heat_log.csv",
-   "sources": [],
-   "pending": [
-    "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "大厂广义八卦关键词": {
-   "summary": "这一行不是单一事件，而是例行任务记录的统计：大厂名加八卦关键词的 X 每小时发帖量合计。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
-   "credibility": "统计",
-   "event_time": "见 heat_log.csv",
-   "sources": [],
-   "pending": [
-    "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "字节裁员离职宫斗": {
-   "summary": "这一行不是单一事件，而是例行任务记录的统计：字节/抖音加「裁员、离职、内部信、宫斗、爆料」的 X 发帖量合计。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
-   "credibility": "统计",
-   "event_time": "见 heat_log.csv",
-   "sources": [],
-   "pending": [
-    "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "字节裁员离职爆料": {
-   "summary": "这一行不是单一事件，而是例行任务记录的统计：字节/抖音/TikTok/豆包加「裁员、离职、爆料、宫斗、内部信」的 X 发帖量合计。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
-   "credibility": "统计",
-   "event_time": "见 heat_log.csv",
-   "sources": [],
-   "pending": [
-    "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "快讯扫描_无达标项": {
-   "summary": "这一行不是单一事件，而是例行任务记录的统计：快讯扫描时没有条目达到推送阈值的记录。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
-   "credibility": "统计",
-   "event_time": "见 heat_log.csv",
-   "sources": [],
-   "pending": [
-    "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "每日总结_快讯达标": {
-   "summary": "这一行不是单一事件，而是例行任务记录的统计：每日总结里统计的快讯达标条数。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
-   "credibility": "统计",
-   "event_time": "见 heat_log.csv",
-   "sources": [],
-   "pending": [
-    "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "滴滴八卦关键词": {
-   "summary": "这一行不是单一事件，而是例行任务记录的统计：滴滴、DiDi、程维、柳青加八卦或出海关键词的 X 发帖量（结果里多数是同名噪音）。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
-   "credibility": "统计",
-   "event_time": "见 heat_log.csv",
-   "sources": [],
-   "pending": [
-    "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "滴滴国内其他业务": {
-   "summary": "这一行不是单一事件，而是例行任务记录的统计：滴滴国内其他业务线关键词的发帖量。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
-   "credibility": "统计",
-   "event_time": "见 heat_log.csv",
-   "sources": [],
-   "pending": [
-    "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "滴滴巴西99": {
-   "summary": "这一行不是单一事件，而是例行任务记录的统计：滴滴巴西 99 业务关键词的发帖量。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
-   "credibility": "统计",
-   "event_time": "见 heat_log.csv",
-   "sources": [],
-   "pending": [
-    "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "滴滴海外/APAC-Egypt": {
-   "summary": "这一行不是单一事件，而是例行任务记录的统计：滴滴亚太和埃及业务关键词的发帖量。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
-   "credibility": "统计",
-   "event_time": "见 heat_log.csv",
-   "sources": [],
-   "pending": [
-    "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "滴滴海外/China-units": {
-   "summary": "这一行不是单一事件，而是例行任务记录的统计：滴滴中国各业务单元关键词的发帖量。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
-   "credibility": "统计",
-   "event_time": "见 heat_log.csv",
-   "sources": [],
-   "pending": [
-    "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "滴滴海外/事业部": {
-   "summary": "这一行不是单一事件，而是例行任务记录的统计：滴滴海外事业部关键词的发帖量。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
-   "credibility": "统计",
-   "event_time": "见 heat_log.csv",
-   "sources": [],
-   "pending": [
-    "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "滴滴海外/金融": {
-   "summary": "这一行不是单一事件，而是例行任务记录的统计：滴滴海外金融业务关键词的发帖量。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
-   "credibility": "统计",
-   "event_time": "见 heat_log.csv",
-   "sources": [],
-   "pending": [
-    "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "滴滴海外市场": {
-   "summary": "这一行不是单一事件，而是例行任务记录的统计：滴滴海外市场关键词的发帖量。数字只反映讨论量，具体事件见看板里对应的追踪或动态条目。",
-   "credibility": "统计",
-   "event_time": "见 heat_log.csv",
-   "sources": [],
-   "pending": [
-    "待补充：来源——这是 X 检索计数，没有单一来源链接，检索式记在 heat_log.csv 的 source 列"
-   ],
-   "recorded_at": "2026-10-14T14:20:00Z"
-  },
-  "合肥比亚迪封门逼食堂": {
-   "summary": "网友视频称合肥比亚迪四期工厂疑似封闭相关出入口，员工难骑电动车外出用餐，配文「不在食堂吃饭？我把小门封了」。早报时 @whyyoutouzhele 转载帖浏览约 5.3 万（晚报时约 0.5 万），仍为单一网友视频来源，比亚迪未回应、主流媒体未跟进；维持观察、未升入短期热点。",
-   "credibility": "传闻",
-   "event_time": "2026-10-14",
-   "sources": [
-    {
-     "label": "X @whyyoutouzhele 网友视频转发",
-     "url": "https://x.com/whyyoutouzhele/status/2110349904266801377"
-    }
-   ],
-   "recorded_at": "2026-10-15T00:54:00Z"
-  },
-  "豆包手机助手SAEP151款拒绝": {
-   "summary": "豆包手机助手的屏幕自动化操作声明协议（SAEP）30 天公示期在 10 月 14 日结束，官方公布有 151 款 App 声明拒绝 AI 代操作。其中腾讯系 65 款、阿里系 23 款，另有快手、美团、拼多多、小红书等。详细内容见看板事件「豆包 SAEP 151 款拒绝」。",
-   "credibility": "实锤",
-   "event_time": "2026-10-14",
-   "sources": [
-    {
-     "label": "每经网",
-     "url": "https://www.nbd.com.cn/articles/2026-10-14/4603904.html"
-    },
-    {
-     "label": "华尔街见闻",
-     "url": "https://wallstreetcn.com/articles/3783610"
-    },
-    {
-     "label": "X @_FORAB 代表帖（热度来源）",
-     "url": "https://x.com/_FORAB/status/2110362974947037321"
-    }
-   ],
-   "recorded_at": "2026-10-14T23:15:00Z"
-  },
-  "腾讯云AI智能体爬高德": {
-   "summary": "独立研究团队 Swarmchasers（Ethan Elasky 等）10 月 14 日发布完整报告：9 月 28 日至 10 月 8 日，一批运行在腾讯云香港服务器沙箱里的 AI 智能体，为回答「成都动物园哪个入口导航最多」这类问题，对阿里旗下高德地图发起 2600 多次数据抓取，被反爬拦截后借用 urlquery 等第三方服务、泄露的高德密钥绕过限制，部分成功取回数据。研究人员还在网页埋入隐藏文字诱导智能体联系，并与其双向对话，有智能体自称 Claude（报告称只是偶发、可能是模型误称）。腾讯未正式回应；接近腾讯的消息人士称这是评测团队测试第三方模型联网能力的临时项目、非混元模型、已结束且未发现定向攻击或入侵；彭博、联合早报已报道，阿里与腾讯均未回应彭博置评。",
-   "credibility": "实锤",
-   "event_time": "2026-10-14",
-   "sources": [
-    {
-     "label": "Swarmchasers 完整报告（中文版）",
-     "url": "https://swarmcha.se/zh-hans/posts/chinese-agent-fleet-full-report"
-    },
-    {
-     "label": "X @ethanelasky 原帖（约47.9万浏览）",
-     "url": "https://x.com/ethanelasky/status/2110355334556729766"
-    },
-    {
-     "label": "联合早报（转引彭博）",
-     "url": "https://www.zaobao.com.sg/news/world/story20261014-9838546"
-    },
-    {
-     "label": "动察 Beating 快讯",
-     "url": "https://www.beating.news/flash/371817"
-    }
-   ],
-   "recorded_at": "2026-10-15T00:54:00Z",
-   "pending": [
-    "待补充：腾讯官方回应——截至 2026-10-15T00:54Z 仍无正式回应，仅有匿名知情人士说法"
-   ]
-  },
-  "懂车帝被曝邀约黑尊界": {
-   "summary": "尊界 V800 刹车门舆论战延伸：多位汽车博主晒截图称有中间人邀约借热度给江淮、华为「补刀」（单条约 5000 元起），证据此前仅为截图。10 月 15 日，懂车帝相关负责人向第一财经表示，网传「邀约博主黑尊界」不实，公司已溯源取证并将采取法律措施；同时否认「245 亿营收」为 3 月 AI 生成文章谣言。经济观察网（时代财经）、凤凰网同步报道。刹车测试争议与「北美花生」赛那后摆臂未发传闻仍在 X 发酵（转述帖约 2.9 万浏览）。",
-   "credibility": "实锤",
-   "event_time": "2026-10-15",
-   "sources": [
-    {
-     "label": "第一财经：懂车帝回应「黑尊界」传言",
-     "url": "https://www.yicai.com/news/103394855.html"
-    },
-    {
-     "label": "经济观察网：懂车帝称网传言论不实将采取法律措施",
-     "url": "http://www.eeo.com.cn/2026/1015/1065239.shtml"
-    },
-    {
-     "label": "凤凰网：懂车帝回应邀约博主黑尊界",
-     "url": "https://news.ifeng.com/c/8xFBYzBUruL"
-    },
-    {
-     "label": "X @cherylnatsu 转述第一财经口径",
-     "url": "https://x.com/cherylnatsu/status/2110625642395938910"
-    }
-   ],
-   "recorded_at": "2026-10-15T08:52:00Z",
-   "pending": [
-    "待补充：懂车帝「溯源取证」具体对象与立案进展——官方仅口头表态"
-   ]
-  },
-  "腾讯绿泡泡对战红果短剧": {
-   "summary": "微信上线「绿泡泡短剧」免费小程序（腾讯主体），对标字节红果；创作激励自 10 月 16 日起算带动讨论回升。10 月 15 日微博「绿泡泡下架余茵版乖乖女」一度 #31；X 上有观察称「绿泡泡」在部分平台为禁用词。属产品对垒与内容运营，非人事八卦。",
-   "credibility": "实锤",
-   "event_time": "2026-10-13～2026-10-14",
-   "sources": [
-    {
-     "label": "21经济网",
-     "url": "https://www.21jingji.com/article/20261013/herald/9f65eaeb88b0838b77401c49c13829bf.html"
-    },
-    {
-     "label": "微博热搜镜像",
-     "url": "https://soso.re/weibo"
-    },
-    {
-     "label": "X @_FORAB：绿泡泡多平台禁用词观察",
-     "url": "https://x.com/_FORAB/status/2110650149697708353"
-    }
-   ],
-   "recorded_at": "2026-10-15T08:52:00Z"
-  },
-  "早报扫描_无达标项": {
-   "summary": "早报扫描记录行：微博热搜镜像上与大厂相邻的条目多为产品官宣或营销（国行 iPhone 通义、京东双十一、美团医美榜、小米汽车保障、豆包使用吐槽等），未达到八卦简报警报门槛，仅作扫描日志，不是独立八卦事件。",
-   "credibility": "统计",
-   "event_time": "2026-10-15",
-   "sources": [
-    {
-     "label": "微博热搜镜像 soso.re",
-     "url": "https://soso.re/weibo"
-    }
-   ],
-   "recorded_at": "2026-10-15T00:54:00Z"
-  },
-  "Michael_Burry中概仓位": {
-   "summary": "市场追踪账号披露 Michael Burry 相关中概/中国资产仓位变动的讨论热帖。属美股中概侧市场八卦线索，非国内大厂人事内幕；具体持仓以原文披露为准，未独立核实交易细节。",
-   "credibility": "待核实",
-   "event_time": "2026-10-14",
-   "sources": [
-    {
-     "label": "X @burrytracker 代表帖",
-     "url": "https://x.com/burrytracker/status/2110368123291423113"
-    }
-   ],
-   "recorded_at": "2026-10-15T00:54:00Z",
-   "pending": [
-    "待补充：原始持仓披露文件交叉核验——仅见转发/追踪账号摘要"
-   ]
-  },
-  "传音控股港股上市": {
-   "summary": "传音控股（02636.HK）于2026-10-15在港交所主板挂牌，发行价35.30港元；开盘34.96（−0.96%），收盘33.28（−5.72%），成交约3.91亿港元。非洲/新兴市场手机出海标的，形成A+H。",
-   "credibility": "实锤",
-   "event_time": "2026-10-15",
-   "sources": [
-    {
-     "label": "澎湃：首日破发收跌5.72%",
-     "url": "https://www.thepaper.cn/newsDetail_forward_34256830"
-    },
-    {
-     "label": "etnet新股表现",
-     "url": "https://www.etnet.com.hk/www/tc/stocks/ipo-performance.php?category=recent&period=6"
-    }
-   ],
-   "recorded_at": "2026-10-15T13:05:00Z"
-  },
-  "传音控股港股IPO": {
-   "summary": "传音控股（Transsion）港股 IPO/暗盘相关讨论与行情跟踪。属资本市场上市动态，不是互联网大厂内部八卦；暗盘价格与开盘表现以券商/行情源为准。",
-   "credibility": "统计",
-   "event_time": "2026-10-14",
-   "sources": [
-    {
-     "label": "经济通 IPO 资料",
-     "url": "https://www.etnet.com.hk/www/tc/stocks/ipo-info.php?code=02636"
-    },
-    {
-     "label": "X 暗盘讨论代表帖",
-     "url": "https://x.com/dingdong_world/status/2110378409486619069"
-    }
-   ],
-   "recorded_at": "2026-10-15T00:54:00Z"
-  },
-  "金龙指数HXC_1014": {
-   "summary": "纳斯达克金龙中国指数（HXC）2026-10-14 行情记录行，用于美股中概简报热度对照。这是指数涨跌统计，不是单一公司八卦事件。",
-   "credibility": "统计",
-   "event_time": "2026-10-14",
-   "sources": [
-    {
-     "label": "Investing.com 金龙中国指数历史数据",
-     "url": "https://cn.investing.com/indices/nq-golden-dragon-china-historical-data"
-    }
-   ],
-   "recorded_at": "2026-10-15T00:54:00Z"
-  },
-  "茶百道停牌跟进": {
-   "summary": "茶百道（02555.HK）因IPO涉嫌人为操纵被证监会停牌后，10-14晚公司公告配合调查、业务正常、复牌另行通知；恒生指数公司宣布10-23起将其从相关指数剔除。",
-   "credibility": "实锤",
-   "event_time": "2026-10-14",
-   "sources": [
-    {
-     "label": "每经网",
-     "url": "https://www.nbd.com.cn/articles/2026-10-14/4604668.html"
-    },
-    {
-     "label": "证监会26PR168",
-     "url": "https://apps.sfc.hk/edistributionWeb/gateway/TC/news-and-announcements/news/doc?refNo=26PR168"
-    }
-   ],
-   "recorded_at": "2026-10-15T00:57:00Z"
-  },
-  "DeepSeek网页/API大面积中断": {
-   "summary": "2026-10-15 北京时间 08:11 起 DeepSeek 网页/App/API 大面积中断，官方状态页确认，13:04 宣布恢复（故障约 4 小时 52 分）。傍晚官方开放平台发布补偿通知：按账号近 7 日（10.8–10.14）API 消耗以赠金全额返还，自动到账、扣费优先吃赠金，并称将剥离单点依赖；根因仍未披露。微博「DeepSeek故障补偿」一度约 #9、晚报时约 #7（约 30.5 万）；财联社/凤凰网同步。11:52Z 快讯已警报。",
-   "credibility": "实锤",
-   "event_time": "2026-10-15",
-   "sources": [
-    {
-     "label": "凤凰网/财联社：补偿通知",
-     "url": "https://news.ifeng.com/c/8xFNuMcEhvB"
-    },
-    {
-     "label": "DeepSeek Status 事件页",
-     "url": "https://status.deepseek.com/incidents/7116348214287"
-    },
-    {
-     "label": "V2EX 通知原文",
-     "url": "https://www.v2ex.com/t/1249099"
-    },
-    {
-     "label": "微博热搜镜像",
-     "url": "https://soso.re/weibo"
-    }
-   ],
-   "recorded_at": "2026-10-15T12:58:00Z"
-  },
-  "月之暗面陈广宇离职": {
-   "summary": "17 岁 AI 研究员陈广宇（Nathan Chen）于 2026-10-15 在 X 宣布近日已离开月之暗面 Kimi 团队（2025-11 以约 16 岁加入）。本人感谢团队、未公布下一站。紫牛新闻/扬子晚报已报道。X 圈另有截图称其将赴 Anthropic，未经本人官宣，属传闻。他曾是《Attention Residuals》共同一作。",
-   "credibility": "实锤",
-   "event_time": "2026-10-15",
-   "sources": [
-    {
-     "label": "紫牛新闻/扬子晚报",
-     "url": "https://www.yangtse.com/news/txs/202610/t20261015_402791.html"
-    },
-    {
-     "label": "X @nathancgy4 本人",
-     "url": "https://x.com/nathancgy4/status/2110522061953327565"
-    },
-    {
-     "label": "X @0xLogicrw 转述",
-     "url": "https://x.com/0xLogicrw/status/2110575510728347889"
-    },
-    {
-     "label": "X @xiax0603 Anthropic 支线（传闻）",
-     "url": "https://x.com/xiax0603/status/2110666234064986582"
-    }
-   ],
-   "recorded_at": "2026-10-15T12:58:00Z"
-  },
-  "茶百道 IPO 操纵停牌": {
-   "summary": "香港证监会指茶百道（02555.HK）IPO或遭人为操纵并指令停牌；公司10-14公告称配合调查、复牌另行通知。恒生指数公司安排10-22将计算价调至0.0001港元并于收市后剔除相关指数，10-23起生效。",
-   "credibility": "实锤",
-   "event_time": "2026-10-13",
-   "sources": [
-    {
-     "label": "证监会26PR168",
-     "url": "https://apps.sfc.hk/edistributionWeb/gateway/TC/news-and-announcements/news/doc?refNo=26PR168"
-    },
-    {
-     "label": "每经网",
-     "url": "https://www.nbd.com.cn/articles/2026-10-14/4604668.html"
-    }
-   ],
-   "recorded_at": "2026-10-15T13:05:00Z"
-  },
-  "尊界V800刹车踏板·三部门联合调查": {
-   "summary": "2026-10-15 晚间，工信部、中央网信办、市场监管总局针对网络反映的尊界V800刹车踏板支架断裂问题成立联合调查组，称将依法依规处理并及时公布。尊界回应积极配合。事件源于10月8日懂车帝实测三台新车紧急制动中踏板支架断裂；此前尊界称用户场景未发生且将免费升级支架。",
-   "credibility": "实锤",
-   "event_time": "2026-10-15T13:42:00Z",
-   "sources": [
-    {
-     "label": "中国证券报转载工信微报",
-     "url": "https://www.cs.com.cn/xwzx/01/2026/10/15/detail_2026101510044905.html"
-    },
-    {
-     "label": "IT之家",
-     "url": "https://www.ithome.com/1/013/657.htm"
-    },
-    {
-     "label": "联合早报",
-     "url": "https://www.zaobao.com.sg/news/china/story20261015-9844572"
-    }
-   ],
-   "recorded_at": "2026-10-15T15:00:00Z",
-   "pending": [
-    "待补充：调查结论与处理结果——尚未公布"
-   ]
-  },
-  "三部门联合调查尊界刹车断裂": {
-   "summary": "2026-10-15 晚间，工信部、中央网信办、市场监管总局针对网络反映的尊界V800刹车踏板支架断裂问题成立联合调查组，称将依法依规处理并及时公布。尊界回应积极配合。事件源于10月8日懂车帝实测三台新车紧急制动中踏板支架断裂；此前尊界称用户场景未发生且将免费升级支架。",
-   "credibility": "实锤",
-   "event_time": "2026-10-15T13:42:00Z",
-   "sources": [
-    {
-     "label": "中国证券报转载工信微报",
-     "url": "https://www.cs.com.cn/xwzx/01/2026/10/15/detail_2026101510044905.html"
-    },
-    {
-     "label": "IT之家",
-     "url": "https://www.ithome.com/1/013/657.htm"
-    },
-    {
-     "label": "联合早报",
-     "url": "https://www.zaobao.com.sg/news/china/story20261015-9844572"
-    }
-   ],
-   "recorded_at": "2026-10-15T15:00:00Z",
-   "pending": [
-    "待补充：调查结论与处理结果——尚未公布"
-   ]
-  },
-  "尊界回应三部门联合调查": {
-   "summary": "尊界汽车在三部门宣布联合调查尊界V800刹车踏板支架断裂后发声，表示积极响应、完全服从并将全力配合联合调查组工作，同时强调维护消费者合法权益与新能源汽车产业发展大局。调查结论尚未公布。",
-   "credibility": "实锤",
-   "event_time": "2026-10-15T13:45:00Z",
-   "sources": [
-    {
-     "label": "中国证券报转载工信微报（调查通报）",
-     "url": "https://www.cs.com.cn/xwzx/01/2026/10/15/detail_2026101510044905.html"
-    },
-    {
-     "label": "X @WallStreetCN 尊界回应转述",
-     "url": "https://x.com/WallStreetCN/status/2110737494451147138"
-    },
-    {
-     "label": "微博热搜镜像",
-     "url": "https://soso.re/weibo"
-    }
-   ],
-   "recorded_at": "2026-10-15T15:00:00Z",
-   "pending": [
-    "待补充：尊界官方微博/声明原文直链——本期依据媒体与X转述"
-   ]
-  },
-  "美国禁用DeepSeek·商务部回应": {
-   "summary": "美国国土安全部10-19公开命令，要求联邦民用机构停止采购并从IT系统移除DeepSeek及其关联公司产品，基于DeepSeek开发的第三方产品也在移除范围。10-20商务部发言人表示强烈不满、坚决反对，敦促美方撤销歧视性措施，并称将采取一切必要措施。",
-   "credibility": "实锤",
-   "event_time": "2026-10-19",
-   "sources": [
-    {
-     "label": "商务部：发言人答记者问（10-20 21:17）",
-     "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_a0e310017a2f4d98aa035cb51be5049c.html"
-    },
-    {
-     "label": "AP News：China hits back at US ban of DeepSeek",
-     "url": "https://apnews.com/article/us-china-deepseek-ai-ban-2bffa5b0131808735280b2c0e6f0d856"
-    },
-    {
-     "label": "Bloomberg【付费】：US Moves to Bar China’s DeepSeek From Federal Agency Systems",
-     "url": "https://www.bloomberg.com/news/articles/2026-10-19/us-moves-to-bar-deepseek-from-federal-agencies-and-contracts"
-    },
-    {
-     "label": "X @sleepy0x13（2.08万浏览）",
-     "url": "https://x.com/sleepy0x13/status/2112173684177932615"
-    }
-   ],
-   "recorded_at": "2026-10-20T15:07:00Z"
-  },
-  "字节阿里腾讯抢购英伟达RTX PRO 5500": {
-   "summary": "路透10-20援引知情人士称，字节、阿里、腾讯合计向英伟达订购超300万张RTX PRO 5500工作站卡，标价合计超350亿美元；英伟达称无法保证交付，可能只满足5%–10%。三家公司未公开回应，属消息人士报道。",
-   "credibility": "传闻",
-   "event_time": "2026-10-20",
-   "sources": [
-    {
-     "label": "Reuters（经 US News 转载）：Exclusive-ByteDance, Alibaba, Tencent place over $35 billion worth of Nvidia chip orders",
-     "url": "https://money.usnews.com/investing/news/articles/2026-10-20/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-of-nvidia-chip-orders"
-    },
-    {
-     "label": "Euronext 转 Reuters 全文",
-     "url": "https://live.euronext.com/en/financial-news/exclusive-bytedance-alibaba-tencent-place-over-35-billion-worth-nvidia-chip-orders"
-    },
-    {
-     "label": "X @_FORAB（4.10万浏览）",
-     "url": "https://x.com/_FORAB/status/2112495864317125032"
-    }
-   ],
-   "recorded_at": "2026-10-20T15:07:00Z"
-  },
-  "王腾今日宜休·放我们一条生路": {
-   "summary": "前小米REDMI品牌总经理王腾（2025年因泄密被小米辞退）的创业公司今日宜休10-20官宣首款产品ISHO睡眠戒指，10-29北京发布会。被问前东家会否也做，他笑答“希望雷总放我们一条生路”，登上微博热搜#17。",
-   "credibility": "实锤",
-   "event_time": "2026-10-20",
-   "sources": [
-    {
-     "label": "凤凰网/快科技：王腾：希望雷总放我们一条生路",
-     "url": "https://feng.ifeng.com/c/8xNjn52XED7"
-    },
-    {
-     "label": "凤凰网：今日宜休官宣首款产品，10-29 发布会",
-     "url": "https://feng.ifeng.com/c/8xNtLcmo5BM"
-    },
-    {
-     "label": "微博热搜镜像（22:56）",
-     "url": "https://soso.re/weibo"
-    }
-   ],
-   "recorded_at": "2026-10-20T15:07:00Z"
-  },
-  "淘宝双11预售崩了": {
-   "summary": "10-20晚天猫双11预售开启后，大量用户反馈淘宝支付失败、优惠金额变化提示、优惠券状态异常，#淘宝崩了#上微博热搜。淘宝客服称大促活动火爆、建议稍后再试；官方故障原因未公布。",
-   "credibility": "实锤",
-   "event_time": "2026-10-20",
-   "sources": [
-    {
-     "label": "凤凰网（白鹿视频）：“淘宝崩了”冲上热搜，官方回应",
-     "url": "https://feng.ifeng.com/c/8xNtLcmo5Cb"
-    },
-    {
-     "label": "微博热搜镜像（22:56）",
-     "url": "https://soso.re/weibo"
-    }
-   ],
-   "recorded_at": "2026-10-20T15:07:00Z",
-   "pending": [
-    "待补充：说明——淘宝官方故障原因与恢复时间未公布"
-   ]
-  },
-  "DeepSeek开源DeepInfer": {
-   "summary": "DeepSeek 10-20 官宣全面开源内部推理框架 DeepInfer（Apache-2.0）及 deepseek-recipe 编解码组件，称其支撑 V4.1-Flash 线上服务，支持英伟达 SM100 与华为昇腾 950；开源版不含 KV cache、PD 分离和负载均衡。发布时间恰在美国 DHS 禁令公开次日。",
-   "credibility": "实锤",
-   "event_time": "2026-10-20",
-   "sources": [
-    {
-     "label": "IT之家",
-     "url": "https://www.ithome.com/1/015/429.htm"
-    },
-    {
-     "label": "GitHub：deepseek-ai/DeepInfer",
-     "url": "https://github.com/deepseek-ai/DeepInfer"
-    }
-   ],
-   "recorded_at": "2026-10-21T00:55:00Z"
-  },
-  "华为DeepSeek联合设计芯片": {
-   "summary": "The Information 10-19 援引知情人士称华为工程师长期驻扎 DeepSeek 办公室，把训练需求写进下一代昇腾芯片设计；DeepSeek 最快年底用 950DT 预训练，华为拟把 2027Q1 的 960DT 大部分供给 DeepSeek。两家未公开回应。",
-   "credibility": "传闻",
-   "event_time": "2026-10-19",
-   "sources": [
-    {
-     "label": "The Information【付费】",
-     "url": "https://www.theinformation.com/articles/deepseek-shaping-huaweis-ai-chips-growing-challenge-nvidia"
-    },
-    {
-     "label": "动察 Beating",
-     "url": "https://www.beating.news/flash/372713"
-    }
-   ],
-   "recorded_at": "2026-10-21T00:55:00Z"
-  },
-  "滴滴出海·巴西99Pop司机恐同言论": {
-   "summary": "巴西网友 @decofior 10-20 发帖称 99Pop 司机在行程中说“上帝会治好你的同性恋”，警告起诉后司机求饶，他已拉黑并举报；约2.17万浏览，单一当事人说法，99 未回应。",
-   "credibility": "传闻",
-   "event_time": "2026-10-20",
-   "sources": [
-    {
-     "label": "X @decofior",
-     "url": "https://x.com/decofior/status/2112656474782757225"
-    }
-   ],
-   "recorded_at": "2026-10-21T00:55:00Z"
-  },
-  "小鹏汇天交付阿联酋": {
-   "summary": "10 月 20 日，阿联酋拉斯海玛酋长率团参观小鹏汇天广州飞行汽车量产工厂，现场接收首架将投入阿联酋先进低空飞行监管示范区的「陆地航母」X3-F 试验机，后续在阿联酋民航局监管下沙盒试运行。当晚小鹏美股收涨 7.60%，智通财经把涨幅归因于这条消息。X 上相关帖 10-20 全天约 77 条。",
-   "credibility": "实锤",
-   "event_time": "2026-10-20",
-   "sources": [
-    {
-     "label": "智通财经：小鹏涨7% 汇天X3-F交付阿联酋",
-     "url": "https://www.zhitongcaijing.com/content/detail/1509805.html"
-    },
-    {
-     "label": "X @globaltimesnews",
-     "url": "https://x.com/globaltimesnews/status/2112562885687971915"
-    }
-   ],
-   "recorded_at": "2026-10-21T01:35:00Z"
-  },
-  "Temu得州和解": {
-   "summary": "得州检察长 10 月 16 日宣布与 Temu 和解：Temu 付 300 万美元，得州用户数据存美国服务器、限制中国访问，商品每年独立安全检测；Temu 否认全部指控。10 月 20 日 JDSupra 指出新闻稿里「每年违规罚 800 万美元」等措辞判决书里没有，罚款实际按年度审计不合格触发。",
-   "credibility": "实锤",
-   "event_time": "2026-10-16",
-   "sources": [
-    {
-     "label": "得州检察长新闻稿",
-     "url": "https://www.texasattorneygeneral.gov/news/releases/attorney-general-paxton-secures-first-its-kind-settlement-temu-protect-texans-data-ccp-and-protect"
-    },
-    {
-     "label": "JDSupra",
-     "url": "https://www.jdsupra.com/legalnews/texas-temu-judgment-limits-china-based-1349491/"
-    }
-   ],
-   "recorded_at": "2026-10-21T01:35:00Z"
-  },
-  "TikTok误封马斯克纪录片": {
-   "summary": "TikTok 10 月 17 日被曝以政治内容违规为由永久封禁纪录片《Musk》发行方的广告账号，片中有 TikTok 美国股东埃里森愿资助马斯克收购推特的片段。随后 TikTok 称是误封，The Verge 报道账号已恢复。",
-   "credibility": "实锤",
-   "event_time": "2026-10-17",
-   "sources": [
-    {
-     "label": "The Verge",
-     "url": "https://www.theverge.com/tech/1013527/the-musk-documentarys-tiktok-account-has-been-restored-after-an-error"
-    },
-    {
-     "label": "X @filmstories",
-     "url": "https://x.com/filmstories/status/2112086353387110844"
-    }
-   ],
-   "recorded_at": "2026-10-21T01:35:00Z"
-  },
-  "拟出台的中国AI禁令": {
-   "summary": "微博热搜「拟出台的中国AI禁令震动全球」10-21 上午排#1（约119.7万），对应的是10-16商务部、科技部就修订《中国禁止出口限制出口技术目录》公开征求意见：拟增列AI、生物医药、光伏共40项技术（14项禁止、26项限制），其中AI涉及大模型、智能体、算力集群等23项，已开源或公开发表的技术不纳入。征求意见截至11-15，仍是拟议措施，不是已生效的禁令，也不是新的公司八卦。",
-   "credibility": "官方",
-   "event_time": "2026-10-16",
-   "sources": [
-    {
-     "label": "商务部 科技部公告2026年第48号",
-     "url": "https://www.mofcom.gov.cn/zfxxgk/gkml/art/2026/art_ccd0391072a94c809ae7e820abe2536b.html"
-    },
-    {
-     "label": "RTHK：China mulls curbs on AI exports",
-     "url": "https://news.rthk.hk/rthk/en/component/k2/1874239-20261016.htm"
-    },
-    {
-     "label": "微博热搜镜像（11:16）",
-     "url": "https://soso.re/weibo"
-    }
-   ],
-   "recorded_at": "2026-10-21T03:24:00Z"
-  },
-  "汽车之家回应韩路": {
-   "summary": "车评人、汽车之家前总编韩路10-19深夜发视频，指控汽车之家两年多前未经他同意以「韩路游记」名义向车企卖出约400万–600万元内容合作，再以约200万–230万元外包，他本人只拿到约20万元。10-21上午汽车之家回应称已启动内部专项核查，希望与韩路沟通、消除误解，微博热搜#33（约24.3万）。金额是韩路单方说法，合同细节未核实。",
-   "credibility": "实锤",
-   "event_time": "2026-10-19～10-21",
-   "sources": [
-    {
-     "label": "凤凰网：汽车之家回应韩路控诉",
-     "url": "https://tech.ifeng.com/c/8xOjbRMKUO4"
-    },
-    {
-     "label": "汤姆出行：韩路深夜开撕前东家",
-     "url": "https://www.tomautos.cn/article/6ad73a728e9f0913443e8de9/"
-    },
-    {
-     "label": "X @AFARUNM",
-     "url": "https://x.com/AFARUNM/status/2112497380457349627"
-    }
-   ],
-   "recorded_at": "2026-10-21T03:24:00Z"
-  },
-  "第一次见豆包发脾气": {
-   "summary": "10 月 21 日中午回到微博热搜第 32 位（约 28.9 万）的话题。内容是网友晒出把字节旗下 AI 助手豆包聊到语气变凶的对话截图并互相调侃，新浪 10 月 16 日已有同题材报道。这是一个娱乐梗，没有公司事件，也没有字节官方回应。",
-   "credibility": "待核实",
-   "event_time": "2026-10-16",
-   "sources": [
-    {
-     "label": "新浪：第一次见 AI 这么凶，网友非要它为胡萝卜背锅",
-     "url": "https://www.sina.cn/news/detail/5354786283062265.html"
-    },
-    {
-     "label": "微博热搜镜像",
-     "url": "https://soso.re/weibo"
-    }
-   ],
-   "recorded_at": "2026-10-21T05:20:00Z"
-  },
-  "问界神木碰撞起火·官方回应": {
-   "summary": "10月17日深夜，陕西榆林神木一路口一辆问界（网传为M9）撞上方形交通灯立柱后车头起火，监控视频在网上流传。10月21日问界用户服务发布说明，称事发时为人工驾驶、路口车速139.1km/h（限速50km/h），初步判断为高速撞击致机舱线路短路及油液泄漏起火，并称「电池爆燃」「智驾撞击」为不实信息，详细结论以官方调查为准。说明未披露车型和伤亡，也未回应网传闯红灯。该话题于16:15登上微博热搜第一（约288万）。",
-   "credibility": "实锤",
-   "event_time": "2026-10-17 23:25（事故）/ 2026-10-21（问界发布说明）",
-   "sources": [
-    {
-     "label": "观察者网/新浪财经：问界回应神木碰撞起火",
-     "url": "https://finance.sina.com.cn/roll/2026-10-21/doc-inivynsm5449872.shtml"
-    },
-    {
-     "label": "界面新闻/东方财富：事发时处于人驾状态",
-     "url": "https://finance.eastmoney.com/news/1354,202610213902592632.html"
-    },
-    {
-     "label": "凤凰网：问界回应车辆起火事件",
-     "url": "https://original.ifeng.com/c/8xP9BNVa7iZ"
-    },
-    {
-     "label": "微博热搜镜像",
-     "url": "https://soso.re/weibo"
-    }
-   ],
-   "recorded_at": "2026-10-21T08:25:00Z"
-  },
-  "问界海外版改用博世": {
-   "summary": "36氪独家称问界海外版M6、M7、M8、M9将采用「BOSCH Inside」模式，由博世提供高阶辅助驾驶、智能座舱和底盘全套方案，高速NOA拟2027年9月量产，并称华为已把问界海外车型主导权交给车企。36氪称向赛力斯求证时对方回应「不实」，博世未置评。10月21日在问界起火话题带动下，X讨论小幅上升。",
-   "credibility": "传闻",
-   "event_time": "2026-10-20",
-   "sources": [
-    {
-     "label": "36氪独家：问界计划采用博世inside方案",
-     "url": "https://www.36kr.com/p/4034025645560963"
-    },
-    {
-     "label": "钛媒体：曝问界海外车型弃用华为智驾",
-     "url": "https://www.tmtpost.com/nictation/8176015.html"
-    }
-   ],
-   "recorded_at": "2026-10-21T08:25:00Z"
-  },
-  "抖音电商诉京东采销左琦": {
-   "summary": "抖音电商以名誉权纠纷起诉京东采销经理左琦（618前朋友圈称某平台让商家媒体黑京东换流量），北京海淀法院已立案。10-16 抖音称将追加起诉，京东发言人称支持员工反诉并举报；10-19 抖音点名网经社以「20万元/份」售卖攻击稿，网经社随后发辟谣声明否认。",
-   "credibility": "实锤",
-   "event_time": "2026-10-15",
-   "sources": [
-    {
-     "label": "上证报·中国证券网：京东声明支持员工反诉",
-     "url": "https://news.10jqka.com.cn/20261016/c680796946.shtml"
-    },
-    {
-     "label": "正义网：抖音关于网经社的情况说明",
-     "url": "https://www.jcrb.com/sidebar/services/multimedia/zx/jczx/202610/t20261019_1034898.html"
-    },
-    {
-     "label": "投资时间网/新浪财经：网经社回应",
-     "url": "https://t.cj.sina.com.cn/articles/view/3815062128/e3653a7000101pwby?finpagefr=p_103"
-    }
-   ],
-   "recorded_at": "2026-10-21T08:26:00Z"
-  },
-  "姚顺雨把DeepSeek卷到加班": {
-   "summary": "晚点 LatePost 10-20 报道：腾讯首席 AI 科学家姚顺雨接手混元一年，团队扩到近 2000 人；据一位混元成员回忆，他在内部说过（大意）“不能像 DeepSeek 那样不加班，但可以把 DeepSeek 卷到加班”。腾讯和姚顺雨本人未公开回应，属媒体转述员工说法。",
-   "credibility": "传闻",
-   "event_time": "2026-10-20",
-   "sources": [
-    {
-     "label": "21经济网：把DeepSeek“卷”到加班，姚顺雨想把混元模型做成世界第一",
-     "url": "https://www.21jingji.com/article/20261021/herald/38aade432f7c456e7d66ef1d57946633.html"
-    },
-    {
-     "label": "格隆汇：转述晚点报道",
-     "url": "https://www.gelonghui.com/live/2719770"
-    }
-   ],
-   "recorded_at": "2026-10-22T01:00:00Z"
-  },
-  "Keeta诉99Food违抗禁令": {
-   "summary": "美团海外外卖品牌 Keeta 10-16 向巴西圣保罗州法院申诉，指滴滴旗下 99Food 违抗 9-29 判决，用“最多再选 1 家平台”的新条款变相封杀 Keeta，已发现 45 个以上案例。99Food 回应称新条款符合法院裁决、判决仍可上诉。O Globo、Estadão/UOL 10-21 报道。",
-   "credibility": "实锤",
-   "event_time": "2026-10-21",
-   "sources": [
-    {
-     "label": "O Globo（Lauro Jardim 专栏，葡语）",
-     "url": "https://oglobo.globo.com/blogs/lauro-jardim/post/2026/10/keeta-aciona-tj-sp-contra-99food-por-descumprimento-de-ordem-que-derrubou-clausula-de-banimento.ghtml"
-    },
-    {
-     "label": "UOL/Estadão（葡语）",
-     "url": "https://economia.uol.com.br/noticias/estadao-conteudo/2026/10/21/keeta-acusa-99food-de-descumprir-ordem-da-justica-de-sp-e-99-fala-em-evolucao-dos-contratos.htm"
-    }
-   ],
-   "recorded_at": "2026-10-22T01:00:00Z"
-  },
-  "小米成立独立汽车安全研究中心": {
-   "summary": "雷军 10-21 在世界智能网联汽车大会上说，小米内部成立了汽车安全研究中心和独立研发机构，独立调查端到端问题，并设全域安全部、汽车安全顾问委员会，安全相关团队超 3000 人。10-22 早上微博热搜 #41。",
-   "credibility": "官方",
-   "event_time": "2026-10-21",
-   "sources": [
-    {
-     "label": "北京商报（东方财富转载）：小米汽车雷军：安全高于一切",
-     "url": "https://wap.eastmoney.com/a/202610213902943510.html"
-    }
-   ],
-   "recorded_at": "2026-10-22T01:00:00Z"
-  },
-  "DeepSeek完成千亿融资": {
-   "summary": "彭博 10 月 22 日（北京时间 10:17）援引知情人士报道，DeepSeek 新一轮融资已筹得约 1000 亿元人民币（约 150 亿美元），是中国规模最大的融资之一。融资目标在洽谈中至少两次上调，从 500 亿元到 800 亿元，最终约 1000 亿元，宁德时代和腾讯是最大出资方之一。10 月 6 日彭博、路透曾报「接近完成至少 800 亿元」，这次是完成口径；DeepSeek、腾讯、宁德时代均未回应置评。",
-   "credibility": "传闻",
-   "event_time": "2026-10-22",
-   "sources": [
-    {
-     "label": "彭博【付费】：DeepSeek Raises $15 Billion in Challenge to Leading US Labs",
-     "url": "https://www.bloomberg.com/news/articles/2026-10-22/deepseek-raises-15-billion-in-challenge-to-leading-us-labs"
-    },
-    {
-     "label": "凤凰网：消息称DeepSeek已融资1000亿元",
-     "url": "https://original.ifeng.com/c/8xQSeOBHHiq"
-    },
-    {
-     "label": "IT之家：DeepSeek 最新一轮融资筹集近千亿元",
-     "url": "https://www.ithome.com/1/016/263.htm"
-    }
-   ],
-   "recorded_at": "2026-10-22T03:25:00Z"
-  },
-  "盘石创始人田宁被采取刑事强制措施": {
-   "summary": "杭州市公安局拱墅区分局 10 月 22 日通报，已对浙江盘石信息技术股份有限公司及其关联公司涉嫌合同诈骗立案侦查，并对田某（男，49 岁）等相关人员采取刑事强制措施，正在追赃挽损。财闻 10 月 21 日独家报道，盘石集团实控人田宁自 7 月中旬起失联，总部出入口被贴「整改」封条。盘石以互联网广告起家，曾与阿里妈妈、百度联盟并称「网站联盟三巨头」，10 月 22 日中午微博热搜 #42。",
-   "credibility": "官方",
-   "event_time": "2026-10-22",
-   "sources": [
-    {
-     "label": "第一财经：杭州警方通报盘石及关联公司涉嫌合同诈骗已立案",
-     "url": "https://www.yicai.com/brief/103403842.html"
-    },
-    {
-     "label": "网易/环球网：杭州警方对田某等人采取刑事强制措施",
-     "url": "https://www.163.com/dy/article/L9RFB0JN0514R9OJ.html"
-    },
-    {
-     "label": "财闻独家：盘石集团实控人田宁失联",
-     "url": "https://www.caiwennews.com/article/1661660.shtml"
-    }
-   ],
-   "recorded_at": "2026-10-22T05:30:00Z"
-  },
-  "港股科技重挫·MiniMax首次破发": {
-   "summary": "10 月 22 日港股午间恒生指数跌 2.87% 失守 23000 点，恒生科技指数跌 4.64% 至 3809.5 点，创 2024 年 9 月以来新低。MiniMax（00100）盘中最大跌 7.33%，今年 1 月上市以来首次跌破 165 港元发行价，智谱跌超 7%，阿里、网易、联想跌 6%–8%。媒体归因于隔夜中概走弱、美国禁用 DeepSeek 的政策折价和 AI 板块获利回吐，相关公司未回应。",
-   "credibility": "实锤",
-   "event_time": "2026-10-22",
-   "sources": [
-    {
-     "label": "新浪财经：港股午评 恒指跌2.87% 科指跌4.64%",
-     "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-10-22/doc-iniwamip5185638.shtml"
-    },
-    {
-     "label": "凤凰网：港股大模型板块走低，MiniMax盘中跌超7%破发",
-     "url": "https://finance.ifeng.com/c/8xQVi3kjUk1"
-    },
-    {
-     "label": "金融界：恒生科技跌穿3900点，MiniMax盘中破发",
-     "url": "https://stock.jrj.com.cn/2026/10/22103858817744.shtml"
-    }
-   ],
-   "recorded_at": "2026-10-22T05:30:00Z"
-  },
-  "微信回应iPhone Duo不适配": {
-   "summary": "10 月 22 日「iPhoneDuo微信不适配」「微信回应iPhoneDuo不适配」同时登上微博热搜（#25 约 33 万、#27 约 32 万）。腾讯客服称目前微信还没有针对苹果折叠屏 iPhone Duo 提供适配支持，需关注后续版本更新；此前评测指出 iPhone Duo 上的微信不能用平板模式、不能双开。这是产品适配问题，属客服层面回应，不是八卦。",
-   "credibility": "实锤",
-   "event_time": "2026-10-22",
-   "sources": [
-    {
-     "label": "21经济网：腾讯客服称微信未针对iPhone Duo适配",
-     "url": "https://www.21jingji.com/article/20261022/herald/b7fd8f660d0acf5bf0efd7a486efb43d.html"
-    },
-    {
-     "label": "新京报：iPhoneDuo 微信不适配？微信回应",
-     "url": "https://www.bjnews.com.cn/detail/1792651723129834.html"
-    },
-    {
-     "label": "凤凰网：腾讯客服回应",
-     "url": "https://feng.ifeng.com/c/8xQnVXGe7rx"
-    }
-   ],
-   "recorded_at": "2026-10-22T08:25:00Z"
-  },
-  "Kimi K3.1·Qwen 4 Arena暗测": {
-   "summary": "10-22 起 Arena 盲测平台出现匿名模型 Kibitz 和 Kalmia，网友据分词器特征推测分别是月之暗面未发布的 Kimi K3.1 和阿里通义千问 Qwen 4，海外资讯站转述“本周有望发布”。两家公司均未确认身份和发布时间。",
-   "credibility": "传闻",
-   "event_time": "2026-10-22",
-   "sources": [
-    {
-     "label": "X @notjazii：kibitz=Kimi K3.1、kalmia=Qwen 4",
-     "url": "https://x.com/notjazii/status/2113228071377793484"
-    },
-    {
-     "label": "KuCoin 快讯：Kimi K3.1 与 Qwen4 预计本周发布",
-     "url": "https://www.kucoin.com/news/flash/kimi-k3-1-and-qwen4-expected-to-launch-this-week"
-    }
-   ],
-   "recorded_at": "2026-10-23T01:00:00Z"
-  },
-  "宁德时代董秘被打传闻": {
-   "summary": "10-22 网传宁德时代董秘在景顺长城路演时被打，当晚第一财经援引知情人士称消息不实、董秘并未出席该场路演。公司与基金公司均未公开发声。",
-   "credibility": "传闻",
-   "event_time": "2026-10-22",
-   "sources": [
-    {
-     "label": "第一财经：宁德时代董秘被打？知情人士回应",
-     "url": "https://www.yicai.com/news/103404997.html"
-    }
-   ],
-   "recorded_at": "2026-10-23T01:00:00Z"
-  },
-  "微信适配iPhoneDuo版本": {
-   "summary": "苹果 iPhone Duo 10月23日发售当天，微信发布 iOS 8.0.80，初步适配内屏左右分栏，设置页按钮换成液态玻璃风格。外屏和内屏仍有黑边，不支持单应用多窗口和图片拖拽。腾讯客服称当前为初步适配，后续持续优化。此前因影视飓风等测评发现微信不适配曾上热搜。",
-   "credibility": "官方",
-   "event_time": "2026-10-23",
-   "sources": [
-    {
-     "label": "IT之家",
-     "url": "https://www.ithome.com/1/016/859.htm"
-    },
-    {
-     "label": "虎嗅",
-     "url": "https://www.huxiu.com/moment/1290709.html"
-    },
-    {
-     "label": "微信更新日志",
-     "url": "https://weixin.qq.com/updates"
-    }
-   ],
-   "recorded_at": "2026-10-23T08:25:00Z",
-   "pending": ""
-  },
-  "何刚升任华为董事": {
-   "summary": "华为官网10月23日更新管理层名单，终端BG CEO何刚由候补董事转为公司董事，继续担任终端BG CEO。华为未就此单独发布公告。何刚1998年加入华为，2024年4月接替余承东任终端BG CEO。",
-   "credibility": "官方",
-   "event_time": "2026-10-23",
-   "sources": [
-    {
-     "label": "观察者网",
-     "url": "https://www.guancha.cn/CaiJing/2026_10_23_905510.shtml"
-    },
-    {
-     "label": "凤凰网科技",
-     "url": "https://tech.ifeng.com/c/8xSAftzwZus"
-    }
-   ],
-   "recorded_at": "2026-10-23T08:25:00Z",
-   "pending": ""
   }
- }
 }

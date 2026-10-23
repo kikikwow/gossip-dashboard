@@ -1,0 +1,201 @@
+{
+  "type": "adr",
+  "title": "美股中概 & 出海简报｜2026-10-23 晚间补充",
+  "timestamp": "2026-10-23T15:10:00Z",
+  "edition_date": "2026-10-23",
+  "slot": "14Z",
+  "lede": "美军嘉手纳基地 10-26 起禁止比亚迪车辆进入，路透日文首帖约 23.8 万浏览，是今天 X 上最热的中国公司新闻，前几期都漏了，这期补上；路透独家：SHEIN 将付 1 亿美元和解 FTC 调查；中概盘前分化，阿里、网易跌超 2%；DeepSeek 据 WSJ 加速筹备上海上市。",
+  "alert_note": "每日总结附带的晚间补充，不单独警报",
+  "alert_worthy": false,
+  "top3": [
+    "美军嘉手纳禁比亚迪",
+    "SHEIN 1亿美元和解FTC",
+    "中概盘前分化"
+  ],
+  "focus": {
+    "滴滴": "香港考牌支援（官方）；墨西哥SLP登记（西语）",
+    "字节": "无出海新动态",
+    "中国大模型": "DeepSeek据WSJ融资150亿美元并加速筹备上海上市"
+  },
+  "short_term_notes": "新加入 美军嘉手纳禁比亚迪",
+  "overseas_local_lang": [
+    "20261023-adr14z-didislp"
+  ],
+  "window": "2026-10-23T08:20Z → 2026-10-23T15:00Z",
+  "markdown_file": "2026-10-23_adr_14Z_digest.md",
+  "sections": [
+    {
+      "title": "⭐ 今日 Top 3",
+      "color": "#dc2626",
+      "items": [
+        {
+          "id": "20261023-adr14z-byd",
+          "company": "比亚迪（出海·监管）",
+          "tag": "实锤",
+          "source_types": [
+            "通讯社/媒体",
+            "X(日语)"
+          ],
+          "date": "10-23",
+          "text": "美军嘉手纳空军基地（日本冲绳）10-26 起禁止比亚迪车辆进入，私家车、承包商车辆、出租车和配送车都不例外。理由是车载摄像头和传感器可能收集基地内的机密信息。第18联队发言人向路透证实了这项禁令，比亚迪没有回应。今年6月，美国已把比亚迪、阿里、百度、蔚来列入「中国军事企业」清单，阿里为此起诉。这条新闻在日本 X 上最热：@ReutersJapan 首帖约 23.8 万浏览、6195 赞；相关帖 05Z 峰值每小时 1082，晚间 14Z 仍有 354。今天前几期简报都漏了这条，这期补上。",
+          "links": [
+            {
+              "label": "中央社（10-23 20:57）",
+              "url": "https://www.cna.com.tw/news/aopl/202610230253.aspx"
+            },
+            {
+              "label": "联合早报（10-23 21:49）",
+              "url": "https://www.zaobao.com.sg/news/world/story20261023-9885838"
+            },
+            {
+              "label": "路透（Yahoo日本转载，日语）",
+              "url": "https://news.yahoo.co.jp/articles/fa0e54a838b5796cca8c7636bc4694ca7d66506c"
+            },
+            {
+              "label": "X @ReutersJapan（日语，约23.8万浏览）",
+              "url": "https://x.com/ReutersJapan/status/2113450570908418110"
+            },
+            {
+              "label": "X @VOAChinese（约7182浏览）",
+              "url": "https://x.com/VOAChinese/status/2113591236296867861"
+            }
+          ],
+          "event_time": "2026-10-23（禁令 10-26 生效）",
+          "lang": "ja",
+          "translation_zh": "@ReutersJapan：美军将禁止比亚迪车辆进入嘉手纳基地——韩联社",
+          "original": "米軍、嘉手納基地でＢＹＤ車乗り入れ禁止へ＝聯合ニュース",
+          "pending": []
+        },
+        {
+          "id": "20261023-adr14z-shein",
+          "company": "SHEIN（出海·监管）",
+          "tag": "传闻",
+          "source_types": [
+            "路透独家",
+            "X"
+          ],
+          "date": "10-23",
+          "text": "路透援引知情人士独家报道：SHEIN 将支付 1 亿美元，和解美国 FTC 针对发货延误和投诉处理的调查，这笔钱约等于其二季度利润的 44%。SHEIN 回应称已与 FTC「达成建设性结果」，没有确认金额；FTC 拒绝置评。SHEIN 港股较 9-1 上市发行价已跌约 22%。杰富瑞数据显示，9 月它在 10 个市场的 App 下载量同比降 42%。欧盟和法国的调查还没结束。X 上 @DeItaone 快讯约 7.4 万浏览，相关帖 13Z/14Z 每小时 14/20。",
+          "links": [
+            {
+              "label": "海峡时报/路透（10-23 22:39）",
+              "url": "https://www.straitstimes.com/business/fast-fashion-group-shein-agrees-to-pay-us100m-to-settle-us-ftc-probe"
+            },
+            {
+              "label": "StreetInsider/路透",
+              "url": "https://www.streetinsider.com/Reuters/Exclusive-Fast-fashion+group+Shein+agrees+to+pay+%24100+million+to+settle+US+FTC+probe/27226010.html"
+            },
+            {
+              "label": "X @DeItaone（英语，约7.4万浏览）",
+              "url": "https://x.com/DeItaone/status/2113629371604836378"
+            }
+          ],
+          "event_time": "2026-10-23 晚（北京时间）",
+          "lang": "en",
+          "translation_zh": "知情人士称：中国快时尚平台 SHEIN 将支付 1 亿美元和解美国 FTC 调查；SHEIN 称已与美国 FTC 达成「建设性结果」。",
+          "original": "CHINESE FAST FASHION PLATFORM SHEIN TO PAY $100 MILLION IN US FTC PROBE SETTLEMENT, SOURCE SAYS\n\nSHEIN SAYS IT HAS REACHED 'CONSTRUCTIVE OUTCOME' WITH UNITED STATES FTC",
+          "pending": []
+        },
+        {
+          "id": "20261023-adr14z-premarket",
+          "company": "中概股（美股盘前）",
+          "tag": "统计",
+          "source_types": [
+            "财经快讯"
+          ],
+          "date": "10-23",
+          "text": "10-23 美股盘前（北京 20:50 前后）：阿里、网易跌超 2%，百度 −0.76%，京东 −0.58%，拼多多 −0.06%；小鹏涨超 3%，蔚来涨超 1%，B站 +0.82%，理想 +0.61%。前一交易日收盘已在早报报过（纳斯达克中国金龙指数 −1.19%）。21:30 开盘后的个股数据没找到可核实的来源，留到明早早报。",
+          "links": [
+            {
+              "label": "陀螺财经快讯（10-23 20:50）",
+              "url": "https://www.tuoluo.cn/kuaixun/detail-413093.html"
+            },
+            {
+              "label": "新浪财经（前一交易日收盘）",
+              "url": "https://finance.sina.com.cn/stock/usstock/c/2026-10-23/doc-iniwcxma4893028.shtml"
+            }
+          ],
+          "event_time": "2026-10-23 美股盘前",
+          "pending": [
+            "待补充：21:30 开盘后中概个股数据——未找到可核实来源"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🎯 重点追踪",
+      "color": "#7c3aed",
+      "items": [
+        {
+          "id": "20261023-adr14z-deepseek",
+          "company": "DeepSeek",
+          "tag": "传闻",
+          "source_types": [
+            "媒体（转述WSJ）",
+            "X"
+          ],
+          "date": "10-23",
+          "text": "TechNode 转述《华尔街日报》10-22 报道：DeepSeek 这轮融资约 150 亿美元，接近最初目标的两倍，公司还在加快准备，最早明年初可能在上海上市。DeepSeek 没有回应。X 融资话题 08Z–14Z 每小时 29/33/34/41/41/37/49 帖，比早间的 20–25 回升。",
+          "links": [
+            {
+              "label": "TechNode（英语，10-23）",
+              "url": "https://technode.com/2026/10/23/deepseek-reportedly-raises-15-billion-ahead-of-potential-shanghai-ipo/"
+            }
+          ],
+          "event_time": "2026-10-22（WSJ）/ 10-23 转载",
+          "lang": "en",
+          "translation_zh": "据报道 DeepSeek 融资 150 亿美元，或将在上海 IPO",
+          "original": "DeepSeek reportedly raises $15 billion ahead of potential Shanghai IPO",
+          "pending": []
+        },
+        {
+          "id": "20261023-adr14z-didihk",
+          "company": "滴滴（香港）",
+          "tag": "官方",
+          "source_types": [
+            "香港媒体"
+          ],
+          "date": "10-23",
+          "text": "香港网约车牌照制度快要落地，滴滴联合汽车交通运输业总工会、李健驾驶学校等 8 家培训机构帮司机考牌：课程费最多减 500 多港元；专班费用全包，已办 2 期，还计划再办 10 期，覆盖 200 多名司机；免费模拟考试工具已有约 50% 的活跃司机用过。滴滴称近 3 个月新注册的出租车司机增长超 35%。牌照申请 10-30 截止。",
+          "links": [
+            {
+              "label": "东网 on.cc（10-23 16:28）",
+              "url": "https://hk.on.cc/hk/bkn/cnt/finance/20261023/bkn-20261023162817998-1023_00842_001.html"
+            },
+            {
+              "label": "3hk（10-23 19:18）",
+              "url": "http://www.3hk.com.cn/blog/view/161822.html"
+            }
+          ],
+          "event_time": "2026-10-23",
+          "pending": []
+        },
+        {
+          "id": "20261023-adr14z-didislp",
+          "company": "滴滴出海（墨西哥·圣路易斯波托西）",
+          "tag": "官方",
+          "source_types": [
+            "当地媒体(西班牙语)"
+          ],
+          "date": "10-23",
+          "text": "🇲🇽 墨西哥圣路易斯波托西州｜西班牙语：州交通部门（SCT）负责人 Araceli Martínez Acosta 说，Uber 和 Didi 正按第 71 BIS 条登记为网约车企业。Uber 已交授权费，但车辆和司机还没登记完；Didi 正在登记司机。inDrive 不要求第三者险，离合规还远。她提醒市民别用没登记的平台，司机可以个人申请临时许可。当地媒体此前报道，上周已扣押 20 辆网约车（El Expres 10-21）。",
+          "links": [
+            {
+              "label": "Pulso SLP（西语，10-23）：Uber y Didi se darían de alta ante la SCT",
+              "url": "https://pulsoslp.com.mx/slp/uber-y-didi-se-darian-de-alta-ante-la-sct/2098950"
+            },
+            {
+              "label": "El Expres（西语，10-21）",
+              "url": "https://www.expres.com.mx/nota.php?story_id=373476"
+            }
+          ],
+          "event_time": "2026-10-23（当地时间）",
+          "lang": "es",
+          "translation_zh": "她介绍说，Uber 已经付清授权费，但还没有给提供服务的车辆和司机办登记；Didi 则正在为旗下司机办理登记。",
+          "original": "Describió que Uber ya cubrió el pago de autorización, sin embargo, todavía tiene pendiente dar de alta los vehículos y choferes que brindan el servicio. A su vez, Didi se encuentra en proceso de registrar a sus operadores.",
+          "pending": []
+        }
+      ]
+    }
+  ]
+}
