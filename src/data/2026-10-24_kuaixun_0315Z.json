@@ -1,0 +1,144 @@
+{
+ "routine": "大厂八卦热点快讯（含滴滴）",
+ "type": "alert",
+ "title": "大厂八卦热点快讯（含滴滴）",
+ "timestamp": "2026-10-24T03:15:00Z",
+ "edition_date": "2026-10-24",
+ "edition_id": "kuaixun_0315Z",
+ "fired_at_utc": "2026-10-24T03:15:00Z",
+ "scanned_at_utc": "2026-10-24T03:20:00Z",
+ "beijing_time": "2026-10-24 11:15–11:20 CST",
+ "window": "2026-10-24T01:00Z–03:20Z（北京 09:00–11:20，接今早 9:00 早报 bigtech_01Z / adr_01Z）",
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无突发且快速扩散的新爆点；短期4项均无未在早报报过的重大新进展（Kimi正式发布/创作者披露争议已早报Top；问界仅澎湃删文余波、X个位数到十余帖；DeepSeek仍无官方确认融资；比亚迪嘉手纳无扩大禁令范围且公司未回应）。电商互撕固定线无新声明。滴滴繁简≈18.24万无回应，出海仅墨西哥低优先级西语线索。微博前50无新增大厂八卦条目。",
+ "lede": "快讯窗北京09:00–11:20。信源：X公开检索与计数、微博热搜镜像soso.re（11:13）、RSS新匹配6条；小红书 since 09:00 无新条目（早报窗口阿里裁员撞词低互动不相关）；公众号因微信读书登录过期（auth_expired）缺失。本期无警报。",
+ "items": [],
+ "top3": [],
+ "sections": [],
+ "tracked_updates": [
+  {
+   "topic": "Kimi K3.1 Pro 正式发布",
+   "status": "追踪中·热度仍高但较峰值回落",
+   "heat": "X 01Z/02Z/03Z=766/690/719；官帖 @Kimi_Moonshot 浏览约204万（早报约174万）；创作者推广披露争议中文转述 @0xLogicrw≈5293，月之暗面仍未回应；早报已报正式发布与披露争议，本期不重复警报"
+  },
+  {
+   "topic": "问界神木碰撞起火·官方回应",
+   "status": "追踪中·降温",
+   "heat": "X 01Z/02Z/03Z=5/11/4 📉；@wangjupaian 称澎湃《三问问界》公众号文自10-23起显示已删、搜狐汽车禁言续（≈9741浏览）——舆论管控余波，交警结论/问界补充通报仍未出；微博前50无问界"
+  },
+  {
+   "topic": "DeepSeek完成千亿融资",
+   "status": "追踪中",
+   "heat": "X 01Z/02Z/03Z=20/11/23 ➡️；仍为彭博/路透旧稿余波转述，公司未正式确认；无新出资方名单"
+  },
+  {
+   "topic": "美军嘉手纳禁入比亚迪",
+   "status": "追踪中·略降温",
+   "heat": "X（同早报口径）01Z/02Z/03Z=302/229/62 ➡️；联合早报等续报，禁令仍自10-26生效、无新扩大范围，比亚迪仍未回应；@Polymarket≈4.1万、@zaobaosg≈5073"
+  }
+ ],
+ "focus_topics": {
+  "滴滴": "繁简主帖 @Furinanatw 浏览182416（较早报18.24万几乎不动），无新证据、无滴滴回应。【传闻】海外：🇲🇽普埃布拉 Profeco「Uber/DiDi多收费如何投诉」提示帖≈167浏览（早报已作低优先级）；🇲🇽墨西哥城 SSC 与 DiDi 加强安全协作通稿≈462浏览（政企PR，非丑闻）。巴西99/日/阿/英公司级0有效。日程：罗萨里奥10-26续议；香港牌照10-30截止。本期无公司级新动态。",
+  "字节": "钛媒体英文章复盘2024字节视频模型Goku训练遭实习生田柯宇破坏、后融资约3000万美元再起争议（https://www.tmtpost.com/8180275.html，10:53北京）——属旧案深度复盘/英文版，田柯宇线此前已移出短期，X窗口内无新爆发；阿里云与火山汽车云IDC份额报道（https://www.tmtpost.com/8179879.html）为行业分析非八卦。红果/Seed/人事本期无公司级新动作。",
+  "中国大模型": "Kimi见短期；DeepSeek融资无官方确认；Qwen4/阿里仍未确认Arena身份。",
+  "电商互撕": "京东/抖音/淘宝/拼多多×起诉/声明：窗口内无新官方声明或达标媒体进展。【本期无新动态】"
+ },
+ "overseas_minor_language": [
+  {
+   "country": "墨西哥",
+   "lang": "es",
+   "priority": "低",
+   "title_zh": "普埃布拉媒体提示：Uber/DiDi 动态调价过高可向 Profeco 投诉",
+   "summary_zh": "Tribuna Noticias 称高峰动态调价可抬高约300%，建议保留截图向 Profeco 投诉；属消费提示，非新监管处罚。早报已作低优先级，本期浏览仍低（≈167）。",
+   "original": "¿Uber o DiDi te cobraron de más? ¡Así puedes denunciar! Las tarifas dinámicas pueden elevar los costos hasta un 300%…",
+   "url": "https://x.com/NoticiasTribuna/status/2113769903874310415",
+   "credibility": "待核实",
+   "views": 167
+  },
+  {
+   "country": "墨西哥",
+   "lang": "es",
+   "priority": "低",
+   "title_zh": "墨西哥城 SSC 与 DiDi 加强安全技术协作（通稿）",
+   "summary_zh": "Reporte Índigo：CDMX 公共安全秘书处与 DiDi 强化技术与犯罪信息协作，预防犯罪与改善应急。政企通稿，非丑闻/裁员。",
+   "original": "La SSC de la CDMX y DiDi reforzaron su colaboración para fortalecer la seguridad mediante el uso de tecnología e información delictiva…",
+   "url": "https://x.com/Reporte_Indigo/status/2113737230091161795",
+   "credibility": "实锤",
+   "views": 462
+  }
+ ],
+ "weibo": {
+  "mirror": "https://soso.re/weibo",
+  "updated": "2026-10-24 11:13 Beijing",
+  "company_adjacent": [
+   {
+    "rank": 1,
+    "title": "AI短剧公司几乎不需要基础岗",
+    "heat": 1249363,
+    "note": "行业讨论，早报已观察；无单家大厂爆料"
+   },
+   {
+    "rank": 7,
+    "title": "iPhoneDuo屏幕开裂",
+    "heat": 781350,
+    "note": "苹果折叠屏开箱售后，非中国大厂主线"
+   },
+   {
+    "rank": 16,
+    "title": "哈啰顺风车 涉黄",
+    "heat": 559749,
+    "note": "出行平台舆情，早报已观察，非大厂主线"
+   },
+   {
+    "rank": 42,
+    "title": "宇树机器人侧空翻表演时甩断腿",
+    "heat": 193031,
+    "note": "早报Top3余热，热搜从#4回落至#42"
+   }
+  ]
+ },
+ "maimai": {
+  "status": "未抓取",
+  "pending": [
+   "待补充：脉脉热榜——公开镜像404/需登录，本期未取"
+  ]
+ },
+ "social_sources": {
+  "xhs": "export_pending since 2026-10-24T09:00:00+08:00 无新条目；当日 jsonl 为早报窗口「阿里 裁员」撞词低互动，不相关",
+  "wechat": "微信读书登录过期（ALERT_weread.json auth_expired / HTTP 401），公众号本期缺失；未扫码",
+  "infra": "ensure_running 已跑过（任务说明）；本期未额外发小红书/微信读书请求"
+ },
+ "feeds_new": 6,
+ "feeds_file": "research/feeds/2026-10-24T0317Z.json",
+ "short_term_updates": "无新加入、无移出（4项）。问界补记澎湃删文余波但不改趋势标签。",
+ "candidates": [
+  {
+   "topic": "钛媒体复盘字节Goku/田柯宇训练破坏案（英文章）",
+   "heat": "晚点昨已有中文复盘 X≈5545；英文章10:53发布；窗口内相关新帖浏览个位数到一万余",
+   "decision": "旧案深度复盘非突发，田柯宇线已移出短期，观察不入短期、不警报"
+  },
+  {
+   "topic": "阿里云与火山重分汽车云（IDC份额）",
+   "heat": "钛媒体行业分析，X热度低",
+   "decision": "行业数据报道非八卦，不入短期"
+  },
+  {
+   "topic": "iPhone Duo 屏幕开裂",
+   "heat": "微博#7≈78.1万",
+   "decision": "苹果产品售后，非中国大厂八卦主线"
+  }
+ ],
+ "didi": {
+  "tiers_ran": "tier1 + tier2 slot2（国内其他业务）+ tier3 部分（脉脉/爆料X；投诉站web未逐站深爬因额度）",
+  "beijing_hour": 11,
+  "slot": 2,
+  "x_calls_used": 15,
+  "web_searches": 2,
+  "hits_kept": 1,
+  "hits_note": "海外小语种低优先级2条（普埃布拉Profeco提示早报已报；CDMX SSC协作通稿）；繁简无进展；中文Tier1多为加密货币推广撞词，已blacklist/postfilter丢弃",
+  "furinanatw_views": 182416,
+  "didi_response": false
+ },
+ "sources_note": "X公开检索（非个人时间线）+ soso.re微博 + RSS fetch_sources + 小红书pending只读 + 网页检索滴滴；微信公众号缺失。"
+}

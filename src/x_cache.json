@@ -1,6 +1,6 @@
 {
  "source": "https://api.fxtwitter.com/status/{id}",
- "fetched_at": "2026-10-24T01:40:02Z",
+ "fetched_at": "2026-10-24T03:33:51Z",
  "note": "静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。",
  "posts": {
   "2106320822444949760": {
@@ -21,7 +21,7 @@
   "2106404243376837105": {
    "status": "missing",
    "error": "HTTP Error 401: Unauthorized",
-   "fetched_at": "2026-10-24T01:40:02Z",
+   "fetched_at": "2026-10-24T03:33:51Z",
    "url": "https://x.com/buildnomadx/status/2106404243376837105"
   },
   "2106859176756646197": {
@@ -1608,14 +1608,16 @@
    "author": "@Furinanatw",
    "name": "芙宁娜娜💙(2号）",
    "created_at": "2026-10-14T08:40:41Z",
-   "views": 182412,
+   "views": 182416,
    "likes": 135,
    "reposts": 3,
    "replies": 59,
    "quotes": 1,
    "bookmarks": 30,
    "url": "https://x.com/Furinanatw/status/2110289680595886537",
-   "fetched_at": "2026-10-24T01:18:56Z"
+   "fetched_at": "2026-10-24T03:20:00Z",
+   "lang": "zh",
+   "translation_zh": ""
   },
   "2110301466640728265": {
    "status": "ok",
@@ -4434,20 +4436,20 @@
   },
   "2113680701770068067": {
    "status": "ok",
-   "text": "Introducing Kimi K3.1 Pro: our most capable 3T-class open-weight model.\n\n🔹 1M-token context, 2.8T total / 104B active params (MoE), Multimodal.\n🔹 Full-project coding: games in Unreal, Unity & Godot.\n🔹 Excels at parametric 3D modeling in Blender & CAD.\n🔹 More reliable at finance work: Accurate modeling with hallucination down by 65%.\n🔹 Matching the strongest proprietary models across coding, agentic and knowledge benchmarks.\n\nKimi K3.1 Pro and K3.1 Pro Highspeed (2–3× faster) are now live on http://Kimi.ai, Kimi Work, Kimi Code, and the Kimi API.  \n\nOpen weights by Nov 4, 2026.\n\n🔗 API: http://platform.kimi.ai \n🔗 Tech blog: http://kimi.ai/blog/kimi-k3-1-pro",
+   "text": "Introducing Kimi K3.1 Pro: our most capable 3T-class open-weight model.\n\n🔹 1M-token context, 2.8T total / 104B active params (MoE), Multimodal.\n🔹 Full-project coding: games in Unreal, Unity & Godot.\n🔹 Excels at parametric 3D modeling in Blender & CAD.\n🔹 More reliable at finance work: Accurate modeling with hallucination down by 65%.\n🔹 Matching the strongest proprietary models across coding, agentic and knowledge benchmarks.\n\nKimi K3.1 Pro and K3.1 Pro Highspeed (2–3× faster) are now live on kimi.ai, Kimi Work, Kimi Code, and the Kimi API.\n\nOpen weights by Nov 4, 2026.",
    "author": "@Kimi_Moonshot",
    "name": "Kimi.ai",
    "created_at": "2026-10-23T17:15:24Z",
-   "views": 1802875,
-   "likes": 21862,
-   "reposts": 2374,
-   "replies": 911,
-   "quotes": 1807,
-   "bookmarks": 3993,
+   "views": 2040074,
+   "likes": 23215,
+   "reposts": 2535,
+   "replies": 961,
+   "quotes": 1928,
+   "bookmarks": 4226,
    "url": "https://x.com/Kimi_Moonshot/status/2113680701770068067",
-   "fetched_at": "2026-10-24T01:18:56Z",
+   "fetched_at": "2026-10-24T03:20:00Z",
    "lang": "en",
-   "translation_zh": "推出 Kimi K3.1 Pro：我们最强的 3T 级开源权重模型。\n\n🔹 100 万 token 上下文，总参数 2.8T / 激活参数 104B（MoE），多模态。\n🔹 全项目编程：可用 Unreal、Unity 和 Godot 做游戏。\n🔹 擅长在 Blender 和 CAD 里做参数化 3D 建模。\n🔹 金融工作更可靠：建模更准确，幻觉下降 65%。\n🔹 在编程、智能体和知识基准上，对齐最强的闭源模型。\n\nKimi K3.1 Pro 和 K3.1 Pro Highspeed（快 2–3 倍）现已在 Kimi.ai、Kimi Work、Kimi Code 和 Kimi API 上线。\n\n权重计划于 2026 年 11 月 4 日开源。\n\n🔗 API：http://platform.kimi.ai\n🔗 技术博客：http://kimi.ai/blog/kimi-k3-1-pro"
+   "translation_zh": "正式发布 Kimi K3.1 Pro：最强的 3T 级开源权重模型。100 万上下文、2.8T 总参/104B 激活（MoE）、多模态；全项目编码与参数化 3D；金融幻觉降 65%；K3.1 Pro 与 Highspeed（约 2–3× 速度）已上线 kimi.ai / API；权重计划 2026-11-04 开源。"
   },
   "2113681863109939271": {
    "status": "ok",
@@ -4463,8 +4465,8 @@
    "bookmarks": 965,
    "url": "https://x.com/Kimi_Moonshot/status/2113681863109939271",
    "fetched_at": "2026-10-24T01:18:56Z",
-   "lang": "en",
-   "translation_zh": "来认识 Kimi K3.1 Pro，我们最强的 3T 级模型。"
+   "translation_zh": "来认识 Kimi K3.1 Pro，我们最强的 3T 级模型。",
+   "lang": "en"
   },
   "2113710752741892476": {
    "status": "ok",
@@ -4530,20 +4532,20 @@
   },
   "2113769903874310415": {
    "status": "ok",
-   "text": "🚗 #Puebla || ¿Uber o DiDi te cobraron de más? ¡Así puedes denunciar!\nLas tarifas dinámicas pueden elevar los costos hasta un 300% en horarios de alta demanda. Si detectas cobros excesivos o cargos no autorizados, puedes presentar una queja ante Profeco con capturas del precio inicial y el comprobante de pago. 📱\n#Uber #DiDi #Profeco #TarifasDinámicas\n\nhttps://tribunanoticias.mx/como-denunciar-tarifas-dinamicas-excesivas-de-uber-y-didi-en-puebla",
+   "text": "🚗 #Puebla || ¿Uber o DiDi te cobraron de más? ¡Así puedes denunciar!\nLas tarifas dinámicas pueden elevar los costos hasta un 300% en horarios de alta demanda. Si detectas cobros excesivos o cargos no autorizados, puedes presentar una queja ante Profeco con capturas del precio",
    "author": "@NoticiasTribuna",
    "name": "Tribuna Noticias",
    "created_at": "2026-10-23T23:09:51Z",
-   "views": 150,
+   "views": 167,
    "likes": 1,
    "reposts": 1,
    "replies": 0,
    "quotes": 0,
    "bookmarks": 0,
    "url": "https://x.com/NoticiasTribuna/status/2113769903874310415",
-   "fetched_at": "2026-10-24T01:18:56Z",
+   "fetched_at": "2026-10-24T03:20:00Z",
    "lang": "es",
-   "translation_zh": "普埃布拉地方媒体：若 Uber/DiDi 多收费（文称动态加价高峰可至约 300%），可向 Profeco 投诉并保留价格截图。"
+   "translation_zh": "墨西哥普埃布拉：若 Uber/DiDi 多收费，可向 Profeco 投诉。动态调价高峰可抬高至约 300%，需保留价格截图。"
   },
   "2113790074907217990": {
    "status": "ok",
@@ -4559,6 +4561,108 @@
    "bookmarks": 5,
    "url": "https://x.com/whyyoutouzhele/status/2113790074907217990",
    "fetched_at": "2026-10-24T01:18:56Z"
+  },
+  "2113792922466542030": {
+   "status": "ok",
+   "text": "【问界起火死亡事故：搜狐汽车被禁言，澎湃遭删文】\n\n一起汽车碰撞起火事故，调查结论尚未公布，相关媒体账号已先后遭遇禁言和文章删除，华为厉害！\n\n澎湃新闻此前在微信公众号发布的《三问问界汽车在神木碰撞起火事故》一文，从10月23日起，页面显示已被发布者删除。",
+   "author": "@wangjupaian",
+   "name": "王局拍案",
+   "created_at": "2026-10-24T00:41:19Z",
+   "views": 9741,
+   "likes": 61,
+   "reposts": 2,
+   "replies": 15,
+   "quotes": 1,
+   "bookmarks": 6,
+   "url": "https://x.com/wangjupaian/status/2113792922466542030",
+   "lang": "zh",
+   "translation_zh": "",
+   "fetched_at": "2026-10-24T03:20:00Z"
+  },
+  "2113813242522824951": {
+   "status": "ok",
+   "text": "继美国为保护军事机密而限制在军事基地和主要军事设施使用中国电子设备后，驻日美军也以安全疑虑为由，宣布从下星期一（10月26日）起，禁止中国汽车品牌比亚迪（BYD）的车辆进入冲绳嘉手纳空军基地。",
+   "author": "@zaobaosg",
+   "name": "联合早报 Lianhe Zaobao",
+   "created_at": "2026-10-24T02:02:04Z",
+   "views": 5073,
+   "likes": 3,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/zaobaosg/status/2113813242522824951",
+   "lang": "zh",
+   "translation_zh": "",
+   "fetched_at": "2026-10-24T03:20:00Z"
+  },
+  "2113676386699526354": {
+   "status": "ok",
+   "text": "JUST IN: U.S. military bans Chinese-made BYD vehicles from Kadena Air Base in Okinawa, citing \"unacceptable security risks.\"",
+   "author": "@Polymarket",
+   "name": "Polymarket",
+   "created_at": "2026-10-23T16:58:15Z",
+   "views": 41394,
+   "likes": 1276,
+   "reposts": 137,
+   "replies": 34,
+   "quotes": 8,
+   "bookmarks": 30,
+   "url": "https://x.com/Polymarket/status/2113676386699526354",
+   "lang": "en",
+   "translation_zh": "刚讯：美军以「不可接受的安全风险」为由，禁止中国制造的比亚迪车辆进入冲绳嘉手纳空军基地。",
+   "fetched_at": "2026-10-24T03:20:00Z"
+  },
+  "2113801452783284724": {
+   "status": "ok",
+   "text": "月之暗面发布 Kimi K3.1 Pro 之后，被人曝光了一份疑似官方推广文件。\n\n博主 Elshayib 公开的截图显示，参与推广的创作者必须提前提交文案，获得批准后才能发布。但文件又明确要求「不要添加付费合作标签」，甚至不必附上 Kimi 官网链接，也不用标记官方账号。\n\n按照 X …",
+   "author": "@0xLogicrw",
+   "name": "思维怪怪",
+   "created_at": "2026-10-24T01:15:13Z",
+   "views": 5293,
+   "likes": 36,
+   "reposts": 1,
+   "replies": 11,
+   "quotes": 1,
+   "bookmarks": 16,
+   "url": "https://x.com/0xLogicrw/status/2113801452783284724",
+   "lang": "zh",
+   "translation_zh": "",
+   "fetched_at": "2026-10-24T03:20:00Z"
+  },
+  "2113784442313711995": {
+   "status": "ok",
+   "text": "DeepSeek raised\nfifteen billion\ntoday.\nAt seventy-five\nbillion valuation.\nTencent. CATL. Meituan.\nChinese AI just\nraised more\nthan most countries\ngenerate in a year.\nThe race is not\nslowing down.\nIt is splitting\nin two.",
+   "author": "@JustOne4us",
+   "name": "Natural Intelligence",
+   "created_at": "2026-10-24T00:07:37Z",
+   "views": 134,
+   "likes": 3,
+   "reposts": 0,
+   "replies": 1,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/JustOne4us/status/2113784442313711995",
+   "lang": "en",
+   "translation_zh": "DeepSeek 今日融资约 150 亿美元（估值约 750 亿），投资方含腾讯、宁德时代、美团等——中国 AI 融资规模巨大，竞赛未放缓而是在分化。",
+   "fetched_at": "2026-10-24T03:20:00Z"
+  },
+  "2113737230091161795": {
+   "status": "ok",
+   "text": "La SSC de la CDMX y DiDi reforzaron su colaboración para fortalecer la seguridad mediante el uso de tecnología e información delictiva. La estrategia busca prevenir delitos, mejorar la respuesta ante emergencias y promover rutas más seguras para conductores y usuarios.",
+   "author": "@Reporte_Indigo",
+   "name": "Reporte Índigo",
+   "created_at": "2026-10-23T21:00:01Z",
+   "views": 462,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/Reporte_Indigo/status/2113737230091161795",
+   "lang": "es",
+   "translation_zh": "墨西哥城公共安全秘书处（SSC）与 DiDi 加强合作，利用技术与犯罪信息提升安全、应急响应与更安全路线。属政企协作通稿，非丑闻。",
+   "fetched_at": "2026-10-24T03:20:00Z"
   }
  }
 }
