@@ -1034,22 +1034,6 @@
       ],
       "recorded_at": "2026-10-22T08:25:00Z"
     },
-    "Kimi K3.1·Qwen 4 Arena暗测": {
-      "summary": "10-22 起 Arena 盲测平台出现匿名模型 Kibitz 和 Kalmia，网友据分词器特征推测分别是月之暗面未发布的 Kimi K3.1 和阿里通义千问 Qwen 4，海外资讯站转述“本周有望发布”。两家公司均未确认身份和发布时间。",
-      "credibility": "传闻",
-      "event_time": "2026-10-22",
-      "sources": [
-        {
-          "label": "X @notjazii：kibitz=Kimi K3.1、kalmia=Qwen 4",
-          "url": "https://x.com/notjazii/status/2113228071377793484"
-        },
-        {
-          "label": "KuCoin 快讯：Kimi K3.1 与 Qwen4 预计本周发布",
-          "url": "https://www.kucoin.com/news/flash/kimi-k3-1-and-qwen4-expected-to-launch-this-week"
-        }
-      ],
-      "recorded_at": "2026-10-23T01:00:00Z"
-    },
     "宁德时代董秘被打传闻": {
       "summary": "10-22 网传宁德时代董秘在景顺长城路演时被打，当晚第一财经援引知情人士称消息不实、董秘并未出席该场路演。公司与基金公司均未公开发声。",
       "credibility": "传闻",
@@ -1154,6 +1138,98 @@
       ],
       "recorded_at": "2026-10-23T15:10:00Z",
       "pending": ""
+    },
+    "Kimi K3.1 Pro 正式发布": {
+      "summary": "月之暗面于北京时间约2026-10-24 01:15正式发布 Kimi K3.1 Pro 与 Highspeed，官宣权重计划11-4开源；第一财经与官网博客确认。海外创作者另曝推广文档要求不标付费合作，仅X侧截图、公司未回应。",
+      "credibility": "实锤",
+      "event_time": "2026-10-23",
+      "sources": [
+        {
+          "label": "X @Kimi_Moonshot 官宣帖",
+          "url": "https://x.com/Kimi_Moonshot/status/2113680701770068067"
+        },
+        {
+          "label": "第一财经",
+          "url": "https://www.yicai.com/news/103407372.html"
+        },
+        {
+          "label": "官网博客",
+          "url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+        }
+      ],
+      "recorded_at": "2026-10-24T01:00:00Z"
+    },
+    "宇树H2-X侧空翻甩断腿": {
+      "summary": "宇树H2-X在10-22发布会后侧空翻表演时机械腿脱落；多家媒体报道，公司当时未说明原因。2026-10-24早微博热搜#4约55.4万。",
+      "credibility": "实锤",
+      "event_time": "2026-10-22",
+      "sources": [
+        {
+          "label": "同花顺",
+          "url": "https://stock.10jqka.com.cn/20261023/c681040054.shtml"
+        },
+        {
+          "label": "微博热搜镜像 soso.re",
+          "url": "https://soso.re/weibo"
+        }
+      ],
+      "recorded_at": "2026-10-24T01:00:00Z"
+    },
+    "赛车星冰乐向尊界道歉": {
+      "summary": "法院判自媒体「赛车星冰乐」向尊界道歉并赔30万元；10-23博主在小红书发道歉信称将按判决赔偿。",
+      "credibility": "实锤",
+      "event_time": "2026-10-23",
+      "sources": [
+        {
+          "label": "观察者网",
+          "url": "https://www.guancha.cn/qiche/2026_10_23_905550.shtml"
+        },
+        {
+          "label": "IT之家",
+          "url": "https://www.ithome.com/1/017/086.htm"
+        }
+      ],
+      "recorded_at": "2026-10-24T01:00:00Z"
+    },
+    "滴滴繁简价差": {
+      "summary": "X主帖称滴滴繁体版计价高于简体版（厦门相关路线截图对比）；浏览约18万级，滴滴未回应，证据仍待核实。",
+      "credibility": "传闻",
+      "event_time": "2026-10-14",
+      "sources": [
+        {
+          "label": "X @Furinanatw",
+          "url": "https://x.com/Furinanatw/status/2110289680595886537"
+        }
+      ],
+      "recorded_at": "2026-10-24T01:00:00Z"
+    },
+    "哈啰顺风车涉黄": {
+      "summary": "2026-10-24早微博热搜出现「哈啰顺风车 涉黄」约28.8万；属出行平台舆情，平台侧已有回应报道流传，非互联网大厂主线，观察不入短期。",
+      "credibility": "待核实",
+      "event_time": "2026-10-24",
+      "sources": [
+        {
+          "label": "微博热搜镜像 soso.re #15",
+          "url": "https://soso.re/weibo"
+        }
+      ],
+      "recorded_at": "2026-10-24T01:00:00Z"
+    },
+    "中概周五收盘金龙跌0.84%": {
+      "summary": "美东2026-10-23（周五）纳斯达克中国金龙指数（HXC）收跌0.84%报5472.33点；阿里收99.64美元（−2.14%）跌破100美元，京东−1.25%、百度−1.00%，小鹏+1.54%、禾赛+8.15%。道指约−1.23%、标普约−0.52%、纳指约−0.21%。属周末休市前的官方收盘统计，详见当日美股中概早报 Top1。",
+      "credibility": "统计",
+      "event_time": "2026-10-23 美股收盘",
+      "sources": [
+        {
+          "label": "新浪财经：10月24日热门中概股涨跌",
+          "url": "https://finance.sina.com.cn/world/2026-10-24/doc-iniwhhrw8218959.shtml"
+        },
+        {
+          "label": "Yahoo Finance ^HXC",
+          "url": "https://finance.yahoo.com/quote/%5EHXC/"
+        }
+      ],
+      "recorded_at": "2026-10-24T01:20:00Z"
     }
   }
 }

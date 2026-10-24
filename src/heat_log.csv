@@ -1328,3 +1328,71 @@ timestamp_utc,topic,metric,value,source
 2026-10-23T15:10:00Z,国办减缓AI就业替代影响,weibo_hot,794933,soso.re/weibo #6 22:52 减缓人工智能应用就业替代影响
 2026-10-23T15:10:00Z,国办减缓AI就业替代影响,weibo_hot,778510,soso.re/weibo #16 22:52 国办发文减缓人工智能就业替代影响
 2026-10-23T15:10:00Z,问界神木碰撞起火·官方回应,weibo_hot,750035,soso.re/weibo #40 22:52 问界M9事故三连环站不住脚
+2026-10-24T01:00:00Z,Kimi K3.1 Pro 正式发布,x_posts_hour,223,"x_counts 15Z query=(""Kimi K3.1"" OR ""K3.1 Pro"" OR Kibitz OR Kimi_Moonshot)"
+2026-10-24T01:00:00Z,Kimi K3.1 Pro 正式发布,x_posts_hour,714,"x_counts 16Z query=(""Kimi K3.1"" OR ""K3.1 Pro"" OR Kibitz OR Kimi_Moonshot)"
+2026-10-24T01:00:00Z,Kimi K3.1 Pro 正式发布,x_posts_hour,3216,"x_counts 17Z query=(""Kimi K3.1"" OR ""K3.1 Pro"" OR Kibitz OR Kimi_Moonshot)"
+2026-10-24T01:00:00Z,Kimi K3.1 Pro 正式发布,x_posts_hour,2967,"x_counts 18Z query=(""Kimi K3.1"" OR ""K3.1 Pro"" OR Kibitz OR Kimi_Moonshot)"
+2026-10-24T01:00:00Z,Kimi K3.1 Pro 正式发布,x_posts_hour,1859,"x_counts 19Z query=(""Kimi K3.1"" OR ""K3.1 Pro"" OR Kibitz OR Kimi_Moonshot)"
+2026-10-24T01:00:00Z,Kimi K3.1 Pro 正式发布,x_posts_hour,1181,"x_counts 20Z query=(""Kimi K3.1"" OR ""K3.1 Pro"" OR Kibitz OR Kimi_Moonshot)"
+2026-10-24T01:00:00Z,Kimi K3.1 Pro 正式发布,x_posts_hour,965,"x_counts 21Z query=(""Kimi K3.1"" OR ""K3.1 Pro"" OR Kibitz OR Kimi_Moonshot)"
+2026-10-24T01:00:00Z,Kimi K3.1 Pro 正式发布,x_posts_hour,864,"x_counts 22Z query=(""Kimi K3.1"" OR ""K3.1 Pro"" OR Kibitz OR Kimi_Moonshot)"
+2026-10-24T01:00:00Z,Kimi K3.1 Pro 正式发布,x_posts_hour,826,"x_counts 23Z query=(""Kimi K3.1"" OR ""K3.1 Pro"" OR Kibitz OR Kimi_Moonshot)"
+2026-10-24T01:00:00Z,Kimi K3.1 Pro 正式发布,x_posts_hour,860,"x_counts 00Z(至00:55) query=(""Kimi K3.1"" OR ""K3.1 Pro"" OR Kibitz OR Kimi_Moonshot)"
+2026-10-24T01:00:00Z,问界神木碰撞起火·官方回应,x_posts_hour,27,x_counts 15Z
+2026-10-24T01:00:00Z,问界神木碰撞起火·官方回应,x_posts_hour,15,x_counts 16Z
+2026-10-24T01:00:00Z,问界神木碰撞起火·官方回应,x_posts_hour,7,x_counts 17Z
+2026-10-24T01:00:00Z,问界神木碰撞起火·官方回应,x_posts_hour,14,x_counts 18Z
+2026-10-24T01:00:00Z,问界神木碰撞起火·官方回应,x_posts_hour,8,x_counts 19Z
+2026-10-24T01:00:00Z,问界神木碰撞起火·官方回应,x_posts_hour,7,x_counts 20Z
+2026-10-24T01:00:00Z,问界神木碰撞起火·官方回应,x_posts_hour,14,x_counts 21Z
+2026-10-24T01:00:00Z,问界神木碰撞起火·官方回应,x_posts_hour,15,x_counts 22Z
+2026-10-24T01:00:00Z,问界神木碰撞起火·官方回应,x_posts_hour,19,x_counts 23Z
+2026-10-24T01:00:00Z,问界神木碰撞起火·官方回应,x_posts_hour,32,x_counts 00Z(至00:55)
+2026-10-24T01:00:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour,37,x_counts 15Z
+2026-10-24T01:00:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour,15,x_counts 16Z
+2026-10-24T01:00:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour,19,x_counts 17Z
+2026-10-24T01:00:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour,7,x_counts 18Z
+2026-10-24T01:00:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour,11,x_counts 19Z
+2026-10-24T01:00:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour,3,x_counts 20Z
+2026-10-24T01:00:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour,2,x_counts 21Z
+2026-10-24T01:00:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour,6,x_counts 22Z
+2026-10-24T01:00:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour,4,x_counts 23Z
+2026-10-24T01:00:00Z,红果短剧下线金币·自砍摇钱树,x_posts_hour,8,x_counts 00Z(至00:55)
+2026-10-24T01:00:00Z,DeepSeek完成千亿融资,x_posts_hour,14,x_counts 15Z
+2026-10-24T01:00:00Z,DeepSeek完成千亿融资,x_posts_hour,10,x_counts 16Z
+2026-10-24T01:00:00Z,DeepSeek完成千亿融资,x_posts_hour,17,x_counts 17Z
+2026-10-24T01:00:00Z,DeepSeek完成千亿融资,x_posts_hour,6,x_counts 18Z
+2026-10-24T01:00:00Z,DeepSeek完成千亿融资,x_posts_hour,6,x_counts 19Z
+2026-10-24T01:00:00Z,DeepSeek完成千亿融资,x_posts_hour,9,x_counts 20Z
+2026-10-24T01:00:00Z,DeepSeek完成千亿融资,x_posts_hour,10,x_counts 21Z
+2026-10-24T01:00:00Z,DeepSeek完成千亿融资,x_posts_hour,7,x_counts 22Z
+2026-10-24T01:00:00Z,DeepSeek完成千亿融资,x_posts_hour,12,x_counts 23Z
+2026-10-24T01:00:00Z,DeepSeek完成千亿融资,x_posts_hour,17,x_counts 00Z(至00:55)
+2026-10-24T01:00:00Z,美军嘉手纳禁入比亚迪,x_posts_hour,256,x_counts 15Z
+2026-10-24T01:00:00Z,美军嘉手纳禁入比亚迪,x_posts_hour,173,x_counts 16Z
+2026-10-24T01:00:00Z,美军嘉手纳禁入比亚迪,x_posts_hour,174,x_counts 17Z
+2026-10-24T01:00:00Z,美军嘉手纳禁入比亚迪,x_posts_hour,128,x_counts 18Z
+2026-10-24T01:00:00Z,美军嘉手纳禁入比亚迪,x_posts_hour,120,x_counts 19Z
+2026-10-24T01:00:00Z,美军嘉手纳禁入比亚迪,x_posts_hour,174,x_counts 20Z
+2026-10-24T01:00:00Z,美军嘉手纳禁入比亚迪,x_posts_hour,275,x_counts 21Z
+2026-10-24T01:00:00Z,美军嘉手纳禁入比亚迪,x_posts_hour,305,x_counts 22Z
+2026-10-24T01:00:00Z,美军嘉手纳禁入比亚迪,x_posts_hour,371,x_counts 23Z
+2026-10-24T01:00:00Z,美军嘉手纳禁入比亚迪,x_posts_hour,305,x_counts 00Z(至00:55)
+2026-10-24T01:00:00Z,Kimi K3.1 Pro 正式发布,x_sample_post,1740665,https://x.com/Kimi_Moonshot/status/2113680701770068067
+2026-10-24T01:00:00Z,Kimi K3.1 Pro 正式发布,x_sample_post,303846,https://x.com/Kimi_Moonshot/status/2113681863109939271
+2026-10-24T01:00:00Z,Kimi K3.1 Pro 正式发布,x_sample_post,41324,https://x.com/elshayib_/status/2113710752741892476
+2026-10-24T01:00:00Z,问界神木碰撞起火·官方回应,x_sample_post,687,https://x.com/giantcutie666/status/2113432656578842857
+2026-10-24T01:00:00Z,DeepSeek完成千亿融资,x_sample_post,1045,https://x.com/WangNextDoor2/status/2113381882654061023
+2026-10-24T01:00:00Z,美军嘉手纳禁入比亚迪,x_sample_post,238294,https://x.com/ReutersJapan/status/2113450570908418110
+2026-10-24T01:00:00Z,滴滴繁简价差,x_sample_post,182412,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-24T01:00:00Z,宇树H2-X侧空翻甩断腿,x_sample_post,6693,https://x.com/DTee000/status/2113171554112520524
+2026-10-24T01:00:00Z,赛车星冰乐向尊界道歉,x_sample_post,5379,https://x.com/whyyoutouzhele/status/2113790074907217990
+2026-10-24T01:00:00Z,宇树H2-X侧空翻甩断腿,weibo_hot,553904,soso.re/weibo #4 08:52 宇树机器人侧空翻表演时甩断腿
+2026-10-24T01:00:00Z,哈啰顺风车涉黄,weibo_hot,288408,soso.re/weibo #15 08:52 哈啰顺风车 涉黄
+2026-10-24T01:20:00Z,中概周五收盘金龙跌0.84%,market_close,5472.33,https://finance.sina.com.cn/world/2026-10-24/doc-iniwhhrw8218959.shtml HXC-0.84% BABA-2.14%
+2026-10-24T01:20:00Z,松延动力Noetix保密递表港交所,x_sample_post,27301,https://x.com/business/status/2113124462077841714
+2026-10-24T01:20:00Z,SHEIN和解FTC周末发酵,x_sample_post,108292,https://x.com/DeItaone/status/2113629371604836378
+2026-10-24T01:20:00Z,美军嘉手纳禁入比亚迪,x_sample_post,283678,https://x.com/ReutersJapan/status/2113450570908418110
+2026-10-24T01:20:00Z,滴滴繁简价差,x_sample_post,182412,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-24T01:20:00Z,美军嘉手纳禁入比亚迪,x_count_hourly,"257/172/174/123/114/174/274/305/373/323",query=(比亚迪 OR BYD) (嘉手纳 OR Kadena OR 基地) 15Z-01Z
+2026-10-24T01:20:00Z,SHEIN和解FTC,x_count_hourly,"20/7/9/4/8/19/8/1/3/3/2",query=(SHEIN OR Shein OR 希音) (FTC OR 和解 OR settle OR settlement) 15Z-01Z

@@ -1,0 +1,281 @@
+{
+ "type": "bigtech",
+ "title": "中国大厂八卦简报｜2026-10-24 早报",
+ "timestamp": "2026-10-24T01:00:00Z",
+ "edition_date": "2026-10-24",
+ "slot": "01Z",
+ "lede": "月之暗面正式发布 Kimi K3.1 Pro/Highspeed（官帖约174万浏览）；海外创作者曝光推广文档要求不标付费合作【传闻】；宇树 H2-X 侧空翻甩断腿登微博热搜#4。红果金币线移出短期。",
+ "alert_note": "早报，不单独警报（Kimi 预热已于昨日警报）",
+ "alert_worthy": false,
+ "top3": [
+  "Kimi K3.1 Pro 正式发布",
+  "Kimi推广不标付费合作曝光",
+  "宇树H2-X侧空翻甩断腿"
+ ],
+ "focus": {
+  "滴滴": "繁简价差约18.24万无回应；罗萨里奥10-26/香港牌照10-30；出海本期无新公司动态",
+  "字节": "本期无新动态；红果降温移出短期",
+  "中国大模型": "Kimi正式发布+推广披露争议；DeepSeek融资无新确认；Qwen4仍未官宣"
+ },
+ "short_term_notes": "Kimi 由暗测升级为正式发布📈；已移出红果短剧下线金币；短期4项：Kimi/比亚迪嘉手纳/问界/DeepSeek融资",
+ "overseas_local_lang": [],
+ "window": "2026-10-23T15:10Z → 2026-10-24T00:56Z",
+ "markdown_file": "2026-10-24_bigtech_01Z_digest.md",
+ "sources_status": {
+  "xhs": "ok_no_relevant",
+  "weread": "login_expired",
+  "weibo": "soso.re 08:52",
+  "rss": "TI paywall 1 matched, cross-checked"
+ },
+ "sections": [
+  {
+   "title": "⭐ 今日 Top 3",
+   "color": "#dc2626",
+   "items": [
+    {
+     "id": "20261024-bt01z-kimi-launch",
+     "company": "月之暗面（Kimi）",
+     "tag": "实锤",
+     "source_types": [
+      "官方",
+      "媒体",
+      "X"
+     ],
+     "date": "10-23～10-24",
+     "text": "北京时间约10-24 01:15，官方账号 @Kimi_Moonshot 发帖正式推出 Kimi K3.1 Pro（约2.8T总参/104B激活 MoE、100万上下文、多模态）及约2–3×速度的 Highspeed 版，称已在 kimi.ai、Kimi Work、Kimi Code 与 API 上线，权重计划2026-11-04开源。第一财经01:50同步报道；官网技术博客已公开；The Information 标题亦写发布（付费墙，仅引标题）。此前 Arena 暗测与预热视频在昨晚总结已报，本期为正式发布新进展。",
+     "links": [
+      {
+       "label": "X @Kimi_Moonshot（约174万浏览）",
+       "url": "https://x.com/Kimi_Moonshot/status/2113680701770068067",
+       "views": 1740665
+      },
+      {
+       "label": "X @Kimi_Moonshot 视频帖（约30.4万浏览）",
+       "url": "https://x.com/Kimi_Moonshot/status/2113681863109939271",
+       "views": 303846
+      },
+      {
+       "label": "官网博客：Kimi K3.1 Pro",
+       "url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+      },
+      {
+       "label": "第一财经：月之暗面发布Kimi K3.1Pro和K3.1ProHighspeed",
+       "url": "https://www.yicai.com/news/103407372.html"
+      },
+      {
+       "label": "The Information（付费）：Moonshot AI Launches New Kimi K3.1 Pro Model",
+       "url": "https://www.theinformation.com/briefings/moonshot-ai-launches-new-kimi-k3-1-pro-model"
+      }
+     ]
+    },
+    {
+     "id": "20261024-bt01z-kimi-influencer",
+     "company": "月之暗面（Kimi）",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-23",
+     "lang": "en",
+     "translation_zh": "这就是 Kimi AI 推广新模型 Kimi K3.1 Pro 的方式……宣传话术。我拿到了他们发布后给创作者的活动文档，里面是他们希望创作者推动的叙事。有人指文档要求不要打 X 付费合作标签，可能违反平台与 FTC 披露规则。",
+     "original": "That's how Kimi AI are promoting their new model Kimi K3.1 pro... PROPAGANDA. Creators campaign docs... narrative they want creators to push. Kimi is telling influencers not to put X's paid partnership label on their posts... breaks X's rules and the FTC's too.",
+     "text": "发布后数小时，X 博主 @elshayib_ 晒出据称来自 Kimi 创作者活动的材料，称知情网红无人诚实披露，并跟帖贴出叙事模板/需先审帖/不必挂 Kimi 链接等截图；@alexmichaelio 转述称文档要求不要打 X 付费合作标签，可能违反平台与 FTC 披露规则。目前只有 X 侧截图与转述，未见主流媒体独立核实，月之暗面未回应。",
+     "links": [
+      {
+       "label": "X @elshayib_ 帖1（约4.1万浏览）",
+       "url": "https://x.com/elshayib_/status/2113710752741892476",
+       "views": 41324
+      },
+      {
+       "label": "X @elshayib_ 帖2（约1.7万浏览）",
+       "url": "https://x.com/elshayib_/status/2113734602032312731",
+       "views": 17049
+      },
+      {
+       "label": "X @alexmichaelio（2564浏览）",
+       "url": "https://x.com/alexmichaelio/status/2113737196469436547",
+       "views": 2564
+      }
+     ]
+    },
+    {
+     "id": "20261024-bt01z-unitree-leg",
+     "company": "宇树科技（Unitree）",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "微博热搜",
+      "X"
+     ],
+     "date": "10-22→10-24",
+     "text": "10-21发布的宇树 H2-X「功夫传奇守护」在10-22物理AI大会侧空翻落地时失衡，机械小腿自关节脱落；同花顺/钛媒体/电子工程专辑等已报道，公司当时未公开说明原因。今早微博热搜#4「宇树机器人侧空翻表演时甩断腿」约55.4万，X侧视频帖仍在流传。属硬科技翻车余热回榜。",
+     "links": [
+      {
+       "label": "同花顺：宇树机器人侧空翻甩断腿",
+       "url": "https://stock.10jqka.com.cn/20261023/c681040054.shtml"
+      },
+      {
+       "label": "钛媒体视讯",
+       "url": "https://www.tmtpost.com/video/8179229.html"
+      },
+      {
+       "label": "微博热搜 soso.re #4≈55.4万（08:52）",
+       "url": "https://soso.re/weibo"
+      },
+      {
+       "label": "X @DTee000（6693浏览）",
+       "url": "https://x.com/DTee000/status/2113171554112520524",
+       "views": 6693
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🎯 重点追踪",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "id": "20261024-bt01z-didi-fanjian",
+     "company": "滴滴",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-14→10-24",
+     "text": "繁体版与简体版价差主帖 @Furinanatw 今早约18.24万浏览，较昨晚几乎不涨；没有新证据，滴滴也没有回应。罗萨里奥条例10-26续议、香港网约车牌照申请10-30截止未变。海外小语种过夜窗口未检索到可独立成条的西/葡/日新公司动态。",
+     "links": [
+      {
+       "label": "X @Furinanatw（约18.24万浏览）",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537",
+       "views": 182412
+      }
+     ]
+    },
+    {
+     "id": "20261024-bt01z-bytedance-none",
+     "company": "字节跳动",
+     "tag": "统计",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-24",
+     "text": "过夜无新公司级动态（豆包/Seed/TikTok/人事）。红果短剧下线金币继续降温，X每小时多为个位数到十几帖，官方无新动作，本期移出短期热点列表。",
+     "links": [
+      {
+       "label": "IT之家（既有）：红果短剧计划年底下线金币功能——本期无新动作",
+       "url": "https://www.ithome.com/1/015/978.htm"
+      }
+     ]
+    },
+    {
+     "id": "20261024-bt01z-ds-funding",
+     "company": "DeepSeek",
+     "tag": "传闻",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-22→10-24",
+     "text": "千亿融资话题过夜 X 约6–17帖/时继续回落；公司仍未正式回应融资。上海IPO准备等进展已在昨晚每日总结报过，本期无新事实。既有分析帖仍在流传。",
+     "links": [
+      {
+       "label": "X @WangNextDoor2（既有转述帖，约1045浏览·10-23）",
+       "url": "https://x.com/WangNextDoor2/status/2113381882654061023",
+       "views": 1045
+      }
+     ]
+    },
+    {
+     "id": "20261024-bt01z-ecommerce-none",
+     "company": "京东/抖音/淘宝/拼多多",
+     "tag": "统计",
+     "source_types": [
+      "检索"
+     ],
+     "date": "10-24",
+     "text": "电商互撕固定检索线（起诉/声明/二选一/全网低价）：过夜窗口无新官方声明或达标媒体进展。",
+     "links": [
+      {
+       "label": "（固定检索线空结果记录）网经社首页",
+       "url": "https://www.100ec.cn/"
+      }
+     ],
+     "pending": [
+      "待补充：来源——本期检索无新官方声明，链为行业站入口"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🚗 车圈·华为/小米",
+   "color": "#ea580c",
+   "items": [
+    {
+     "id": "20261024-bt01z-xingbingle",
+     "company": "华为（尊界）",
+     "tag": "实锤",
+     "source_types": [
+      "媒体",
+      "X"
+     ],
+     "date": "10-23（补漏）",
+     "text": "法院此前判决自媒体「赛车星冰乐」公开道歉并赔偿尊界汽车30万元。10-23该博主在小红书发布道歉信，表示将按法院认定金额赔偿，并称作为自媒体不应嘲讽自己不喜欢的营销。观察者网、IT之家、凤凰网汽车等报道；@whyyoutouzhele今早转发。昨晚总结窗口内漏收，本期补上。",
+     "links": [
+      {
+       "label": "观察者网：博主「赛车星冰乐」向尊界汽车道歉",
+       "url": "https://www.guancha.cn/qiche/2026_10_23_905550.shtml"
+      },
+      {
+       "label": "IT之家",
+       "url": "https://www.ithome.com/1/017/086.htm"
+      },
+      {
+       "label": "X @whyyoutouzhele（5379浏览）",
+       "url": "https://x.com/whyyoutouzhele/status/2113790074907217990",
+       "views": 5379
+      }
+     ]
+    },
+    {
+     "id": "20261024-bt01z-wenjie",
+     "company": "华为（问界）",
+     "tag": "实锤",
+     "source_types": [
+      "X"
+     ],
+     "date": "10-21→10-24",
+     "text": "问界神木碰撞起火事故仍在等交警结论。过夜 X 讨论约7–32帖/时，整体回落；问界无补充通报。",
+     "links": [
+      {
+       "label": "X @giantcutie666（既有讨论帖·10-23≈687浏览）",
+       "url": "https://x.com/giantcutie666/status/2113432656578842857",
+       "views": 687
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "📌 其他",
+   "color": "#64748b",
+   "items": [
+    {
+     "id": "20261024-bt01z-adr-close",
+     "company": "中概股（阿里、京东、百度等）",
+     "tag": "统计",
+     "source_types": [
+      "行情（新浪）"
+     ],
+     "date": "10-23",
+     "text": "美股10-23（周五）收盘，纳斯达克中国金龙指数（HXC）收跌0.84%；阿里跌2.14%，京东跌1.25%，百度跌1.00%；小鹏涨1.54%。详细行情见美股中概&出海早报。",
+     "links": [
+      {
+       "label": "新浪财经：10月24日热门中概股涨跌不一，阿里巴巴跌超2%",
+       "url": "https://finance.sina.com.cn/world/2026-10-24/doc-iniwhhrw8218959.shtml"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

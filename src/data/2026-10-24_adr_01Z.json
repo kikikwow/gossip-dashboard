@@ -1,0 +1,356 @@
+{
+ "type": "adr",
+ "title": "美股中概 & 出海简报｜2026-10-24 早报",
+ "timestamp": "2026-10-24T01:20:00Z",
+ "edition_date": "2026-10-24",
+ "slot": "01Z",
+ "beijing_time": "2026-10-24 09:20",
+ "lede": "美东周五金龙指数收跌0.84%、阿里跌破100美元；补漏松延动力（Noetix）传已保密递表港交所；SHEIN和解FTC周末发酵浏览续涨。美股周末休市。",
+ "window": {
+  "start_beijing": "2026-10-23 22:50",
+  "end_beijing": "2026-10-24 09:20"
+ },
+ "alert_worthy": false,
+ "push_needed": true,
+ "top3": [
+  "中概周五收盘·金龙跌0.84%·阿里跌破100美元",
+  "松延动力Noetix传保密递表港交所（补漏）",
+  "SHEIN和解FTC周末发酵（续）"
+ ],
+ "focus": {
+  "滴滴": "繁简≈18.24万无回应；罗萨里奥10-26/香港牌照10-30；墨西哥普埃布拉Profeco/恰帕斯正规化西语低优先级；本期无公司级新动态",
+  "字节/TikTok": "本期无新动态",
+  "中国大模型": "DeepSeek融资/上海IPO仍无官方确认📉；Kimi正式发布见大厂早报（本期不复读）；松延动力保密递表见Top2"
+ },
+ "sources_status": {
+  "小红书": "正常 GREEN today=1/4；窗口内export「阿里 裁员」5条无关，无ADR达标新料",
+  "微信公众号": "微信读书登录过期（ALERT_weread.json 08:07+08），本期暂缺（与大厂早报一致）",
+  "RSS": "fetch_sources 本轮无新匹配"
+ },
+ "markdown_file": "2026-10-24_adr_01Z_digest.md",
+ "short_term_notes": "短期列表以大厂早报为准，本期ADR无新加入/移出。观察未入短期：SHEIN FTC和解（X已降温）、松延动力保密递表、中概周五收盘（周末休市）。比亚迪嘉手纳➡️ @ReutersJapan≈28.37万。",
+ "overseas_local_lang": [
+  {
+   "country": "墨西哥",
+   "language": "西班牙语",
+   "place": "普埃布拉",
+   "summary": "地方媒体提醒Uber/DiDi动态加价过高可向Profeco投诉",
+   "url": "https://x.com/NoticiasTribuna/status/2113769903874310415"
+  },
+  {
+   "country": "墨西哥",
+   "language": "西班牙语",
+   "place": "恰帕斯",
+   "summary": "地方媒体引述：Uber/DiDi正规化责任在企业而非司机",
+   "url": "https://x.com/elsoldechiapas/status/2113729466673365060"
+  }
+ ],
+ "sections": [
+  {
+   "title": "⭐ 今日 Top 3",
+   "color": "#dc2626",
+   "items": [
+    {
+     "id": "20261024-adr01z-close",
+     "company": "中概股（阿里 / 京东 / 百度 / 小鹏 / 禾赛等）",
+     "tag": "实锤",
+     "source_types": [
+      "财经媒体",
+      "行情"
+     ],
+     "date": "10-23 美东",
+     "text": "美东2026-10-23（周五）三大指数收跌：道指约−1.23%、标普约−0.52%、纳指约−0.21%。纳斯达克中国金龙指数（HXC）收跌0.84%报5472.33点。个股：阿里收99.64美元（−2.14%）跌破100美元，京东−1.25%，百度−1.00%，拼多多−0.16%，网易−0.05%，腾讯音乐−1.05%，唯品会−1.80%，蔚来−0.60%，理想−0.70%；上涨方面小鹏+1.54%、禾赛+8.15%、金山云+4.69%、小马智行+2.39%、富途+0.27%、携程+0.53%。昨晚每日总结与adr_14Z只报了盘前分化（阿里/网易盘前跌超2%、小鹏涨超3%），收盘数据留给本期。周六日美股休市。",
+     "links": [
+      {
+       "label": "新浪财经：10月24日热门中概股涨跌",
+       "url": "https://finance.sina.com.cn/world/2026-10-24/doc-iniwhhrw8218959.shtml"
+      },
+      {
+       "label": "Yahoo Finance ^HXC 收盘5472.33",
+       "url": "https://finance.yahoo.com/quote/%5EHXC/"
+      }
+     ],
+     "event_time": "2026-10-23 美股收盘（北京 10-24 约04:00）",
+     "lang": "zh",
+     "x_posts": []
+    },
+    {
+     "id": "20261024-adr01z-noetix",
+     "company": "松延动力（Noetix Robotics）",
+     "tag": "传闻",
+     "source_types": [
+      "通讯社",
+      "财经媒体",
+      "X"
+     ],
+     "date": "10-22→10-23（补漏）",
+     "text": "彭博社2026-10-22引知情人士称，北京人形机器人初创企业松延动力（Noetix Robotics）已向港交所以保密形式递交IPO申请，拟募资数亿美元，最快可能2027年挂牌；相关IPO仍在商讨，集资规模与时间表可能有变。公司未回应置评。松延动力今年3月完成约10亿元人民币融资，领投方为宁德时代旗下产业投资平台；产品侧重消费级/教育科研人形与具身智能。联合早报、智通财经、东方日报、投资界等10-23中文跟进。昨晚总结与adr_14Z未收录，今早补漏。X侧@business原文帖约27301浏览，中文圈讨论很少，观察未入短期。",
+     "links": [
+      {
+       "label": "联合早报",
+       "url": "https://www.zaobao.com.sg/news/china/story20261023-9884446"
+      },
+      {
+       "label": "智通财经",
+       "url": "https://www.zhitongcaijing.com/content/detail/1510675.html"
+      },
+      {
+       "label": "投资界",
+       "url": "https://www.pedaily.cn/first/187324.shtml"
+      },
+      {
+       "label": "X @business 👁27301",
+       "url": "https://x.com/business/status/2113124462077841714"
+      }
+     ],
+     "event_time": "彭博约2026-10-22；中文媒体10-23跟进",
+     "lang": "zh",
+     "original": "Noetix Robotics has filed confidentially for a Hong Kong IPO that could raise several hundred million dollars, according to sources.（Bloomberg / @business）",
+     "x_posts": [
+      {
+       "id": "2113124462077841714",
+       "url": "https://x.com/business/status/2113124462077841714",
+       "author": "@business",
+       "views": 27301,
+       "likes": 18,
+       "reposts": 5,
+       "replies": 2,
+       "text": "Noetix Robotics has filed confidentially for a Hong Kong IPO that could raise several hundred million dollars, according to sources https://www.bloomberg.com/news/articles/2026-10-22/catl-backed-noetix-robotics-is-said-to-file-for-hong-kong-ipo?taid=6ad99022baa8570001fbe751&utm_campaign=trueanthem&utm_content=business&utm_medium=social&utm_source=twitter",
+       "author_name": "Bloomberg"
+      }
+     ],
+     "translation_zh": "彭博：知情人士称松延动力（Noetix Robotics）已向港交所保密递交 IPO 申请，可能募资数亿美元。"
+    },
+    {
+     "id": "20261024-adr01z-shein",
+     "company": "SHEIN",
+     "tag": "传闻",
+     "source_types": [
+      "通讯社",
+      "X"
+     ],
+     "date": "10-23 晚→10-24 早（续）",
+     "text": "昨晚总结与adr_14Z已报：路透独家称SHEIN将支付约1亿美元和解美国FTC对其发货延误、配送确认争议与客服投诉的调查，金额约等于其二季度利润的44%；SHEIN称与FTC「达成建设性结果」，FTC拒绝置评。过夜无新公司声明或正式和解文本；属周末发酵。代表帖@DeItaone浏览由昨晚约7.4万升至约108292；相关X帖15Z–01Z每小时约20/7/9/4/8/19/8/1/3/3/2，已明显降温。港股较9月1日上市发行价仍约跌22%；欧盟与法国相关调查仍未结束。标【续】，不作为新爆料计入热榜新事件。",
+     "links": [
+      {
+       "label": "海峡时报/路透",
+       "url": "https://www.straitstimes.com/business/fast-fashion-group-shein-agrees-to-pay-us100m-to-settle-us-ftc-probe"
+      },
+      {
+       "label": "X @DeItaone 👁108292",
+       "url": "https://x.com/DeItaone/status/2113629371604836378"
+      }
+     ],
+     "event_time": "路透约2026-10-23 22:39 北京；周末发酵至10-24早",
+     "lang": "zh",
+     "original": "CHINESE FAST FASHION PLATFORM SHEIN TO PAY $100 MILLION IN US FTC PROBE SETTLEMENT, SOURCE SAYS. SHEIN SAYS IT HAS REACHED 'CONSTRUCTIVE OUTCOME' WITH UNITED STATES FTC.（@DeItaone）",
+     "x_posts": [
+      {
+       "id": "2113629371604836378",
+       "url": "https://x.com/DeItaone/status/2113629371604836378",
+       "author": "@DeItaone",
+       "views": 108292,
+       "likes": 132,
+       "reposts": 9,
+       "replies": 13,
+       "text": "CHINESE FAST FASHION PLATFORM SHEIN TO PAY $100 MILLION IN US FTC PROBE SETTLEMENT, SOURCE SAYS\n\nSHEIN SAYS IT HAS REACHED 'CONSTRUCTIVE OUTCOME' WITH UNITED STATES FTC",
+       "author_name": "*Walter Bloomberg"
+      }
+     ],
+     "translation_zh": "路透快讯：知情人士称中国快时尚平台 SHEIN 将支付 1 亿美元和解美国 FTC 调查；SHEIN 称已与 FTC「达成建设性结果」。"
+    }
+   ]
+  },
+  {
+   "title": "🎯 重点追踪",
+   "color": "#7c3aed",
+   "items": [
+    {
+     "id": "20261024-adr01z-didi",
+     "company": "滴滴 & 滴滴出海",
+     "tag": "统计",
+     "source_types": [
+      "X",
+      "媒体检索"
+     ],
+     "date": "10-23 至 10-24",
+     "text": "本期无公司级新动态。繁简价差主帖约182412浏览，滴滴仍无回应。香港考牌支援与牌照10-30截止、墨西哥SLP登记已在昨晚总结报过，不重复。西语圈两条低优先级地方线索见海外小语种（普埃布拉Profeco投诉提示、恰帕斯正规化责任归属）。阿根廷罗萨里奥条例10-26续议。",
+     "links": [
+      {
+       "label": "X @Furinanatw 繁简价差主帖 👁182412",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537"
+      }
+     ],
+     "event_time": "2026-10-23 22:50 至 10-24 09:20 检索",
+     "lang": "zh",
+     "x_posts": [
+      {
+       "id": "2110289680595886537",
+       "url": "https://x.com/Furinanatw/status/2110289680595886537",
+       "author": "@Furinanatw",
+       "views": 182412,
+       "likes": 135,
+       "reposts": 3,
+       "replies": 59,
+       "text": "滴滴涉嫌国籍歧视！\n\n滴滴简体的价格🇨🇳 VS 滴滴繁体的价格🇹🇼",
+       "author_name": "芙宁娜娜💙(2号）"
+      }
+     ]
+    },
+    {
+     "id": "20261024-adr01z-tiktok",
+     "company": "字节 / TikTok",
+     "tag": "统计",
+     "source_types": [
+      "X",
+      "媒体检索"
+     ],
+     "date": "10-23 至 10-24",
+     "text": "本期无新动态。过夜窗口未检索到 TikTok/字节出海侧公司级新动态（监管、Shop、人事）。",
+     "links": [],
+     "event_time": "2026-10-23 22:50 至 10-24 09:20",
+     "lang": "zh"
+    },
+    {
+     "id": "20261024-adr01z-ai",
+     "company": "中国大模型（出海 / IPO）",
+     "tag": "统计",
+     "source_types": [
+      "X",
+      "媒体检索"
+     ],
+     "date": "10-23 至 10-24",
+     "text": "DeepSeek千亿融资与加快准备上海上市仍为媒体传闻，公司未正式回应；X热度较昨晚回落（约6–17帖/时）。月之暗面Kimi K3.1 Pro正式发布及创作者推广披露争议已在同日大厂早报Top1/Top2详述，本期ADR不整段复读，仅作交叉引用。人形机器人松延动力保密递表港交所见Top2。",
+     "links": [
+      {
+       "label": "TechNode：DeepSeek融资与上海IPO传闻",
+       "url": "https://technode.com/2026/10/23/deepseek-reportedly-raises-15-billion-ahead-of-potential-shanghai-ipo/"
+      }
+     ],
+     "event_time": "2026-10-23 至 10-24",
+     "lang": "zh"
+    }
+   ]
+  },
+  {
+   "title": "⚡ 短期热点（ADR侧备注）",
+   "color": "#ea580c",
+   "items": [
+    {
+     "id": "20261024-adr01z-byd",
+     "company": "比亚迪",
+     "tag": "实锤",
+     "source_types": [
+      "通讯社",
+      "X"
+     ],
+     "date": "10-23→10-24",
+     "text": "美军嘉手纳空军基地10-26起禁入比亚迪车辆一事已在昨晚总结Top1与大厂早报短期列表。过夜热度➡️：宽口径X 15Z–01Z约257/172/174/123/114/174/274/305/373/323帖/时；@ReutersJapan约283678浏览（总结时约23.8万）。无新禁令范围扩大，比亚迪仍未回应。ADR侧续追踪，不重复作新Top。",
+     "links": [
+      {
+       "label": "中央社",
+       "url": "https://www.cna.com.tw/news/aopl/202610230253.aspx"
+      },
+      {
+       "label": "X @ReutersJapan 👁283678",
+       "url": "https://x.com/ReutersJapan/status/2113450570908418110"
+      }
+     ],
+     "event_time": "禁令生效 2026-10-26；报道 10-23",
+     "lang": "zh",
+     "x_posts": [
+      {
+       "id": "2113450570908418110",
+       "url": "https://x.com/ReutersJapan/status/2113450570908418110",
+       "author": "@ReutersJapan",
+       "views": 283678,
+       "likes": 6639,
+       "reposts": 2353,
+       "replies": 193,
+       "text": "米軍、嘉手納基地でＢＹＤ車乗り入れ禁止へ＝聯合ニュース https://reut.rs/4yzG7TO https://reut.rs/4yzG7TO",
+       "author_name": "ロイター"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "🌏 海外小语种线索",
+   "color": "#0891b2",
+   "items": [
+    {
+     "id": "20261024-adr01z-mx-puebla",
+     "company": "滴滴 / Uber（墨西哥普埃布拉）",
+     "tag": "传闻",
+     "source_types": [
+      "地方媒体",
+      "X"
+     ],
+     "date": "10-23",
+     "text": "墨西哥普埃布拉地方媒体提醒：高峰时段Uber/DiDi动态加价可能很高（文中称可达300%），若认为被多收或出现未授权扣款，可向消费者保护机构Profeco投诉并保留价格截图。属消费提示，非平台新政策，低优先级。",
+     "links": [
+      {
+       "label": "X @NoticiasTribuna 👁149",
+       "url": "https://x.com/NoticiasTribuna/status/2113769903874310415"
+      }
+     ],
+     "event_time": "2026-10-23 墨西哥当地",
+     "lang": "zh",
+     "country": "墨西哥",
+     "language": "西班牙语",
+     "original": "¿Uber o DiDi te cobraron de más? ¡Así puedes denunciar! Las tarifas dinámicas pueden elevar los costos hasta un 300% en horarios de alta demanda. … puedes presentar una queja ante Profeco con capturas del precio.",
+     "x_posts": [
+      {
+       "id": "2113769903874310415",
+       "url": "https://x.com/NoticiasTribuna/status/2113769903874310415",
+       "author": "@NoticiasTribuna",
+       "views": 149,
+       "likes": 1,
+       "reposts": 1,
+       "replies": 0,
+       "text": "🚗 #Puebla || ¿Uber o DiDi te cobraron de más? ¡Así puedes denunciar!\nLas tarifas dinámicas pueden elevar los costos hasta un 300% en horarios de alta demanda. Si detectas cobros excesivos o cargos no autorizados, puedes presentar una queja ante Profeco con capturas del precio inicial y el comprobante de pago. 📱\n#Uber #DiDi #Profeco #TarifasDinámicas\n\nhttps://tribunanoticias.mx/como-denunciar-tarifas-dinamicas-excesivas-de-uber-y-didi-en-puebla",
+       "author_name": "Tribuna Noticias"
+      }
+     ],
+     "translation_zh": "普埃布拉地方媒体：若 Uber 或 DiDi 多收费，动态加价高峰可抬高至约 300%，可向 Profeco 投诉并保留价格截图。"
+    },
+    {
+     "id": "20261024-adr01z-mx-chiapas",
+     "company": "滴滴 / Uber（墨西哥恰帕斯）",
+     "tag": "传闻",
+     "source_types": [
+      "地方媒体",
+      "X"
+     ],
+     "date": "10-23",
+     "text": "《El Sol de Chiapas》引述当地PRI人士Rubén Zuarth称：Uber、DiDi等平台正规化责任在企业而非司机，不应让司机独自承担合规成本。地方政治表态，低优先级。",
+     "links": [
+      {
+       "label": "X @elsoldechiapas 👁52",
+       "url": "https://x.com/elsoldechiapas/status/2113729466673365060"
+      }
+     ],
+     "event_time": "2026-10-23 墨西哥当地",
+     "lang": "zh",
+     "country": "墨西哥",
+     "language": "西班牙语",
+     "original": "UBER y DiDi: regularización corresponde a las empresas, no a los choferes. El dirigente priista Rubén Zuarth señaló que la responsabilidad de regularizar la operación de plataformas como Uber y DiDi recae en las empresas y no en los conductores.",
+     "x_posts": [
+      {
+       "id": "2113729466673365060",
+       "url": "https://x.com/elsoldechiapas/status/2113729466673365060",
+       "author": "@elsoldechiapas",
+       "views": 52,
+       "likes": 0,
+       "reposts": 0,
+       "replies": 0,
+       "text": "🚘 UBER y DiDi: regularización corresponde a las empresas, no a los choferes\n\nEl dirigente priista Rubén Zuarth señaló que la responsabilidad de regularizar la operación de plataformas como Uber y DiDi recae en las empresas y no en los conductores, quienes no deberían cargar con obligaciones que corresponden a las compañías.\n\n📲 El Sol de Chiapas\n\nhttps://elsoldechiapas.com/regularizacion-de-uber-y-didi-corresponde-a-empresas-no-a-choferes-ruben-zuarth/\n\n#Uber #DiDi #RubénZuarth #Transporte #Chiapas #ElSolDeChiapas",
+       "author_name": "El Sol de Chiapas"
+      }
+     ],
+     "translation_zh": "《El Sol de Chiapas》：PRI 人士称 Uber、DiDi 等平台正规化责任在企业而非司机。"
+    }
+   ]
+  }
+ ]
+}
