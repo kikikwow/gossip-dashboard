@@ -1410,3 +1410,27 @@ timestamp_utc,topic,metric,value,source
 2026-10-24T03:15:00Z,微博热搜_宇树机器人侧空翻表演时甩断腿,weibo_rank,42,https://soso.re/weibo heat=193031 @2026-10-24 11:13 Beijing
 2026-10-24T03:15:00Z,微博热搜_哈啰顺风车涉黄,weibo_rank,16,https://soso.re/weibo heat=559749 @2026-10-24 11:13 Beijing
 2026-10-24T03:15:00Z,微博热搜_AI短剧公司几乎不需要基础岗,weibo_rank,1,https://soso.re/weibo heat=1249363 @2026-10-24 11:13 Beijing
+2026-10-24T05:15:00Z,问界神木碰撞起火·官方回应,x_posts_per_hour_03Z,13,query:问界神木 OR (问界 神木)
+2026-10-24T05:15:00Z,问界神木碰撞起火·官方回应,x_posts_per_hour_04Z,11,query:问界神木 OR (问界 神木)
+2026-10-24T05:15:00Z,问界神木碰撞起火·官方回应,x_posts_per_hour_05Z_partial,4,query:问界神木 OR (问界 神木) first~17min
+2026-10-24T05:15:00Z,问界神木碰撞起火·官方回应,x_sample_post,2403,https://x.com/YesterdayBigcat/status/2113831345592090931
+2026-10-24T05:15:00Z,DeepSeek完成千亿融资,x_posts_per_hour_03Z,5,query:DeepSeek 融资 OR financing
+2026-10-24T05:15:00Z,DeepSeek完成千亿融资,x_posts_per_hour_04Z,11,query:DeepSeek 融资 OR financing
+2026-10-24T05:15:00Z,DeepSeek完成千亿融资,x_posts_per_hour_05Z_partial,3,query:DeepSeek 融资 OR financing first~17min
+2026-10-24T05:15:00Z,DeepSeek完成千亿融资,x_sample_post,80,https://x.com/vicyan1225/status/2113859405720764533
+2026-10-24T05:15:00Z,美军嘉手纳禁入比亚迪,x_posts_per_hour_03Z,290,query:比亚迪嘉手纳 OR BYD Kadena OR 嘉手納
+2026-10-24T05:15:00Z,美军嘉手纳禁入比亚迪,x_posts_per_hour_04Z,293,query:比亚迪嘉手纳 OR BYD Kadena OR 嘉手納
+2026-10-24T05:15:00Z,美军嘉手纳禁入比亚迪,x_posts_per_hour_05Z_partial,89,query:比亚迪嘉手纳 OR BYD Kadena OR 嘉手納 first~16min
+2026-10-24T05:15:00Z,美军嘉手纳禁入比亚迪,x_sample_post,915,https://x.com/sasasanosasayan/status/2113854883879424024
+2026-10-24T05:15:00Z,Kimi K3.1 Pro 正式发布,x_posts_per_hour_03Z,642,query:Kimi K3.1 OR Moonshot Kimi OR 月之暗面 K3
+2026-10-24T05:15:00Z,Kimi K3.1 Pro 正式发布,x_posts_per_hour_04Z,568,query:Kimi K3.1 OR Moonshot Kimi OR 月之暗面 K3
+2026-10-24T05:15:00Z,Kimi K3.1 Pro 正式发布,x_posts_per_hour_05Z_partial,138,query:Kimi K3.1 OR Moonshot Kimi OR 月之暗面 K3 first~16min
+2026-10-24T05:15:00Z,Kimi K3.1 Pro 正式发布,x_sample_post,2220364,https://x.com/Kimi_Moonshot/status/2113680701770068067
+2026-10-24T05:15:00Z,Kimi创作者推广披露争议,x_sample_post,1118,https://x.com/NFT_Chen/status/2113846240211567012
+2026-10-24T05:15:00Z,滴滴繁简价差,x_sample_post,182417,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-24T05:15:00Z,智谱拟新加坡研究中心,x_sample_post,1307,https://x.com/NFT_Chen/status/2113850410075062600
+2026-10-24T05:15:00Z,微博热搜_任泽平账号违规被禁止关注,weibo_rank,5,https://soso.re/weibo heat=596046 @2026-10-24 13:12 Beijing
+2026-10-24T05:15:00Z,微博热搜_AI短剧公司几乎不需要基础岗,weibo_rank,14,https://soso.re/weibo heat=322361 @2026-10-24 13:12 Beijing
+2026-10-24T05:15:00Z,微博热搜_iPhoneDuo屏幕开裂,weibo_rank,27,https://soso.re/weibo heat=243865 @2026-10-24 13:12 Beijing
+2026-10-24T05:15:00Z,微博热搜_哈啰顺风车涉黄,weibo_rank,35,https://soso.re/weibo heat=195252 @2026-10-24 13:12 Beijing
+2026-10-24T05:15:00Z,微博热搜_抖音商城双11现货现发,weibo_rank,45,https://soso.re/weibo heat=173163 @2026-10-24 13:12 Beijing

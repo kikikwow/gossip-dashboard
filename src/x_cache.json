@@ -1,6 +1,6 @@
 {
  "source": "https://api.fxtwitter.com/status/{id}",
- "fetched_at": "2026-10-24T03:33:51Z",
+ "fetched_at": "2026-10-24T05:41:08Z",
  "note": "静态缓存。正文只来自抓取结果。删帖或空正文 status=unavailable，页面显示「原文不可用」。网络失败 status=missing，下次构建重试，页面显示「原文未缓存」。不编正文，也不覆盖 data JSON 里已有的浏览/点赞数字。",
  "posts": {
   "2106320822444949760": {
@@ -21,7 +21,7 @@
   "2106404243376837105": {
    "status": "missing",
    "error": "HTTP Error 401: Unauthorized",
-   "fetched_at": "2026-10-24T03:33:51Z",
+   "fetched_at": "2026-10-24T05:41:08Z",
    "url": "https://x.com/buildnomadx/status/2106404243376837105"
   },
   "2106859176756646197": {
@@ -1608,14 +1608,14 @@
    "author": "@Furinanatw",
    "name": "芙宁娜娜💙(2号）",
    "created_at": "2026-10-14T08:40:41Z",
-   "views": 182416,
+   "views": 182417,
    "likes": 135,
    "reposts": 3,
    "replies": 59,
    "quotes": 1,
    "bookmarks": 30,
    "url": "https://x.com/Furinanatw/status/2110289680595886537",
-   "fetched_at": "2026-10-24T03:20:00Z",
+   "fetched_at": "2026-10-24T05:20:00Z",
    "lang": "zh",
    "translation_zh": ""
   },
@@ -4436,20 +4436,20 @@
   },
   "2113680701770068067": {
    "status": "ok",
-   "text": "Introducing Kimi K3.1 Pro: our most capable 3T-class open-weight model.\n\n🔹 1M-token context, 2.8T total / 104B active params (MoE), Multimodal.\n🔹 Full-project coding: games in Unreal, Unity & Godot.\n🔹 Excels at parametric 3D modeling in Blender & CAD.\n🔹 More reliable at finance work: Accurate modeling with hallucination down by 65%.\n🔹 Matching the strongest proprietary models across coding, agentic and knowledge benchmarks.\n\nKimi K3.1 Pro and K3.1 Pro Highspeed (2–3× faster) are now live on kimi.ai, Kimi Work, Kimi Code, and the Kimi API.\n\nOpen weights by Nov 4, 2026.",
+   "text": "Introducing Kimi K3.1 Pro: our most capable 3T-class open-weight model.\n\n🔹 1M-token context, 2.8T total / 104B active params (MoE), Multimodal.\n🔹 Full-project coding: games in Unreal, Unity & Godot.\n🔹 Excels at parametric 3D modeling in Blender & CAD.\n🔹 More reliable at",
    "author": "@Kimi_Moonshot",
    "name": "Kimi.ai",
    "created_at": "2026-10-23T17:15:24Z",
-   "views": 2040074,
-   "likes": 23215,
-   "reposts": 2535,
-   "replies": 961,
-   "quotes": 1928,
-   "bookmarks": 4226,
+   "views": 2220364,
+   "likes": 24172,
+   "reposts": 2628,
+   "replies": 1005,
+   "quotes": 2008,
+   "bookmarks": 4375,
    "url": "https://x.com/Kimi_Moonshot/status/2113680701770068067",
-   "fetched_at": "2026-10-24T03:20:00Z",
+   "fetched_at": "2026-10-24T05:20:00Z",
    "lang": "en",
-   "translation_zh": "正式发布 Kimi K3.1 Pro：最强的 3T 级开源权重模型。100 万上下文、2.8T 总参/104B 激活（MoE）、多模态；全项目编码与参数化 3D；金融幻觉降 65%；K3.1 Pro 与 Highspeed（约 2–3× 速度）已上线 kimi.ai / API；权重计划 2026-11-04 开源。"
+   "translation_zh": "月之暗面发布 Kimi K3.1 Pro：旗舰级约3万亿参数开源权重模型。100万token上下文，总参2.8T/激活104B（MoE），多模态；擅长完整项目编程与Blender/CAD参数化3D等。"
   },
   "2113681863109939271": {
    "status": "ok",
@@ -4663,6 +4663,102 @@
    "lang": "es",
    "translation_zh": "墨西哥城公共安全秘书处（SSC）与 DiDi 加强合作，利用技术与犯罪信息提升安全、应急响应与更安全路线。属政企协作通稿，非丑闻。",
    "fetched_at": "2026-10-24T03:20:00Z"
+  },
+  "2113831345592090931": {
+   "status": "ok",
+   "text": "「陕西华为问界M9事故网红灯柱遭围挡（2026.10.23）」10月23日，陕西神木，一根因被华为问界M9汽车剧烈撞击后“毫发无损”而意外走红的交通信号灯柱，突然被当地相关部门用围挡遮蔽。10月17日，一辆问界M9汽车在神木市冲撞了该交通灯立柱，车辆随即起火燃烧，导致驾驶员不幸遇难。事发后，华为问界发布官",
+   "author": "@YesterdayBigcat",
+   "name": "昨天",
+   "created_at": "2026-10-24T03:14:00Z",
+   "views": 2403,
+   "likes": 36,
+   "reposts": 1,
+   "replies": 10,
+   "quotes": 1,
+   "bookmarks": 7,
+   "url": "https://x.com/YesterdayBigcat/status/2113831345592090931",
+   "fetched_at": "2026-10-24T05:20:00Z",
+   "lang": "zh"
+  },
+  "2113854883879424024": {
+   "status": "ok",
+   "text": "中国BYD、嘉手納基地への乗り入れ禁止の件\nロイター、中央日報、朝鮮日報など海外メディアが報じるなか、日本のメディアどこも報じず。またも「報道しない自由」が発動しました💦\n\n「中国製EVは車輪の付いたスパイ」　米軍嘉手納基地、中国BYD車の乗り入れ禁止(朝鮮日報)",
+   "author": "@sasasanosasayan",
+   "name": "さささのささやん",
+   "created_at": "2026-10-24T04:47:32Z",
+   "views": 915,
+   "likes": 42,
+   "reposts": 10,
+   "replies": 1,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/sasasanosasayan/status/2113854883879424024",
+   "fetched_at": "2026-10-24T05:20:00Z",
+   "lang": "ja",
+   "translation_zh": "关于中国比亚迪车辆被禁入嘉手纳基地：路透、中央日报、朝鲜日报等海外媒体已报道，日本媒体却几乎不报，被指又一次「不报道的自由」。引用朝鲜日报：「中国制EV是装了轮子的间谍」。"
+  },
+  "2113850410075062600": {
+   "status": "ok",
+   "text": "🚨爆料！智谱Zai拟在新加坡成立研究中心！并与新加坡国立大学NUS联合培养博士！\n\n在中关村「清河夜话」活动上的最新动态，智谱海外研发布局正式浮出水面。\n\n信息要点：\n🔹智谱CEO张鹏在活动上透露：要在海外组建研发团队，聚集全球智力，同时仍立足北京发展。",
+   "author": "@NFT_Chen",
+   "name": "SuSu_酥酥👅",
+   "created_at": "2026-10-24T04:29:45Z",
+   "views": 1307,
+   "likes": 19,
+   "reposts": 7,
+   "replies": 6,
+   "quotes": 0,
+   "bookmarks": 10,
+   "url": "https://x.com/NFT_Chen/status/2113850410075062600",
+   "fetched_at": "2026-10-24T05:20:00Z",
+   "lang": "zh"
+  },
+  "2113859405720764533": {
+   "status": "ok",
+   "text": "DeepSeek还没递表，一级价格已到投后约6000亿元，约为年化收入的90倍；OpenAI约25倍，港股大模型股已较高点回撤超80%。\n我的估值纪律：5000亿元以下有安全边际，6000–8000亿元合理，1.5万亿元以上是在为牛市剧本付费。\n长文拆解👇 不构成投资建议",
+   "author": "@vicyan1225",
+   "name": "Vic说",
+   "created_at": "2026-10-24T05:05:30Z",
+   "views": 80,
+   "likes": 0,
+   "reposts": 0,
+   "replies": 0,
+   "quotes": 0,
+   "bookmarks": 0,
+   "url": "https://x.com/vicyan1225/status/2113859405720764533",
+   "fetched_at": "2026-10-24T05:20:00Z",
+   "lang": "zh"
+  },
+  "2113827830991896962": {
+   "status": "ok",
+   "text": "华为刹车断裂与起火事件受到关注之际，曾轰动全网的华为“251事件”再次进入公众视野。\n\n在华为工作了12年的李洪元，离职后和公司谈妥了30多万元补偿，到账后却被华为举报涉嫌敲诈勒索，遭羁押251天。",
+   "author": "@whyyoutouzhele",
+   "name": "李老师不是你老师",
+   "created_at": "2026-10-24T03:00:02Z",
+   "views": 46423,
+   "likes": 430,
+   "reposts": 54,
+   "replies": 25,
+   "quotes": 4,
+   "bookmarks": 62,
+   "url": "https://x.com/whyyoutouzhele/status/2113827830991896962",
+   "fetched_at": "2026-10-24T05:20:00Z",
+   "lang": "zh"
+  },
+  "2113846240211567012": {
+   "status": "ok",
+   "text": "🤔Kimi K3.1 Pro 3D能力跃升显著！到底比 Kimi K3 强在哪呢？\n\n官方+社区实测： 🔹直接写 Blender / FreeCAD / CAD 脚本无需 MCP，做参数化机械件、建筑、可打印家具\n 🔹BenchCAD 带工具 92.7%，逼近 Opus 5.5 / GPT-6 Astra\n 🔹能拆出 2317 零件的灵巧机械手交互网站（透明壳、爆炸图、手势、内部走线全可见）\n 🔹上线 3D Make：在线预览/编辑/导出打印\n 🔹从文字/草图到完整可交互 3D 作品，一条链路搞定\n\n“You can just build things.” 这波是真的。\n\n项目直达：https://form-01-score.ok.kimi.link/\n\n#Kimi #KimiK31Pro #3D建模 #AIAgent #开源模型 #月之暗面 #杨植麟\n\nhttps://x.com/nft_chen/status/2113767867049291880?s=46 https://x.com/crystalsssup/status/2113684128734625948/video/1",
+   "author": "@NFT_Chen",
+   "name": "SuSu_酥酥👅",
+   "created_at": "2026-10-24T04:13:11Z",
+   "views": 1133,
+   "likes": 17,
+   "reposts": 3,
+   "replies": 3,
+   "quotes": 0,
+   "bookmarks": 10,
+   "url": "https://x.com/NFT_Chen/status/2113846240211567012",
+   "fetched_at": "2026-10-24T05:19:37Z"
   }
  }
 }

@@ -1,0 +1,144 @@
+{
+ "routine": "大厂八卦热点快讯（含滴滴）",
+ "type": "alert",
+ "title": "大厂八卦热点快讯（含滴滴）",
+ "timestamp": "2026-10-24T05:15:00Z",
+ "edition_date": "2026-10-24",
+ "edition_id": "kuaixun_0515Z",
+ "fired_at_utc": "2026-10-24T05:15:00Z",
+ "scanned_at_utc": "2026-10-24T05:20:00Z",
+ "beijing_time": "2026-10-24 13:15–13:20 CST",
+ "window": "2026-10-24T03:15Z–05:20Z（北京 11:15–13:20，接上一期 kuaixun_0315Z）",
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无突发且快速扩散的新爆点；短期4项均无未在早报/上一期快讯报过的重大新进展（Kimi正式发布余热回落、问界仅灯柱围挡余波、DeepSeek仍无官方确认融资、比亚迪嘉手纳日媒续报无扩大禁令且公司未回应）。电商互撕固定线无新起诉/声明。滴滴繁简≈18.24万无回应，出海仅日本产品PR/澳积分营销/墨个案吐槽，未达有效线索门槛。微博前50无新增大厂八卦条目。",
+ "lede": "快讯窗北京11:15–13:20。信源：X公开检索与计数、微博热搜镜像soso.re（13:12）、RSS新匹配2条（抖音商城双11榜/双11 AI暗战行业稿）；小红书 since 11:00 无新条目（当日仅早报窗「阿里裁员」撞词低互动）；公众号因微信读书登录过期（auth_expired）缺失。本期无警报。",
+ "items": [],
+ "top3": [],
+ "sections": [],
+ "tracked_updates": [
+  {
+   "topic": "Kimi K3.1 Pro 正式发布",
+   "status": "追踪中·热度回落",
+   "heat": "X 03Z/04Z/05Z≈642/568/（05Z前16分138）📉；官帖 @Kimi_Moonshot Introducing≈222万浏览（上一期快讯约204万）；窗口内多为评测/转述，创作者推广披露争议无新官方回应；早报已报正式发布，本期不重复警报"
+  },
+  {
+   "topic": "问界神木碰撞起火·官方回应",
+   "status": "追踪中·降温",
+   "heat": "X（问界神木口径）03Z/04Z/05Z≈13/11/4 📉；【传闻】@YesterdayBigcat 称10-23神木「网红灯柱」被围挡遮蔽（≈2403浏览）——舆论管控余波，交警结论/问界补充通报仍未出；微博前50无问界"
+  },
+  {
+   "topic": "DeepSeek完成千亿融资",
+   "status": "追踪中·降温",
+   "heat": "X 03Z/04Z/05Z≈5/11/3 📉；仍为彭博/路透旧稿余波+个人号转述（乌兰察布智算中心/证券时报「实锤」等，浏览个位数到百级），公司未正式确认；无新出资方名单"
+  },
+  {
+   "topic": "美军嘉手纳禁入比亚迪",
+   "status": "追踪中·日媒续报",
+   "heat": "X（比亚迪嘉手纳/BYD Kadena/嘉手納）03Z/04Z/05Z≈290/293/（05Z前16分89）➡️；朝鲜日报日文版等日媒转载带动发帖量回升，禁令仍自10-26生效、无新扩大范围，比亚迪仍未回应；代表帖 @sasasanosasayan≈915"
+  }
+ ],
+ "focus_topics": {
+  "滴滴": "繁简主帖 @Furinanatw 浏览182417（较上一期182416几乎不动），无新证据、无滴滴回应。【传闻】海外：🇯🇵DiDiモビリティ官网10-22起东京「エアポート定額」、10-23南城市DMO联动——产品/政企PR非丑闻；🇦🇺Velocity×DiDi双倍积分至11-19营销；🇲🇽Uber/DiDi个案「被骗」吐槽浏览极低。巴西99/埃及公司级0有效。日程：罗萨里奥10-26续议；香港牌照10-30截止。本期无公司级丑闻新动态；未另存 didi edition。",
+  "字节": "feeds 窗口内无字节八卦新稿；钛媒体英文章复盘Goku/田柯宇属上一期已观察旧案。红果/Seed/人事本期无公司级新动作。【本期无新动态】",
+  "中国大模型": "Kimi见短期；DeepSeek融资无官方确认；【传闻】@NFT_Chen 称智谱拟新加坡设研究中心并与NUS联培（清河夜话，≈1307浏览）——观察未入短期；Qwen4/阿里仍未确认Arena身份。",
+  "电商互撕": "京东/抖音/淘宝/拼多多×起诉/声明：窗口内无新官方声明。RSS：雷峰网抖音商城双11热卖榜、钛媒体「双11购物车里的AI暗战」属行业/营销分析非互撕。【本期无新动态】"
+ },
+ "overseas_minor_language": [
+  {
+   "country": "日本",
+   "lang": "ja",
+   "priority": "低",
+   "title_zh": "DiDi日本：东京上线机场定额车费；南城市与DMO联动",
+   "summary_zh": "DiDiモビリティジャパン官网：10月22日起东京提供「エアポート定額」；10月23日公布与冲绳南城市、DMOなんじょう的联动举措。属产品与地方合作通稿，非投诉/裁员/监管丑闻。",
+   "original": "新サービス「エアポート定額」を10月22日より東京で提供開始 / 南城市、DMOなんじょうと連携協定に基づく取組を発表",
+   "url": "https://didimobility.co.jp/info/",
+   "credibility": "实锤",
+   "views": null
+  }
+ ],
+ "weibo": {
+  "mirror": "https://soso.re/weibo",
+  "updated": "2026-10-24 13:12 Beijing",
+  "company_adjacent": [
+   {
+    "rank": 5,
+    "title": "任泽平账号违规被禁止关注",
+    "heat": 596046,
+    "note": "财经博主账号风控，非中国大厂八卦主线"
+   },
+   {
+    "rank": 14,
+    "title": "AI短剧公司几乎不需要基础岗",
+    "heat": 322361,
+    "note": "行业讨论余热，早报已观察；无单家大厂爆料"
+   },
+   {
+    "rank": 27,
+    "title": "iPhoneDuo屏幕开裂",
+    "heat": 243865,
+    "note": "苹果折叠屏售后，非中国大厂主线；较上一期#7回落"
+   },
+   {
+    "rank": 35,
+    "title": "哈啰顺风车 涉黄",
+    "heat": 195252,
+    "note": "出行平台舆情余热，早报已观察"
+   },
+   {
+    "rank": 45,
+    "title": "抖音商城双11现货现发",
+    "heat": 173163,
+    "note": "电商大促营销，非法务互撕"
+   }
+  ]
+ },
+ "maimai": {
+  "status": "公开热榜页404",
+  "pending": [
+   "待补充：脉脉热榜——maimai.cn/article/hot 返回404/需登录，本期未取"
+  ]
+ },
+ "social_sources": {
+  "xhs": "export_pending since 2026-10-24T11:00:00+08:00 无新条目；当日 jsonl 仍为早报窗「阿里 裁员」撞词低互动；today=1/4 GREEN，next_due约12:28已过但本任务未发新搜（反风控只读）",
+  "wechat": "微信读书登录过期（ALERT_weread.json auth_expired / HTTP 401），两路公众号 auth_expired=true，公众号本期缺失；未扫码",
+  "infra": "ensure_running 任务说明已跑；本期未额外发小红书/微信读书请求"
+ },
+ "feeds_new": 2,
+ "feeds_file": "research/feeds/2026-10-24T0516Z.json（另 0518Z fetch 0新匹配）",
+ "short_term_updates": "无新加入、无移出（4项）。问界补记灯柱围挡余波；Kimi/DeepSeek标📉；比亚迪日媒续报➡️。",
+ "candidates": [
+  {
+   "topic": "智谱拟新加坡设研究中心（清河夜话）",
+   "heat": "@NFT_Chen≈1307浏览；无主流媒体跟进",
+   "decision": "观察未入短期、不警报"
+  },
+  {
+   "topic": "华为251事件旧案回潮（李洪元）",
+   "heat": "@whyyoutouzhele≈4.64万浏览；借问界/刹车舆情回提旧案",
+   "decision": "旧闻回潮非突发新进展，不入短期"
+  },
+  {
+   "topic": "问界神木灯柱被围挡",
+   "heat": "@YesterdayBigcat≈2403；X问界神木口径十余帖/时",
+   "decision": "并入问界短期追踪备注，不单独警报"
+  },
+  {
+   "topic": "抖音商城双11/双11 AI暗战",
+   "heat": "微博#45；雷峰网/钛媒体行业稿",
+   "decision": "营销/行业分析，非八卦互撕"
+  }
+ ],
+ "didi": {
+  "tiers_ran": "tier1全部 + tier2 slot1（日本/澳新/埃及）",
+  "beijing_hour": 13,
+  "slot": 1,
+  "x_calls_used": 14,
+  "web_searches": 3,
+  "hits_kept": 0,
+  "hits_note": "繁简无进展；Tier1中文多为撞词/推广已丢；BR/MX/EN/港台窗口0有效；slot1 X日/英/阿0帖；web见日本机场定额+南城市PR、澳Velocity营销、埃及旧OOH——记入overseas低优先级但不另存didi edition；墨西个案吐槽低于门槛",
+  "furinanatw_views": 182417,
+  "didi_response": false
+ },
+ "sources_note": "X公开检索（非个人时间线）+ soso.re微博 + RSS fetch_sources + 小红书pending只读 + 网页检索滴滴；微信公众号缺失；脉脉公开热榜404。"
+}
