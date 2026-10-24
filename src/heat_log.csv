@@ -1434,3 +1434,28 @@ timestamp_utc,topic,metric,value,source
 2026-10-24T05:15:00Z,微博热搜_iPhoneDuo屏幕开裂,weibo_rank,27,https://soso.re/weibo heat=243865 @2026-10-24 13:12 Beijing
 2026-10-24T05:15:00Z,微博热搜_哈啰顺风车涉黄,weibo_rank,35,https://soso.re/weibo heat=195252 @2026-10-24 13:12 Beijing
 2026-10-24T05:15:00Z,微博热搜_抖音商城双11现货现发,weibo_rank,45,https://soso.re/weibo heat=173163 @2026-10-24 13:12 Beijing
+2026-10-24T08:15:00Z,Kimi K3.1 Pro 正式发布,x_posts_per_hour,504,X counts 05Z (query Kimi K3.1 OR "K3.1 Pro")
+2026-10-24T08:15:00Z,Kimi K3.1 Pro 正式发布,x_posts_per_hour,538,X counts 06Z
+2026-10-24T08:15:00Z,Kimi K3.1 Pro 正式发布,x_posts_per_hour,617,X counts 07Z
+2026-10-24T08:15:00Z,Kimi K3.1 Pro 正式发布,x_sample_post,2424564,https://x.com/Kimi_Moonshot/status/2113680701770068067
+2026-10-24T08:15:00Z,美军嘉手纳禁入比亚迪,x_posts_per_hour,261,X counts 05Z
+2026-10-24T08:15:00Z,美军嘉手纳禁入比亚迪,x_posts_per_hour,271,X counts 06Z
+2026-10-24T08:15:00Z,美军嘉手纳禁入比亚迪,x_posts_per_hour,236,X counts 07Z
+2026-10-24T08:15:00Z,美军嘉手纳禁入比亚迪,x_sample_post,3524,https://x.com/sasasanosasayan/status/2113854883879424024
+2026-10-24T08:15:00Z,问界神木碰撞起火·官方回应,x_posts_per_hour,10,X counts 05Z
+2026-10-24T08:15:00Z,问界神木碰撞起火·官方回应,x_posts_per_hour,5,X counts 06Z
+2026-10-24T08:15:00Z,问界神木碰撞起火·官方回应,x_posts_per_hour,6,X counts 07Z
+2026-10-24T08:15:00Z,问界神木碰撞起火·官方回应,x_sample_post,4003,https://x.com/YesterdayBigcat/status/2113831345592090931
+2026-10-24T08:15:00Z,DeepSeek完成千亿融资,x_posts_per_hour,13,X counts 05Z
+2026-10-24T08:15:00Z,DeepSeek完成千亿融资,x_posts_per_hour,13,X counts 06Z
+2026-10-24T08:15:00Z,DeepSeek完成千亿融资,x_posts_per_hour,11,X counts 07Z
+2026-10-24T08:15:00Z,田柯宇训练破坏案·晚点还原,x_posts_per_hour,4,X counts 05Z (田柯宇 OR "Tian Keyu")
+2026-10-24T08:15:00Z,田柯宇训练破坏案·晚点还原,x_posts_per_hour,2,X counts 06Z
+2026-10-24T08:15:00Z,田柯宇训练破坏案·晚点还原,x_posts_per_hour,2,X counts 07Z
+2026-10-24T08:15:00Z,田柯宇训练破坏案·晚点还原,x_sample_post,16035,https://x.com/MaxForAI/status/2113669629923189083
+2026-10-24T08:15:00Z,田柯宇训练破坏案·晚点还原,x_sample_post,7224,https://x.com/surfcapitalfour/status/2113874670080688414
+2026-10-24T08:15:00Z,滴滴繁简价格,x_sample_post,182421,https://x.com/Furinanatw/status/2110289680595886537
+2026-10-24T08:15:00Z,微博热搜_顺风车订单里还有多少招嫖暗语,weibo_rank,42,https://soso.re/weibo heat=137422 @2026-10-24 16:12 Beijing
+2026-10-24T08:15:00Z,微博热搜_顺风车订单里还有多少招嫖暗语,x_sample_post,856,https://x.com/x338423/status/2113801648539869292
+2026-10-24T08:15:00Z,微博热搜_iPhoneDuo屏幕开裂,weibo_rank,23,https://soso.re/weibo heat=182892 @2026-10-24 16:12 Beijing
+2026-10-24T08:15:00Z,微博热搜_任泽平账号违规被禁止关注,weibo_rank,39,https://soso.re/weibo heat=153192 @2026-10-24 16:12 Beijing

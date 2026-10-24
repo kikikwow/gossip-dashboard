@@ -1,0 +1,133 @@
+{
+ "routine": "大厂八卦热点快讯（含滴滴）",
+ "type": "alert",
+ "title": "大厂八卦热点快讯（含滴滴）",
+ "timestamp": "2026-10-24T08:15:00Z",
+ "edition_date": "2026-10-24",
+ "edition_id": "kuaixun_0815Z",
+ "fired_at_utc": "2026-10-24T08:13:43Z",
+ "scanned_at_utc": "2026-10-24T08:20:00Z",
+ "beijing_time": "2026-10-24 16:13–16:25 CST",
+ "window": "2026-10-24T05:15Z–08:20Z（北京 13:15–16:20，接上一期 kuaixun_0515Z）",
+ "alert_sent": false,
+ "alert_worthy": false,
+ "reason": "窗口内无突发且快速扩散的新爆点；短期4项均无重大新进展（Kimi热度持平、比亚迪嘉手纳无扩大范围且公司未回应、问界交警结论未出、DeepSeek融资无官方确认）。晚点还原田柯宇事件为旧案深度复盘，X每小时仅2–4帖；大厂日爆称字节陈熙将离职属自媒体传闻、无扩散。滴滴繁简无回应，出海无有效线索。微博#42顺风车招嫖暗语为哈啰事件续，未涉滴滴。",
+ "lede": "快讯窗北京13:15–16:20。信源：X公开检索与计数、微博热搜镜像soso.re（16:12）、RSS新匹配2条、公众号2条（微信读书登录已恢复）、小红书窗口无相关达标新料。本期无警报。",
+ "items": [],
+ "top3": [],
+ "sections": [],
+ "tracked_updates": [
+  {
+   "topic": "Kimi K3.1 Pro 正式发布",
+   "status": "追踪中·热度持平",
+   "heat": "X 05Z/06Z/07Z≈504/538/617 ➡️；官帖 @Kimi_Moonshot Introducing≈242.5万浏览（上一期约222万）；窗口内多为评测/转述，无新官方动作",
+   "links": [
+    "https://x.com/Kimi_Moonshot/status/2113680701770068067"
+   ]
+  },
+  {
+   "topic": "美军嘉手纳禁入比亚迪",
+   "status": "追踪中·持平",
+   "heat": "X 05Z/06Z/07Z≈261/271/236 ➡️；日语圈讨论日本媒体未报道（@sasasanosasayan≈3524浏览）；禁令仍10-26生效、无扩大范围，比亚迪未回应",
+   "links": [
+    "https://x.com/sasasanosasayan/status/2113854883879424024"
+   ]
+  },
+  {
+   "topic": "问界神木碰撞起火·官方回应",
+   "status": "追踪中·降温",
+   "heat": "X 05Z/06Z/07Z≈10/5/6 📉；灯柱围挡帖 @YesterdayBigcat≈4003浏览；交警结论/问界补充通报仍未出",
+   "links": [
+    "https://x.com/YesterdayBigcat/status/2113831345592090931"
+   ]
+  },
+  {
+   "topic": "DeepSeek完成千亿融资",
+   "status": "追踪中·持平",
+   "heat": "X 05Z/06Z/07Z≈13/13/11 ➡️；公司仍未正式确认，无新出资方名单"
+  }
+ ],
+ "focus_topics": {
+  "滴滴": "繁简主帖 @Furinanatw 浏览182421（几乎不动），无新证据、无滴滴回应。国内：WICV2026 展出 Robotaxi R2（10-23，产品展示，中国经营报/凤凰网）；海外西葡/日英阿窗口0有效帖。微博#42「顺风车订单招嫖暗语」为哈啰事件，未涉及滴滴。本期无公司级丑闻新动态；未另存 didi edition。",
+  "字节": "【传闻·公众号大厂日爆】TikTok电商负责人陈熙（Kevin，前滴滴网约车执行总裁）将离职，欧洲+英国盘子交宋琪任，称9月末已内部通知；X无扩散、无媒体佐证。晚点LatePost发长文《还原田柯宇事件》，访谈陈守法、葛崇剑、孙培泽等，还原2024年Goku训练被破坏经过及田柯宇当时承认攻击的说法（案件二审中）；X田柯宇每小时2–4帖，@MaxForAI 读后长帖≈1.6万浏览。旧案深度复盘，观察不入短期。",
+  "中国大模型": "Kimi见短期；DeepSeek融资无官方确认；大厂日爆称MiniMax海外扩招（美国/东南亚/韩国，【传闻】）；Qwen Go! 上线 My Apps 功能（Pandaily，产品）。",
+  "电商互撕": "京东/抖音/淘宝/拼多多×起诉/声明：窗口内无新官方声明；RSS 拼多多向西藏那曲地震捐1000万元（雷峰网，公益非互撕）。【本期无新动态】"
+ },
+ "overseas_minor_language": [],
+ "weibo": {
+  "mirror": "https://soso.re/weibo",
+  "updated": "2026-10-24 16:12 Beijing",
+  "company_adjacent": [
+   {
+    "rank": 23,
+    "title": "iPhoneDuo屏幕开裂",
+    "heat": 182892,
+    "note": "苹果折叠屏售后（#44苹果称亮线非硬件问题），非中国大厂主线"
+   },
+   {
+    "rank": 39,
+    "title": "任泽平账号违规被禁止关注",
+    "heat": 153192,
+    "note": "财经博主账号风控，较上一期#5回落"
+   },
+   {
+    "rank": 42,
+    "title": "顺风车订单里还有多少招嫖暗语",
+    "heat": 137422,
+    "note": "凤凰网/中国新闻周刊10-23稿，哈啰顺风车招嫖暗语事件续，哈啰已回应封号移交主管部门；未涉滴滴"
+   }
+  ]
+ },
+ "maimai": {
+  "status": "未取",
+  "pending": [
+   "待补充：脉脉热榜——公开页此前404/需登录，本期未取"
+  ]
+ },
+ "social_sources": {
+  "xhs": "export_pending since 2026-10-24T13:10+08:00 无相关达标新条目（仅股市复盘/求职帖撞词）；today=2/4 GREEN",
+  "wechat": "微信读书登录已恢复（auth_expired=false）；窗口内2条：大厂日爆《今日大厂员工事》（https://mp.weixin.qq.com/s/uDFisnUWSZ_u1TmGK6Zttw，【传闻】）、晚点LatePost《还原田柯宇事件》（https://mp.weixin.qq.com/s/P9aWfHyeUMw7DAkmyk02CA，媒体报道）",
+  "infra": "ensure_running：we-mp-rss/scheduler/watchdog 均 up；本期未额外发小红书/微信读书请求"
+ },
+ "feeds_new": 2,
+ "feeds_file": "research/feeds/2026-10-24T0814Z.json",
+ "short_term_updates": "无新加入、无移出（4项）。Kimi/比亚迪/DeepSeek ➡️；问界 📉。",
+ "candidates": [
+  {
+   "topic": "晚点还原田柯宇事件",
+   "heat": "X 05Z–07Z 4/2/2；@MaxForAI≈16035、@surfcapitalfour≈7224",
+   "decision": "旧案深度复盘，观察不入短期、不警报",
+   "links": [
+    "https://mp.weixin.qq.com/s/P9aWfHyeUMw7DAkmyk02CA",
+    "https://x.com/MaxForAI/status/2113669629923189083"
+   ]
+  },
+  {
+   "topic": "字节TikTok电商陈熙将离职（传闻）",
+   "heat": "X无相关帖；仅大厂日爆公众号",
+   "decision": "自媒体传闻待核实，不入短期",
+   "links": [
+    "https://mp.weixin.qq.com/s/uDFisnUWSZ_u1TmGK6Zttw"
+   ]
+  },
+  {
+   "topic": "顺风车订单招嫖暗语（哈啰）",
+   "heat": "微博#42≈13.7万；X 个人号百级浏览",
+   "decision": "早报已观察的哈啰事件续，不警报",
+   "links": [
+    "https://news.ifeng.com/c/8xSsI8wTapd"
+   ]
+  }
+ ],
+ "didi": {
+  "tiers_ran": "tier1 + tier2 slot1（日本/澳新/埃及）",
+  "beijing_hour": 16,
+  "slot": 1,
+  "x_calls_used": 4,
+  "web_searches": 1,
+  "hits_kept": 0,
+  "furinanatw_views": 182421,
+  "didi_response": false
+ },
+ "sources_note": "X公开检索（非个人时间线）+ soso.re微博 + RSS fetch_sources + 小红书/公众号 pending 只读 + 网页检索；脉脉未取。"
+}
